@@ -1854,16 +1854,16 @@
   },
   "github": {
     "source": "github-trending",
-    "dataUpdatedAt": "2026-09-18T02:37:02Z",
+    "dataUpdatedAt": "2026-09-18T05:31:37Z",
     "week": {
       "period": "weekly",
       "sourceUrl": "https://github.com/trending?since=weekly",
-      "fetchedAt": "2026-09-18T02:37:02Z",
+      "fetchedAt": "2026-09-18T05:31:37Z",
       "items": [
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 1,
-          "stars": 35010,
+          "stars": 35387,
           "periodStars": 11489,
           "language": "Go",
           "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
@@ -1872,7 +1872,7 @@
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 1,
-          "stars": 47517,
+          "stars": 47589,
           "periodStars": 10800,
           "language": "Python",
           "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -1881,7 +1881,7 @@
         {
           "repo": "stablyai/orca",
           "sourceRank": 4,
-          "stars": 71212,
+          "stars": 71289,
           "periodStars": 5305,
           "language": "TypeScript",
           "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
@@ -1890,7 +1890,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 2,
-          "stars": 26355,
+          "stars": 26514,
           "periodStars": 3982,
           "language": "Go",
           "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
@@ -1899,7 +1899,7 @@
         {
           "repo": "Panniantong/Agent-Reach",
           "sourceRank": 7,
-          "stars": 82841,
+          "stars": 82880,
           "periodStars": 3670,
           "language": "Python",
           "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
@@ -1908,7 +1908,7 @@
         {
           "repo": "bojieli/ai-agent-book",
           "sourceRank": 11,
-          "stars": 48330,
+          "stars": 48376,
           "periodStars": 2731,
           "language": "Python",
           "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -1917,7 +1917,7 @@
         {
           "repo": "addyosmani/agent-skills",
           "sourceRank": 4,
-          "stars": 95901,
+          "stars": 95982,
           "periodStars": 2560,
           "language": "JavaScript",
           "description": "Production-grade engineering skills for AI coding agents.",
@@ -1926,7 +1926,7 @@
         {
           "repo": "melgarafael/DeskcommCRM",
           "sourceRank": 12,
-          "stars": 3080,
+          "stars": 3098,
           "periodStars": 2179,
           "language": "TypeScript",
           "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
@@ -1935,7 +1935,7 @@
         {
           "repo": "Tencent/BrowserSkill",
           "sourceRank": 18,
-          "stars": 4306,
+          "stars": 4476,
           "periodStars": 2157,
           "language": "TypeScript",
           "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
@@ -1944,7 +1944,7 @@
         {
           "repo": "vastsa/PI-Desktop",
           "sourceRank": 5,
-          "stars": 4168,
+          "stars": 4187,
           "periodStars": 1939,
           "language": "TypeScript",
           "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
@@ -1955,12 +1955,12 @@
     "month": {
       "period": "monthly",
       "sourceUrl": "https://github.com/trending?since=monthly",
-      "fetchedAt": "2026-09-18T02:37:02Z",
+      "fetchedAt": "2026-09-18T05:31:37Z",
       "items": [
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 2,
-          "stars": 47518,
+          "stars": 47589,
           "periodStars": 26237,
           "language": "Python",
           "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -1969,7 +1969,7 @@
         {
           "repo": "openai/codex",
           "sourceRank": 11,
-          "stars": 124945,
+          "stars": 124978,
           "periodStars": 19130,
           "language": "Rust",
           "description": "Lightweight coding agent that runs in your terminal",
@@ -1978,7 +1978,7 @@
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 2,
-          "stars": 35011,
+          "stars": 35390,
           "periodStars": 13677,
           "language": "Go",
           "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
@@ -1987,7 +1987,7 @@
         {
           "repo": "K-Dense-AI/scientific-agent-skills",
           "sourceRank": 7,
-          "stars": 45376,
+          "stars": 45400,
           "periodStars": 11830,
           "language": "Python",
           "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
@@ -1996,7 +1996,7 @@
         {
           "repo": "volcengine/OpenViking",
           "sourceRank": 13,
-          "stars": 37904,
+          "stars": 37920,
           "periodStars": 9190,
           "language": "Python",
           "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
@@ -2005,7 +2005,7 @@
         {
           "repo": "tashfeenahmed/freellmapi",
           "sourceRank": 5,
-          "stars": 26957,
+          "stars": 26978,
           "periodStars": 8304,
           "language": "TypeScript",
           "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
@@ -2014,7 +2014,7 @@
         {
           "repo": "jingyaogong/minimind",
           "sourceRank": 5,
-          "stars": 61496,
+          "stars": 61508,
           "periodStars": 6867,
           "language": "Python",
           "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
@@ -2023,7 +2023,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 1,
-          "stars": 26355,
+          "stars": 26514,
           "periodStars": 6280,
           "language": "Go",
           "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
@@ -2032,7 +2032,7 @@
         {
           "repo": "ggml-org/llama.cpp",
           "sourceRank": 16,
-          "stars": 128614,
+          "stars": 128622,
           "periodStars": 4666,
           "language": "C++",
           "description": "LLM inference in C/C++",
@@ -2041,7 +2041,7 @@
         {
           "repo": "jundot/omlx",
           "sourceRank": 21,
-          "stars": 21851,
+          "stars": 21856,
           "periodStars": 3034,
           "language": "Python",
           "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
@@ -2051,52 +2051,37 @@
     }
   },
   "news": {
-    "dataUpdatedAt": "2026-09-18T02:37:02Z",
+    "dataUpdatedAt": "2026-09-18T05:31:37Z",
     "items": [
       {
-        "title": "人形机器人可“自主做家务”，Figure 发布 Helix 2.5 模型",
-        "sourceUrl": "https://www.ithome.com/1/003/942.htm",
-        "publishedAt": "2026-09-18T02:05:28Z",
+        "title": "智谱 GLM-5.3-FlashX 模型上线，更快、更流畅",
+        "sourceUrl": "https://www.ithome.com/1/004/061.htm",
+        "publishedAt": "2026-09-18T04:45:33Z",
         "source": "IT之家",
-        "id": "362e2cf1c4eb969bbb3ba941fd05cb1f19401d8041754d9a8cb71938154effef",
+        "id": "afed9962221047b7e43784ea9473137ead75a606cd6378f0eff4f97992a38f19",
         "summary": null,
         "lang": "zh",
         "originalSource": null,
         "originalUrl": null,
         "originalVerifiedAt": null,
-        "url": "https://www.ithome.com/1/003/942.htm",
+        "url": "https://www.ithome.com/1/004/061.htm",
         "category": "model",
         "eventType": "model-release"
       },
       {
-        "title": "OpenAI 推出 Astra for Law：索引 2.3 亿 URL，法律问答正确率 54% 力压通用模型 15 个百分点",
-        "sourceUrl": "https://www.aibase.com/zh/news/31146",
-        "source": "AIBase",
-        "publishedAt": "2026-09-18T01:48:37Z",
-        "id": "9aae40e2d877690bffd02ec664d6c581e75ebcf0985fafe72f3ca22a5c291069",
+        "title": "阿里发布 Qwen3.8-Omni-Flash 全模态模型：音视频能力提升，百万 Token 图文音视频输入 0.8 元",
+        "sourceUrl": "https://www.ithome.com/1/004/049.htm",
+        "publishedAt": "2026-09-18T03:34:25Z",
+        "source": "IT之家",
+        "id": "bfe967cd1d528aee5dc5f1090ffc17c3d44efa7f7cef5ed489da477c7930359c",
         "summary": null,
         "lang": "zh",
         "originalSource": null,
         "originalUrl": null,
         "originalVerifiedAt": null,
-        "url": "https://www.aibase.com/zh/news/31146",
+        "url": "https://www.ithome.com/1/004/049.htm",
         "category": "model",
         "eventType": "model-release"
-      },
-      {
-        "title": "打官司最佳 AI 助手：OpenAI 推出 Astra for Law，提高案件胜诉率",
-        "sourceUrl": "https://www.ithome.com/1/003/927.htm",
-        "publishedAt": "2026-09-18T01:30:23Z",
-        "source": "IT之家",
-        "id": "b4b1861d8e44fd4c05a95a15e21ea4da1b8cec0083d9fbb7346083e91310ebd3",
-        "summary": null,
-        "lang": "zh",
-        "originalSource": null,
-        "originalUrl": null,
-        "originalVerifiedAt": null,
-        "url": "https://www.ithome.com/1/003/927.htm",
-        "category": "tool",
-        "eventType": "major-update"
       },
       {
         "title": "百度智能云首发产业智能体操作系统，要实现 AI 的商业和技术飞轮",
@@ -2110,6 +2095,21 @@
         "originalUrl": null,
         "originalVerifiedAt": null,
         "url": "https://www.infoq.cn/article/jXliIdDVTYDAtm73EoSU",
+        "category": "tool",
+        "eventType": "major-update"
+      },
+      {
+        "title": "汪涛详解华为AI战略：算力为核心，昇腾960提前登场，PB级 KV Cache把基础设施推入新阶段",
+        "sourceUrl": "https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l",
+        "publishedAt": "2026-09-17T15:23:47Z",
+        "source": "InfoQ",
+        "id": "6b9711eeea4f27f29657b13d5f1cf34626dc81b752f1ff7d1ff275a8813809d8",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l",
         "category": "tool",
         "eventType": "major-update"
       },
@@ -2129,17 +2129,17 @@
         "eventType": "price-or-free"
       },
       {
-        "title": "实测智象HiDream-O1-Video视频模型：嘻哈说唱、NBA绝杀，视频生成开始理解真实世界",
-        "sourceUrl": "https://zhidx.com/p/594910.html",
-        "publishedAt": "2026-09-17T11:05:51Z",
-        "source": "智东西",
-        "id": "de554480f40bdb916047f91534d7fd2fcb122216691d7e6506d4d38057520456",
+        "title": "千问上线 Qwen3.8-Omni-Flash:1M 上下文，30项评测平均提升超26%",
+        "sourceUrl": "https://www.aibase.com/zh/news/31156",
+        "source": "AIBase",
+        "publishedAt": "2026-09-18T03:25:18Z",
+        "id": "7763b51f2bdee11ac4c7bd8142aa68c7c80cfc78bb70bee16f04f1c30520a77a",
         "summary": null,
         "lang": "zh",
         "originalSource": null,
         "originalUrl": null,
         "originalVerifiedAt": null,
-        "url": "https://zhidx.com/p/594910.html",
+        "url": "https://www.aibase.com/zh/news/31156",
         "category": "model",
         "eventType": "model-review"
       }

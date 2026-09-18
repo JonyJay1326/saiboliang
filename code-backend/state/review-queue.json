@@ -421,5 +421,47 @@
     "id": "62c117f46bbfe73c518acdccaddcc7f8f8aa6cf3d0e51b699079bef3481ad767",
     "status": "pending",
     "createdAt": "2026-09-18T02:37:02Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "2a76e2f2952913ce6a06de8b3818f61c1dcb6a477560e6f8e8ca58632f0df530",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "被热议的RSI，39 年前就已诞生？现代人工智能之父复盘RSI的漫长探索",
+      "sourceUrl": "https://www.infoq.cn/article/wbpy0Kv3tB32jEPV6Cg0",
+      "publishedAt": "2026-09-18T12:35:43Z",
+      "source": "InfoQ"
+    },
+    "id": "4ebbb8f6625ff9c2eb3693d6a5689f29c7670f01fcafc1a58ed98f657da43d1c",
+    "status": "pending",
+    "createdAt": "2026-09-18T05:31:37Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "1bfd5714720d97da2438f69e2d62b7b268615290163c4e8bf09b6d15fff45b99",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "6.5亿美元押注“AI研究AI”：一群顶级研究员想造出“自我进化”的超级智能",
+      "sourceUrl": "https://www.infoq.cn/article/da8jMox7ikdNmD2vYyTm",
+      "publishedAt": "2026-09-18T12:00:00Z",
+      "source": "InfoQ"
+    },
+    "id": "86a26e41bd9912b554f5c5a2be9b5d5b4c3f2a89374baf854d8d91fef57dc677",
+    "status": "pending",
+    "createdAt": "2026-09-18T05:31:37Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "45bf274ae692f4006f1aafea9d151781d006e8c02ad62aa11222bf73d05e23d3",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "Agoda 用 DragonflyDB 替换 SQL Server：真正难的不是性能，而是平稳切换",
+      "sourceUrl": "https://www.infoq.cn/article/2kGlAwpJrK9I5kdDHLGz",
+      "publishedAt": "2026-09-18T11:20:00Z",
+      "source": "InfoQ"
+    },
+    "id": "b728d57ceec438648954ec3ecf51124d62e0492247fed5fc91a4de217b245f3e",
+    "status": "pending",
+    "createdAt": "2026-09-18T05:31:37Z"
   }
 ]
