@@ -1,0 +1,61 @@
+---
+// 套餐列表卡（frontend-spec §5.4）—— 精简版
+// 只展示「选哪个」需要的字段：序号、图标、厂商、产品名、状态、起步价、额度口径、
+// 模型芯片、档位名+价格。
+// 完整信息（tagline、highlights、档位要点、条件、来源）在详情页 /plans/[id]/，
+// 列表页点标题弹框预览（§5.11）。
+import { planStatusLabel, startingPriceLabel, tierPrice } from '../lib/format.js';
+import { planIconUrl, vendorInitial } from '../lib/vendors.js';
+
+const { plan, index } = Astro.props;
+
+const icon = planIconUrl(plan.vendor);
+const CHIP_LIMIT = 4;
+const chips = plan.models.slice(0, CHIP_LIMIT);
+const restChips = plan.models.length - chips.length;
+---
+<article class="plan-card" data-group={plan.group}>
+  <div class="plan-card__head">
+    <span class="rank-badge" aria-label={`展示序号 ${index}`}>{index}</span>
+    {
+      icon ? (
+        <img class="plan-card__icon" src={icon} alt="" width="24" height="24" loading="lazy" decoding="async" />
+      ) : (
+        <span class="plan-card__icon plan-card__icon--initial" aria-hidden="true">{vendorInitial(plan.vendor)}</span>
+      )
+    }
+    <span class="plan-card__vendor">{plan.vendor}</span>
+    <span class="plan-card__status">{planStatusLabel(plan.status)}</span>
+  </div>
+
+  <h3 class="plan-card__title">
+    <a href={`/plans/${plan.id}/`}>{plan.product}</a>
+  </h3>
+
+  <p class="plan-card__start">
+    <strong>{startingPriceLabel(plan)}</strong>
+    {plan.quotaBasis && <span class="plan-card__quota">{plan.quotaBasis}</span>}
+  </p>
+
+  {
+    plan.models.length > 0 && (
+      <ul class="plan-card__chips">
+        {chips.map((m) => (
+          <li class="badge">{m}</li>
+        ))}
+        {restChips > 0 && <li class="badge">+{restChips}</li>}
+      </ul>
+    )
+  }
+
+  <dl class="plan-card__tiers">
+    {
+      plan.tiers.map((tier) => (
+        <div>
+          <dt>{tier.name}</dt>
+          <dd>{tierPrice(tier)}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</article>

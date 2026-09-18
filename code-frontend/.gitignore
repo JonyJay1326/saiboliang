@@ -1,0 +1,30 @@
+# ============================================================
+# code-frontend · .gitignore
+# 依据：AGENTS.md §6（标题一律图片化，禁止 @font-face 挂字体文件上线）
+# ============================================================
+
+# 字体文件：禁止进入待发布仓库（授权不含 webfont）
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.ttc
+*证书*
+*授权*
+*.pdf
+
+# 凭据
+.env
+.env.*
+!.env.example
+
+# 构建产物与依赖
+node_modules/
+dist/
+.astro/
+.cache/
+*.log
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db

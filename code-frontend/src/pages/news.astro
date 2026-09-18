@@ -1,0 +1,18 @@
+---
+// /news 邸报 —— frontend-spec §4.7（一期为施工占位页）
+// 菜单与路由保留、不作 404；不渲染任何 news.json 数据；页面 noindex、不进 sitemap。
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="邸报"
+  noindex
+  description="邸报（AI 资讯精选）正在重新设计，二期上线。"
+>
+  <section class="build-notice">
+    <h1>邸报未印</h1>
+    <p>这个板块正在重新设计，二期上线。菜单先留着，方便你知道它将来在哪儿。</p>
+  </section>
+
+  <p><a href="/tickets/">先去看粮票 →</a></p>
+  <p><a href="/">回太仓 →</a></p>
+</Base>

@@ -1,0 +1,55 @@
+# ============================================================
+# 赛博粮仓 · 根 .gitignore（白名单式）
+# 依据：AGENTS.md §3 / §6 / §7、TASKS.md D5
+#
+# 策略：先排除根目录下的一切，再显式放行要发布的目录。
+# 这样字体、证书、参考稿、文档、cache-tools 本地产物
+# 在 git init 之前就天然出不了仓库（§6 高压线）。
+# ============================================================
+
+/*
+!/.gitignore
+!/code-frontend/
+!/code-backend/
+!/.github/
+!README.md
+!AGENTS.md
+!TASKS.md
+
+# ------------------------------------------------------------
+# 放行目录内仍要挡住的东西（双保险）
+# ------------------------------------------------------------
+
+# 凭据：Key 只存本机 .env 或 Actions Secret，绝不入库（架构 §2.1）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.keystore
+
+# 字体与授权：个人商用授权不含 webfont，子集化也不行（AGENTS.md §6）
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.ttc
+*证书*
+*授权*
+fonts/
+
+# 本地产物与依赖
+node_modules/
+dist/
+.astro/
+.cache/
+*.log
+tmp/
+.tmp/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

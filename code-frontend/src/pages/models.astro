@@ -1,0 +1,49 @@
+---
+// /models 点将台 —— frontend-spec §4.5
+// 两榜切换为轻量显隐（原生脚本，见 §7.1 / §10.2），两榜均在构建期渲染。
+// 默认综合榜。
+import Base from '../layouts/Base.astro';
+import ModelRow from '../components/ModelRow.astro';
+import ToggleBar from '../components/ToggleBar.astro';
+import { models } from '../lib/data.js';
+
+const file = models();
+const r = file.rankings;
+const modelById = new Map(file.models.map((m) => [m.id, m]));
+const DEFAULT = 'intelligence';
+const boards = [
+  { key: 'intelligence', label: '综合榜', rows: r.intelligence },
+  { key: 'coding', label: '编程榜', rows: r.coding },
+];
+---
+<Base
+  title="点将台"
+  description="Artificial Analysis 综合与编程两榜，附公开市场参考价。"
+  dataUpdatedAt={file.dataUpdatedAt}
+>
+  <h1>点将台</h1>
+  <p>
+    来源{' '}
+    <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">Artificial Analysis</a>
+    {r.indexVersion && ` · 指数版本 ${r.indexVersion}`}
+    {r.updatedAt && ` · 榜单时间 ${r.updatedAt}`}
+  </p>
+  <p>报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。</p>
+
+  <div data-toggle data-toggle-current={DEFAULT}>
+    <ToggleBar label="榜单类型" options={boards} current={DEFAULT} />
+
+    {
+      boards.map((board) => (
+        <section data-toggle-panel={board.key} hidden={board.key !== DEFAULT}>
+          <h2>{board.label}</h2>
+          <ol class="ranking">
+            {board.rows.map((row, i) => (
+              <ModelRow row={{ ...row, model: modelById.get(row.modelId) }} index={i + 1} />
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+</Base>

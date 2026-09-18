@@ -1,0 +1,80 @@
+---
+// /about 关于 —— frontend-spec §4.10
+import Base from '../layouts/Base.astro';
+import { github, models, news, tickets, version } from '../lib/data.js';
+
+const batch = version().version;
+const enabledNewsSources = news().items.map((n) => n.source);
+const plans = models().plans;
+const vendors = [...new Set(plans.map((p) => p.vendor))];
+---
+<Base title="关于" description="站点说明、数据来源清单与推广披露。">
+  <h1>关于</h1>
+
+  <section aria-labelledby="about-site">
+    <h2 id="about-site">站点说明</h2>
+    <p>赛博粮站聚合三类信息：免费 AI 额度与试用、GitHub AI 热门项目、模型能力与编程套餐报价。</p>
+    <p>自动采集每天 3 次，北京时间 11:17 / 15:17 / 19:17 前后。当前批次：{batch}</p>
+  </section>
+
+  <section aria-labelledby="about-sources">
+    <h2 id="about-sources">数据来源清单</h2>
+    <table>
+      <thead>
+        <tr><th>来源</th><th>口径与局限</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub Trending</a></td>
+          <td>
+            官方全局榜与语言榜；只收 AI 应用与开发工具；按来源给出的区间新增 star 降序。
+            区间由 GitHub 定义，本站不标精确 7/30 天净增。付费赞助位一律排除。
+          </td>
+        </tr>
+        <tr>
+          <td><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></td>
+          <td>
+            综合与编程两榜指数，各取前 30 条；报价为 AA 公开市场参考价，
+            不代表原厂或全网最低价。
+          </td>
+        </tr>
+        <tr>
+          <td>厂商官方页面</td>
+          <td>
+            编程套餐来自厂商官方文档与定价页（当前 {plans.length} 个套餐，覆盖 {vendors.length} 家）。
+            条件与额度以官方结算页为准。
+          </td>
+        </tr>
+        <tr>
+          <td>免费活动（人工维护）</td>
+          <td>
+            票证由人工整理并核验证据页（当前 {tickets().tickets.length} 条），
+            不自动抓取；失效与期限如实标注，不确定的标为「未核实」。
+          </td>
+        </tr>
+        <tr>
+          <td>中文资讯</td>
+          <td>
+            一期延期到二期，/news 为施工占位页。
+            {enabledNewsSources.length > 0 && `管道仍在采集（本批 ${enabledNewsSources.length} 条，来源：${[...new Set(enabledNewsSources)].join('、')}），但前端不展示。`}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="about-promo">
+    <h2 id="about-promo">推广披露</h2>
+    <p>
+      票证卡上的「含推广」角标表示该链接为推广链接。标记为推广**不影响排序**——
+      票证的排序规则（未失效 → 推荐分 → 收录时间）全部公开在
+      <a href="/tickets/">粮票</a>页说明中。
+    </p>
+    <p>历史链接若曾携带邀请码或推荐参数，已在录入时剥除并改用官方页。</p>
+  </section>
+
+  <section aria-labelledby="about-disclaimer">
+    <h2 id="about-disclaimer">免责</h2>
+    <p>信息仅供参考，领取前请核实官方页面。</p>
+  </section>
+</Base>

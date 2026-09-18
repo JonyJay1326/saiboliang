@@ -1,0 +1,17 @@
+---
+// 页脚（frontend-spec §5.9）：数据来源链接、推广披露入口（→ /about）、数据核验时间。
+// 核验时间按页面取对应模块的 dataUpdatedAt（契约 §3.3：各页面展示该文件的核验时间）。
+import { freshness, toBeijing } from '../lib/format.js';
+
+const { dataUpdatedAt = null, sourceLabel = null } = Astro.props;
+const state = freshness(dataUpdatedAt);
+---
+<footer>
+  <p>
+    {sourceLabel && <span>{sourceLabel} · </span>}
+    数据来源与推广披露见 <a href="/about/">关于</a>
+  </p>
+  <p class="freshness" data-freshness={state.level}>
+    数据核验时间：{toBeijing(dataUpdatedAt) ?? state.text}
+  </p>
+</footer>

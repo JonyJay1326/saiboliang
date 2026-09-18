@@ -1,0 +1,2148 @@
+{
+  "tickets": {
+    "dataUpdatedAt": "2026-09-18T05:23:50Z",
+    "tickets": [
+      {
+        "id": "cloudflare-workersai-free-202609",
+        "title": "Cloudflare Workers AI 免费额度",
+        "vendor": "Cloudflare",
+        "category": "api-quota",
+        "score": 59,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册即用免绑卡，每天 10,000 Neurons 免费额度",
+        "content": "Cloudflare Workers AI 是边缘推理服务，Free 档每天送算力预算，注册即用、免绑卡。\n\n- 额度：**每天 10,000 Neurons**，00:00 UTC 回满\n- 模型：GLM-4.7-flash、Llama 4、Qwen3.8\n- 另含：gpt-oss-120b、Whisper、bge 嵌入、flux 生图\n- 绑卡项：GLM-5.3、DeepSeek-V4、Kimi K2.6 需付费方式\n- 接口：OpenAI 兼容，限速 300 次/分\n\n领取步骤：\n\n1. 登录控制台 → Workers AI\n2. 复制 Account ID，创建 API Token\n3. base_url 换成账户端点\n4. 模型填 @cf/zai-org/glm-4.7-flash\n\n**注意**：Neurons 是每日预算非无限量，扣完即停；超量需升级 Paid；旗舰模型需绑卡，见[定价页](https://developers.cloudflare.com/workers-ai/platform/pricing/)。",
+        "link": "https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fai%2Fworkers-ai",
+        "affiliate": false,
+        "publishedAt": "2026-09-17",
+        "updatedAt": "2026-09-17"
+      },
+      {
+        "id": "sensetime-raccoon-credits-202609",
+        "title": "商汤小浣熊每日免费 300 积分",
+        "vendor": "商汤小浣熊",
+        "category": "credits",
+        "score": 75,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日登录领 300 积分，新人再得 6000 一年有效",
+        "content": "商汤小浣熊（Raccoon Work）是商汤出品的 AI 办公助手，覆盖网页、桌面与移动三端，个人免费版长期每日送积分（用户实测 2026-09）。\n\n- 额度：**每日登录 300 积分**，24:00 清零不累计\n- 新人礼：注册+桌面登录各 3000，一年有效\n- 模型：Kimi K3、GLM 5.3、GLM 5.3 Flash\n- 另含：DeepSeek V4.1 Flash\n- 限免：SenseNova 6.8 Flash Lite 至 9 月 28 日\n- 功能：数据分析、PPT、任务规划等办公场景\n\n领取步骤：\n\n1. 打开 [官网](https://xiaohuanxiong.com/)注册登录，每日积分自动发放\n2. 下载桌面端并登录，额外领 3000 积分\n3. 对话里选模型直接用，积分自动抵扣\n\n**注意**：每日积分当天清零不累计；新人 6000 积分一年有效；免费版仅限标准模型，名单以产品内为准。",
+        "link": "https://xiaohuanxiong.com/",
+        "affiliate": false,
+        "publishedAt": "2026-09-17",
+        "updatedAt": "2026-09-17"
+      },
+      {
+        "id": "openrouter-union-alpha-202609",
+        "title": "Union Alpha 匿名模型限免",
+        "vendor": "OpenRouter",
+        "category": "api-quota",
+        "score": 66,
+        "tags": {
+          "duration": "limited",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": "2026-09-23T23:59:59+08:00",
+        "summary": "Stealth 神秘模型 $0 调用约一周，262K 上下文",
+        "content": "匿名厂商通过 OpenRouter「Stealth」隐身通道发布 Union Alpha，同步登录 OpenCode Zen，预览期免费调用。\n\n- 额度：**预览期 $0**，官方未公布速率上限\n- 规格：262K 上下文，支持图像输入与工具调用\n- 基准：OpenRouter 页 GPQA Diamond 90.9%\n- 隐私：承诺零留存、不用于模型训练\n- 社区口径：免费约一周，趁早上车\n\n领取步骤：\n\n1. 打开 [模型页](https://openrouter.ai/stealth/union-alpha)注册并创建 API Key\n2. 模型 ID 填 stealth/union-alpha\n3. base_url 换 OpenRouter，OpenAI 格式直连\n\n**注意**：厂商身份未知，提示词可能被提供商保留；社区性能对比与归属猜测均未证实，敏感代码慎发。",
+        "link": "https://openrouter.ai/stealth/union-alpha",
+        "affiliate": false,
+        "publishedAt": "2026-09-17",
+        "updatedAt": "2026-09-17"
+      },
+      {
+        "id": "amd-tokenfactory-free-202609",
+        "title": "AMD TokenFactory 免费 API",
+        "vendor": "AMD",
+        "category": "api-quota",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册领 Key 免费调 6 款模型，OpenAI 兼容",
+        "content": "AMD Radeon Cloud 推出 TokenFactory（Beta），开发者注册即可领取 API Key，免费调用多款主流模型。\n\n- 模型：**DeepSeek-V4-Flash**（含视觉版）\n- 另有：Qwen3.8-Flash-Next、MiniCPM5 等 6 款\n- 协议：**OpenAI 兼容**，另支持 Anthropic 格式\n- 接口：developer.amd.com.cn/radeon/api/v1\n- 费用：无需信用卡，Beta 期免费\n\n领取步骤：\n\n1. 打开 [TokenFactory 页](https://developer.amd.com.cn/radeon/tokenfactory)注册登录\n2. 在「Public Free Model APIs」点开模型卡片\n3. 复制弹窗内 API Key，全模型通用\n\n**注意**：Beta 期服务，模型清单与限额可能随时调整；每日额度以官网弹窗实时展示为准。",
+        "link": "https://developer.amd.com.cn/radeon/tokenfactory",
+        "affiliate": false,
+        "publishedAt": "2026-09-16",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "bazaarlink-free-202609",
+        "title": "BazaarLink 免费模型 API",
+        "vendor": "BazaarLink",
+        "category": "api-quota",
+        "score": 55,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册领 Key，2 款模型免费调，每日 50 次",
+        "content": "BazaarLink 是 OpenAI 兼容的模型 API 网关，注册即送免费 Key，含免费额度模型。\n\n- 模型：**Qwen3.7-Flash**、**DeepSeek-V4-Flash**\n- 限额：10 次/分钟，**50 次/日**（无充值账号）\n- 协议：OpenAI 兼容，api.bazaarlink.ai/v1\n- 费用：无需信用卡，超额按付费价继续\n\n领取步骤：\n\n1. 打开 [BazaarLink 免费页](https://bazaarlink.ai/free)注册\n2. 控制台 Keys 页创建 API Key\n3. 客户端换 base_url 即可调用\n\n**注意**：免费额度随平台配置动态调整，以官方免费页实时展示为准；充值账号日限额翻倍。",
+        "link": "https://bazaarlink.ai/free",
+        "affiliate": false,
+        "publishedAt": "2026-09-16",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "modelscope-magicube-202609",
+        "title": "魔搭魔粒免费调旗舰模型",
+        "vendor": "魔搭 ModelScope",
+        "category": "api-quota",
+        "score": 70,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日登录领魔粒，白嫖 DeepSeek 等旗舰 API",
+        "content": "魔搭 ModelScope 是阿里云旗下模型社区，免费推理已升级魔粒体系，登录领魔粒调旗舰。\n\n- 额度：**每日登录 +200 粒**，绑阿里云 +50\n- 消耗：旗舰约 2 粒/次、主流 1 粒、轻量 0.5 粒\n- 每日固定 250 粒约够旗舰 125 次/日，失败返还魔粒\n- 模型：DeepSeek-V4-Pro、GLM-5.3、Qwen 等\n- 接口：api-inference.modelscope.cn/v1\n- 协议：OpenAI 兼容，另支持 Anthropic\n- 条件：绑定阿里云账号并完成实名认证\n\n领取步骤：\n\n1. 通过 [注册页](https://modelscope.cn/register)注册魔搭\n2. 绑阿里云实名，一次性任务得 150 长期粒\n3. [账号设置](https://modelscope.cn/my/myaccesstoken)创建访问令牌\n4. base_url 换魔搭端点即可调用\n\n**注意**：短期粒 24 小时内有效，长期粒 90 天；规则以站内「魔粒值」入口为准。",
+        "link": "https://modelscope.cn/register",
+        "affiliate": false,
+        "publishedAt": "2026-09-14",
+        "updatedAt": "2026-09-15"
+      },
+      {
+        "id": "zcode-weekend-build-202609",
+        "title": "ZCode 周末构建送 3 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 98,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-09-14T09:00:00+08:00",
+        "summary": "3 亿 Token 周末限时领，GLM-5.3-Flash 可用",
+        "content": "ZCode「周末构建」（Weekend Build）活动新一轮，站长本人已领取到账（用户实测 2026-09，以官方为准）。\n\n- 额度：**3 亿 Token**，仅限 ZCode 内使用\n- 适用：仅 GLM-5.3-Flash，原生 100 万上下文\n- 条件：登录用户可领，往期每账号限一次\n- 时间：9/11 23:00 生效，9/14 09:00 额度到期\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载并升级客户端\n2. 登录后点左下角活动卡片「领取」\n3. 在「模型设置」切「体验套餐」使用\n\n**注意**：生效到到期约 2.4 天，抓紧用完；到期未用自动失效，不可转让折现。",
+        "link": "https://zcode.z.ai/cn",
+        "affiliate": false,
+        "publishedAt": "2026-09-11",
+        "updatedAt": "2026-09-15"
+      },
+      {
+        "id": "youdao-lobster-checkin-202609",
+        "title": "有道龙虾每日签到领 100 积分",
+        "vendor": "网易有道",
+        "category": "credits",
+        "score": 74,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日签到领 100 积分（一个月有效），邀请码新人礼 300",
+        "content": "网易有道出品的桌面级 AI 助手「有道龙虾」（LobsterAI）积分福利。\n\n- 额度：**每日签到 100 积分**，发放起一个月内有效\n- 新人礼：邀请码 **udj0JZ** 得 300 积分，仅 14 天有效\n- 限制条件：每账号每日签到一次\n\n领取步骤：\n\n1. 打开 [官网](https://lobsterai.youdao.com/) 下载 LobsterAI\n2. 安装后点击【登录】\n3. 登录页输入邀请码 udj0JZ，得 300 积分新人礼（14 天有效）\n4. 每日签到再领 100 积分\n\n**注意**：两类积分有效期不同——签到积分一个月、邀请码积分仅 14 天，新人记得尽快用；邀请码有数量上限，失效时以官方活动为准。",
+        "link": "https://lobsterai.youdao.com/",
+        "affiliate": false,
+        "publishedAt": "2026-09-11",
+        "updatedAt": "2026-09-11"
+      },
+      {
+        "id": "orcarouter-free-models-202609",
+        "title": "OrcaRouter 免费模型池",
+        "vendor": "OrcaRouter",
+        "category": "api-quota",
+        "score": 73,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册领 API Key，GLM-5.3 Flash 等免费用",
+        "content": "OrcaRouter 是统一模型网关，把 200+ 模型整合为一套 OpenAI 兼容接口，一个 Key 全局调用。\n\n- 额度：**免费层随注册自带**，见[免费模型列表](https://www.orcarouter.ai/zh-CN/models?price=free)\n- 模型：z-ai/glm-5.3-flash-free\n- 另含 deepseek/deepseek-v4-flash-free\n- 免费档：orcarouter/free 按难度路由\n领取步骤：\n\n1. 打开 [OrcaRouter](https://www.orcarouter.ai/zh-CN/)，注册账号\n2. 控制台「管理 - API 密钥」创建密钥\n3. Base URL 填 api.orcarouter.ai/v1\n4. 模型名填 z-ai/glm-5.3-flash-free\n\n**注意**：Anthropic 接口填根地址 https://api.orcarouter.ai，不带 /v1；免费层有调用频次限制；模型与价格以官方页为准。",
+        "link": "https://www.orcarouter.ai/zh-CN",
+        "affiliate": false,
+        "publishedAt": "2026-09-11",
+        "updatedAt": "2026-09-11"
+      },
+      {
+        "id": "wx-miniapp-contest-2026",
+        "title": "小程序大赛送 10 亿 Token",
+        "vendor": "微信",
+        "category": "token",
+        "score": 82,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-10-17T23:59:59+08:00",
+        "summary": "报名微信小程序大赛，审核通过领 10 亿编码 Token",
+        "content": "2026 微信小程序开发大赛于 7 月 17 日在 WAIC 官宣启动，以「与 AI 共生」为主题，面向全球开发者，个人即可报名。参赛权益里最实用的一项：报名审核通过后，官方邮件发放领取入口，登录领 Coding Plan Token **10 亿额度**，可调用 DeepSeek-V4-Flash。\n\n- 额度：**Coding Plan Token 10 亿**，报名审核通过后邮件领取\n- 模型：DeepSeek-V4-Flash，编码场景够用\n- 彩蛋：另设 49 万元奖金池，一等奖 10 万\n\n使用步骤：\n\n1. 打开 [大赛官网](https://contest.weixin.qq.com/eventDetails?id=4598379302114656257)报名，等待官方审核\n2. 审核通过会收到邮件确认，几天后再收到 token 领取邮件\n3. 按邮件指引登录，领取 Coding Plan Token 即可使用\n\n**注意**：报名截止 10 月 17 日；审核与发放需等邮件，流程有延迟；额度仅限报名者，有效期以领取邮件说明为准。",
+        "link": "https://contest.weixin.qq.com/eventDetails?id=4598379302114656257",
+        "affiliate": false,
+        "publishedAt": "2026-09-09",
+        "updatedAt": "2026-09-15"
+      },
+      {
+        "id": "xunfei-loomy-202609",
+        "title": "讯飞 Loomy 每日送 5000 积分",
+        "vendor": "讯飞 Loomy",
+        "category": "credits",
+        "score": 76,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册送 5000，新手任务拿满 15000，每日再送 5000",
+        "content": "讯飞 Loomy 是讯飞出品的 AI 办公搭子（桌面客户端），本地运行、数据不传云端，接入星火、DeepSeek、千问等多家模型。\n\n- 额度：**注册送 5000 永久积分**，完成新手任务再得 10000\n- 每日：**每天登录再领 5000 积分**，当日有效不可积攒\n- 模型：Qwen 3.8 Max、DeepSeek V4 Flash\n- 另含 GLM 5.2 等，设置-模型里切换\n\n使用步骤：\n\n1. 打开 [Loomy 官网](https://loomy.xunfei.cn/download)下载客户端\n2. 注册登录领取积分，完成新手任务拿满 15000\n3. 设置-模型里按需切换模型开工\n\n**注意**：邀请 1 人双方得 5000 永久积分，一次性码先到先得：7HDGMX、2C77NU、3FGQPQ；官方积分包定价 19.9 元 / 5000 积分，每日 5000 约等于每天 19.9 元额度；以客户端内实际为准。",
+        "link": "https://loomy.xunfei.cn/download",
+        "affiliate": false,
+        "publishedAt": "2026-09-09",
+        "updatedAt": "2026-09-15"
+      },
+      {
+        "id": "cline-free-models-202609",
+        "title": "Cline 免费模型池",
+        "vendor": "Cline",
+        "category": "api-quota",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免 Key 免绑卡，DeepSeek V4.1 Flash 免费",
+        "content": "Cline 是开源 AI 编程工具，提供 VS Code 插件与独立客户端，内置免费模型池，免 API Key、免绑卡，装好即选即用。\n\n- 权益：**内置模型免费用**，无需订阅\n- 实测可用：DeepSeek V4.1 Flash、GLM-5.3-Flash\n\n使用步骤：\n\n1. VS Code 扩展商店搜 Cline 安装，或用独立客户端\n2. 模型列表下拉选择 DeepSeek V4.1 Flash 等免费模型\n3. 直接发起任务，无需配置任何 Key\n\n**注意**：免费池模型名单会轮换调整，以客户端内实际可用为准。",
+        "link": "https://cline.bot/",
+        "affiliate": false,
+        "publishedAt": "2026-09-08",
+        "updatedAt": "2026-09-14"
+      },
+      {
+        "id": "tokenrouter-glm53free-202609",
+        "title": "TokenRouter 免费 GLM-5.3",
+        "vendor": "TokenRouter",
+        "category": "api-quota",
+        "score": 76,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "邮箱注册领 API Key，旗舰 GLM-5.3 免费用",
+        "content": "TokenRouter 是统一模型网关，把智谱、DeepSeek、千问等多家模型整合为一套 OpenAI 兼容接口，一个 Key 全局调用。当前旗舰模型 GLM-5.3 在官方定价页标注 $0.0000/百万 Token。\n\n- 额度：**输入 / 输出均 0 美元**，见官方模型页\n- 模型：z-ai/glm-5.3-free，纯文本，OpenAI 兼容\n- 限制：免费模型限速 8 请求/分钟（8 RPM）\n\n领取步骤：\n\n1. 打开 [TokenRouter](https://www.tokenrouter.com/)，邮箱注册账号\n2. 控制台 API Keys 页创建密钥\n3. 接入参数：Base URL api.tokenrouter.com/v1\n4. 模型名填 z-ai/glm-5.3-free\n\n**注意**：0 美元为当前定价，官方未承诺永久，随时可能调整。",
+        "link": "https://www.tokenrouter.com/models/z-ai/glm-5.3-free/",
+        "affiliate": false,
+        "publishedAt": "2026-09-07",
+        "updatedAt": "2026-09-15"
+      },
+      {
+        "id": "zcode-weekend-202609",
+        "title": "ZCode 周末送 3 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 98,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-09-06T23:00:00+08:00",
+        "summary": "3 亿 Token 限时领，GLM-5.3-Flash 周末有效",
+        "content": "ZCode 周末送额度活动，所有登录用户（含 Coding Plan 订阅）可免费领 3 亿 Token，体验 GLM-5 系列首个原生多模态模型 GLM-5.3-Flash。\n\n- 额度：**3 亿 Token**，仅限 ZCode 内使用\n- 适用：仅 GLM-5.3-Flash，原生支持 100 万上下文\n- 条件：升级至 3.11.2，每账号限领一次\n- 时间：额度 9/5 09:00 生效，9/6 23:00 到期\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载或升级至 3.11.2\n2. 登录后点客户端左下角活动卡片「领取」\n3. 在「模型设置」切「体验套餐」即可使用\n\n**注意**：额度仅限 GLM-5.3-Flash，不可转让折现；到期未用自动失效；数量有限先到先得，高峰期可能限流、付费用户优先。",
+        "link": "https://zcode.z.ai/cn",
+        "affiliate": false,
+        "publishedAt": "2026-09-04",
+        "updatedAt": "2026-09-06"
+      },
+      {
+        "id": "bai-free-chat-202609",
+        "title": "B.AI 免费用 GLM-5.3-Flash",
+        "vendor": "B.AI",
+        "category": "api-quota",
+        "score": 51,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "网页端/API 免费畅聊多款模型，国内无法直接访问",
+        "content": "孙宇晨旗下 Web3 大模型聚合平台 BAI（b.ai），以下 6 款模型在网页端与 API 均可免费使用（用户实测 2026-09，以官方为准）。\n\n- 范围：**免费仅限这 6 款模型**\n- 模型：**GLM-5.3-Flash**、DeepSeek-V4-Flash\n- 另有 DeepSeek Vision-Exp、Hy3、MiMo-V2.5\n- 以及 Qwen3.8-Flash，共 6 款免费\n- 接口：**OpenAI 兼容 API**\n- 端点：api.b.ai/v1/chat/completions\n- 其余：名单外模型需充值（支持链上与法币）\n\n使用步骤：\n\n1. 打开 [B.AI 聊天页](https://chat.b.ai/chat)注册登录\n2. 网页端选免费模型直接对话\n3. API：控制台建 Key 即可调用\n\n**注意**：免费名单可能调整；域名走 CloudFront，**国内直连不可达**；Web3/加密货币背景，注意账号信息安全。",
+        "link": "https://chat.b.ai/chat",
+        "affiliate": false,
+        "publishedAt": "2026-09-02",
+        "updatedAt": "2026-09-02"
+      },
+      {
+        "id": "zhipu-codingplan-flash-zcode-202609",
+        "title": "智谱 Coding Plan 夜间畅蹬",
+        "vendor": "智谱",
+        "category": "api-quota",
+        "score": 84,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-09-20T23:59:59+08:00",
+        "summary": "夜间 ZCode 调 Flash 零消耗，其他 Agent ×2",
+        "content": "智谱 GLM Coding Plan「Flash × ZCode」畅蹬活动（2026-09-03 官方公告），即日起至 9 月 20 日。\n\n- 额度：**GLM-5.3-Flash 零额度消耗**（夜时段）\n- 时段：每晚 23:00 至次日 9:00 自动生效\n- ZCode 内：套餐额度消耗为 0，畅用\n- 其他 Agent：套餐额度在标准规则上 ×2\n\n使用步骤：\n\n1. 持有 GLM Coding Plan 订阅（bigmodel.cn）\n2. 下载 [ZCode](https://zcode.z.ai/cn) 并登录\n3. 夜时段调用 GLM-5.3-Flash 即享 0 消耗\n\n**注意**：需已有 Coding Plan 付费订阅，非零门槛白嫖蛋；活动至 2026-09-20，细则以[官方公告](https://mp.weixin.qq.com/s/pqE9h0QGCazQe8wkQzFY9Q)为准。",
+        "link": "https://zcode.z.ai/cn",
+        "affiliate": false,
+        "publishedAt": "2026-09-03",
+        "updatedAt": "2026-09-03"
+      },
+      {
+        "id": "zhipu-qingyan-6666-202609",
+        "title": "智谱清言开学红包 6666 积分",
+        "vendor": "智谱清言",
+        "category": "credits",
+        "score": 75,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-09-03T23:59:59+08:00",
+        "summary": "开学红包 6666 积分，9.1-9.3 登录即领，7 天有效",
+        "content": "智谱清言秋季开学档官方活动，全平台用户登录即领开学红包。\n\n- 额度：**6666 积分**，登录即领、零门槛\n- 端口：App / 网页 / PC 客户端均可\n- 有效期：积分领取后 7 天内用完，过期清零\n- 适用：清言内 GLM 对话、Agent 任务等积分消耗场景\n\n领取步骤：\n\n1. 打开 [智谱清言](https://chatglm.cn/)并登录\n2. 活动期间登录即自动发放 6666 积分\n3. 在「我的 - 积分」查看余额\n\n**注意**：活动 2026-09-01 至 09-03，9 月 3 日晚入口关闭；积分领取后仅 7 天有效，建议尽早领、尽快用；细则以 App 内展示为准。",
+        "link": "https://chatglm.cn/",
+        "affiliate": false,
+        "publishedAt": "2026-09-01",
+        "updatedAt": "2026-09-01"
+      },
+      {
+        "id": "wechat-cloudbase-aigrowth-202608",
+        "title": "微信 AI 小程序成长计划送 10 亿 Token",
+        "vendor": "腾讯云 CloudBase",
+        "category": "token",
+        "score": 58,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-12-31T23:59:59+08:00",
+        "summary": "报名送 10 亿 Token 与 10 万生图，仅限小程序内用",
+        "content": "腾讯云开发联合微信小程序的开发者扶持计划，报名全行业开放。\n\n- 额度：**10 亿大模型 Token + 10 万张 AI 生图**\n- 限制：**Token 仅限小程序 / 云函数内调用**\n- 模型：混元 Hy3 与 Hy Image 3.0 生图模型\n- 附赠：6 个月个人版云开发环境，已有环境可升级或领 120 元代金券\n- 有效期：资源包自申请成功起 6 个月\n\n领取步骤：\n\n1. 登录 [微信公众平台](https://mp.weixin.qq.com/)\n2. 进入「行业能力 → 小程序成长计划」报名\n3. 开通 CloudBase 环境后额度自动到账\n\n**注意**：报名通道至 2026 年 12 月 31 日关闭；AI 资源包仅限在小程序 / 云函数内调用；活动细则以[官方公告](https://cloud.tencent.com/developer/article/2705075)为准。",
+        "link": "https://cloud.tencent.com/developer/article/2705075",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "tencent-tokenhub-newuser-202608",
+        "title": "腾讯云 TokenHub 新人免费体验包",
+        "vendor": "腾讯云 TokenHub",
+        "category": "token",
+        "score": 70,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-12-31T23:59:59+08:00",
+        "summary": "语言与多模态理解模型各 100 万 Tokens（1 年）",
+        "content": "腾讯云大模型服务平台 TokenHub 新用户免费体验包，官方文档明确口径。\n\n- 额度：**语言 / 多模态理解模型各 100 万 Tokens**，有效期 1 年\n- 附加：生视频 50 积分（YT-Video-HumanActor）\n- 另有混元 3D 系列 100 积分额度\n- 覆盖：Hy3、DeepSeek-V4、GLM-5、Kimi 等主流模型\n- 限制：每账号每模型限领一次，从领取时起算\n\n领取步骤：\n\n1. 登录 [TokenHub 控制台](https://cloud.tencent.com/product/tokenhub)完成实名\n2. 进入模型广场，点右上角「新用户福利免费体验」\n3. 勾选模型立即领取，支持首次调用自动领取\n\n**注意**：活动截至 2026-12-31，后续可能延续或调整；到期未用部分自动失效，以[官方文档](https://cloud.tencent.com/document/product/1823/130053)为准。",
+        "link": "https://cloud.tencent.com/product/tokenhub",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "ctyun-xirang-maas-free-202608",
+        "title": "天翼云息壤每模型送 2500 万 Tokens",
+        "vendor": "天翼云息壤",
+        "category": "token",
+        "score": 82,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "每款文本模型 2500 万 Token，首次调用起 14 天有效",
+        "content": "中国电信天翼云息壤 MaaS 平台免费额度，零门槛领取。\n\n- 额度：**文本类模型每模型 2500 万 Tokens**\n- 有效期：自首次调用起 14 日内有效\n- 覆盖：GLM-5、DeepSeek-V4、Qwen3.5 等主流模型\n- 限制：每账号每模型一份，可切换其他模型继续领用\n\n领取步骤：\n\n1. 打开 [天翼云息壤](https://www.ctyun.cn/product/maas)注册并实名认证\n2. 进入息壤模型推理服务控制台\n3. 在模型广场选模型，零门槛领取免费额度\n\n**注意**：各档模型额度不同，以[官方价格文档](https://ctyun.cn/document/10541165/10963340)为准；额度耗尽或到期后可切换其他模型继续使用。",
+        "link": "https://www.ctyun.cn/product/maas",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-01"
+      },
+      {
+        "id": "zhipu-codingplan-trial-202608",
+        "title": "智谱 GLM Coding Plan 7 天体验卡",
+        "vendor": "智谱",
+        "category": "api-quota",
+        "score": 82,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-09-03T23:59:59+08:00",
+        "summary": "Coding Plan 7 天体验卡，限量 7 份领完即止",
+        "content": "智谱 BigModel 官方限时活动：GLM Coding Plan 7 天免费体验卡。\n\n- 额度：**7 天免费体验 GLM Coding Plan**（GLM-5.3 驱动）\n- 方式：活动页限时领取，**仅 7 份，领完即止**\n- 有效期：**领取通道开放至 2026-09-03 23:59**\n- 适用：编码场景，体验 Coding Plan 全部能力\n\n领取步骤：\n\n1. 打开 [体验卡活动页](https://bigmodel.cn/activity/trial-card/3PG8IOHPDQ)\n2. 登录 BigModel 账号领取 7 天体验卡\n3. 在编码工具中接入使用\n\n**注意**：体验卡仅 7 份，先到先得，**2026-09-03 已全部领完，活动结束**；与 GLM-4.7-Flash 官方免费档相互独立，细则以活动页为准。",
+        "link": "https://bigmodel.cn/activity/trial-card/3PG8IOHPDQ",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-03"
+      },
+      {
+        "id": "monkeycode-free-tier-202608",
+        "title": "MonkeyCode 免费档每日 10M Token",
+        "vendor": "长亭 MonkeyCode",
+        "category": "token",
+        "score": 68,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "¥0 永久免费档每天 10M Token，仅限平台内使用",
+        "content": "长亭科技出品的在线 AI 编程开发平台，免费档长期可用。\n\n- 额度：**¥0 永久免费，每天 10M Token**\n- 环境：云开发环境 1C / 4G、1 个任务并发，浏览器即用\n- 攒额度：每日签到 100 积分，邀请 1 位新用户 +5000 积分\n- 模型：内置 GLM、Kimi、MiniMax、Qwen、DeepSeek 等\n- 免费档：仅基础模型可用\n\n使用步骤：\n\n1. 打开 [MonkeyCode 官网](https://monkeycode-ai.com/?ic=01a06a38-7da4-7e06-bac9-c8c2a8158260)注册\n2. 控制台创建开发任务，每日额度自动到账\n3. 每日签到与邀请好友攒积分\n\n**注意**：额度仅限 MonkeyCode 平台内使用，不可导出或用于 API；免费档限基础模型范围与单任务并发；平台 GitHub 开源（AGPLv3），规则以官网为准。",
+        "link": "https://monkeycode-ai.com/",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-04"
+      },
+      {
+        "id": "agnes-free-api-202608",
+        "title": "Agnes AI 全模态免费 API",
+        "vendor": "Agnes AI",
+        "category": "api-quota",
+        "score": 62,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "文本 / 图像 / 视频全模态免费调用，免费档 RPM 20",
+        "content": "Agnes AI 官方提供的免费 API 访问，覆盖全模态模型。\n\n- 额度：**免费 API 访问**，文本 / 图像 / 视频模型可用\n- 限速：免费档文本模型实际 RPM 20（允许发起 30）\n- 定位：适合演示与个人测试，有基础 TPS 与公平使用配额\n\n使用步骤：\n\n1. 打开 [Agnes AI 平台](https://platform.agnes-ai.com)注册\n2. 生成 API Key\n3. 按[官方文档](https://agnes-ai.com/zh-Hans/docs/tokenplan)配置调用\n\n**注意**：官方未承诺永久免费，配额与限速可能调整；不同密钥类型限速池独立，多开 Key 不提升额度。",
+        "link": "https://platform.agnes-ai.com",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-08-31"
+      },
+      {
+        "id": "qoder-anniversary-202608",
+        "title": "阿里云 Qoder 周年福利 800~2000 次调用",
+        "vendor": "阿里云 Qoder",
+        "category": "credits",
+        "score": 65,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-09-03T23:59:59+08:00",
+        "summary": "个人限领 800~2000 次 Qwen3.8-Max 免费调用",
+        "content": "阿里云智能编程平台 Qoder（原灵码）一周年福利，官方首页活动。\n\n- 额度：**个人限领 800~2000 次 Qwen3.8-Max 免费调用**\n- 模型：阿里旗舰 Qwen3.8-Max\n- 限制：仅限个人用户，活动限时\n\n领取步骤：\n\n1. 打开 [Qoder 官网](https://www.aliyun.com/product/qoder)进入活动入口\n2. 登录阿里云账号领取调用次数\n3. 在 Qoder Desktop / JetBrains 插件内使用\n\n**注意**：分档细节官方未完全公示，以活动页展示为准；活动限时，抓紧领取。",
+        "link": "https://www.aliyun.com/product/qoder",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-08-31"
+      },
+      {
+        "id": "zhipu-glm47flash-free-202608",
+        "title": "智谱 GLM-4.7-Flash 永久免费",
+        "vendor": "智谱",
+        "category": "api-quota",
+        "score": 45,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "官方免费档：200K 上下文 / 128K 输出，高峰可用性差",
+        "content": "智谱 BigModel 官方免费档文本模型，官方定价页标注免费。\n\n- 额度：**输入 / 输出均免费**，官方长期档\n- 参数：200K 上下文，最大输出 128K\n- 支持：深度思考、MCP 工具调用、Agent 编码\n- 同系列：GLM-4.6V-Flash（视觉）同免费\n\n领取步骤：\n\n1. 打开 [BigModel 开放平台](https://open.bigmodel.cn/)注册\n2. 控制台创建 API Key，调用 `glm-4.7-flash`\n\n**注意**：免费档有速率 / 并发限制，高频建议升付费档；上一代 GLM-4.5-Flash 已下线，请求自动路由至本模型；细则以[官方定价页](https://open.bigmodel.cn/pricing)为准。\n\n**可用性提醒**：由于使用人数众多，该模型高峰期可用性较差，请求可能频繁失败，对稳定性有要求的场景建议选付费模型。",
+        "link": "https://open.bigmodel.cn/",
+        "affiliate": false,
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-01"
+      },
+      {
+        "id": "openrouter-free-202608",
+        "title": "OpenRouter 免费模型池",
+        "vendor": "OpenRouter",
+        "category": "api-quota",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免费模型池：Ling 3.0 Flash Fin 等 $0 模型",
+        "content": "OpenRouter 聚合网关的免费模型池，一个 API Key 调用多家模型。\n\n- 额度：**标注 Free 的模型 $0 调用**\n- 示例：Ling 3.0 Flash Fin，金融场景 MoE\n- 池子：免费模型以「:free」后缀或 Free 标注为准，数量随官方上下架变动\n- 接入：OpenAI 兼容 API，注册生成 Key 即可\n- 注意：免费档通常有速率限制，具体以模型页为准\n\n使用步骤：\n\n1. 打开 [OpenRouter 模型页](https://openrouter.ai/models?max_price=0)筛选 Free 标注\n2. 注册并创建 API Key\n3. 调用 :free 后缀模型即可\n\n**注意**：免费模型上下架频繁，额度与限速以模型页实时标注为准。",
+        "link": "https://openrouter.ai/models?max_price=0",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-08-30"
+      },
+      {
+        "id": "catpaw-beta-202608",
+        "title": "CatPaw 公测免费 500 次对话",
+        "vendor": "CatPaw",
+        "category": "credits",
+        "score": 84,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-08-31T23:59:59+08:00",
+        "summary": "公测免费，注册送 500 Credits，可用 GLM-5.2",
+        "content": "美团首款 AI IDE 编程 Agent，公测期完全免费。\n\n- 额度：**注册即赠 500 Credits**，1 Credit = 1 次对话\n- 用完可在产品内申请续充\n- 公测期全部功能免费，支持 Ask 问答与 Agent 智能体两种模式\n- 模型：**GLM-5.2** 与美团自研 LongCat（龙猫）\n- 支持多模型混合调用\n- 功能：代码补全、Agent 驱动编程、前端预览与项目调试\n\n使用步骤：\n\n1. 打开 [CatPaw 官网](https://meituancatpaw.com/)下载客户端（macOS 10.15+）\n2. 注册登录获得 500 次对话额度\n3. 额度用完可在产品内申请续充\n\n**注意**：额度与公测规则以官方公告为准；来源：美团公测官方消息（新浪财经等媒体报道）。",
+        "link": "https://meituancatpaw.com/",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-08-31"
+      },
+      {
+        "id": "opencode-zen-free-202608",
+        "title": "OpenCode Zen 免费模型",
+        "vendor": "OpenCode",
+        "category": "api-quota",
+        "score": 55,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "6 款免费模型可白嫖，需绑卡取 Key",
+        "content": "OpenCode Zen 模型网关免费模型，绑卡即可白嫖。\n\n- 额度：**6 款免费模型**，输入输出均免费\n- 模型：MiMo-V2.5、Nemotron 3 Ultra 等 6 款\n- 门槛：**需绑卡添加账单信息才能取 Key**\n- 费用：免费模型不扣费，余额 $0 可用\n- 接入：OpenAI 兼容 API，/connect 粘贴 Key 即用\n\n使用步骤：\n\n1. 打开 [OpenCode Zen](https://opencode.ai/zen)登录并添加账单信息\n2. 复制 API 密钥，编码工具里 /connect 粘贴\n3. 只调标注 Free 的模型，不产生费用\n\n**注意**：绑卡不充值也能用，建议注册后关闭自动充值（默认低于 $5 自动扣 $20）；每日上限官方未公示；Muse Spark 1.3 Contributor Free 会用对话数据训练 Meta 模型；免费名单以[官方文档](https://opencode.ai/docs/zh-cn/zen/)为准。",
+        "link": "https://opencode.ai/zen",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "nvidia-nim-trial-202608",
+        "title": "NVIDIA NIM 百款模型免费试用",
+        "vendor": "NVIDIA",
+        "category": "api-quota",
+        "score": 52,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "100+ 模型免费试用推理，按模型限速",
+        "content": "NVIDIA Build 官方推理试用，免费调用上百个 NIM 模型。\n\n- 额度：**免费推理（Free inference）**，试用按模型限速，具体限额未公开\n- 模型：100+，含 DeepSeek V4、Kimi K3、gpt-oss\n- 另有 Nemotron、FLUX.1 生图及语音、科学计算系列\n- 接入：OpenAI 兼容 API，注册生成 API Key 即可调用\n\n使用步骤：\n\n1. 打开 [NVIDIA Build](https://build.nvidia.com/models) 注册并验证账号\n2. 在 Settings → API Keys 生成密钥\n3. 选择模型按官方示例发起调用\n\n**注意**：试用限额随模型不同且未公开；历史上的「1000 credits」制度已取消，以官网为准；**国内直连较慢**（用户实测 2026-09）。",
+        "link": "https://build.nvidia.com/models",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "siliconflow-free-models-202608",
+        "title": "硅基流动多款模型免费调用",
+        "vendor": "硅基流动",
+        "category": "api-quota",
+        "score": 58,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "多款模型免费调用：GLM-Z1-9B、Kolors 生图等",
+        "content": "硅基流动 SiliconCloud 大模型云服务平台，多款模型免费调用。\n\n- 对话：**GLM-Z1-9B-0414**（THUDM）输入输出免费\n- 生图：Kolors（可图）免费\n- 语音：星尘 ASR、Qwen3-ASR、SenseVoiceSmall 免费\n- 其他：bge 系列 Embedding / Reranker 免费档\n- 另含 PaddleOCR-VL 免费档\n- 计费：平台按量付费，免费档模型不扣费，注册即可调用\n\n使用步骤：\n\n1. 打开 [硅基流动官网](https://siliconflow.cn/)注册并登录\n2. 在控制台创建 API Key\n3. 调用时选择标注「免费」的模型即可\n\n**注意**：免费档以官方[定价页](https://siliconflow.cn/pricing)实时标注为准。",
+        "link": "https://siliconflow.cn/",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-08-30"
+      },
+      {
+        "id": "bailian-newuser-202608",
+        "title": "阿里云百炼新人最高 7000 万",
+        "vendor": "阿里云百炼",
+        "category": "token",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每模型送 100 万 Token，多模型叠加最高 7000 万",
+        "content": "阿里云百炼新用户福利，开通即自动发放（北京地域模型）。\n\n- 额度：**每个模型独立赠送 100 万 Token**，叠加最高超 1 亿（官方口径）\n- 覆盖：Qwen 全系、DeepSeek、GLM、Kimi 等上百个模型\n- 有效期：发放起 90 天，过期作废、不补发\n- 小灶：OAuth 认证另有每天 2000 次调用额度\n\n领取步骤：\n\n1. 打开 [百炼官网](https://www.aliyun.com/product/bailian)开通服务（无需实名）\n2. 额度 2 小时内自动到账\n3. 在控制台「免费额度」页查看各模型剩余量\n\n**注意**：额度按模型独立、不可跨模型挪用；细则以[官方文档](https://help.aliyun.com/zh/model-studio/new-free-quota)为准。",
+        "link": "https://www.aliyun.com/product/bailian",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-16"
+      },
+      {
+        "id": "longcat-newbie-202608",
+        "title": "LongCat 新人礼最高 2000 万",
+        "vendor": "LongCat",
+        "category": "token",
+        "score": 55,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "实名送 1000 万 Tokens，叠加邀请最高 2000 万",
+        "content": "美团 LongCat AI 开放平台新人福利，LongCat-2.0 上线期多重赠送。\n\n- 额度：**完成实名认证即送 1000 万 Tokens**\n- 叠加：通过邀请链接注册，双方各得 1000 万，叠加新人礼包最高 2000 万\n- 首购：下单返实付金额 5%\n\n使用步骤：\n\n1. 打开 [LongCat 开放平台](https://longcat.chat/platform/product)注册美团账号\n2. 完成实名认证领取新人礼包\n3. 开发者可在控制台创建 API Key 接入\n\n**注意**：邀请奖励需通过邀请链接注册并实名后到账；规则以[官方文档](https://longcat.chat/platform/docs/zh/)为准。",
+        "link": "https://longcat.chat/platform/product",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-08-30"
+      },
+      {
+        "id": "sensenova-free-202608",
+        "title": "商汤日日新 6 万积分/5 小时",
+        "vendor": "商汤日日新",
+        "category": "credits",
+        "score": 58,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "公测期免费 6 万积分/5 小时刷新，注册即用",
+        "content": "商汤日日新 SenseNova 大模型平台公测福利，公测期完全免费（用户实测 2026-08，以官方为准）。\n\n- 额度：**Free 档 60,000 积分 / 5 小时**，周期自动刷新\n- 模型：SenseNova 6.8 Flash Lite、U1 Fast\n- 特殊模型除外\n- 实测：另可调 DeepSeek-V4-Pro、Kimi K3 等\n- 含 GLM-5.2 共 7 个模型\n- 附加：原生多模态、Cowork-Skills 办公特化\n- 最多建 20 个 API Key\n\n使用步骤：\n\n1. 打开 [日日新官网](https://www.sensenova.cn/)注册并登录\n2. 进入控制台创建 API Key\n3. 调用即消耗免费积分，每 5 小时刷新\n\n**注意**：Free 档标注「限时放量」，实测短时调用限速较严、周用量约 60 万；付费档位（Lite / Pro）即将上线，以[官方公告](https://www.sensenova.cn/token-plan)为准。",
+        "link": "https://www.sensenova.cn/token-plan",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-15"
+      },
+      {
+        "id": "trae-work-checkin-202608",
+        "title": "Trae Work 签到领 150 积分",
+        "vendor": "Trae Work",
+        "category": "credits",
+        "score": 90,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日签到领 150 积分，月最高 4650；新人再送 4000",
+        "content": "TRAE Work 每日签到福利，长期有效。\n\n- 额度：**每日签到领 150 通用积分**，积分有效期 31 个自然日\n- 月累计：按 31 天计最高 4650 积分\n- 新用户：注册送 2000 通用积分 + 2000 Work 积分\n- 新人积分有效期 31 天\n- 用途：通用积分适用 TraeCode 与 TraeWork\n- Work 专属积分仅限 TraeWork 用\n\n签到步骤：\n\n1. 打开 [TRAE 官网](https://www.trae.cn/)注册并登录\n2. 进入 TraeWork 网页端、桌面端或移动端\n3. 每日签到即可领取 150 积分\n\n**注意**：官方套餐文档暂仍标注每日 200 Work 专属积分，实际到账以客户端为准（2026-09 站长实测 150 通用积分）；细则以[官方套餐文档](https://docs.trae.cn/ide_plans-and-billing)为准。",
+        "link": "https://www.trae.cn/",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-04"
+      },
+      {
+        "id": "qianwen-office-daily-202608",
+        "title": "千问办公每日领 100 积分",
+        "vendor": "千问办公",
+        "category": "credits",
+        "score": 74,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "个人版每日登录领 100 积分，每天 00:00 刷新，长期可领",
+        "content": "阿里云千问办公（QwenWork）个人免费版长期福利。\n\n- 额度：**每日登录奖励 100 积分**，每天 00:00 刷新\n- 新用户：首次进入个人版「我的 AI 团队」加送 2000 积分，有效期 3 个月\n- 用途：PPT / 网页 / 文档等任务按积分计费，一次约 500 积分\n- 免费版另有：并行任务 10 个、发布网页 5 个、1G 云盘\n\n领取步骤：\n\n1. 打开 [千问办公首页](https://qwenwork.cn/)，注册并登录阿里云账号\n2. 首次进入「我的 AI 团队」领 2000 积分新人礼\n3. 每天登录即可领当日 100 积分\n\n**注意**：每日奖励官方标注限时权益，细则以[官方帮助文档](https://help.aliyun.com/zh/qwenwork/qw-personal-benefits)为准。",
+        "link": "https://qwenwork.cn/",
+        "affiliate": false,
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-08-30"
+      },
+      {
+        "id": "zcode-weekend-202608",
+        "title": "ZCode 周末送额度活动",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 98,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-08-31T09:00:00+08:00",
+        "summary": "3 亿 Token 免费体验 GLM-5.3-Flash",
+        "content": "ZCode 周末送额度活动，免费体验 GLM-5 首个原生多模态模型 GLM-5.3-Flash。\n\n- 额度：**3 亿 Token**，仅限 ZCode 内使用\n- 适用：仅 GLM-5.3-Flash，在「模型设置」切「体验套餐」\n- 条件：新老用户均可，每账号限领一次\n- 时间：周五 20:00 生效，周一 09:00 到期自动失效\n\n领取步骤：\n\n1. 前往 [ZCode 中文官网](https://zcode.z.ai/cn) 下载或升级 ZCode 至 3.10.0+\n2. 周五 15:00 起在客户端左下角活动卡片「领取」\n3. 额度 20:00 生效，切体验套餐即可用",
+        "link": "https://zcode.z.ai/cn",
+        "affiliate": false,
+        "publishedAt": "2026-08-28",
+        "updatedAt": "2026-09-04"
+      }
+    ]
+  },
+  "models": {
+    "dataUpdatedAt": "2026-09-18T02:37:02Z",
+    "rankings": {
+      "source": "artificial-analysis",
+      "sourceUrl": "https://artificialanalysis.ai/",
+      "indexVersion": "4.3",
+      "updatedAt": "2026-09-18T02:37:02Z",
+      "intelligence": [
+        {
+          "modelId": "claude-fable-5-1",
+          "score": 53.4,
+          "rank": 1
+        },
+        {
+          "modelId": "gpt-6-astra",
+          "score": 52.8,
+          "rank": 2
+        },
+        {
+          "modelId": "claude-opus-5",
+          "score": 50.7,
+          "rank": 3
+        },
+        {
+          "modelId": "claude-fable-5",
+          "score": 49.7,
+          "rank": 4
+        },
+        {
+          "modelId": "muse-spark-1-3",
+          "score": 48.2,
+          "rank": 5
+        },
+        {
+          "modelId": "gpt-5-6-sol",
+          "score": 47.1,
+          "rank": 6
+        },
+        {
+          "modelId": "qwen3-8-max",
+          "score": 45.4,
+          "rank": 7
+        },
+        {
+          "modelId": "glm-5-3",
+          "score": 44.9,
+          "rank": 8
+        },
+        {
+          "modelId": "grok-4-6",
+          "score": 44.4,
+          "rank": 9
+        },
+        {
+          "modelId": "kimi-k3",
+          "score": 43.8,
+          "rank": 10
+        },
+        {
+          "modelId": "gpt-5-6-terra",
+          "score": 42.3,
+          "rank": 11
+        },
+        {
+          "modelId": "claude-opus-4-8",
+          "score": 42,
+          "rank": 12
+        },
+        {
+          "modelId": "glm-5-3-flash",
+          "score": 41.9,
+          "rank": 13
+        },
+        {
+          "modelId": "gemini-3-8-flash",
+          "score": 41.2,
+          "rank": 14
+        },
+        {
+          "modelId": "claude-opus-4-7",
+          "score": 40.7,
+          "rank": 15
+        },
+        {
+          "modelId": "qwen3-8-max-0803",
+          "score": 40.3,
+          "rank": 16
+        },
+        {
+          "modelId": "qwen3-8-2-4t-a95b",
+          "score": 40,
+          "rank": 17
+        },
+        {
+          "modelId": "qwen3-8-flash-next",
+          "score": 39.9,
+          "rank": 18
+        },
+        {
+          "modelId": "muse-spark-1-2",
+          "score": 39.8,
+          "rank": 19
+        },
+        {
+          "modelId": "gemini-3-7-flash-medium",
+          "score": 39.6,
+          "rank": 20
+        },
+        {
+          "modelId": "deepseek-v4-1-flash",
+          "score": 39.5,
+          "rank": 21
+        },
+        {
+          "modelId": "grok-4-5",
+          "score": 39.1,
+          "rank": 22
+        },
+        {
+          "modelId": "gpt-5-4",
+          "score": 39,
+          "rank": 23
+        },
+        {
+          "modelId": "gpt-5-5",
+          "score": 38.6,
+          "rank": 24
+        },
+        {
+          "modelId": "claude-sonnet-5",
+          "score": 38.4,
+          "rank": 25
+        },
+        {
+          "modelId": "gpt-5-6-luna",
+          "score": 37.5,
+          "rank": 26
+        },
+        {
+          "modelId": "deepseek-v4-pro",
+          "score": 36.3,
+          "rank": 27
+        },
+        {
+          "modelId": "agnes-3-0-flash",
+          "score": 35.5,
+          "rank": 28
+        },
+        {
+          "modelId": "agnes-2-5-pro-beta",
+          "score": 35.2,
+          "rank": 29
+        },
+        {
+          "modelId": "deepseek-v4-flash-vision",
+          "score": 35,
+          "rank": 30
+        }
+      ],
+      "coding": [
+        {
+          "modelId": "claude-fable-5-1",
+          "score": 81.6,
+          "rank": 1
+        },
+        {
+          "modelId": "claude-opus-5",
+          "score": 78,
+          "rank": 2
+        },
+        {
+          "modelId": "gpt-5-6-sol",
+          "score": 77.4,
+          "rank": 3
+        },
+        {
+          "modelId": "gpt-6-astra",
+          "score": 76.9,
+          "rank": 4
+        },
+        {
+          "modelId": "grok-4-6",
+          "score": 76.8,
+          "rank": 5
+        },
+        {
+          "modelId": "gpt-5-6-terra",
+          "score": 76.7,
+          "rank": 6
+        },
+        {
+          "modelId": "claude-fable-5",
+          "score": 76.5,
+          "rank": 7
+        },
+        {
+          "modelId": "gemini-3-8-flash",
+          "score": 76.3,
+          "rank": 8
+        },
+        {
+          "modelId": "kimi-k3",
+          "score": 76.2,
+          "rank": 9
+        },
+        {
+          "modelId": "qwen3-8-max",
+          "score": 76.2,
+          "rank": 10
+        },
+        {
+          "modelId": "muse-spark-1-3",
+          "score": 75.8,
+          "rank": 11
+        },
+        {
+          "modelId": "gpt-5-5",
+          "score": 74.9,
+          "rank": 12
+        },
+        {
+          "modelId": "glm-5-3",
+          "score": 74.8,
+          "rank": 13
+        },
+        {
+          "modelId": "claude-opus-4-8",
+          "score": 74.3,
+          "rank": 14
+        },
+        {
+          "modelId": "claude-opus-4-7",
+          "score": 73.6,
+          "rank": 15
+        },
+        {
+          "modelId": "qwen3-8-flash-next",
+          "score": 73.1,
+          "rank": 16
+        },
+        {
+          "modelId": "grok-4-5",
+          "score": 72.4,
+          "rank": 17
+        },
+        {
+          "modelId": "muse-spark-1-2",
+          "score": 72.2,
+          "rank": 18
+        },
+        {
+          "modelId": "qwen3-8-2-4t-a95b",
+          "score": 71.9,
+          "rank": 19
+        },
+        {
+          "modelId": "qwen3-8-max-0803",
+          "score": 71.8,
+          "rank": 20
+        },
+        {
+          "modelId": "claude-sonnet-5",
+          "score": 71.5,
+          "rank": 21
+        },
+        {
+          "modelId": "gemini-3-7-flash-medium",
+          "score": 71.5,
+          "rank": 22
+        },
+        {
+          "modelId": "glm-5-3-flash",
+          "score": 71.5,
+          "rank": 23
+        },
+        {
+          "modelId": "gpt-5-6-luna",
+          "score": 71.4,
+          "rank": 24
+        },
+        {
+          "modelId": "muse-spark-1-1",
+          "score": 71.3,
+          "rank": 25
+        },
+        {
+          "modelId": "gpt-5-4",
+          "score": 71.1,
+          "rank": 26
+        },
+        {
+          "modelId": "gemini-3-6-flash",
+          "score": 69.2,
+          "rank": 27
+        },
+        {
+          "modelId": "deepseek-v4-flash",
+          "score": 69.1,
+          "rank": 28
+        },
+        {
+          "modelId": "deepseek-v4-pro",
+          "score": 68.8,
+          "rank": 29
+        },
+        {
+          "modelId": "gemini-3-1-pro-preview",
+          "score": 68.8,
+          "rank": 30
+        }
+      ]
+    },
+    "models": [
+      {
+        "id": "agnes-2-5-pro-beta",
+        "name": "Agnes 2.5 Pro Beta",
+        "vendor": "Sapiens AI",
+        "aaId": "f3a0e101-086f-44b3-a1b2-d23498f9716b",
+        "releasedAt": "2026-08-26",
+        "inputCost": 0.1,
+        "outputCost": 0.3,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/agnes-2-5-pro-beta",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "agnes-3-0-flash",
+        "name": "Agnes 3.0 Flash",
+        "vendor": "Sapiens AI",
+        "aaId": "6ace0ead-584f-4ce6-a9b7-6c3f9cc91c3c",
+        "releasedAt": "2026-09-11",
+        "inputCost": 0.05,
+        "outputCost": 0.15,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/agnes-3-0-flash",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "claude-fable-5",
+        "name": "Claude Fable 5",
+        "vendor": "Anthropic",
+        "aaId": "cd55210d-358e-4df1-ba9c-9acb5f186cc9",
+        "releasedAt": "2026-06-09",
+        "inputCost": 10.0,
+        "outputCost": 50.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "claude-fable-5-1",
+        "name": "Claude Fable 5.1",
+        "vendor": "Anthropic",
+        "aaId": "3e87c73e-a257-495e-9730-367a66229811",
+        "releasedAt": "2026-09-01",
+        "inputCost": 10.0,
+        "outputCost": 50.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "claude-opus-4-7",
+        "name": "Claude Opus 4.7",
+        "vendor": "Anthropic",
+        "aaId": "e9a09db3-8fd6-41dd-ba2f-20e0a2bff7f2",
+        "releasedAt": "2026-04-16",
+        "inputCost": 5.0,
+        "outputCost": 25.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-7",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "vendor": "Anthropic",
+        "aaId": "992b7b84-5069-4c6a-9295-834252553d50",
+        "releasedAt": "2026-05-28",
+        "inputCost": 5.0,
+        "outputCost": 25.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-8",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "claude-opus-5",
+        "name": "Claude Opus 5",
+        "vendor": "Anthropic",
+        "aaId": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+        "releasedAt": "2026-07-24",
+        "inputCost": 5.0,
+        "outputCost": 25.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "claude-sonnet-5",
+        "name": "Claude Sonnet 5",
+        "vendor": "Anthropic",
+        "aaId": "23c86e4a-c769-43c0-a056-79e3cd15834f",
+        "releasedAt": "2026-06-30",
+        "inputCost": 2.0,
+        "outputCost": 10.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "deepseek-v4-1-flash",
+        "name": "DeepSeek V4.1 Flash",
+        "vendor": "DeepSeek",
+        "aaId": "dbe7c625-3100-4463-b479-a228c41f75dd",
+        "releasedAt": "2026-09-10",
+        "inputCost": 0.3,
+        "outputCost": 1.2,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash 0731",
+        "vendor": "DeepSeek",
+        "aaId": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+        "releasedAt": "2026-07-31",
+        "inputCost": 0.44,
+        "outputCost": 1.32,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "deepseek-v4-flash-vision",
+        "name": "DeepSeek V4 Flash Vision",
+        "vendor": "DeepSeek",
+        "aaId": "7707a46f-895f-4247-b7a8-ddab87c9a11d",
+        "releasedAt": "2026-08-21",
+        "inputCost": 0.44,
+        "outputCost": 1.32,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash-vision",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "name": "DeepSeek V4 Pro 0813",
+        "vendor": "DeepSeek",
+        "aaId": "83173329-c09a-41f1-a028-a282a5f908d7",
+        "releasedAt": "2026-08-13",
+        "inputCost": 1.32,
+        "outputCost": 3.96,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gemini-3-1-pro-preview",
+        "name": "Gemini 3.1 Pro Preview",
+        "vendor": "Google",
+        "aaId": "bbd93ebe-80da-4594-bb19-61e69d0331df",
+        "releasedAt": "2026-02-19",
+        "inputCost": 2.0,
+        "outputCost": 12.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gemini-3-6-flash",
+        "name": "Gemini 3.6 Flash",
+        "vendor": "Google",
+        "aaId": "78332c88-fe60-42c8-af9d-3617e44cf1f5",
+        "releasedAt": "2026-07-21",
+        "inputCost": 0.75,
+        "outputCost": 3.75,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-6-flash",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gemini-3-7-flash-medium",
+        "name": "Gemini 3.7 Flash",
+        "vendor": "Google",
+        "aaId": "eb0d4272-7204-42b9-b875-8866fed58548",
+        "releasedAt": "2026-08-13",
+        "inputCost": 0.75,
+        "outputCost": 3.75,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-7-flash-medium",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gemini-3-8-flash",
+        "name": "Gemini 3.8 Flash",
+        "vendor": "Google",
+        "aaId": "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
+        "releasedAt": "2026-09-02",
+        "inputCost": 0.75,
+        "outputCost": 3.75,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "glm-5-3",
+        "name": "GLM-5.3",
+        "vendor": "Z AI",
+        "aaId": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+        "releasedAt": "2026-08-18",
+        "inputCost": 1.4,
+        "outputCost": 4.4,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "glm-5-3-flash",
+        "name": "GLM 5.3 Flash",
+        "vendor": "Z AI",
+        "aaId": "19496b81-9f41-4214-a77a-1df803b3c5ae",
+        "releasedAt": "2026-08-26",
+        "inputCost": 0.15,
+        "outputCost": 0.5,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3-flash",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gpt-5-4",
+        "name": "GPT-5.4",
+        "vendor": "OpenAI",
+        "aaId": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
+        "releasedAt": "2026-03-05",
+        "inputCost": 2.5,
+        "outputCost": 15.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-4",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gpt-5-5",
+        "name": "GPT-5.5",
+        "vendor": "OpenAI",
+        "aaId": "1f054429-397e-4fdb-9e71-67bc92c1735e",
+        "releasedAt": "2026-04-23",
+        "inputCost": 5.0,
+        "outputCost": 30.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gpt-5-6-luna",
+        "name": "GPT-5.6 Luna",
+        "vendor": "OpenAI",
+        "aaId": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+        "releasedAt": "2026-07-09",
+        "inputCost": 0.2,
+        "outputCost": 1.2,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-luna",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gpt-5-6-sol",
+        "name": "GPT-5.6 Sol",
+        "vendor": "OpenAI",
+        "aaId": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+        "releasedAt": "2026-07-09",
+        "inputCost": 4.0,
+        "outputCost": 20.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gpt-5-6-terra",
+        "name": "GPT-5.6 Terra",
+        "vendor": "OpenAI",
+        "aaId": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+        "releasedAt": "2026-07-09",
+        "inputCost": 2.0,
+        "outputCost": 12.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "gpt-6-astra",
+        "name": "GPT-6 Astra",
+        "vendor": "OpenAI",
+        "aaId": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
+        "releasedAt": "2026-09-03",
+        "inputCost": 10.0,
+        "outputCost": 50.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-astra",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "grok-4-5",
+        "name": "Grok 4.5",
+        "vendor": "SpaceXAI",
+        "aaId": "794f69b5-cede-482b-b1cc-d769478497cd",
+        "releasedAt": "2026-07-08",
+        "inputCost": 2.0,
+        "outputCost": 6.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-5",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "grok-4-6",
+        "name": "Grok 4.6",
+        "vendor": "SpaceXAI",
+        "aaId": "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
+        "releasedAt": "2026-08-12",
+        "inputCost": 2.0,
+        "outputCost": 6.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-6",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "kimi-k3",
+        "name": "Kimi K3",
+        "vendor": "Kimi",
+        "aaId": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+        "releasedAt": "2026-07-16",
+        "inputCost": 3.0,
+        "outputCost": 15.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "muse-spark-1-1",
+        "name": "Muse Spark 1.1",
+        "vendor": "Meta",
+        "aaId": "d61493e2-43ff-460c-9054-eaf6ba317360",
+        "releasedAt": "2026-07-09",
+        "inputCost": 1.25,
+        "outputCost": 4.25,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-1",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "muse-spark-1-2",
+        "name": "Muse Spark 1.2",
+        "vendor": "Meta",
+        "aaId": "04ee6719-0327-463b-a1a1-70a6a78254f9",
+        "releasedAt": "2026-08-05",
+        "inputCost": 1.25,
+        "outputCost": 4.25,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-2",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "muse-spark-1-3",
+        "name": "Muse Spark 1.3",
+        "vendor": "Meta",
+        "aaId": "9999672c-b687-4026-9c15-5cef02ff53bb",
+        "releasedAt": "2026-09-02",
+        "inputCost": 1.25,
+        "outputCost": 4.25,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "qwen3-8-2-4t-a95b",
+        "name": "Qwen3.8 2.4T A95B",
+        "vendor": "Alibaba",
+        "aaId": "8df710d3-9dae-4498-9b4e-9818238e6f31",
+        "releasedAt": "2026-08-12",
+        "inputCost": 2.0,
+        "outputCost": 6.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "qwen3-8-flash-next",
+        "name": "Qwen3.8-Flash-Next",
+        "vendor": "Alibaba",
+        "aaId": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+        "releasedAt": "2026-08-26",
+        "inputCost": 0.15,
+        "outputCost": 0.47,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "qwen3-8-max",
+        "name": "Qwen3.8 Max (0902)",
+        "vendor": "Alibaba",
+        "aaId": "b112af07-3bd5-4647-b09f-b23204361bb2",
+        "releasedAt": "2026-09-02",
+        "inputCost": 2.0,
+        "outputCost": 6.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      },
+      {
+        "id": "qwen3-8-max-0803",
+        "name": "Qwen3.8 Max",
+        "vendor": "Alibaba",
+        "aaId": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+        "releasedAt": "2026-08-03",
+        "inputCost": 2.0,
+        "outputCost": 6.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
+        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+      }
+    ],
+    "plans": [
+      {
+        "id": "copilot-coding-plan",
+        "vendor": "GitHub",
+        "product": "GitHub Copilot",
+        "group": "overseas",
+        "tagline": "个人月付订阅，按档位发放 GitHub AI Credits",
+        "highlights": [
+          "含 Copilot CLI 与 Copilot app",
+          "按月发放 GitHub AI Credits"
+        ],
+        "quotaBasis": "1,500–20,000 AI credits/月",
+        "supportedTools": [
+          "Copilot CLI",
+          "Copilot app",
+          "VS Code"
+        ],
+        "tiers": [
+          {
+            "name": "Copilot Pro",
+            "price": 10.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Base credits: 1,000",
+              "Flex allotment: 500",
+              "Total monthly AI credits: 1,500"
+            ],
+            "conditions": "个人月付；不同档位的模型与 Agent 权益不同。地区、税费及支付条件以官方结算页为准；模型清单以官方页为准。"
+          },
+          {
+            "name": "Copilot Pro+",
+            "price": 39.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Base credits: 3,900",
+              "Flex allotment: 3,100",
+              "Total monthly AI credits: 7,000"
+            ],
+            "conditions": "个人月付；不同档位的模型与 Agent 权益不同。地区、税费及支付条件以官方结算页为准；模型清单以官方页为准。"
+          },
+          {
+            "name": "Copilot Max",
+            "price": 100.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Base credits: 10,000",
+              "Flex allotment: 10,000",
+              "Total monthly AI credits: 20,000"
+            ],
+            "conditions": "个人月付；不同档位的模型与 Agent 权益不同。地区、税费及支付条件以官方结算页为准；模型清单以官方页为准。"
+          }
+        ],
+        "models": [
+          "Claude Haiku 4.5",
+          "Claude Opus 4.7",
+          "Claude Opus 4.8",
+          "Claude Opus 4.8 (fast mode) (preview)",
+          "Claude Opus 5",
+          "Claude Fable 5",
+          "Claude Fable 5.1",
+          "Claude Sonnet 4.6",
+          "Claude Sonnet 5",
+          "Gemini 3.5 Flash",
+          "Gemini 3.6 Flash",
+          "Gemini 3.7 Flash",
+          "Gemini 3.8 Flash",
+          "GPT-5 mini",
+          "GPT-5.3-Codex",
+          "GPT-5.4",
+          "GPT-5.4 mini",
+          "GPT-5.4 nano",
+          "GPT-5.5",
+          "GPT-5.6 Luna",
+          "GPT-5.6 Sol",
+          "GPT-5.6 Terra",
+          "GPT-6 Astra",
+          "Grok 4.5",
+          "Grok 4.6",
+          "Kimi K2.7 Code",
+          "Kimi K3",
+          "MAI-Code-1.1-Flash"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans",
+        "updatedAt": "2026-09-18",
+        "checkMethod": "auto"
+      },
+      {
+        "id": "bigmodel-coding-plan",
+        "vendor": "智谱",
+        "product": "GLM Coding Plan",
+        "group": "domestic",
+        "tagline": "5 小时与每周双周期积分，支持 6 款编程工具",
+        "highlights": [
+          "GLM-5.3 与 GLM-5.3-Flash 全档可用",
+          "5 小时与每周双周期积分",
+          "非高峰时段积分 5 折",
+          "支持 ZCode / Claude Code 等 20+ 编程工具"
+        ],
+        "quotaBasis": "5h 2K–28K · 每周 10K–140K",
+        "supportedTools": [
+          "Claude Code",
+          "Kilo Code",
+          "OpenClaw",
+          "OpenCode",
+          "TRAE",
+          "CodeBuddy"
+        ],
+        "tiers": [
+          {
+            "name": "Lite 套餐",
+            "price": null,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "5 小时积分：2,000",
+              "每周积分：10,000"
+            ],
+            "conditions": "本页未提供当前月付价格，需前往官方订阅页确认。仅限指定工具；两种周期限额同时生效，非高峰抵扣规则见原文。地区、账号、支付及税费以官方为准；模型清单以官方页为准。"
+          },
+          {
+            "name": "Pro 套餐",
+            "price": null,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "5 小时积分：12,000",
+              "每周积分：60,000"
+            ],
+            "conditions": "本页未提供当前月付价格，需前往官方订阅页确认。仅限指定工具；两种周期限额同时生效，非高峰抵扣规则见原文。地区、账号、支付及税费以官方为准；模型清单以官方页为准。"
+          },
+          {
+            "name": "Max 套餐",
+            "price": null,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "5 小时积分：28,000",
+              "每周积分：140,000"
+            ],
+            "conditions": "本页未提供当前月付价格，需前往官方订阅页确认。仅限指定工具；两种周期限额同时生效，非高峰抵扣规则见原文。地区、账号、支付及税费以官方为准；模型清单以官方页为准。"
+          }
+        ],
+        "models": [
+          "GLM-5.3",
+          "GLM-5.3-Flash"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+        "updatedAt": "2026-09-18",
+        "checkMethod": "auto"
+      },
+      {
+        "id": "supergrok-plan",
+        "vendor": "xAI",
+        "product": "SuperGrok",
+        "group": "overseas",
+        "tagline": "Grok 4.6 全功能会员，含 Imagine 与 Grok Build",
+        "highlights": [
+          "Grok 4.6 模型",
+          "含 Imagine 图像与视频生成",
+          "含 Grok Build 与 Grok Bot",
+          "Plus 提供 1080p 视频与高峰优先"
+        ],
+        "quotaBasis": "Free 滚动额度；SuperGrok 起为更高速率上限",
+        "supportedTools": [
+          "Grok Build",
+          "Grok Bot"
+        ],
+        "tiers": [
+          {
+            "name": "Free",
+            "price": 0.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Grok 4.6 基础额度",
+              "实时联网与 X 搜索",
+              "语音模式与 Connectors"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "SuperGrok",
+            "price": 30.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Grok 4.6 模型",
+              "Grok Bot 与 Connectors",
+              "图像与视频生成",
+              "更高速率上限"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "SuperGrok Plus",
+            "price": 100.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "1080p 视频生成",
+              "显著更高用量",
+              "高峰优先访问",
+              "新功能抢先体验"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Grok 4.6",
+          "Grok Code Fast 1"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://x.ai/pricing",
+        "updatedAt": "2026-09-18",
+        "checkMethod": "auto"
+      },
+      {
+        "id": "opencode-go-plan",
+        "vendor": "OpenCode",
+        "product": "OpenCode Go",
+        "group": "overseas",
+        "tagline": "每月 $10，可搭配任意编程 Agent 使用",
+        "highlights": [
+          "单档 $10/月",
+          "官方页列出 28 个模型",
+          "额度按模型分配",
+          "可充值、随时取消"
+        ],
+        "quotaBasis": "按模型分配：每 5 小时 110–45,300 次请求",
+        "supportedTools": [
+          "OpenCode"
+        ],
+        "tiers": [
+          {
+            "name": "Go",
+            "price": 10.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "按模型分配额度：每 5 小时 110–45,300 次请求",
+              "官方页列出 28 个模型",
+              "DeepSeek V4.1 Flash 限时 4 倍用量",
+              "可充值、随时取消"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Kimi K3",
+          "Kimi K2.7 Code",
+          "GPT 5.6 Luna",
+          "MiniMax M3",
+          "Qwen3.7 Plus",
+          "GLM-5.3-Flash",
+          "DeepSeek V4 Flash",
+          "DeepSeek V4.1 Flash",
+          "MiMo-V2.5",
+          "Muse Spark 1.3 Contributor"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://opencode.ai/zh/go",
+        "updatedAt": "2026-09-18",
+        "checkMethod": "auto"
+      },
+      {
+        "id": "claude-plans",
+        "vendor": "Anthropic",
+        "product": "Claude 会员",
+        "group": "overseas",
+        "tagline": "Claude Code 与 Claude Science 自 Pro 起包含",
+        "highlights": [
+          "Pro 起含 Claude Code",
+          "Max 提供 5× 或 20× 用量",
+          "含 Claude in Chrome / M365",
+          "含 Claude Science 与 Claude Design"
+        ],
+        "quotaBasis": "Free 基础额度；Max 为 Pro 的 5× 或 20×",
+        "supportedTools": [
+          "Claude Code",
+          "Claude in Chrome",
+          "Claude for Microsoft 365"
+        ],
+        "tiers": [
+          {
+            "name": "Free",
+            "price": 0.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "网页、桌面与移动端基础额度",
+              "可联网搜索、创建文件与运行代码",
+              "跨对话记忆与连接应用"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Pro",
+            "price": 20.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": "年付 $17/月（$200 一次付清）",
+            "features": [
+              "含 Claude Code 与 Claude Science",
+              "Claude Design / Slides / Docs",
+              "更多用量与更多模型",
+              "含 Claude in Chrome 与 Microsoft 365"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Max",
+            "price": 100.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": "5× 与 20× 两档，起步 $100/月",
+            "features": [
+              "Pro 全部能力",
+              "5× 或 20× Pro 用量",
+              "更高输出上限",
+              "新功能抢先体验与高峰优先"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Fable 5.1",
+          "Fable 5",
+          "Opus 5",
+          "Sonnet 5",
+          "Haiku 4.5"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://claude.com/pricing",
+        "updatedAt": "2026-09-18",
+        "checkMethod": "auto"
+      },
+      {
+        "id": "xfyun-astron-plan",
+        "vendor": "讯飞星辰",
+        "product": "Astron Coding Plan",
+        "group": "domestic",
+        "tagline": "按请求次数计量，按月/季订购，支持多款国产模型",
+        "highlights": [
+          "按请求次数而非 Token 计量",
+          "支持 Spark X2 与 GLM / DeepSeek / Kimi 等",
+          "5 小时 / 周 / 月三级滑动窗口",
+          "含限时首月优惠"
+        ],
+        "quotaBasis": "6,000 次/5h · 45,000/周 · 90,000/月（高效版）",
+        "supportedTools": [
+          "Claude Code",
+          "Cursor",
+          "Cline",
+          "OpenClaw"
+        ],
+        "tiers": [
+          {
+            "name": "高效版",
+            "price": 199.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "每 5 小时约 6,000 次请求",
+              "每周约 45,000 次",
+              "每订阅月约 90,000 次"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "速通版",
+            "price": 999.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": "限时首月 ¥699/月；季付 ¥2,997（限时 ¥2,697）",
+            "features": [
+              "每订阅月约 30,000 次请求",
+              "高峰免排队、优先响应",
+              "按订单支付时间滑动计算窗口"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Spark X2",
+          "Auto",
+          "GLM-5.2",
+          "GLM-5.1",
+          "GLM-5",
+          "DeepSeek-V4-Pro",
+          "DeepSeek-V4-Flash",
+          "DeepSeek-V3.2",
+          "Kimi-K2.6",
+          "Kimi-K2.5",
+          "MiniMax-M2.5",
+          "Qwen3.5-397B-A17B",
+          "GLM-4.7-Flash"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
+        "updatedAt": "2026-09-18",
+        "checkMethod": "auto"
+      }
+    ]
+  },
+  "github": {
+    "source": "github-trending",
+    "dataUpdatedAt": "2026-09-18T02:37:02Z",
+    "week": {
+      "period": "weekly",
+      "sourceUrl": "https://github.com/trending?since=weekly",
+      "fetchedAt": "2026-09-18T02:37:02Z",
+      "items": [
+        {
+          "repo": "alibaba/open-code-review",
+          "sourceRank": 1,
+          "stars": 35010,
+          "periodStars": 11489,
+          "language": "Go",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "url": "https://github.com/alibaba/open-code-review"
+        },
+        {
+          "repo": "ayghri/i-have-adhd",
+          "sourceRank": 1,
+          "stars": 47517,
+          "periodStars": 10800,
+          "language": "Python",
+          "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+          "url": "https://github.com/ayghri/i-have-adhd"
+        },
+        {
+          "repo": "stablyai/orca",
+          "sourceRank": 4,
+          "stars": 71212,
+          "periodStars": 5305,
+          "language": "TypeScript",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+          "url": "https://github.com/stablyai/orca"
+        },
+        {
+          "repo": "Tencent/WeKnora",
+          "sourceRank": 2,
+          "stars": 26355,
+          "periodStars": 3982,
+          "language": "Go",
+          "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+          "url": "https://github.com/Tencent/WeKnora"
+        },
+        {
+          "repo": "Panniantong/Agent-Reach",
+          "sourceRank": 7,
+          "stars": 82841,
+          "periodStars": 3670,
+          "language": "Python",
+          "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+          "url": "https://github.com/Panniantong/Agent-Reach"
+        },
+        {
+          "repo": "bojieli/ai-agent-book",
+          "sourceRank": 11,
+          "stars": 48330,
+          "periodStars": 2731,
+          "language": "Python",
+          "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+          "url": "https://github.com/bojieli/ai-agent-book"
+        },
+        {
+          "repo": "addyosmani/agent-skills",
+          "sourceRank": 4,
+          "stars": 95901,
+          "periodStars": 2560,
+          "language": "JavaScript",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "url": "https://github.com/addyosmani/agent-skills"
+        },
+        {
+          "repo": "melgarafael/DeskcommCRM",
+          "sourceRank": 12,
+          "stars": 3080,
+          "periodStars": 2179,
+          "language": "TypeScript",
+          "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+          "url": "https://github.com/melgarafael/DeskcommCRM"
+        },
+        {
+          "repo": "Tencent/BrowserSkill",
+          "sourceRank": 18,
+          "stars": 4306,
+          "periodStars": 2157,
+          "language": "TypeScript",
+          "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+          "url": "https://github.com/Tencent/BrowserSkill"
+        },
+        {
+          "repo": "vastsa/PI-Desktop",
+          "sourceRank": 5,
+          "stars": 4168,
+          "periodStars": 1939,
+          "language": "TypeScript",
+          "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+          "url": "https://github.com/vastsa/PI-Desktop"
+        }
+      ]
+    },
+    "month": {
+      "period": "monthly",
+      "sourceUrl": "https://github.com/trending?since=monthly",
+      "fetchedAt": "2026-09-18T02:37:02Z",
+      "items": [
+        {
+          "repo": "ayghri/i-have-adhd",
+          "sourceRank": 2,
+          "stars": 47518,
+          "periodStars": 26237,
+          "language": "Python",
+          "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+          "url": "https://github.com/ayghri/i-have-adhd"
+        },
+        {
+          "repo": "openai/codex",
+          "sourceRank": 11,
+          "stars": 124945,
+          "periodStars": 19130,
+          "language": "Rust",
+          "description": "Lightweight coding agent that runs in your terminal",
+          "url": "https://github.com/openai/codex"
+        },
+        {
+          "repo": "alibaba/open-code-review",
+          "sourceRank": 2,
+          "stars": 35011,
+          "periodStars": 13677,
+          "language": "Go",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "url": "https://github.com/alibaba/open-code-review"
+        },
+        {
+          "repo": "K-Dense-AI/scientific-agent-skills",
+          "sourceRank": 7,
+          "stars": 45376,
+          "periodStars": 11830,
+          "language": "Python",
+          "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+        },
+        {
+          "repo": "volcengine/OpenViking",
+          "sourceRank": 13,
+          "stars": 37904,
+          "periodStars": 9190,
+          "language": "Python",
+          "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+          "url": "https://github.com/volcengine/OpenViking"
+        },
+        {
+          "repo": "tashfeenahmed/freellmapi",
+          "sourceRank": 5,
+          "stars": 26957,
+          "periodStars": 8304,
+          "language": "TypeScript",
+          "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+          "url": "https://github.com/tashfeenahmed/freellmapi"
+        },
+        {
+          "repo": "jingyaogong/minimind",
+          "sourceRank": 5,
+          "stars": 61496,
+          "periodStars": 6867,
+          "language": "Python",
+          "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+          "url": "https://github.com/jingyaogong/minimind"
+        },
+        {
+          "repo": "Tencent/WeKnora",
+          "sourceRank": 1,
+          "stars": 26355,
+          "periodStars": 6280,
+          "language": "Go",
+          "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+          "url": "https://github.com/Tencent/WeKnora"
+        },
+        {
+          "repo": "ggml-org/llama.cpp",
+          "sourceRank": 16,
+          "stars": 128614,
+          "periodStars": 4666,
+          "language": "C++",
+          "description": "LLM inference in C/C++",
+          "url": "https://github.com/ggml-org/llama.cpp"
+        },
+        {
+          "repo": "jundot/omlx",
+          "sourceRank": 21,
+          "stars": 21851,
+          "periodStars": 3034,
+          "language": "Python",
+          "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+          "url": "https://github.com/jundot/omlx"
+        }
+      ]
+    }
+  },
+  "news": {
+    "dataUpdatedAt": "2026-09-18T02:37:02Z",
+    "items": [
+      {
+        "title": "人形机器人可“自主做家务”，Figure 发布 Helix 2.5 模型",
+        "sourceUrl": "https://www.ithome.com/1/003/942.htm",
+        "publishedAt": "2026-09-18T02:05:28Z",
+        "source": "IT之家",
+        "id": "362e2cf1c4eb969bbb3ba941fd05cb1f19401d8041754d9a8cb71938154effef",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.ithome.com/1/003/942.htm",
+        "category": "model",
+        "eventType": "model-release"
+      },
+      {
+        "title": "OpenAI 推出 Astra for Law：索引 2.3 亿 URL，法律问答正确率 54% 力压通用模型 15 个百分点",
+        "sourceUrl": "https://www.aibase.com/zh/news/31146",
+        "source": "AIBase",
+        "publishedAt": "2026-09-18T01:48:37Z",
+        "id": "9aae40e2d877690bffd02ec664d6c581e75ebcf0985fafe72f3ca22a5c291069",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31146",
+        "category": "model",
+        "eventType": "model-release"
+      },
+      {
+        "title": "打官司最佳 AI 助手：OpenAI 推出 Astra for Law，提高案件胜诉率",
+        "sourceUrl": "https://www.ithome.com/1/003/927.htm",
+        "publishedAt": "2026-09-18T01:30:23Z",
+        "source": "IT之家",
+        "id": "b4b1861d8e44fd4c05a95a15e21ea4da1b8cec0083d9fbb7346083e91310ebd3",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.ithome.com/1/003/927.htm",
+        "category": "tool",
+        "eventType": "major-update"
+      },
+      {
+        "title": "百度智能云首发产业智能体操作系统，要实现 AI 的商业和技术飞轮",
+        "sourceUrl": "https://www.infoq.cn/article/jXliIdDVTYDAtm73EoSU",
+        "publishedAt": "2026-09-17T19:29:09Z",
+        "source": "InfoQ",
+        "id": "f99cfeeec99fefdc27647774593aca70ac2d1c82ceeeb6d4d7128a5e0714938b",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.infoq.cn/article/jXliIdDVTYDAtm73EoSU",
+        "category": "tool",
+        "eventType": "major-update"
+      },
+      {
+        "title": "刚刚，Claude Code大重构！内部3万Agent管理技术免费开放",
+        "sourceUrl": "https://www.qbitai.com/2026/09/491711.html",
+        "publishedAt": "2026-09-18T00:34:34Z",
+        "source": "量子位",
+        "id": "1210d62ebc99ff6679e4418e25e7e238f85482044aedcf145d3a87f5d02ad5c4",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.qbitai.com/2026/09/491711.html",
+        "category": "industry",
+        "eventType": "price-or-free"
+      },
+      {
+        "title": "实测智象HiDream-O1-Video视频模型：嘻哈说唱、NBA绝杀，视频生成开始理解真实世界",
+        "sourceUrl": "https://zhidx.com/p/594910.html",
+        "publishedAt": "2026-09-17T11:05:51Z",
+        "source": "智东西",
+        "id": "de554480f40bdb916047f91534d7fd2fcb122216691d7e6506d4d38057520456",
+        "summary": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://zhidx.com/p/594910.html",
+        "category": "model",
+        "eventType": "model-review"
+      }
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+---
+// /plans/[id] 套餐详情 —— frontend-spec §4.6
+// 每个套餐一页 SSG：真 URL、可被 SEO 抓、无 JS 也能看到完整信息；
+// 列表页点标题时由弹框 fetch 本页并抽取 <main>（§5.11）。
+import Base from '../../layouts/Base.astro';
+import { models } from '../../lib/data.js';
+import {
+  planSourceLabel,
+  planStatusLabel,
+  startingPriceLabel,
+  tierPrice,
+} from '../../lib/format.js';
+import { planIconUrl, vendorInitial } from '../../lib/vendors.js';
+
+export function getStaticPaths() {
+  return models().plans.map((plan) => ({ params: { id: plan.id }, props: { plan } }));
+}
+
+const { plan } = Astro.props;
+const file = models();
+
+const icon = planIconUrl(plan.vendor);
+const statusLabel = planStatusLabel(plan.status);
+const sourceNote = planSourceLabel(plan.source);
+
+const priced = plan.tiers.filter(
+  (t) => t.offerType === 'standard' && typeof t.price === 'number' && t.price > 0
+);
+const currencies = [...new Set(priced.map((t) => t.currency))];
+
+// 档位条件去重（frontend-spec §4.6）：实测 17/17 套餐的所有档位 conditions 完全相同，
+// 逐档重复输出 4662 字符、去重后仅需 1135（省 76%）。全同则提到「档位」区开头显示一次，
+// 有差异时才逐档各自显示。
+const tierConditions = [...new Set(plan.tiers.map((t) => t.conditions))];
+const sharedConditions = tierConditions.length === 1 ? tierConditions[0] : null;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: plan.product,
+  brand: { '@type': 'Brand', name: plan.vendor },
+  url: `https://saiboliang.top/plans/${plan.id}/`,
+  ...(plan.tagline ? { description: plan.tagline } : {}),
+  ...(priced.length > 0
+    ? {
+        offers: priced.map((t) => ({
+          '@type': 'Offer',
+          name: t.name,
+          price: t.price,
+          priceCurrency: t.currency,
+        })),
+      }
+    : {}),
+};
+---
+<Base
+  title={plan.product}
+  description={plan.tagline ?? `${plan.vendor} ${plan.product} 套餐档位与价格。`}
+  dataUpdatedAt={file.dataUpdatedAt}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <p><a href="/plans/">← 返回套餐榜</a></p>
+
+  <article class="plan-detail" data-group={plan.group}>
+    <header class="plan-detail__head">
+      <span class="plan-card__status">{statusLabel}</span>
+
+      <h1 class="plan-detail__title">
+        {
+          icon ? (
+            <img class="plan-card__icon" src={icon} alt="" width="32" height="32" />
+          ) : (
+            <span class="plan-card__icon plan-card__icon--initial" aria-hidden="true">
+              {vendorInitial(plan.vendor)}
+            </span>
+          )
+        }
+        {plan.product}
+      </h1>
+
+      <p class="plan-detail__meta">
+        <span>{plan.vendor}</span>
+        <span>起步 {startingPriceLabel(plan)}</span>
+        {plan.quotaBasis && <span>{plan.quotaBasis}</span>}
+        <span>更新 {plan.updatedAt}</span>
+      </p>
+
+      {plan.tagline && <p class="plan-detail__tagline">{plan.tagline}</p>}
+
+      {
+        plan.models.length > 0 && (
+          <ul class="plan-card__chips">
+            {plan.models.map((m) => (
+              <li class="badge">{m}</li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        plan.highlights.length > 0 && (
+          <ul class="plan-card__chips">
+            {plan.highlights.map((h) => (
+              <li class="badge">{h}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <section aria-labelledby="plan-tiers">
+      <h2 id="plan-tiers">档位</h2>
+      {sharedConditions && <p class="plan-tier__conditions">{sharedConditions}</p>}
+      {
+        plan.tiers.map((tier) => (
+          <section class="plan-tier">
+            <header class="plan-tier__head">
+              <h3>
+                {tier.name}
+                {tier.offerType !== 'standard' && <span class="badge">优惠</span>}
+              </h3>
+              <p class="plan-tier__price">
+                <strong>{tierPrice(tier)}</strong>
+                {tier.note && <span class="plan-tier__note">{tier.note}</span>}
+              </p>
+            </header>
+            {tier.features.length > 0 && (
+              <ul class="plan-tier__features">
+                {tier.features.map((f) => (
+                  <li>{f}</li>
+                ))}
+              </ul>
+            )}
+            {!sharedConditions && <p class="plan-tier__conditions">{tier.conditions}</p>}
+          </section>
+        ))
+      }
+    </section>
+
+    <section aria-labelledby="plan-tools">
+      <h2 id="plan-tools">支持工具</h2>
+      <ul class="plan-card__chips">
+        {plan.supportedTools.map((t) => <li class="badge">{t}</li>)}
+      </ul>
+    </section>
+
+    <footer class="plan-detail__foot">
+      <a class="plan-detail__cta" href={plan.sourceUrl} target="_blank" rel="noopener noreferrer">
+        去订阅
+      </a>
+      {sourceNote && <span class="badge">{sourceNote}</span>}
+      <a href="/about/">信息有误？</a>
+    </footer>
+  </article>
+</Base>

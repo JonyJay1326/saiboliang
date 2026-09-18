@@ -1,0 +1,62 @@
+---
+// / 太仓（首页）—— frontend-spec §4.1
+// 五块：Hero 摘要 / 票卡列表 / 观星台摘要 / 点将台摘要 / 页脚声明。
+// 一期不放「邸报摘要」块（资讯延期，见 §4.7）。
+import Base from '../layouts/Base.astro';
+import TicketCard from '../components/TicketCard.vue';
+import GithubRow from '../components/GithubRow.astro';
+import ModelRow from '../components/ModelRow.astro';
+import { github, models, tickets } from '../lib/data.js';
+import { activeCount, addedThisWeek, ticketDefaultOrder } from '../lib/format.js';
+
+const allTickets = tickets().tickets;
+const gh = github();
+const md = models();
+
+const active = activeCount(allTickets);
+const weekly = addedThisWeek(allTickets).length;
+
+const topTickets = [...allTickets].sort(ticketDefaultOrder).slice(0, 6);
+const ghTop = gh.week.items.slice(0, 5);
+const modelTop = md.rankings.intelligence.slice(0, 5);
+const modelById = new Map(md.models.map((m) => [m.id, m]));
+
+// 首页消费四个业务文件，页脚核验时间取其中最早的一个（最保守口径）。
+const times = [tickets().dataUpdatedAt, md.dataUpdatedAt, gh.dataUpdatedAt].filter(Boolean);
+const oldest = times.sort()[0] ?? null;
+---
+<Base description="AI 白嫖机会、模型能力榜与编程套餐的每日聚合。" dataUpdatedAt={oldest}>
+  <section class="hero">
+    <h1>赛博粮站</h1>
+    <p>AI 白嫖机会 · 模型比价 · 榜单聚合</p>
+    <dl class="hero__summary">
+      <div><dt>在架票数</dt><dd>{active}</dd></div>
+      <div><dt>本周新增</dt><dd>{weekly}</dd></div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="home-tickets">
+    <h2 id="home-tickets">今日份口粮</h2>
+    <ul class="cards">
+      {topTickets.map((t) => <li><TicketCard ticket={t} /></li>)}
+    </ul>
+    <p><a href="/tickets/">全部粮票 →</a></p>
+  </section>
+
+  <section aria-labelledby="home-github">
+    <h2 id="home-github">观星台摘要</h2>
+    <ol class="ranking">
+      {ghTop.map((item, i) => <GithubRow item={item} index={i + 1} />)}
+    </ol>
+    <p><a href="/github/">观星台 →</a></p>
+  </section>
+
+  <section aria-labelledby="home-models">
+    <h2 id="home-models">点将台摘要</h2>
+    <p>报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。</p>
+    <ol class="ranking">
+      {modelTop.map((row, i) => <ModelRow row={{ ...row, model: modelById.get(row.modelId) }} index={i + 1} />)}
+    </ol>
+    <p><a href="/models/">点将台 →</a></p>
+  </section>
+</Base>

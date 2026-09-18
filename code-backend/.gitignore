@@ -1,0 +1,35 @@
+# ============================================================
+# code-backend · .gitignore
+# 依据：AGENTS.md §6（字体授权与隐私红线）、架构 §2.1（Key 不入公共 JSON）
+# ============================================================
+
+# 凭据：只通过环境变量 / Actions Secret 注入
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.keystore
+
+# 字体与授权证书：一律留本机，不得进入待发布仓库
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.ttc
+*证书*
+*授权*
+*.pdf
+
+# 本地临时目录（采集中间产物，架构 §4.1）
+tmp/
+.tmp/
+.cache/
+*.log
+
+# 依赖
+node_modules/
+__pycache__/
+.venv/
+venv/

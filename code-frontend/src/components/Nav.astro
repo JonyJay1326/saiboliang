@@ -1,0 +1,52 @@
+---
+// 全局导航（frontend-spec §2.2）
+// 主 / 次 / 状态 / 控制 四层。当前页用 aria-current="page" 标注，
+// 由 SSG 在构建期决定，无需客户端计算。
+//
+// 主导航名格式为「板块名 · 动作」（§1.5）：动作是该板块让用户做的事，
+// 例如 粮票 · 领 = 去领取免费额度。板块名单独出现在页头 H1，导航名只在导航里用。
+const primary = [
+  { href: '/', label: '太仓 · 首' },
+  { href: '/tickets/', label: '粮票 · 领' },
+  { href: '/github/', label: '观星台 · 望' },
+  { href: '/models/', label: '点将台 · 比' },
+  { href: '/plans/', label: '粮市 · 买' },
+  { href: '/news/', label: '邸报 · 看' },
+];
+
+const secondary = [
+  { href: '/void/', label: '已失效票墙' },
+  { href: '/collection/', label: '我的粮票' },
+  { href: '/about/', label: '关于' },
+];
+
+const path = Astro.url.pathname;
+const isActive = (href) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+
+<nav aria-label="主导航">
+  <ul>
+    {
+      primary.map((item) => (
+        <li>
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+<nav aria-label="次级导航">
+  <ul>
+    {
+      secondary.map((item) => (
+        <li>
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -1,0 +1,760 @@
+{
+  "github": [
+    "typescript",
+    "python",
+    "go",
+    "c++",
+    "jupyter-notebook",
+    "javascript",
+    "c#",
+    "rust",
+    "java",
+    "php",
+    "vue",
+    "elixir"
+  ],
+  "news": [
+    {
+      "id": "deepseek",
+      "name": "DeepSeek 官网",
+      "url": "https://www.deepseek.com/news/",
+      "adapter": "deepseek-news",
+      "enabled": true
+    },
+    {
+      "id": "aibase",
+      "name": "AIBase",
+      "url": "https://www.aibase.com/zh/news",
+      "adapter": "aibase",
+      "articleHosts": [
+        "www.aibase.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "qbit",
+      "name": "量子位",
+      "url": "https://www.qbitai.com/feed",
+      "articleHosts": [
+        "www.qbitai.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "infoq",
+      "name": "InfoQ",
+      "url": "https://www.infoq.cn/feed",
+      "articleHosts": [
+        "www.infoq.cn"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "zhidx",
+      "name": "智东西",
+      "url": "https://zhidx.com/rss",
+      "articleHosts": [
+        "zhidx.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "solidot",
+      "name": "Solidot",
+      "url": "https://www.solidot.org/index.rss",
+      "articleHosts": [
+        "www.solidot.org"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "ithome",
+      "name": "IT之家",
+      "url": "https://www.ithome.com/rss/",
+      "articleHosts": [
+        "www.ithome.com"
+      ],
+      "enabled": true
+    }
+  ],
+  "plans": [
+    {
+      "enabled": true,
+      "approved": true,
+      "adapter": "copilot-plans",
+      "scope": {
+        "tag": "main",
+        "attrs": {
+          "id": "main-content"
+        }
+      },
+      "evidenceHash": "49ef250f2fae8ba8aa6e3fd529f0fe3b5481ae7e1373e5da4fab6182dc501279",
+      "evidenceText": [
+        "All plans include Copilot CLI and Copilot app.",
+        "GitHub AI Credits allowance by plan"
+      ],
+      "record": {
+        "id": "copilot-coding-plan",
+        "vendor": "GitHub",
+        "product": "GitHub Copilot",
+        "group": "overseas",
+        "tagline": "个人月付订阅，按档位发放 GitHub AI Credits",
+        "highlights": [
+          "含 Copilot CLI 与 Copilot app",
+          "按月发放 GitHub AI Credits"
+        ],
+        "quotaBasis": "1,500–20,000 AI credits/月",
+        "supportedTools": [
+          "Copilot CLI",
+          "Copilot app",
+          "VS Code"
+        ],
+        "tiers": [
+          {
+            "name": "Copilot Pro",
+            "price": 10.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Base credits: 1,000",
+              "Flex allotment: 500",
+              "Total monthly AI credits: 1,500"
+            ],
+            "conditions": "个人月付；不同档位的模型与 Agent 权益不同。地区、税费及支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Copilot Pro+",
+            "price": 39.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Base credits: 3,900",
+              "Flex allotment: 3,100",
+              "Total monthly AI credits: 7,000"
+            ],
+            "conditions": "个人月付；不同档位的模型与 Agent 权益不同。地区、税费及支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Copilot Max",
+            "price": 100.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Base credits: 10,000",
+              "Flex allotment: 10,000",
+              "Total monthly AI credits: 20,000"
+            ],
+            "conditions": "个人月付；不同档位的模型与 Agent 权益不同。地区、税费及支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Claude Haiku 4.5",
+          "Claude Opus 4.7",
+          "Claude Opus 4.8",
+          "Claude Opus 4.8 (fast mode) (preview)",
+          "Claude Opus 5",
+          "Claude Fable 5",
+          "Claude Fable 5.1",
+          "Claude Sonnet 4.6",
+          "Claude Sonnet 5",
+          "Gemini 3.5 Flash",
+          "Gemini 3.6 Flash",
+          "Gemini 3.7 Flash",
+          "Gemini 3.8 Flash",
+          "GPT-5 mini",
+          "GPT-5.3-Codex",
+          "GPT-5.4",
+          "GPT-5.4 mini",
+          "GPT-5.4 nano",
+          "GPT-5.5",
+          "GPT-5.6 Luna",
+          "GPT-5.6 Sol",
+          "GPT-5.6 Terra",
+          "GPT-6 Astra",
+          "Grok 4.5",
+          "Grok 4.6",
+          "Kimi K2.7 Code",
+          "Kimi K3",
+          "MAI-Code-1.1-Flash"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans",
+        "updatedAt": "2026-09-17",
+        "checkMethod": "auto"
+      }
+    },
+    {
+      "enabled": true,
+      "approved": true,
+      "adapter": "bigmodel-plans",
+      "scope": {
+        "tag": "div",
+        "attrs": {
+          "id": "content-area"
+        }
+      },
+      "evidenceHash": "9ea47c1828dece1f574a52baf814700f8b6f56433c5c5dac196b66add908686d",
+      "evidenceText": [
+        "套餐同时设有每 5 小时和每周额度上限",
+        "Claude Code、Kilo Code、OpenClaw、OpenCode、TRAE、CodeBuddy"
+      ],
+      "record": {
+        "id": "bigmodel-coding-plan",
+        "vendor": "智谱",
+        "product": "GLM Coding Plan",
+        "group": "domestic",
+        "tagline": "5 小时与每周双周期积分，支持 6 款编程工具",
+        "highlights": [
+          "GLM-5.3 与 GLM-5.3-Flash 全档可用",
+          "5 小时与每周双周期积分",
+          "非高峰时段积分 5 折",
+          "支持 ZCode / Claude Code 等 20+ 编程工具"
+        ],
+        "quotaBasis": "5h 2K–28K · 每周 10K–140K",
+        "supportedTools": [
+          "Claude Code",
+          "Kilo Code",
+          "OpenClaw",
+          "OpenCode",
+          "TRAE",
+          "CodeBuddy"
+        ],
+        "tiers": [
+          {
+            "name": "Lite 套餐",
+            "price": null,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "5 小时积分：2,000",
+              "每周积分：10,000",
+              "GLM-5.3 与 Flash 全档可用"
+            ],
+            "conditions": "本页未提供当前月付价格，需前往官方订阅页确认。仅限指定工具；两种周期限额同时生效，非高峰抵扣规则见原文。地区、账号、支付及税费以官方为准。"
+          },
+          {
+            "name": "Pro 套餐",
+            "price": null,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "5 小时积分：12,000",
+              "每周积分：60,000",
+              "更快生成速度与高峰保障"
+            ],
+            "conditions": "本页未提供当前月付价格，需前往官方订阅页确认。仅限指定工具；两种周期限额同时生效，非高峰抵扣规则见原文。地区、账号、支付及税费以官方为准。"
+          },
+          {
+            "name": "Max 套餐",
+            "price": null,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "5 小时积分：28,000",
+              "每周积分：140,000",
+              "高峰期专属资源优先保障"
+            ],
+            "conditions": "本页未提供当前月付价格，需前往官方订阅页确认。仅限指定工具；两种周期限额同时生效，非高峰抵扣规则见原文。地区、账号、支付及税费以官方为准。"
+          }
+        ],
+        "models": [
+          "GLM-5.3",
+          "GLM-5.3-Flash"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+        "updatedAt": "2026-09-17",
+        "checkMethod": "auto"
+      }
+    },
+    {
+      "enabled": true,
+      "approved": true,
+      "adapter": "pattern-plans",
+      "scope": {
+        "contains": [
+          "Get to know Grok and its capabilities for free within generous limits",
+          "Go further with significantly higher usage"
+        ]
+      },
+      "evidenceHash": "0b6384ed5a62958d6178f2f996b65f1b2050e0ad7c4223da989319cf8f83239e",
+      "evidenceText": [
+        "SuperGrok Plus"
+      ],
+      "tierRules": [
+        {
+          "name": "Free",
+          "price": "Free \\$(\\d+) /month",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "Grok 4.6 基础额度",
+            "实时联网与 X 搜索",
+            "语音模式与 Connectors"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        },
+        {
+          "name": "SuperGrok",
+          "price": "SuperGrok \\$(\\d+) /month",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "Grok 4.6 模型",
+            "Grok Bot 与 Connectors",
+            "图像与视频生成",
+            "更高速率上限"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        },
+        {
+          "name": "SuperGrok Plus",
+          "price": "SuperGrok Plus \\$(\\d+) /month",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "1080p 视频生成",
+            "显著更高用量",
+            "高峰优先访问",
+            "新功能抢先体验"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        }
+      ],
+      "record": {
+        "id": "supergrok-plan",
+        "vendor": "xAI",
+        "product": "SuperGrok",
+        "group": "overseas",
+        "tagline": "Grok 4.6 全功能会员，含 Imagine 与 Grok Build",
+        "highlights": [
+          "Grok 4.6 模型",
+          "含 Imagine 图像与视频生成",
+          "含 Grok Build 与 Grok Bot",
+          "Plus 提供 1080p 视频与高峰优先"
+        ],
+        "quotaBasis": "Free 滚动额度；SuperGrok 起为更高速率上限",
+        "supportedTools": [
+          "Grok Build",
+          "Grok Bot"
+        ],
+        "tiers": [
+          {
+            "name": "Free",
+            "price": 0.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Grok 4.6 基础额度",
+              "实时联网与 X 搜索",
+              "语音模式与 Connectors"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "SuperGrok",
+            "price": 30.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "Grok 4.6 模型",
+              "Grok Bot 与 Connectors",
+              "图像与视频生成",
+              "更高速率上限"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "SuperGrok Plus",
+            "price": 100.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "1080p 视频生成",
+              "显著更高用量",
+              "高峰优先访问",
+              "新功能抢先体验"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Grok 4.6",
+          "Grok Code Fast 1"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://x.ai/pricing",
+        "updatedAt": "2026-09-17",
+        "checkMethod": "auto"
+      }
+    },
+    {
+      "enabled": true,
+      "approved": true,
+      "adapter": "pattern-plans",
+      "scope": {
+        "contains": [
+          "订阅 Go",
+          "预估请求数"
+        ]
+      },
+      "evidenceHash": "5223c7d26e3e31a067f5004db28a028badb07139b973fd92e645e96baf953389",
+      "evidenceText": [
+        "预估请求数",
+        "每月使用额度"
+      ],
+      "tierRules": [
+        {
+          "name": "Go",
+          "price": "订阅 Go \\$(\\d+)/月",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "按模型分配额度：每 5 小时 110–45,300 次请求",
+            "官方页列出 28 个模型",
+            "DeepSeek V4.1 Flash 限时 4 倍用量",
+            "可充值、随时取消"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        }
+      ],
+      "record": {
+        "id": "opencode-go-plan",
+        "vendor": "OpenCode",
+        "product": "OpenCode Go",
+        "group": "overseas",
+        "tagline": "每月 $10，可搭配任意编程 Agent 使用",
+        "highlights": [
+          "单档 $10/月",
+          "官方页列出 28 个模型",
+          "额度按模型分配",
+          "可充值、随时取消"
+        ],
+        "quotaBasis": "按模型分配：每 5 小时 110–45,300 次请求",
+        "supportedTools": [
+          "OpenCode"
+        ],
+        "tiers": [
+          {
+            "name": "Go",
+            "price": 10.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "按模型分配额度：每 5 小时 110–45,300 次请求",
+              "官方页列出 28 个模型",
+              "DeepSeek V4.1 Flash 限时 4 倍用量",
+              "可充值、随时取消"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Kimi K3",
+          "Kimi K2.7 Code",
+          "GPT 5.6 Luna",
+          "MiniMax M3",
+          "Qwen3.7 Plus",
+          "GLM-5.3-Flash",
+          "DeepSeek V4 Flash",
+          "DeepSeek V4.1 Flash",
+          "MiMo-V2.5",
+          "Muse Spark 1.3 Contributor"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://opencode.ai/zh/go",
+        "updatedAt": "2026-09-17",
+        "checkMethod": "auto"
+      }
+    },
+    {
+      "enabled": true,
+      "approved": true,
+      "adapter": "pattern-plans",
+      "scope": {
+        "contains": [
+          "Free for everyone",
+          "For everyday work",
+          "For people who work with Claude all day"
+        ]
+      },
+      "evidenceHash": "259b2ff6a6a8945af79e4dc13fd59532c616cc14794eaf1ac20bfa7b241ba06f",
+      "evidenceText": [
+        "Claude Code"
+      ],
+      "tierRules": [
+        {
+          "name": "Free",
+          "price": "Free Try Claude \\$(\\d+) Free for everyone",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "网页、桌面与移动端基础额度",
+            "可联网搜索、创建文件与运行代码",
+            "跨对话记忆与连接应用"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        },
+        {
+          "name": "Pro",
+          "price": "\\$(\\d+) if billed monthly",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": "年付 $17/月（$200 一次付清）",
+          "features": [
+            "含 Claude Code 与 Claude Science",
+            "Claude Design / Slides / Docs",
+            "更多用量与更多模型",
+            "含 Claude in Chrome 与 Microsoft 365"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        },
+        {
+          "name": "Max",
+          "price": "For people who work with Claude all day From \\$(\\d+)",
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": "5× 与 20× 两档，起步 $100/月",
+          "features": [
+            "Pro 全部能力",
+            "5× 或 20× Pro 用量",
+            "更高输出上限",
+            "新功能抢先体验与高峰优先"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        }
+      ],
+      "record": {
+        "id": "claude-plans",
+        "vendor": "Anthropic",
+        "product": "Claude 会员",
+        "group": "overseas",
+        "tagline": "Claude Code 与 Claude Science 自 Pro 起包含",
+        "highlights": [
+          "Pro 起含 Claude Code",
+          "Max 提供 5× 或 20× 用量",
+          "含 Claude in Chrome / M365",
+          "含 Claude Science 与 Claude Design"
+        ],
+        "quotaBasis": "Free 基础额度；Max 为 Pro 的 5× 或 20×",
+        "supportedTools": [
+          "Claude Code",
+          "Claude in Chrome",
+          "Claude for Microsoft 365"
+        ],
+        "tiers": [
+          {
+            "name": "Free",
+            "price": 0.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "网页、桌面与移动端基础额度",
+              "可联网搜索、创建文件与运行代码",
+              "跨对话记忆与连接应用"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Pro",
+            "price": 20.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": "年付 $17/月（$200 一次付清）",
+            "features": [
+              "含 Claude Code 与 Claude Science",
+              "Claude Design / Slides / Docs",
+              "更多用量与更多模型",
+              "含 Claude in Chrome 与 Microsoft 365"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Max",
+            "price": 100.0,
+            "currency": "USD",
+            "period": "month",
+            "offerType": "standard",
+            "note": "5× 与 20× 两档，起步 $100/月",
+            "features": [
+              "Pro 全部能力",
+              "5× 或 20× Pro 用量",
+              "更高输出上限",
+              "新功能抢先体验与高峰优先"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Fable 5.1",
+          "Fable 5",
+          "Opus 5",
+          "Sonnet 5",
+          "Haiku 4.5"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://claude.com/pricing",
+        "updatedAt": "2026-09-17",
+        "checkMethod": "auto"
+      }
+    },
+    {
+      "enabled": true,
+      "approved": true,
+      "adapter": "pattern-plans",
+      "scope": {
+        "contains": [
+          "无忧版",
+          "专业版",
+          "高效版",
+          "速通版"
+        ]
+      },
+      "evidenceHash": "d04fa8fa9fcc45d338273a52f9690208b4340334caffa3a3acbfb421888acf27",
+      "evidenceText": [
+        "高效版",
+        "速通版"
+      ],
+      "tierRules": [
+        {
+          "name": "高效版",
+          "price": "高效版 ¥(\\d+) / 月",
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "每 5 小时约 6,000 次请求",
+            "每周约 45,000 次",
+            "每订阅月约 90,000 次"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        },
+        {
+          "name": "速通版",
+          "price": "速通版 ¥(\\d+) / 月",
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "限时首月 ¥699/月；季付 ¥2,997（限时 ¥2,697）",
+          "features": [
+            "每订阅月约 30,000 次请求",
+            "高峰免排队、优先响应",
+            "按订单支付时间滑动计算窗口"
+          ],
+          "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+        }
+      ],
+      "record": {
+        "id": "xfyun-astron-plan",
+        "vendor": "讯飞星辰",
+        "product": "Astron Coding Plan",
+        "group": "domestic",
+        "tagline": "按请求次数计量，按月/季订购，支持多款国产模型",
+        "highlights": [
+          "按请求次数而非 Token 计量",
+          "支持 Spark X2 与 GLM / DeepSeek / Kimi 等",
+          "5 小时 / 周 / 月三级滑动窗口",
+          "含限时首月优惠"
+        ],
+        "quotaBasis": "6,000 次/5h · 45,000/周 · 90,000/月（高效版）",
+        "supportedTools": [
+          "Claude Code",
+          "Cursor",
+          "Cline",
+          "OpenClaw"
+        ],
+        "tiers": [
+          {
+            "name": "高效版",
+            "price": 199.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": null,
+            "features": [
+              "每 5 小时约 6,000 次请求",
+              "每周约 45,000 次",
+              "每订阅月约 90,000 次"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "速通版",
+            "price": 999.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": "限时首月 ¥699/月；季付 ¥2,997（限时 ¥2,697）",
+            "features": [
+              "每订阅月约 30,000 次请求",
+              "高峰免排队、优先响应",
+              "按订单支付时间滑动计算窗口"
+            ],
+            "conditions": "价格与额度均取自官方页；税费、地区与支付条件以官方结算页为准。"
+          }
+        ],
+        "models": [
+          "Spark X2",
+          "Auto",
+          "GLM-5.2",
+          "GLM-5.1",
+          "GLM-5",
+          "DeepSeek-V4-Pro",
+          "DeepSeek-V4-Flash",
+          "DeepSeek-V3.2",
+          "Kimi-K2.6",
+          "Kimi-K2.5",
+          "MiniMax-M2.5",
+          "Qwen3.5-397B-A17B",
+          "GLM-4.7-Flash"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
+        "updatedAt": "2026-09-17",
+        "checkMethod": "auto"
+      }
+    }
+  ]
+}

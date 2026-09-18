@@ -1,0 +1,66 @@
+{
+  "tickets": {
+    "lastSuccess": "2026-09-18T05:23:50Z",
+    "lastAttempt": "2026-09-18T05:23:50Z",
+    "error": null,
+    "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
+  },
+  "models": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "lastAttempt": "2026-09-18T02:37:02Z",
+    "error": null,
+    "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
+  },
+  "aa": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 652
+  },
+  "github": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "lastAttempt": "2026-09-18T02:37:02Z",
+    "error": null,
+    "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
+  },
+  "github-weekly": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 174
+  },
+  "github-monthly": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 193
+  },
+  "news": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "lastAttempt": "2026-09-18T02:37:02Z",
+    "error": null,
+    "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
+  },
+  "aibase": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 20
+  },
+  "qbit": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 10
+  },
+  "infoq": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 20
+  },
+  "zhidx": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 20
+  },
+  "solidot": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 20
+  },
+  "ithome": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 60
+  },
+  "deepseek": {
+    "lastSuccess": "2026-09-18T02:37:02Z",
+    "count": 5
+  }
+}

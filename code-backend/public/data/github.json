@@ -1,0 +1,200 @@
+{
+  "source": "github-trending",
+  "dataUpdatedAt": "2026-09-18T02:37:02Z",
+  "week": {
+    "period": "weekly",
+    "sourceUrl": "https://github.com/trending?since=weekly",
+    "fetchedAt": "2026-09-18T02:37:02Z",
+    "items": [
+      {
+        "repo": "alibaba/open-code-review",
+        "sourceRank": 1,
+        "stars": 35010,
+        "periodStars": 11489,
+        "language": "Go",
+        "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "url": "https://github.com/alibaba/open-code-review"
+      },
+      {
+        "repo": "ayghri/i-have-adhd",
+        "sourceRank": 1,
+        "stars": 47517,
+        "periodStars": 10800,
+        "language": "Python",
+        "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "url": "https://github.com/ayghri/i-have-adhd"
+      },
+      {
+        "repo": "stablyai/orca",
+        "sourceRank": 4,
+        "stars": 71212,
+        "periodStars": 5305,
+        "language": "TypeScript",
+        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "url": "https://github.com/stablyai/orca"
+      },
+      {
+        "repo": "Tencent/WeKnora",
+        "sourceRank": 2,
+        "stars": 26355,
+        "periodStars": 3982,
+        "language": "Go",
+        "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "url": "https://github.com/Tencent/WeKnora"
+      },
+      {
+        "repo": "Panniantong/Agent-Reach",
+        "sourceRank": 7,
+        "stars": 82841,
+        "periodStars": 3670,
+        "language": "Python",
+        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "url": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "repo": "bojieli/ai-agent-book",
+        "sourceRank": 11,
+        "stars": 48330,
+        "periodStars": 2731,
+        "language": "Python",
+        "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+        "url": "https://github.com/bojieli/ai-agent-book"
+      },
+      {
+        "repo": "addyosmani/agent-skills",
+        "sourceRank": 4,
+        "stars": 95901,
+        "periodStars": 2560,
+        "language": "JavaScript",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "url": "https://github.com/addyosmani/agent-skills"
+      },
+      {
+        "repo": "melgarafael/DeskcommCRM",
+        "sourceRank": 12,
+        "stars": 3080,
+        "periodStars": 2179,
+        "language": "TypeScript",
+        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "url": "https://github.com/melgarafael/DeskcommCRM"
+      },
+      {
+        "repo": "Tencent/BrowserSkill",
+        "sourceRank": 18,
+        "stars": 4306,
+        "periodStars": 2157,
+        "language": "TypeScript",
+        "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "url": "https://github.com/Tencent/BrowserSkill"
+      },
+      {
+        "repo": "vastsa/PI-Desktop",
+        "sourceRank": 5,
+        "stars": 4168,
+        "periodStars": 1939,
+        "language": "TypeScript",
+        "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+        "url": "https://github.com/vastsa/PI-Desktop"
+      }
+    ]
+  },
+  "month": {
+    "period": "monthly",
+    "sourceUrl": "https://github.com/trending?since=monthly",
+    "fetchedAt": "2026-09-18T02:37:02Z",
+    "items": [
+      {
+        "repo": "ayghri/i-have-adhd",
+        "sourceRank": 2,
+        "stars": 47518,
+        "periodStars": 26237,
+        "language": "Python",
+        "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "url": "https://github.com/ayghri/i-have-adhd"
+      },
+      {
+        "repo": "openai/codex",
+        "sourceRank": 11,
+        "stars": 124945,
+        "periodStars": 19130,
+        "language": "Rust",
+        "description": "Lightweight coding agent that runs in your terminal",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "repo": "alibaba/open-code-review",
+        "sourceRank": 2,
+        "stars": 35011,
+        "periodStars": 13677,
+        "language": "Go",
+        "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "url": "https://github.com/alibaba/open-code-review"
+      },
+      {
+        "repo": "K-Dense-AI/scientific-agent-skills",
+        "sourceRank": 7,
+        "stars": 45376,
+        "periodStars": 11830,
+        "language": "Python",
+        "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      {
+        "repo": "volcengine/OpenViking",
+        "sourceRank": 13,
+        "stars": 37904,
+        "periodStars": 9190,
+        "language": "Python",
+        "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+        "url": "https://github.com/volcengine/OpenViking"
+      },
+      {
+        "repo": "tashfeenahmed/freellmapi",
+        "sourceRank": 5,
+        "stars": 26957,
+        "periodStars": 8304,
+        "language": "TypeScript",
+        "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "url": "https://github.com/tashfeenahmed/freellmapi"
+      },
+      {
+        "repo": "jingyaogong/minimind",
+        "sourceRank": 5,
+        "stars": 61496,
+        "periodStars": 6867,
+        "language": "Python",
+        "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+        "url": "https://github.com/jingyaogong/minimind"
+      },
+      {
+        "repo": "Tencent/WeKnora",
+        "sourceRank": 1,
+        "stars": 26355,
+        "periodStars": 6280,
+        "language": "Go",
+        "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "url": "https://github.com/Tencent/WeKnora"
+      },
+      {
+        "repo": "ggml-org/llama.cpp",
+        "sourceRank": 16,
+        "stars": 128614,
+        "periodStars": 4666,
+        "language": "C++",
+        "description": "LLM inference in C/C++",
+        "url": "https://github.com/ggml-org/llama.cpp"
+      },
+      {
+        "repo": "jundot/omlx",
+        "sourceRank": 21,
+        "stars": 21851,
+        "periodStars": 3034,
+        "language": "Python",
+        "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+        "url": "https://github.com/jundot/omlx"
+      }
+    ]
+  },
+  "version": "2026-09-18T05:23:50Z",
+  "generatedAt": "2026-09-18T05:23:50Z"
+}

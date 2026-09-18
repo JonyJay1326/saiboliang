@@ -1,0 +1,425 @@
+[
+  {
+    "kind": "github-classification",
+    "objectId": "bilawalsidhu/gods-eye-view",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "sourceUrl": "https://github.com/bilawalsidhu/gods-eye-view"
+    },
+    "id": "827018e5a1004e58afcd8b6fb291ee8ca49f362ca3c91d7fee343f9bbf1abf4e",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "blader/humanizer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "sourceUrl": "https://github.com/blader/humanizer"
+    },
+    "id": "7ed17ff0b2220686a7533e70394a1ad5a2fbcde911d5e189e46965df542ccf49",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/markitdown",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "sourceUrl": "https://github.com/microsoft/markitdown"
+    },
+    "id": "3f51d3da8280a860f9e5e93cc0e57c0e345186587bd319362c7c46692620e7e7",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "petergyang/no-ai-slop",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Removes 20+ patterns of AI slop from any piece of writing.",
+      "sourceUrl": "https://github.com/petergyang/no-ai-slop"
+    },
+    "id": "ca939fff1b16747a3daf329edfbdf2d707b97d7a2e358b55de957c8ad1535d06",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tt-a1i/archify",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "sourceUrl": "https://github.com/tt-a1i/archify"
+    },
+    "id": "02f047680e8f71fc9bc530b796c0d308bd8aa956c6ac25bdbc822e2de93395e1",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "omacom/omarchy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "sourceUrl": "https://github.com/omacom/omarchy"
+    },
+    "id": "1639e6e8864e861dc26f1dd67c4d85194d2c0b835e559341402bdf4ad2530146",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "anthropics/claude-plugins-community",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+      "sourceUrl": "https://github.com/anthropics/claude-plugins-community"
+    },
+    "id": "780022c031c248b69a837d53ba2b7b52f6971651ee2b2b8be12357d2c5b93f64",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cursor/plugins",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Cursor plugin specification and official plugins",
+      "sourceUrl": "https://github.com/cursor/plugins"
+    },
+    "id": "8c0abb014382d3fa049c094e4fd89a8aacc4ccc2e5149be8ee9a20040df0c231",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "THU-MAIC/OpenMAIC",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "sourceUrl": "https://github.com/THU-MAIC/OpenMAIC"
+    },
+    "id": "9ce7cf670be967b7f5c992c92bed8531ae6702d90f1195080821646cfd285abd",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "debpalash/VoiceStudio",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "sourceUrl": "https://github.com/debpalash/VoiceStudio"
+    },
+    "id": "3f4dba959b0f55b4bfdc714dac6879671768b0460f83f09450f24786cded2e36",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cathrynlavery/diagram-design",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "sourceUrl": "https://github.com/cathrynlavery/diagram-design"
+    },
+    "id": "8a1ccca914ea905137aa7b07cb583d737f140e63dd251bb91649cc30147b2f99",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "apache/maka",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Apache Maka (Incubating) is a high-performance agent workspace that keeps a complete record of everything it did.",
+      "sourceUrl": "https://github.com/apache/maka"
+    },
+    "id": "b319f7b159cf324b9b7fcdd94654f90e14453e8b3f4247a6ae0699bfcf541860",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "chaitanyagiri/munder-difflin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A local multi-agent harness that works with your existing Claude Code, Codex subscriptions, allows you to run an office of agents",
+      "sourceUrl": "https://github.com/chaitanyagiri/munder-difflin"
+    },
+    "id": "8f481b0c56821a5b706bb1a79d4c000735016d0915350a82cb5d20170ff2c942",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "google-research/timesfm",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "sourceUrl": "https://github.com/google-research/timesfm"
+    },
+    "id": "2d3dbfd90d7e7de1f1619d32bd142088674975c4ade97a153ec5c853bc1abdcf",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "abue-ammar/tinycast",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "sourceUrl": "https://github.com/abue-ammar/tinycast"
+    },
+    "id": "da351cf100e8048e4620a460e62ba6b196959baec6c0c32b98fe665cdf077c08",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "heygen-com/hyperframes",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Write HTML. Render video. Built for agents.",
+      "sourceUrl": "https://github.com/heygen-com/hyperframes"
+    },
+    "id": "bcd003a8433502571405ed16a836ee8963d1564a0c3e0f87721f213d18e37989",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "github/spec-kit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+      "sourceUrl": "https://github.com/github/spec-kit"
+    },
+    "id": "b67adbcfbdea9cdef936e1df839317c9499a897a667faa0f96d12b828f718cd1",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jiji262/douyin-downloader",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+      "sourceUrl": "https://github.com/jiji262/douyin-downloader"
+    },
+    "id": "4df59b11dbe4e4c51ccfbfe45878d634eefb19137605bac701e5b5a27906330d",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vxcontrol/pentagi",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "sourceUrl": "https://github.com/vxcontrol/pentagi"
+    },
+    "id": "345b75b55639169fd27e491224b3bb375598dc997a6f28852aaa078c945cacfb",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cloudflare/security-audit-skill",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "sourceUrl": "https://github.com/cloudflare/security-audit-skill"
+    },
+    "id": "4f9c780cff2dc2e7a15956afd4da60604b9edd74ca522bd987c690b940c24f94",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "alphaXiv/OpenResearch",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Turn your coding agents into research agents",
+      "sourceUrl": "https://github.com/alphaXiv/OpenResearch"
+    },
+    "id": "ebb437bd6f17564ad60916047090340842150dbe04e4467f149d4a821a83f34a",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "arcboxlabs/arcbox",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Run AI agents on real and isolated machines — own kernel, filesystem, and network — with <100ms boot. Local first, OCI compatible, pure Rust.",
+      "sourceUrl": "https://github.com/arcboxlabs/arcbox"
+    },
+    "id": "14e9b49b2cdfcb3d5d208a390eee1b58f2113bc311405f0c0fe72df71c11d1d8",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "NationalSecurityAgency/ghidra",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "sourceUrl": "https://github.com/NationalSecurityAgency/ghidra"
+    },
+    "id": "039c4fecb9a0f83ac60d8cb8f382d79bf76ff7089583e93d2246316d038e2cf5",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "every-app/open-seo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source alternative to Semrush and Ahrefs",
+      "sourceUrl": "https://github.com/every-app/open-seo"
+    },
+    "id": "05cc0e824177ff632ff22ba0bc7fc8034e56ab7dfae5e53563d2d00f8a474f7d",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "p-e-w/heretic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully automatic censorship removal for language models",
+      "sourceUrl": "https://github.com/p-e-w/heretic"
+    },
+    "id": "4fdd8ea1c3b1c029d49de4c28b43b58d866ea1d02b14213507dbd1f0356c57e8",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "experientiallabs/experiential",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Experiential is the open source, zero markup gateway for BYOK, self-hosted and 1000+ marketplace models. It learns from your traffic to cut costs, recommend better models, and train a specialized model you own.",
+      "sourceUrl": "https://github.com/experientiallabs/experiential"
+    },
+    "id": "4a13303498df8979745b9570963eeb907e91f2f0adbc38f707c4e8446f552417",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tinyhumansai/openhuman",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenHuman is an open source agent harness with local-first memory, agent orchestration, and workflows",
+      "sourceUrl": "https://github.com/tinyhumansai/openhuman"
+    },
+    "id": "a104f234f1fb3cc5a9bcd5da2e52a0dd381a925e3f1fb95482b17147b497e6a2",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nautechsystems/nautilus_trader",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+      "sourceUrl": "https://github.com/nautechsystems/nautilus_trader"
+    },
+    "id": "ab592a52af65babb43349acf08a6158763364d63e48809cc76cb165aab9d9d97",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "k1tbyte/Wand-Enhancer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
+      "sourceUrl": "https://github.com/k1tbyte/Wand-Enhancer"
+    },
+    "id": "e0e111499b46265bf24a30216349e8a3ed5245b1f3e06b8dbf3a79b42f795bca",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:49:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "akitaonrails/ai-memory",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "sourceUrl": "https://github.com/akitaonrails/ai-memory"
+    },
+    "id": "9691cdfbe5a2723210b36b3d1c11171e59114e8ac902b30f2104846c0f63f915",
+    "status": "pending",
+    "createdAt": "2026-09-17T22:57:33Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "4ac4d2d82f3b784fbb58d429ed1666d710eb4e58e8575753b0882b77eb315b46",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "700 个 AI 智能体本应彼此隔离，却建起留言板联手攻击，独立调查还原 Hugging Face 事件",
+      "sourceUrl": "https://www.infoq.cn/article/W3tOIQhV5pKhsXP6mgWw",
+      "publishedAt": "2026-09-18T09:04:00Z",
+      "source": "InfoQ"
+    },
+    "id": "7e706b1502e43504c96eaf58cd3013fb957a458a9d6bb64b1bc6eb9f31ebf5fd",
+    "status": "pending",
+    "createdAt": "2026-09-18T01:40:33Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "opencode-go-plan",
+    "reason": "official terms changed; retaining prior record",
+    "evidence": {
+      "sourceUrl": "https://opencode.ai/zh/go"
+    },
+    "id": "2cc3441911bd3853ee75a9b2eaa8cddc02f543c9c37f7ac666922cdea9473892",
+    "status": "pending",
+    "createdAt": "2026-09-18T02:37:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jamiepine/voicebox",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "sourceUrl": "https://github.com/jamiepine/voicebox"
+    },
+    "id": "06e66a5a760b51a6e59008519ee61d7b6f7cfb1cbfe8bedd9e46ce8e508a0472",
+    "status": "pending",
+    "createdAt": "2026-09-18T02:37:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "modular/modular",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Modular Platform (includes MAX & Mojo)",
+      "sourceUrl": "https://github.com/modular/modular"
+    },
+    "id": "db70a5d22a125300fe87dede052b9d10633f2e9ee15bdec020e61aa318fbda44",
+    "status": "pending",
+    "createdAt": "2026-09-18T02:37:02Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "35d84f49fc799688b7c4f39083354cf9552de55bbf199444bbc5cacf3f904c97",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "让 Agent 越用越强：AReaL 2.0 构建 Agent 在线强化学习闭环｜QCon上海",
+      "sourceUrl": "https://www.infoq.cn/article/x2FmIeCkeDYUV66BNj3g",
+      "publishedAt": "2026-09-18T10:00:00Z",
+      "source": "InfoQ"
+    },
+    "id": "62c117f46bbfe73c518acdccaddcc7f8f8aa6cf3d0e51b699079bef3481ad767",
+    "status": "pending",
+    "createdAt": "2026-09-18T02:37:02Z"
+  }
+]

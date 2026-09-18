@@ -1,0 +1,304 @@
+{
+ "_note": "AA 厂商名（model_creator.name）→ 图标文件 slug。图标位于同目录 {slug}.svg。前端应在构建期 import 本表，不要运行时 fetch。AA 厂商名有 59 个，本表全覆盖；icon 为 null 表示 Lobe Icons 暂无对应品牌。",
+ "_source": "人工映射，依据 2026-09-17 AA 全量厂商名 + Lobe Icons 实测可用 slug。",
+ "_rules": [
+  "优先取模型品牌标（qwen / gemini / claude / doubao / grok / hunyuan / chatglm / moonshot），alt 里保留公司标备选。",
+  "Z AI / SpaceXAI / Kimi / Alibaba / ByteDance Seed 这类 AA 叫法不能直接 slug 化，必须查本表。",
+  "icon 为 null 时前端必须降级（如显示厂商名首字），不得引用不存在的文件。"
+ ],
+ "byVendor": {
+  "AI21 Labs": {
+   "icon": "ai21",
+   "alt": []
+  },
+  "AI9Stars": {
+   "icon": null,
+   "alt": []
+  },
+  "Alibaba": {
+   "icon": "qwen",
+   "alt": [
+    "alibaba"
+   ]
+  },
+  "Allen Institute for AI": {
+   "icon": "ai2",
+   "alt": []
+  },
+  "Amazon": {
+   "icon": "aws",
+   "alt": []
+  },
+  "Anthropic": {
+   "icon": "claude",
+   "alt": [
+    "anthropic"
+   ]
+  },
+  "Apodex": {
+   "icon": null,
+   "alt": []
+  },
+  "Arcee AI": {
+   "icon": "arcee",
+   "alt": []
+  },
+  "Baidu": {
+   "icon": "baidu",
+   "alt": []
+  },
+  "ByteDance Seed": {
+   "icon": "doubao",
+   "alt": [
+    "bytedance"
+   ]
+  },
+  "Celeris": {
+   "icon": null,
+   "alt": []
+  },
+  "China Mobile": {
+   "icon": null,
+   "alt": []
+  },
+  "Cohere": {
+   "icon": "cohere",
+   "alt": []
+  },
+  "Databricks": {
+   "icon": null,
+   "alt": []
+  },
+  "Deep Cogito": {
+   "icon": "deepcogito",
+   "alt": []
+  },
+  "DeepSeek": {
+   "icon": "deepseek",
+   "alt": []
+  },
+  "Google": {
+   "icon": "gemini",
+   "alt": [
+    "google"
+   ]
+  },
+  "IBM": {
+   "icon": "ibm",
+   "alt": []
+  },
+  "Inception": {
+   "icon": "inception",
+   "alt": []
+  },
+  "InclusionAI": {
+   "icon": null,
+   "alt": []
+  },
+  "Institute of Foundation Models": {
+   "icon": null,
+   "alt": []
+  },
+  "Kimi": {
+   "icon": "kimi",
+   "alt": [
+    "moonshot"
+   ]
+  },
+  "Korea Telecom": {
+   "icon": null,
+   "alt": []
+  },
+  "KwaiKAT": {
+   "icon": "kwaikat",
+   "alt": []
+  },
+  "LG AI Research": {
+   "icon": "lg",
+   "alt": []
+  },
+  "Liquid AI": {
+   "icon": "liquid",
+   "alt": []
+  },
+  "LongCat": {
+   "icon": "longcat",
+   "alt": []
+  },
+  "Meta": {
+   "icon": "meta",
+   "alt": []
+  },
+  "Microsoft": {
+   "icon": "microsoft",
+   "alt": []
+  },
+  "MiniMax": {
+   "icon": "minimax",
+   "alt": []
+  },
+  "Mistral": {
+   "icon": "mistral",
+   "alt": []
+  },
+  "Motif Technologies": {
+   "icon": null,
+   "alt": []
+  },
+  "Multiverse Computing": {
+   "icon": null,
+   "alt": []
+  },
+  "NVIDIA": {
+   "icon": "nvidia",
+   "alt": []
+  },
+  "Nanbeige": {
+   "icon": null,
+   "alt": []
+  },
+  "Naver": {
+   "icon": null,
+   "alt": []
+  },
+  "Nex AGI": {
+   "icon": null,
+   "alt": []
+  },
+  "Nous Research": {
+   "icon": "nousresearch",
+   "alt": []
+  },
+  "OpenAI": {
+   "icon": "openai",
+   "alt": []
+  },
+  "OpenBMB": {
+   "icon": null,
+   "alt": []
+  },
+  "OpenChat": {
+   "icon": "openchat",
+   "alt": []
+  },
+  "Perplexity": {
+   "icon": "perplexity",
+   "alt": []
+  },
+  "Prime Intellect": {
+   "icon": null,
+   "alt": []
+  },
+  "Reka AI": {
+   "icon": null,
+   "alt": []
+  },
+  "SK Telecom": {
+   "icon": null,
+   "alt": []
+  },
+  "Sapiens AI": {
+   "icon": null,
+   "alt": []
+  },
+  "Sarvam": {
+   "icon": null,
+   "alt": []
+  },
+  "ServiceNow": {
+   "icon": null,
+   "alt": []
+  },
+  "Snowflake": {
+   "icon": "snowflake",
+   "alt": []
+  },
+  "SpaceXAI": {
+   "icon": "xai",
+   "alt": [
+    "grok"
+   ]
+  },
+  "StepFun": {
+   "icon": "stepfun",
+   "alt": []
+  },
+  "Swiss AI Initiative": {
+   "icon": null,
+   "alt": []
+  },
+  "TII UAE": {
+   "icon": "tii",
+   "alt": []
+  },
+  "Tencent": {
+   "icon": "tencent",
+   "alt": [
+    "hunyuan"
+   ]
+  },
+  "Thinking Machines": {
+   "icon": null,
+   "alt": []
+  },
+  "Trillion Labs": {
+   "icon": null,
+   "alt": []
+  },
+  "Upstage": {
+   "icon": "upstage",
+   "alt": []
+  },
+  "Xiaomi": {
+   "icon": "xiaomimimo",
+   "alt": []
+  },
+  "Z AI": {
+   "icon": "zai",
+   "alt": [
+    "zhipu",
+    "chatglm"
+   ]
+  }
+ },
+ "vendorDisplayName": {
+  "_note": "AA 厂商名 → 中文/通用显示名。前端只读派生，不改契约。仅列与 AA 叫法不同的。",
+  "SpaceXAI": "xAI",
+  "Kimi": "月之暗面 Moonshot",
+  "Z AI": "智谱 Z.ai",
+  "Alibaba": "阿里云",
+  "Allen Institute for AI": "Ai2",
+  "Amazon": "Amazon (AWS)",
+  "TII UAE": "TII (Falcon)",
+  "KwaiKAT": "快手 KwaiKAT",
+  "ByteDance Seed": "字节跳动 Seed",
+  "Deep Cogito": "Deep Cogito",
+  "LG AI Research": "LG AI",
+  "Institute of Foundation Models": "IFM"
+ },
+ "planVendors": {
+  "_note": "套餐（plans）厂商/工具 → 图标 slug。AI 工具品牌不在 AA 厂商表里，单独维护。",
+  "智谱": "zhipu",
+  "智谱 GLM": "zhipu",
+  "GitHub": "github",
+  "GitHub Copilot": "githubcopilot",
+  "OpenCode": "opencode",
+  "Kimi": "kimi",
+  "月之暗面": "moonshot",
+  "MiniMax": "minimax",
+  "ChatGPT": "openai",
+  "Claude": "claude",
+  "Google": "gemini",
+  "Grok": "grok",
+  "Meta": "meta",
+  "阿里云百炼": "bailian",
+  "火山引擎方舟": "volcengine",
+  "小米 MiMo": "xiaomimimo",
+  "讯飞星火": "spark",
+  "商汤日日新": "sensenova",
+  "Trae": "trae",
+  "Cline": "cline",
+  "Cursor": "cursor",
+  "OpenClaw": "openclaw"
+ }
+}

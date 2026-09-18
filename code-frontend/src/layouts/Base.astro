@@ -1,0 +1,305 @@
+---
+// 全站基础布局。
+// 导航模型（frontend-spec §7）：客户端导航（ClientRouter），一期关闭过渡动画。
+// 皮肤档位脚本托管在此处 <head>：硬加载时立即生效，软导航时随 head 保留。
+import { ClientRouter } from 'astro:transitions';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import SkinToggle from '../components/SkinToggle.astro';
+import '../styles/placeholder.css';
+
+const {
+  title = null,
+  description = '',
+  dataUpdatedAt = null,
+  sourceLabel = null,
+  noindex = false,
+} = Astro.props;
+
+const SITE_NAME = '赛博粮站';
+const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
+---
+<!doctype html>
+<html lang="zh-CN" data-skin="plain" transition:animate="none">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {/* fallback="swap"：不支持 View Transitions 的浏览器也走客户端导航，
+        但只做即时替换、不模拟动画——与一期「关掉动画」的决策一致。 */}
+    <ClientRouter fallback="swap" />
+
+    {/* 皮肤强度档：读写 localStorage、写回 <html>、按钮 aria 同步。
+        整页一段脚本 + 事件委托，避免随组件替换重复绑定（frontend-spec §5.9、§7.2）。 */}
+    <script is:inline>
+      if (!window.__cgSkin) {
+        window.__cgSkin = true;
+        const KEY = 'cg:skin';
+        const normalize = (value) => (value === 'cyber' ? 'cyber' : 'plain');
+
+        const apply = () => {
+          let stored = null;
+          try {
+            stored = localStorage.getItem(KEY);
+          } catch {
+            stored = null;
+          }
+          const value = normalize(stored);
+          document.documentElement.dataset.skin = value;
+          for (const btn of document.querySelectorAll('[data-skin-set]')) {
+            btn.setAttribute('aria-pressed', String(btn.dataset.skinSet === value));
+          }
+        };
+
+        document.addEventListener('click', (event) => {
+          const btn = event.target.closest('[data-skin-set]');
+          if (!btn) return;
+          try {
+            localStorage.setItem(KEY, normalize(btn.dataset.skinSet));
+          } catch {
+            document.documentElement.dataset.skin = normalize(btn.dataset.skinSet);
+          }
+          apply();
+        });
+
+        // DOM 替换后、绘制前写回档位，避免闪回默认档
+        document.addEventListener('astro:after-swap', apply);
+        // 软导航完成后同步按钮态；模块脚本只执行一次，故监听须在此注册
+        document.addEventListener('astro:page-load', apply);
+        apply();
+      }
+    </script>
+
+    {/* 「我领到了」（frontend-spec §7.2）：整页一个 script 做事件委托，
+        绝不为每张票卡各起一个岛。key = cg:collection，value = { id: { claimedAt } }。
+        监听挂在 document 上，软导航后依然有效，故只需幂等注册一次。 */}
+    <script is:inline>
+      if (!window.__cgClaim) {
+        window.__cgClaim = true;
+        const KEY = 'cg:collection';
+
+        const read = () => {
+          try {
+            const parsed = JSON.parse(localStorage.getItem(KEY) || '{}');
+            return parsed && typeof parsed === 'object' ? parsed : {};
+          } catch {
+            return {};
+          }
+        };
+
+        const sync = () => {
+          const owned = read();
+          for (const btn of document.querySelectorAll('[data-claim]')) {
+            const has = Object.prototype.hasOwnProperty.call(owned, btn.dataset.claim);
+            btn.setAttribute('aria-pressed', String(has));
+            btn.textContent = has ? '已盖戳（点击取消）' : '我领到了';
+          }
+        };
+
+        document.addEventListener('click', (event) => {
+          const btn = event.target.closest('[data-claim]');
+          if (!btn) return;
+          const id = btn.dataset.claim;
+          const owned = read();
+          if (Object.prototype.hasOwnProperty.call(owned, id)) {
+            delete owned[id];
+          } else {
+            owned[id] = { claimedAt: new Date().toISOString() };
+          }
+          try {
+            localStorage.setItem(KEY, JSON.stringify(owned));
+          } catch {
+            window.alert('无法写入本机存储，记录可能不会被保存。');
+            return;
+          }
+          sync();
+        });
+
+        document.addEventListener('astro:page-load', sync);
+        sync();
+      }
+    </script>
+
+    {/* 轻量切换（frontend-spec §7.1 / §10.2）：周月切换、两榜切换、分组选择。
+        只显隐「已渲染好的」面板，不重算数据，故用原生脚本而非框架岛——
+        避免为三处显隐各付一份框架运行时。
+        约定：容器 [data-toggle][data-toggle-current=值]，按钮 [data-toggle-value]，
+        面板 [data-toggle-panel]，全部在容器内查找，同页多个切换互不干扰。 */}
+    <script is:inline>
+      if (!window.__cgToggle) {
+        window.__cgToggle = true;
+
+        const apply = (root) => {
+          const value = root.dataset.toggleCurrent;
+          for (const btn of root.querySelectorAll('[data-toggle-value]')) {
+            btn.setAttribute('aria-selected', String(btn.dataset.toggleValue === value));
+          }
+          for (const panel of root.querySelectorAll('[data-toggle-panel]')) {
+            panel.hidden = panel.dataset.togglePanel !== value;
+          }
+        };
+
+        document.addEventListener('click', (event) => {
+          const target = event.target instanceof Element ? event.target : null;
+          const btn = target?.closest('[data-toggle-value]');
+          const root = btn?.closest('[data-toggle]');
+          if (!root) return;
+          root.dataset.toggleCurrent = btn.dataset.toggleValue;
+          apply(root);
+        });
+
+        document.addEventListener('astro:page-load', () => {
+          for (const root of document.querySelectorAll('[data-toggle]')) apply(root);
+        });
+      }
+    </script>
+
+    {/* 详情弹框预览（frontend-spec §5.10 票证 / §5.11 套餐）。
+        渐进增强：`<a href="/tickets/xxx/">`、`<a href="/plans/xxx/">` 保持真链接——
+        爬虫可抓、新窗口可开、无 JS 正常跳转、直接访问该 URL 仍是完整独立页。
+        只有左键普通点击才拦下来开弹框。内容按需 fetch 该 URL 并抽取 <main>，
+        **不把详情内联进列表页**（§10.2「列表类页面的数据只允许出现一份」）。
+
+        两处关键取舍（都有实测依据）：
+        1. 用捕获阶段 + stopPropagation 压住 ClientRouter——它的 click 监听是冒泡阶段
+           （`addEventListener("click", …)`，无 capture 选项），捕获阶段先执行即可拦下。
+        2. 用 replaceState 而非 pushState 同步 URL——ClientRouter 同时监听 popstate，
+           新增历史条目会让它的软导航与弹框关闭互相打架。代价：后退键不关闭弹框，
+           而是回到上一个真实页面；URL 仍可分享、刷新即还原为独立详情页。
+        3. 关闭时回到「打开前的地址」，而不是按规则推导列表路径——首页、失效墙、
+           关联跳转等入口都能正确还原。 */}
+    <script is:inline>
+      if (!window.__cgPreview) {
+        window.__cgPreview = true;
+        const LINK = 'a[href^="/tickets/"], a[href^="/plans/"]';
+
+        let overlay = null;
+        let panel = null;
+        let content = null;
+        let lastFocus = null;
+        let fromUrl = null;
+
+        const build = () => {
+          if (overlay) return;
+          overlay = document.createElement('div');
+          overlay.className = 'preview';
+          overlay.setAttribute('role', 'dialog');
+          overlay.setAttribute('aria-modal', 'true');
+          overlay.setAttribute('aria-label', '详情预览');
+          overlay.hidden = true;
+          overlay.innerHTML =
+            '<div class="preview__backdrop" data-preview-close></div>' +
+            '<div class="preview__panel" tabindex="-1">' +
+            '<button type="button" class="preview__close" data-preview-close aria-label="关闭预览">关闭</button>' +
+            '<div class="preview__content" data-preview-content></div>' +
+            '</div>';
+          document.body.appendChild(overlay);
+          panel = overlay.querySelector('.preview__panel');
+          content = overlay.querySelector('[data-preview-content]');
+        };
+
+        const focusables = () =>
+          [...panel.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])')].filter(
+            (el) => !el.hasAttribute('disabled') && el.offsetParent !== null
+          );
+
+        const close = () => {
+          if (!overlay || overlay.hidden) return;
+          overlay.hidden = true;
+          document.documentElement.style.overflow = '';
+          if (fromUrl) window.history.replaceState(window.history.state, '', fromUrl);
+          fromUrl = null;
+          if (lastFocus instanceof HTMLElement) lastFocus.focus();
+          lastFocus = null;
+        };
+
+        const open = async (url) => {
+          build();
+          if (overlay.hidden) fromUrl = window.location.pathname + window.location.search;
+          lastFocus = document.activeElement;
+          overlay.hidden = false;
+          document.documentElement.style.overflow = 'hidden';
+          overlay.setAttribute('aria-busy', 'true');
+          content.innerHTML = '<p>正在取件…</p>';
+          panel.focus();
+          window.history.replaceState(window.history.state, '', url);
+          try {
+            const res = await fetch(url, { headers: { Accept: 'text/html' } });
+            if (!res.ok) throw new Error(String(res.status));
+            const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+            const main = doc.querySelector('main');
+            if (!main) throw new Error('no main');
+            main.querySelectorAll('script').forEach((s) => s.remove());
+            content.innerHTML = main.innerHTML;
+          } catch {
+            content.innerHTML = '<p>取件失败，<a href="' + url + '">直接打开详情页</a>。</p>';
+          } finally {
+            overlay.removeAttribute('aria-busy');
+          }
+        };
+
+        document.addEventListener(
+          'click',
+          (event) => {
+            const target = event.target instanceof Element ? event.target : null;
+            const link = target?.closest(LINK);
+            if (!link) return;
+            if (event.defaultPrevented || event.button !== 0) return;
+            if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+            if (link.target && link.target !== '_self') return;
+            if (link.hasAttribute('download')) return;
+            // 「← 返回套餐榜」这类回列表链接不拦截，按正常导航走
+            if (/^\/(tickets|plans)\/$/.test(link.getAttribute('href'))) return;
+            // 捕获阶段：阻止事件继续冒泡到 ClientRouter 的 click 监听
+            event.preventDefault();
+            event.stopPropagation();
+            open(link.getAttribute('href'));
+          },
+          true
+        );
+
+        document.addEventListener('click', (event) => {
+          const target = event.target instanceof Element ? event.target : null;
+          if (target?.closest('[data-preview-close]')) close();
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (!overlay || overlay.hidden) return;
+          if (event.key === 'Escape') {
+            event.preventDefault();
+            close();
+            return;
+          }
+          if (event.key !== 'Tab') return;
+          const list = focusables();
+          if (list.length === 0) return;
+          const first = list[0];
+          const last = list[list.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a class="brand" href="/">赛博粮站</a>
+      <Nav />
+      <SkinToggle />
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer dataUpdatedAt={dataUpdatedAt} sourceLabel={sourceLabel} />
+  </body>
+</html>

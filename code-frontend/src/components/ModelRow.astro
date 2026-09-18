@@ -1,0 +1,24 @@
+---
+// 模型榜行（frontend-spec §5.3）
+// 展示序号用号码牌（与 §5.2 同一套组件）；rank 是本站连续序号，两榜独立。
+// 报价标注（「Artificial Analysis 公开市场参考价」）是**榜单级**提示，
+// 只在榜单头部出现一次，不在每行重复——见 §5.3 备注。
+const { row, index } = Astro.props;
+const model = row.model;
+const hasPrice = model && (model.inputCost !== null || model.outputCost !== null);
+---
+<li>
+  <span class="rank-badge" aria-label={`本站展示序号 ${index}`}>{index}</span>
+  <span class="model-name">{model?.name ?? row.modelId}</span>
+  {model?.vendor && <span class="model-vendor">{model.vendor}</span>}
+  <span class="model-score">指数 {row.score}</span>
+  {
+    hasPrice ? (
+      <span class="model-price">
+        ${model.inputCost ?? '—'} / ${model.outputCost ?? '—'} USD 每百万 Token
+      </span>
+    ) : (
+      <span class="model-price">暂无对应报价</span>
+    )
+  }
+</li>

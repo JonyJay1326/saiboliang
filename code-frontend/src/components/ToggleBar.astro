@@ -1,0 +1,23 @@
+---
+// 轻量切换条（frontend-spec §7.1）：周月切换 / 两榜切换 / 分组选择。
+// 这三处都是「显隐已渲染好的两组内容」，不需要重新计算或渲染，
+// 因此用同一段原生 script 处理（§7.1 明确允许），不引入框架运行时——
+// 理由见 frontend-spec §10.2 的「框架运行时占比 < 60%」阈值。
+// 用法：外层容器 <div data-toggle data-toggle-current="默认值">，
+//       本组件放在容器内，面板用 [data-toggle-panel="值"] 也放在容器内。
+const { label, options, current } = Astro.props;
+---
+<div class="toggle-bar" role="tablist" aria-label={label}>
+  {
+    options.map((option) => (
+      <button
+        type="button"
+        role="tab"
+        data-toggle-value={option.key}
+        aria-selected={String(option.key === current)}
+      >
+        {option.label}
+      </button>
+    ))
+  }
+</div>
