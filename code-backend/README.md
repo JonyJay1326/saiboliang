@@ -69,7 +69,7 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 
 `editorial/sources.json` 保存已启用的来源与经核对的套餐适配器（只有 `news`、`plans` 两个键）。套餐使用 `verified-section` 或专用 adapter：需用户确认产品准入、准确公共 record、官方页面 scope、该范围规范化纯文本的 SHA-256 和明确字段证据。adapter 只覆盖已识别的价格/额度表，`tagline`/`highlights`/`quotaBasis` 等文案字段由人工在 record 里维护。内容变化不会自动沿用初始额度冒充新事实。
 
-`editorial/tickets.json` 是**票证的唯一来源**，人工维护的扁平数组，字段见 `cyber-granary-data-contract.md` §4.2。管道只读取、按契约校验并打版本戳，不请求网络。`link` 禁止携带邀请码/推荐码等推广参数；需要标推广时把 `affiliate` 置 true。内容未变时不会刷新 `dataUpdatedAt`，也不会推版本。
+`editorial/tickets.json` 是**票证的唯一来源**，人工维护的扁平数组，字段见 `cyber-granary-data-contract.md` §4.2。管道只读取、按契约校验并打版本戳，不请求网络。`link` 默认禁止携带邀请码/推荐码等推广参数；本人推广链接按契约 §5.1 例外录入时必须把 `affiliate` 置 true（前端显示「含推广」），`utm_*` 等跟踪参数一律剥离。内容未变时不会刷新 `dataUpdatedAt`，也不会推版本。
 
 `editorial/news-originals.json` 按规范化中文报道 URL 的 SHA-256 保存一手来源证据，值包含 `url`、`publisher`、`articleEvidence`、`originalEvidence`、`eventSpecific`。编辑前须核实发布者官方身份。运行时再次检查报道出处链接、两页事件文本和最终目标；失败回退报道，官方仓库根链接不用于事件合并。
 
