@@ -86,4 +86,5 @@ jobs:
           fi
           version=$(python -c "import json;print(json.load(open('code-backend/public/data/version.json'))['version'])")
           git commit -m "chore(data): scheduled batch ${version}"
+          git pull --rebase origin main
           git push

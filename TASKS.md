@@ -13,7 +13,7 @@
 | B4 | 🔄 | 采集管道实现（RSS 优先 → 官方结构化数据 → 专用页面解析；入口须过准入检查才启用） | Codex | [实测] 2026-09-17：模型报价改用 AA 自带 `pricing`，**OpenRouter 已下线**（`openrouterId`/`contextLength` 删除，`model-mappings.json` 作废）；两榜上限放宽至各 30 条并按模型去重；套餐扩到 17 条（6 个官方自动适配器 + 人工 record），`models` 改官方展示名。活动准入仍待确认。2026-09-18 资讯来源复核：InfoQ、智东西已接入，厂商官方公告通道待适配器设计，见 `code-backend/news-source-check.md`。运行见 `code-backend/README.md` |
 | B5 | ✅ | GitHub Trending AI 精选采集：直接抓官方周/月榜 → AI 分类筛选，各 ≤10 条，保留来源顺序，默认周榜 | Codex | [实测] 2026-09-17：周/月官方页已采集，规则分类及歧义队列就绪；不自建监控池、star 快照、差分和历史名次。前端默认周榜仍随 F5 实施 |
 | B6 | 🔄 | 数据源失败兜底：保留上次数据 + 标注条目旧日期与待确认信息 | Codex | [实测] 管道模块保留、骤降保护、整批校验、构建失败不推进已通过离线测试；前端陈旧提示与部署恢复未验收 |
-| B7 | ⬜ | Actions workflow：采集+校验+构建+提交+部署同一 workflow，UTC 03:17/07:17/11:17 | Codex | 见 `AGENTS.md` §7；Trending 与中文资讯每次更新，AA/OpenRouter/套餐/活动每日一次 |
+| B7 | ✅ | Actions workflow：采集+校验+构建+提交+部署同一 workflow，UTC 03:17/07:17/11:17 | Codex | `.github/workflows/collect-and-deploy.yml`；[实测 2026-09-18] 手动触发 run `35311114136` 全绿（1m59s）：npm ci → 28 项单测 → 采集+构建门禁 → 部署 Pages → 回写提交 `c5ac4c8`（data/state）。站点 `https://jonyjay1326.github.io/saiboliang/` 实测 200。失败语义：构建失败 → exit 1 阻断部署且不回写；部署失败 → 跳过回写。**AA 采集路径当日已跳过（daily 逻辑），待下个 UTC 日首跑覆盖** |
 | B8 | ⏸ | 延期项封存：GitHub 监控池 / star 差分、五维评分与权重滑块、英文翻译服务 | — | 均不属于一期；恢复须先形成事实依据 + 走契约变更流程，由用户确认 |
 | B9 | ✅ | **构建门禁端到端验收**：`python code-backend/pipeline.py collect --build-cwd code-frontend --build-command npm run build` | Codex / openCode | [实测 2026-09-18] 两个场景均已实跑：① **构建成功** → 45 页产出、`public/data` 与 `source-health` 推进到 `2026-09-18T02:37:02Z`、`run.json` 四模块全绿；② **构建失败**（Windows 下裸 `npm` 触发 WinError 2）→ `public/data`／`source-health`／`run.json` **全部保持原值**、退出码 1。**「构建读候选目录」已证**：构建发生在 `promote` 之前，而产物含本批新增票证，说明吃的是 `DATA_CANDIDATE_DIR`。顺带修 `pipeline.py`：构建命令首词过 `shutil.which`，解决 Windows 上 `.cmd` 无法 spawn |
 
@@ -37,9 +37,9 @@
 |---|---|---|---|---|
 | D1 | ✅ | 部署方案确定：GitHub Pages + Cloudflare DNS/CDN | 用户 | 见 `AGENTS.md` §7 |
 | D2 | ✅ | 域名 saiboliang.top（NameSilo + Cloudflare NS） | 用户 | 已购 |
-| D3 | ⬜ | 创建 GitHub 仓库并接入 Pages | Codex / 用户 | **单仓库**（2026-09-17 用户确认）：`code-frontend/` 与 `code-backend/` 都入库，采集+构建+部署同一 workflow（`AGENTS.md` §7）。根目录用白名单式 `.gitignore`（先排除全部、只放行 code-frontend / code-backend / .github），Secrets 挂本仓库 |
+| D3 | ✅ | 创建 GitHub 仓库并接入 Pages | Codex / 用户 | **单仓库**（2026-09-17 用户确认）：`code-frontend/` 与 `code-backend/` 都入库，采集+构建+部署同一 workflow（`AGENTS.md` §7）。[实测 2026-09-18] 用户建仓库 → openCode 完成首推、转 public、作者改 noreply、挂 `AA_API_KEY` Secret、启用 Pages（`build_type=workflow`）；根目录白名单式 `.gitignore` 生效（119 个文件入库）。自定义域名待 D4 |
 | D4 | ⬜ | Cloudflare DNS/CDN 代理配置 | 用户 | — |
-| D5 | ⬜ | 发布前隐私检查：字体/证书/cache-tools 产物不进公开仓库 | 所有工具 | `AGENTS.md` §6，高压线 |
+| D5 | ✅ | 发布前隐私检查：字体/证书/cache-tools 产物不进公开仓库 | 所有工具 | [实测 2026-09-18] 119 个跟踪文件全量检查通过：无字体/证书/`.env`/依赖/构建产物；内容扫描仅 SHA 十六进制串与测试函数名误报；`tickets` 正文邀请码已在首推前剥离；提交作者改用 `23257243+JonyJay1326@users.noreply.github.com` |
 
 ## 线 3 · 资产与授权
 
