@@ -1,6 +1,21 @@
 {
-  "dataUpdatedAt": "2026-09-18T05:34:36Z",
+  "dataUpdatedAt": "2026-09-18T06:04:08Z",
   "items": [
+    {
+      "title": "智谱发布 GLM-5.3-FlashX:速度飙至200tokens/s，国产算力再提速",
+      "sourceUrl": "https://www.aibase.com/zh/news/31160",
+      "source": "AIBase",
+      "publishedAt": "2026-09-18T06:00:07Z",
+      "id": "53b564ac1f67c075b0dbd01a4e3f8ba039937c8d8545417d1a6e7e8d70545ca7",
+      "summary": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.aibase.com/zh/news/31160",
+      "category": "model",
+      "eventType": "model-release"
+    },
     {
       "title": "智谱 GLM-5.3-FlashX 模型上线，更快、更流畅",
       "sourceUrl": "https://www.ithome.com/1/004/061.htm",
@@ -17,19 +32,19 @@
       "eventType": "model-release"
     },
     {
-      "title": "阿里发布 Qwen3.8-Omni-Flash 全模态模型：音视频能力提升，百万 Token 图文音视频输入 0.8 元",
-      "sourceUrl": "https://www.ithome.com/1/004/049.htm",
-      "publishedAt": "2026-09-18T03:34:25Z",
+      "title": "AI 需求一浪叠一浪，美光高管称有意义的内存新增供应 2028 年才开始爬坡、存储行业何时恢复供需平衡仍难以确定",
+      "sourceUrl": "https://www.ithome.com/1/003/994.htm",
+      "publishedAt": "2026-09-18T03:05:47Z",
       "source": "IT之家",
-      "id": "bfe967cd1d528aee5dc5f1090ffc17c3d44efa7f7cef5ed489da477c7930359c",
+      "id": "ca77e69886e518f6e3b87fe273f3d9d855b9f5e64e02b69104202dd9b09d0636",
       "summary": null,
       "lang": "zh",
       "originalSource": null,
       "originalUrl": null,
       "originalVerifiedAt": null,
-      "url": "https://www.ithome.com/1/004/049.htm",
-      "category": "model",
-      "eventType": "model-release"
+      "url": "https://www.ithome.com/1/003/994.htm",
+      "category": "tool",
+      "eventType": "major-update"
     },
     {
       "title": "百度智能云首发产业智能体操作系统，要实现 AI 的商业和技术飞轮",
@@ -43,21 +58,6 @@
       "originalUrl": null,
       "originalVerifiedAt": null,
       "url": "https://www.infoq.cn/article/jXliIdDVTYDAtm73EoSU",
-      "category": "tool",
-      "eventType": "major-update"
-    },
-    {
-      "title": "汪涛详解华为AI战略：算力为核心，昇腾960提前登场，PB级 KV Cache把基础设施推入新阶段",
-      "sourceUrl": "https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l",
-      "publishedAt": "2026-09-17T15:23:47Z",
-      "source": "InfoQ",
-      "id": "6b9711eeea4f27f29657b13d5f1cf34626dc81b752f1ff7d1ff275a8813809d8",
-      "summary": null,
-      "lang": "zh",
-      "originalSource": null,
-      "originalUrl": null,
-      "originalVerifiedAt": null,
-      "url": "https://www.infoq.cn/article/bmducufWEHZZRxEYjM4l",
       "category": "tool",
       "eventType": "major-update"
     },
@@ -92,6 +92,6 @@
       "eventType": "model-review"
     }
   ],
-  "version": "2026-09-18T05:34:36Z",
-  "generatedAt": "2026-09-18T05:34:36Z"
+  "version": "2026-09-18T06:04:08Z",
+  "generatedAt": "2026-09-18T06:04:08Z"
 }

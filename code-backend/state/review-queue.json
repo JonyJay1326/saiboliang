@@ -463,5 +463,19 @@
     "id": "b728d57ceec438648954ec3ecf51124d62e0492247fed5fc91a4de217b245f3e",
     "status": "pending",
     "createdAt": "2026-09-18T05:31:37Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "206ce9cd7a5fcf455405c4a02947181ec86d9ee1d53e50e33c977c9078f2beb7",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "亚马逊云科技开放 AL2027 预览，开发者最关心的却是：能原地升级吗？",
+      "sourceUrl": "https://www.infoq.cn/article/tbUQhEqo7etbjfyuyNK0",
+      "publishedAt": "2026-09-18T14:00:00Z",
+      "source": "InfoQ"
+    },
+    "id": "cf7b2bad6a58b69134de820fc505e3b44e424cd9887089c47867e51c19def542",
+    "status": "pending",
+    "createdAt": "2026-09-18T06:04:08Z"
   }
 ]
