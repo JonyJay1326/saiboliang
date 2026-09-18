@@ -38,7 +38,7 @@
 | D1 | ✅ | 部署方案确定：GitHub Pages + Cloudflare DNS/CDN | 用户 | 见 `AGENTS.md` §7 |
 | D2 | ✅ | 域名 saiboliang.top（NameSilo + Cloudflare NS） | 用户 | 已购 |
 | D3 | ✅ | 创建 GitHub 仓库并接入 Pages | Codex / 用户 | **单仓库**（2026-09-17 用户确认）：`code-frontend/` 与 `code-backend/` 都入库，采集+构建+部署同一 workflow（`AGENTS.md` §7）。[实测 2026-09-18] 用户建仓库 → openCode 完成首推、转 public、作者改 noreply、挂 `AA_API_KEY` Secret、启用 Pages（`build_type=workflow`）；根目录白名单式 `.gitignore` 生效（119 个文件入库）。自定义域名待 D4 |
-| D4 | ⬜ | Cloudflare DNS/CDN 代理配置 | 用户 | — |
+| D4 | ✅ | Cloudflare DNS/CDN 代理配置 | 用户 | [实测 2026-09-18] apex/www CNAME → `jonyjay1326.github.io` 橙色云；GitHub Pages 自定义域 `saiboliang.top`（TXT 所有权验证 + LE 证书含 apex/www + Enforce HTTPS）；CF 侧 `Full (strict)` + `Always Use HTTPS` + Rocket Loader Off。外部探针：`Server: cloudflare`、HTTP/3、HTML `cf-cache-status: DYNAMIC`（不缓存，保 version.json 实时）；`www`→301 apex、`http`→301 https。站点 `https://saiboliang.top/` 实测 200 |
 | D5 | ✅ | 发布前隐私检查：字体/证书/cache-tools 产物不进公开仓库 | 所有工具 | [实测 2026-09-18] 119 个跟踪文件全量检查通过：无字体/证书/`.env`/依赖/构建产物；内容扫描仅 SHA 十六进制串与测试函数名误报；`tickets` 正文邀请码已在首推前剥离；提交作者改用 `23257243+JonyJay1326@users.noreply.github.com` |
 
 ## 线 3 · 资产与授权
