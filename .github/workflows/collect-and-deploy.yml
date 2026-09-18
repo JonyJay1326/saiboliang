@@ -1,13 +1,16 @@
 # ============================================================
 # 赛博粮仓 · 采集 + 校验 + 构建 + 提交 + 部署（同一 workflow）
 # 依据：AGENTS.md §7、TASKS.md B7 / B9
-#   - cron 每天 3 次，避开整点：UTC 03:17 / 07:17 / 11:17
+#   - push 到 main 即发布；cron 每天 3 次兜底：UTC 03:17 / 07:17 / 11:17
 #   - 构建门禁：构建失败不推进 public/data 与 source-health（pipeline 内建）
 #   - 部署成功后才回写 data/state，失败则下次重采，不让状态先于站点推进
+#   - 机器人回写用 GITHUB_TOKEN，不会再次触发本 workflow（无循环）
 # ============================================================
 name: collect-build-deploy
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: '17 3,7,11 * * *'
   workflow_dispatch:
