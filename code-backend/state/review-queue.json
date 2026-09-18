@@ -205,18 +205,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "jiji262/douyin-downloader",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
-      "sourceUrl": "https://github.com/jiji262/douyin-downloader"
-    },
-    "id": "4df59b11dbe4e4c51ccfbfe45878d634eefb19137605bac701e5b5a27906330d",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "vxcontrol/pentagi",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -385,30 +373,6 @@
     "createdAt": "2026-09-18T02:37:02Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "jamiepine/voicebox",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The open-source AI voice studio. Clone, dictate, create.",
-      "sourceUrl": "https://github.com/jamiepine/voicebox"
-    },
-    "id": "06e66a5a760b51a6e59008519ee61d7b6f7cfb1cbfe8bedd9e46ce8e508a0472",
-    "status": "pending",
-    "createdAt": "2026-09-18T02:37:02Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "modular/modular",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Modular Platform (includes MAX & Mojo)",
-      "sourceUrl": "https://github.com/modular/modular"
-    },
-    "id": "db70a5d22a125300fe87dede052b9d10633f2e9ee15bdec020e61aa318fbda44",
-    "status": "pending",
-    "createdAt": "2026-09-18T02:37:02Z"
-  },
-  {
     "kind": "news-future",
     "objectId": "35d84f49fc799688b7c4f39083354cf9552de55bbf199444bbc5cacf3f904c97",
     "reason": "publication is in the future",
@@ -477,5 +441,74 @@
     "id": "cf7b2bad6a58b69134de820fc505e3b44e424cd9887089c47867e51c19def542",
     "status": "pending",
     "createdAt": "2026-09-18T06:04:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SnailSploit/Claude-Red",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
+    },
+    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
+    "status": "pending",
+    "createdAt": "2026-09-18T12:15:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Gitlawb/openclaude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "runs anywhere. uses anything",
+      "sourceUrl": "https://github.com/Gitlawb/openclaude"
+    },
+    "id": "be282e2fb84860beebb47d7b575f6b37f91767e704140313dac8a9aad82f1822",
+    "status": "pending",
+    "createdAt": "2026-09-18T12:15:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "k2-fsa/OmniVoice",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "High-Quality Voice Cloning TTS for 600+ Languages",
+      "sourceUrl": "https://github.com/k2-fsa/OmniVoice"
+    },
+    "id": "5108cd537ec8d445539b04fc20c81e4b285aeea178cde2d1820030b45c679e22",
+    "status": "pending",
+    "createdAt": "2026-09-18T12:15:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "OpenWhispr/openwhispr",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.",
+      "sourceUrl": "https://github.com/OpenWhispr/openwhispr"
+    },
+    "id": "063a516377b770d92bae912c4a778aff3e8ab18d14a9dcd342a36bf353dc9663",
+    "status": "pending",
+    "createdAt": "2026-09-18T12:15:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "2dust/v2rayN",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
+      "sourceUrl": "https://github.com/2dust/v2rayN"
+    },
+    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
+    "status": "pending",
+    "createdAt": "2026-09-18T12:15:39Z"
+  },
+  {
+    "kind": "source",
+    "objectId": "news",
+    "reason": "AIBase article identity/title mismatch",
+    "evidence": {},
+    "id": "d1c80a282052f69e28cf7bcc4f7ebfb8c28701707d4f405ea8f926d108dfa06c",
+    "status": "pending",
+    "createdAt": "2026-09-18T12:15:39Z"
   }
 ]

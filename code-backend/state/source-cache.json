@@ -1873,25 +1873,25 @@
   },
   "github": {
     "source": "github-trending",
-    "dataUpdatedAt": "2026-09-18T06:25:58Z",
+    "dataUpdatedAt": "2026-09-18T12:15:39Z",
     "week": {
       "period": "weekly",
       "sourceUrl": "https://github.com/trending?since=weekly",
-      "fetchedAt": "2026-09-18T06:25:58Z",
+      "fetchedAt": "2026-09-18T12:15:39Z",
       "items": [
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 1,
-          "stars": 35496,
+          "stars": 36147,
           "periodStars": 11489,
           "language": "Go",
-          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
           "url": "https://github.com/alibaba/open-code-review"
         },
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 1,
-          "stars": 47605,
+          "stars": 47777,
           "periodStars": 10800,
           "language": "Python",
           "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -1899,8 +1899,8 @@
         },
         {
           "repo": "stablyai/orca",
-          "sourceRank": 4,
-          "stars": 71316,
+          "sourceRank": 3,
+          "stars": 71534,
           "periodStars": 5305,
           "language": "TypeScript",
           "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
@@ -1909,7 +1909,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 2,
-          "stars": 26558,
+          "stars": 26776,
           "periodStars": 3982,
           "language": "Go",
           "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
@@ -1917,17 +1917,26 @@
         },
         {
           "repo": "Panniantong/Agent-Reach",
-          "sourceRank": 7,
-          "stars": 82895,
+          "sourceRank": 6,
+          "stars": 82994,
           "periodStars": 3670,
           "language": "Python",
           "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
           "url": "https://github.com/Panniantong/Agent-Reach"
         },
         {
+          "repo": "multimodal-art-projection/YuE",
+          "sourceRank": 12,
+          "stars": 9642,
+          "periodStars": 2941,
+          "language": "Python",
+          "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+          "url": "https://github.com/multimodal-art-projection/YuE"
+        },
+        {
           "repo": "bojieli/ai-agent-book",
-          "sourceRank": 11,
-          "stars": 48392,
+          "sourceRank": 10,
+          "stars": 48495,
           "periodStars": 2731,
           "language": "Python",
           "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -1935,8 +1944,8 @@
         },
         {
           "repo": "addyosmani/agent-skills",
-          "sourceRank": 4,
-          "stars": 96004,
+          "sourceRank": 3,
+          "stars": 96151,
           "periodStars": 2560,
           "language": "JavaScript",
           "description": "Production-grade engineering skills for AI coding agents.",
@@ -1944,8 +1953,8 @@
         },
         {
           "repo": "melgarafael/DeskcommCRM",
-          "sourceRank": 12,
-          "stars": 3103,
+          "sourceRank": 9,
+          "stars": 3129,
           "periodStars": 2179,
           "language": "TypeScript",
           "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
@@ -1953,33 +1962,24 @@
         },
         {
           "repo": "Tencent/BrowserSkill",
-          "sourceRank": 18,
-          "stars": 4555,
+          "sourceRank": 11,
+          "stars": 4869,
           "periodStars": 2157,
           "language": "TypeScript",
           "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
           "url": "https://github.com/Tencent/BrowserSkill"
-        },
-        {
-          "repo": "vastsa/PI-Desktop",
-          "sourceRank": 5,
-          "stars": 4198,
-          "periodStars": 1939,
-          "language": "TypeScript",
-          "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
-          "url": "https://github.com/vastsa/PI-Desktop"
         }
       ]
     },
     "month": {
       "period": "monthly",
       "sourceUrl": "https://github.com/trending?since=monthly",
-      "fetchedAt": "2026-09-18T06:25:58Z",
+      "fetchedAt": "2026-09-18T12:15:39Z",
       "items": [
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 2,
-          "stars": 47605,
+          "stars": 47777,
           "periodStars": 26237,
           "language": "Python",
           "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -1988,7 +1988,7 @@
         {
           "repo": "openai/codex",
           "sourceRank": 11,
-          "stars": 124992,
+          "stars": 125069,
           "periodStars": 19130,
           "language": "Rust",
           "description": "Lightweight coding agent that runs in your terminal",
@@ -1996,35 +1996,26 @@
         },
         {
           "repo": "alibaba/open-code-review",
-          "sourceRank": 2,
-          "stars": 35498,
+          "sourceRank": 1,
+          "stars": 36148,
           "periodStars": 13677,
           "language": "Go",
-          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
           "url": "https://github.com/alibaba/open-code-review"
         },
         {
           "repo": "K-Dense-AI/scientific-agent-skills",
-          "sourceRank": 7,
-          "stars": 45409,
+          "sourceRank": 6,
+          "stars": 45455,
           "periodStars": 11830,
           "language": "Python",
           "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
           "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
         },
         {
-          "repo": "volcengine/OpenViking",
-          "sourceRank": 13,
-          "stars": 37921,
-          "periodStars": 9190,
-          "language": "Python",
-          "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
-          "url": "https://github.com/volcengine/OpenViking"
-        },
-        {
           "repo": "tashfeenahmed/freellmapi",
-          "sourceRank": 5,
-          "stars": 26988,
+          "sourceRank": 3,
+          "stars": 27058,
           "periodStars": 8304,
           "language": "TypeScript",
           "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
@@ -2033,7 +2024,7 @@
         {
           "repo": "jingyaogong/minimind",
           "sourceRank": 5,
-          "stars": 61513,
+          "stars": 61562,
           "periodStars": 6867,
           "language": "Python",
           "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
@@ -2041,8 +2032,8 @@
         },
         {
           "repo": "Tencent/WeKnora",
-          "sourceRank": 1,
-          "stars": 26559,
+          "sourceRank": 2,
+          "stars": 26776,
           "periodStars": 6280,
           "language": "Go",
           "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
@@ -2050,21 +2041,30 @@
         },
         {
           "repo": "ggml-org/llama.cpp",
-          "sourceRank": 16,
-          "stars": 128626,
+          "sourceRank": 14,
+          "stars": 128661,
           "periodStars": 4666,
           "language": "C++",
           "description": "LLM inference in C/C++",
           "url": "https://github.com/ggml-org/llama.cpp"
         },
         {
-          "repo": "jundot/omlx",
-          "sourceRank": 21,
-          "stars": 21859,
-          "periodStars": 3034,
-          "language": "Python",
-          "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
-          "url": "https://github.com/jundot/omlx"
+          "repo": "Tencent/BrowserSkill",
+          "sourceRank": 9,
+          "stars": 4870,
+          "periodStars": 3739,
+          "language": "TypeScript",
+          "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+          "url": "https://github.com/Tencent/BrowserSkill"
+        },
+        {
+          "repo": "melgarafael/DeskcommCRM",
+          "sourceRank": 6,
+          "stars": 3129,
+          "periodStars": 2586,
+          "language": "TypeScript",
+          "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+          "url": "https://github.com/melgarafael/DeskcommCRM"
         }
       ]
     }
