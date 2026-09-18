@@ -1854,16 +1854,16 @@
   },
   "github": {
     "source": "github-trending",
-    "dataUpdatedAt": "2026-09-18T05:31:37Z",
+    "dataUpdatedAt": "2026-09-18T05:34:36Z",
     "week": {
       "period": "weekly",
       "sourceUrl": "https://github.com/trending?since=weekly",
-      "fetchedAt": "2026-09-18T05:31:37Z",
+      "fetchedAt": "2026-09-18T05:34:36Z",
       "items": [
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 1,
-          "stars": 35387,
+          "stars": 35392,
           "periodStars": 11489,
           "language": "Go",
           "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
@@ -1872,7 +1872,7 @@
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 1,
-          "stars": 47589,
+          "stars": 47591,
           "periodStars": 10800,
           "language": "Python",
           "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -1890,7 +1890,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 2,
-          "stars": 26514,
+          "stars": 26515,
           "periodStars": 3982,
           "language": "Go",
           "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
@@ -1935,7 +1935,7 @@
         {
           "repo": "Tencent/BrowserSkill",
           "sourceRank": 18,
-          "stars": 4476,
+          "stars": 4478,
           "periodStars": 2157,
           "language": "TypeScript",
           "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
@@ -1955,12 +1955,12 @@
     "month": {
       "period": "monthly",
       "sourceUrl": "https://github.com/trending?since=monthly",
-      "fetchedAt": "2026-09-18T05:31:37Z",
+      "fetchedAt": "2026-09-18T05:34:36Z",
       "items": [
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 2,
-          "stars": 47589,
+          "stars": 47591,
           "periodStars": 26237,
           "language": "Python",
           "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -1978,7 +1978,7 @@
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 2,
-          "stars": 35390,
+          "stars": 35392,
           "periodStars": 13677,
           "language": "Go",
           "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
@@ -2023,7 +2023,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 1,
-          "stars": 26514,
+          "stars": 26516,
           "periodStars": 6280,
           "language": "Go",
           "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
@@ -2051,7 +2051,7 @@
     }
   },
   "news": {
-    "dataUpdatedAt": "2026-09-18T05:31:37Z",
+    "dataUpdatedAt": "2026-09-18T05:34:36Z",
     "items": [
       {
         "title": "智谱 GLM-5.3-FlashX 模型上线，更快、更流畅",
