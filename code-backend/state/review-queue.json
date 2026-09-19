@@ -181,18 +181,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "github/spec-kit",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
-      "sourceUrl": "https://github.com/github/spec-kit"
-    },
-    "id": "b67adbcfbdea9cdef936e1df839317c9499a897a667faa0f96d12b828f718cd1",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "vxcontrol/pentagi",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -224,18 +212,6 @@
       "sourceUrl": "https://github.com/alphaXiv/OpenResearch"
     },
     "id": "ebb437bd6f17564ad60916047090340842150dbe04e4467f149d4a821a83f34a",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "arcboxlabs/arcbox",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run AI agents on real and isolated machines — own kernel, filesystem, and network — with <100ms boot. Local first, OCI compatible, pure Rust.",
-      "sourceUrl": "https://github.com/arcboxlabs/arcbox"
-    },
-    "id": "14e9b49b2cdfcb3d5d208a390eee1b58f2113bc311405f0c0fe72df71c11d1d8",
     "status": "pending",
     "createdAt": "2026-09-17T16:46:49Z"
   },
@@ -296,18 +272,6 @@
       "sourceUrl": "https://github.com/tinyhumansai/openhuman"
     },
     "id": "a104f234f1fb3cc5a9bcd5da2e52a0dd381a925e3f1fb95482b17147b497e6a2",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nautechsystems/nautilus_trader",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
-      "sourceUrl": "https://github.com/nautechsystems/nautilus_trader"
-    },
-    "id": "ab592a52af65babb43349acf08a6158763364d63e48809cc76cb165aab9d9d97",
     "status": "pending",
     "createdAt": "2026-09-17T16:46:49Z"
   },
@@ -468,18 +432,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Gitlawb/openclaude",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "runs anywhere. uses anything",
-      "sourceUrl": "https://github.com/Gitlawb/openclaude"
-    },
-    "id": "be282e2fb84860beebb47d7b575f6b37f91767e704140313dac8a9aad82f1822",
-    "status": "pending",
-    "createdAt": "2026-09-19T07:47:34Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "k2-fsa/OmniVoice",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -491,18 +443,6 @@
     "createdAt": "2026-09-19T07:47:34Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "OpenWhispr/openwhispr",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.",
-      "sourceUrl": "https://github.com/OpenWhispr/openwhispr"
-    },
-    "id": "063a516377b770d92bae912c4a778aff3e8ab18d14a9dcd342a36bf353dc9663",
-    "status": "pending",
-    "createdAt": "2026-09-19T07:47:34Z"
-  },
-  {
     "kind": "source",
     "objectId": "news",
     "reason": "AIBase article identity/title mismatch",
@@ -510,5 +450,29 @@
     "id": "d1c80a282052f69e28cf7bcc4f7ebfb8c28701707d4f405ea8f926d108dfa06c",
     "status": "pending",
     "createdAt": "2026-09-19T08:34:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jiji262/douyin-downloader",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+      "sourceUrl": "https://github.com/jiji262/douyin-downloader"
+    },
+    "id": "4df59b11dbe4e4c51ccfbfe45878d634eefb19137605bac701e5b5a27906330d",
+    "status": "pending",
+    "createdAt": "2026-09-19T14:28:42Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "handsomestWei/patent-disclosure-skill",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+      "sourceUrl": "https://github.com/handsomestWei/patent-disclosure-skill"
+    },
+    "id": "6b95e960674e0f413ab886bb35584ed89c349f4a6edc5adf525fdb3763a5e819",
+    "status": "pending",
+    "createdAt": "2026-09-19T14:28:42Z"
   }
 ]

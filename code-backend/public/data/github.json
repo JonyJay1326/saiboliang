@@ -1,15 +1,15 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-09-19T08:34:21Z",
+  "dataUpdatedAt": "2026-09-19T14:28:42Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-09-19T08:34:21Z",
+    "fetchedAt": "2026-09-19T14:28:42Z",
     "items": [
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 37024,
+        "stars": 37271,
         "periodStars": 14144,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -17,8 +17,8 @@
       },
       {
         "repo": "ayghri/i-have-adhd",
-        "sourceRank": 1,
-        "stars": 48330,
+        "sourceRank": 2,
+        "stars": 48491,
         "periodStars": 7869,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -26,8 +26,8 @@
       },
       {
         "repo": "stablyai/orca",
-        "sourceRank": 3,
-        "stars": 72172,
+        "sourceRank": 4,
+        "stars": 72350,
         "periodStars": 5272,
         "language": "TypeScript",
         "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -36,7 +36,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27141,
+        "stars": 27273,
         "periodStars": 4703,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -45,25 +45,16 @@
       {
         "repo": "Panniantong/Agent-Reach",
         "sourceRank": 6,
-        "stars": 83221,
+        "stars": 83335,
         "periodStars": 3766,
         "language": "Python",
         "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
         "url": "https://github.com/Panniantong/Agent-Reach"
       },
       {
-        "repo": "Tencent/BrowserSkill",
-        "sourceRank": 11,
-        "stars": 5519,
-        "periodStars": 3242,
-        "language": "TypeScript",
-        "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
-        "url": "https://github.com/Tencent/BrowserSkill"
-      },
-      {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 3,
-        "stars": 96584,
+        "stars": 96760,
         "periodStars": 3051,
         "language": "JavaScript",
         "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -71,8 +62,8 @@
       },
       {
         "repo": "multimodal-art-projection/YuE",
-        "sourceRank": 12,
-        "stars": 9749,
+        "sourceRank": 11,
+        "stars": 9771,
         "periodStars": 2940,
         "language": "Python",
         "description": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
@@ -80,8 +71,8 @@
       },
       {
         "repo": "bojieli/ai-agent-book",
-        "sourceRank": 10,
-        "stars": 48602,
+        "sourceRank": 9,
+        "stars": 48652,
         "periodStars": 2727,
         "language": "Python",
         "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -89,24 +80,33 @@
       },
       {
         "repo": "melgarafael/DeskcommCRM",
-        "sourceRank": 9,
-        "stars": 3245,
+        "sourceRank": 11,
+        "stars": 3263,
         "periodStars": 2089,
         "language": "TypeScript",
         "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
         "url": "https://github.com/melgarafael/DeskcommCRM"
+      },
+      {
+        "repo": "vastsa/PI-Desktop",
+        "sourceRank": 8,
+        "stars": 4455,
+        "periodStars": 1661,
+        "language": "TypeScript",
+        "description": "本地优先的 AI 编程 Agent 桌面端：Electron + Rust 宿主内核 + pi Agent Harness，支持用户自行安装插件。",
+        "url": "https://github.com/vastsa/PI-Desktop"
       }
     ]
   },
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-09-19T08:34:21Z",
+    "fetchedAt": "2026-09-19T14:28:42Z",
     "items": [
       {
         "repo": "ayghri/i-have-adhd",
-        "sourceRank": 2,
-        "stars": 48331,
+        "sourceRank": 3,
+        "stars": 48491,
         "periodStars": 26310,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -114,8 +114,8 @@
       },
       {
         "repo": "openai/codex",
-        "sourceRank": 11,
-        "stars": 125219,
+        "sourceRank": 12,
+        "stars": 125271,
         "periodStars": 19167,
         "language": "Rust",
         "description": "在终端里运行的轻量编程 Agent。",
@@ -124,7 +124,7 @@
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 37025,
+        "stars": 37272,
         "periodStars": 15865,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -133,7 +133,7 @@
       {
         "repo": "K-Dense-AI/scientific-agent-skills",
         "sourceRank": 6,
-        "stars": 45562,
+        "stars": 45602,
         "periodStars": 11875,
         "language": "Python",
         "description": "把任意 AI Agent 变成「AI 科学家」：165 个经验证的开箱技能 + 100 多个科学数据库，覆盖生物、化学、医学与药物研发，兼容 Cursor / Claude Code / Codex 等。",
@@ -142,7 +142,7 @@
       {
         "repo": "tashfeenahmed/freellmapi",
         "sourceRank": 3,
-        "stars": 27255,
+        "stars": 27315,
         "periodStars": 8509,
         "language": "TypeScript",
         "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -151,7 +151,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27141,
+        "stars": 27273,
         "periodStars": 7035,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -160,7 +160,7 @@
       {
         "repo": "jingyaogong/minimind",
         "sourceRank": 5,
-        "stars": 61641,
+        "stars": 61674,
         "periodStars": 6966,
         "language": "Python",
         "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
@@ -168,8 +168,8 @@
       },
       {
         "repo": "ggml-org/llama.cpp",
-        "sourceRank": 14,
-        "stars": 128779,
+        "sourceRank": 15,
+        "stars": 128805,
         "periodStars": 4633,
         "language": "C++",
         "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -177,24 +177,24 @@
       },
       {
         "repo": "Tencent/BrowserSkill",
-        "sourceRank": 9,
-        "stars": 5519,
+        "sourceRank": 8,
+        "stars": 5636,
         "periodStars": 3943,
         "language": "TypeScript",
         "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
         "url": "https://github.com/Tencent/BrowserSkill"
       },
       {
-        "repo": "melgarafael/DeskcommCRM",
-        "sourceRank": 6,
-        "stars": 3245,
-        "periodStars": 2721,
-        "language": "TypeScript",
-        "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
-        "url": "https://github.com/melgarafael/DeskcommCRM"
+        "repo": "weave-os/router",
+        "sourceRank": 15,
+        "stars": 4497,
+        "periodStars": 3551,
+        "language": "Go",
+        "description": "面向智能体系统的模型路由器。在 50ms 内将每个提示路由到合适的模型。仅需更改端点即可降低成本 40-70%。",
+        "url": "https://github.com/weave-os/router"
       }
     ]
   },
-  "version": "2026-09-19T08:34:21Z",
-  "generatedAt": "2026-09-19T08:34:21Z"
+  "version": "2026-09-19T14:28:42Z",
+  "generatedAt": "2026-09-19T14:28:42Z"
 }
