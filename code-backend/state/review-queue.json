@@ -501,5 +501,14 @@
     "id": "063a516377b770d92bae912c4a778aff3e8ab18d14a9dcd342a36bf353dc9663",
     "status": "pending",
     "createdAt": "2026-09-19T07:47:34Z"
+  },
+  {
+    "kind": "source",
+    "objectId": "news",
+    "reason": "AIBase article identity/title mismatch",
+    "evidence": {},
+    "id": "d1c80a282052f69e28cf7bcc4f7ebfb8c28701707d4f405ea8f926d108dfa06c",
+    "status": "pending",
+    "createdAt": "2026-09-19T08:34:21Z"
   }
 ]

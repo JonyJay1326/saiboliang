@@ -708,12 +708,12 @@
     ]
   },
   "models": {
-    "dataUpdatedAt": "2026-09-18T02:37:02Z",
+    "dataUpdatedAt": "2026-09-19T08:34:21Z",
     "rankings": {
       "source": "artificial-analysis",
       "sourceUrl": "https://artificialanalysis.ai/",
       "indexVersion": "4.3",
-      "updatedAt": "2026-09-18T02:37:02Z",
+      "updatedAt": "2026-09-19T08:34:21Z",
       "intelligence": [
         {
           "modelId": "claude-fable-5-1",
@@ -766,103 +766,103 @@
           "rank": 10
         },
         {
+          "modelId": "step-5",
+          "score": 43.6,
+          "rank": 11
+        },
+        {
           "modelId": "gpt-5-6-terra",
           "score": 42.3,
-          "rank": 11
+          "rank": 12
         },
         {
           "modelId": "claude-opus-4-8",
           "score": 42,
-          "rank": 12
+          "rank": 13
         },
         {
           "modelId": "glm-5-3-flash",
           "score": 41.9,
-          "rank": 13
+          "rank": 14
         },
         {
           "modelId": "gemini-3-8-flash",
           "score": 41.2,
-          "rank": 14
+          "rank": 15
         },
         {
           "modelId": "claude-opus-4-7",
           "score": 40.7,
-          "rank": 15
+          "rank": 16
         },
         {
           "modelId": "qwen3-8-max-0803",
           "score": 40.3,
-          "rank": 16
+          "rank": 17
         },
         {
           "modelId": "qwen3-8-2-4t-a95b",
           "score": 40,
-          "rank": 17
+          "rank": 18
         },
         {
           "modelId": "qwen3-8-flash-next",
           "score": 39.9,
-          "rank": 18
+          "rank": 19
         },
         {
           "modelId": "muse-spark-1-2",
           "score": 39.8,
-          "rank": 19
+          "rank": 20
         },
         {
           "modelId": "gemini-3-7-flash-medium",
           "score": 39.6,
-          "rank": 20
+          "rank": 21
         },
         {
           "modelId": "deepseek-v4-1-flash",
           "score": 39.5,
-          "rank": 21
+          "rank": 22
         },
         {
           "modelId": "grok-4-5",
           "score": 39.1,
-          "rank": 22
+          "rank": 23
         },
         {
           "modelId": "gpt-5-4",
           "score": 39,
-          "rank": 23
+          "rank": 24
         },
         {
           "modelId": "gpt-5-5",
           "score": 38.6,
-          "rank": 24
+          "rank": 25
         },
         {
           "modelId": "claude-sonnet-5",
           "score": 38.4,
-          "rank": 25
+          "rank": 26
         },
         {
           "modelId": "gpt-5-6-luna",
           "score": 37.5,
-          "rank": 26
+          "rank": 27
         },
         {
           "modelId": "deepseek-v4-pro",
           "score": 36.3,
-          "rank": 27
+          "rank": 28
         },
         {
           "modelId": "agnes-3-0-flash",
           "score": 35.5,
-          "rank": 28
+          "rank": 29
         },
         {
           "modelId": "agnes-2-5-pro-beta",
           "score": 35.2,
-          "rank": 29
-        },
-        {
-          "modelId": "deepseek-v4-flash-vision",
-          "score": 35,
           "rank": 30
         }
       ],
@@ -1030,7 +1030,7 @@
         "outputCost": 0.3,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/agnes-2-5-pro-beta",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "agnes-3-0-flash",
@@ -1042,7 +1042,7 @@
         "outputCost": 0.15,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/agnes-3-0-flash",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "claude-fable-5",
@@ -1054,7 +1054,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "claude-fable-5-1",
@@ -1066,7 +1066,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "claude-opus-4-7",
@@ -1078,7 +1078,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-7",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "claude-opus-4-8",
@@ -1090,7 +1090,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-8",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "claude-opus-5",
@@ -1102,7 +1102,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "claude-sonnet-5",
@@ -1114,7 +1114,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "deepseek-v4-1-flash",
@@ -1126,7 +1126,7 @@
         "outputCost": 1.2,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "deepseek-v4-flash",
@@ -1138,19 +1138,7 @@
         "outputCost": 1.32,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
-      },
-      {
-        "id": "deepseek-v4-flash-vision",
-        "name": "DeepSeek V4 Flash Vision",
-        "vendor": "DeepSeek",
-        "aaId": "7707a46f-895f-4247-b7a8-ddab87c9a11d",
-        "releasedAt": "2026-08-21",
-        "inputCost": 0.44,
-        "outputCost": 1.32,
-        "priceSource": "artificial-analysis",
-        "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash-vision",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "deepseek-v4-pro",
@@ -1162,7 +1150,7 @@
         "outputCost": 3.96,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-pro",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gemini-3-1-pro-preview",
@@ -1174,7 +1162,7 @@
         "outputCost": 12.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gemini-3-6-flash",
@@ -1186,7 +1174,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-6-flash",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gemini-3-7-flash-medium",
@@ -1198,7 +1186,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-7-flash-medium",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gemini-3-8-flash",
@@ -1210,7 +1198,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "glm-5-3",
@@ -1222,7 +1210,7 @@
         "outputCost": 4.4,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "glm-5-3-flash",
@@ -1234,7 +1222,7 @@
         "outputCost": 0.5,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3-flash",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gpt-5-4",
@@ -1246,7 +1234,7 @@
         "outputCost": 15.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-4",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gpt-5-5",
@@ -1258,7 +1246,7 @@
         "outputCost": 30.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gpt-5-6-luna",
@@ -1270,7 +1258,7 @@
         "outputCost": 1.2,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-luna",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gpt-5-6-sol",
@@ -1282,7 +1270,7 @@
         "outputCost": 20.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gpt-5-6-terra",
@@ -1294,7 +1282,7 @@
         "outputCost": 12.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-terra",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "gpt-6-astra",
@@ -1306,7 +1294,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-astra",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "grok-4-5",
@@ -1318,7 +1306,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-5",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "grok-4-6",
@@ -1330,7 +1318,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-6",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "kimi-k3",
@@ -1342,7 +1330,7 @@
         "outputCost": 15.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "muse-spark-1-1",
@@ -1354,7 +1342,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-1",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "muse-spark-1-2",
@@ -1366,7 +1354,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-2",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "muse-spark-1-3",
@@ -1378,7 +1366,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "qwen3-8-2-4t-a95b",
@@ -1390,7 +1378,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "qwen3-8-flash-next",
@@ -1402,7 +1390,7 @@
         "outputCost": 0.47,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "qwen3-8-max",
@@ -1414,7 +1402,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       },
       {
         "id": "qwen3-8-max-0803",
@@ -1426,7 +1414,19 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
-        "priceUpdatedAt": "2026-09-18T02:37:02Z"
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
+      },
+      {
+        "id": "step-5",
+        "name": "Step 5 Preview",
+        "vendor": "StepFun",
+        "aaId": "094ea3e3-ce41-419e-8bd1-723389663158",
+        "releasedAt": "2026-09-18",
+        "inputCost": 1.0,
+        "outputCost": 2.7,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/step-5",
+        "priceUpdatedAt": "2026-09-19T08:34:21Z"
       }
     ],
     "plans": [
@@ -1523,7 +1523,7 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans",
-        "updatedAt": "2026-09-18",
+        "updatedAt": "2026-09-19",
         "checkMethod": "auto"
       },
       {
@@ -1595,7 +1595,7 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview",
-        "updatedAt": "2026-09-18",
+        "updatedAt": "2026-09-19",
         "checkMethod": "auto"
       },
       {
@@ -1668,7 +1668,7 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://x.ai/pricing",
-        "updatedAt": "2026-09-18",
+        "updatedAt": "2026-09-19",
         "checkMethod": "auto"
       },
       {
@@ -1796,7 +1796,7 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://claude.com/pricing",
-        "updatedAt": "2026-09-18",
+        "updatedAt": "2026-09-19",
         "checkMethod": "auto"
       },
       {
@@ -1866,23 +1866,23 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
-        "updatedAt": "2026-09-18",
+        "updatedAt": "2026-09-19",
         "checkMethod": "auto"
       }
     ]
   },
   "github": {
     "source": "github-trending",
-    "dataUpdatedAt": "2026-09-19T08:18:50Z",
+    "dataUpdatedAt": "2026-09-19T08:34:21Z",
     "week": {
       "period": "weekly",
       "sourceUrl": "https://github.com/trending?since=weekly",
-      "fetchedAt": "2026-09-19T08:18:50Z",
+      "fetchedAt": "2026-09-19T08:34:21Z",
       "items": [
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 1,
-          "stars": 37012,
+          "stars": 37024,
           "periodStars": 14144,
           "language": "Go",
           "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -1891,7 +1891,7 @@
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 1,
-          "stars": 48322,
+          "stars": 48330,
           "periodStars": 7869,
           "language": "Python",
           "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -1900,7 +1900,7 @@
         {
           "repo": "stablyai/orca",
           "sourceRank": 3,
-          "stars": 72167,
+          "stars": 72172,
           "periodStars": 5272,
           "language": "TypeScript",
           "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -1909,7 +1909,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 2,
-          "stars": 27139,
+          "stars": 27141,
           "periodStars": 4703,
           "language": "Go",
           "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -1918,7 +1918,7 @@
         {
           "repo": "Panniantong/Agent-Reach",
           "sourceRank": 6,
-          "stars": 83219,
+          "stars": 83221,
           "periodStars": 3766,
           "language": "Python",
           "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
@@ -1927,7 +1927,7 @@
         {
           "repo": "Tencent/BrowserSkill",
           "sourceRank": 11,
-          "stars": 5512,
+          "stars": 5519,
           "periodStars": 3242,
           "language": "TypeScript",
           "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
@@ -1936,7 +1936,7 @@
         {
           "repo": "addyosmani/agent-skills",
           "sourceRank": 3,
-          "stars": 96579,
+          "stars": 96584,
           "periodStars": 3051,
           "language": "JavaScript",
           "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -1945,7 +1945,7 @@
         {
           "repo": "multimodal-art-projection/YuE",
           "sourceRank": 12,
-          "stars": 9747,
+          "stars": 9749,
           "periodStars": 2940,
           "language": "Python",
           "description": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
@@ -1954,7 +1954,7 @@
         {
           "repo": "bojieli/ai-agent-book",
           "sourceRank": 10,
-          "stars": 48596,
+          "stars": 48602,
           "periodStars": 2727,
           "language": "Python",
           "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -1963,7 +1963,7 @@
         {
           "repo": "melgarafael/DeskcommCRM",
           "sourceRank": 9,
-          "stars": 3240,
+          "stars": 3245,
           "periodStars": 2089,
           "language": "TypeScript",
           "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
@@ -1974,12 +1974,12 @@
     "month": {
       "period": "monthly",
       "sourceUrl": "https://github.com/trending?since=monthly",
-      "fetchedAt": "2026-09-19T08:18:50Z",
+      "fetchedAt": "2026-09-19T08:34:21Z",
       "items": [
         {
           "repo": "ayghri/i-have-adhd",
           "sourceRank": 2,
-          "stars": 48322,
+          "stars": 48331,
           "periodStars": 26310,
           "language": "Python",
           "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -1988,7 +1988,7 @@
         {
           "repo": "openai/codex",
           "sourceRank": 11,
-          "stars": 125216,
+          "stars": 125219,
           "periodStars": 19167,
           "language": "Rust",
           "description": "在终端里运行的轻量编程 Agent。",
@@ -1997,7 +1997,7 @@
         {
           "repo": "alibaba/open-code-review",
           "sourceRank": 1,
-          "stars": 37013,
+          "stars": 37025,
           "periodStars": 15865,
           "language": "Go",
           "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -2015,7 +2015,7 @@
         {
           "repo": "tashfeenahmed/freellmapi",
           "sourceRank": 3,
-          "stars": 27250,
+          "stars": 27255,
           "periodStars": 8509,
           "language": "TypeScript",
           "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -2024,7 +2024,7 @@
         {
           "repo": "Tencent/WeKnora",
           "sourceRank": 2,
-          "stars": 27139,
+          "stars": 27141,
           "periodStars": 7035,
           "language": "Go",
           "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -2033,7 +2033,7 @@
         {
           "repo": "jingyaogong/minimind",
           "sourceRank": 5,
-          "stars": 61639,
+          "stars": 61641,
           "periodStars": 6966,
           "language": "Python",
           "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
@@ -2042,7 +2042,7 @@
         {
           "repo": "ggml-org/llama.cpp",
           "sourceRank": 14,
-          "stars": 128778,
+          "stars": 128779,
           "periodStars": 4633,
           "language": "C++",
           "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -2051,7 +2051,7 @@
         {
           "repo": "Tencent/BrowserSkill",
           "sourceRank": 9,
-          "stars": 5513,
+          "stars": 5519,
           "periodStars": 3943,
           "language": "TypeScript",
           "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
@@ -2060,7 +2060,7 @@
         {
           "repo": "melgarafael/DeskcommCRM",
           "sourceRank": 6,
-          "stars": 3240,
+          "stars": 3245,
           "periodStars": 2721,
           "language": "TypeScript",
           "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",

@@ -1,38 +1,38 @@
 {
   "tickets": {
-    "lastSuccess": "2026-09-18T06:25:58Z",
-    "lastAttempt": "2026-09-18T06:25:58Z",
+    "lastSuccess": "2026-09-19T08:34:21Z",
+    "lastAttempt": "2026-09-19T08:34:21Z",
     "error": null,
     "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
   },
   "models": {
-    "lastSuccess": "2026-09-18T02:37:02Z",
-    "lastAttempt": "2026-09-18T02:37:02Z",
+    "lastSuccess": "2026-09-19T08:34:21Z",
+    "lastAttempt": "2026-09-19T08:34:21Z",
     "error": null,
     "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
   },
   "aa": {
-    "lastSuccess": "2026-09-18T02:37:02Z",
-    "count": 652
+    "lastSuccess": "2026-09-19T08:34:21Z",
+    "count": 653
   },
   "github": {
-    "lastSuccess": "2026-09-19T08:18:50Z",
-    "lastAttempt": "2026-09-19T08:18:50Z",
+    "lastSuccess": "2026-09-19T08:34:21Z",
+    "lastAttempt": "2026-09-19T08:34:21Z",
     "error": null,
     "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
   },
   "github-weekly": {
-    "lastSuccess": "2026-09-19T08:18:50Z",
+    "lastSuccess": "2026-09-19T08:34:21Z",
     "count": 173
   },
   "github-monthly": {
-    "lastSuccess": "2026-09-19T08:18:50Z",
+    "lastSuccess": "2026-09-19T08:34:21Z",
     "count": 191
   },
   "news": {
     "lastSuccess": "2026-09-18T06:25:58Z",
-    "lastAttempt": "2026-09-18T06:25:58Z",
-    "error": null,
+    "lastAttempt": "2026-09-19T08:34:21Z",
+    "error": "AIBase article identity/title mismatch",
     "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
   },
   "aibase": {
