@@ -1,72 +1,72 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-09-19T08:07:32Z",
+  "dataUpdatedAt": "2026-09-19T08:18:50Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-09-19T08:07:32Z",
+    "fetchedAt": "2026-09-19T08:18:50Z",
     "items": [
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 37006,
+        "stars": 37012,
         "periodStars": 14144,
         "language": "Go",
-        "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
         "url": "https://github.com/alibaba/open-code-review"
       },
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 1,
-        "stars": 48311,
+        "stars": 48322,
         "periodStars": 7869,
         "language": "Python",
-        "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
         "url": "https://github.com/ayghri/i-have-adhd"
       },
       {
         "repo": "stablyai/orca",
         "sourceRank": 3,
-        "stars": 72160,
+        "stars": 72167,
         "periodStars": 5272,
         "language": "TypeScript",
-        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
         "url": "https://github.com/stablyai/orca"
       },
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27136,
+        "stars": 27139,
         "periodStars": 4703,
         "language": "Go",
-        "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
         "url": "https://github.com/Tencent/WeKnora"
       },
       {
         "repo": "Panniantong/Agent-Reach",
         "sourceRank": 6,
-        "stars": 83217,
+        "stars": 83219,
         "periodStars": 3766,
         "language": "Python",
-        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
         "url": "https://github.com/Panniantong/Agent-Reach"
       },
       {
         "repo": "Tencent/BrowserSkill",
         "sourceRank": 11,
-        "stars": 5504,
+        "stars": 5512,
         "periodStars": 3242,
         "language": "TypeScript",
-        "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
         "url": "https://github.com/Tencent/BrowserSkill"
       },
       {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 3,
-        "stars": 96576,
+        "stars": 96579,
         "periodStars": 3051,
         "language": "JavaScript",
-        "description": "Production-grade engineering skills for AI coding agents.",
+        "description": "面向 AI 编程 Agent 的生产级工程技能集。",
         "url": "https://github.com/addyosmani/agent-skills"
       },
       {
@@ -75,13 +75,13 @@
         "stars": 9747,
         "periodStars": 2940,
         "language": "Python",
-        "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "description": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
         "url": "https://github.com/multimodal-art-projection/YuE"
       },
       {
         "repo": "bojieli/ai-agent-book",
         "sourceRank": 10,
-        "stars": 48594,
+        "stars": 48596,
         "periodStars": 2727,
         "language": "Python",
         "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -93,7 +93,7 @@
         "stars": 3240,
         "periodStars": 2089,
         "language": "TypeScript",
-        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
         "url": "https://github.com/melgarafael/DeskcommCRM"
       }
     ]
@@ -101,15 +101,15 @@
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-09-19T08:07:32Z",
+    "fetchedAt": "2026-09-19T08:18:50Z",
     "items": [
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 2,
-        "stars": 48311,
+        "stars": 48322,
         "periodStars": 26310,
         "language": "Python",
-        "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
         "url": "https://github.com/ayghri/i-have-adhd"
       },
       {
@@ -118,43 +118,43 @@
         "stars": 125216,
         "periodStars": 19167,
         "language": "Rust",
-        "description": "Lightweight coding agent that runs in your terminal",
+        "description": "在终端里运行的轻量编程 Agent。",
         "url": "https://github.com/openai/codex"
       },
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 37006,
+        "stars": 37013,
         "periodStars": 15865,
         "language": "Go",
-        "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
         "url": "https://github.com/alibaba/open-code-review"
       },
       {
         "repo": "K-Dense-AI/scientific-agent-skills",
         "sourceRank": 6,
-        "stars": 45560,
+        "stars": 45562,
         "periodStars": 11875,
         "language": "Python",
-        "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "description": "把任意 AI Agent 变成「AI 科学家」：165 个经验证的开箱技能 + 100 多个科学数据库，覆盖生物、化学、医学与药物研发，兼容 Cursor / Claude Code / Codex 等。",
         "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       },
       {
         "repo": "tashfeenahmed/freellmapi",
         "sourceRank": 3,
-        "stars": 27249,
+        "stars": 27250,
         "periodStars": 8509,
         "language": "TypeScript",
-        "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
         "url": "https://github.com/tashfeenahmed/freellmapi"
       },
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27137,
+        "stars": 27139,
         "periodStars": 7035,
         "language": "Go",
-        "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
         "url": "https://github.com/Tencent/WeKnora"
       },
       {
@@ -163,25 +163,25 @@
         "stars": 61639,
         "periodStars": 6966,
         "language": "Python",
-        "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+        "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
         "url": "https://github.com/jingyaogong/minimind"
       },
       {
         "repo": "ggml-org/llama.cpp",
         "sourceRank": 14,
-        "stars": 128776,
+        "stars": 128778,
         "periodStars": 4633,
         "language": "C++",
-        "description": "LLM inference in C/C++",
+        "description": "用 C/C++ 实现的大模型推理引擎。",
         "url": "https://github.com/ggml-org/llama.cpp"
       },
       {
         "repo": "Tencent/BrowserSkill",
         "sourceRank": 9,
-        "stars": 5504,
+        "stars": 5513,
         "periodStars": 3943,
         "language": "TypeScript",
-        "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
         "url": "https://github.com/Tencent/BrowserSkill"
       },
       {
@@ -190,11 +190,11 @@
         "stars": 3240,
         "periodStars": 2721,
         "language": "TypeScript",
-        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
         "url": "https://github.com/melgarafael/DeskcommCRM"
       }
     ]
   },
-  "version": "2026-09-19T08:07:32Z",
-  "generatedAt": "2026-09-19T08:07:32Z"
+  "version": "2026-09-19T08:18:50Z",
+  "generatedAt": "2026-09-19T08:18:50Z"
 }

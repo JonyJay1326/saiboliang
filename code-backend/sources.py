@@ -112,9 +112,72 @@ def is_ai(repo, overrides):
     return None
 
 
-def collect_github(client, now, languages, overrides, guard, review):
-    """Global page plus admitted language pages; merged by repo, best page position wins."""
-    result=dict(source='github-trending',dataUpdatedAt=now)
+DEEPSEEK_URL='https://api.deepseek.com/chat/completions'
+# V4.1-Flash 的官方 API 模型 ID（deepseek-chat / deepseek-v4-flash 均已退役）。
+DEEPSEEK_MODEL='deepseek-flash'
+TRANSLATE_INSTRUCTIONS=('你是中文技术编辑。把给定 GitHub 仓库简介翻译成简体中文：保留产品名、模型名与专有名词原文，'
+                        '不加评论与营销词，每条不超过 80 个汉字，单行纯文本。'
+                        '只输出 JSON 对象，键为原样 repo，值为译文，不要输出其他内容。')
+
+
+def translate_github(client, items, cached, key, now, review):
+    """Machine-translate uncovered repo blurbs; cached maps repo -> dict(text,source,at).
+
+    Manual blurbs win upstream; this only fills repos without one. The cache is
+    pruned to repos seen this run and rewritten in place by the caller. Missing key
+    or any failure keeps the English original and records at most one review item;
+    translation never blocks publication.
+    """
+    seen={item['repo'] for item in items}
+    for repo in list(cached):
+        if repo not in seen:
+            del cached[repo]
+    result={repo:entry['text'] for repo,entry in cached.items()
+            if isinstance(entry,dict) and isinstance(entry.get('text'),str) and entry['text'].strip()}
+    pending={item['repo']:item['description'] for item in items
+             if item['repo'] not in result and item['description']
+             and not re.search(r'[\u3400-\u9fff]',item['description'])}
+    if not pending or not key:
+        return result
+    try:
+        body=dict(model=DEEPSEEK_MODEL,temperature=0,thinking=dict(type='disabled'),
+                  response_format=dict(type='json_object'),max_tokens=4096,
+                  messages=[dict(role='system',content=TRANSLATE_INSTRUCTIONS),
+                            dict(role='user',content=json.dumps(pending,ensure_ascii=False))])
+        payload=json.loads(client.post(DEEPSEEK_URL,body,{'Authorization':'Bearer '+key.strip()}))
+        require(isinstance(payload,dict),'translation response malformed')
+        choices=payload.get('choices')
+        require(isinstance(choices,list) and choices and isinstance(choices[0],dict),'translation choices missing')
+        message=choices[0].get('message')
+        require(isinstance(message,dict) and isinstance(message.get('content'),str),'translation content missing')
+        translated=json.loads(message['content'])
+        require(isinstance(translated,dict),'translation payload malformed')
+        # 只接受属于本轮待译集合、且确实含中文的单行译文；缺项留待下轮重试。
+        accepted=0
+        for repo,value in translated.items():
+            if repo not in pending or not isinstance(value,str) or '\n' in value:
+                continue
+            if not value.strip() or not re.search(r'[\u3400-\u9fff]',value):
+                continue
+            cached[repo]=dict(text=value.strip(),source=DEEPSEEK_MODEL,at=now)
+            result[repo]=value.strip()
+            accepted+=1
+        require(accepted,'translation produced no usable Chinese text')
+    except (ValueError,KeyError,TypeError,UnicodeError) as exc:
+        review('github-translate',digest('\n'.join(sorted(pending))),'translation failed: '+str(exc),
+               dict(repos=sorted(pending)))
+    return result
+
+
+def collect_github(client, now, languages, overrides, zh, guard, review, translate=None):
+    """Global page plus admitted language pages; merged by repo, best page position wins.
+
+    zh maps repo -> manually curated Chinese blurb; translate() returns machine
+    drafts for repos it does not cover. Either source replaces the English
+    description; uncovered repos keep the source text. Cached repos never call
+    the API again, so repeated runs only translate newly admitted entries.
+    """
+    result=dict(source='github-trending',dataUpdatedAt=now); boards={}
     for key,period in [('week','weekly'),('month','monthly')]:
         url='https://github.com/trending?since='+period
         merged={}; deadline=time.monotonic()+120
@@ -141,7 +204,14 @@ def collect_github(client, now, languages, overrides, guard, review):
         for row,decision in decisions:
             if decision is None and (cutoff is None or (row['periodStars'] or 0)>=cutoff):
                 review('github-classification',row['repo'],'AI applicability uncertain',dict(description=row['description'],sourceUrl=row['url']))
-        result[key]=dict(period=period,sourceUrl=url,fetchedAt=now,items=selected[:10])
+        boards[key]=dict(period=period,sourceUrl=url,fetchedAt=now,items=selected[:10])
+    # 人工简介优先；已缓存 repo 不再请求接口，因此重跑只会为新增条目调用翻译。
+    machine=translate([item for board in boards.values() for item in board['items'] if item['repo'] not in zh]) if translate else {}
+    for key,board in boards.items():
+        result[key]=dict(board,items=[
+            dict(item,description=zh.get(item['repo']) or machine.get(item['repo']) or item['description'])
+            for item in board['items']
+        ])
     return result
 
 

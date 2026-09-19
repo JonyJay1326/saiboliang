@@ -68,20 +68,26 @@ def write_json(path, value):
     os.replace(tmp, path)
 
 
-def load_aa_key(path):
-    # Only import the authorized AA credential, never the entire dotenv file.
-    key = os.environ.get('AA_API_KEY') or os.environ.get('AA_key')
-    if key:
-        return key
+def load_key(path, names, label=None):
+    # Only import the named credential, never the entire dotenv file.
+    for name in names:
+        value = os.environ.get(name)
+        if value:
+            return value
     if path and Path(path).is_file():
+        pattern = r'\s*(?:export\s+)?(' + '|'.join(re.escape(n) for n in names) + r')\s*=\s*(.*?)\s*'
         for line in Path(path).read_text(encoding='utf-8-sig').splitlines():
-            match = re.fullmatch(r'\s*(?:export\s+)?(?:AA_API_KEY|AA_key)\s*=\s*(.*?)\s*', line)
+            match = re.fullmatch(pattern, line)
             if match:
-                value = match[1]
+                value = match[2]
                 if value[:1] in ('"', "'") and value[-1:] == value[:1]:
                     return value[1:-1]
                 return value.split(' #', 1)[0].strip()
-    raise DataError('AA_API_KEY / AA_key not configured')
+    raise DataError((label or names[0]) + ' not configured')
+
+
+def load_aa_key(path):
+    return load_key(path, ('AA_API_KEY', 'AA_key'), 'AA_API_KEY / AA_key')
 
 
 def finite(value, minimum=None):
@@ -92,7 +98,7 @@ class SafeRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         safe_url(newurl)
         require(urlsplit(newurl).scheme == 'https', 'insecure redirect rejected')
-        require(not req.has_header('X-api-key'), 'authenticated redirect rejected')
+        require(not req.has_header('X-api-key') and not req.has_header('Authorization'), 'authenticated redirect rejected')
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
@@ -117,6 +123,46 @@ class Client:
                     raw = response.read(8_000_001)
                     require(len(raw) <= 8_000_000, 'response exceeds size limit')
                     return raw, response.geturl()
+            except HTTPError as exc:
+                status = exc.code
+                retry = status == 429 or status >= 500
+                retry_after = exc.headers.get('Retry-After')
+                if retry_after:
+                    try:
+                        delay = max(delay, float(retry_after))
+                    except ValueError:
+                        delay = max(delay, parsedate_to_datetime(retry_after).timestamp() - time.time())
+                error = 'HTTP ' + str(status)
+                exc.close()
+                if not retry:
+                    raise DataError(error) from None
+            except (URLError, TimeoutError, OSError) as exc:
+                error = 'network error: ' + type(exc).__name__
+            require(attempt < 2 and time.monotonic() + delay < deadline, error)
+            time.sleep(delay)
+        raise DataError('request failed')
+
+    def post(self, url, body, headers=None, deadline=None):
+        """Authenticated JSON POST. Redirects are refused so the key never leaves the host."""
+        safe_url(url)
+        deadline = deadline or time.monotonic() + 120
+        host = urlsplit(url).hostname
+        data = json.dumps(body, ensure_ascii=False).encode('utf-8')
+        for attempt in range(3):
+            wait = max(0, self.last.get(host, 0) + 1 - time.monotonic())
+            require(time.monotonic() + wait < deadline, 'source budget exhausted')
+            time.sleep(wait)
+            self.last[host] = time.monotonic()
+            req = Request(url, data=data, method='POST',
+                          headers={'User-Agent': 'Saiboliang/0.1 (+https://saiboliang.top)',
+                                   'Content-Type': 'application/json', **(headers or {})})
+            delay = 2 ** (attempt + 1)
+            try:
+                with self.opener.open(req, timeout=min(15, deadline - time.monotonic())) as response:
+                    require(response.geturl() == url, 'authenticated redirect rejected')
+                    raw = response.read(8_000_001)
+                    require(len(raw) <= 8_000_000, 'response exceeds size limit')
+                    return raw
             except HTTPError as exc:
                 status = exc.code
                 retry = status == 429 or status >= 500

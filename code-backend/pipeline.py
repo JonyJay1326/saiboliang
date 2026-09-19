@@ -11,9 +11,9 @@ from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from common import Client, DataError, digest, load_aa_key, read_json, require, utcnow, write_json
+from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, translate_github
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -104,7 +104,7 @@ def promote(candidate,output):
         backup.rmdir()
 
 
-REVIEW_OWNER={'github-page':'github','github-classification':'github',
+REVIEW_OWNER={'github-page':'github','github-classification':'github','github-translate':'github',
               'models':'models','model-mapping':'models','model-price':'models','plans':'models',
               'news-item':'news','news-original':'news','news-future':'news'}
 
@@ -168,7 +168,12 @@ def load_config(editorial):
     overrides=read_json(editorial/'overrides.json')
     require(isinstance(overrides,dict) and set(overrides)=={'github','records'},'invalid overrides')
     require(isinstance(overrides['github'],dict) and isinstance(overrides['records'],list),'invalid override records')
-    return sources,overrides
+    zh=read_json(editorial/'github-zh.json',{})
+    require(isinstance(zh,dict),'invalid github zh map')
+    for repo,blurb in zh.items():
+        require(isinstance(repo,str) and re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repo),'invalid github zh repo')
+        require(isinstance(blurb,str) and blurb.strip() and '\n' not in blurb,'invalid github zh blurb')
+    return sources,overrides,zh
 
 
 def load_tickets(editorial,old,now):
@@ -200,16 +205,32 @@ def apply_overrides(data,module,overrides,review,now):
     return data
 
 
+def load_translator(args,client,run,now):
+    """Machine drafts for repos without a manual blurb; cache is internal state only."""
+    cache=read_json(args.state/'github-zh-cache.json',{})
+    require(isinstance(cache,dict),'invalid github zh cache')
+    try:
+        key=load_key(args.env_file,('DEEPSEEK_API_KEY','DEEPSEEK_KEY','DeepSeek_key'),'DEEPSEEK_API_KEY')
+    except DataError:
+        run.skipped.append('github-translate: no DEEPSEEK_API_KEY; uncovered repos keep source text')
+        return None
+    def translate(items):
+        result=translate_github(client,items,cache,key,now,run.review)
+        write_json(args.state/'github-zh-cache.json',cache)
+        return result
+    return translate
+
+
 def collect(args):
     state=args.state; now=utcnow(); run=Run(state,now)
-    sources,overrides=load_config(args.editorial)
+    sources,overrides,github_zh=load_config(args.editorial)
     originals=read_json(args.editorial/'news-originals.json',{})
     require(isinstance(originals,dict),'invalid news originals')
     old=read_batch(args.output); baseline=old or empty_batch(now)
     raw_cache=read_json(state/'source-cache.json',{k:body(baseline[k]) for k in MODULES})
     require(isinstance(raw_cache,dict) and set(raw_cache)==set(MODULES),'invalid source cache')
     config_hash=digest(json.dumps(sources,sort_keys=True,ensure_ascii=False))
-    client=Client(); updates={}
+    client=Client(); updates={}; translator=None
     for module in args.modules:
         daily=module=='models'
         last=run.health.get(module,{}).get('lastSuccess')
@@ -221,7 +242,8 @@ def collect(args):
         run.counts={}
         try:
             if module=='github':
-                data=collect_github(client,now,sources['github'],overrides['github'],run.guard,run.review)
+                translator=translator or load_translator(args,client,run,now)
+                data=collect_github(client,now,sources['github'],overrides['github'],github_zh,run.guard,run.review,translator)
             elif module=='models':
                 version,rows=collect_aa(client,load_aa_key(args.env_file))
                 run.guard('aa',len(rows))

@@ -1,0 +1,18 @@
+{
+  "alibaba/open-code-review": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
+  "ayghri/i-have-adhd": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
+  "stablyai/orca": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
+  "Tencent/WeKnora": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
+  "Panniantong/Agent-Reach": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
+  "addyosmani/agent-skills": "面向 AI 编程 Agent 的生产级工程技能集。",
+  "melgarafael/DeskcommCRM": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
+  "Tencent/BrowserSkill": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
+  "vastsa/PI-Desktop": "本地优先的 AI 编程 Agent 桌面端：Electron + Rust 宿主内核 + pi Agent Harness，支持用户自行安装插件。",
+  "openai/codex": "在终端里运行的轻量编程 Agent。",
+  "K-Dense-AI/scientific-agent-skills": "把任意 AI Agent 变成「AI 科学家」：165 个经验证的开箱技能 + 100 多个科学数据库，覆盖生物、化学、医学与药物研发，兼容 Cursor / Claude Code / Codex 等。",
+  "volcengine/OpenViking": "面向 AI Agent 的自进化上下文数据库：统一 Agent 记忆、知识 RAG 与技能。",
+  "tashfeenahmed/freellmapi": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
+  "jingyaogong/minimind": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
+  "ggml-org/llama.cpp": "用 C/C++ 实现的大模型推理引擎。",
+  "jundot/omlx": "为 Apple Silicon 打造的 LLM 推理服务：连续批处理 + SSD 缓存，可从 macOS 菜单栏管理。"
+}

@@ -6,19 +6,21 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from common import DataError, digest, normalize_url, read_json, write_json
+from common import DataError, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, aibase_article, collect_aa, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_plan, parse_trending, collect_news
+from sources import Tree, aibase_article, collect_aa, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_plan, parse_trending, collect_news, translate_github
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
 
 
 class FakeClient:
-    def __init__(self,pages=None,documents=None):
+    def __init__(self,pages=None,documents=None,posts=None):
         self.pages=pages or []
         self.documents=documents or {}
+        self.posts=posts or []
+        self.sent=[]
 
     def json(self,*args):
         return self.pages.pop(0)
@@ -28,6 +30,13 @@ class FakeClient:
         if isinstance(value,Exception):
             raise value
         return value.encode(),url
+
+    def post(self,url,body,headers=None,deadline=None):
+        self.sent.append((url,body,headers))
+        value=self.posts.pop(0)
+        if isinstance(value,Exception):
+            raise value
+        return json.dumps(value,ensure_ascii=False).encode()
 
 
 def aa_row(identity='one',score=10,coding=9,name=None,slug=None,price=(1,2)):
@@ -221,7 +230,7 @@ class PipelineTests(unittest.TestCase):
             month:'<html>'+card('vendor/slow',10)+'</html>',
             month_lang:'<html>'+card('vendor/fast',900)+'</html>',
         }
-        data=collect_github(FakeClient(documents=documents),NOW,['python'],{},lambda *x:None,lambda *x:None)
+        data=collect_github(FakeClient(documents=documents),NOW,['python'],{},{},lambda *x:None,lambda *x:None)
         self.assertEqual([i['repo'] for i in data['week']['items']],['vendor/fast','vendor/slow'])
         self.assertEqual(data['week']['items'][0]['sourceRank'],1)
         self.assertEqual(data['week']['items'][1]['sourceRank'],2)
@@ -230,6 +239,87 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(data['month']['sourceUrl'],month)
         self.assertEqual(len(data['week']['items']),2)
 
+    def test_github_zh_blurb_replaces_covered_repo_only(self):
+        def card(repo,period,desc):
+            return ('<article class="Box-row"><h2><a href="/'+repo+'">'+repo+'</a></h2><p>'+desc+'</p>'
+                    '<a href="/'+repo+'/stargazers">9,000</a><span>'+str(period)+' stars this week</span></article>')
+        base='https://github.com/trending?since=weekly'; month='https://github.com/trending?since=monthly'
+        documents={base:'<html>'+card('vendor/tool',900,'LLM coding agent')+card('vendor/other',800,'LLM coding agent')+'</html>',
+                   month:'<html>'+card('vendor/tool',900,'LLM coding agent')+'</html>'}
+        data=collect_github(FakeClient(documents=documents),NOW,[],{},{'vendor/tool':'人工中文简介'},lambda *x:None,lambda *x:None)
+        by_repo={i['repo']:i for i in data['week']['items']}
+        self.assertEqual(by_repo['vendor/tool']['description'],'人工中文简介')
+        self.assertEqual(by_repo['vendor/other']['description'],'LLM coding agent')
+
+    def test_github_machine_translation_cache_and_manual_priority(self):
+        def card(repo,period,desc):
+            return ('<article class="Box-row"><h2><a href="/'+repo+'">'+repo+'</a></h2><p>'+desc+'</p>'
+                    '<a href="/'+repo+'/stargazers">9,000</a><span>'+str(period)+' stars this week</span></article>')
+        base='https://github.com/trending?since=weekly'; month='https://github.com/trending?since=monthly'
+        documents={base:'<html>'+card('vendor/tool',900,'LLM coding agent')+card('vendor/other',800,'LLM coding agent')+'</html>',
+                   month:'<html>'+card('vendor/tool',900,'LLM coding agent')+'</html>'}
+        reply=dict(choices=[dict(message=dict(content=json.dumps({'vendor/other':'机器翻译草稿'},ensure_ascii=False)))])
+        client=FakeClient(documents=documents,posts=[reply]); cache={}; reviews=[]
+        translate=lambda items: translate_github(client,items,cache,'test-key',NOW,lambda *x:reviews.append(x))
+        data=collect_github(client,NOW,[],{},{'vendor/tool':'人工中文简介'},lambda *x:None,lambda *x:reviews.append(x),translate)
+        by_repo={i['repo']:i for i in data['week']['items']}
+        self.assertEqual(by_repo['vendor/tool']['description'],'人工中文简介')
+        self.assertEqual(by_repo['vendor/other']['description'],'机器翻译草稿')
+        self.assertEqual(cache['vendor/other']['source'],'deepseek-flash')
+        self.assertEqual(set(json.loads(client.sent[0][1]['messages'][1]['content'])),{'vendor/other'})
+        # 第二次运行命中缓存，不再调用接口。
+        client.posts=[]
+        data=collect_github(client,NOW,[],{},{'vendor/tool':'人工中文简介'},lambda *x:None,lambda *x:None,lambda items: translate_github(client,items,cache,'test-key',NOW,lambda *x:None))
+        self.assertEqual(client.posts,[])
+        self.assertEqual(len(reviews),0)
+        # 无 key 时保留英文原文，不阻塞发布。
+        data=collect_github(FakeClient(documents=documents),NOW,[],{},{},lambda *x:None,lambda *x:None)
+        self.assertEqual({i['repo']:i['description'] for i in data['week']['items']},
+                         {'vendor/tool':'LLM coding agent','vendor/other':'LLM coding agent'})
+
+    def test_translation_failure_keeps_source_text_and_reviews_once(self):
+        def card(repo,period,desc):
+            return ('<article class="Box-row"><h2><a href="/'+repo+'">'+repo+'</a></h2><p>'+desc+'</p>'
+                    '<a href="/'+repo+'/stargazers">9,000</a><span>'+str(period)+' stars this week</span></article>')
+        base='https://github.com/trending?since=weekly'; month='https://github.com/trending?since=monthly'
+        documents={base:'<html>'+card('vendor/tool',900,'LLM coding agent')+'</html>',month:'<html>'+card('vendor/tool',900,'LLM coding agent')+'</html>'}
+        reviews=[]; cache={}
+        translate=lambda items: translate_github(FakeClient(documents=documents,posts=[DataError('HTTP 401')]),items,cache,'bad-key',NOW,lambda *x:reviews.append(x))
+        data=collect_github(FakeClient(documents=documents),NOW,[],{},{},lambda *x:None,lambda *x:None,translate)
+        self.assertEqual(data['week']['items'][0]['description'],'LLM coding agent')
+        self.assertEqual([r[0] for r in reviews],['github-translate'])
+        # 译文非中文按失败处理，缓存不写入。
+        bad=dict(choices=[dict(message=dict(content=json.dumps({'vendor/tool':'same text'})))])
+        reviews=[]; cache={}
+        translate_github(FakeClient(posts=[bad]),[dict(repo='vendor/tool',description='LLM agent')],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(cache,{}); self.assertEqual(len(reviews),1)
+        # 缺项只收下有效译文，缺的条目下轮重试。
+        partial=dict(choices=[dict(message=dict(content=json.dumps({'vendor/one':'有效译文'})))])
+        reviews=[]; cache={}
+        result=translate_github(FakeClient(posts=[partial]),
+                                [dict(repo='vendor/one',description='LLM agent'),dict(repo='vendor/two',description='LLM agent')],
+                                cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(result,{'vendor/one':'有效译文'})
+        self.assertEqual(set(cache),{'vendor/one'}); self.assertEqual(reviews,[])
+
+    def test_translate_prunes_cache_and_skips_chinese_descriptions(self):
+        client=FakeClient(posts=[dict(choices=[dict(message=dict(content=json.dumps({'vendor/tool':'新译文'})))])])
+        cache={'vendor/gone':dict(text='旧译文',source='deepseek-chat',at=NOW),'vendor/cn':dict(text='已有译文',source='deepseek-chat',at=NOW)}
+        reviews=[]
+        result=translate_github(client,[dict(repo='vendor/tool',description='LLM agent'),
+                                        dict(repo='vendor/cn',description='中文原文')],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(result,{'vendor/cn':'已有译文','vendor/tool':'新译文'})
+        self.assertEqual(set(cache),{'vendor/cn','vendor/tool'})
+        sent=json.loads(client.sent[0][1]['messages'][1]['content'])
+        self.assertEqual(set(sent),{'vendor/tool'})
+
+    def test_load_key_reads_named_dotenv_entries_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            env=Path(tmp)/'.env'
+            env.write_text('AA_key = "aa-secret"\nDEEPSEEK_API_KEY=ds-secret # note\nOTHER=ignored\n',encoding='utf-8')
+            self.assertEqual(load_key(env,('DEEPSEEK_API_KEY','DEEPSEEK_KEY'),'DEEPSEEK_API_KEY'),'ds-secret')
+            with self.assertRaises(ValueError): load_key(env,('MISSING_KEY',),'MISSING_KEY')
+
     def test_github_page_failure_is_isolated(self):
         base='https://github.com/trending?since=weekly'; lang='https://github.com/trending/python?since=weekly'
         month='https://github.com/trending?since=monthly'; month_lang='https://github.com/trending/python?since=monthly'
@@ -237,7 +327,7 @@ class PipelineTests(unittest.TestCase):
         reviews=[]
         documents={base:'<html>'+card+'</html>',lang:DataError('HTTP 503'),
                    month:'<html>'+card+'</html>',month_lang:DataError('HTTP 503')}
-        data=collect_github(FakeClient(documents=documents),NOW,['python'],{},lambda *x:None,lambda *x:reviews.append(x))
+        data=collect_github(FakeClient(documents=documents),NOW,['python'],{},{},lambda *x:None,lambda *x:reviews.append(x))
         self.assertEqual([i['repo'] for i in data['week']['items']],['vendor/tool'])
         self.assertEqual([r[0] for r in reviews],['github-page','github-page'])
 
@@ -245,7 +335,7 @@ class PipelineTests(unittest.TestCase):
         base='https://github.com/trending?since=weekly'; lang='https://github.com/trending/python?since=weekly'
         documents={base:DataError('HTTP 503'),lang:DataError('HTTP 503')}
         with self.assertRaises(ValueError):
-            collect_github(FakeClient(documents=documents),NOW,['python'],{},lambda *x:None,lambda *x:None)
+            collect_github(FakeClient(documents=documents),NOW,['python'],{},{},lambda *x:None,lambda *x:None)
 
     def test_github_ambiguous_below_cutoff_is_not_queued(self):
         def card(repo,period,desc):
@@ -257,7 +347,7 @@ class PipelineTests(unittest.TestCase):
         base='https://github.com/trending?since=weekly'; month='https://github.com/trending?since=monthly'
         documents={base:'<html>'+confirmed+near+far+'</html>',month:'<html>'+confirmed+'</html>'}
         reviews=[]
-        data=collect_github(FakeClient(documents=documents),NOW,[],{},lambda *x:None,lambda *x:reviews.append(x))
+        data=collect_github(FakeClient(documents=documents),NOW,[],{},{},lambda *x:None,lambda *x:reviews.append(x))
         queued=[r[1] for r in reviews]
         self.assertIn('vendor/near',queued)
         self.assertNotIn('vendor/far',queued)

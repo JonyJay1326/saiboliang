@@ -12,7 +12,7 @@ python code-backend/pipeline.py collect
 python code-backend/pipeline.py validate
 ```
 
-已有本机根目录 `.env` 时读取其中 `AA_key` 或 `AA_API_KEY`，只用于 AA 请求头；环境变量优先。不加载其他凭据，不打印 Key。CI 中使用 `AA_API_KEY` 环境变量。禁止将 `.env` 复制到前端。
+已有本机根目录 `.env` 时按需读取其中 `AA_key` / `AA_API_KEY`（AA 请求头）与 `DEEPSEEK_API_KEY`（GitHub 简介翻译），只取白名单键名，不加载整份文件，不打印 Key；环境变量优先。CI 中使用同名 Actions Secret。禁止将 `.env` 复制到前端。
 
 ```powershell
 # 独立采集指定模块；日任务成功后当天跳过，配置变化会重采。
@@ -30,6 +30,7 @@ python code-backend/pipeline.py init
 - `public/data/`：五文件完整批次，供前端**构建时复制**。不是运行中的静态文件服务目录。
 - `.cache/candidate/`：验证通过的候选批次。该目录在 `.gitignore` 中。
 - `state/source-cache.json`：未应用人工覆盖的来源结果；保留旧事实和原始核验时间。
+- `state/github-zh-cache.json`：GitHub 简介机器译文草稿（`repo -> {text, source, at}`，按 repo 缓存，人工简介优先）；不进入公开数据，缺 key 或翻译失败时不写入。
 - `state/source-health.json`、`state/run.json`：逐源有效候选数量、成功日期、运行异常。
 - `state/review-queue.json`：按对象、原因和证据去重的待确认项。可将 `status` 改成 `accepted` 或 `rejected`；不删除原项，同一问题不会重复排入，新内容仍生成新项。
 - `state/audit.jsonl`：人工覆盖决定的追加审计。
@@ -72,6 +73,8 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 `editorial/tickets.json` 是**票证的唯一来源**，人工维护的扁平数组，字段见 `cyber-granary-data-contract.md` §4.2。管道只读取、按契约校验并打版本戳，不请求网络。`link` 默认禁止携带邀请码/推荐码等推广参数；本人推广链接按契约 §5.1 例外录入时必须把 `affiliate` 置 true（前端显示「含推广」），`utm_*` 等跟踪参数一律剥离。内容未变时不会刷新 `dataUpdatedAt`，也不会推版本。
 
 `editorial/news-originals.json` 按规范化中文报道 URL 的 SHA-256 保存一手来源证据，值包含 `url`、`publisher`、`articleEvidence`、`originalEvidence`、`eventSpecific`。编辑前须核实发布者官方身份。运行时再次检查报道出处链接、两页事件文本和最终目标；失败回退报道，官方仓库根链接不用于事件合并。
+
+`editorial/github-zh.json` 保存 GitHub 榜单项目的人工中文简介（`repo -> 简介`，键为 `owner/name`，值为单行、非空）：采集时命中条目用中文简介替换仓库原文。人工未覆盖的条目在配置 `DEEPSEEK_API_KEY` 时调用 DeepSeek（`deepseek-flash` = V4.1-Flash，非思考档 + JSON 输出）生成中文草稿：整榜一次批量请求，按 repo 缓存于 `state/github-zh-cache.json`，命中缓存的 repo 不再请求；译文只作待审校草稿，人工简介优先于缓存。缺 key、翻译失败或译文非中文时保留仓库原文并记入待确认队列，不阻塞发布。
 
 `editorial/overrides.json`：
 
