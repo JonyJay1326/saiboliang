@@ -121,18 +121,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "cathrynlavery/diagram-design",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "sourceUrl": "https://github.com/cathrynlavery/diagram-design"
-    },
-    "id": "8a1ccca914ea905137aa7b07cb583d737f140e63dd251bb91649cc30147b2f99",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "apache/maka",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -491,18 +479,6 @@
     "createdAt": "2026-09-18T12:15:39Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "2dust/v2rayN",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
-      "sourceUrl": "https://github.com/2dust/v2rayN"
-    },
-    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
-    "status": "pending",
-    "createdAt": "2026-09-18T12:15:39Z"
-  },
-  {
     "kind": "source",
     "objectId": "news",
     "reason": "AIBase article identity/title mismatch",
@@ -510,5 +486,29 @@
     "id": "d1c80a282052f69e28cf7bcc4f7ebfb8c28701707d4f405ea8f926d108dfa06c",
     "status": "pending",
     "createdAt": "2026-09-18T12:15:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jamiepine/voicebox",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "sourceUrl": "https://github.com/jamiepine/voicebox"
+    },
+    "id": "06e66a5a760b51a6e59008519ee61d7b6f7cfb1cbfe8bedd9e46ce8e508a0472",
+    "status": "pending",
+    "createdAt": "2026-09-19T08:07:32Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cathrynlavery/diagram-design",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Editorial diagram design for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "sourceUrl": "https://github.com/cathrynlavery/diagram-design"
+    },
+    "id": "2e3a3fbbe89457db67b2c17780b3a9590503f0df193980eb66f7df6683c2646c",
+    "status": "pending",
+    "createdAt": "2026-09-19T08:07:32Z"
   }
 ]

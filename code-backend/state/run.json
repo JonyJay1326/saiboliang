@@ -1,14 +1,13 @@
 {
-  "at": "2026-09-18T12:15:39Z",
+  "at": "2026-09-19T08:07:32Z",
   "success": [
     "tickets",
+    "models",
     "github"
   ],
   "errors": {
     "news": "AIBase article identity/title mismatch"
   },
-  "skipped": [
-    "models: daily sources already checked"
-  ],
-  "retired": 3
+  "skipped": [],
+  "retired": 2
 }
