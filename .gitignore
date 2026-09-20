@@ -9,6 +9,7 @@
 
 /*
 !/.gitignore
+!/.gitattributes
 !/code-frontend/
 !/code-backend/
 !/.github/
@@ -47,6 +48,10 @@ dist/
 *.log
 tmp/
 .tmp/
+
+# 本地包管理器痕迹：发布链路固定 npm ci + package-lock.json（2026-09-20）
+pnpm-lock.yaml
+pnpm-workspace.yaml
 
 # 系统与编辑器
 .DS_Store
