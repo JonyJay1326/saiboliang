@@ -8,5 +8,80 @@
     "text": "面向智能体系统的模型路由器。在 50ms 内将每个提示路由到合适的模型。仅需更改端点即可降低成本 40-70%。",
     "source": "deepseek-flash",
     "at": "2026-09-19T14:28:42Z"
+  },
+  "anthropics/claude-code": {
+    "text": "Claude Code 是一个代理式编码工具，运行在终端中，理解你的代码库，通过自然语言命令执行日常任务、解释复杂代码并处理 git 工作流，帮助你更快编码。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "Fission-AI/OpenSpec": {
+    "text": "面向 AI 编码助手的规范驱动开发（SDD）。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "max-sixty/worktrunk": {
+    "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 代理工作流设计",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "cline/cline": {
+    "text": "可作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "decolua/9router": {
+    "text": "无限免费 AI 编码。通过 40+ 提供商将 Claude Code、Codex、Cursor、Cline、Copilot、Antigravity 连接到免费的 Claude/GPT/Gemini。自动回退，RTK 减少 40% token，永不触及限制。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "NVIDIA/SkillSpector": {
+    "text": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "tradesdontlie/tradingview-mcp": {
+    "text": "AI 辅助的 TradingView 图表分析——将 Claude Code 连接到你的 TradingView Desktop，实现个人工作流自动化",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "kubernetes-sigs/agent-sandbox": {
+    "text": "agent-sandbox 可轻松管理隔离的、有状态的单例工作负载，适用于 AI 代理运行时和强化学习（RL）等场景。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "LaurieWired/GhidraMCP": {
+    "text": "用于 Ghidra 的 MCP 服务器",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "metadist/synaplan": {
+    "text": "我们的 AI 控制平面，用于快速部署。与各种模型对话，让代理使用 MCP，获得支持聊天组件以及更多工具。使用智能 DAG 路由节省 token！我们接受 Go、Rust、Python、NodeJS 等插件。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "tech-leads-club/agent-skills": {
+    "text": "面向专业 AI 编码代理的安全、经过验证的技能注册表。以绝对信心扩展 Antigravity、Claude Code、Cursor、Copilot 等。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "NVIDIA-NeMo/Switchyard": {
+    "text": "Switchyard 让 LLM 应用在模型和提供商之间路由流量，同时保持原生 OpenAI 和 Anthropic API 兼容性——实现灵活的模型选择、基准测试和成本/性能优化。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "google/magika": {
+    "text": "快速准确的 AI 驱动文件内容类型检测",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "microsoft/semantic-kernel": {
+    "text": "将前沿 LLM 技术快速轻松地集成到你的应用中",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
+  },
+  "laravel/boost": {
+    "text": "面向 Laravel 的 MCP 服务器，用于增强你的 AI 驱动本地开发体验。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T06:51:22Z"
   }
 }

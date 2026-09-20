@@ -1,0 +1,57 @@
+{
+  "c6f95c437e5117467a6f8e29d335cb312b20282f1a600f2591eb9e28aaf877f6": {
+    "summary": "千问发布Qwen3.8-LiveTranslate同传模型，字均延迟从2.8秒降至2.3秒，新增实时说话人分离等能力。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "7f82479a6a178b0d30e43775458ca2c66cc1ec4692ec40db69a342fec440580d": {
+    "summary": "TypeSafe AI发布不生成文本的Transformer模型Jev，以概率输出和校准决策服务软件自动化。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "90422616cebb86f46f0aadee50b995121f30114f946e2809289edf64080f8695": {
+    "summary": "Copilot代码审查改进：更清晰展示审查变化，更智能自动解决建议，接受时生成提交信息。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "4cbf947485c627798e6c2a1ef2d38394bf9f1a925b600ee2417207a415791eb1": {
+    "summary": "GitHub Copilot部分模型将于2026年10月19日在所有体验中弃用。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "31891505d79ac0b8461fa5495f4a6654ed61313543242f847f8bf3f2f4e76600": {
+    "summary": "智谱上线GLM-5.3-FlashX，最高速度达每秒200个token，基于GLM-5.3-Flash。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "f67c38308227435e06574f2fa4f36bdac68f4ee8a72e50b7443c054e96aceaf3": {
+    "summary": "Anthropic推出生命科学认证计划，Mythos 5.1、Opus 5、Sonnet 5适用统一授权条款。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "ce5508c16c0a4e202edcba58f1af607a65ca51d650235ffeab9d4cf63141b93a": {
+    "summary": "SpaceXAI推出Grok Voice Transcribe 2.0语音转文本模型，称准确性和成本效益出色。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "41f2b23db141d620003afb9be6cf1fce93737536e58666b02db1e96ca51d81a1": {
+    "summary": "Copilot预算增加请求正式可用，成员用完AI积分后可申请增加。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "547415ff1661069968904c1d86641177d4b0088cace310ed4455da1760087767": {
+    "summary": "GitHub Copilot可为组织创建仓库自定义属性时建议允许值，现公开预览。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "947e89eaa83a27aef331dc76eb62cb37cf0e8350cdf50a4308472585c036fe7e": {
+    "summary": "推出Gemini 3.8 Live与Gemini 3.8 Live Extended Thinking，为最先进实时对话模型。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  },
+  "ef18d943849cad0ec28717e1af6ce2bffe544316606f8e44373c2b14b6fefc93": {
+    "summary": "GitHub Copilot 自动模型选择新增效率、平衡、智能三档，可按成本、质量与响应时间偏好配置。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T08:36:28Z"
+  }
+}
