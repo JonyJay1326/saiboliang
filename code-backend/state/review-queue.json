@@ -3092,5 +3092,16 @@
     "id": "df57fa2a5ee715c071d28072a636b0623f9bb7b1f99a2ab83d54286c5a7480fb",
     "status": "pending",
     "createdAt": "2026-09-20T14:25:08Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "kimi-blog",
+    "reason": "news source redirected unexpectedly: kimi-blog -> https://www.kimi.ai/blog/",
+    "evidence": {
+      "url": "https://www.kimi.com/blog/"
+    },
+    "id": "49f81cdc686a53e0dbab8ebf43c89bffc5bea7ef1d9645dfddec8295a8595f25",
+    "status": "pending",
+    "createdAt": "2026-09-20T14:28:06Z"
   }
 ]
