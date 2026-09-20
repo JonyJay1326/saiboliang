@@ -1,15 +1,15 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-09-20T14:38:00Z",
+  "dataUpdatedAt": "2026-09-20T14:43:10Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-09-20T14:38:00Z",
+    "fetchedAt": "2026-09-20T14:43:10Z",
     "items": [
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 38193,
+        "stars": 38199,
         "periodStars": 15028,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -18,7 +18,7 @@
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 5,
-        "stars": 49066,
+        "stars": 49067,
         "periodStars": 5589,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -27,7 +27,7 @@
       {
         "repo": "stablyai/orca",
         "sourceRank": 3,
-        "stars": 73236,
+        "stars": 73240,
         "periodStars": 5404,
         "language": "TypeScript",
         "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -36,7 +36,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27864,
+        "stars": 27865,
         "periodStars": 4867,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -45,7 +45,7 @@
       {
         "repo": "Tencent/BrowserSkill",
         "sourceRank": 10,
-        "stars": 5951,
+        "stars": 5953,
         "periodStars": 3998,
         "language": "TypeScript",
         "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
@@ -54,7 +54,7 @@
       {
         "repo": "Panniantong/Agent-Reach",
         "sourceRank": 4,
-        "stars": 83721,
+        "stars": 83722,
         "periodStars": 3914,
         "language": "Python",
         "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
@@ -63,7 +63,7 @@
       {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 2,
-        "stars": 97467,
+        "stars": 97468,
         "periodStars": 3445,
         "language": "JavaScript",
         "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -72,7 +72,7 @@
       {
         "repo": "multimodal-art-projection/YuE",
         "sourceRank": 10,
-        "stars": 9879,
+        "stars": 9880,
         "periodStars": 2741,
         "language": "Python",
         "description": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
@@ -81,7 +81,7 @@
       {
         "repo": "bojieli/ai-agent-book",
         "sourceRank": 15,
-        "stars": 48875,
+        "stars": 48876,
         "periodStars": 2731,
         "language": "Python",
         "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -90,7 +90,7 @@
       {
         "repo": "anthropics/claude-code",
         "sourceRank": 1,
-        "stars": 146946,
+        "stars": 146951,
         "periodStars": 1999,
         "language": "TypeScript",
         "description": "Claude Code 是一个代理式编码工具，运行在终端中，理解你的代码库，通过自然语言命令执行日常任务、解释复杂代码并处理 git 工作流，帮助你更快编码。",
@@ -144,7 +144,7 @@
       {
         "repo": "cline/cline",
         "sourceRank": 6,
-        "stars": 68854,
+        "stars": 68856,
         "periodStars": 1118,
         "language": "TypeScript",
         "description": "可作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
@@ -153,7 +153,7 @@
       {
         "repo": "ggml-org/llama.cpp",
         "sourceRank": 8,
-        "stars": 128928,
+        "stars": 128930,
         "periodStars": 956,
         "language": "C++",
         "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -171,7 +171,7 @@
       {
         "repo": "NVIDIA/SkillSpector",
         "sourceRank": 18,
-        "stars": 17893,
+        "stars": 17895,
         "periodStars": 820,
         "language": "Python",
         "description": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
@@ -245,12 +245,12 @@
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-09-20T14:38:00Z",
+    "fetchedAt": "2026-09-20T14:43:10Z",
     "items": [
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 3,
-        "stars": 49066,
+        "stars": 49067,
         "periodStars": 26527,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -259,7 +259,7 @@
       {
         "repo": "openai/codex",
         "sourceRank": 13,
-        "stars": 125481,
+        "stars": 125482,
         "periodStars": 19155,
         "language": "Rust",
         "description": "在终端里运行的轻量编程 Agent。",
@@ -268,7 +268,7 @@
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 38193,
+        "stars": 38199,
         "periodStars": 16711,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -286,7 +286,7 @@
       {
         "repo": "tashfeenahmed/freellmapi",
         "sourceRank": 6,
-        "stars": 27589,
+        "stars": 27590,
         "periodStars": 8646,
         "language": "TypeScript",
         "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -295,7 +295,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27864,
+        "stars": 27865,
         "periodStars": 7397,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -304,7 +304,7 @@
       {
         "repo": "jingyaogong/minimind",
         "sourceRank": 5,
-        "stars": 61796,
+        "stars": 61797,
         "periodStars": 7036,
         "language": "Python",
         "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
@@ -313,7 +313,7 @@
       {
         "repo": "ggml-org/llama.cpp",
         "sourceRank": 16,
-        "stars": 128928,
+        "stars": 128930,
         "periodStars": 4567,
         "language": "C++",
         "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -322,7 +322,7 @@
       {
         "repo": "Tencent/BrowserSkill",
         "sourceRank": 4,
-        "stars": 5951,
+        "stars": 5953,
         "periodStars": 4564,
         "language": "TypeScript",
         "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
@@ -411,6 +411,6 @@
       }
     ]
   },
-  "version": "2026-09-20T14:38:00Z",
-  "generatedAt": "2026-09-20T14:38:00Z"
+  "version": "2026-09-20T14:43:10Z",
+  "generatedAt": "2026-09-20T14:43:10Z"
 }
