@@ -1435,6 +1435,13 @@ def collect_evidence_records(client,configs,old,now,review):
             succeeded+=1
         except (ValueError,KeyError,TypeError) as exc:
             review('plans',identity,str(exc),dict(sourceUrl=record.get('sourceUrl')))
+            # 旧快照若是过期 schema（缺新契约字段），回落到配置里钉住的已验证记录——
+            # 否则这条过期记录会把整批校验带崩（2026-09-20 实测：rank 迁移漏改快照）。
+            previous=result.get(identity)
+            try:
+                obj(previous,PLAN)
+            except ValueError:
+                result[identity]=copy.deepcopy(config['record'])
     require(not configs or succeeded>0,'all official plan sources failed verification')
     return list(result.values())
 

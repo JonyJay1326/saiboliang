@@ -562,6 +562,37 @@ class PipelineTests(unittest.TestCase):
         self.assertIsNone(news_event(rows[1]['title'],official=True))
         with self.assertRaises(ValueError): parse_kimi_blog(b'<html></html>',source)
 
+    def test_plans_stale_cache_falls_back_to_pinned_record(self):
+        pinned=dict(id='demo-plan',vendor='示例',product='示例套餐',group='domestic',tagline=None,
+                    highlights=['甲'],quotaBasis='每月额度',supportedTools=['工具'],
+                    tiers=[dict(name='基础',price=10,currency='CNY',period='month',offerType='standard',
+                                note=None,features=['功能'],conditions='条件')],
+                    models=['模型'],status='available',source='official',
+                    sourceUrl='https://vendor.example/plans',updatedAt='2026-09-17',checkMethod='manual',
+                    rank=3,rankBasis='示例依据')
+        stale={k:v for k,v in pinned.items() if k not in ('rank','rankBasis')}
+        broken_config=dict(id='demo',record=pinned,approved=True,sourceUrl='https://vendor.example/plans',
+                           scope=dict(tag='section'),adapter='verified-section',evidenceHash='x',evidenceText=['x'])
+        page='<section><p>示例证据 甲 乙</p></section>'
+        good=dict(pinned,id='ok-plan',sourceUrl='https://vendor.example/ok')
+        healthy_config=dict(id='ok',record=good,approved=True,sourceUrl='https://vendor.example/ok',
+                            scope=dict(contains=['示例证据']),adapter='verified-section',
+                            evidenceHash=digest('示例证据 甲 乙'),evidenceText=['示例证据'])
+        reviews=[]
+        rows=collect_evidence_records(FakeClient(documents={'https://vendor.example/ok':page}),
+                                      [healthy_config,broken_config],[stale],NOW,lambda *x:reviews.append(x))
+        # 取页失败时保留旧快照；旧快照缺契约字段则回落到配置里钉住的已核验记录，而不是带崩整批。
+        by_id={r['id']:r for r in rows}
+        self.assertEqual(set(by_id),{'ok-plan','demo-plan'})
+        self.assertEqual(set(by_id['demo-plan']),set(pinned))
+        self.assertEqual(by_id['demo-plan']['rank'],3)
+        self.assertEqual([x[1] for x in reviews],['demo-plan'])
+        ok=collect_evidence_records(FakeClient(documents={'https://vendor.example/ok':page}),
+                                    [healthy_config],[pinned],NOW,lambda *x:None)
+        by_id={r['id']:r for r in ok}
+        self.assertEqual(set(by_id),{'demo-plan','ok-plan'})
+        self.assertEqual(by_id['ok-plan']['checkMethod'],'auto')
+
     def test_clip_summary_boundary(self):
         self.assertEqual(clip('短文本',80),'短文本')
         sentence='第一句话结束了。'*30
