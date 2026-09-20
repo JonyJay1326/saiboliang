@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-20T14:43:10Z",
+  "at": "2026-09-20T15:09:11Z",
   "success": [
     "tickets",
     "github",
@@ -9,5 +9,5 @@
   "skipped": [
     "models: daily sources already checked"
   ],
-  "retired": 1
+  "retired": 0
 }

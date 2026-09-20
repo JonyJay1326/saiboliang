@@ -3092,5 +3092,17 @@
     "id": "df57fa2a5ee715c071d28072a636b0623f9bb7b1f99a2ab83d54286c5a7480fb",
     "status": "pending",
     "createdAt": "2026-09-20T14:25:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zeronsh/zeron",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A native control plane for Claude Code, Codex, Cursor, Devin and other coding agents.",
+      "sourceUrl": "https://github.com/zeronsh/zeron"
+    },
+    "id": "f2a7fbe70230f795c577d8e018c3e5ad92ed210a38e7869e7620bd38e04bacbd",
+    "status": "pending",
+    "createdAt": "2026-09-20T15:09:11Z"
   }
 ]
