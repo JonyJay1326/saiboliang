@@ -166,3 +166,46 @@ AIBase 的报道链接属于中文报道；只有另行核实官方一手出处�
 
 [实测] **并发 plans 改动已收敛：** 17 条 plans 均含 `rank`/`rankBasis`，`validate` 恢复 PASS（上一条提醒解除）；资讯与 plans 两批改动仍建议分开提交。
 
+### 2026-09-20 第六批：智谱 / 百度 / 腾讯官方通道补齐
+
+目标：补齐此前「无服务端可解析入口」的国产厂商官方资讯。本轮新增 3 个官方源，其余经实测仍无可用通道。
+
+| 源 | 入口 | 机制 | 实测 | 结论 |
+| --- | --- | --- | --- | --- |
+| 智谱官网 | `https://www.zhipuai.cn/zh/news` | RSC 载荷内嵌 `newsItems`（id / title_zh / createAt，UTC ISO）；无需逐篇请求 | 15 条，最新 2026-03-31；日期均带时区；无外链与缺失字段 | 启用（`zhipu-news`） |
+| 百度文心 | `https://ernie.baidu.com/blog/zh/posts/index.xml` | Hugo posts 子节中文 RSS，16 条中文标题、GMT 时间、相对链接 | 父 feed `/blog/zh/index.xml` 混入静态页 `Publication`（无中文标题）→ 改用 posts 子节后 16/16 有效 | 启用（`rss`） |
+| 腾讯云 TokenHub | `https://cloud.tencent.com/document/product/1823/130758` | 产品公告表：公告标题 + 发布日期 + 每行唯一 `/announce/detail/{id}` | 26 行；过滤三方模型托管公告（DeepSeek/GLM/Kimi/MiniMax/Qwen 等）后 12 行；最新 2026-09-08 | 启用（`tencent-announce`） |
+
+[实测] **本轮实现：** `common.py` 新增强制 gzip 解压（`cloud.tencent.com` 在未请求压缩时返回 `Content-Encoding: gzip`，此前整页乱码；解压后同样受 8MB 上限约束）；`sources.py` 新增 `flight_payloads`（aibase 与智谱共用 RSC 解析）、`parse_zhipu_news`、`parse_tencent_announcements`，`parse_feed` 支持相对链接，`NEWS_TOPICS` 增补 `文心`/`ERNIE`/`星火`，`OFFICIAL_EXCLUDE_RE` 增补 `业绩`/`财报`/`年报`，`OFFICIAL_MODEL_RE` 增补 `文心[- ]?\d`（Seed 家族 49 → 52 项）。
+
+[实测] **未接入与原因（本轮复核）：** Qwen `qwen.ai/blog`、`/research`、`/sitemap.xml` 均回落同一 94KB SPA 壳（搜索索引可见内容系爬虫渲染 JS），无服务端数据；Kimi `www.kimi.com/blog/` 卡片可解析但仅 6 条且标题为英文专名（译文无中文会被机译校验拒绝），模型发布已由 `hf-moonshot` 覆盖；讯飞 `www.xfyun.cn/news` 404、`www.iflytek.com` 新闻页为 JS 壳、`xinghuo.xfyun.cn` 无日期，官方一手中断；智谱 `docs.bigmodel.cn/cn/update/new-releases` 虽更新至 2026-09-18，但条目只链模型文档页、无独立公告 URL，仅作证据页。
+
+[实测] **URL 唯一性阻断（需用户拍板，沿用既有 [未定]）：** 阿里百炼 `help.aliyun.com/zh/model-studio/newly-released-models`（last-modified 2026-09-18、表格含类型/时间/模型 ID/说明）与腾讯 TokenHub 产品动态 `cloud.tencent.com/document/product/1823/130675`（含 Hy4 preview 2026-08-28、Hy3 2026-07-06 等腾讯自有模型发布记录）均为表格页，行内无唯一文章 URL（只链通用「模型列表」文档）；百度千帆模型更新记录各行虽链 API 文档，但为模型级而非事件级。三者要接入需先确定「表格行唯一 URL」的处理方式（契约 §4.5 归一化会剥离片段锚点），属契约边缘，待用户确认后再实现。
+
+[实测] 复采结果：`python test_pipeline.py` 51 项全过（新增智谱 RSC 分块、腾讯公告三方过滤与去重、相对链接、gzip 解压 4 组用例）；`pipeline.py collect --modules news` 成功，三个新源基线 `ernie 16 / zhipu-news 15 / tencent-announce 12`，`pipeline.py validate` PASS。窗口内三源均无新条目（最新为腾讯 2026-09-08），属预期；首轮百度父 feed 静态页复核项已随换源自动退场。
+
+[实测] **robots：** `www.zhipuai.cn` `Allow: /`、`ernie.baidu.com` 无阻断条款、`cloud.tencent.com` 仅禁查询参数页与 `/login`，三个新源均合规。
+
+[推断] **并发提交提醒：** 本轮改动工作期间，另一工具于 2026-09-20 08:20 前后将工作区快照提交为 `2dccc05`/`cdf4258`/`77718f6`（含本批 `sources.py`/`common.py`/`sources.json` 的中间态）；本文件、`test_pipeline.py` 新增用例与 `ernie` 换源为提交后改动，尚在工作区，提交时请勿混入其它工具的在途改动。
+
+### 2026-09-20 第七批：表格源唯一 URL 机制与 Qwen / 腾讯 Hy / 千帆 / Kimi 接入
+
+用户拍板：接受表格行唯一 URL 方案（由实现方确定机制）；接受 Kimi 厂商模板标题。讯飞、Mistral、Amazon、Apple 不做官方通道，由二手源（AIBase / 量子位）覆盖。第六批遗留的「URL 唯一性阻断」由本轮机制解除。
+
+**机制（不改契约字段与语义）：** 对无独立公告 URL 的表格行，`sourceUrl` 采用「表格页 + 身份查询参数」`?date=YYYY-MM-DD&model=<模型标识>`。契约 §4.5 的 `normalize_url` 保留非跟踪查询参数并排序，因此条目 id（规范化 URL 的 SHA-256）唯一且跨轮稳定；三个合成 URL 均实测 200、无重定向（阿里帮助中心 / 腾讯云文档 / 百度智能云文档），用户点击落到对应表格页。
+
+| 源 | 入口 | 机制 | 实测 | 结论 |
+| --- | --- | --- | --- | --- |
+| 阿里云百炼 | `https://help.aliyun.com/zh/model-studio/newly-released-models` | 表格行（类型/时间/模型 ID/说明）无独立 URL；仅收 Qwen 系（`qwen*/qwq*/qvq*`） | 815 行中 Qwen 系 328 行；「别名 + 快照」同格取首 token；多地域重复表去重后 165 行，最新 2026-09-16 | 启用（`alibaba-bailian`） |
+| 腾讯云 TokenHub 动态 | `https://cloud.tencent.com/document/product/1823/130675` | 动态表（名称/描述/时间/文档）无独立 URL；只留腾讯自有模型 | 7 行 Hy/YT（Hy4 preview 2026-08-28、Hy3 2026-07-06 等）；三方托管行剔除 | 启用（`tencent-tokenhub`） |
+| 百度千帆 | `https://cloud.baidu.com/doc/qianfan/s/Kmh4stnjp` | 月份章节 + 表格行，年份取自章节标题；只留百度自有行 | 165 行百度行（最新 9 月 15 日）；DeepSeek/GLM 等三方行剔除 | 启用（`baidu-qianfan`） |
+| 月之暗面 | `https://www.kimi.com/blog/` | 服务端渲染卡片（链接/标题/日期）；标题用厂商模板 | 9 张卡片（K3 2026-07-16 起）；hero 与列表重复卡按 URL 去重 | 启用（`kimi-blog`） |
+
+[实测] **实现：** `sources.py` 新增 `row_url`（合成身份）、`clip`（摘要 ≤80 码点、优先句读边界）、`parse_bailian`、`parse_tokenhub_dynamics`、`parse_qianfan`、`parse_kimi_blog`，`collect_news` 适配器白名单扩容；`editorial/sources.json` 新增 4 源；`test_pipeline.py` 新增 5 组用例（多 token 模型单元、Hy 名单过滤、章节年份推断、Kimi 模板标题、摘要裁剪）共 56 项。
+
+[实测] **Kimi 模板标题与去重：** 卡片标题为英文专名，标题取「月之暗面发布 {卡片名}」；`PerceptionBench`/`WorldVQA` 等非模型卡片由主题闸门自然排除；与 `hf-moonshot` 的同事件去重由既有相似排除兜底（标题归一化后互相包含）。
+
+[实测] **Qwen 官方博客已废弃：** `qwenlm.github.io/blog` 最新条目 2025-09-23，停更近一年；qwen.ai 仍为 SPA——百炼表格是 Qwen 唯一活跃官方通道。
+
+[实测] 复采 `news: OK`：`alibaba-bailian 165 / tencent-tokenhub 7 / baidu-qianfan 165 / kimi-blog 9`，无错误；`pipeline.py validate` PASS。窗口内四源均无新条目（最新为百炼 2026-09-16），未发生补录。
+

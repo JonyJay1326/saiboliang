@@ -6,6 +6,7 @@ import math
 import os
 import re
 import time
+import zlib
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -99,7 +100,10 @@ def decompress(raw, encoding):
     """Some CDNs force gzip even though urllib never sends Accept-Encoding."""
     if not encoding or encoding.strip().lower() != 'gzip':
         return raw
-    value = gzip.decompress(raw)
+    try:
+        value = gzip.decompress(raw)
+    except (OSError, EOFError, zlib.error) as exc:
+        raise DataError('invalid gzip response') from exc
     require(len(value) <= 8_000_000, 'decompressed response exceeds size limit')
     return value
 

@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
-from urllib.parse import quote, urljoin, urlsplit
+from urllib.parse import quote, urlencode, urljoin, urlsplit
 from common import DataError, digest, finite, normalize_url, require, safe_url
 from contract import CATEGORY_BY_EVENT, EVENTS, MODEL, PLAN, day, news_order, obj, text, unique
 
@@ -737,6 +737,161 @@ def parse_tencent_announcements(raw,source):
     return result
 
 
+def clip(value,limit):
+    """Fit source text into the contract summary bound, preferring a sentence/clause end."""
+    text=' '.join(value.split())
+    if len(text)<=limit:
+        return text
+    head=text[:limit]
+    for mark in ('。','；','！','？','，','、'):
+        at=head.rfind(mark)
+        if at>=limit//2:
+            return head[:at+1]
+    return head
+
+
+def row_url(page,**fields):
+    """Stable synthetic identity for catalog rows that carry no per-row URL.
+
+    normalize_url keeps non-tracking query parameters, so the normalized URL is
+    deterministic and unique per (page, row) without changing field semantics.
+    """
+    return page+'?'+urlencode(sorted(fields.items()))
+
+
+BAILIAN_MODEL_RE=re.compile(r'qwen|qwq|qvq',re.I)
+
+
+def parse_bailian(raw,source):
+    """Alibaba Model Studio catalog: Qwen-family additions only; no per-row URLs.
+
+    The model cell may list an alias plus its dated snapshot; the first token is
+    the stable identity, and every token must look like a model ID.
+    """
+    tree=Tree(decode(raw)).root
+    result=[]; seen=set()
+    for row in tree.find(lambda n:n.tag=='tr'):
+        cells=row.find(lambda n:n.tag in ('td','th'))
+        if len(cells)!=4:
+            continue
+        _,date,models,description=[' '.join(c.text().replace('\ufeff',' ').split()) for c in cells]
+        if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
+            continue
+        tokens=models.split()
+        if not tokens or not all(re.fullmatch(r'[A-Za-z0-9][\w./-]*',token) for token in tokens):
+            continue
+        model=tokens[0]
+        if not BAILIAN_MODEL_RE.match(model):
+            continue
+        url=row_url(source['url'],date=date,model=model)
+        if url in seen:
+            continue
+        seen.add(url)
+        year,month,day=(int(part) for part in date.split('-'))
+        result.append(dict(title='阿里发布 '+model,sourceUrl=url,publishedAt=day_start_utc(year,month,day),
+                           source=source['name'],summary=clip(description,80) or None))
+    require(result,'Alibaba catalog table missing or restructured')
+    return result
+
+
+TENCENT_MODEL_RE=re.compile(r'(?i)^(hy|yt|hunyuan|混元)')
+
+
+def parse_tokenhub_dynamics(raw,source):
+    """TokenHub 产品动态: Tencent-family model additions; rows carry no per-row URL."""
+    tree=Tree(decode(raw)).root
+    result=[]; seen=set()
+    for row in tree.find(lambda n:n.tag=='tr'):
+        cells=row.find(lambda n:n.tag in ('td','th'))
+        if len(cells)<4:
+            continue
+        description=' '.join(cells[1].text().replace('\ufeff',' ').split())
+        date=' '.join(cells[2].text().replace('\ufeff',' ').split())
+        match=re.search(r'新增支持 (.+?) 模型',description)
+        if not match or not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
+            continue
+        names=[name.strip() for name in re.split(r'[、,，/]',match.group(1))
+               if name.strip() and TENCENT_MODEL_RE.match(name)]
+        if not names:
+            continue
+        slug=re.sub(r'[^a-z0-9]+','-',' '.join(names).lower()).strip('-')
+        url=row_url(source['url'],date=date,model=slug)
+        if url in seen:
+            continue
+        seen.add(url)
+        year,month,day=(int(part) for part in date.split('-'))
+        result.append(dict(title='腾讯云 TokenHub 上线 '+'、'.join(names)+' 模型',sourceUrl=url,
+                           publishedAt=day_start_utc(year,month,day),source=source['name'],
+                           summary=clip(description,80) or None))
+    require(result,'Tencent TokenHub dynamics missing or restructured')
+    return result
+
+
+QIANFAN_ACTION={'上新':'上线','升级':'升级','退役':'下线'}
+
+
+def parse_qianfan(raw,source):
+    """Baidu Qianfan model log: Baidu-first-party rows; the year comes from month sections."""
+    tree=Tree(decode(raw)).root
+    result=[]; seen=set(); year=None
+    for node in tree.find(lambda n:n.tag in ('h2','h3','table')):
+        if node.tag in ('h2','h3'):
+            match=re.fullmatch(r'(20\d{2})年(\d{1,2})月',node.text().strip())
+            if match:
+                year=int(match.group(1))
+            continue
+        if year is None:
+            continue
+        for row in node.find(lambda n:n.tag=='tr'):
+            cells=row.find(lambda n:n.tag in ('td','th'))
+            values=[' '.join(c.text().replace('\ufeff',' ').split()) for c in cells]
+            if len(values)<7 or '百度' not in values[1]:
+                continue
+            date=re.fullmatch(r'(\d{1,2})月(\d{1,2})日',values[0])
+            version=values[3] or values[2]
+            if not date or not version or not values[5]:
+                continue
+            month,day=int(date.group(1)),int(date.group(2))
+            try:
+                stamp=day_start_utc(year,month,day)
+            except ValueError:
+                continue
+            url=row_url(source['url'],date='%04d-%02d-%02d'%(year,month,day),
+                        model=re.sub(r'[^a-z0-9]+','-',version.lower()).strip('-'))
+            if url in seen:
+                continue
+            seen.add(url)
+            result.append(dict(title='百度千帆'+QIANFAN_ACTION.get(values[5],values[5])+' '+version,sourceUrl=url,
+                               publishedAt=stamp,source=source['name'],summary=clip(values[6],80) or None))
+    require(result,'Qianfan model log missing or restructured')
+    return result
+
+
+def parse_kimi_blog(raw,source):
+    """Kimi research blog: card names are bare proper nouns, so the vendor template is used."""
+    tree=Tree(decode(raw)).root
+    result=[]; seen=set()
+    for card in tree.find(lambda n:n.tag=='div' and 'menu-card' in (n.attrs.get('class') or '')):
+        links=card.find(lambda n:n.tag=='a' and re.fullmatch(r'/en/blog/[\w.-]+',n.attrs.get('href') or ''))
+        titles=card.find(lambda n:n.tag in ('h2','h3','h4') and 'card-title' in (n.attrs.get('class') or ''))
+        dates=card.find(lambda n:n.tag=='p' and 'card-date' in (n.attrs.get('class') or ''))
+        if not links or not titles or not dates:
+            continue
+        url=urljoin('https://www.kimi.com',links[0].attrs['href'])
+        if url in seen:
+            continue
+        title=' '.join(titles[0].text().split())
+        date=' '.join(dates[0].text().split())
+        if not title or not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
+            continue
+        seen.add(url)
+        year,month,day=(int(part) for part in date.split('-'))
+        result.append(dict(title='月之暗面发布 '+title,sourceUrl=url,publishedAt=day_start_utc(year,month,day),
+                           source=source['name'],summary=None))
+    require(result,'Kimi research blog missing or restructured')
+    return result
+
+
 def sitemap_entries(raw,prefix):
     """Shared sitemap <loc>/<lastmod> reader for official news sitemaps."""
     root=ET.fromstring(raw)
@@ -926,7 +1081,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
         raw,final=client.get(source['url'])
         require(normalize_url(final)==normalize_url(source['url']),'news source redirected unexpectedly')
         adapter=source.get('adapter','rss')
-        require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce'),'unknown news adapter')
+        require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog'),'unknown news adapter')
         official=source.get('official') is True
         if adapter=='aibase':
             rows=collect_aibase(client,raw,source,review)
@@ -938,6 +1093,14 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
             rows=parse_zhipu_news(raw,source)
         elif adapter=='tencent-announce':
             rows=parse_tencent_announcements(raw,source)
+        elif adapter=='alibaba-bailian':
+            rows=parse_bailian(raw,source)
+        elif adapter=='tencent-tokenhub':
+            rows=parse_tokenhub_dynamics(raw,source)
+        elif adapter=='baidu-qianfan':
+            rows=parse_qianfan(raw,source)
+        elif adapter=='kimi-blog':
+            rows=parse_kimi_blog(raw,source)
         elif adapter=='xai-sitemap':
             rows=collect_xai(client,raw,source,now)
         elif adapter=='seed-blog':

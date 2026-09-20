@@ -1,15 +1,16 @@
 """Offline regression checks; no keys, network, or third-party test runner."""
 import copy
+import gzip
 import json
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from common import DataError, digest, load_key, normalize_url, read_json, write_json
+from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, aibase_article, collect_aa, collect_aibase, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models
+from sources import Tree, aibase_article, collect_aa, collect_aibase, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -336,6 +337,155 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError): parse_huggingface_models(b'{}',source)
         with self.assertRaises(ValueError):
             parse_huggingface_models(json.dumps([dict(modelId='other/repo',createdAt='2026-09-18T03:00:00Z')]).encode(),source)
+
+    def test_zhipu_news_flight_payload_adapter(self):
+        items=[dict(id=152,title_zh='智谱首份业绩报告发布，探索AGI智能上界',createAt='2026-03-31T10:00:00.000Z'),
+               dict(id=76,title_zh='GLM-PC 基座模型，CogAgent-9B 开源',createAt='2024-12-30T10:44:30.887Z')]
+        flight='1:T3,abc7:'+json.dumps({'newsItems':items},ensure_ascii=False)
+        chunks=[flight[:40],flight[40:]]
+        raw=('<html>'+''.join('<script>self.__next_f.push('+json.dumps([1,c])+')</script>'
+                              for c in chunks)+'</html>').encode()
+        source=dict(id='zhipu-news',name='智谱官网',url='https://www.zhipuai.cn/zh/news',official=True,lang='zh')
+        rows=parse_zhipu_news(raw,source)
+        self.assertEqual([r['sourceUrl'] for r in rows],
+                         ['https://www.zhipuai.cn/zh/news/152','https://www.zhipuai.cn/zh/news/76'])
+        self.assertEqual(rows[0]['publishedAt'],'2026-03-31T10:00:00Z')
+        self.assertEqual(rows[1]['publishedAt'],'2024-12-30T10:44:30Z')
+        self.assertIsNone(rows[0]['summary'])
+        for bad in [b'<html>no payload</html>', b'<html><script>self.__next_f.push([1,"{\\"newsItems\\":[]}"])</script></html>']:
+            with self.assertRaises(ValueError): parse_zhipu_news(bad,source)
+
+    def test_tencent_announcement_adapter_filters_third_party(self):
+        def row(title,href,date):
+            return ('<tr><td><span>\ufeff</span><span><a class="ref" href="'+href+'">'+title+'</a></span></td>'
+                    '<td><span>\ufeff '+date+'</span></td></tr>')
+        html=('<table>'
+              +row('【大模型服务平台 TokenHub】&amp;【智能体开发平台 ADP】 关于腾讯云 HY &amp; YT 系列部分视频生成模型下线及计费调整的通知','https://cloud.tencent.com/announce/detail/2442','2026-08-26')
+              +row('关于腾讯云 GLM-5、GLM-5-Turbo、GLM-5.1 模型下线及切换升级的通知','https://cloud.tencent.com/announce/detail/2469','2026-09-08')
+              +row('关于腾讯云混元旧版本模型下线的通知','https://cloud.tencent.com/announce/detail/2310','2026-05-22')
+              +row('关于腾讯云混元旧版本模型下线的通知','https://cloud.tencent.com/announce/detail/2310','2026-05-22')
+              +'</table>')
+        source=dict(id='tencent-announce',name='腾讯云 TokenHub',url='https://cloud.tencent.com/document/product/1823/130758',official=True,lang='zh')
+        rows=parse_tencent_announcements(html.encode(),source)
+        self.assertEqual([r['sourceUrl'] for r in rows],
+                         ['https://cloud.tencent.com/announce/detail/2442','https://cloud.tencent.com/announce/detail/2310'])
+        # 北京日 00:00 → UTC 前一日 16:00
+        self.assertEqual(rows[0]['publishedAt'],'2026-08-25T16:00:00Z')
+        self.assertEqual(news_event(rows[0]['title'],official=True),'action-required')
+        self.assertNotIn('\ufeff',rows[0]['title'])
+        with self.assertRaises(ValueError): parse_tencent_announcements(b'<table></table>',source)
+
+    def test_alibaba_catalog_adapter_filters_to_qwen_and_clips_summary(self):
+        def row(kind,date,model,desc):
+            return '<tr><td><p>'+kind+'</p></td><td><p>'+date+'</p></td><td><p><code>'+model+'</code></p></td><td><p>'+desc+'</p></td></tr>'
+        long=('Qwen-MT-Uni 一次调用即可完成文本、文档、图片、音频的翻译；服务端自动识别输入模态并进行版面还原、语音克隆等处理，'
+              '输出翻译后的文本或文件下载链接。支持同步与异步两种调用方式。')
+        html=('<table>'+row('类型','时间','模型ID','功能说明')
+              +row('多模态翻译','2026-09-16','qwen-mt-uni',long)
+              +row('文本生成','2026-07-21','qwen3.7-flash qwen3.7-flash-2026-07-15','别名与快照同行。')
+              +row('文本生成','2026-08-31','ZHIPU/GLM-5.3-Flash','第三方托管模型')
+              +row('视频生成','2026-08-27','kling/kling-v3','第三方托管模型')
+              +'</table>')
+        source=dict(id='alibaba-bailian',name='阿里云百炼',url='https://help.aliyun.com/zh/model-studio/newly-released-models',adapter='alibaba-bailian',official=True,lang='zh')
+        rows=parse_bailian(html.encode(),source)
+        self.assertEqual(len(rows),2)
+        self.assertEqual(rows[0]['title'],'阿里发布 qwen-mt-uni')
+        self.assertEqual(rows[0]['sourceUrl'],source['url']+'?date=2026-09-16&model=qwen-mt-uni')
+        self.assertEqual(normalize_url(rows[0]['sourceUrl']),rows[0]['sourceUrl'])
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-15T16:00:00Z')
+        self.assertLessEqual(len(rows[0]['summary']),80)
+        self.assertEqual(rows[1]['title'],'阿里发布 qwen3.7-flash')
+        self.assertEqual(rows[1]['sourceUrl'],source['url']+'?date=2026-07-21&model=qwen3.7-flash')
+        data=collect_news(FakeClient(documents={source['url']:html}),[source],{}, {}, NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual(len(data['items']),1)
+        self.assertEqual(data['items'][0]['eventType'],'major-update')
+        batch,_=assemble(None,{'news':data},NOW); validate(batch)
+        with self.assertRaises(ValueError): parse_bailian(b'<table></table>',source)
+
+    def test_tokenhub_dynamics_adapter_filters_tencent_models(self):
+        def row(desc,date):
+            return ('<tr><td><span>动态名称</span></td><td><span>'+desc+'</span></td><td><span>'+date+'</span></td>'
+                    '<td><span>模型列表</span></td></tr>')
+        html=('<table>'
+              +row('新增支持 Hy4 preview 模型。','2026-08-28')
+              +row('新增支持 Kimi-K2.6 、YT-VITA 模型。','2026-04-20')
+              +row('新增支持 DeepSeek-V4.1-Flash 原厂直供模型。','2026-09-10')
+              +row('新增支持 GLM-5.3-Flash 模型。','2026-08-26')
+              +'</table>')
+        source=dict(id='tencent-tokenhub',name='腾讯云 TokenHub',url='https://cloud.tencent.com/document/product/1823/130675',official=True,lang='zh')
+        rows=parse_tokenhub_dynamics(html.encode(),source)
+        self.assertEqual([r['title'] for r in rows],
+                         ['腾讯云 TokenHub 上线 Hy4 preview 模型','腾讯云 TokenHub 上线 YT-VITA 模型'])
+        self.assertEqual(rows[0]['sourceUrl'],source['url']+'?date=2026-08-28&model=hy4-preview')
+        self.assertEqual(rows[1]['sourceUrl'],source['url']+'?date=2026-04-20&model=yt-vita')
+        self.assertEqual(rows[0]['publishedAt'],'2026-08-27T16:00:00Z')
+        with self.assertRaises(ValueError): parse_tokenhub_dynamics(b'<table></table>',source)
+
+    def test_qianfan_model_log_year_sections_and_baidu_filter(self):
+        def row(date,vendor,version,action,desc):
+            return ('<tr><td>'+date+'</td><td>'+vendor+'</td><td>模型</td><td>'+version+'</td><td>类型</td><td>'+action+'</td>'
+                    '<td>'+desc+'</td></tr>')
+        html=('<h2><span>2026年9月</span></h2><table>'
+              +row('9月15日','百度','ERNIE-5.0-Thinking-Latest','上新','文心新一代思考模型，上下文扩展到 64K，支持更长推理链路。')
+              +row('9月15日','杭州深度求索人工智能基础技术研究有限公司','DeepSeek-V4.1-Flash','上新','第三方模型。')
+              +'</table><h2>2025年11月</h2><table>'
+              +row('11月13日','百度','ERNIE-5.0-Thinking-Preview','升级','预览版升级。')
+              +'</table>')
+        source=dict(id='baidu-qianfan',name='百度千帆',url='https://cloud.baidu.com/doc/qianfan/s/Kmh4stnjp',official=True,lang='zh')
+        rows=parse_qianfan(html.encode(),source)
+        self.assertEqual([r['title'] for r in rows],
+                         ['百度千帆上线 ERNIE-5.0-Thinking-Latest','百度千帆升级 ERNIE-5.0-Thinking-Preview'])
+        self.assertEqual(rows[0]['sourceUrl'],source['url']+'?date=2026-09-15&model=ernie-5-0-thinking-latest')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-14T16:00:00Z')
+        self.assertEqual(rows[1]['publishedAt'],'2025-11-12T16:00:00Z')
+        with self.assertRaises(ValueError): parse_qianfan(b'<html></html>',source)
+
+    def test_kimi_research_blog_cards_and_template_titles(self):
+        def card(href,title,date):
+            return ('<div class="menu-card menu-card-hero"><a href="'+href+'" aria-label="'+title+'"></a>'
+                    '<div><h4 class="card-title">'+title+'</h4><p class="card-date">'+date+'</p></div></div>')
+        html=('<html>'+card('/en/blog/kimi-k3','Kimi K3','2026-07-16')
+              +card('/en/blog/perception-bench','PerceptionBench','2026-07-16')
+              +'<div class="menu-card"><span>no link</span></div></html>')
+        source=dict(id='kimi-blog',name='月之暗面',url='https://www.kimi.com/blog/',official=True,lang='zh')
+        rows=parse_kimi_blog(html.encode(),source)
+        self.assertEqual([r['title'] for r in rows],['月之暗面发布 Kimi K3','月之暗面发布 PerceptionBench'])
+        self.assertEqual(rows[0]['sourceUrl'],'https://www.kimi.com/en/blog/kimi-k3')
+        self.assertEqual(rows[0]['publishedAt'],'2026-07-15T16:00:00Z')
+        self.assertEqual(news_event(rows[0]['title'],official=True),'model-release')
+        self.assertIsNone(news_event(rows[1]['title'],official=True))
+        with self.assertRaises(ValueError): parse_kimi_blog(b'<html></html>',source)
+
+    def test_clip_summary_boundary(self):
+        self.assertEqual(clip('短文本',80),'短文本')
+        sentence='第一句话结束了。'*30
+        clipped=clip(sentence,80)
+        self.assertEqual(len(clipped),80)
+        self.assertTrue(clipped.endswith('。'))
+        self.assertEqual(len(clip('啊'*100,80)),80)
+        self.assertEqual(clip('前言。'*40,80)[-1],'。')
+
+    def test_parse_feed_relative_links_and_ernie_titles(self):
+        rss=('<rss><channel><item><title>文心 5.1 正式发布！多榜登顶，模型&#34;写得好更懂你&#34;</title>'
+             '<link>/blog/zh/posts/ernie-5.1-0508-release/</link>'
+             '<pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>'
+             '<description>文心 5.1 正式上线，仅使用约 6% 的预训练成本。</description></item></channel></rss>')
+        source=dict(id='ernie',name='百度文心',url='https://ernie.baidu.com/blog/zh/index.xml',official=True,lang='zh',articleHosts=['ernie.baidu.com'])
+        rows=parse_feed(rss,source,lambda *x:None)
+        self.assertEqual(rows[0]['sourceUrl'],'https://ernie.baidu.com/blog/zh/posts/ernie-5.1-0508-release/')
+        self.assertEqual(rows[0]['publishedAt'],'2026-05-09T00:00:00Z')
+        self.assertEqual(news_event(rows[0]['title'],official=True),'model-release')
+        # 官方渠道的业绩/财报类不进资讯；讯飞星火可由媒体源覆盖。
+        self.assertEqual(news_event('智谱首份业绩报告发布，探索AGI智能上界',official=True),None)
+        self.assertEqual(news_event('讯飞星火 X2.5 模型正式发布：293B-A30B MoE'),'model-release')
+
+    def test_transport_decompresses_forced_gzip(self):
+        body='<html>forced gzip</html>'.encode()
+        self.assertEqual(decompress(gzip.compress(body),'gzip'),body)
+        self.assertEqual(decompress(body,''),body)
+        self.assertEqual(decompress(body,'identity'),body)
+        with self.assertRaises(ValueError): decompress(b'not gzip','gzip')
+        with self.assertRaises(ValueError): decompress(gzip.compress(b'x'*8_000_001),'gzip')
 
     def test_aibase_list_tolerates_single_bad_article(self):
         title='千问APP新增保护功能'
