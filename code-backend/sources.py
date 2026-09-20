@@ -748,8 +748,10 @@ def collect_aibase_backfill(client,rows,source,now_dt,window_seconds):
     require(ids,'AIBase list produced no article ids')
     floor=min(ids)
     cutoff=now_dt-timedelta(seconds=window_seconds)
-    result=[]; deadline=time.monotonic()+900; stale=0
-    for identity in range(floor-1,max(floor-320,0),-1):
+    # 回补跨度越大、需要下探的 id 越多：按每天 45 篇封顶，另有连续 12 篇超窗即停。
+    span=max(320,min(1200,int(window_seconds/86400*45)))
+    result=[]; deadline=time.monotonic()+span*4; stale=0
+    for identity in range(floor-1,max(floor-span,0),-1):
         if stale>=12 or time.monotonic()>deadline:
             break
         url='https://www.aibase.com/zh/news/%d'%identity
@@ -1233,9 +1235,10 @@ def fill_news_summaries(client,items,summarize,limit=40):
 
     Article text is read in memory for drafting only and never persisted; failures stay
     empty and are retried on a later run. Only a bounded number of articles is read per
-    run, so a large archive cannot turn one collection into a crawl.
+    run, so a large archive cannot turn one collection into a crawl; backfill runs pass a
+    larger bound.
     """
-    pending=[]; deadline=time.monotonic()+240
+    pending=[]; deadline=time.monotonic()+max(240,limit*4)
     for item in items:
         if item.get('summary'):
             continue
@@ -1412,7 +1415,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
         current['event'][item['eventType']]=current['event'].get(item['eventType'],0)+1
     merged=sorted(old.get('items',[])+chosen,key=news_order)
     if summarize:
-        fill_news_summaries(client,merged,summarize)
+        fill_news_summaries(client,merged,summarize,limit=200 if backfill else 40)
     return dict(dataUpdatedAt=now,items=merged)
 
 
