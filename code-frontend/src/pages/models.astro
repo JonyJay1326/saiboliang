@@ -3,11 +3,11 @@
 // 版式线：拜将台（前三名）+ 点卯簿（第 4 名起，座次 / 入营 / 俸禄 / 战力 / 距榜首）。
 // 两榜切换为轻量显隐（原生脚本，见 §7.1 / §10.2），两榜均在构建期渲染。默认综合榜。
 import Base from '../layouts/Base.astro';
+import PageIntro from '../components/PageIntro.astro';
 import ToggleBar from '../components/ToggleBar.astro';
 import ModelPodium from '../components/ModelPodium.astro';
 import ModelRollRow from '../components/ModelRollRow.astro';
 import { models } from '../lib/data.js';
-import { toBeijing } from '../lib/format.js';
 
 const file = models();
 const r = file.rankings;
@@ -24,19 +24,23 @@ const withModel = (row) => ({ ...row, model: modelById.get(row.modelId) ?? null 
   description="Artificial Analysis 综合与编程两榜，附公开市场参考价。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <h1 class="page-title">
-    <img src="/font-images/sec-jiang.png" width="226" height="80" alt="点将台" />
-  </h1>
-  <p>
-    来源{' '}
-    <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">Artificial Analysis</a>
-    {r.indexVersion && ` · 指数版本 ${r.indexVersion}`}
-    {r.updatedAt && ` · 榜单时间 ${toBeijing(r.updatedAt)}`}
-  </p>
-  <p>俸禄单位为 USD / 百万 Token；报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。</p>
+  <PageIntro
+    eyebrow="MODEL MUSTER"
+    name="点将台"
+    image="/font-images/sec-jiang.png"
+    width={226}
+    height={80}
+    lede="AI 模型榜：把各家模型拉上点将台，综合与编程两榜依次点卯——战力看指数，俸禄看报价，谁堪大用一榜见分晓。"
+  >
+    <p class="page-intro__note">
+      俸禄单位为 USD / 百万 Token；报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。
+    </p>
+  </PageIntro>
 
   <div data-toggle data-toggle-current={DEFAULT}>
-    <ToggleBar label="榜单类型" options={boards} current={DEFAULT} />
+    <div class="board-switch">
+      <ToggleBar label="榜单类型" options={boards} current={DEFAULT} />
+    </div>
 
     {
       boards.map((board) => {

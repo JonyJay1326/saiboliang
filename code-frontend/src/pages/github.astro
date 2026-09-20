@@ -1,9 +1,10 @@
 ---
-// /github 观星台 —— frontend-spec §4.4
-// 周/月切换为轻量显隐（原生脚本，见 §7.1 / §10.2），两榜均在构建期渲染。
-// 默认周榜。
+// /github 观星台 —— frontend-spec.md §4.4
+// 星历表：表头（榜期 + 观测时间 + 来源芯片）+ 一行两列的榜单行（窄屏回落单列）+ 脚注。
+// 周/月切换为轻量显隐（原生脚本，见 §7.1 / §10.2），两榜均在构建期渲染。默认周榜。
 import Base from '../layouts/Base.astro';
-import GithubRow from '../components/GithubRow.astro';
+import PageIntro from '../components/PageIntro.astro';
+import GithubLedgerRow from '../components/GithubLedgerRow.astro';
 import ToggleBar from '../components/ToggleBar.astro';
 import { github } from '../lib/data.js';
 import { toBeijing } from '../lib/format.js';
@@ -11,8 +12,8 @@ import { toBeijing } from '../lib/format.js';
 const file = github();
 const DEFAULT = 'week';
 const boards = [
-  { key: 'week', label: '周榜', data: file.week },
-  { key: 'month', label: '月榜', data: file.month },
+  { key: 'week', label: '周榜', period: '本周', data: file.week },
+  { key: 'month', label: '月榜', period: '本月', data: file.month },
 ];
 ---
 <Base
@@ -20,34 +21,49 @@ const boards = [
   description="GitHub Trending AI 热门精选，按区间新增 star 降序。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <h1 class="page-title">
-    <img src="/font-images/sec-guanxing.png" width="228" height="80" alt="观星台" />
-  </h1>
-  <p>GitHub Trending · AI 热门精选。区间由 GitHub 定义，不标本站精确 7/30 天净增。</p>
+  <PageIntro
+    eyebrow="STAR DECK"
+    name="观星台"
+    image="/font-images/sec-guanxing.png"
+    width={228}
+    height={80}
+    lede="GitHub AI 热门项目榜：夜观星象，看本周、本月哪几颗新星正在升起，按区间新增 star 排位。"
+  >
+    <p class="page-intro__note">
+      GitHub Trending · AI 热门精选。区间由 GitHub 定义，不标本站精确 7/30 天净增。
+    </p>
+  </PageIntro>
 
   <div data-toggle data-toggle-current={DEFAULT}>
     <ToggleBar label="榜单周期" options={boards} current={DEFAULT} />
 
     {
       boards.map((board) => (
-        <section data-toggle-panel={board.key} hidden={board.key !== DEFAULT}>
-          <h2>{board.label}</h2>
-          <p>
-            来源{' '}
-            <a href={board.data.sourceUrl} target="_blank" rel="noopener noreferrer">
-              {board.data.sourceUrl}
-            </a>
-            {board.data.fetchedAt && ` · 抓取于 ${toBeijing(board.data.fetchedAt)}`}
-          </p>
-          {board.data.items.length === 0 ? (
-            <p>本期暂无符合条件的项目</p>
-          ) : (
-            <ol class="ranking">
-              {board.data.items.map((item, i) => (
-                <GithubRow item={item} index={i + 1} />
-              ))}
-            </ol>
-          )}
+        <section data-toggle-panel={board.key} hidden={board.key !== DEFAULT} aria-label={board.label}>
+          <div class="ledger">
+            <div class="ledger__head">
+              <span class="name">星历表</span>
+              <span class="date">
+                {board.period}
+                {board.data.fetchedAt && ` · 观测于 ${toBeijing(board.data.fetchedAt)}`}
+              </span>
+              <a class="sp chip" href={board.data.sourceUrl} target="_blank" rel="noopener noreferrer">
+                来源 GitHub Trending · 区间由来源定义
+              </a>
+            </div>
+            {board.data.items.length === 0 ? (
+              <p class="ledger__empty">本期暂无符合条件的项目</p>
+            ) : (
+              <ol>
+                {board.data.items.map((item, i) => (
+                  <GithubLedgerRow item={item} index={i + 1} />
+                ))}
+              </ol>
+            )}
+            <p class="ledger__foot">
+              星等 = 本周期新增 star；总 star 为参考。来源未提供本周期新增的项目显示「来源未提供」，排尾、不填 0。
+            </p>
+          </div>
         </section>
       ))
     }

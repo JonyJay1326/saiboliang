@@ -1,0 +1,14 @@
+---
+// 页头简介块（frontend-spec.md §4.2 / §4.4 / §4.5 / §4.6；2026-09-20 用户确认）：
+// 眉标（英文代号，等宽系统语）→ 板块名（字体图 H1）→ 导语（白话功能 + 粮站隐喻同句）→ 口径小字。
+// 口径小字由各页以 <p class="page-intro__note"> 传入（来源 / 计数 / 排序规则），保持逐页差异可见。
+const { eyebrow, name, image, width, height, lede } = Astro.props;
+---
+<header class="page-intro">
+  <p class="page-intro__eyebrow" lang="en">{eyebrow}</p>
+  <h1 class="page-title">
+    <img src={image} width={width} height={height} alt={name} />
+  </h1>
+  <p class="page-intro__lede">{lede}</p>
+  <slot />
+</header>

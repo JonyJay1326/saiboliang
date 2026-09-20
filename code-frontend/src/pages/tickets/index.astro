@@ -6,6 +6,7 @@
 // 筛选岛只接收「筛选与排序所需的 6 个字段」作为索引，不接收完整票证对象——
 // 避免卡片数据在 HTML 里重复两份（实测 content 字段就占序列化的 52%）。
 import Base from '../../layouts/Base.astro';
+import PageIntro from '../../components/PageIntro.astro';
 import TicketCard from '../../components/TicketCard.vue';
 import TicketsExplorer from '../../components/TicketsExplorer.vue';
 import { tickets } from '../../lib/data.js';
@@ -29,10 +30,16 @@ const index = list.map((t) => ({
   description="免费 AI 额度与试用活动列表，可筛选与排序。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <h1 class="page-title">
-    <img src="/font-images/sec-liangpiao.png" width="153" height="80" alt="粮票" />
-  </h1>
-  <p>共 {list.length} 张在架票（推荐分 ≥70）。默认排序：推荐分降序 → 收录时间降序。</p>
+  <PageIntro
+    eyebrow="FREE RATIONS"
+    name="粮票"
+    image="/font-images/sec-liangpiao.png"
+    width={153}
+    height={80}
+    lede="免费 AI 额度与试用：厂商开仓放粮，本站逐张验过才挂——期限、地区如实标注，领取入口直达官方。"
+  >
+    <p class="page-intro__note">共 {list.length} 张在架票（推荐分 ≥70）。默认排序：推荐分降序 → 收录时间降序。</p>
+  </PageIntro>
 
   <TicketsExplorer client:load index={index} />
 

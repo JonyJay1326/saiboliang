@@ -1,7 +1,8 @@
 ---
 // 拜将台卡（/models 前三名，frontend-spec §5.3）
 // 版式线：cache-tools/design-lab/dianjiangtai-v2.html（本机试作，不发布）；
-// 卡片取值全部来自 rankings 行与对应 models 记录，只读展示。
+// 装饰层 2026-09-20 用户确认从试作同步：大字水印（壹 / 贰 / 叁）+ 榜首常驻粒子。
+// 粒子位置 / 时长 / 延迟构建期写死，不依赖脚本；帅旗与将衔未采用。
 import { modelIcon, vendorInitial } from '../lib/vendors.js';
 import { modelPriceLabel } from '../lib/format.js';
 
@@ -10,8 +11,36 @@ const rank = row.rank;
 const name = model?.name ?? row.modelId;
 const vendor = model?.vendor ?? '';
 const icon = vendor ? modelIcon(vendor) : null;
+
+const GLYPHS = ['壹', '贰', '叁'];
+const glyph = GLYPHS[rank - 1] ?? null;
+
+// 榜首常驻彩色粒子（44 颗，全息色混站点金 / 青 / 朱），与试作同款参数；自下而上飘升。
+const PARTICLE_COLORS = ['#ff4fd8', '#b46bff', '#4f7dff', '#4fe0ff', '#fff', '#ffd98a', '#e8b73a', '#3fd9c0', '#c8342a', '#f5ecd8'];
+const particles =
+  rank === 1
+    ? Array.from({ length: 44 }, () => ({
+        left: (4 + Math.random() * 92).toFixed(1),
+        bottom: (-10 + Math.random() * 30).toFixed(1),
+        color: PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)],
+        duration: (6 + Math.random() * 5).toFixed(1),
+        delay: (Math.random() * -8).toFixed(1),
+      }))
+    : [];
 ---
 <article class={`podium__card podium__card--${rank}`}>
+  {glyph && <span class="podium__glyph" aria-hidden="true">{glyph}</span>}
+  {
+    particles.length > 0 && (
+      <span class="podium__aura" aria-hidden="true">
+        {particles.map((p) => (
+          <i
+            style={`left:${p.left}%;bottom:${p.bottom}%;background:${p.color};box-shadow:0 0 8px ${p.color};animation-duration:${p.duration}s;animation-delay:${p.delay}s`}
+          />
+        ))}
+      </span>
+    )
+  }
   <span class="podium__medal">
     <span class="visually-hidden">本站展示序号 </span>
     {rank}

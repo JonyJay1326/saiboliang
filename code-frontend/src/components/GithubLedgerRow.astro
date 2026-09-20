@@ -1,0 +1,20 @@
+---
+// 星历表行（/github，frontend-spec.md §5.2）
+// 序号 = 本站连续展示序号（号码牌）；语言 = 星域色芯片（纯展示派生，不入库）。
+// periodStars 为 null → 显示「来源未提供」，不填 0、不用总 star 代替。
+import { thous } from '../lib/format.js';
+
+const { item, index } = Astro.props;
+const period =
+  item.periodStars === null || item.periodStars === undefined
+    ? '来源未提供'
+    : `+${thous(item.periodStars)} ★`;
+---
+<li>
+  <span class="rank-badge" aria-label={`本站展示序号 ${index}`}>{index}</span>
+  <a class="repo" href={item.url} target="_blank" rel="noopener noreferrer">{item.repo}</a>
+  {item.language && <span class="chip chip--lang" data-lang={item.language}>{item.language}</span>}
+  <span class="val">{period}</span>
+  <span class="sub">总 {thous(item.stars)}</span>
+  {item.description && <span class="desc" title={item.description}>{item.description}</span>}
+</li>

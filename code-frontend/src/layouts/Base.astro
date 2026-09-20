@@ -19,6 +19,8 @@ const {
 
 const SITE_NAME = '赛博粮站';
 const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
+// 皮肤档切换控件开发期暂隐（2026-09-20 用户定）：两档全部开发完毕后再置 true 恢复显示。
+const SHOW_SKIN_TOGGLE = false;
 ---
 <!doctype html>
 <html lang="zh-CN" data-skin="plain" transition:animate="none">
@@ -124,6 +126,96 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
       }
     </script>
 
+    {/* 全页星尘（2026-09-20 用户确认：从点将台试作提为全站装饰层）：固定 canvas 二维飘尘。
+        静态纪律：prefers-reduced-motion 下不启动；软导航按 astro:page-load 重建、
+        astro:before-swap 释放（frontend-spec §7.4）。 */}
+    <script>
+      // 点将台试作同步的全站装饰层（2026-09-20 用户确认全站铺开）。
+      // 走 Astro 打包（非 is:inline）：脚本只下一次并跨页缓存，不给每张 HTML 增重。
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+      const palette = ['#e8b73a', '#e8b73a', '#3fd9c0', '#f5ecd8'];
+      let release = null;
+
+      const boot = () => {
+        release?.();
+        release = null;
+        const canvas = document.querySelector('[data-bg-motes]');
+        const ctx = canvas?.getContext('2d');
+        if (!ctx) return;
+
+        const controller = new AbortController();
+        const { signal } = controller;
+        let width = 0, height = 0, frame = 0, previous = 0, dust = [];
+
+        const resize = () => {
+          const density = Math.min(devicePixelRatio || 1, 2);
+          width = innerWidth;
+          height = innerHeight;
+          canvas.width = Math.round(width * density);
+          canvas.height = Math.round(height * density);
+          ctx.setTransform(density, 0, 0, density, 0, 0);
+          const count = Math.min(160, Math.max(60, Math.round((width * height) / 15000)));
+            dust = Array.from({ length: count }, () => ({
+              x: Math.random() * width, y: Math.random() * height, r: 0.3 + Math.random() * 1.6,
+              fall: 5 + Math.random() * 15, sway: 0.3 + Math.random() * 0.7,
+              phase: Math.random() * 6.2832, glow: 0.35 + Math.random() * 0.55,
+              twinkle: 0.5 + Math.random() * 1.4,
+              color: palette[Math.floor(Math.random() * palette.length)],
+            }));
+        };
+
+        const stop = () => {
+          cancelAnimationFrame(frame);
+          frame = 0;
+          previous = 0;
+          ctx.clearRect(0, 0, width, height);
+        };
+
+        const tick = (now) => {
+          frame = 0;
+          if (reduced.matches || document.hidden || !canvas.isConnected) return;
+          const dt = Math.min((now - (previous || now)) / 1000, 0.05);
+          previous = now;
+          const seconds = now / 1000;
+          ctx.clearRect(0, 0, width, height);
+          for (const mote of dust) {
+            mote.y += mote.fall * dt;
+            mote.x += Math.sin(seconds * mote.sway + mote.phase) * 7 * dt;
+            if (mote.y > height + 6) { mote.y = -6; mote.x = Math.random() * width; }
+            if (mote.x < -8) mote.x = width + 8;
+            else if (mote.x > width + 8) mote.x = -8;
+            ctx.globalAlpha = mote.glow * (0.55 + 0.45 * Math.sin(seconds * mote.twinkle + mote.phase));
+            ctx.fillStyle = mote.color;
+            ctx.beginPath();
+            ctx.arc(mote.x, mote.y, mote.r, 0, 6.2832);
+            ctx.fill();
+          }
+          ctx.globalAlpha = 1;
+          frame = requestAnimationFrame(tick);
+        };
+
+        const start = () => {
+          if (!frame && !reduced.matches && !document.hidden && canvas.isConnected) {
+            previous = 0;
+            frame = requestAnimationFrame(tick);
+          }
+        };
+
+        const onVisibility = () => (document.hidden ? stop() : start());
+        const onReducedChange = () => (reduced.matches ? stop() : start());
+        release = () => { controller.abort(); stop(); };
+
+        resize();
+        window.addEventListener('resize', resize, { signal });
+        document.addEventListener('visibilitychange', onVisibility, { signal });
+        reduced.addEventListener('change', onReducedChange, { signal });
+        start();
+      };
+
+      document.addEventListener('astro:before-swap', () => { release?.(); release = null; });
+      document.addEventListener('astro:page-load', boot);
+    </script>
+
     {/* 详情弹框预览（frontend-spec §5.10 票证 / §5.11 套餐）。
         渐进增强：`<a href="/tickets/xxx/">`、`<a href="/plans/xxx/">` 保持真链接——
         爬虫可抓、新窗口可开、无 JS 正常跳转、直接访问该 URL 仍是完整独立页。
@@ -145,12 +237,14 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
 
         let overlay = null;
         let panel = null;
+        let scroller = null;
         let content = null;
         let lastFocus = null;
         let fromUrl = null;
 
         // 软导航会整体替换 <body>，缓存节点随之离线——必须以「是否仍在文档中」判断重建，
         // 否则第二次打开弹框时 build() 直接返回，弹框永远不出现（2026-09-18 实测踩坑）。
+        // 结构（2026-09-20）：外框不滚动，顶栏吸在框内、滚动区独立——关闭键与边框角标不随内容滚走。
         const build = () => {
           if (overlay && overlay.isConnected) return;
           overlay = document.createElement('div');
@@ -162,11 +256,18 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
           overlay.innerHTML =
             '<div class="preview__backdrop" data-preview-close></div>' +
             '<div class="preview__panel" tabindex="-1">' +
-            '<button type="button" class="preview__close" data-preview-close aria-label="关闭预览">关闭</button>' +
+            '<div class="preview__bar">' +
+            '<button type="button" class="preview__close" data-preview-close aria-label="关闭预览">' +
+            '<span class="preview__close-x" aria-hidden="true">✕</span>关闭' +
+            '</button>' +
+            '</div>' +
+            '<div class="preview__scroll">' +
             '<div class="preview__content" data-preview-content></div>' +
+            '</div>' +
             '</div>';
           document.body.appendChild(overlay);
           panel = overlay.querySelector('.preview__panel');
+          scroller = overlay.querySelector('.preview__scroll');
           content = overlay.querySelector('[data-preview-content]');
         };
 
@@ -175,14 +276,18 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
             (el) => !el.hasAttribute('disabled') && el.offsetParent !== null
           );
 
+        // 锁滚动时补回滚动条宽度，否则弹框一开、背后整页向右跳一下（2026-09-20）。
         const lockScroll = () => {
+          const gap = window.innerWidth - document.documentElement.clientWidth;
           document.documentElement.style.overflow = 'hidden';
           document.body.style.overflow = 'hidden';
+          if (gap > 0) document.body.style.paddingRight = gap + 'px';
         };
 
         const unlockScroll = () => {
           document.documentElement.style.overflow = '';
           document.body.style.overflow = '';
+          document.body.style.paddingRight = '';
         };
 
         const close = () => {
@@ -202,8 +307,8 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
           overlay.hidden = false;
           lockScroll();
           overlay.setAttribute('aria-busy', 'true');
-          content.innerHTML = '<p>正在取件…</p>';
-          panel.scrollTop = 0;
+          content.innerHTML = '<p class="preview__loading">正在取件…</p>';
+          if (scroller) scroller.scrollTop = 0;
           panel.focus();
           window.history.replaceState(window.history.state, '', url);
           try {
@@ -217,9 +322,17 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
             main
               .querySelectorAll('script, [aria-labelledby="verify"], [aria-labelledby="related"]')
               .forEach((el) => el.remove());
+            // 详情页顶部的「← 返回粮票 / 返回套餐榜」在弹框里是噪音——关闭即回到打开前地址，
+            // 同样只在弹框内去掉（独立详情页保留）。
+            main.querySelectorAll('p').forEach((p) => {
+              const a = p.querySelector('a');
+              if (a && a.textContent.trim() === p.textContent.trim() && /^\/(tickets|plans)\/$/.test(a.getAttribute('href') || '')) {
+                p.remove();
+              }
+            });
             content.innerHTML = main.innerHTML;
           } catch {
-            content.innerHTML = '<p>取件失败，<a href="' + url + '">直接打开详情页</a>。</p>';
+            content.innerHTML = '<p class="preview__error">取件失败，<a href="' + url + '">直接打开详情页</a>。</p>';
           } finally {
             overlay.removeAttribute('aria-busy');
           }
@@ -270,11 +383,24 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
             first.focus();
           }
         });
+
+        // 弹框内点走真实导航（回列表链接、外链之外的站内链）时，软导航只换 <body>：
+        // 缓存的弹框节点离线、<html> 上的内联 overflow 却会留下——不清理就会带着滚动锁进新页
+        //（2026-09-20 实测踩坑）。这里只复位状态，不动 history。
+        document.addEventListener('astro:after-swap', () => {
+          if (!overlay) return;
+          overlay.hidden = true;
+          unlockScroll();
+          fromUrl = null;
+          lastFocus = null;
+        });
       }
     </script>
   </head>
 
   <body>
+    {/* 全站星尘画布：固定层压在内容之下（site.css .bg-motes，z-index -1） */}
+    <canvas class="bg-motes" data-bg-motes aria-hidden="true"></canvas>
     {/* 菜单条吸顶；站名横额与菜单同行，滚动后收起（2026-09-18 用户校正）。 */}
     <header class="menubar">
       <div class="menubar__inner">
@@ -282,7 +408,7 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
           <img src="/font-images/brand.png" width="753" height="184" alt="赛博粮站" />
         </a>
         <Nav />
-        <SkinToggle />
+        {SHOW_SKIN_TOGGLE && <SkinToggle />}
       </div>
     </header>
 

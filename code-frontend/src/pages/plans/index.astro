@@ -1,9 +1,12 @@
 ---
 // /plans 粮市 —— frontend-spec §4.6
 // 分组选择为轻量显隐（原生脚本，见 §7.1 / §10.2），两组均在构建期渲染并排好序。
-// 列表卡只展示精简字段（§5.4）；完整信息在 /plans/[id]/，点标题弹框预览（§5.11）。
-// 默认国内组。
+// 列表卡只展示精简字段（§5.4）；完整信息在 /plans/[id]/，整卡可点、弹框预览（§5.11）。
+// 默认东市（国内组）。
+// 东西两市（2026-09-20 用户确认）：东市 = 国内组、西市 = 海外组；
+// 契约 group 值（domestic / overseas）不变，这里只换界面话术（frontend-spec §4.6）。
 import Base from '../../layouts/Base.astro';
+import PageIntro from '../../components/PageIntro.astro';
 import PlanCard from '../../components/PlanCard.astro';
 import ToggleBar from '../../components/ToggleBar.astro';
 import { models } from '../../lib/data.js';
@@ -14,8 +17,8 @@ const DEFAULT = 'domestic';
 
 // 默认排序 = 人工编辑推荐序 rank（契约 §4.3）；缺省排后，兜底按起步价、id。
 const groups = [
-  { key: 'domestic', label: '国内' },
-  { key: 'overseas', label: '海外' },
+  { key: 'domestic', label: '东市', heading: '东市 · 国内' },
+  { key: 'overseas', label: '西市', heading: '西市 · 海外' },
 ].map((group) => ({
   ...group,
   items: file.plans
@@ -33,18 +36,26 @@ const groups = [
   description="国内外编程订阅套餐比价，默认按本站编辑推荐序（人工维护）。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <h1 class="page-title">
-    <img src="/font-images/sec-shi.png" width="157" height="80" alt="粮市" />
-  </h1>
-  <p>共 {file.plans.length} 个套餐。默认按本站编辑推荐序（人工维护，综合模型能力、额度与价格）；未评级排后。</p>
+  <PageIntro
+    eyebrow="GRAIN MARKET"
+    name="粮市"
+    image="/font-images/sec-shi.png"
+    width={157}
+    height={80}
+    lede="AI 编程订阅套餐榜：粮市分东西两市——东市摆国内套餐，西市摆海外套餐；同市比价、不跨市换算，价目与额度以官方页为准。"
+  >
+    <p class="page-intro__note">
+      共 {file.plans.length} 个套餐，按本站编辑推荐序排开（人工维护，综合模型能力、额度与价格）；未评级排后。
+    </p>
+  </PageIntro>
 
   <div data-toggle data-toggle-current={DEFAULT}>
-    <ToggleBar label="产品分组" options={groups} current={DEFAULT} />
+    <ToggleBar label="粮市分组：东市（国内）/ 西市（海外）" options={groups} current={DEFAULT} />
 
     {
       groups.map((group) => (
         <section data-toggle-panel={group.key} hidden={group.key !== DEFAULT}>
-          <h2>{group.label}</h2>
+          <h2>{group.heading}</h2>
           <ul class="cards">
             {group.items.map((plan, i) => (
               <li>
