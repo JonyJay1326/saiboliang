@@ -1,38 +1,38 @@
 {
   "tickets": {
-    "lastSuccess": "2026-09-19T14:28:42Z",
-    "lastAttempt": "2026-09-19T14:28:42Z",
+    "lastSuccess": "2026-09-20T13:56:24Z",
+    "lastAttempt": "2026-09-20T13:56:24Z",
     "error": null,
-    "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
+    "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
   "models": {
-    "lastSuccess": "2026-09-19T08:34:21Z",
-    "lastAttempt": "2026-09-19T08:34:21Z",
+    "lastSuccess": "2026-09-20T13:56:24Z",
+    "lastAttempt": "2026-09-20T13:56:24Z",
     "error": null,
-    "configHash": "ab251c64ff254a49543f5a2ccacd79f335ff82a275554a8963c38d35198402d7"
+    "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
   "aa": {
-    "lastSuccess": "2026-09-19T08:34:21Z",
+    "lastSuccess": "2026-09-20T13:56:24Z",
     "count": 653
   },
   "github": {
-    "lastSuccess": "2026-09-20T06:51:22Z",
-    "lastAttempt": "2026-09-20T06:51:22Z",
+    "lastSuccess": "2026-09-20T13:56:24Z",
+    "lastAttempt": "2026-09-20T13:56:24Z",
     "error": null,
     "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
   "github-weekly": {
-    "lastSuccess": "2026-09-20T06:51:22Z",
-    "count": 175
+    "lastSuccess": "2026-09-20T13:56:24Z",
+    "count": 172
   },
   "github-monthly": {
-    "lastSuccess": "2026-09-20T06:51:22Z",
-    "count": 192
+    "lastSuccess": "2026-09-20T13:56:24Z",
+    "count": 195
   },
   "news": {
     "lastSuccess": "2026-09-20T08:36:28Z",
-    "lastAttempt": "2026-09-20T08:36:28Z",
-    "error": null,
+    "lastAttempt": "2026-09-20T13:56:24Z",
+    "error": "Seed article redirected unexpectedly",
     "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
   "aibase": {

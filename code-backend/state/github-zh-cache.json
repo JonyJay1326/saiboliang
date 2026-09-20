@@ -54,18 +54,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "metadist/synaplan": {
-    "text": "我们的 AI 控制平面，用于快速部署。与各种模型对话，让代理使用 MCP，获得支持聊天组件以及更多工具。使用智能 DAG 路由节省 token！我们接受 Go、Rust、Python、NodeJS 等插件。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "tech-leads-club/agent-skills": {
     "text": "面向专业 AI 编码代理的安全、经过验证的技能注册表。以绝对信心扩展 Antigravity、Claude Code、Cursor、Copilot 等。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "NVIDIA-NeMo/Switchyard": {
-    "text": "Switchyard 让 LLM 应用在模型和提供商之间路由流量，同时保持原生 OpenAI 和 Anthropic API 兼容性——实现灵活的模型选择、基准测试和成本/性能优化。",
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
@@ -83,5 +73,15 @@
     "text": "面向 Laravel 的 MCP 服务器，用于增强你的 AI 驱动本地开发体验。",
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
+  },
+  "microsoft/AI-Engineering-Coach": {
+    "text": "更好的智能体工程",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T13:56:24Z"
+  },
+  "openai/tunnel-client": {
+    "text": "Secure MCP Tunnel 的客户自运行客户端：将私有或本地 MCP 服务器连接到 ChatGPT、Codex、Responses API 和 AgentKit，无需暴露到公网。",
+    "source": "deepseek-flash",
+    "at": "2026-09-20T13:56:24Z"
   }
 }
