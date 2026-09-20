@@ -1273,61 +1273,72 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     candidates=[]; now_dt=datetime.fromisoformat(now)
     known={item['id'] for item in old.get('items',[])}
     seen=set()
+    # 逐源隔离（2026-09-20 用户拍板）：单源失败只跳过该源并记待确认，其余源照常入库；
+    # 全部源失败才算模块失败（届时按契约保留整份旧文件与旧时间）。
+    collected=0; failures=[]
     for source in sources:
-        raw,final=client.get(source['url'])
-        # 失败信息带源 id 与落点：源级跳转在 CI 出口地区偶发，必须能一眼定位（2026-09-20）。
-        require(normalize_url(final)==normalize_url(source['url']),
-                'news source redirected unexpectedly: '+source['id']+' -> '+normalize_url(final))
-        adapter=source.get('adapter','rss')
-        require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog'),'unknown news adapter')
-        official=source.get('official') is True
-        if adapter=='aibase':
-            rows=collect_aibase(client,raw,source,review)
-            if backfill:
-                # 列表页只带最新文章，回补时按 id 下探到更早的页面（一次性路径）。
-                rows=rows+collect_aibase_backfill(client,rows,source,now_dt,window_seconds)
-        elif adapter=='deepseek-news':
-            rows=parse_deepseek_news(decode(raw),source)
-        elif adapter=='anthropic-news':
-            rows=parse_anthropic_news(raw,source)
-        elif adapter=='zhipu-news':
-            rows=parse_zhipu_news(raw,source)
-        elif adapter=='tencent-announce':
-            rows=parse_tencent_announcements(raw,source)
-        elif adapter=='alibaba-bailian':
-            rows=parse_bailian(raw,source)
-        elif adapter=='tencent-tokenhub':
-            rows=parse_tokenhub_dynamics(raw,source)
-        elif adapter=='baidu-qianfan':
-            rows=parse_qianfan(raw,source)
-        elif adapter=='kimi-blog':
-            rows=parse_kimi_blog(raw,source)
-        elif adapter=='xai-sitemap':
-            rows=collect_xai(client,raw,source,now,window_seconds)
-        elif adapter=='seed-blog':
-            rows=collect_seed(client,raw,source,now,window_seconds)
-        elif adapter=='minimax-blog':
-            rows=collect_minimax(client,raw,source)
-        elif adapter=='huggingface-models':
-            rows=parse_huggingface_models(raw,source)
-        else:
-            rows=parse_feed(raw,source,review)
-        if source.get('guard',True):
-            guard(source['id'],len(rows))
-        for row in rows:
-            # Contract §4.5 URL normalization: keep article identity stable and strip tracking parameters.
-            row=dict(row,sourceUrl=normalize_url(row['sourceUrl']))
-            identity=digest(row['sourceUrl'])
-            if identity in known or identity in seen:
-                continue
-            seen.add(identity)
-            age=(now_dt-datetime.fromisoformat(row['publishedAt'])).total_seconds()
-            if age < -300:
-                review('news-future',identity,'publication is in the future',row)
-                continue
-            if age > window_seconds:
-                continue
-            candidates.append((row,official,source))
+        try:
+            raw,final=client.get(source['url'])
+            # 失败信息带源 id 与落点：源级跳转在 CI 出口地区偶发，必须能一眼定位（2026-09-20）。
+            require(normalize_url(final)==normalize_url(source['url']),
+                    'news source redirected unexpectedly: '+source['id']+' -> '+normalize_url(final))
+            adapter=source.get('adapter','rss')
+            require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog'),'unknown news adapter')
+            official=source.get('official') is True
+            if adapter=='aibase':
+                rows=collect_aibase(client,raw,source,review)
+                if backfill:
+                    # 列表页只带最新文章，回补时按 id 下探到更早的页面（一次性路径）。
+                    rows=rows+collect_aibase_backfill(client,rows,source,now_dt,window_seconds)
+            elif adapter=='deepseek-news':
+                rows=parse_deepseek_news(decode(raw),source)
+            elif adapter=='anthropic-news':
+                rows=parse_anthropic_news(raw,source)
+            elif adapter=='zhipu-news':
+                rows=parse_zhipu_news(raw,source)
+            elif adapter=='tencent-announce':
+                rows=parse_tencent_announcements(raw,source)
+            elif adapter=='alibaba-bailian':
+                rows=parse_bailian(raw,source)
+            elif adapter=='tencent-tokenhub':
+                rows=parse_tokenhub_dynamics(raw,source)
+            elif adapter=='baidu-qianfan':
+                rows=parse_qianfan(raw,source)
+            elif adapter=='kimi-blog':
+                rows=parse_kimi_blog(raw,source)
+            elif adapter=='xai-sitemap':
+                rows=collect_xai(client,raw,source,now,window_seconds)
+            elif adapter=='seed-blog':
+                rows=collect_seed(client,raw,source,now,window_seconds)
+            elif adapter=='minimax-blog':
+                rows=collect_minimax(client,raw,source)
+            elif adapter=='huggingface-models':
+                rows=parse_huggingface_models(raw,source)
+            else:
+                rows=parse_feed(raw,source,review)
+            if source.get('guard',True):
+                guard(source['id'],len(rows))
+            for row in rows:
+                # Contract §4.5 URL normalization: keep article identity stable and strip tracking parameters.
+                row=dict(row,sourceUrl=normalize_url(row['sourceUrl']))
+                identity=digest(row['sourceUrl'])
+                if identity in known or identity in seen:
+                    continue
+                seen.add(identity)
+                age=(now_dt-datetime.fromisoformat(row['publishedAt'])).total_seconds()
+                if age < -300:
+                    review('news-future',identity,'publication is in the future',row)
+                    continue
+                if age > window_seconds:
+                    continue
+                candidates.append((row,official,source))
+            collected+=1
+        except (ValueError,KeyError,TypeError,UnicodeError) as exc:
+            message=source['id']+': '+str(exc)
+            failures.append(message)
+            review('news-source',source['id'],str(exc),dict(url=source['url']))
+            print('news source skipped: '+message,flush=True)
+    require(collected,'all news sources failed: '+'; '.join(failures))
     machine={}
     if translate:
         pending=[dict(id=digest(row['sourceUrl']),title=row['title'],summary=row.get('summary'))

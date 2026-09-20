@@ -107,7 +107,7 @@ def promote(candidate,output):
 REVIEW_OWNER={'github-page':'github','github-classification':'github','github-translate':'github',
               'models':'models','model-mapping':'models','model-price':'models','plans':'models',
               'news-item':'news','news-original':'news','news-future':'news','news-translate':'news',
-              'news-summary':'news'}
+              'news-summary':'news','news-source':'news'}
 
 
 class Run:

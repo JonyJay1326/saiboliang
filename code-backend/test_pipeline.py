@@ -306,6 +306,22 @@ class PipelineTests(unittest.TestCase):
                          ['https://www.aibase.com/zh/news/102','https://www.aibase.com/zh/news/100'])
         self.assertTrue(all(r['source']=='AIBase' for r in found))
 
+    def test_news_isolates_a_failing_source(self):
+        feed=('<rss><channel><item><title>示例模型正式发布</title><link>https://vendor.example/a</link>'
+              '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>')
+        good=dict(id='good',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        bad=dict(id='bad',name='坏源',url='https://bad.example/feed')
+        reviews=[]
+        data=collect_news(FakeClient(documents={good['url']:feed}),[bad,good],{}, {}, NOW,
+                          lambda *x:None,lambda *x:reviews.append(x))
+        # 单源失败只跳过该源：其余源照常入库，并记一条待确认（对象为源 id）。
+        self.assertEqual(len(data['items']),1)
+        self.assertEqual(data['items'][0]['source'],'示例厂商官方')
+        self.assertEqual([(r[0],r[1]) for r in reviews],[('news-source','bad')])
+        # 全部源失败才按模块失败处理（上层保留整份旧文件）。
+        with self.assertRaises(ValueError):
+            collect_news(FakeClient(),[bad],{}, {}, NOW,lambda *x:None,lambda *x:None)
+
     def test_news_summary_generation_cache_and_review(self):
         item=dict(id='a1',title='示例标题',text='来源片段')
         reply=dict(choices=[dict(message=dict(content=json.dumps({'a1':{'summary':'一句中文简介。'}},ensure_ascii=False)))])
