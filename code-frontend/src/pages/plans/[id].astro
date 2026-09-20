@@ -10,7 +10,7 @@ import {
   startingPriceLabel,
   tierPrice,
 } from '../../lib/format.js';
-import { planIconUrl, vendorInitial } from '../../lib/vendors.js';
+import { planIcon, vendorInitial } from '../../lib/vendors.js';
 
 export function getStaticPaths() {
   return models().plans.map((plan) => ({ params: { id: plan.id }, props: { plan } }));
@@ -19,7 +19,7 @@ export function getStaticPaths() {
 const { plan } = Astro.props;
 const file = models();
 
-const icon = planIconUrl(plan.vendor);
+const icon = planIcon(plan.vendor);
 const statusLabel = planStatusLabel(plan.status);
 const sourceNote = planSourceLabel(plan.source);
 
@@ -69,7 +69,13 @@ const jsonLd = {
       <h1 class="plan-detail__title">
         {
           icon ? (
-            <img class="plan-card__icon" src={icon} alt="" width="32" height="32" />
+            <img
+              class={icon.mono ? 'plan-card__icon plan-card__icon--mono' : 'plan-card__icon'}
+              src={icon.url}
+              alt=""
+              width="32"
+              height="32"
+            />
           ) : (
             <span class="plan-card__icon plan-card__icon--initial" aria-hidden="true">
               {vendorInitial(plan.vendor)}

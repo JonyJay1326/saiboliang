@@ -1,6 +1,6 @@
 ---
-// GitHub 榜单行（frontend-spec §5.2）
-// 展示序号用「号码牌」承载（区别于来源页内位置）；sourceRank 跨条目可重复，不渲染成全局名次。
+// GitHub 榜单行（frontend-spec.md §5.2）
+// 展示序号用「号码牌」承载；sourceRank 不再展示（2026-09-18），但仍不得当唯一标识。
 import { thous } from '../lib/format.js';
 
 const { item, index } = Astro.props;
@@ -11,6 +11,5 @@ const { item, index } = Astro.props;
   {item.language && <span class="badge">{item.language}</span>}
   <span>★ {thous(item.stars)}</span>
   <span>区间 {item.periodStars === null ? '来源未提供' : `+${thous(item.periodStars)}`}</span>
-  <span class="source-rank">来源页内第 {item.sourceRank} 位</span>
   {item.description && <p class="desc">{item.description}</p>}
 </li>

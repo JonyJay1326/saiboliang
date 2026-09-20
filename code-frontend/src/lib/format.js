@@ -88,6 +88,48 @@ export function expiredLabel(ticket) {
   return ticket?.expiryDate ? '已作废' : '已结束';
 }
 
+/**
+ * 推荐分展示分档（2026-09-18 用户定，前端只读派生）：
+ * 甲等 = >90；乙等 = 80–90；丙等 = 70–79；<70 不上架（返回 null）。
+ * 用老票证/执照的甲乙丙分等，贴合站点「古意 · 批号感」。
+ */
+export function scoreTier(score) {
+  if (typeof score !== 'number') return null;
+  if (score > 90) return '甲';
+  if (score >= 80) return '乙';
+  if (score >= 70) return '丙';
+  return null;
+}
+
+/**
+ * 上架票证（2026-09-18 用户定）：
+ * 推荐分 ≥70 且未失效；<70 与已失效全站不展示（含详情页不生成、sitemap 排除）。
+ */
+export function listedTickets(list) {
+  return list.filter((t) => t.expired !== true && scoreTier(t.score) !== null);
+}
+
+// ---------------------------------------------------------------- 模型（/models）
+
+/** 模型报价展示（USD / 百万 Token）：`$10`、`$0.15`；null 显示「—」。 */
+export function usdPrice(n) {
+  if (n === null || n === undefined || Number.isNaN(Number(n))) return '—';
+  return `$${Number(n)}`;
+}
+
+/** 契约 §4.3：输入 / 输出俸禄展示；两者均无报价时统一显示「暂无对应报价」。 */
+export function modelPriceLabel(model) {
+  if (!model || (model.inputCost === null && model.outputCost === null)) return '暂无对应报价';
+  return `${usdPrice(model.inputCost)} / ${usdPrice(model.outputCost)}`;
+}
+
+/** 前端只读派生：距榜首 = 榜首 score − 本行 score（同榜内，取两位内差值，去浮点噪声）。 */
+export function scoreGap(topScore, score) {
+  const gap = Math.round((Number(topScore) - Number(score)) * 100) / 100;
+  if (Number.isNaN(gap)) return '—';
+  return gap > 0 ? `-${gap}` : `${gap}`;
+}
+
 // ---------------------------------------------------------------- 套餐（/plans）
 
 /** 币种符号。契约只允许 CNY / USD。 */
@@ -130,6 +172,11 @@ export function startingPriceLabel(plan) {
 /** 排序用：起步价数值，无价视为正无穷（排最后）。 */
 export function startingPriceValue(plan) {
   return startingPrice(plan)?.price ?? Number.POSITIVE_INFINITY;
+}
+
+/** 排序用：编辑推荐序 `rank`，缺省视为正无穷（排最后）。契约 §4.3。 */
+export function planRankValue(plan) {
+  return typeof plan?.rank === 'number' ? plan.rank : Number.POSITIVE_INFINITY;
 }
 
 /** 契约 §4.3 的 status → 状态角标文案。 */

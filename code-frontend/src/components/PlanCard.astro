@@ -5,11 +5,11 @@
 // 完整信息（tagline、highlights、档位要点、条件、来源）在详情页 /plans/[id]/，
 // 列表页点标题弹框预览（§5.11）。
 import { planStatusLabel, startingPriceLabel, tierPrice } from '../lib/format.js';
-import { planIconUrl, vendorInitial } from '../lib/vendors.js';
+import { planIcon, vendorInitial } from '../lib/vendors.js';
 
 const { plan, index } = Astro.props;
 
-const icon = planIconUrl(plan.vendor);
+const icon = planIcon(plan.vendor);
 const CHIP_LIMIT = 4;
 const chips = plan.models.slice(0, CHIP_LIMIT);
 const restChips = plan.models.length - chips.length;
@@ -19,7 +19,15 @@ const restChips = plan.models.length - chips.length;
     <span class="rank-badge" aria-label={`展示序号 ${index}`}>{index}</span>
     {
       icon ? (
-        <img class="plan-card__icon" src={icon} alt="" width="24" height="24" loading="lazy" decoding="async" />
+        <img
+          class={icon.mono ? 'plan-card__icon plan-card__icon--mono' : 'plan-card__icon'}
+          src={icon.url}
+          alt=""
+          width="24"
+          height="24"
+          loading="lazy"
+          decoding="async"
+        />
       ) : (
         <span class="plan-card__icon plan-card__icon--initial" aria-hidden="true">{vendorInitial(plan.vendor)}</span>
       )

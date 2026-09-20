@@ -32,5 +32,5 @@ export const EVENT_TYPE = {
 export const SORT_VIEWS = [
   { key: 'default', label: '默认' },
   { key: 'newest', label: '最新' },
-  { key: 'score', label: '分数最高' },
+  { key: 'score', label: '等级最高' },
 ];

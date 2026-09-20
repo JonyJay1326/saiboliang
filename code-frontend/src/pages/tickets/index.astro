@@ -1,7 +1,7 @@
 ---
 // /tickets 粮票总览 —— frontend-spec §4.2、§5.6
 //
-// 不设精选上限，全量渲染（契约 §4.2）。
+// 上架规则（2026-09-18 用户定）：推荐分 <70 与已失效票全站不展示；其余全量渲染（契约 §4.2）。
 // 卡片在本页构建期渲染成静态 HTML（无 JS 可读、SEO 可抓）；
 // 筛选岛只接收「筛选与排序所需的 6 个字段」作为索引，不接收完整票证对象——
 // 避免卡片数据在 HTML 里重复两份（实测 content 字段就占序列化的 52%）。
@@ -9,10 +9,10 @@ import Base from '../../layouts/Base.astro';
 import TicketCard from '../../components/TicketCard.vue';
 import TicketsExplorer from '../../components/TicketsExplorer.vue';
 import { tickets } from '../../lib/data.js';
-import { ticketDefaultOrder } from '../../lib/format.js';
+import { listedTickets, ticketDefaultOrder } from '../../lib/format.js';
 
 const file = tickets();
-const list = [...file.tickets].sort(ticketDefaultOrder);
+const list = listedTickets([...file.tickets]).sort(ticketDefaultOrder);
 
 const index = list.map((t) => ({
   id: t.id,
@@ -26,11 +26,13 @@ const index = list.map((t) => ({
 ---
 <Base
   title="粮票"
-  description="免费 AI 额度与试用活动全量列表，可筛选与排序。"
+  description="免费 AI 额度与试用活动列表，可筛选与排序。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <h1>粮票</h1>
-  <p>共 {list.length} 张（含已失效）。默认排序：未失效在前 → 推荐分降序 → 收录时间降序。</p>
+  <h1 class="page-title">
+    <img src="/font-images/sec-liangpiao.png" width="153" height="80" alt="粮票" />
+  </h1>
+  <p>共 {list.length} 张在架票（推荐分 ≥70）。默认排序：推荐分降序 → 收录时间降序。</p>
 
   <TicketsExplorer client:load index={index} />
 

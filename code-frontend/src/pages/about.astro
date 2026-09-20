@@ -1,14 +1,19 @@
 ---
-// /about 关于 —— frontend-spec §4.10
+// /about 关于 —— frontend-spec §4.9
 import Base from '../layouts/Base.astro';
 import { github, models, news, tickets, version } from '../lib/data.js';
+import { listedTickets } from '../lib/format.js';
 
 const batch = version().version;
 const enabledNewsSources = news().items.map((n) => n.source);
 const plans = models().plans;
 const vendors = [...new Set(plans.map((p) => p.vendor))];
+
+// 页脚核验时间取所消费模块里最早的一个（最保守口径，与首页一致）。
+const times = [tickets().dataUpdatedAt, models().dataUpdatedAt, github().dataUpdatedAt].filter(Boolean);
+const oldest = times.sort()[0] ?? null;
 ---
-<Base title="关于" description="站点说明、数据来源清单与推广披露。">
+<Base title="关于" description="站点说明、数据来源清单与推广披露。" dataUpdatedAt={oldest}>
   <h1>关于</h1>
 
   <section aria-labelledby="about-site">
@@ -48,8 +53,8 @@ const vendors = [...new Set(plans.map((p) => p.vendor))];
         <tr>
           <td>免费活动（人工维护）</td>
           <td>
-            票证由人工整理并核验证据页（当前 {tickets().tickets.length} 条），
-            不自动抓取；失效与期限如实标注，不确定的标为「未核实」。
+            票证由人工整理并核验证据页（当前在架 {listedTickets(tickets().tickets).length} 条，
+            推荐分 70 及以上且在架才展示），不自动抓取；期限如实标注，不确定的标为「未核实」。
           </td>
         </tr>
         <tr>
@@ -66,7 +71,7 @@ const vendors = [...new Set(plans.map((p) => p.vendor))];
   <section aria-labelledby="about-promo">
     <h2 id="about-promo">推广披露</h2>
     <p>
-      票证卡上的「含推广」角标表示该链接为推广链接。标记为推广**不影响排序**——
+      票证卡上的「含推广」角标表示该链接为推广链接。标记为推广<strong>不影响排序</strong>——
       票证的排序规则（未失效 → 推荐分 → 收录时间）全部公开在
       <a href="/tickets/">粮票</a>页说明中。
     </p>

@@ -285,20 +285,27 @@
   "OpenCode": "opencode",
   "Kimi": "kimi",
   "月之暗面": "moonshot",
+  "月之暗面 Kimi": "kimi",
   "MiniMax": "minimax",
   "ChatGPT": "openai",
+  "OpenAI": "openai",
   "Claude": "claude",
+  "Anthropic": "claude",
   "Google": "gemini",
   "Grok": "grok",
+  "xAI": "xai",
   "Meta": "meta",
   "阿里云百炼": "bailian",
   "火山引擎方舟": "volcengine",
   "小米 MiMo": "xiaomimimo",
+  "小米": "xiaomimimo",
   "讯飞星火": "spark",
+  "讯飞星辰": "xingchen",
   "商汤日日新": "sensenova",
   "Trae": "trae",
   "Cline": "cline",
   "Cursor": "cursor",
-  "OpenClaw": "openclaw"
+  "OpenClaw": "openclaw",
+  "Command Code": "commandcode"
  }
 }

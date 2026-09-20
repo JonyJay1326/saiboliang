@@ -1,0 +1,34 @@
+---
+// 点卯簿行（/models 第 4 名起，frontend-spec §5.3）
+// 座次 = rank（号码牌，与 §5.2 同一套组件）；俸禄 = inputCost / outputCost；
+// 距榜首 = 榜首 score − 本行 score（同榜只读派生，不写回数据层）。
+import { modelIcon, vendorInitial } from '../lib/vendors.js';
+import { modelPriceLabel, scoreGap } from '../lib/format.js';
+
+const { row, model, topScore } = Astro.props;
+const name = model?.name ?? row.modelId;
+const vendor = model?.vendor ?? '';
+const icon = vendor ? modelIcon(vendor) : null;
+---
+<li class="roll__row">
+  <span class="roll__rank rank-badge" aria-label={`本站展示序号 ${row.rank}`}>{row.rank}</span>
+  <span class="roll__who">
+    <span class="roll__logo">
+      {
+        icon ? (
+          <img src={icon.url} alt="" width="20" height="20" loading="lazy" />
+        ) : (
+          <i class="logo-initial">{vendorInitial(vendor)}</i>
+        )
+      }
+    </span>
+    <span class="roll__id">
+      <b>{name}</b>
+      <i>{vendor}</i>
+    </span>
+  </span>
+  <span class="roll__cell roll__date">{model?.releasedAt ?? '未提供'}</span>
+  <span class="roll__cell roll__pay">{modelPriceLabel(model)}</span>
+  <span class="roll__score">{row.score}</span>
+  <span class="roll__delta">{scoreGap(topScore, row.score)}</span>
+</li>

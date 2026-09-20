@@ -6,7 +6,8 @@ import { ClientRouter } from 'astro:transitions';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import SkinToggle from '../components/SkinToggle.astro';
-import '../styles/placeholder.css';
+import '../styles/tokens.css';
+import '../styles/site.css';
 
 const {
   title = null,
@@ -26,10 +27,27 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     {/* fallback="swap"：不支持 View Transitions 的浏览器也走客户端导航，
         但只做即时替换、不模拟动画——与一期「关掉动画」的决策一致。 */}
     <ClientRouter fallback="swap" />
+
+    {/* 站名横额收起：滚动后只留菜单条在吸顶条上。
+        状态记在 <html> 上（软导航不丢），scroll 监听挂 window、只注册一次。 */}
+    <script is:inline>
+      if (!window.__cgChrome) {
+        window.__cgChrome = true;
+        const apply = () => {
+          document.documentElement.toggleAttribute('data-scrolled', window.scrollY > 16);
+        };
+        window.addEventListener('scroll', apply, { passive: true });
+        document.addEventListener('astro:page-load', apply);
+        apply();
+      }
+    </script>
 
     {/* 皮肤强度档：读写 localStorage、写回 <html>、按钮 aria 同步。
         整页一段脚本 + 事件委托，避免随组件替换重复绑定（frontend-spec §5.9、§7.2）。 */}
@@ -69,56 +87,6 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
         // 软导航完成后同步按钮态；模块脚本只执行一次，故监听须在此注册
         document.addEventListener('astro:page-load', apply);
         apply();
-      }
-    </script>
-
-    {/* 「我领到了」（frontend-spec §7.2）：整页一个 script 做事件委托，
-        绝不为每张票卡各起一个岛。key = cg:collection，value = { id: { claimedAt } }。
-        监听挂在 document 上，软导航后依然有效，故只需幂等注册一次。 */}
-    <script is:inline>
-      if (!window.__cgClaim) {
-        window.__cgClaim = true;
-        const KEY = 'cg:collection';
-
-        const read = () => {
-          try {
-            const parsed = JSON.parse(localStorage.getItem(KEY) || '{}');
-            return parsed && typeof parsed === 'object' ? parsed : {};
-          } catch {
-            return {};
-          }
-        };
-
-        const sync = () => {
-          const owned = read();
-          for (const btn of document.querySelectorAll('[data-claim]')) {
-            const has = Object.prototype.hasOwnProperty.call(owned, btn.dataset.claim);
-            btn.setAttribute('aria-pressed', String(has));
-            btn.textContent = has ? '已盖戳（点击取消）' : '我领到了';
-          }
-        };
-
-        document.addEventListener('click', (event) => {
-          const btn = event.target.closest('[data-claim]');
-          if (!btn) return;
-          const id = btn.dataset.claim;
-          const owned = read();
-          if (Object.prototype.hasOwnProperty.call(owned, id)) {
-            delete owned[id];
-          } else {
-            owned[id] = { claimedAt: new Date().toISOString() };
-          }
-          try {
-            localStorage.setItem(KEY, JSON.stringify(owned));
-          } catch {
-            window.alert('无法写入本机存储，记录可能不会被保存。');
-            return;
-          }
-          sync();
-        });
-
-        document.addEventListener('astro:page-load', sync);
-        sync();
       }
     </script>
 
@@ -168,7 +136,7 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
         2. 用 replaceState 而非 pushState 同步 URL——ClientRouter 同时监听 popstate，
            新增历史条目会让它的软导航与弹框关闭互相打架。代价：后退键不关闭弹框，
            而是回到上一个真实页面；URL 仍可分享、刷新即还原为独立详情页。
-        3. 关闭时回到「打开前的地址」，而不是按规则推导列表路径——首页、失效墙、
+        3. 关闭时回到「打开前的地址」，而不是按规则推导列表路径——首页、
            关联跳转等入口都能正确还原。 */}
     <script is:inline>
       if (!window.__cgPreview) {
@@ -181,8 +149,10 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
         let lastFocus = null;
         let fromUrl = null;
 
+        // 软导航会整体替换 <body>，缓存节点随之离线——必须以「是否仍在文档中」判断重建，
+        // 否则第二次打开弹框时 build() 直接返回，弹框永远不出现（2026-09-18 实测踩坑）。
         const build = () => {
-          if (overlay) return;
+          if (overlay && overlay.isConnected) return;
           overlay = document.createElement('div');
           overlay.className = 'preview';
           overlay.setAttribute('role', 'dialog');
@@ -205,10 +175,20 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
             (el) => !el.hasAttribute('disabled') && el.offsetParent !== null
           );
 
+        const lockScroll = () => {
+          document.documentElement.style.overflow = 'hidden';
+          document.body.style.overflow = 'hidden';
+        };
+
+        const unlockScroll = () => {
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+        };
+
         const close = () => {
           if (!overlay || overlay.hidden) return;
           overlay.hidden = true;
-          document.documentElement.style.overflow = '';
+          unlockScroll();
           if (fromUrl) window.history.replaceState(window.history.state, '', fromUrl);
           fromUrl = null;
           if (lastFocus instanceof HTMLElement) lastFocus.focus();
@@ -220,9 +200,10 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
           if (overlay.hidden) fromUrl = window.location.pathname + window.location.search;
           lastFocus = document.activeElement;
           overlay.hidden = false;
-          document.documentElement.style.overflow = 'hidden';
+          lockScroll();
           overlay.setAttribute('aria-busy', 'true');
           content.innerHTML = '<p>正在取件…</p>';
+          panel.scrollTop = 0;
           panel.focus();
           window.history.replaceState(window.history.state, '', url);
           try {
@@ -231,7 +212,11 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
             const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
             const main = doc.querySelector('main');
             if (!main) throw new Error('no main');
-            main.querySelectorAll('script').forEach((s) => s.remove());
+            // 弹框是「先看一眼」的入口：首页/列表里去掉核实信息与相关票两块，
+            // 保持轻量；它们仍在独立详情页 /tickets/[id]/ 完整提供（frontend-spec §4.3）。
+            main
+              .querySelectorAll('script, [aria-labelledby="verify"], [aria-labelledby="related"]')
+              .forEach((el) => el.remove());
             content.innerHTML = main.innerHTML;
           } catch {
             content.innerHTML = '<p>取件失败，<a href="' + url + '">直接打开详情页</a>。</p>';
@@ -290,10 +275,15 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
   </head>
 
   <body>
-    <header>
-      <a class="brand" href="/">赛博粮站</a>
-      <Nav />
-      <SkinToggle />
+    {/* 菜单条吸顶；站名横额与菜单同行，滚动后收起（2026-09-18 用户校正）。 */}
+    <header class="menubar">
+      <div class="menubar__inner">
+        <a class="topbar__logo" href="/" aria-label="赛博粮站 · 回首页">
+          <img src="/font-images/brand.png" width="753" height="184" alt="赛博粮站" />
+        </a>
+        <Nav />
+        <SkinToggle />
+      </div>
     </header>
 
     <main>

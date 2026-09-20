@@ -4,11 +4,15 @@
 // 正文用受控 Markdown，仅允许 **粗体** / 列表 / 换行 / [文字](http(s)) 链接（契约 §4.2）。
 import Base from '../../layouts/Base.astro';
 import { tickets } from '../../lib/data.js';
-import { durationLabel, expiredLabel, overdue, serial } from '../../lib/format.js';
+import { durationLabel, expiredLabel, listedTickets, overdue, scoreTier, serial } from '../../lib/format.js';
 import { CATEGORY, REGION } from '../../lib/labels.js';
 
+// 推荐分 <70 与已失效票全站下架：不生成详情页（2026-09-18 用户定）。
 export function getStaticPaths() {
-  return tickets().tickets.map((ticket) => ({ params: { id: ticket.id }, props: { ticket } }));
+  return listedTickets(tickets().tickets).map((ticket) => ({
+    params: { id: ticket.id },
+    props: { ticket },
+  }));
 }
 
 const { ticket } = Astro.props;
@@ -57,8 +61,8 @@ function renderContent(md) {
   return out.join('\n');
 }
 
-const related = tickets()
-  .tickets.filter((t) => t.id !== ticket.id && (t.vendor === ticket.vendor || t.category === ticket.category))
+const related = listedTickets(tickets().tickets)
+  .filter((t) => t.id !== ticket.id && (t.vendor === ticket.vendor || t.category === ticket.category))
   .sort((a, b) => (a.expired === b.expired ? 0 : a.expired ? 1 : -1))
   .slice(0, 4);
 
@@ -98,7 +102,6 @@ const jsonLd = {
 
     <p class="ticket__actions">
       <a class="ticket__cta" href={ticket.link} target="_blank" rel="noopener noreferrer">去领取</a>
-      <button type="button" data-claim={ticket.id}>我领到了</button>
     </p>
 
     {isExpired && <div class="ticket__seal">作废</div>}
@@ -112,9 +115,9 @@ const jsonLd = {
     <dl class="ticket__fields">
       <div><dt>首次收录</dt><dd>{ticket.publishedAt}</dd></div>
       <div><dt>最后编辑</dt><dd>{ticket.updatedAt}</dd></div>
-      <div><dt>人工推荐分</dt><dd>{ticket.score}</dd></div>
+      <div><dt>推荐等级</dt><dd>{scoreTier(ticket.score)}等</dd></div>
     </dl>
-    <p>推荐分为人工判断，不代表客观评测。</p>
+    <p>推荐等级为人工判断，不代表客观评测。</p>
   </section>
 
   {related.length > 0 && (

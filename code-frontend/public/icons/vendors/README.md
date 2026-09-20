@@ -13,16 +13,25 @@
 | CDN 原始地址 | `https://unpkg.com/@lobehub/icons-static-svg@latest/icons/{slug}.svg` |
 | 国内镜像 | `https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/{slug}.svg` |
 
+**例外（非 Lobe 来源）**：
+- `commandcode.svg` 取 Command Code 官网结构化数据里的品牌 SVG（`https://commandcode.ai/logos/command-code-light.svg`，2026-09-18 抓取），仅抽取其图形标记（去字标）、`fill` 改为 `currentColor`。商标归 Command Code 所有。
+- `xingchen.svg` 取讯飞星辰 MaaS 平台官网头图 SVG（`https://maas.xfyun.cn/svg/common-logo-13ec678e.svg`，2026-09-18 抓取），仅抽取其中的图形标记（去「讯飞星辰 MaaS 平台」字标），保留品牌原色。商标归科大讯飞所有。
+
+**本地改动（Lobe 原文件之上）**：
+- `kimi.svg`（2026-09-19）：在 `<title>` 后加 `<rect width="24" height="24" rx="5" fill="#000">` 整幅深色圆角底；图形、蓝色 `#1783FF` 标注与 `fill="#fff"` 白 K 均未改动。原因：原文件是透明底「白 K」，放在浅色纸色底板上白色笔画不可见（点将台 / 套餐场景）。
+
 ## 命名
 
-**统一为 `{slug}.svg`（57 个文件）**，不再区分 `.color` 后缀——文件名就是 slug，直接可拼。
+**统一为 `{slug}.svg`（59 个文件）**，不再区分 `.color` 后缀——文件名就是 slug，直接可拼。
 
-- 有彩色版的取彩色版（48 个）；Lobe 没有彩色版的取单色版（9 个）。
-- 单色版厂商：`OpenAI`、`xAI`、`Grok`、`Anthropic`、`IBM`、`Liquid AI`、`Xiaomi(MiMo)`、`Nous Research`、`AI21 Labs`、`Inception`、`KwaiKAT`。
+- 有彩色版的取彩色版；Lobe 没有彩色版的取单色版；`commandcode` 为官网单色标、`xingchen` 为官网原色标（两者非 Lobe 文件）。
+- 单色版厂商：`OpenAI`、`xAI`、`Grok`、`Anthropic`、`IBM`、`Liquid AI`、`Xiaomi(MiMo)`、`Nous Research`、`AI21 Labs`、`Inception`、`KwaiKAT`、`Command Code`。
+- 单色版是 `currentColor`，经 `<img>` 加载时解析为纯黑，浅色底上直接可见。
+- **底板约定**：套餐卡（`site.css` 的 `.plan-card__icon--mono`）只给单色标加纸色底；点将台（2026-09-19，`.podium__logo` / `.roll__logo`）按版式线对**全部厂商标**统一加纸色底——彩色标、单色标、自带深底的标（`kimi.svg`、`xingchen.svg`）在纸色底板上都成立。
 
 `vendor-map.json` 是**取图字典**：
 - `byVendor`：59 个 AA 厂商名 → 图标 slug（36 家有图标，23 家为 null）
-- `planVendors`：22 个套餐厂商/工具 → 图标 slug
+- `planVendors`：29 个套餐厂商/工具 → 图标 slug（键为 `plans[].vendor` 原值，含 `月之暗面 Kimi`、`小米`、`讯飞星辰` 这类带产品名的写法）
 - `vendorDisplayName`：需要改写的显示名（`SpaceXAI`→xAI 等）
 
 ## 能不能「直接用字段取图」？不能，必须查表
@@ -49,11 +58,11 @@ AA 的 `vendor` 不能直接 slug 化。实测反例：
 4. **商标声明**：MIT 只覆盖 Lobe 仓库的分发，**不覆盖商标权**。logo 归各厂商所有，此处仅用于指代对应模型/厂商。站点需在"关于"页声明品牌与商标归属。
 5. 新增厂商时：补下图标 + 更新 `vendor-map.json`，不要引用未落盘的 slug。
 
-## 覆盖（57 个文件）
+## 覆盖（59 个文件）
 
 | 分组 | 数量 | 示例 |
 |---|---|---|
 | AA 厂商（`byVendor`） | 36 家有图标 / 共 59 家 | OpenAI、Anthropic、Google/Gemini、Meta、Qwen/Alibaba、Z.ai/Zhipu、xAI/Grok、Kimi/Moonshot、DeepSeek、Mistral、NVIDIA、Microsoft、Cohere、Perplexity、Snowflake、TII、KwaiKAT |
-| 套餐/工具（`planVendors`） | 22 个 | GitHub、GitHub Copilot、OpenCode、Trae、Cline、Cursor、OpenClaw、火山引擎方舟、阿里云百炼、讯飞星火、商汤日日新、智谱 |
+| 套餐/工具（`planVendors`） | 29 个键 | GitHub、GitHub Copilot、OpenCode、Trae、Cline、Cursor、OpenClaw、火山引擎方舟、阿里云百炼、讯飞星辰、商汤日日新、智谱、Command Code |
 
 **Lobe 暂无图标（23 家 AA 厂商）**：AI9Stars、Apodex、Celeris、China Mobile、Databricks、InclusionAI、Institute of Foundation Models、Korea Telecom、Motif Technologies、Multiverse Computing、Nanbeige、Naver、Nex AGI、OpenBMB、Prime Intellect、Reka AI、SK Telecom、Sapiens AI、Sarvam、ServiceNow、Swiss AI Initiative、Thinking Machines、Trillion Labs。遇到时按规则 5 处理。

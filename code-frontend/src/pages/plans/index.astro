@@ -7,11 +7,12 @@ import Base from '../../layouts/Base.astro';
 import PlanCard from '../../components/PlanCard.astro';
 import ToggleBar from '../../components/ToggleBar.astro';
 import { models } from '../../lib/data.js';
-import { startingPriceValue } from '../../lib/format.js';
+import { planRankValue, startingPriceValue } from '../../lib/format.js';
 
 const file = models();
 const DEFAULT = 'domestic';
 
+// 默认排序 = 人工编辑推荐序 rank（契约 §4.3）；缺省排后，兜底按起步价、id。
 const groups = [
   { key: 'domestic', label: '国内' },
   { key: 'overseas', label: '海外' },
@@ -19,16 +20,23 @@ const groups = [
   ...group,
   items: file.plans
     .filter((p) => p.group === group.key)
-    .sort((a, b) => startingPriceValue(a) - startingPriceValue(b) || a.id.localeCompare(b.id)),
+    .sort(
+      (a, b) =>
+        planRankValue(a) - planRankValue(b) ||
+        startingPriceValue(a) - startingPriceValue(b) ||
+        a.id.localeCompare(b.id)
+    ),
 }));
 ---
 <Base
   title="粮市"
-  description="国内外编程订阅套餐比价，按同币种同周期常规价排序。"
+  description="国内外编程订阅套餐比价，默认按本站编辑推荐序（人工维护）。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <h1>粮市</h1>
-  <p>共 {file.plans.length} 个套餐。同产品分组、同币种、同周期内按常规价升序；未知价格排后。</p>
+  <h1 class="page-title">
+    <img src="/font-images/sec-shi.png" width="157" height="80" alt="粮市" />
+  </h1>
+  <p>共 {file.plans.length} 个套餐。默认按本站编辑推荐序（人工维护，综合模型能力、额度与价格）；未评级排后。</p>
 
   <div data-toggle data-toggle-current={DEFAULT}>
     <ToggleBar label="产品分组" options={groups} current={DEFAULT} />
