@@ -1081,6 +1081,28 @@ def collect_xai(client,raw,source,now,window_seconds=72*3600):
     return rows
 
 
+SEED_BLOG_PATH_RE=re.compile(r'(?:/[a-z]{2}(?:-[A-Za-z]{2,4})?)?/blog/([^/]+)')
+
+
+def seed_article_url(loc,final):
+    """Seed serves one article under locale prefixes (`/blog/` → `/zh/blog/`, `/en/blog/`).
+
+    Any locale variant of the same slug is accepted and identity stays the Chinese page:
+    a regional redirect (observed on CI runners, 2026-09-20) then neither fails the source
+    nor splits the item id. The rejection message names the landing host/path so the next
+    unexpected redirect is diagnosable from `state/run.json`.
+    """
+    base=urlsplit(normalize_url(loc))
+    landed=urlsplit(normalize_url(final))
+    match=SEED_BLOG_PATH_RE.fullmatch(base.path.rstrip('/'))
+    require(match,'Seed sitemap entry unexpected')
+    slug=match.group(1)
+    other=SEED_BLOG_PATH_RE.fullmatch(landed.path.rstrip('/'))
+    require(landed.hostname==base.hostname and other is not None and other.group(1)==slug,
+            'Seed article redirected unexpectedly: '+landed.hostname+(landed.path or ''))
+    return 'https://seed.bytedance.com/zh/blog/'+slug
+
+
 def collect_seed(client,raw,source,now,window_seconds=72*3600):
     """ByteDance Seed sitemap for discovery; article page supplies h1 title and 发布日期."""
     now_dt=datetime.fromisoformat(now)
@@ -1089,9 +1111,7 @@ def collect_seed(client,raw,source,now,window_seconds=72*3600):
         if not recent_entry(last,now_dt,window_seconds):
             continue
         page,final=client.get(loc,deadline=deadline)
-        zh=loc.replace('/blog/','/zh/blog/',1)
-        require(normalize_url(final) in (normalize_url(loc),normalize_url(zh)),'Seed article redirected unexpectedly')
-        url=normalize_url(final)
+        url=seed_article_url(loc,final)
         text=decode(page)
         heads=Tree(text).root.find(lambda n:n.tag=='h1')
         match=re.search(r'font-normal">(\d{4}-\d{2}-\d{2})<',text)

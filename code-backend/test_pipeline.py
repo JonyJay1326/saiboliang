@@ -18,10 +18,11 @@ LATER='2026-09-17T12:00:00Z'
 
 
 class FakeClient:
-    def __init__(self,pages=None,documents=None,posts=None):
+    def __init__(self,pages=None,documents=None,posts=None,redirects=None):
         self.pages=pages or []
         self.documents=documents or {}
         self.posts=posts or []
+        self.redirects=redirects or {}
         self.sent=[]
 
     def json(self,*args):
@@ -31,7 +32,7 @@ class FakeClient:
         value=self.documents[url]
         if isinstance(value,Exception):
             raise value
-        return value.encode(),url
+        return value.encode(),self.redirects.get(url,url)
 
     def post(self,url,body,headers=None,deadline=None):
         self.sent.append((url,body,headers))
@@ -415,6 +416,22 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(rows),1)
         self.assertEqual(rows[0]['title'],'Seed 新模型正式发布')
         self.assertEqual(rows[0]['publishedAt'],'2026-09-15T16:00:00Z')
+
+    def test_seed_locale_redirect_keeps_zh_identity(self):
+        sitemap=('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 '<url><loc>https://seed.bytedance.com/blog/new-post</loc><lastmod>2026-09-17T03:00:00.000Z</lastmod></url>'
+                 '</urlset>')
+        article='<html><h1>Seed 新模型正式发布</h1><div><p class="font-normal">2026-09-16</p></div></html>'
+        source=dict(id='seed',name='字节 Seed',url='https://seed.bytedance.com/sitemap.xml',official=True,lang='zh')
+        loc='https://seed.bytedance.com/blog/new-post'
+        # CI 出口地区跳 /en/blog/：同一篇的其它地区变体照收，身份固定为中文页
+        for landing in ('https://seed.bytedance.com/zh/blog/new-post','https://seed.bytedance.com/en/blog/new-post'):
+            rows=collect_seed(FakeClient(documents={loc:article},redirects={loc:landing}),sitemap,source,NOW)
+            self.assertEqual([r['sourceUrl'] for r in rows],['https://seed.bytedance.com/zh/blog/new-post'])
+        # 跳到别的文章仍是结构异常，拒收该条目
+        with self.assertRaises(ValueError):
+            collect_seed(FakeClient(documents={loc:article},
+                                    redirects={loc:'https://seed.bytedance.com/en/blog/other-post'}),sitemap,source,NOW)
 
     def test_minimax_blog_adapter_reads_article_date(self):
         listing=('<html><a href="/blog/minimax-h3">MiniMax H3</a>'
