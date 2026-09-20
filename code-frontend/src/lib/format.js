@@ -34,14 +34,14 @@ function cnNumber(n) {
   return `${CN_DIGITS[Math.floor(n / 10)]}十${n % 10 ? CN_DIGITS[n % 10] : ''}`;
 }
 
-/** 邸报日期（北京时间自然日）：「九月十六」「九月初一」；null/无效返回 null。 */
+/** 邸报日期（北京时间自然日）：「九月十六」「九月一日」；null/无效返回 null。 */
 export function dibaoDate(iso) {
   if (!iso) return null;
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return null;
   const t = new Date(d.getTime() + SHANGHAI_OFFSET_MINUTES * 60_000);
   const day = t.getUTCDate();
-  return `${cnNumber(t.getUTCMonth() + 1)}月${day <= 10 ? `初${cnNumber(day)}` : cnNumber(day)}`;
+  return `${cnNumber(t.getUTCMonth() + 1)}月${day <= 10 ? `${cnNumber(day)}日` : cnNumber(day)}`;
 }
 
 /** 数字千分位；null/非数字返回 null。 */
