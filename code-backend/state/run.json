@@ -1,13 +1,14 @@
 {
-  "at": "2026-09-20T13:56:24Z",
+  "at": "2026-09-20T14:08:37Z",
   "success": [
     "tickets",
-    "models",
     "github"
   ],
   "errors": {
-    "news": "Seed article redirected unexpectedly"
+    "news": "news source redirected unexpectedly"
   },
-  "skipped": [],
-  "retired": 36
+  "skipped": [
+    "models: daily sources already checked"
+  ],
+  "retired": 0
 }

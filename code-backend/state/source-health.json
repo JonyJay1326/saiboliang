@@ -1,7 +1,7 @@
 {
   "tickets": {
-    "lastSuccess": "2026-09-20T13:56:24Z",
-    "lastAttempt": "2026-09-20T13:56:24Z",
+    "lastSuccess": "2026-09-20T14:08:37Z",
+    "lastAttempt": "2026-09-20T14:08:37Z",
     "error": null,
     "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
@@ -16,23 +16,23 @@
     "count": 653
   },
   "github": {
-    "lastSuccess": "2026-09-20T13:56:24Z",
-    "lastAttempt": "2026-09-20T13:56:24Z",
+    "lastSuccess": "2026-09-20T14:08:37Z",
+    "lastAttempt": "2026-09-20T14:08:37Z",
     "error": null,
     "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
   "github-weekly": {
-    "lastSuccess": "2026-09-20T13:56:24Z",
+    "lastSuccess": "2026-09-20T14:08:37Z",
     "count": 172
   },
   "github-monthly": {
-    "lastSuccess": "2026-09-20T13:56:24Z",
+    "lastSuccess": "2026-09-20T14:08:37Z",
     "count": 195
   },
   "news": {
     "lastSuccess": "2026-09-20T08:36:28Z",
-    "lastAttempt": "2026-09-20T13:56:24Z",
-    "error": "Seed article redirected unexpectedly",
+    "lastAttempt": "2026-09-20T14:08:37Z",
+    "error": "news source redirected unexpectedly",
     "configHash": "891d8688e1abafb4cc04c44de25895f21cbc90941c95cc961523e48ff6e44242"
   },
   "aibase": {
