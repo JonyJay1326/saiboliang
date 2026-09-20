@@ -2405,6 +2405,195 @@ td:first-child {
   box-shadow: 0 0 12px rgba(232, 183, 58, .25);
 }
 
+/* ===== 邸报（/news，frontend-spec.md §4.7） =====
+   版式线（2026-09-20 用户给定参考图）：页头「板块名 + 题头」；
+   条目按北京时间自然日分组——左侧竖排中文日期与竖向细线，右侧标题与来路行；
+   条目间虚线分隔。 */
+.dibao-head {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: .3rem 1.1rem;
+  margin: 0 0 1.3rem;
+}
+
+.dibao-head .page-title {
+  margin: 0;
+}
+
+.dibao-head .page-title img {
+  height: 56px;
+  filter: drop-shadow(0 0 14px rgba(240, 234, 220, .38));
+}
+
+.dibao-head__tagline {
+  margin: 0 0 .35rem;
+  font-size: 13.5px;
+  letter-spacing: .32em;
+  color: var(--dim);
+}
+
+.dibao {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px dashed var(--line-dim);
+}
+
+.dibao__day {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+}
+
+.dibao__date {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem .45rem 1rem 0;
+  border-right: 1px solid rgba(200, 52, 42, .4);
+}
+
+.dibao__date span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 15px;
+  letter-spacing: .18em;
+  color: #d9564a;
+  text-shadow: 0 0 10px rgba(200, 52, 42, .35);
+}
+
+.dibao__items {
+  margin: 0;
+  padding: 0 0 0 1.4rem;
+  list-style: none;
+}
+
+.dibao__item {
+  padding: .95rem 0 1.05rem;
+  border-bottom: 1px dashed var(--line-dim);
+}
+
+.dibao__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: .03em;
+}
+
+.dibao__title a {
+  color: #f0eadc;
+}
+
+.dibao__title a:hover {
+  color: var(--gold);
+}
+
+.dibao__summary {
+  margin: .4rem 0 0;
+  max-width: 62ch;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--dim);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dibao__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem 0;
+  margin: .55rem 0 0;
+  font-size: 11.5px;
+  letter-spacing: .06em;
+  color: var(--dim);
+}
+
+.dibao__meta > * + *::before {
+  content: "·";
+  display: inline-block;
+  margin: 0 .55em;
+  color: var(--faint);
+}
+
+.dibao__badge {
+  padding: 0 .45em;
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--gold);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.dibao__time {
+  font-family: var(--mono);
+  color: var(--faint);
+}
+
+.dibao__link {
+  color: var(--cyan);
+}
+
+.dibao__link:hover {
+  color: var(--gold);
+}
+
+/* 「机译」小标：分隔点由外层 .dibao__flag 承接、留在框外；文字自身定行高、不随行高飘 */
+.dibao__flag {
+  display: inline-flex;
+  align-items: center;
+}
+
+.dibao__tag {
+  display: inline-block;
+  padding: .15em .5em;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  color: var(--faint);
+  border: 1px dashed var(--line-dim);
+  border-radius: 2px;
+}
+
+.dibao__empty {
+  margin: 0;
+  padding: 1.4rem 0;
+  font-size: 13px;
+  color: var(--dim);
+  border-top: 1px dashed var(--line-dim);
+}
+
+@media (max-width: 560px) {
+  .dibao-head .page-title img {
+    height: 40px;
+  }
+
+  .dibao-head__tagline {
+    font-size: 12px;
+    letter-spacing: .24em;
+  }
+
+  .dibao__day {
+    grid-template-columns: 2.9rem minmax(0, 1fr);
+  }
+
+  .dibao__date span {
+    font-size: 13px;
+    letter-spacing: .12em;
+  }
+
+  .dibao__items {
+    padding-left: .9rem;
+  }
+
+  .dibao__title {
+    font-size: 17px;
+  }
+}
+
 /* ===== 窄屏 ===== */
 @media (max-width: 560px) {
   .topbar__logo img {

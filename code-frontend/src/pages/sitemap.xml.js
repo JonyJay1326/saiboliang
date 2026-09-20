@@ -1,5 +1,5 @@
 // sitemap.xml —— 构建期生成，含全部 /tickets/[id] 与 /plans/[id]（frontend-spec §2.3）
-// /news 为施工占位页且 noindex，不进 sitemap（§4.7）。
+// /news 邸报已解封为正式页（2026-09-20），随静态页一并收录。
 import { models, tickets } from '../lib/data.js';
 import { listedTickets } from '../lib/format.js';
 
@@ -14,6 +14,7 @@ export function GET({ site }) {
     '/github/',
     '/models/',
     '/plans/',
+    '/news/',
     '/about/',
   ];
 

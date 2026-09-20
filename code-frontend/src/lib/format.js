@@ -25,6 +25,25 @@ export function shanghaiToday(now = new Date()) {
   return `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())}`;
 }
 
+const CN_DIGITS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+
+/** 1–31 的中文数字：十 / 十一 / 二十 / 三十一。 */
+function cnNumber(n) {
+  if (n <= 10) return n === 10 ? '十' : CN_DIGITS[n];
+  if (n < 20) return `十${CN_DIGITS[n - 10]}`;
+  return `${CN_DIGITS[Math.floor(n / 10)]}十${n % 10 ? CN_DIGITS[n % 10] : ''}`;
+}
+
+/** 邸报日期（北京时间自然日）：「九月十六」「九月初一」；null/无效返回 null。 */
+export function dibaoDate(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  const t = new Date(d.getTime() + SHANGHAI_OFFSET_MINUTES * 60_000);
+  const day = t.getUTCDate();
+  return `${cnNumber(t.getUTCMonth() + 1)}月${day <= 10 ? `初${cnNumber(day)}` : cnNumber(day)}`;
+}
+
 /** 数字千分位；null/非数字返回 null。 */
 export function thous(n) {
   if (n === null || n === undefined || Number.isNaN(Number(n))) return null;

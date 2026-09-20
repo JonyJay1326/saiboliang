@@ -24,6 +24,7 @@ export const EVENT_TYPE = {
   'model-release': '模型发布',
   'major-update': '重要更新',
   'price-or-free': '价格·免费',
+  upcoming: '官方预告',
   'model-review': '评测',
   'hands-on': '产品体验',
   'deep-analysis': '深度分析',
