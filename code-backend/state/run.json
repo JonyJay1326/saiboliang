@@ -1,14 +1,9 @@
 {
-  "at": "2026-09-20T14:12:08Z",
+  "at": "2026-09-20T14:25:08Z",
   "success": [
-    "tickets",
-    "github"
+    "news"
   ],
-  "errors": {
-    "news": "network error: URLError"
-  },
-  "skipped": [
-    "models: daily sources already checked"
-  ],
-  "retired": 0
+  "errors": {},
+  "skipped": [],
+  "retired": 3
 }

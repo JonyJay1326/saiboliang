@@ -2298,7 +2298,7 @@
     }
   },
   "news": {
-    "dataUpdatedAt": "2026-09-20T08:36:28Z",
+    "dataUpdatedAt": "2026-09-20T14:25:08Z",
     "items": [
       {
         "title": "千问发布Qwen3.8-LiveTranslate:同传延迟降至2.3秒，还能保留你的音色",
@@ -2665,7 +2665,7 @@
         "sourceUrl": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
         "publishedAt": "2026-09-15T15:00:59Z",
         "source": "Meta",
-        "summary": null,
+        "summary": "Meta推出Meta One订阅服务，覆盖Facebook、Instagram、WhatsApp和Meta AI，提供更多AI用量、表达功能及创作者与商家工具。",
         "id": "c43e9379c6367f4757adddf5668860eea0774c7735dd842f0b67c3a62abfc9ba",
         "originalTitle": "Introducing Meta One: A Subscription Service With More Features and AI to Create, Connect, and Stand Out",
         "translatedAt": "2026-09-20T08:36:28Z",
