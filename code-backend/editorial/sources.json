@@ -137,12 +137,12 @@
     {
       "id": "kimi-blog",
       "name": "月之暗面",
-      "url": "https://www.kimi.com/blog/",
+      "url": "https://www.kimi.ai/zh-hans/blog/",
       "adapter": "kimi-blog",
       "official": true,
       "lang": "zh",
       "articleHosts": [
-        "www.kimi.com"
+        "www.kimi.ai"
       ],
       "enabled": true
     },

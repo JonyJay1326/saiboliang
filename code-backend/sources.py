@@ -1004,16 +1004,22 @@ def parse_qianfan(raw,source):
 
 
 def parse_kimi_blog(raw,source):
-    """Kimi research blog: card names are bare proper nouns, so the vendor template is used."""
+    """Kimi research blog: card names are bare proper nouns, so the vendor template is used.
+
+    The 2026-09 domain move to www.kimi.ai dropped the `/en/` prefix from card links;
+    accept both shapes (with or without a locale segment) and pin identity to kimi.ai.
+    """
     tree=Tree(decode(raw)).root
     result=[]; seen=set()
     for card in tree.find(lambda n:n.tag=='div' and 'menu-card' in (n.attrs.get('class') or '')):
-        links=card.find(lambda n:n.tag=='a' and re.fullmatch(r'/en/blog/[\w.-]+',n.attrs.get('href') or ''))
+        links=card.find(lambda n:n.tag=='a'
+                        and re.fullmatch(r'(?:/[a-z]{2}(?:-[a-z0-9]+)?)?/blog/[\w.-]+',n.attrs.get('href') or ''))
         titles=card.find(lambda n:n.tag in ('h2','h3','h4') and 'card-title' in (n.attrs.get('class') or ''))
         dates=card.find(lambda n:n.tag=='p' and 'card-date' in (n.attrs.get('class') or ''))
         if not links or not titles or not dates:
             continue
-        url=urljoin('https://www.kimi.com',links[0].attrs['href'])
+        slug=links[0].attrs['href'].rstrip('/').rsplit('/',1)[-1]
+        url='https://www.kimi.ai/blog/'+slug
         if url in seen:
             continue
         title=' '.join(titles[0].text().split())

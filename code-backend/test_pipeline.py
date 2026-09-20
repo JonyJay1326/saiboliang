@@ -583,13 +583,13 @@ class PipelineTests(unittest.TestCase):
         def card(href,title,date):
             return ('<div class="menu-card menu-card-hero"><a href="'+href+'" aria-label="'+title+'"></a>'
                     '<div><h4 class="card-title">'+title+'</h4><p class="card-date">'+date+'</p></div></div>')
-        html=('<html>'+card('/en/blog/kimi-k3','Kimi K3','2026-07-16')
+        html=('<html>'+card('/blog/kimi-k3','Kimi K3','2026-07-16')
               +card('/en/blog/perception-bench','PerceptionBench','2026-07-16')
               +'<div class="menu-card"><span>no link</span></div></html>')
-        source=dict(id='kimi-blog',name='月之暗面',url='https://www.kimi.com/blog/',official=True,lang='zh')
+        source=dict(id='kimi-blog',name='月之暗面',url='https://www.kimi.ai/zh-hans/blog/',official=True,lang='zh')
         rows=parse_kimi_blog(html.encode(),source)
         self.assertEqual([r['title'] for r in rows],['月之暗面发布 Kimi K3','月之暗面发布 PerceptionBench'])
-        self.assertEqual(rows[0]['sourceUrl'],'https://www.kimi.com/en/blog/kimi-k3')
+        self.assertEqual(rows[0]['sourceUrl'],'https://www.kimi.ai/blog/kimi-k3')
         self.assertEqual(rows[0]['publishedAt'],'2026-07-15T16:00:00Z')
         self.assertEqual(news_event(rows[0]['title'],official=True),'model-release')
         self.assertIsNone(news_event(rows[1]['title'],official=True))
