@@ -3099,5 +3099,14 @@
     "id": "4999a789f9b56fdfe125f524253ac87828d888f026e266234f695e62cbf15720",
     "status": "pending",
     "createdAt": "2026-09-20T14:08:37Z"
+  },
+  {
+    "kind": "source",
+    "objectId": "news",
+    "reason": "network error: URLError",
+    "evidence": {},
+    "id": "3f4408d636fad5abc17d03e309d3d9b170086bbe381b0ec92506917f7e296f68",
+    "status": "pending",
+    "createdAt": "2026-09-20T14:12:08Z"
   }
 ]

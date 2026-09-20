@@ -1,10 +1,10 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-09-20T14:08:37Z",
+  "dataUpdatedAt": "2026-09-20T14:12:08Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-09-20T14:08:37Z",
+    "fetchedAt": "2026-09-20T14:12:08Z",
     "items": [
       {
         "repo": "alibaba/open-code-review",
@@ -18,7 +18,7 @@
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 5,
-        "stars": 49054,
+        "stars": 49057,
         "periodStars": 5589,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -27,7 +27,7 @@
       {
         "repo": "stablyai/orca",
         "sourceRank": 3,
-        "stars": 73218,
+        "stars": 73219,
         "periodStars": 5404,
         "language": "TypeScript",
         "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -36,7 +36,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27849,
+        "stars": 27851,
         "periodStars": 4867,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -63,7 +63,7 @@
       {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 2,
-        "stars": 97448,
+        "stars": 97451,
         "periodStars": 3445,
         "language": "JavaScript",
         "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -72,7 +72,7 @@
       {
         "repo": "multimodal-art-projection/YuE",
         "sourceRank": 10,
-        "stars": 9876,
+        "stars": 9877,
         "periodStars": 2741,
         "language": "Python",
         "description": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
@@ -81,7 +81,7 @@
       {
         "repo": "bojieli/ai-agent-book",
         "sourceRank": 15,
-        "stars": 48871,
+        "stars": 48873,
         "periodStars": 2731,
         "language": "Python",
         "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
@@ -90,7 +90,7 @@
       {
         "repo": "anthropics/claude-code",
         "sourceRank": 1,
-        "stars": 146937,
+        "stars": 146938,
         "periodStars": 1999,
         "language": "TypeScript",
         "description": "Claude Code 是一个代理式编码工具，运行在终端中，理解你的代码库，通过自然语言命令执行日常任务、解释复杂代码并处理 git 工作流，帮助你更快编码。",
@@ -117,7 +117,7 @@
       {
         "repo": "vastsa/PI-Desktop",
         "sourceRank": 14,
-        "stars": 4658,
+        "stars": 4659,
         "periodStars": 1478,
         "language": "TypeScript",
         "description": "本地优先的 AI 编程 Agent 桌面端：Electron + Rust 宿主内核 + pi Agent Harness，支持用户自行安装插件。",
@@ -216,7 +216,7 @@
       {
         "repo": "Infrasys-AI/AIInfra",
         "sourceRank": 15,
-        "stars": 8255,
+        "stars": 8256,
         "periodStars": 75,
         "language": "Jupyter Notebook",
         "description": "AIInfra（AI 基础设施）指AI系统从底层芯片等硬件，到上层软件栈支持AI大模型训练和推理。",
@@ -245,12 +245,12 @@
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-09-20T14:08:37Z",
+    "fetchedAt": "2026-09-20T14:12:08Z",
     "items": [
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 3,
-        "stars": 49054,
+        "stars": 49058,
         "periodStars": 26527,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -277,7 +277,7 @@
       {
         "repo": "K-Dense-AI/scientific-agent-skills",
         "sourceRank": 7,
-        "stars": 45736,
+        "stars": 45738,
         "periodStars": 11924,
         "language": "Python",
         "description": "把任意 AI Agent 变成「AI 科学家」：165 个经验证的开箱技能 + 100 多个科学数据库，覆盖生物、化学、医学与药物研发，兼容 Cursor / Claude Code / Codex 等。",
@@ -295,7 +295,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 27849,
+        "stars": 27851,
         "periodStars": 7397,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -304,7 +304,7 @@
       {
         "repo": "jingyaogong/minimind",
         "sourceRank": 5,
-        "stars": 61792,
+        "stars": 61793,
         "periodStars": 7036,
         "language": "Python",
         "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
@@ -411,6 +411,6 @@
       }
     ]
   },
-  "version": "2026-09-20T14:08:37Z",
-  "generatedAt": "2026-09-20T14:08:37Z"
+  "version": "2026-09-20T14:12:08Z",
+  "generatedAt": "2026-09-20T14:12:08Z"
 }

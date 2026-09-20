@@ -1,11 +1,11 @@
 {
-  "at": "2026-09-20T14:08:37Z",
+  "at": "2026-09-20T14:12:08Z",
   "success": [
     "tickets",
     "github"
   ],
   "errors": {
-    "news": "news source redirected unexpectedly"
+    "news": "network error: URLError"
   },
   "skipped": [
     "models: daily sources already checked"
