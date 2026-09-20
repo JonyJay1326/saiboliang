@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, translate_github, translate_news
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -106,7 +106,8 @@ def promote(candidate,output):
 
 REVIEW_OWNER={'github-page':'github','github-classification':'github','github-translate':'github',
               'models':'models','model-mapping':'models','model-price':'models','plans':'models',
-              'news-item':'news','news-original':'news','news-future':'news','news-translate':'news'}
+              'news-item':'news','news-original':'news','news-future':'news','news-translate':'news',
+              'news-summary':'news'}
 
 
 class Run:
@@ -237,6 +238,22 @@ def load_news_translator(args,client,run,now):
     return translate
 
 
+def load_news_summarizer(args,client,run,now):
+    """Model-drafted Chinese abstracts for items whose source provides none."""
+    cache=read_json(args.state/'news-summary-cache.json',{})
+    require(isinstance(cache,dict),'invalid news summary cache')
+    try:
+        key=load_key(args.env_file,('DEEPSEEK_API_KEY','DEEPSEEK_KEY','DeepSeek_key'),'DEEPSEEK_API_KEY')
+    except DataError:
+        run.skipped.append('news-summary: no DEEPSEEK_API_KEY; items keep empty summaries')
+        return None
+    def summarize(items):
+        result=summarize_news(client,items,cache,key,now,run.review)
+        write_json(args.state/'news-summary-cache.json',cache)
+        return result
+    return summarize
+
+
 def collect(args):
     state=args.state; now=utcnow(); run=Run(state,now)
     sources,overrides,github_zh=load_config(args.editorial)
@@ -270,7 +287,10 @@ def collect(args):
                 news=[s for s in sources['news'] if s['enabled']]
                 require(news,'no admitted official news source')
                 news_translator=load_news_translator(args,client,run,now)
-                data=collect_news(client,news,originals,baseline['news'],now,run.guard,run.review,news_translator)
+                news_summarizer=load_news_summarizer(args,client,run,now)
+                data=collect_news(client,news,originals,baseline['news'],now,run.guard,run.review,news_translator,
+                                  summarize=news_summarizer,window_seconds=args.backfill_days*24*3600 or 72*3600,
+                                  backfill=args.backfill_days>0)
             else:
                 data=load_tickets(args.editorial,raw_cache['tickets'],now)
             raw_candidate=copy.deepcopy(data)
@@ -341,6 +361,8 @@ def main(argv=None):
     parser.add_argument('--env-file',type=Path,default=ROOT.parent/'.env')
     parser.add_argument('--modules',nargs='+',choices=MODULES,default=list(MODULES))
     parser.add_argument('--force',action='store_true',help='repeat daily source checks explicitly')
+    parser.add_argument('--backfill-days',type=int,default=0,
+                        help='one-off news backfill: widen admission to N days and stamp addedAt with publishedAt')
     parser.add_argument('--build-cwd',type=Path,default=ROOT.parent)
     parser.add_argument('--build-command',nargs=argparse.REMAINDER)
     args=parser.parse_args(argv)

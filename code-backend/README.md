@@ -19,6 +19,9 @@ python code-backend/pipeline.py validate
 python code-backend/pipeline.py collect --modules models github news
 # 明确需要重新采集日任务时使用，注意 AA 免费接口请求配额。
 python code-backend/pipeline.py collect --modules models --force
+# 资讯一次性回补：入库窗口放宽到 7 天、回补条目 addedAt 取 publishedAt（各历史日仍守每日配额）；
+# 只用于补录停摆空档，常规运行不加此参数。
+python code-backend/pipeline.py collect --modules news --backfill-days 7
 # 只在尚无数据且需要空站骨架时初始化，不生成示例业务记录。
 python code-backend/pipeline.py init
 ```
@@ -32,6 +35,7 @@ python code-backend/pipeline.py init
 - `state/source-cache.json`：未应用人工覆盖的来源结果；保留旧事实和原始核验时间。
 - `state/github-zh-cache.json`：GitHub 简介机器译文草稿（`repo -> {text, source, at}`，按 repo 缓存，人工简介优先）；不进入公开数据，缺 key 或翻译失败时不写入。
 - `state/news-zh-cache.json`：资讯英文标题与简介机译缓存（条目 id -> `{title, summary, source, at}`）；不进入公开数据，中文条目不进缓存。
+- `state/news-summary-cache.json`：资讯简介模型起草缓存（条目 id -> `{summary, source, at}`）；只在来源无简介时使用，成稿进公开数据、正文不落盘。
 - `state/source-health.json`、`state/run.json`：逐源有效候选数量、成功日期、运行异常。
 - `state/review-queue.json`：按对象、原因和证据去重的待确认项。可将 `status` 改成 `accepted` 或 `rejected`；不删除原项，同一问题不会重复排入，新内容仍生成新项。
 - `state/audit.jsonl`：人工覆盖决定的追加审计。
@@ -55,7 +59,7 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 | AA 免费接口 | [实测] 完整分页、指数版本一致性、综合/编程两榜；**自带每百万 Token 价格**（输入+输出全量覆盖 436/652，两榜去重后 top25 为 25/25）；来源署名为 Artificial Analysis |
 | ~~OpenRouter~~ | [已下线] 一期不再采集：价格改用 AA 自带定价，`contextLength` 不需要，`editorial/model-mappings.json` 已删除 |
 | GitHub Trending | [实测] 官方周/月 HTML，保留原始位置，规则筛选 AI 应用与工具；不明确的项目进待确认清单 |
-| 官方一手资讯 | [实测] 2026-09-19 启用 20 源：OpenAI、Google AI、DeepMind、GitHub changelog、GitHub Copilot、NVIDIA、Microsoft AI、Azure（RSS/Atom）；Anthropic（列表页适配器）；SpaceXAI、字节 Seed（sitemap＋文章页）；MiniMax（`/blog` 列表＋文章页）；Meta（AI tag RSS）；DeepSeek 官网；阿里/智谱/月之暗面/腾讯/百度/阶跃星辰（Hugging Face 官方模型仓，模板标题「{厂商}发布 {模型名}」）。英文标题/简介经 DeepSeek 机译，每天新增≤6、永久累加、`publishedAt` 倒序；准入与验证见 `news-source-check.md` |
+| 官方一手资讯 | [实测] 2026-09-19 启用 20 源：OpenAI、Google AI、DeepMind、GitHub changelog、GitHub Copilot、NVIDIA、Microsoft AI、Azure（RSS/Atom）；Anthropic（列表页适配器）；SpaceXAI、字节 Seed（sitemap＋文章页）；MiniMax（`/blog` 列表＋文章页）；Meta（AI tag RSS）；DeepSeek 官网；阿里/智谱/月之暗面/腾讯/百度/阶跃星辰（Hugging Face 官方模型仓，模板标题「{厂商}发布 {模型名}」）。英文标题/简介经 DeepSeek 机译；来源无简介时由 DeepSeek 据来源页面片段起草（≤80 字、正文不落盘）；每天新增≤6、永久累加、`publishedAt` 倒序；准入与验证见 `news-source-check.md` |
 | AIBase / 量子位（二手兜底） | [实测] 2026-09-19 重启：中文二手源，补国产厂商动态与评测/上手/深度分析体裁；来源署对应媒体，媒体规则与回退标记；AIBase 个别专题页缺内嵌数据时单条隔离进待复核 |
 | DeepSeek 官网新闻 | [实测] 厂商一手，`deepseek-news` 适配器；只给日期的条目取北京日 00:00 折算 UTC，不伪造时刻 |
 | 中文媒体来源 | [已退役] AIBase、量子位、InfoQ、智东西、Solidot、IT之家保留 `enabled:false` 便于临时回退，不再默认采集 |

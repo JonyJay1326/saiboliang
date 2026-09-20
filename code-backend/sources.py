@@ -66,6 +66,38 @@ def decode(raw):
     return raw.decode('utf-8-sig', errors='strict')
 
 
+META_DESCRIPTION_RE=re.compile(
+    r'<meta[^>]+(?:name|property)\s*=\s*["\'](?:description|og:description|twitter:description)["\'][^>]*>',re.I)
+META_CONTENT_RE=re.compile(r'content\s*=\s*["\']([^"\']*)["\']',re.I)
+
+
+def meta_description(raw):
+    """Source-provided page description; `None` when the page carries none."""
+    text=decode(raw) if isinstance(raw,(bytes,bytearray)) else raw
+    for tag in META_DESCRIPTION_RE.findall(text):
+        match=META_CONTENT_RE.search(tag)
+        if match:
+            value=plain(match.group(1))
+            if value:
+                return value
+    return None
+
+
+def article_excerpt(client,url,deadline):
+    """Bounded source text for summary drafting; the body is never persisted.
+
+    Prefers the page's own description, then a stripped snippet of the article text.
+    Returns `None` when the page yields nothing usable.
+    """
+    raw,_=client.get(url,deadline=deadline)
+    text=decode(raw)
+    description=meta_description(text)
+    if description:
+        return description[:800]
+    body=plain(re.sub(r'(?is)<(script|style)[^>]*>.*?</\1>',' ',text))
+    return body[:800] or None
+
+
 def sponsored(card):
     """Paid sponsor slots link to /sponsors/<account>; they are not organic trending."""
     return bool(card.find(lambda n:'/sponsors/' in (n.attrs.get('href') or '')))
@@ -227,6 +259,68 @@ def translate_news(client,items,cached,key,now,review):
     return result
 
 
+NEWS_SUMMARY_INSTRUCTIONS=('你是中文科技资讯编辑。根据每条资讯的标题与来源片段，写一句简体中文简介：'
+                           '不超过80个字符（含标点），单行纯文本；只使用标题与片段里出现的事实，'
+                           '不添加、不推测、不评价、不照抄整句；不使用「本文」「据悉」「该文」等空话。'
+                           '只输出 JSON 对象，键为原样 id，值为 {"summary": "简介"}，不要输出其他内容。')
+
+
+def summarize_news(client,items,cached,key,now,review):
+    """Model-drafted Chinese abstracts for items whose source provides no summary.
+
+    `items` carry {id,title,text}; the article body is read for drafting only and never
+    persisted. Accepted abstracts must be Chinese, single-line and within the contract
+    bound; the cache keeps ids already drafted and failures are retried on a later run.
+    """
+    seen={item['id'] for item in items}
+    for identity in list(cached):
+        if identity not in seen:
+            del cached[identity]
+    result={identity:entry['summary'] for identity,entry in cached.items()
+            if isinstance(entry,dict) and isinstance(entry.get('summary'),str) and entry['summary'].strip()}
+    pending={item['id']:dict(title=item['title'],text=item['text'])
+             for item in items if item['id'] not in result}
+    if not pending or not key:
+        return result
+    entries=list(pending.items())
+    for start in range(0,len(entries),10):
+        chunk=dict(entries[start:start+10])
+        try:
+            body=dict(model=DEEPSEEK_MODEL,temperature=0,thinking=dict(type='disabled'),
+                      response_format=dict(type='json_object'),max_tokens=4096,
+                      messages=[dict(role='system',content=NEWS_SUMMARY_INSTRUCTIONS),
+                                dict(role='user',content=json.dumps(chunk,ensure_ascii=False))])
+            payload=json.loads(client.post(DEEPSEEK_URL,body,{'Authorization':'Bearer '+key.strip()}))
+            require(isinstance(payload,dict),'summary response malformed')
+            choices=payload.get('choices')
+            require(isinstance(choices,list) and choices and isinstance(choices[0],dict),'summary choices missing')
+            message=choices[0].get('message')
+            require(isinstance(message,dict) and isinstance(message.get('content'),str),'summary content missing')
+            drafted=json.loads(message['content'])
+            require(isinstance(drafted,dict),'summary payload malformed')
+            accepted=0
+            for identity,value in drafted.items():
+                if identity not in chunk or not isinstance(value,dict):
+                    continue
+                abstract=value.get('summary')
+                if not isinstance(abstract,str) or '\n' in abstract or not re.search(r'[\u3400-\u9fff]',abstract):
+                    continue
+                abstract=abstract.strip()
+                if not abstract or len(abstract)>80:
+                    continue
+                cached[identity]=dict(summary=abstract,source=DEEPSEEK_MODEL,at=now)
+                result[identity]=abstract
+                accepted+=1
+            require(accepted,'summary produced no usable Chinese text')
+        except (ValueError,KeyError,TypeError,UnicodeError) as exc:
+            review('news-summary',digest('\n'.join(sorted(chunk))),'summary failed: '+str(exc),
+                   dict(ids=sorted(chunk)))
+    return result
+
+
+GITHUB_LIMIT=30
+
+
 def collect_github(client, now, languages, overrides, zh, guard, review, translate=None):
     """Global page plus admitted language pages; merged by repo, best page position wins.
 
@@ -257,12 +351,12 @@ def collect_github(client, now, languages, overrides, zh, guard, review, transla
         order=lambda r:(r['periodStars'] is None,-(r['periodStars'] or 0),r['repo'])
         decisions=[(row,is_ai(row,overrides)) for row in merged.values()]
         selected=sorted((row for row,decision in decisions if decision is True),key=order)
-        # Only ambiguous entries that could still reach the top ten are worth human review.
-        cutoff=selected[9]['periodStars'] if len(selected)>=10 else None
+        # Only ambiguous entries that could still reach the published board are worth human review.
+        cutoff=selected[GITHUB_LIMIT-1]['periodStars'] if len(selected)>=GITHUB_LIMIT else None
         for row,decision in decisions:
             if decision is None and (cutoff is None or (row['periodStars'] or 0)>=cutoff):
                 review('github-classification',row['repo'],'AI applicability uncertain',dict(description=row['description'],sourceUrl=row['url']))
-        boards[key]=dict(period=period,sourceUrl=url,fetchedAt=now,items=selected[:10])
+        boards[key]=dict(period=period,sourceUrl=url,fetchedAt=now,items=selected[:GITHUB_LIMIT])
     # 人工简介优先；已缓存 repo 不再请求接口，因此重跑只会为新增条目调用翻译。
     machine=translate([item for board in boards.values() for item in board['items'] if item['repo'] not in zh]) if translate else {}
     for key,board in boards.items():
@@ -611,7 +705,8 @@ def aibase_article(raw,url,source):
     require(isinstance(date_text,str),'AIBase publication date missing')
     dt=datetime.fromisoformat(date_text)
     require(dt.tzinfo is not None,'AIBase publication timezone missing')
-    return dict(title=title,sourceUrl=url,source=source['name'],publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
+    return dict(title=title,sourceUrl=url,source=source['name'],summary=meta_description(raw),
+                publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
 
 
 def collect_aibase(client,raw,source,review):
@@ -636,6 +731,39 @@ def collect_aibase(client,raw,source,review):
             review('news-item',digest(url),'invalid AIBase article: '+str(exc),dict(source=source['name']))
     require(rows,'AIBase produced no valid articles')
     return rows
+
+
+def collect_aibase_backfill(client,rows,source,now_dt,window_seconds):
+    """One-off backfill: walk article ids downwards until the window is covered.
+
+    The list page only carries the latest articles, so older ids are probed directly.
+    Ids run roughly chronologically; the walk stops after a run of out-of-window
+    articles or a hard cap, so a restructured site cannot become an endless crawl.
+    """
+    ids=[]
+    for row in rows:
+        match=re.search(r'/news/(\d+)$',row['sourceUrl'])
+        if match:
+            ids.append(int(match.group(1)))
+    require(ids,'AIBase list produced no article ids')
+    floor=min(ids)
+    cutoff=now_dt-timedelta(seconds=window_seconds)
+    result=[]; deadline=time.monotonic()+900; stale=0
+    for identity in range(floor-1,max(floor-320,0),-1):
+        if stale>=12 or time.monotonic()>deadline:
+            break
+        url='https://www.aibase.com/zh/news/%d'%identity
+        try:
+            article,_=client.get(url,deadline=deadline)
+            row=aibase_article(article,url,source)
+        except (ValueError,KeyError,TypeError,UnicodeError):
+            continue
+        if datetime.fromisoformat(row['publishedAt'])<cutoff:
+            stale+=1
+            continue
+        stale=0
+        result.append(row)
+    return result
 
 
 def parse_anthropic_news(raw,source):
@@ -748,6 +876,14 @@ def clip(value,limit):
         if at>=limit//2:
             return head[:at+1]
     return head
+
+
+def abstract(value,limit=80):
+    """News summary from source text: clipped, never ending on a bare separator."""
+    text=clip(value,limit)
+    while text and text[-1] in '，、；':
+        text=text[:-1]
+    return text
 
 
 def row_url(page,**fields):
@@ -923,12 +1059,12 @@ def recent_entry(last,now_dt,seconds=72*3600):
     return -300<=age<=seconds
 
 
-def collect_xai(client,raw,source,now):
+def collect_xai(client,raw,source,now,window_seconds=72*3600):
     """x.ai sitemap for discovery; article page supplies h1 title and datePublished."""
     now_dt=datetime.fromisoformat(now)
     rows=[]; deadline=time.monotonic()+120
     for loc,last in sitemap_entries(raw,'https://x.ai/news/'):
-        if not re.fullmatch(r'https://x\.ai/news/[\w.-]+',loc) or not recent_entry(last,now_dt):
+        if not re.fullmatch(r'https://x\.ai/news/[\w.-]+',loc) or not recent_entry(last,now_dt,window_seconds):
             continue
         page,final=client.get(loc,deadline=deadline)
         require(normalize_url(final)==loc,'xAI article redirected unexpectedly')
@@ -940,17 +1076,17 @@ def collect_xai(client,raw,source,now):
         require(title,'xAI article title empty')
         dt=datetime.fromisoformat(match.group(1).replace('Z','+00:00'))
         require(dt.tzinfo is not None,'xAI article date timezone missing')
-        rows.append(dict(title=title,sourceUrl=loc,source=source['name'],summary=None,
+        rows.append(dict(title=title,sourceUrl=loc,source=source['name'],summary=meta_description(text),
                          publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')))
     return rows
 
 
-def collect_seed(client,raw,source,now):
+def collect_seed(client,raw,source,now,window_seconds=72*3600):
     """ByteDance Seed sitemap for discovery; article page supplies h1 title and 发布日期."""
     now_dt=datetime.fromisoformat(now)
     rows=[]; deadline=time.monotonic()+120
     for loc,last in sitemap_entries(raw,'https://seed.bytedance.com/blog/'):
-        if not recent_entry(last,now_dt):
+        if not recent_entry(last,now_dt,window_seconds):
             continue
         page,final=client.get(loc,deadline=deadline)
         zh=loc.replace('/blog/','/zh/blog/',1)
@@ -965,7 +1101,7 @@ def collect_seed(client,raw,source,now):
         title=' '.join(heads[0].text().split())
         require(title,'Seed article title empty')
         year,month,day=(int(part) for part in match.group(1).split('-'))
-        rows.append(dict(title=title,sourceUrl=url,source=source['name'],summary=None,
+        rows.append(dict(title=title,sourceUrl=url,source=source['name'],summary=meta_description(text),
                          publishedAt=day_start_utc(year,month,day)))
     return rows
 
@@ -999,7 +1135,7 @@ def collect_minimax(client,raw,source):
         require(title,'MiniMax article title empty')
         dt=datetime.fromisoformat(match.group(1).replace('Z','+00:00'))
         require(dt.tzinfo is not None,'MiniMax article date timezone missing')
-        rows.append(dict(title=title,sourceUrl=url,source=source['name'],summary=None,
+        rows.append(dict(title=title,sourceUrl=url,source=source['name'],summary=meta_description(text),
                          publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')))
     require(rows,'MiniMax blog parsing produced no articles')
     return rows
@@ -1066,13 +1202,53 @@ def parse_huggingface_models(raw,source):
     return result
 
 
-def collect_news(client,sources,originals,old,now,guard,review,translate=None):
+def fill_news_summaries(client,items,summarize,limit=40):
+    """Draft Chinese abstracts for items whose source provides none.
+
+    Article text is read in memory for drafting only and never persisted; failures stay
+    empty and are retried on a later run. Only a bounded number of articles is read per
+    run, so a large archive cannot turn one collection into a crawl.
+    """
+    pending=[]; deadline=time.monotonic()+240
+    for item in items:
+        if item.get('summary'):
+            continue
+        # 目录型条目的 URL 是合成身份（目录页 + 行参数），不是可读的文章页。
+        if '?' in item['url']:
+            continue
+        if len(pending)>=limit or time.monotonic()>deadline:
+            break
+        try:
+            excerpt=article_excerpt(client,item['url'],deadline)
+        except (ValueError,KeyError,TypeError,UnicodeError):
+            excerpt=None
+        if not excerpt:
+            continue
+        pending.append(dict(id=item['id'],title=item['title'],text=excerpt))
+    if not pending:
+        return 0
+    drafted=summarize(pending)
+    filled=0
+    for item in items:
+        value=drafted.get(item['id'])
+        if value:
+            item['summary']=value; filled+=1
+    return filled
+
+
+def collect_news(client,sources,originals,old,now,guard,review,translate=None,summarize=None,
+                 window_seconds=72*3600,backfill=False):
     """Official-first news collection.
 
     Items accumulate forever in the published file: `addedAt` marks admission and the
-    daily quota (Beijing day) caps new items per day/source/event type. English titles
-    and summaries pass through `translate` before classification; a failed translation
-    only skips that candidate for this run.
+    daily quota (Beijing day) caps new items per day, source and event type. English
+    titles and summaries pass through `translate` before classification; a failed
+    translation only skips that candidate for this run.
+
+    `window_seconds` bounds admission age (72h in normal runs). `backfill` is the
+    documented one-off mode: the window widens to the requested span and `addedAt` takes
+    the publication time, so historical days stay on their own daily budgets. Items whose
+    source carries no summary get a model-drafted one through `summarize`.
     """
     candidates=[]; now_dt=datetime.fromisoformat(now)
     known={item['id'] for item in old.get('items',[])}
@@ -1085,6 +1261,9 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
         official=source.get('official') is True
         if adapter=='aibase':
             rows=collect_aibase(client,raw,source,review)
+            if backfill:
+                # 列表页只带最新文章，回补时按 id 下探到更早的页面（一次性路径）。
+                rows=rows+collect_aibase_backfill(client,rows,source,now_dt,window_seconds)
         elif adapter=='deepseek-news':
             rows=parse_deepseek_news(decode(raw),source)
         elif adapter=='anthropic-news':
@@ -1102,9 +1281,9 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
         elif adapter=='kimi-blog':
             rows=parse_kimi_blog(raw,source)
         elif adapter=='xai-sitemap':
-            rows=collect_xai(client,raw,source,now)
+            rows=collect_xai(client,raw,source,now,window_seconds)
         elif adapter=='seed-blog':
-            rows=collect_seed(client,raw,source,now)
+            rows=collect_seed(client,raw,source,now,window_seconds)
         elif adapter=='minimax-blog':
             rows=collect_minimax(client,raw,source)
         elif adapter=='huggingface-models':
@@ -1124,7 +1303,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
             if age < -300:
                 review('news-future',identity,'publication is in the future',row)
                 continue
-            if age > 72*3600:
+            if age > window_seconds:
                 continue
             candidates.append((row,official,source))
     machine={}
@@ -1143,6 +1322,11 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
                 continue  # retried next run while still inside the admission window
             originalTitle=title; title=translated['title']; summary=translated.get('summary')
             translatedAt=now; lang='en'
+        else:
+            # 来源自带简介优先（可截断，边界优先，不留断句标点）；缺失时由模型据原文起草。
+            source_summary=' '.join((row.get('summary') or '').split())
+            if source_summary and re.search(r'[\u3400-\u9fff]',source_summary):
+                summary=abstract(source_summary,80) or None
         event=news_event(title,official=official)
         if event is None:
             continue
@@ -1150,38 +1334,46 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None):
             publisher=source['name']; original=row['sourceUrl']; verified=now
         else:
             publisher,original,verified=verify_original(client,row,originals.get(identity),now,review)
+        added=row['publishedAt'] if backfill else now
         items.append(dict(row,id=identity,title=title,originalTitle=originalTitle,translatedAt=translatedAt,
                           summary=summary,lang=lang,originalSource=publisher,originalUrl=original,
                           originalVerifiedAt=verified,url=original or row['sourceUrl'],
-                          category=CATEGORY_BY_EVENT[event],eventType=event,addedAt=now))
-    # Daily quotas count items admitted on the same Beijing day, so all runs share one budget.
-    today=(now_dt+timedelta(hours=8)).date().isoformat()
-    used_total=0; used_source={}; used_event={}
+                          category=CATEGORY_BY_EVENT[event],eventType=event,addedAt=added))
+    # Daily quotas count items admitted on the same Beijing day; normal runs share one
+    # budget (today), while the one-off backfill keeps every historical day separate.
+    def bj_day(value):
+        return (datetime.fromisoformat(value)+timedelta(hours=8)).date().isoformat()
+    budget={}
+    def slot(day):
+        return budget.setdefault(day,dict(total=0,source={},event={}))
     for item in old.get('items',[]):
-        if (datetime.fromisoformat(item['addedAt'])+timedelta(hours=8)).date().isoformat()!=today:
-            continue
-        used_total+=1
-        used_source[item['source']]=used_source.get(item['source'],0)+1
-        used_event[item['eventType']]=used_event.get(item['eventType'],0)+1
+        current=slot(bj_day(item['addedAt']))
+        current['total']+=1
+        current['source'][item['source']]=current['source'].get(item['source'],0)+1
+        current['event'][item['eventType']]=current['event'].get(item['eventType'],0)+1
     priority={event:index for index,event in enumerate(EVENTS)}
-    order=lambda i:(priority[i['eventType']],-datetime.fromisoformat(i['publishedAt']).timestamp(),i['id'])
+    order=lambda i:(-datetime.fromisoformat(bj_day(i['addedAt'])+'T00:00:00+08:00').timestamp(),
+                    priority[i['eventType']],-datetime.fromisoformat(i['publishedAt']).timestamp(),i['id'])
     # 相似排除只比对近 7 天入库的条目，避免长期库存永久压住同型号的后续事件。
     recent=[item for item in old.get('items',[])
             if (now_dt-datetime.fromisoformat(item['addedAt'])).total_seconds()<=7*24*3600]
     chosen=[]
     for item in sorted(items,key=order):
-        if used_total>=6:
-            break
+        current=slot(bj_day(item['addedAt']))
+        if current['total']>=6:
+            continue
         if any(similar_event(item,known) for known in recent):
             continue
-        if used_source.get(item['source'],0)>=2 or used_event.get(item['eventType'],0)>=2:
+        if current['source'].get(item['source'],0)>=2 or current['event'].get(item['eventType'],0)>=2:
             continue
         chosen.append(item)
         recent.append(item)
-        used_total+=1
-        used_source[item['source']]=used_source.get(item['source'],0)+1
-        used_event[item['eventType']]=used_event.get(item['eventType'],0)+1
+        current['total']+=1
+        current['source'][item['source']]=current['source'].get(item['source'],0)+1
+        current['event'][item['eventType']]=current['event'].get(item['eventType'],0)+1
     merged=sorted(old.get('items',[])+chosen,key=news_order)
+    if summarize:
+        fill_news_summaries(client,merged,summarize)
     return dict(dataUpdatedAt=now,items=merged)
 
 

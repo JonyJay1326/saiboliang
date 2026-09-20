@@ -4,13 +4,14 @@ import gzip
 import json
 import tempfile
 import unittest
+from datetime import datetime
 from pathlib import Path
 from unittest.mock import patch
 
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, aibase_article, collect_aa, collect_aibase, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip
+from sources import Tree, abstract, aibase_article, article_excerpt, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -230,6 +231,111 @@ class PipelineTests(unittest.TestCase):
         cache={}; reviews=[]
         translate_news(FakeClient(posts=[bad]),[item],cache,'k',NOW,lambda *x:reviews.append(x))
         self.assertEqual(cache,{}); self.assertEqual(len(reviews),1)
+
+    def test_meta_description_and_article_excerpt(self):
+        page=('<html><head><meta name="description" content="新一代同声传译大模型，延迟降至 2.3 秒。">'
+              '<meta property="og:description" content="第二顺位"></head><body><p>正文</p></body></html>')
+        self.assertEqual(meta_description(page),'新一代同声传译大模型，延迟降至 2.3 秒。')
+        self.assertIsNone(meta_description('<html><head></head></html>'))
+        client=FakeClient(documents={'https://vendor.example/a':page})
+        self.assertEqual(article_excerpt(client,'https://vendor.example/a',None),'新一代同声传译大模型，延迟降至 2.3 秒。')
+        snippet=FakeClient(documents={'https://vendor.example/b':'<html><body><p>只有正文片段。</p></body></html>'})
+        self.assertEqual(article_excerpt(snippet,'https://vendor.example/b',None),'只有正文片段。')
+
+    def test_news_keeps_source_summary_and_drafts_missing(self):
+        long_summary=('新一代同声传译大模型在翻译质量、延迟、说话人识别和语音合成四个维度全面升级，'
+                      '字均延迟从上一代的 2.8 秒压缩至 2.3 秒，并新增实时说话人分离能力。')
+        feed=('<rss><channel>'
+              '<item><title>千问发布 Qwen3.8-LiveTranslate 同传模型</title><link>https://vendor.example/qwen</link>'
+              '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate><description>'+long_summary+'</description></item>'
+              '<item><title>GLM-5.4 正式发布</title><link>https://vendor.example/glm</link>'
+              '<pubDate>Thu, 17 Sep 2026 08:00:00 +0000</pubDate></item>'
+              '</channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        pages={source['url']:feed,
+               'https://vendor.example/glm':'<html><head><meta name="description" content="智谱发布 GLM-5.4 模型，上下文更长。"></head></html>'}
+        drafts=[]
+        def summarize(items):
+            drafts.extend(items)
+            return {i['id']:'智谱发布 GLM-5.4，上下文窗口更长。' for i in items}
+        data=collect_news(FakeClient(documents=pages),[source],{}, {}, NOW,lambda *x:None,lambda *x:None,summarize=summarize)
+        by_url={i['sourceUrl']:i for i in data['items']}
+        self.assertEqual(len(by_url),2)
+        kept=by_url['https://vendor.example/qwen']['summary']
+        self.assertLessEqual(len(kept),80)
+        self.assertTrue(kept.startswith('新一代同声传译大模型'))
+        self.assertEqual(by_url['https://vendor.example/glm']['summary'],'智谱发布 GLM-5.4，上下文窗口更长。')
+        self.assertEqual([i['id'] for i in drafts],[by_url['https://vendor.example/glm']['id']])
+        batch,_=assemble(None,{'news':data},NOW); validate(batch)
+
+    def test_news_backfill_window_and_added_at(self):
+        feed=('<rss><channel>'
+              '<item><title>旧模型正式发布一</title><link>https://vendor.example/old</link>'
+              '<pubDate>Sun, 13 Sep 2026 09:00:00 +0000</pubDate></item>'
+              '<item><title>新模型正式发布二</title><link>https://vendor.example/new</link>'
+              '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'
+              '</channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        def client():
+            return FakeClient(documents={source['url']:feed})
+        normal=collect_news(client(),[source],{}, {}, NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual([i['sourceUrl'] for i in normal['items']],['https://vendor.example/new'])
+        back=collect_news(client(),[source],{}, {}, NOW,lambda *x:None,lambda *x:None,
+                          window_seconds=7*24*3600,backfill=True)
+        by_url={i['sourceUrl']:i for i in back['items']}
+        self.assertEqual(len(by_url),2)
+        self.assertEqual(by_url['https://vendor.example/old']['addedAt'],'2026-09-13T09:00:00Z')
+        self.assertEqual(by_url['https://vendor.example/new']['addedAt'],'2026-09-17T09:00:00Z')
+        batch,_=assemble(None,{'news':back},NOW); validate(batch)
+
+    def test_aibase_backfill_walks_older_ids(self):
+        def html(identity,title,published):
+            row=dict(Id=identity,title=title,addtime=published,updtime='2026-09-18T00:00:00+08:00')
+            flight='1:T3,abc7:'+json.dumps({'article':row},ensure_ascii=False)+'\n'
+            return '<h1>'+title+'</h1><script>self.__next_f.push('+json.dumps([1,flight])+')</script>'
+        docs={
+            'https://www.aibase.com/zh/news/102':html(102,'窗口内新条','2026-09-17T10:00:00+08:00'),
+            'https://www.aibase.com/zh/news/101':html(101,'窗口外旧条','2026-09-01T10:00:00+08:00'),
+            'https://www.aibase.com/zh/news/100':html(100,'窗口内旧条','2026-09-15T10:00:00+08:00'),
+        }
+        rows=[dict(title='列表最新',sourceUrl='https://www.aibase.com/zh/news/103',source='AIBase',summary=None,
+                   publishedAt='2026-09-17T11:00:00Z')]
+        found=collect_aibase_backfill(FakeClient(documents=docs),rows,{'name':'AIBase'},datetime.fromisoformat(NOW),72*3600)
+        self.assertEqual([r['sourceUrl'] for r in found],
+                         ['https://www.aibase.com/zh/news/102','https://www.aibase.com/zh/news/100'])
+        self.assertTrue(all(r['source']=='AIBase' for r in found))
+
+    def test_news_summary_generation_cache_and_review(self):
+        item=dict(id='a1',title='示例标题',text='来源片段')
+        reply=dict(choices=[dict(message=dict(content=json.dumps({'a1':{'summary':'一句中文简介。'}},ensure_ascii=False)))])
+        cache={}; reviews=[]
+        result=summarize_news(FakeClient(posts=[reply]),[item],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(result['a1'],'一句中文简介。')
+        self.assertEqual(cache['a1']['source'],'deepseek-flash')
+        idle=FakeClient(posts=[])
+        summarize_news(idle,[item],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(idle.posts,[])
+        bad=dict(choices=[dict(message=dict(content=json.dumps({'a1':{'summary':'english only'}})))])
+        cache={}; reviews=[]
+        summarize_news(FakeClient(posts=[bad]),[item],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(cache,{})
+        self.assertEqual(len(reviews),1)
+
+    def test_fill_news_summaries_skips_articles_with_summary_and_catalog_urls(self):
+        items=[dict(id='a',title='甲',summary='已有简介',url='https://vendor.example/a'),
+               dict(id='b',title='乙',summary=None,url='https://vendor.example/catalog?row=1'),
+               dict(id='c',title='丙',summary=None,url='https://vendor.example/c')]
+        pages={'https://vendor.example/c':'<html><head><meta name="description" content="丙的来源片段。"></head></html>'}
+        seen=[]
+        def summarize(pending):
+            seen.extend(pending)
+            return {i['id']:'丙的模型简介。' for i in pending}
+        filled=fill_news_summaries(FakeClient(documents=pages),items,summarize)
+        self.assertEqual(filled,1)
+        self.assertEqual(items[0]['summary'],'已有简介')
+        self.assertIsNone(items[1]['summary'])
+        self.assertEqual(items[2]['summary'],'丙的模型简介。')
+        self.assertEqual([i['id'] for i in seen],['c'])
 
     def test_validate_news_translation_pairing_and_daily_limits(self):
         url='https://vendor.example/a'
@@ -464,6 +570,15 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(clipped.endswith('。'))
         self.assertEqual(len(clip('啊'*100,80)),80)
         self.assertEqual(clip('前言。'*40,80)[-1],'。')
+
+    def test_abstract_never_ends_on_a_bare_separator(self):
+        text=('新一代同声传译大模型在翻译质量、延迟、说话人识别和语音合成四个维度全面升级，'
+              '字均延迟从上一代的 2.8 秒压缩至 2.3 秒，并新增实时说话人分离能力，同时支持多语种。')
+        value=abstract(text,40)
+        self.assertLessEqual(len(value),40)
+        self.assertFalse(value.endswith(('，','、','；')))
+        self.assertEqual(abstract('短简介。'),'短简介。')
+        self.assertEqual(abstract('没有标点的长句'*10,10),'没有标点的长句没有标')
 
     def test_parse_feed_relative_links_and_ernie_titles(self):
         rss=('<rss><channel><item><title>文心 5.1 正式发布！多榜登顶，模型&#34;写得好更懂你&#34;</title>'
@@ -741,8 +856,8 @@ class PipelineTests(unittest.TestCase):
         def card(repo,period,desc):
             return ('<article class="Box-row"><h2><a href="/'+repo+'">'+repo+'</a></h2><p>'+desc+'</p>'
                     '<a href="/'+repo+'/stargazers">9,000</a><span>'+str(period)+' stars this week</span></article>')
-        confirmed=''.join(card('vendor/tool'+str(i),100-i,'LLM coding agent') for i in range(12))
-        near=card('vendor/near',95,'A small utility for teams')
+        confirmed=''.join(card('vendor/tool'+str(i),100-i,'LLM coding agent') for i in range(32))
+        near=card('vendor/near',80,'A small utility for teams')
         far=card('vendor/far',50,'A small utility for teams')
         base='https://github.com/trending?since=weekly'; month='https://github.com/trending?since=monthly'
         documents={base:'<html>'+confirmed+near+far+'</html>',month:'<html>'+confirmed+'</html>'}
@@ -751,8 +866,9 @@ class PipelineTests(unittest.TestCase):
         queued=[r[1] for r in reviews]
         self.assertIn('vendor/near',queued)
         self.assertNotIn('vendor/far',queued)
-        self.assertEqual(len(data['week']['items']),10)
+        self.assertEqual(len(data['week']['items']),30)
         self.assertEqual(data['week']['items'][0]['periodStars'],100)
+        self.assertEqual(data['week']['items'][-1]['periodStars'],71)
 
     def test_url_identity_and_credential_rejection(self):
         self.assertEqual(normalize_url('https://EXAMPLE.com:443/Path/?b=2&utm_source=x&a=1#top'),'https://example.com/Path/?a=1&b=2')
