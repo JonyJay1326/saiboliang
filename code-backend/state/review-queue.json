@@ -3095,13 +3095,13 @@
   },
   {
     "kind": "news-source",
-    "objectId": "kimi-blog",
-    "reason": "news source redirected unexpectedly: kimi-blog -> https://www.kimi.ai/blog/",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
     "evidence": {
-      "url": "https://www.kimi.com/blog/"
+      "url": "https://www.zhipuai.cn/zh/news"
     },
-    "id": "49f81cdc686a53e0dbab8ebf43c89bffc5bea7ef1d9645dfddec8295a8595f25",
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
-    "createdAt": "2026-09-20T14:28:06Z"
+    "createdAt": "2026-09-20T14:38:00Z"
   }
 ]
