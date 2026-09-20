@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, translate_github
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -106,7 +106,7 @@ def promote(candidate,output):
 
 REVIEW_OWNER={'github-page':'github','github-classification':'github','github-translate':'github',
               'models':'models','model-mapping':'models','model-price':'models','plans':'models',
-              'news-item':'news','news-original':'news','news-future':'news'}
+              'news-item':'news','news-original':'news','news-future':'news','news-translate':'news'}
 
 
 class Run:
@@ -221,6 +221,22 @@ def load_translator(args,client,run,now):
     return translate
 
 
+def load_news_translator(args,client,run,now):
+    """Machine translations for English official news; cache is internal state only."""
+    cache=read_json(args.state/'news-zh-cache.json',{})
+    require(isinstance(cache,dict),'invalid news zh cache')
+    try:
+        key=load_key(args.env_file,('DEEPSEEK_API_KEY','DEEPSEEK_KEY','DeepSeek_key'),'DEEPSEEK_API_KEY')
+    except DataError:
+        run.skipped.append('news-translate: no DEEPSEEK_API_KEY; English items are skipped')
+        return None
+    def translate(items):
+        result=translate_news(client,items,cache,key,now,run.review)
+        write_json(args.state/'news-zh-cache.json',cache)
+        return result
+    return translate
+
+
 def collect(args):
     state=args.state; now=utcnow(); run=Run(state,now)
     sources,overrides,github_zh=load_config(args.editorial)
@@ -252,8 +268,9 @@ def collect(args):
                 data['plans']=collect_evidence_records(client,plans,data['plans'],now,run.review)
             elif module=='news':
                 news=[s for s in sources['news'] if s['enabled']]
-                require(news,'no admitted Chinese news source')
-                data=collect_news(client,news,originals,now,run.guard,run.review)
+                require(news,'no admitted official news source')
+                news_translator=load_news_translator(args,client,run,now)
+                data=collect_news(client,news,originals,baseline['news'],now,run.guard,run.review,news_translator)
             else:
                 data=load_tickets(args.editorial,raw_cache['tickets'],now)
             raw_candidate=copy.deepcopy(data)

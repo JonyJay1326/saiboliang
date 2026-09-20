@@ -9,7 +9,7 @@ from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from urllib.parse import quote, urljoin, urlsplit
 from common import DataError, digest, finite, normalize_url, require, safe_url
-from contract import CATEGORY_BY_EVENT, MODEL, PLAN, day, news_order, obj, text, unique
+from contract import CATEGORY_BY_EVENT, EVENTS, MODEL, PLAN, day, news_order, obj, text, unique
 
 
 class Node:
@@ -118,6 +118,9 @@ DEEPSEEK_MODEL='deepseek-flash'
 TRANSLATE_INSTRUCTIONS=('你是中文技术编辑。把给定 GitHub 仓库简介翻译成简体中文：保留产品名、模型名与专有名词原文，'
                         '不加评论与营销词，每条不超过 80 个汉字，单行纯文本。'
                         '只输出 JSON 对象，键为原样 repo，值为译文，不要输出其他内容。')
+NEWS_TRANSLATE_INSTRUCTIONS=('你是中文科技编辑。把给定资讯条目的英文标题与简介翻译成简体中文：保留产品名、模型名、公司名与专有名词原文，'
+                             '不加评论、不补充原文没有的信息；标题单行纯文本不超过 60 个汉字，简介单行纯文本不超过 80 个汉字；'
+                             '没有简介的条目 summary 用空字符串。只输出 JSON 对象，键为原样 id，值为 {"title": "译文", "summary": "译文"}，不要输出其他内容。')
 
 
 def translate_github(client, items, cached, key, now, review):
@@ -166,6 +169,61 @@ def translate_github(client, items, cached, key, now, review):
     except (ValueError,KeyError,TypeError,UnicodeError) as exc:
         review('github-translate',digest('\n'.join(sorted(pending))),'translation failed: '+str(exc),
                dict(repos=sorted(pending)))
+    return result
+
+
+def translate_news(client,items,cached,key,now,review):
+    """Machine-translate English news titles/summaries; cached maps item id -> dict(title,summary,source,at).
+
+    Chinese items are never sent. Accepted translations require Chinese text, a single
+    line and bounded length; missing/failed items are retried on a later run without
+    blocking other candidates.
+    """
+    seen={item['id'] for item in items}
+    for identity in list(cached):
+        if identity not in seen:
+            del cached[identity]
+    result={identity:entry for identity,entry in cached.items()
+            if isinstance(entry,dict) and isinstance(entry.get('title'),str) and entry['title'].strip()}
+    pending={item['id']:dict(title=item['title'],summary=item.get('summary') or '')
+             for item in items if item['id'] not in result}
+    if not pending or not key:
+        return result
+    entries=list(pending.items())
+    for start in range(0,len(entries),15):
+        chunk=dict(entries[start:start+15])
+        try:
+            body=dict(model=DEEPSEEK_MODEL,temperature=0,thinking=dict(type='disabled'),
+                      response_format=dict(type='json_object'),max_tokens=4096,
+                      messages=[dict(role='system',content=NEWS_TRANSLATE_INSTRUCTIONS),
+                                dict(role='user',content=json.dumps(chunk,ensure_ascii=False))])
+            payload=json.loads(client.post(DEEPSEEK_URL,body,{'Authorization':'Bearer '+key.strip()}))
+            require(isinstance(payload,dict),'translation response malformed')
+            choices=payload.get('choices')
+            require(isinstance(choices,list) and choices and isinstance(choices[0],dict),'translation choices missing')
+            message=choices[0].get('message')
+            require(isinstance(message,dict) and isinstance(message.get('content'),str),'translation content missing')
+            translated=json.loads(message['content'])
+            require(isinstance(translated,dict),'translation payload malformed')
+            accepted=0
+            for identity,value in translated.items():
+                if identity not in chunk or not isinstance(value,dict):
+                    continue
+                title=value.get('title'); summary=value.get('summary')
+                if not isinstance(title,str) or not re.search(r'[\u3400-\u9fff]',title) or '\n' in title or len(title.strip())>80:
+                    continue
+                title=title.strip()
+                if isinstance(summary,str) and summary.strip() and '\n' not in summary and re.search(r'[\u3400-\u9fff]',summary) and len(summary.strip())<=80:
+                    summary=summary.strip()
+                else:
+                    summary=None
+                cached[identity]=dict(title=title,summary=summary,source=DEEPSEEK_MODEL,at=now)
+                result[identity]=cached[identity]
+                accepted+=1
+            require(accepted,'translation produced no usable Chinese text')
+        except (ValueError,KeyError,TypeError,UnicodeError) as exc:
+            review('news-translate',digest('\n'.join(sorted(chunk))),'translation failed: '+str(exc),
+                   dict(ids=sorted(chunk)))
     return result
 
 
@@ -330,76 +388,138 @@ def model_data(version,rows,old,now,review):
     return dict(dataUpdatedAt=now,rankings=rankings,models=sorted(models,key=lambda m:m['id']),plans=copy.deepcopy(old['plans']))
 
 
+def first_child(node,name):
+    for child in node:
+        if child.tag.rsplit('}',1)[-1]==name:
+            return child
+    return None
+
+
 def parse_feed(raw,source,review):
     try:
         root=ET.fromstring(raw)
     except ET.ParseError as exc:
-        raise DataError('RSS XML parse failed') from exc
-    require(root.tag=='rss' and root.find('channel') is not None,'RSS structure changed')
-    nodes=root.findall('./channel/item'); require(nodes,'RSS contains no items')
+        raise DataError('feed XML parse failed') from exc
+    kind=root.tag.rsplit('}',1)[-1]
+    require(kind in ('rss','feed'),'feed structure changed')
+    if kind=='rss':
+        channels=[node for node in root if node.tag=='channel']
+        require(len(channels)==1,'RSS channel changed')
+        nodes=channels[0].findall('item')
+    else:
+        nodes=[node for node in root if node.tag.rsplit('}',1)[-1]=='entry']
+    require(nodes,'feed contains no items')
     result=[]
     for node in nodes:
-        title=plain(node.findtext('title') or '')
-        url=node.findtext('link') or ''
+        title=' '.join(((first_child(node,'title').text if first_child(node,'title') is not None else '') or '').split())
+        url=''; date_text=''; summary=''
+        if kind=='rss':
+            link=first_child(node,'link')
+            url=' '.join(((link.text if link is not None else '') or '').split())
+            date_text=(first_child(node,'pubDate').text if first_child(node,'pubDate') is not None else '') or ''
+            description=first_child(node,'description')
+            summary=' '.join(((description.text if description is not None else '') or '').split())
+        else:
+            for child in node:
+                name=child.tag.rsplit('}',1)[-1]
+                if name=='link' and not url and child.attrib.get('rel') in (None,'alternate'):
+                    url=(child.attrib.get('href') or '').strip()
+                elif name=='summary' and not summary:
+                    summary=' '.join((child.text or '').split())
+            for name in ('published','updated'):
+                found=first_child(node,name)
+                if found is not None and (found.text or '').strip():
+                    date_text=found.text; break
         try:
+            url=urljoin(source['url'],url)
             safe_url(url)
             require(urlsplit(url).hostname in source['articleHosts'],'unexpected news host')
-            require(title and re.search(r'[\u3400-\u9fff]',title) and '\ufffd' not in title,'invalid Chinese title')
-            dt=parsedate_to_datetime(node.findtext('pubDate') or '')
-            require(dt.tzinfo is not None,'RSS date timezone missing')
+            require(title and '\ufffd' not in title,'invalid news title')
+            if source.get('lang','zh')=='zh':
+                require(re.search(r'[\u3400-\u9fff]',title),'invalid Chinese title')
+            dt=parsedate_to_datetime(date_text) if kind=='rss' else datetime.fromisoformat(date_text.replace('Z','+00:00'))
+            require(dt.tzinfo is not None,'feed date timezone missing')
             published=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
-            result.append(dict(title=title,sourceUrl=url,publishedAt=published,source=source['name']))
+            result.append(dict(title=title,sourceUrl=url,publishedAt=published,source=source['name'],
+                               summary=plain(summary)[:800] or None))
         except (ValueError,TypeError,OverflowError) as exc:
-            review('news-item',digest(url or title),'invalid RSS item: '+str(exc),dict(source=source['name']))
-    require(result,'RSS has no valid dated Chinese articles')
+            review('news-item',digest(url or title),'invalid feed item: '+str(exc),dict(source=source['name']))
+    require(result,'feed has no valid dated articles')
     return result
 
 
 NEWS_TOPICS = ('AI|模型|智能体|Agent|Claude|GPT|Gemini|DeepSeek|Copilot|Cursor|Qwen|GLM|人工智能|编程助手'
-               '|Codex|Grok|Kimi|混元|通义|大语言模型|多模态|推理模型|开源模型|模型微调|模型评测|RAG'
-               '|提示词|上下文工程|机器学习|深度学习|神经网络|算力|AI编程|代码生成|Vibe Coding|MCP'
-               '|工具调用|工作流自动化|AI安全|AIGC|前端开发|数据可视化|低代码|自动化任务'
-               '|Mistral|Ollama|ChatGPT|千问|智谱')
+                '|Codex|Grok|Kimi|混元|通义|大语言模型|多模态|推理模型|开源模型|模型微调|模型评测|RAG'
+                '|提示词|上下文工程|机器学习|深度学习|神经网络|算力|AI编程|代码生成|Vibe Coding|MCP'
+                '|工具调用|工作流自动化|AI安全|AIGC|Seedream|Seedance|Seed3D|豆包'
+                '|Mistral|Ollama|ChatGPT|千问|智谱|文心|ERNIE|星火')
 
 
 def topic_pattern(topics):
-    """ASCII terms get ASCII-only boundaries so `AI` does not match OpenAI/AIGC but still matches AI编程."""
+    """ASCII terms get ASCII-only boundaries so `AI` does not match OpenAI/AIGC but still matches AI编程.
+
+    The trailing guard blocks letters only, so brand+digit model names like `Qwen3.8`
+    or `GPT5` still match while `AIGC`/`OpenAI` do not become `AI` hits.
+    """
     parts=[]
     for term in topics.split('|'):
         if re.fullmatch(r'[A-Za-z0-9 ]+',term):
-            parts.append(r'(?<![A-Za-z0-9])'+re.escape(term)+r'(?![A-Za-z0-9])')
+            parts.append(r'(?<![A-Za-z0-9])'+re.escape(term)+r'(?![A-Za-z])')
         else:
             parts.append(re.escape(term))
     return '|'.join(parts)
 
 
 TOPIC_RE=re.compile(topic_pattern(NEWS_TOPICS),re.I)
-EXCLUDE_RE=re.compile(r'招聘|教程|培训|融资|专访|访谈|传闻|消息称|有望|或将|即将|将(?:开源|发布|推出|上线)|训练过程|技术细节'
-                      r'|部分网友|网友.{0,4}称|据传|爆料|未官宣|疑似|内测中')
+MEDIA_EXCLUDE_RE=re.compile(r'招聘|教程|培训|融资|专访|访谈|传闻|消息称|有望|或将|即将'
+                            r'|将(?:于|在)?[^，。；]{0,20}(?:发布|推出|上线|开源)|训练过程|技术细节'
+                            r'|部分网友|网友.{0,4}称|据传|爆料|未官宣|疑似|内测中')
+OFFICIAL_EXCLUDE_RE=re.compile(r'招聘|教程|培训|融资|营销|赞助|广告|专访|访谈|业绩|财报|年报'
+                                r'|客户案例|案例研究|客户故事|成功故事|白皮书|借助|如何用|如何使用')
+UPCOMING_RE=re.compile(r'将(?:于|在)?[^，。；]{0,20}(?:发布|推出|上线|开源|开放|升级|登场|释出)'
+                       r'|即将|预告|预览|抢先看|coming soon|waitlist',re.I)
+RELEASED_RE=re.compile(r'已(?:经)?|正式|现已')
+LAUNCH_RE=re.compile(r'发布|推出|上线|开源|开放(?!权重)|升级|新增|更新|合并|释出|首发|登场')
+PRODUCT_RE=re.compile(r'功能|工具|浏览器|Firefox|Office|插件|客户端|应用|APP|API|工作台|保护模式|记忆'
+                      r'|Copilot|Claude Code|Cursor|Ollama|ChatGPT|智能体|Agent',re.I)
+MODEL_SIGNAL_RE=re.compile(r'模型|GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d'
+                           r'|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d')
+OFFICIAL_MODEL_RE=re.compile(r'GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d'
+                             r'|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d'
+                              r'|Kimi[- ]?K\d|MiniMax[- ]?M\d|Step[- ]?\d|ERNIE[- ]?\d|Hunyuan|文心[- ]?\d|Seed(?:ream|ance|3D|-OSS)'
+                             r'|(?:发布|推出|上线|开源|升级|更新)[^，。；]{0,10}(?:模型|大模型)'
+                             r'|(?:模型|大模型)[^，。；]{0,10}(?:发布|推出|上线|开源)')
 
 
 def news_event(title,official=False):
-    """official sources are first-party announcements, so they skip the launch-verb requirement."""
-    if EXCLUDE_RE.search(title):
+    """Official sources are first-party: previews become `upcoming`; media keep the strict verb rules."""
+    exclude=OFFICIAL_EXCLUDE_RE if official else MEDIA_EXCLUDE_RE
+    if exclude.search(title):
         return None
     if not TOPIC_RE.search(title):
         return None
-    if re.search(r'漏洞|停止服务|停服|安全更新|停止支持|泄露',title):
+    if re.search(r'漏洞|停止服务|停服|安全更新|停止支持|泄露|弃用|废弃|下线|停用|迁移',title):
         return 'action-required'
     if re.search(r'降价|涨价|免费额度|免费层|免费开放|免费试用|限时免费|价格调整|订阅.*调价',title):
         return 'price-or-free'
+    if official:
+        # 预告优先于发布类；「已/正式/现已」加发布动词视为已发布。仅主题命中不发布。
+        if UPCOMING_RE.search(title) and not (RELEASED_RE.search(title) and LAUNCH_RE.search(title)):
+            return 'upcoming'
+        if OFFICIAL_MODEL_RE.search(title):
+            return 'model-release'
+        if PRODUCT_RE.search(title) or LAUNCH_RE.search(title):
+            return 'major-update'
+        return None
     if re.search(r'评测|实测|测评|跑分|基准|榜单|登顶|SOTA|对比测试|更胜|超越',title,re.I):
         return 'model-review'
     if re.search(r'体验|上手|开箱|试用|深度使用|实测使用',title):
         return 'hands-on'
-    launch = r'发布|推出|上线|开源|开放(?!权重)|升级|新增|更新|合并|释出|首发|登场'
-    if official or re.search(launch,title):
+    if LAUNCH_RE.search(title):
         # Brand mentions alone do not establish a model release (e.g. Claude Office).
-        product = r'功能|工具|浏览器|Firefox|Office|插件|客户端|应用|APP|API|工作台|保护模式|记忆|Copilot|Claude Code|Cursor|Ollama|ChatGPT|智能体|Agent'
-        model = r'模型|GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d'
-        if re.search(product,title,re.I):
+        if PRODUCT_RE.search(title):
             return 'major-update'
-        if re.search(model,title,re.I):
+        if MODEL_SIGNAL_RE.search(title):
             return 'model-release'
         return 'major-update'
     if re.search(r'深度|解析|拆解|复盘|揭秘|梳理|观察|为何|背后|意味着|走向|格局|趋势|洞察|思考',title):
@@ -466,14 +586,7 @@ def aibase_article(raw,url,source):
     require(len(headings)==1,'AIBase article heading changed')
     title=' '.join(headings[0].text().split())
     require(re.search(r'[\u3400-\u9fff]',title),'AIBase Chinese title missing')
-    flight=''
-    for script in tree.find(lambda n:n.tag=='script'):
-        code=''.join(c for c in script.children if isinstance(c,str))
-        match=re.fullmatch(r'self\.__next_f\.push\((.*)\)',code,re.S)
-        if match:
-            payload=json.loads(match[1])
-            if isinstance(payload,list) and len(payload)>1 and payload[0]==1 and isinstance(payload[1],str):
-                flight+=payload[1]
+    flight=flight_payloads(raw)
     matches=[]
     identity=urlsplit(url).path.rstrip('/').split('/')[-1]
     def visit(value):
@@ -501,7 +614,7 @@ def aibase_article(raw,url,source):
     return dict(title=title,sourceUrl=url,source=source['name'],publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
 
 
-def collect_aibase(client,raw,source):
+def collect_aibase(client,raw,source,review):
     tree=Tree(decode(raw)).root
     urls=[]
     for node in tree.find(lambda n:n.tag=='a'):
@@ -516,57 +629,397 @@ def collect_aibase(client,raw,source):
     for url in urls:
         article,final=client.get(url,deadline=deadline)
         require(normalize_url(final)==url,'AIBase article redirected unexpectedly')
-        rows.append(aibase_article(article,url,source))
+        try:
+            rows.append(aibase_article(article,url,source))
+        except ValueError as exc:
+            # 个别文章页缺少内嵌数据（如专题页）；隔离该条，骤降保护兜底整体回归。
+            review('news-item',digest(url),'invalid AIBase article: '+str(exc),dict(source=source['name']))
+    require(rows,'AIBase produced no valid articles')
     return rows
 
 
-def collect_news(client,sources,originals,now,guard,review):
+def parse_anthropic_news(raw,source):
+    """Anthropic /news: server-rendered list, one <time> + title node per card."""
+    tree=Tree(decode(raw)).root
+    rows=[]; seen=set()
+    for link in tree.find(lambda n:n.tag=='a' and (n.attrs.get('href') or '').startswith('/news/')):
+        href=link.attrs['href']
+        if href in seen:
+            continue
+        times=link.find(lambda n:n.tag=='time')
+        heads=link.find(lambda n:'title' in (n.attrs.get('class') or '') or n.tag in ('h2','h3','h4'))
+        if not times or not heads:
+            continue
+        title=' '.join(heads[0].text().split())
+        date=' '.join(times[0].text().split())
+        require(title,'Anthropic news title empty')
+        try:
+            dt=datetime.strptime(date,'%b %d, %Y')
+        except ValueError as exc:
+            raise DataError('Anthropic news date format changed') from exc
+        seen.add(href)
+        rows.append(dict(title=title,sourceUrl=urljoin('https://www.anthropic.com',href),
+                         publishedAt=day_start_utc(dt.year,dt.month,dt.day),source=source['name'],summary=None))
+    require(rows,'Anthropic news list missing or restructured')
+    return rows
+
+
+def flight_payloads(raw):
+    """Concatenated Next.js RSC payload strings, shared by flight-based adapters."""
+    flight=''
+    for script in Tree(decode(raw)).root.find(lambda n:n.tag=='script'):
+        code=''.join(c for c in script.children if isinstance(c,str))
+        match=re.fullmatch(r'self\.__next_f\.push\((.*)\)',code,re.S)
+        if match:
+            payload=json.loads(match[1])
+            if isinstance(payload,list) and len(payload)>1 and payload[0]==1 and isinstance(payload[1],str):
+                flight+=payload[1]
+    return flight
+
+
+def parse_zhipu_news(raw,source):
+    """Zhipu /zh/news: the RSC payload embeds newsItems with id/title_zh/createAt (UTC)."""
+    flight=flight_payloads(raw)
+    marker=flight.find('"newsItems":')
+    require(marker>=0,'Zhipu news payload missing')
+    items,_=json.JSONDecoder().raw_decode(flight,flight.find('[',marker))
+    require(isinstance(items,list) and items,'Zhipu news list missing or restructured')
+    result=[]; seen=set()
+    for item in items:
+        require(isinstance(item,dict) and isinstance(item.get('id'),int),'Zhipu news item identity changed')
+        title=item.get('title_zh'); created=item.get('createAt')
+        require(isinstance(title,str) and isinstance(created,str),'Zhipu news item fields changed')
+        url='https://www.zhipuai.cn/zh/news/%d'%item['id']
+        if url in seen:
+            continue
+        title=' '.join(title.replace('\ufeff',' ').split())
+        require(title,'Zhipu news title empty')
+        dt=datetime.fromisoformat(created.replace('Z','+00:00'))
+        require(dt.tzinfo is not None,'Zhipu news date timezone missing')
+        seen.add(url)
+        result.append(dict(title=title,sourceUrl=url,
+                           publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                           source=source['name'],summary=None))
+    require(result,'Zhipu news produced no rows')
+    return result
+
+
+TENCENT_THIRD_PARTY_RE=re.compile(r'DeepSeek|GLM|Kimi|MiniMax|Qwen|千问|MiMo|智谱|阶跃')
+
+
+def parse_tencent_announcements(raw,source):
+    """TokenHub 产品公告: rows link to dated /announce/{id} detail pages.
+
+    The board also carries hosting notices for third-party vendors; those are
+    their vendors' own news, so only Tencent-first-party rows are returned.
+    """
+    tree=Tree(decode(raw)).root
+    result=[]; seen=set()
+    for row in tree.find(lambda n:n.tag=='tr'):
+        links=row.find(lambda n:n.tag=='a' and re.fullmatch(r'https://cloud\.tencent\.com/announce/detail/\d+',n.attrs.get('href') or ''))
+        cells=row.find(lambda n:n.tag=='td')
+        if not links or len(cells)<2:
+            continue
+        title=' '.join(links[0].text().replace('\ufeff',' ').split())
+        date=' '.join(cells[-1].text().replace('\ufeff',' ').split())
+        if not title or not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
+            continue
+        url=links[0].attrs['href']
+        if url in seen:
+            continue
+        seen.add(url)
+        if TENCENT_THIRD_PARTY_RE.search(title):
+            continue
+        year,month,day=(int(part) for part in date.split('-'))
+        result.append(dict(title=title,sourceUrl=url,
+                           publishedAt=day_start_utc(year,month,day),source=source['name'],summary=None))
+    require(result,'Tencent announcement table missing or restructured')
+    return result
+
+
+def sitemap_entries(raw,prefix):
+    """Shared sitemap <loc>/<lastmod> reader for official news sitemaps."""
+    root=ET.fromstring(raw)
+    require(root.tag.rsplit('}',1)[-1]=='urlset','sitemap structure changed')
+    result=[]
+    for node in root:
+        loc=last=None
+        for child in node:
+            name=child.tag.rsplit('}',1)[-1]
+            if name=='loc':
+                loc=(child.text or '').strip()
+            elif name=='lastmod':
+                last=(child.text or '').strip()
+        if loc and last and loc.startswith(prefix):
+            result.append((loc,last))
+    require(result,'sitemap contains no matching entries')
+    return result
+
+
+def recent_entry(last,now_dt,seconds=72*3600):
+    """Sitemap lastmod gate: tolerates malformed entries instead of failing the source."""
+    try:
+        stamp=datetime.fromisoformat(last.replace('Z','+00:00'))
+    except ValueError:
+        return False
+    if stamp.tzinfo is None:
+        return False
+    age=(now_dt-stamp).total_seconds()
+    return -300<=age<=seconds
+
+
+def collect_xai(client,raw,source,now):
+    """x.ai sitemap for discovery; article page supplies h1 title and datePublished."""
+    now_dt=datetime.fromisoformat(now)
+    rows=[]; deadline=time.monotonic()+120
+    for loc,last in sitemap_entries(raw,'https://x.ai/news/'):
+        if not re.fullmatch(r'https://x\.ai/news/[\w.-]+',loc) or not recent_entry(last,now_dt):
+            continue
+        page,final=client.get(loc,deadline=deadline)
+        require(normalize_url(final)==loc,'xAI article redirected unexpectedly')
+        text=decode(page)
+        heads=Tree(text).root.find(lambda n:n.tag=='h1')
+        match=re.search(r'"datePublished"\s*:\s*"([^"]+)"',text)
+        require(heads and match,'xAI article structure changed')
+        title=' '.join(heads[0].text().split())
+        require(title,'xAI article title empty')
+        dt=datetime.fromisoformat(match.group(1).replace('Z','+00:00'))
+        require(dt.tzinfo is not None,'xAI article date timezone missing')
+        rows.append(dict(title=title,sourceUrl=loc,source=source['name'],summary=None,
+                         publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')))
+    return rows
+
+
+def collect_seed(client,raw,source,now):
+    """ByteDance Seed sitemap for discovery; article page supplies h1 title and 发布日期."""
+    now_dt=datetime.fromisoformat(now)
+    rows=[]; deadline=time.monotonic()+120
+    for loc,last in sitemap_entries(raw,'https://seed.bytedance.com/blog/'):
+        if not recent_entry(last,now_dt):
+            continue
+        page,final=client.get(loc,deadline=deadline)
+        zh=loc.replace('/blog/','/zh/blog/',1)
+        require(normalize_url(final) in (normalize_url(loc),normalize_url(zh)),'Seed article redirected unexpectedly')
+        url=normalize_url(final)
+        text=decode(page)
+        heads=Tree(text).root.find(lambda n:n.tag=='h1')
+        match=re.search(r'font-normal">(\d{4}-\d{2}-\d{2})<',text)
+        if not heads or not match:
+            review('news-item',digest(url),'Seed article structure changed',dict(source=source['name']))
+            continue
+        title=' '.join(heads[0].text().split())
+        require(title,'Seed article title empty')
+        year,month,day=(int(part) for part in match.group(1).split('-'))
+        rows.append(dict(title=title,sourceUrl=url,source=source['name'],summary=None,
+                         publishedAt=day_start_utc(year,month,day)))
+    return rows
+
+
+def parse_minimax_blog(raw,source):
+    """MiniMax /blog: server list page links; titles/dates come from each article page."""
+    tree=Tree(decode(raw)).root
+    urls=[]
+    for node in tree.find(lambda n:n.tag=='a'):
+        href=node.attrs.get('href','')
+        if re.fullmatch(r'/blog/[\w%.-]+',href):
+            url=urljoin(source['url'],href)
+            if url not in urls:
+                urls.append(url)
+    require(0<len(urls)<=60,'MiniMax blog list structure/size changed')
+    return urls
+
+
+def collect_minimax(client,raw,source):
+    rows=[]; deadline=time.monotonic()+180
+    for url in parse_minimax_blog(raw,source):
+        page,final=client.get(url,deadline=deadline)
+        require(normalize_url(final)==url,'MiniMax article redirected unexpectedly')
+        text=decode(page)
+        heads=Tree(text).root.find(lambda n:n.tag=='h1')
+        match=re.search(r'"datePublished"\s*:\s*"([^"]+)"',text)
+        if not heads or not match:
+            review('news-item',digest(url),'MiniMax article structure changed',dict(source=source['name']))
+            continue
+        title=' '.join(heads[0].text().split())
+        require(title,'MiniMax article title empty')
+        dt=datetime.fromisoformat(match.group(1).replace('Z','+00:00'))
+        require(dt.tzinfo is not None,'MiniMax article date timezone missing')
+        rows.append(dict(title=title,sourceUrl=url,source=source['name'],summary=None,
+                         publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')))
+    require(rows,'MiniMax blog parsing produced no articles')
+    return rows
+
+
+BRAND_TOKEN_RE=re.compile(r'[A-Za-z][A-Za-z0-9._-]*\d[A-Za-z0-9._-]*')
+
+
+def normalized_title(title):
+    return re.sub(r'[^0-9a-z\u4e00-\u9fff]','',title.lower())
+
+
+def brand_tokens(title):
+    tokens=set()
+    for raw in BRAND_TOKEN_RE.findall(title):
+        token=re.sub(r'[^a-z0-9]','',raw.lower())
+        if len(token)>=4:
+            tokens.add(token)
+    return tokens
+
+
+def title_bigrams(text):
+    if len(text)<8:
+        return set()
+    return {text[i:i+2] for i in range(len(text)-1)}
+
+
+def similar_event(a,b):
+    """Same-type titles describing one event are duplicates; different event types coexist."""
+    if a['eventType']!=b['eventType']:
+        return False
+    if brand_tokens(a['title']) & brand_tokens(b['title']):
+        return True
+    na,nb=normalized_title(a['title']),normalized_title(b['title'])
+    if len(min(na,nb))>=10 and (na in nb or nb in na):
+        return True
+    ba,bb=title_bigrams(na),title_bigrams(nb)
+    if not ba or not bb:
+        return False
+    return 2*len(ba&bb)/(len(ba)+len(bb))>=0.9
+
+
+def parse_huggingface_models(raw,source):
+    """Official vendor orgs on Hugging Face: a new model repo counts as a model release.
+
+    The hub API provides no article title, so the Chinese title is the fixed template
+    「{厂商}发布 {模型名}」; no other wording may be added.
+    """
+    rows=json.loads(decode(raw))
+    require(isinstance(rows,list) and rows,'Hugging Face model list changed')
+    result=[]
+    for row in rows:
+        if not isinstance(row,dict) or not isinstance(row.get('modelId'),str) or not isinstance(row.get('createdAt'),str):
+            continue
+        require(row['modelId'].startswith(source['author']+'/'),'Hugging Face model identity changed')
+        dt=datetime.fromisoformat(row['createdAt'].replace('Z','+00:00'))
+        require(dt.tzinfo is not None,'Hugging Face createdAt timezone missing')
+        name=row['modelId'].split('/',1)[1]
+        result.append(dict(title=source['titleVendor']+'发布 '+name,
+                           sourceUrl='https://huggingface.co/'+row['modelId'],
+                           publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                           source=source['name'],summary=None))
+    require(result,'Hugging Face model list produced no rows')
+    return result
+
+
+def collect_news(client,sources,originals,old,now,guard,review,translate=None):
+    """Official-first news collection.
+
+    Items accumulate forever in the published file: `addedAt` marks admission and the
+    daily quota (Beijing day) caps new items per day/source/event type. English titles
+    and summaries pass through `translate` before classification; a failed translation
+    only skips that candidate for this run.
+    """
     candidates=[]; now_dt=datetime.fromisoformat(now)
+    known={item['id'] for item in old.get('items',[])}
+    seen=set()
     for source in sources:
         raw,final=client.get(source['url'])
-        require(normalize_url(final)==normalize_url(source['url']),'RSS redirected unexpectedly')
+        require(normalize_url(final)==normalize_url(source['url']),'news source redirected unexpectedly')
         adapter=source.get('adapter','rss')
-        require(adapter in ('rss','aibase','deepseek-news'),'unknown news adapter')
+        require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce'),'unknown news adapter')
+        official=source.get('official') is True
         if adapter=='aibase':
-            rows=collect_aibase(client,raw,source)
+            rows=collect_aibase(client,raw,source,review)
         elif adapter=='deepseek-news':
             rows=parse_deepseek_news(decode(raw),source)
+        elif adapter=='anthropic-news':
+            rows=parse_anthropic_news(raw,source)
+        elif adapter=='zhipu-news':
+            rows=parse_zhipu_news(raw,source)
+        elif adapter=='tencent-announce':
+            rows=parse_tencent_announcements(raw,source)
+        elif adapter=='xai-sitemap':
+            rows=collect_xai(client,raw,source,now)
+        elif adapter=='seed-blog':
+            rows=collect_seed(client,raw,source,now)
+        elif adapter=='minimax-blog':
+            rows=collect_minimax(client,raw,source)
+        elif adapter=='huggingface-models':
+            rows=parse_huggingface_models(raw,source)
         else:
             rows=parse_feed(raw,source,review)
-        guard(source['id'],len(rows))
+        if source.get('guard',True):
+            guard(source['id'],len(rows))
         for row in rows:
             # Contract §4.5 URL normalization: keep article identity stable and strip tracking parameters.
             row=dict(row,sourceUrl=normalize_url(row['sourceUrl']))
+            identity=digest(row['sourceUrl'])
+            if identity in known or identity in seen:
+                continue
+            seen.add(identity)
             age=(now_dt-datetime.fromisoformat(row['publishedAt'])).total_seconds()
             if age < -300:
-                review('news-future',digest(row['sourceUrl']),'publication is in the future',row)
+                review('news-future',identity,'publication is in the future',row)
                 continue
-            event=news_event(row['title'],official=adapter=='deepseek-news')
-            if age>72*3600 or event is None:
+            if age > 72*3600:
                 continue
-            url=row['sourceUrl']; identity=digest(normalize_url(url))
-            publisher,original,verified=verify_original(client,row,originals.get(identity),now,review)
-            candidates.append(dict(row,id=identity,summary=None,lang='zh',originalSource=publisher,originalUrl=original,originalVerifiedAt=verified,
-                                   url=original or url,category=CATEGORY_BY_EVENT[event],eventType=event))
-    source_priority={s['name']:i for i,s in enumerate(sources)}
-    dedup={}
-    for item in sorted(candidates,key=lambda i:(i['sourceUrl']!=i['originalUrl'],source_priority[i['source']],i['publishedAt'],i['id'])):
-        mapping=originals.get(item['id'],{})
-        original=item['originalUrl']
-        repo_root=original and urlsplit(original).hostname=='github.com' and len(urlsplit(original).path.strip('/').split('/'))==2
-        event_key=normalize_url(original) if original and mapping.get('eventSpecific') is True and not repo_root else item['id']
-        dedup.setdefault(event_key,item)
-    result=[]; by_source={}; by_event={}
-    for item in sorted(dedup.values(),key=news_order):
-        # Contract §4.5: no single event type or source may take more than two slots.
-        if by_source.get(item['source'],0)>=2 or by_event.get(item['eventType'],0)>=2:
+            candidates.append((row,official,source))
+    machine={}
+    if translate:
+        pending=[dict(id=digest(row['sourceUrl']),title=row['title'],summary=row.get('summary'))
+                 for row,_,_ in candidates if not re.search(r'[\u3400-\u9fff]',row['title'])]
+        if pending:
+            machine=translate(pending)
+    items=[]
+    for row,official,source in candidates:
+        identity=digest(row['sourceUrl'])
+        title=row['title']; originalTitle=None; translatedAt=None; summary=None; lang='zh'
+        if not re.search(r'[\u3400-\u9fff]',title):
+            translated=machine.get(identity)
+            if not translated:
+                continue  # retried next run while still inside the admission window
+            originalTitle=title; title=translated['title']; summary=translated.get('summary')
+            translatedAt=now; lang='en'
+        event=news_event(title,official=official)
+        if event is None:
             continue
-        result.append(item)
-        by_source[item['source']]=by_source.get(item['source'],0)+1
-        by_event[item['eventType']]=by_event.get(item['eventType'],0)+1
-        if len(result)==6:
+        if official:
+            publisher=source['name']; original=row['sourceUrl']; verified=now
+        else:
+            publisher,original,verified=verify_original(client,row,originals.get(identity),now,review)
+        items.append(dict(row,id=identity,title=title,originalTitle=originalTitle,translatedAt=translatedAt,
+                          summary=summary,lang=lang,originalSource=publisher,originalUrl=original,
+                          originalVerifiedAt=verified,url=original or row['sourceUrl'],
+                          category=CATEGORY_BY_EVENT[event],eventType=event,addedAt=now))
+    # Daily quotas count items admitted on the same Beijing day, so all runs share one budget.
+    today=(now_dt+timedelta(hours=8)).date().isoformat()
+    used_total=0; used_source={}; used_event={}
+    for item in old.get('items',[]):
+        if (datetime.fromisoformat(item['addedAt'])+timedelta(hours=8)).date().isoformat()!=today:
+            continue
+        used_total+=1
+        used_source[item['source']]=used_source.get(item['source'],0)+1
+        used_event[item['eventType']]=used_event.get(item['eventType'],0)+1
+    priority={event:index for index,event in enumerate(EVENTS)}
+    order=lambda i:(priority[i['eventType']],-datetime.fromisoformat(i['publishedAt']).timestamp(),i['id'])
+    # 相似排除只比对近 7 天入库的条目，避免长期库存永久压住同型号的后续事件。
+    recent=[item for item in old.get('items',[])
+            if (now_dt-datetime.fromisoformat(item['addedAt'])).total_seconds()<=7*24*3600]
+    chosen=[]
+    for item in sorted(items,key=order):
+        if used_total>=6:
             break
-    return dict(dataUpdatedAt=now,items=result)
+        if any(similar_event(item,known) for known in recent):
+            continue
+        if used_source.get(item['source'],0)>=2 or used_event.get(item['eventType'],0)>=2:
+            continue
+        chosen.append(item)
+        recent.append(item)
+        used_total+=1
+        used_source[item['source']]=used_source.get(item['source'],0)+1
+        used_event[item['eventType']]=used_event.get(item['eventType'],0)+1
+    merged=sorted(old.get('items',[])+chosen,key=news_order)
+    return dict(dataUpdatedAt=now,items=merged)
 
 
 def select_scope(tree,scope):

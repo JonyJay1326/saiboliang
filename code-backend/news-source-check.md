@@ -67,3 +67,102 @@ AIBase 的报道链接属于中文报道；只有另行核实官方一手出处�
 - [未定] 厂商官方通道若要直接采集，需先确定两件事：只有日期（无时刻）的 `publishedAt` 精度处理、条目唯一 URL（片段锚点被规范化剥离）——属契约边缘，需用户拍板。
 - [待办] `news-originals.json` 仍为空：当前所有条目 `originalUrl=null`、标题回退中文报道；可优先为 DeepSeek/智谱/百炼 的高频事件补人工映射。
 
+## 2026-09-19 资讯转官方一手（news v2）准入与验证
+
+### 本轮改动
+
+- 来源整体切换为厂商官方一手：DeepSeek 官网新闻（保留 `deepseek-news` 适配器）＋ OpenAI、Google AI、DeepMind、GitHub changelog、GitHub Copilot label、NVIDIA 官方 RSS；2026-09-17 轮的中文媒体源全部退役（`enabled:false` 保留）。
+- `sources.py`：主题词表删 4 词（原 49→45 项）；官方/媒体排除规则分化；新增 `upcoming` 预告判定；`parse_feed` 支持 Atom、按源语言校验标题、提取来源简介；新增 `translate_news`（DeepSeek `deepseek-flash` 分块机译，缓存 `state/news-zh-cache.json`）；`collect_news` 改为累积入库＋北京日配额。
+- `contract.py`：`NEWS` 新增 `originalTitle`/`translatedAt`/`addedAt`，`lang` 改为 zh/en 源文语言，`eventType` 新增 `upcoming`；排序改 `publishedAt` 倒序；校验改为每日新增≤6、每源≤2/天、每类≤2/天、72h 入库窗口。
+- 契约、架构、data-review 与前端二期备注同步更新，审批稿见 `doc-data/cyber-granary-change-proposal-news-first-party.md`。
+
+### 准入实测（与管道同款 UA、每域 1 请求、超时 15s）
+
+| 源 | 入口 | 实测结果 | 结论 |
+| --- | --- | --- | --- |
+| OpenAI | `https://openai.com/news/rss.xml` | 200 RSS 2.0、1210 条、GMT 时间；`/blog/rss.xml` 301 到该地址 | 启用 |
+| Google AI | `https://blog.google/innovation-and-ai/technology/ai/rss/` | 200 RSS、20 条、+0000；旧的 `/technology/ai/rss/` 301 到该地址 | 启用 |
+| Google DeepMind | `https://deepmind.google/blog/rss.xml` | 200 RSS、100 条、+0000；窗口内常为 0 条 | 启用 |
+| GitHub changelog | `https://github.blog/changelog/feed/` | 200 RSS、10 条、+0000 | 启用 |
+| GitHub Copilot label | `https://github.blog/changelog/label/copilot/feed/` | 200 RSS、10 条、+0000 | 启用（与 changelog 同域，条目按 URL 去重） |
+| NVIDIA | `https://blogs.nvidia.com/feed/` | 200 RSS、18 条、+0000；多数为游戏/硬件，由主题词表过滤 | 启用 |
+| DeepSeek | `https://www.deepseek.com/news/` | 已有适配器；索引 5 条 | 启用 |
+| Anthropic | `https://www.anthropic.com/news` | 服务端含标题、`/news/{slug}` 链接与日期，需专用适配器 | 待接入 |
+| developers.googleblog.com | `/en/feed/` | 404 | 不启用 |
+| Meta / xAI / MiniMax / Qwen / 火山 / 腾讯 / 讯飞 / 阶跃 | — | 无服务端日期或 403/JS 壳 | 不启用 |
+| Hugging Face | `https://huggingface.co/blog/feed.xml` | 200 RSS，但作者含第三方 | 不启用（2026-09-19 用户默认） |
+
+[实测] robots：DeepSeek、ByteDance Seed、Anthropic、Hugging Face、GitHub、MiniMax 均 `Allow` 或无阻断条款；讯飞文档 403、`x.ai` 403 为 UA 层拦截，不是 robots 条款。
+
+### 验证结果
+
+[实测] `python test_pipeline.py` 全部通过（含新增预告、机译重试、每日配额、累积排序、字段成对校验用例）。
+
+[实测] 本地连续两轮 `pipeline.py collect --modules news`：首轮入库 3 条（GitHub 2、GitHub Copilot 1；`action-required` 1、`major-update` 2，均为英文机译条目），第二轮无重复、仅刷新 `dataUpdatedAt`；`pipeline.py validate` 五文件契约 PASS。入库示例见 `public/data/news.json`。
+
+[实测] 首轮曾暴露并修正三类误判：弃用公告改按 `action-required`（新增弃用/下线/停用/迁移词）；官方条目不再单凭「模型」泛词归 `model-release`（新增官方专用模型信号）；客户故事（借助/如何用/白皮书）排除。
+
+### 遗留事项
+
+- [待办] Anthropic `/news` 适配器（服务端数据已核实可解析）。
+- [待办] 中文媒体源正式废弃或长期保留禁用配置，待观察一手源产量后决定；媒体回退路径代码仍保留。
+- [未定] NVIDIA feed 与 GitHub changelog 的 AI 命中率需积累样本；当前靠主题词表＋每源/每天 2 条上限控制噪声。
+
+### 2026-09-19 第二批：模型榜厂商补齐
+
+模型榜在榜厂商（Anthropic、OpenAI、Meta、Alibaba、Z AI、SpaceXAI、Kimi、Google、DeepSeek、Sapiens AI）逐一复核；本轮新接入 5 源（Anthropic 的「待办」已完成）。
+
+| 源 | 入口 | 机制 | 实测 | 结论 |
+| --- | --- | --- | --- | --- |
+| Anthropic | `https://www.anthropic.com/news` | 列表页 `<time>`＋标题节点；日期无时刻按北京日 00:00 | 10 条解析成功；72h 内 2 条（Accenture 合作、生命科学验证计划）题材未命中，正确不发布 | 启用（`anthropic-news`） |
+| SpaceXAI | `https://x.ai/sitemap.xml` | sitemap `lastmod` 预筛＋文章页 h1/`datePublished` | sitemap 82 条 news；72h 内 1 条（Grok Voice Transcribe 2.0）通过分类，因当日 `major-update` 配额已满顺延次日 | 启用（`xai-sitemap`，`guard:false`） |
+| 字节 Seed | `https://seed.bytedance.com/sitemap.xml` | sitemap `lastmod` 预筛＋文章页 h1/发布日期；`/blog/*` 会 301 到 `/zh/blog/*` | 2 条通过预筛但均为改版老文（发布 4 月/7 月），72h 窗口正确拦截 | 启用（`seed-blog`，`guard:false`） |
+| MiniMax | `https://www.minimax.cn/blog` | 列表页 13 篇文章链接＋文章页中文 h1/JSON-LD `datePublished` | 全部为 7 月及更早文章，窗口内 0 条 | 启用（`minimax-blog`，`guard:false`） |
+| Meta | `https://about.fb.com/news/tag/ai/feed/` | 官方 RSS | 10 条；72h 内 1 条（smartARM 义肢报道）题材/规则未命中 | 启用 |
+
+[实测] **未接入与原因：** 智谱 `docs.bigmodel.cn/cn/update/new-releases` 条目只链到模型文档页、无独立公告 URL（仅证据页）；Qwen `qwen.ai/blog` 为 SPA，无 sitemap、`/api/*` 全部回落到前端壳；Kimi `kimi.com/blog` 的 Next.js 列表可解析（id/title/href/date），但更新稀疏且标题为英文专名（译文无中文会被机译校验拒绝）；Sapiens AI（Agnes，`agnes-ai.com` 纯 JS）、腾讯混元、百度、讯飞星火、阶跃星辰均无服务端可解析的官方更新入口。
+
+[实测] **robots：** x.ai `Allow: /`（仅 Disallow `/tools/`）、about.fb.com 仅禁搜索页、`minimax.cn` `Allow: /`、seed.bytedance.com `Allow: /`、anthropic.com `Allow: /`。
+
+[实测] 主题词表增补 `Seedream`、`Seedance`、`Seed3D`、豆包 4 词（现 49 项），避免 Seed 家族模型发布被题材闸门拦截；`python test_pipeline.py` 44 项全过；真实采集 `news: OK`、`pipeline.py validate` PASS。
+
+### 2026-09-19 第三批：二手兜底（AIBase）与模型托管（Hugging Face）
+
+| 源 | 入口 | 机制 | 实测 | 结论 |
+| --- | --- | --- | --- | --- |
+| AIBase（二手兜底） | `https://www.aibase.com/zh/news` | 列表 `/(?:zh/)?news/{id}`＋详情页 h1/内嵌 Next.js `addtime` | 20 条中 19 条可解析；`31168` 专题页缺内嵌数据 → 单条隔离进待复核（骤降保护兜底整体回归） | 重启（媒体规则，来源署 AIBase） |
+| Hugging Face ×6 | `huggingface.co/api/models?author=…`（Qwen、zai-org、moonshotai、tencent、baidu、stepfun-ai） | 官方组织新建模型仓＝模型发布；标题模板「{厂商}发布 {模型名}」，`createdAt` 作 publishedAt | 六组织均 200、各 19–20 条；72h 内无新建仓 | 启用（`huggingface-models`） |
+
+[实测] **YouTube 不接入（robots 阻断）：** `www.youtube.com/robots.txt` 明确 `Disallow: /feeds/videos.xml`；频道 RSS 路线违反来源条款。若坚持官方视频渠道，须改用 YouTube Data API（需 Google API Key，免费配额 10k 单位/日）——待用户决定。
+
+[实测] **X/Twitter 不接入：** 官方 API 无免费层、按量计费（读 $0.005/条、查用户 $0.010，[官方] 报道汇总）；RSSHub 公开实例 404/403、Nitter 实例连接失败；Bluesky 公共 API 免费但厂商账号不存在或零发帖。ModelScope 公开接口探测 404，暂不可用。
+
+[实测] 实采结果：AIBase 新增 2 条 GLM-5.3-FlashX 报道（model-release），当日北京日额度 5/6；`python test_pipeline.py` 46 项全过、`pipeline.py validate` PASS。
+
+**相似排除（同日落地，已解除观察）：** 契约 §4.5 新增相似排除规则（同 `eventType` 下品牌标记/标题包含/二元组 Dice ≥0.9 → 视为同一事件，比对近 7 天入库与本轮已选，不同事件类型并存）。本地库存已按规则清理：GLM-5.3-FlashX 两篇合并为 1 条（保留更早发布的 `智谱GLM-5.3-FlashX上线：最高 200 tokens/s`）；复跑 `news: OK`、`pipeline.py validate` PASS、47 项测试全过。
+
+### 2026-09-19 第四批：体裁补齐（量子位）与主题边界修复
+
+| 源 | 入口 | 实测 | 结论 |
+| --- | --- | --- | --- |
+| 量子位（二手兜底） | `https://www.qbitai.com/feed` | 10 条、中文标题、带时区时间（当天 11:53 UTC 仍有更新） | 重启（媒体规则） |
+
+[实测] **主题边界修复：** `topic_pattern` 后界由「禁止字母数字」改为「只禁止字母」，`Qwen3.8`/`GPT5` 类型号名现在命中主题闸门（此前 AIBase 与 Hugging Face 的 Qwen 条目会被整类丢弃）；`OpenAI`/`AIGC` 仍不会误命中 `AI`。修复后 AIBase 单源 model-release 候选由 3 条增至 4 条。
+
+[实测] 复采 `news: OK`；今日北京日额度 5/6。量子位当日条目未命中事件规则（媒体标题多为行业/观点，不含发布/实测/深度关键词），属预期；47 项离线测试全过。
+
+**并发改动提醒（非本轮资讯改动）：** 13:17 UTC 前后另一工具正在给 plans 增加 `rank`/`rankBasis`（`contract.py` 与 `public/data/models.json`），期间 `pipeline.py validate` 会因 plans 记录字段未同步而报 `plans: object fields mismatch`；待对方完成后复核，勿将资讯改动与此混提。
+
+### 2026-09-19 第五批：微软
+
+| 源 | 入口 | 实测 | 结论 |
+| --- | --- | --- | --- |
+| Microsoft AI | `https://blogs.microsoft.com/blog/tag/ai/feed/` | 10 条、2026-09-17 仍在更新、无重定向、带时区 | 启用（`rss`） |
+| Microsoft Azure | `https://azure.microsoft.com/en-us/blog/feed/` | 10 条、2026-09-10 最新、无重定向、带时区 | 启用（`rss`） |
+
+[实测] **不采用：** `blogs.microsoft.com/ai/feed/` 返回 410；Copilot tag feed 停更于 2025-09；`news.microsoft.com/feed/` 停更于 2025-05；`devblogs.microsoft.com/ai/feed/` 为空 feed；Tech Community Copilot RSS 返回 HTML。robots：blogs.microsoft.com 仅禁 `/wp-admin/`，azure.microsoft.com 仅禁搜索/API 路径。
+
+[实测] 复采 `news: OK`、`pipeline.py validate` PASS；两源各记 10 条候选基线；窗口内条目未命中事件规则（战略/分析类），当日北京日额度 5/6。
+
+[实测] **并发 plans 改动已收敛：** 17 条 plans 均含 `rank`/`rankBasis`，`validate` 恢复 PASS（上一条提醒解除）；资讯与 plans 两批改动仍建议分开提交。
+

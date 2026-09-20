@@ -1,4 +1,5 @@
 """Standard-library transport and safe local persistence."""
+import gzip
 import hashlib
 import json
 import math
@@ -94,6 +95,15 @@ def finite(value, minimum=None):
     return type(value) in (int, float) and math.isfinite(value) and (minimum is None or value >= minimum)
 
 
+def decompress(raw, encoding):
+    """Some CDNs force gzip even though urllib never sends Accept-Encoding."""
+    if not encoding or encoding.strip().lower() != 'gzip':
+        return raw
+    value = gzip.decompress(raw)
+    require(len(value) <= 8_000_000, 'decompressed response exceeds size limit')
+    return value
+
+
 class SafeRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         safe_url(newurl)
@@ -122,6 +132,7 @@ class Client:
                 with self.opener.open(req, timeout=min(15, deadline - time.monotonic())) as response:
                     raw = response.read(8_000_001)
                     require(len(raw) <= 8_000_000, 'response exceeds size limit')
+                    raw = decompress(raw, response.headers.get('Content-Encoding') or '')
                     return raw, response.geturl()
             except HTTPError as exc:
                 status = exc.code

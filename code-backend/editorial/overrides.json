@@ -5,6 +5,8 @@
       "module": "plans",
       "record": {
         "id": "bigmodel-coding-plan",
+        "rank": 1,
+        "rankBasis": "模型能力与工具生态第一梯队，主流共识国产首选",
         "vendor": "智谱",
         "product": "GLM Coding Plan",
         "group": "domestic",
@@ -86,6 +88,8 @@
       "module": "plans",
       "record": {
         "id": "kimi-code-plan",
+        "rank": 2,
+        "rankBasis": "K3 开源第一档 + 1M 上下文 + Agent 生态，¥49 起",
         "vendor": "月之暗面 Kimi",
         "product": "Kimi Code Plan",
         "group": "domestic",
@@ -198,6 +202,8 @@
       "module": "plans",
       "record": {
         "id": "xiaomi-mimo-plan",
+        "rank": 8,
+        "rankBasis": "Credits 量巨大，实测口碑一般",
         "vendor": "小米",
         "product": "MiMo Token Plan",
         "group": "domestic",
@@ -293,6 +299,8 @@
       "module": "plans",
       "record": {
         "id": "volcengine-coding-plan",
+        "rank": 3,
+        "rankBasis": "多模型 + Auto + Anthropic 原生协议，首购 ¥9.9",
         "vendor": "火山引擎方舟",
         "product": "方舟 Coding Plan",
         "group": "domestic",
@@ -391,6 +399,8 @@
       "module": "plans",
       "record": {
         "id": "volcengine-agent-plan",
+        "rank": 6,
+        "rankBasis": "Agent 形态含 Kimi K3 / GLM-5.3，¥40 起",
         "vendor": "火山引擎方舟",
         "product": "方舟 Agent Plan",
         "group": "domestic",
@@ -495,6 +505,8 @@
       "module": "plans",
       "record": {
         "id": "chatgpt-plans",
+        "rank": 2,
+        "rankBasis": "用户盘最大 + Codex 集成，$8 起",
         "vendor": "OpenAI",
         "product": "ChatGPT 会员",
         "group": "overseas",
@@ -626,6 +638,8 @@
       "module": "plans",
       "record": {
         "id": "google-ai-plans",
+        "rank": 7,
+        "rankBasis": "$4.99 低门槛 + Gemini 生态，编程热度低",
         "vendor": "Google",
         "product": "Google AI 会员",
         "group": "overseas",
@@ -722,6 +736,8 @@
       "module": "plans",
       "record": {
         "id": "meta-muse-code-plan",
+        "rank": 8,
+        "rankBasis": "Meta 新品，额度小、评测少",
         "vendor": "Meta",
         "product": "Muse Code",
         "group": "overseas",
@@ -798,6 +814,8 @@
       "module": "plans",
       "record": {
         "id": "command-code-plans",
+        "rank": 3,
+        "rankBasis": "$1 换 $10 credits 不过期，试错成本最低",
         "vendor": "Command Code",
         "product": "Command Code Plan",
         "group": "overseas",
@@ -939,6 +957,8 @@
       "module": "plans",
       "record": {
         "id": "minimax-token-plan",
+        "rank": 9,
+        "rankBasis": "token 全模态，海外声量低且价高于中国站",
         "vendor": "MiniMax",
         "product": "MiniMax Token Plan（国际站）",
         "group": "overseas",
@@ -1017,6 +1037,8 @@
       "module": "plans",
       "record": {
         "id": "aliyun-bailian-plan",
+        "rank": 5,
+        "rankBasis": "模型最全、工具最广，政策与门槛有波动",
         "vendor": "阿里云百炼",
         "product": "Token Plan 个人版",
         "group": "domestic",
@@ -1138,6 +1160,8 @@
       "module": "plans",
       "record": {
         "id": "minimax-token-plan-cn",
+        "rank": 4,
+        "rankBasis": "token 计费不焦虑、全模态共享额度",
         "vendor": "MiniMax",
         "product": "MiniMax Token Plan（中国站）",
         "group": "domestic",

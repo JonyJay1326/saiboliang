@@ -834,7 +834,9 @@
       "source": "official",
       "sourceUrl": "https://help.aliyun.com/zh/model-studio/token-plan-overview",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 5,
+      "rankBasis": "模型最全、工具最广，政策与门槛有波动"
     },
     {
       "id": "bigmodel-coding-plan",
@@ -909,7 +911,9 @@
       "source": "aggregator",
       "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 1,
+      "rankBasis": "模型能力与工具生态第一梯队，主流共识国产首选"
     },
     {
       "id": "chatgpt-plans",
@@ -1034,7 +1038,9 @@
       "source": "official",
       "sourceUrl": "https://help.openai.com/zh-hans-cn/articles/6950777",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 2,
+      "rankBasis": "用户盘最大 + Codex 集成，$8 起"
     },
     {
       "id": "claude-plans",
@@ -1111,7 +1117,9 @@
       "source": "official",
       "sourceUrl": "https://claude.com/pricing",
       "updatedAt": "2026-09-19",
-      "checkMethod": "auto"
+      "checkMethod": "auto",
+      "rank": 4,
+      "rankBasis": "质量与口碑标杆（39% 采用率），$20 起"
     },
     {
       "id": "command-code-plans",
@@ -1246,7 +1254,9 @@
       "source": "official",
       "sourceUrl": "https://commandcode.ai/zh/pricing",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 3,
+      "rankBasis": "$1 换 $10 credits 不过期，试错成本最低"
     },
     {
       "id": "copilot-coding-plan",
@@ -1342,7 +1352,9 @@
       "source": "official",
       "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans",
       "updatedAt": "2026-09-19",
-      "checkMethod": "auto"
+      "checkMethod": "auto",
+      "rank": 5,
+      "rankBasis": "付费量第一、学生免费，口碑在下滑"
     },
     {
       "id": "google-ai-plans",
@@ -1432,7 +1444,9 @@
       "source": "aggregator",
       "sourceUrl": "https://one.google.com/about/google-ai-plans",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 7,
+      "rankBasis": "$4.99 低门槛 + Gemini 生态，编程热度低"
     },
     {
       "id": "kimi-code-plan",
@@ -1538,7 +1552,9 @@
       "source": "aggregator",
       "sourceUrl": "https://www.kimi.com/code",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 2,
+      "rankBasis": "K3 开源第一档 + 1M 上下文 + Agent 生态，¥49 起"
     },
     {
       "id": "meta-muse-code-plan",
@@ -1608,7 +1624,9 @@
       "source": "aggregator",
       "sourceUrl": "https://dev.meta.ai/docs/muse-code/subscriptions",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 8,
+      "rankBasis": "Meta 新品，额度小、评测少"
     },
     {
       "id": "minimax-token-plan",
@@ -1680,7 +1698,9 @@
       "source": "official",
       "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-token-plan.md",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 9,
+      "rankBasis": "token 全模态，海外声量低且价高于中国站"
     },
     {
       "id": "minimax-token-plan-cn",
@@ -1758,7 +1778,9 @@
       "source": "aggregator",
       "sourceUrl": "https://platform.minimax.cn/subscribe/token-plan",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 4,
+      "rankBasis": "token 计费不焦虑、全模态共享额度"
     },
     {
       "id": "opencode-go-plan",
@@ -1809,7 +1831,9 @@
       "source": "official",
       "sourceUrl": "https://opencode.ai/zh/go",
       "updatedAt": "2026-09-18",
-      "checkMethod": "auto"
+      "checkMethod": "auto",
+      "rank": 1,
+      "rankBasis": "$10 换 $60 等值额度、18 款开源模型可自带 key"
     },
     {
       "id": "supergrok-plan",
@@ -1882,7 +1906,9 @@
       "source": "official",
       "sourceUrl": "https://x.ai/pricing",
       "updatedAt": "2026-09-19",
-      "checkMethod": "auto"
+      "checkMethod": "auto",
+      "rank": 6,
+      "rankBasis": "捆绑 X Premium+ 分发广，编程能力中游"
     },
     {
       "id": "volcengine-agent-plan",
@@ -1980,7 +2006,9 @@
       "source": "aggregator",
       "sourceUrl": "https://ai.volcengine.com/activity/agentplan",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 6,
+      "rankBasis": "Agent 形态含 Kimi K3 / GLM-5.3，¥40 起"
     },
     {
       "id": "volcengine-coding-plan",
@@ -2072,7 +2100,9 @@
       "source": "aggregator",
       "sourceUrl": "https://ai.volcengine.com/activity/codingplan",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 3,
+      "rankBasis": "多模型 + Auto + Anthropic 原生协议，首购 ¥9.9"
     },
     {
       "id": "xfyun-astron-plan",
@@ -2142,7 +2172,9 @@
       "source": "official",
       "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
       "updatedAt": "2026-09-19",
-      "checkMethod": "auto"
+      "checkMethod": "auto",
+      "rank": 7,
+      "rankBasis": "9 万次/月量大，模型版本滞后半代"
     },
     {
       "id": "xiaomi-mimo-plan",
@@ -2231,7 +2263,9 @@
       "source": "aggregator",
       "sourceUrl": "https://platform.xiaomimimo.com",
       "updatedAt": "2026-09-17",
-      "checkMethod": "manual"
+      "checkMethod": "manual",
+      "rank": 8,
+      "rankBasis": "Credits 量巨大，实测口碑一般"
     }
   ],
   "version": "2026-09-19T14:28:42Z",

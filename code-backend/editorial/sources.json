@@ -16,9 +16,261 @@
   "news": [
     {
       "id": "deepseek",
-      "name": "DeepSeek 官网",
+      "name": "DeepSeek 官方",
       "url": "https://www.deepseek.com/news/",
       "adapter": "deepseek-news",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/news",
+      "adapter": "anthropic-news",
+      "official": true,
+      "lang": "en",
+      "enabled": true
+    },
+    {
+      "id": "xai",
+      "name": "SpaceXAI",
+      "url": "https://x.ai/sitemap.xml",
+      "adapter": "xai-sitemap",
+      "official": true,
+      "lang": "en",
+      "guard": false,
+      "enabled": true
+    },
+    {
+      "id": "seed",
+      "name": "字节 Seed",
+      "url": "https://seed.bytedance.com/sitemap.xml",
+      "adapter": "seed-blog",
+      "official": true,
+      "lang": "zh",
+      "guard": false,
+      "enabled": true
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "url": "https://www.minimax.cn/blog",
+      "adapter": "minimax-blog",
+      "official": true,
+      "lang": "zh",
+      "guard": false,
+      "enabled": true
+    },
+    {
+      "id": "ernie",
+      "name": "百度文心",
+      "url": "https://ernie.baidu.com/blog/zh/index.xml",
+      "adapter": "rss",
+      "official": true,
+      "lang": "zh",
+      "articleHosts": [
+        "ernie.baidu.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "zhipu-news",
+      "name": "智谱官网",
+      "url": "https://www.zhipuai.cn/zh/news",
+      "adapter": "zhipu-news",
+      "official": true,
+      "lang": "zh",
+      "articleHosts": [
+        "www.zhipuai.cn"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "tencent-announce",
+      "name": "腾讯云 TokenHub",
+      "url": "https://cloud.tencent.com/document/product/1823/130758",
+      "adapter": "tencent-announce",
+      "official": true,
+      "lang": "zh",
+      "articleHosts": [
+        "cloud.tencent.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "url": "https://about.fb.com/news/tag/ai/feed/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "about.fb.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "hf-qwen",
+      "name": "阿里（Hugging Face）",
+      "url": "https://huggingface.co/api/models?author=Qwen&sort=createdAt&direction=-1&limit=20",
+      "adapter": "huggingface-models",
+      "author": "Qwen",
+      "titleVendor": "阿里",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "hf-zai",
+      "name": "智谱（Hugging Face）",
+      "url": "https://huggingface.co/api/models?author=zai-org&sort=createdAt&direction=-1&limit=20",
+      "adapter": "huggingface-models",
+      "author": "zai-org",
+      "titleVendor": "智谱",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "hf-moonshot",
+      "name": "月之暗面（Hugging Face）",
+      "url": "https://huggingface.co/api/models?author=moonshotai&sort=createdAt&direction=-1&limit=20",
+      "adapter": "huggingface-models",
+      "author": "moonshotai",
+      "titleVendor": "月之暗面",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "hf-tencent",
+      "name": "腾讯（Hugging Face）",
+      "url": "https://huggingface.co/api/models?author=tencent&sort=createdAt&direction=-1&limit=20",
+      "adapter": "huggingface-models",
+      "author": "tencent",
+      "titleVendor": "腾讯",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "hf-baidu",
+      "name": "百度（Hugging Face）",
+      "url": "https://huggingface.co/api/models?author=baidu&sort=createdAt&direction=-1&limit=20",
+      "adapter": "huggingface-models",
+      "author": "baidu",
+      "titleVendor": "百度",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "hf-stepfun",
+      "name": "阶跃星辰（Hugging Face）",
+      "url": "https://huggingface.co/api/models?author=stepfun-ai&sort=createdAt&direction=-1&limit=20",
+      "adapter": "huggingface-models",
+      "author": "stepfun-ai",
+      "titleVendor": "阶跃星辰",
+      "official": true,
+      "lang": "zh",
+      "enabled": true
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "url": "https://openai.com/news/rss.xml",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "openai.com",
+        "www.openai.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "google-ai",
+      "name": "Google AI",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "blog.google"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "deepmind.google"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "github-changelog",
+      "name": "GitHub",
+      "url": "https://github.blog/changelog/feed/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "github.blog"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "url": "https://github.blog/changelog/label/copilot/feed/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "github.blog"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "url": "https://blogs.nvidia.com/feed/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "blogs.nvidia.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "microsoft-ai",
+      "name": "Microsoft AI",
+      "url": "https://blogs.microsoft.com/blog/tag/ai/feed/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "blogs.microsoft.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "azure",
+      "name": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "azure.microsoft.com"
+      ],
       "enabled": true
     },
     {
@@ -47,7 +299,7 @@
       "articleHosts": [
         "www.infoq.cn"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "zhidx",
@@ -56,7 +308,7 @@
       "articleHosts": [
         "zhidx.com"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "solidot",
@@ -65,7 +317,7 @@
       "articleHosts": [
         "www.solidot.org"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "ithome",
@@ -74,7 +326,7 @@
       "articleHosts": [
         "www.ithome.com"
       ],
-      "enabled": true
+      "enabled": false
     }
   ],
   "plans": [
@@ -95,6 +347,8 @@
       ],
       "record": {
         "id": "copilot-coding-plan",
+        "rank": 5,
+        "rankBasis": "付费量第一、学生免费，口碑在下滑",
         "vendor": "GitHub",
         "product": "GitHub Copilot",
         "group": "overseas",
@@ -207,6 +461,8 @@
       ],
       "record": {
         "id": "bigmodel-coding-plan",
+        "rank": 1,
+        "rankBasis": "模型能力与工具生态第一梯队，主流共识国产首选",
         "vendor": "智谱",
         "product": "GLM Coding Plan",
         "group": "domestic",
@@ -343,6 +599,8 @@
       ],
       "record": {
         "id": "supergrok-plan",
+        "rank": 6,
+        "rankBasis": "捆绑 X Premium+ 分发广，编程能力中游",
         "vendor": "xAI",
         "product": "SuperGrok",
         "group": "overseas",
@@ -449,6 +707,8 @@
       ],
       "record": {
         "id": "opencode-go-plan",
+        "rank": 1,
+        "rankBasis": "$10 换 $60 等值额度、18 款开源模型可自带 key",
         "vendor": "OpenCode",
         "product": "OpenCode Go",
         "group": "overseas",
@@ -562,6 +822,8 @@
       ],
       "record": {
         "id": "claude-plans",
+        "rank": 4,
+        "rankBasis": "质量与口碑标杆（39% 采用率），$20 起",
         "vendor": "Anthropic",
         "product": "Claude 会员",
         "group": "overseas",
@@ -687,6 +949,8 @@
       ],
       "record": {
         "id": "xfyun-astron-plan",
+        "rank": 7,
+        "rankBasis": "9 万次/月量大，模型版本滞后半代",
         "vendor": "讯飞星辰",
         "product": "Astron Coding Plan",
         "group": "domestic",

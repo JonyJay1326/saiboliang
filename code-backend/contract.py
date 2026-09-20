@@ -104,20 +104,22 @@ TIER = dict(name=text, price=nullable(number), currency=enum('CNY','USD'), perio
 PLAN = dict(id=identifier, vendor=text, product=text, group=enum('domestic','overseas'), tagline=nullable(text),
             highlights=array(text), quotaBasis=nullable(text), supportedTools=array(text), tiers=array(lambda v: obj(v,TIER)),
             models=array(text), status=enum('available','unavailable','unknown'), source=enum('official','aggregator'),
-            sourceUrl=safe_url, updatedAt=day, checkMethod=enum('auto','manual'))
+            sourceUrl=safe_url, updatedAt=day, checkMethod=enum('auto','manual'),
+            rank=nullable(positive), rankBasis=nullable(text))
 RANKING = dict(modelId=identifier, score=lambda v: require(finite(v), 'invalid score'), rank=positive)
 REPO = dict(repo=lambda v: require(isinstance(v,str) and re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',v), 'invalid repo'),
             sourceRank=positive, stars=integer, periodStars=nullable(integer), language=nullable(text), description=nullable(text), url=safe_url)
-NEWS = dict(id=lambda v: require(isinstance(v,str) and re.fullmatch(r'[a-f0-9]{64}',v), 'invalid news ID'), title=text, summary=nullable(summary),
-            lang=enum('zh'), source=text, sourceUrl=safe_url, originalSource=nullable(text), originalUrl=nullable(safe_url), originalVerifiedAt=nullable(stamp),
-            url=safe_url, publishedAt=stamp, category=enum('model','tool','industry'), eventType=enum('action-required','model-release','major-update','price-or-free','model-review','hands-on','deep-analysis'))
-EVENTS = ['action-required','model-release','major-update','price-or-free','model-review','hands-on','deep-analysis']
+EVENTS = ['action-required','model-release','major-update','price-or-free','upcoming','model-review','hands-on','deep-analysis']
 CATEGORY_BY_EVENT = dict({'model-release':'model','model-review':'model','major-update':'tool','hands-on':'tool'},
-                         **{e:'industry' for e in ('action-required','price-or-free','deep-analysis')})
+                         **{e:'industry' for e in ('action-required','price-or-free','upcoming','deep-analysis')})
+NEWS = dict(id=lambda v: require(isinstance(v,str) and re.fullmatch(r'[a-f0-9]{64}',v), 'invalid news ID'), title=text,
+            originalTitle=nullable(text), translatedAt=nullable(stamp), summary=nullable(summary), lang=enum('zh','en'),
+            source=text, sourceUrl=safe_url, originalSource=nullable(text), originalUrl=nullable(safe_url), originalVerifiedAt=nullable(stamp),
+            url=safe_url, publishedAt=stamp, addedAt=stamp, category=enum('model','tool','industry'), eventType=enum(*EVENTS))
 
 
 def news_order(item):
-    return EVENTS.index(item['eventType']), -datetime.fromisoformat(item['publishedAt']).timestamp(), item['id']
+    return -datetime.fromisoformat(item['publishedAt']).timestamp(), item['id']
 
 
 def empty_batch(version):
@@ -172,6 +174,10 @@ def validate(batch, previous=None):
         for t in p['tiers']:
             require(t['features'],'empty tier features')
         require(p['updatedAt']<=shanghai_day,'future plan date')
+        require((p['rank'] is None)==(p['rankBasis'] is None),'plan rank/basis pairing')
+    for group in ('domestic','overseas'):
+        ranks=[p['rank'] for p in models['plans'] if p['group']==group and p['rank'] is not None]
+        require(len(ranks)==len(set(ranks)),'duplicate plan rank')
     for key,period in [('week','weekly'),('month','monthly')]:
         w=batch['github'][key]; unique(w['items'],'repo')
         require(w['period']==period and w['sourceUrl']=='https://github.com/trending?since='+period,'wrong trending period')
@@ -181,16 +187,27 @@ def validate(batch, previous=None):
         require(not w['items'] or w['fetchedAt'] is not None,'unverified trending')
         require(all(i['url']=='https://github.com/'+i['repo'] for i in w['items']),'repo URL mismatch')
     items=batch['news']['items']; unique(items,'id')
-    require(len(items)<=6 and all(n<=2 for n in Counter(i['source'] for i in items).values()),'news limits')
-    require(all(n<=2 for n in Counter(i['eventType'] for i in items).values()),'news event-type cap')
     require(items==sorted(items,key=news_order),'news order')
     collected=batch['news']['dataUpdatedAt']
+    require(collected is not None or not items,'news without collection time')
     for i in items:
         require(re.search(r'[\u3400-\u9fff]',i['title']), 'Chinese title required')
         require(i['id']==digest(normalize_url(i['sourceUrl'])),'news identity')
         require(i['url']==(i['originalUrl'] or i['sourceUrl']),'news destination')
         require((i['originalUrl'] is None)==(i['originalSource'] is None)==(i['originalVerifiedAt'] is None),'original evidence pairing')
+        require((i['originalTitle'] is None)==(i['translatedAt'] is None),'translation evidence pairing')
+        require((i['lang']=='en')==(i['originalTitle'] is not None),'language/translation mismatch')
         require(i['originalVerifiedAt'] is None or i['originalVerifiedAt']<=version,'future original verification')
-        require(collected is not None,'news without collection time')
-        age=(datetime.fromisoformat(collected)-datetime.fromisoformat(i['publishedAt'])).total_seconds()
-        require(-300<=age<=72*3600,'news outside collection window')
+        require(i['translatedAt'] is None or i['translatedAt']<=version,'future translation')
+        require(i['addedAt']<=version,'future addition')
+        require(collected is None or i['addedAt']<=collected,'addition after collection')
+        age=(datetime.fromisoformat(i['addedAt'])-datetime.fromisoformat(i['publishedAt'])).total_seconds()
+        require(-300<=age<=72*3600,'news outside admission window')
+    daily={}
+    for i in items:
+        key=(datetime.fromisoformat(i['addedAt'])+timedelta(hours=8)).date().isoformat()
+        daily.setdefault(key,[]).append(i)
+    for rows in daily.values():
+        require(len(rows)<=6,'news daily limit')
+        require(all(n<=2 for n in Counter(i['source'] for i in rows).values()),'news daily source limit')
+        require(all(n<=2 for n in Counter(i['eventType'] for i in rows).values()),'news daily event-type limit')

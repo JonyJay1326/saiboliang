@@ -9,7 +9,7 @@ from unittest.mock import patch
 from common import DataError, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, aibase_article, collect_aa, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_plan, parse_trending, collect_news, translate_github
+from sources import Tree, aibase_article, collect_aa, collect_aibase, collect_evidence_records, collect_github, is_ai, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -111,6 +111,142 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(news_event('DeepSeek V4.1 Flash：更强、更快、更普惠', official=True), 'model-release')
         self.assertEqual(news_event('DeepSeek V4.1 Flash：更强、更快、更普惠', official=False), None)
 
+    def test_news_event_official_previews_exclusions_and_topic_trim(self):
+        # 官方预告不算已发布；「已/正式/现已」加发布动词按发布处理。
+        self.assertEqual(news_event('GPT-5.5 将于 10 月发布，支持更长上下文', official=True), 'upcoming')
+        self.assertEqual(news_event('Gemini 4 即将推出', official=True), 'upcoming')
+        self.assertEqual(news_event('GPT-6 已正式发布，现已可用', official=True), 'model-release')
+        # 弃用/下线公告按需用户行动处理。
+        self.assertEqual(news_event('GitHub Copilot 弃用模型将在 10 月中旬到来', official=True), 'action-required')
+        # 仅主题命中的官方内容不发布；融资、客户案例仍然排除。
+        self.assertEqual(news_event('介绍我们的 AI 安全研究方法', official=True), None)
+        self.assertEqual(news_event('我们报告模型失准的框架', official=True), None)
+        self.assertEqual(news_event('Cooley 借助 ChatGPT 加速 IPO 工作', official=True), None)
+        self.assertEqual(news_event('Cooley 如何用 ChatGPT 加速 IPO 工作', official=True), None)
+        self.assertEqual(news_event('Anthropic 完成新一轮融资', official=True), None)
+        # 媒体源仍排除预告。
+        self.assertEqual(news_event('GPT-5.5 将于 10 月发布，支持更长上下文'), None)
+        # 已删除的非 AI 主题词不再放行。
+        self.assertEqual(news_event('低代码平台正式发布新版本'), None)
+        self.assertEqual(news_event('数据可视化工具上线 3.0'), None)
+        # 字节 Seed 家族模型名已纳入主题词表。
+        self.assertEqual(news_event('Seed3D 2.0 发布，更高精度、更强可用性', official=True), 'model-release')
+        # 品牌名紧贴数字的型号名同样命中（Qwen3.8/GPT5），OpenAI/AIGC 仍不误命中 AI。
+        self.assertEqual(news_event('阿里发布 Qwen3.8-Omni-Flash：原生全模态', official=True), 'model-release')
+        self.assertEqual(news_event('OpenAI 发布 GPT5.6 模型', official=True), 'model-release')
+        self.assertEqual(news_event('OpenAI updates its platform', official=True), None)
+        self.assertEqual(news_event('AIGC 工具正式上线', official=True), 'major-update')
+
+    def test_parse_feed_atom_and_language_rules(self):
+        atom=('<feed xmlns="http://www.w3.org/2005/Atom">'
+              '<entry><title>Introducing GPT-6 Astra</title>'
+              '<link rel="alternate" href="https://vendor.example/releases/gpt-6"/>'
+              '<published>2026-09-17T09:00:00Z</published>'
+              '<summary>OpenAI introduces a new reasoning model.</summary></entry></feed>')
+        source=dict(id='vendor',name='厂商官方',url='https://vendor.example/feed',official=True,lang='en',articleHosts=['vendor.example'])
+        rows=parse_feed(atom,source,lambda *x:None)
+        self.assertEqual(rows[0]['sourceUrl'],'https://vendor.example/releases/gpt-6')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-17T09:00:00Z')
+        self.assertEqual(rows[0]['summary'],'OpenAI introduces a new reasoning model.')
+        with self.assertRaises(ValueError): parse_feed(atom,dict(source,lang='zh'),lambda *x:None)
+
+    def test_news_official_first_party_item_fields(self):
+        feed=('<rss><channel><item><title>GLM-5.4 将于 10 月发布</title>'
+              '<link>https://vendor.example/upcoming</link>'
+              '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        data=collect_news(FakeClient(documents={source['url']:feed}),[source],{}, {}, NOW,lambda *x:None,lambda *x:None)
+        item=data['items'][0]
+        self.assertEqual(item['eventType'],'upcoming')
+        self.assertEqual(item['category'],'industry')
+        self.assertEqual(item['source'],'示例厂商官方')
+        self.assertEqual(item['sourceUrl'],item['originalUrl'])
+        self.assertEqual(item['url'],item['sourceUrl'])
+        self.assertEqual(item['originalVerifiedAt'],NOW)
+        self.assertEqual(item['lang'],'zh')
+        self.assertIsNone(item['originalTitle'])
+        self.assertEqual(item['addedAt'],NOW)
+        batch,_=assemble(None,{'news':data},NOW); validate(batch)
+
+    def test_news_translation_flow_and_retry(self):
+        feed=('<rss><channel><item><title>Introducing GPT-6 Astra</title>'
+              '<link>https://vendor.example/gpt-6</link>'
+              '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate>'
+              '<description>OpenAI introduces a new reasoning model.</description></item></channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='en',articleHosts=['vendor.example'])
+        identity=digest(normalize_url('https://vendor.example/gpt-6'))
+        def translate(items):
+            self.assertEqual([i['id'] for i in items],[identity])
+            self.assertEqual(items[0]['summary'],'OpenAI introduces a new reasoning model.')
+            return {identity:{'title':'OpenAI 发布 GPT-6 Astra','summary':'OpenAI 发布新的推理模型。'}}
+        data=collect_news(FakeClient(documents={source['url']:feed}),[source],{}, {}, NOW,lambda *x:None,lambda *x:None,translate)
+        item=data['items'][0]
+        self.assertEqual(item['title'],'OpenAI 发布 GPT-6 Astra')
+        self.assertEqual(item['originalTitle'],'Introducing GPT-6 Astra')
+        self.assertEqual(item['translatedAt'],NOW)
+        self.assertEqual(item['lang'],'en')
+        self.assertEqual(item['summary'],'OpenAI 发布新的推理模型。')
+        batch,_=assemble(None,{'news':data},NOW); validate(batch)
+        # 机译不可用时英文条目不入库，也不阻塞其它来源（下一轮重试）。
+        empty=collect_news(FakeClient(documents={source['url']:feed}),[source],{}, {}, NOW,lambda *x:None,lambda *x:None,lambda items:{})
+        self.assertEqual(empty['items'],[])
+        skipped=collect_news(FakeClient(documents={source['url']:feed}),[source],{}, {}, NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual(skipped['items'],[])
+
+    def test_news_accumulation_daily_quota_and_order(self):
+        def item(identity,published,source='其他厂商官方',event='major-update'):
+            url='https://vendor.example/'+identity
+            return dict(id=digest(url),title='产品重要更新',originalTitle=None,translatedAt=None,summary=None,lang='zh',
+                        source=source,sourceUrl=url,originalSource=source,originalUrl=url,originalVerifiedAt=NOW,url=url,
+                        publishedAt=published,addedAt=NOW,category='tool',eventType=event)
+        old=dict(dataUpdatedAt=NOW,items=[item('a','2026-09-17T08:00:00Z'),item('b','2026-09-17T07:00:00Z')])
+        feed=('<rss><channel>'
+              '<item><title>新模型正式发布三</title><link>https://vendor.example/c</link><pubDate>Thu, 17 Sep 2026 10:00:00 +0000</pubDate></item>'
+              '<item><title>新模型正式发布一</title><link>https://vendor.example/a</link><pubDate>Thu, 17 Sep 2026 08:00:00 +0000</pubDate></item>'
+              '</channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        data=collect_news(FakeClient(documents={source['url']:feed}),[source],{},old,NOW,lambda *x:None,lambda *x:None)
+        # 已入库 id 不重复收录；新条目与库存合并后按 publishedAt 倒序。
+        url=lambda name:'https://vendor.example/'+name
+        self.assertEqual([i['sourceUrl'] for i in data['items']],[url('c'),url('a'),url('b')])
+        # 当日额度用尽后不再新增。
+        full=dict(dataUpdatedAt=NOW,items=[item(str(i),'2026-09-17T0%d:00:00Z'%i) for i in range(6)])
+        data=collect_news(FakeClient(documents={source['url']:feed}),[source],{},full,NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual(len(data['items']),6)
+
+    def test_news_translate_cache_failure_and_prune(self):
+        item=dict(id='a1',title='Introducing GPT-6',summary='A new model.')
+        reply=dict(choices=[dict(message=dict(content=json.dumps({'a1':{'title':'OpenAI 发布 GPT-6','summary':'新模型。'}},ensure_ascii=False)))])
+        client=FakeClient(posts=[reply]); cache={}; reviews=[]
+        result=translate_news(client,[item],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(result['a1']['title'],'OpenAI 发布 GPT-6')
+        self.assertEqual(cache['a1']['source'],'deepseek-flash')
+        client.posts=[]; reviews=[]
+        translate_news(client,[item],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(client.posts,[])
+        # 非法译文（无中文）不写入缓存并记一次待复核。
+        bad=dict(choices=[dict(message=dict(content=json.dumps({'a1':{'title':'same text'}})))])
+        cache={}; reviews=[]
+        translate_news(FakeClient(posts=[bad]),[item],cache,'k',NOW,lambda *x:reviews.append(x))
+        self.assertEqual(cache,{}); self.assertEqual(len(reviews),1)
+
+    def test_validate_news_translation_pairing_and_daily_limits(self):
+        url='https://vendor.example/a'
+        base=dict(id=digest(url),title='新模型正式发布',originalTitle=None,translatedAt=None,summary=None,lang='zh',
+                  source='示例厂商官方',sourceUrl=url,originalSource='示例厂商官方',originalUrl=url,originalVerifiedAt=NOW,
+                  url=url,publishedAt='2026-09-17T08:00:00Z',addedAt=NOW,category='model',eventType='model-release')
+        batch=assemble(None,{'news':dict(dataUpdatedAt=NOW,items=[base])},NOW)[0]; validate(batch)
+        for broken in [dict(base,lang='en'),dict(base,lang='en',originalTitle='Original'),dict(base,translatedAt=NOW)]:
+            with self.assertRaises(ValueError): assemble(None,{'news':dict(dataUpdatedAt=NOW,items=[broken])},NOW)
+        events=['action-required','model-release','major-update','price-or-free','upcoming','model-review','hands-on']
+        rows=[]
+        for i in range(7):
+            item_url='https://vendor.example/%d'%i
+            rows.append(dict(base,id=digest(item_url),source='厂商%d'%i,eventType=events[i],sourceUrl=item_url,originalUrl=item_url,url=item_url))
+        ok=sorted(rows[:6],key=lambda i:i['id'])
+        validate(assemble(None,{'news':dict(dataUpdatedAt=NOW,items=ok)},NOW)[0])
+        with self.assertRaises(ValueError): assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted(rows,key=lambda i:i['id']))},NOW)
+
     def test_deepseek_official_news_adapter(self):
         html = ('<html><a href="/news/deepseek-v4-1-flash/"><span>动态</span>'
                 '<span>2026 年 9 月 10 日</span><h2>DeepSeek V4.1 Flash：更强、更快、更普惠</h2>'
@@ -129,6 +265,120 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(rows[1]['publishedAt'], '2025-09-28T16:00:00Z')
         with self.assertRaises(ValueError): parse_deepseek_news('<html>no items</html>', source)
 
+    def test_anthropic_news_list_adapter(self):
+        html=('<section><ul>'
+              '<li><a href="/news/accenture-embedded-evaluation" class="listItem"><div class="meta">'
+              '<time class="date body-3">Sep 18, 2026</time><span class="subject body-3">Announcements</span></div>'
+              '<span class="title body-3"> Partnering with Accenture on embedded evaluation</span></a></li>'
+              '<li><a href="/news/life-sciences-verification-program" class="listItem"><div class="meta">'
+              '<time class="date body-3">Sep 17, 2026</time></div>'
+              '<span class="title body-3">Introducing the Life Sciences Verification Program</span></a></li>'
+              '<li><a href="/news/accenture-embedded-evaluation"><time>Sep 18, 2026</time>'
+              '<h4 class="card title">重复项</h4></a></li>'
+              '</ul></section>')
+        source=dict(id='anthropic',name='Anthropic',url='https://www.anthropic.com/news',official=True,lang='en')
+        rows=parse_anthropic_news(html.encode(),source)
+        self.assertEqual(len(rows),2)
+        self.assertEqual(rows[0]['sourceUrl'],'https://www.anthropic.com/news/accenture-embedded-evaluation')
+        self.assertEqual(rows[0]['title'],'Partnering with Accenture on embedded evaluation')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-17T16:00:00Z')
+        with self.assertRaises(ValueError): parse_anthropic_news(b'<html>empty</html>',source)
+
+    def test_xai_sitemap_adapter_filters_and_reads_article(self):
+        sitemap=('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 '<url><loc>https://x.ai/news/grok-build-memory</loc><lastmod>2026-09-16T00:00:00.000Z</lastmod></url>'
+                 '<url><loc>https://x.ai/news/old-one</loc><lastmod>2026-08-01T00:00:00.000Z</lastmod></url>'
+                 '<url><loc>https://x.ai/</loc><lastmod>2026-09-17T00:00:00.000Z</lastmod></url>'
+                 '</urlset>')
+        article='<html><h1>Memory in Grok Build</h1><script>{"datePublished":"2026-09-16T00:00:00Z"}</script></html>'
+        source=dict(id='xai',name='SpaceXAI',url='https://x.ai/sitemap.xml',official=True,lang='en')
+        rows=collect_xai(FakeClient(documents={'https://x.ai/news/grok-build-memory':article}),sitemap,source,NOW)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['title'],'Memory in Grok Build')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-16T00:00:00Z')
+
+    def test_seed_sitemap_adapter_reads_publish_date(self):
+        sitemap=('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 '<url><loc>https://seed.bytedance.com/blog/new-post</loc><lastmod>2026-09-17T03:00:00.000Z</lastmod></url>'
+                 '<url><loc>https://seed.bytedance.com/blog/stale-post</loc><lastmod>2026-08-01T03:00:00.000Z</lastmod></url>'
+                 '</urlset>')
+        article='<html><h1>Seed 新模型正式发布</h1><div><p class="font-medium">发布</p><p class="font-normal">2026-09-16</p></div></html>'
+        source=dict(id='seed',name='字节 Seed',url='https://seed.bytedance.com/sitemap.xml',official=True,lang='zh')
+        rows=collect_seed(FakeClient(documents={'https://seed.bytedance.com/blog/new-post':article}),sitemap,source,NOW)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['title'],'Seed 新模型正式发布')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-15T16:00:00Z')
+
+    def test_minimax_blog_adapter_reads_article_date(self):
+        listing=('<html><a href="/blog/minimax-h3">MiniMax H3</a>'
+                 '<a href="/blog/forge-scalable-agent-rl">Forge</a>'
+                 '<a href="/blog/_next/asset.js">skip</a></html>')
+        article='<html><h1>MiniMax H3：扩展多模态边界</h1><script>{"datePublished":"2026-07-31T03:38:00.000Z"}</script></html>'
+        source=dict(id='minimax',name='MiniMax',url='https://www.minimax.cn/blog',official=True,lang='zh')
+        documents={'https://www.minimax.cn/blog/minimax-h3':article,
+                   'https://www.minimax.cn/blog/forge-scalable-agent-rl':article}
+        rows=collect_minimax(FakeClient(documents=documents),listing.encode(),source)
+        self.assertEqual([r['sourceUrl'] for r in rows],
+                         ['https://www.minimax.cn/blog/minimax-h3','https://www.minimax.cn/blog/forge-scalable-agent-rl'])
+        self.assertEqual(rows[0]['publishedAt'],'2026-07-31T03:38:00Z')
+
+    def test_huggingface_models_template_title_and_identity(self):
+        raw=json.dumps([
+            dict(modelId='zai-org/GLM-5.3-BF16',createdAt='2026-09-18T03:00:00.000Z'),
+            dict(modelId='zai-org/GLM-4.7-Flash',createdAt='2026-07-01T00:00:00.000Z')]).encode()
+        source=dict(id='hf-zai',name='智谱（Hugging Face）',author='zai-org',titleVendor='智谱',official=True,lang='zh')
+        rows=parse_huggingface_models(raw,source)
+        self.assertEqual(rows[0]['title'],'智谱发布 GLM-5.3-BF16')
+        self.assertEqual(rows[0]['sourceUrl'],'https://huggingface.co/zai-org/GLM-5.3-BF16')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-18T03:00:00Z')
+        self.assertEqual(news_event(rows[0]['title'],official=True),'model-release')
+        self.assertEqual(news_event('月之暗面发布 Kimi-K3',official=True),'model-release')
+        with self.assertRaises(ValueError): parse_huggingface_models(b'{}',source)
+        with self.assertRaises(ValueError):
+            parse_huggingface_models(json.dumps([dict(modelId='other/repo',createdAt='2026-09-18T03:00:00Z')]).encode(),source)
+
+    def test_aibase_list_tolerates_single_bad_article(self):
+        title='千问APP新增保护功能'
+        def article(identity=42):
+            row=dict(Id=identity,title=title,addtime='2026-09-17T17:40:15.1505501+08:00')
+            flight='1:T3,abc7:'+json.dumps({'article':row},ensure_ascii=False)+'\n'
+            return '<h1>'+title+'</h1><script>self.__next_f.push('+json.dumps([1,flight])+')</script>'
+        listing='<html><a href="/news/42">a</a><a href="/news/43">b</a></html>'
+        source=dict(id='aibase',name='AIBase',url='https://www.aibase.com/zh/news',articleHosts=['www.aibase.com'])
+        reviews=[]
+        rows=collect_aibase(FakeClient(documents={'https://www.aibase.com/zh/news/42':article(42),
+                                                  'https://www.aibase.com/zh/news/43':'<h1>missing</h1>'}),
+                            listing.encode(),source,lambda *x:reviews.append(x))
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['sourceUrl'],'https://www.aibase.com/zh/news/42')
+        self.assertEqual([r[0] for r in reviews],['news-item'])
+
+    def test_news_similar_title_exclusion(self):
+        def feed(entries):
+            return '<rss><channel>'+''.join(
+                '<item><title>'+title+'</title><link>https://cn.example/'+slug+'</link>'
+                '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>' for title,slug in entries)+'</channel></rss>'
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        def run(entries,old=None):
+            return collect_news(FakeClient(documents={source['url']:feed(entries)}),[source],{},old or {},NOW,lambda *x:None,lambda *x:None)
+        # 同一事件两篇（共享品牌标记 GLM-5.3-FlashX）只保留一条。
+        data=run([('智谱GLM-5.3-FlashX上线：最高 200 tokens/s','a'),
+                  ('智谱发布 GLM-5.3-FlashX:速度飙至200tokens/s，国产算力再提速','b')])
+        self.assertEqual(len(data['items']),1)
+        # 同型号不同事件类型（发布 vs 实测）都保留。
+        data=run([('GLM-5.3-FlashX 正式发布','c'),('GLM-5.3-FlashX 实测：速度翻倍','d')])
+        self.assertEqual(len(data['items']),2)
+        # 归档标题互相包含（无品牌标记）也按同一事件排除。
+        data=run([('OpenAI 正式发布全新推理模型','e'),('OpenAI 正式发布全新推理模型，性能提升','f')])
+        self.assertEqual(len(data['items']),1)
+        # 近 7 天库存中的同事件条目阻止重复入库。
+        stock=dict(dataUpdatedAt=NOW,items=[dict(id=digest('https://cn.example/a'),title='智谱GLM-5.3-FlashX上线：最高 200 tokens/s',
+                    originalTitle=None,translatedAt=None,summary=None,lang='zh',source='中文媒体',sourceUrl='https://cn.example/a',
+                    originalSource='中文媒体',originalUrl='https://cn.example/a',originalVerifiedAt=NOW,url='https://cn.example/a',
+                    publishedAt='2026-09-17T09:00:00Z',addedAt=NOW,category='model',eventType='model-release')])
+        data=run([('智谱发布 GLM-5.3-FlashX:速度飙至200tokens/s，国产算力再提速','b')],stock)
+        self.assertEqual(len(data['items']),1)
+
     def test_news_caps_by_source_and_event_type(self):
         def rss(title, host, day):
             return ('<item><title>' + title + '</title><link>https://' + host + '/' + str(abs(hash(title)) % 9999) +
@@ -143,7 +393,7 @@ class PipelineTests(unittest.TestCase):
         other = dict(id='other', name='其它媒体', url='https://other.example/feed', articleHosts=['other.example'])
         client = FakeClient(documents={source['url']: '<rss><channel>' + items + '</channel></rss>',
                                        other['url']: '<rss><channel>' + rss('混元模型正式发布上线', 'other.example', '17') + '</channel></rss>'})
-        data = collect_news(client, [source, other], {}, NOW, lambda *x: None, lambda *x: None)
+        data = collect_news(client, [source, other], {}, {}, NOW, lambda *x: None, lambda *x: None)
         # 同源最多 2 条、同事件类型最多 2 条
         self.assertEqual(len(data['items']), 2)
         self.assertTrue(all(i['eventType'] == 'model-release' for i in data['items']))
@@ -365,7 +615,7 @@ class PipelineTests(unittest.TestCase):
             'Thu, 17 Sep 2026 12:00:00 +0000','Mon, 14 Sep 2026 09:00:00 +0000']))
         source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
         reviews=[]
-        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+items+'</channel></rss>'}),[source],{},NOW,lambda *x:None,lambda *x:reviews.append(x))
+        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+items+'</channel></rss>'}),[source],{}, {},NOW,lambda *x:None,lambda *x:reviews.append(x))
         self.assertEqual(len(data['items']),2)
         self.assertEqual(data['items'][0]['sourceUrl'],'https://cn.example/1')
         self.assertIsNone(data['items'][0]['originalUrl'])
@@ -382,16 +632,16 @@ class PipelineTests(unittest.TestCase):
         feed='<rss><channel><item><title>新模型正式发布</title><link>'+article+'</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>'
         documents={source['url']:feed,article:'<p>发布模型一</p><a href="'+official+'">官方公告</a>',official:'<h1>Model One Released</h1>'}
         mapping={digest(normalize_url(article)):dict(url=official,publisher='Vendor',articleEvidence='发布模型一',originalEvidence='Model One Released',eventSpecific=True)}
-        data=collect_news(FakeClient(documents=documents),[source],mapping,NOW,lambda *x:None,lambda *x:None)
+        data=collect_news(FakeClient(documents=documents),[source],mapping, {},NOW,lambda *x:None,lambda *x:None)
         self.assertEqual(data['items'][0]['url'],official)
         documents[official]='<h1>Homepage</h1>'
-        data=collect_news(FakeClient(documents=documents),[source],mapping,NOW,lambda *x:None,lambda *x:None)
+        data=collect_news(FakeClient(documents=documents),[source],mapping, {},NOW,lambda *x:None,lambda *x:None)
         self.assertEqual(data['items'][0]['url'],article)
 
     def test_news_tracking_parameters_stripped_from_source_url(self):
         item='<item><title>新模型正式发布</title><link>https://cn.example/story?utm_source=rss&amp;utm_medium=feed&amp;p=7</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'
         source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
-        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+item+'</channel></rss>'}),[source],{},NOW,lambda *x:None,lambda *x:None)
+        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+item+'</channel></rss>'}),[source],{}, {},NOW,lambda *x:None,lambda *x:None)
         self.assertEqual(data['items'][0]['sourceUrl'],'https://cn.example/story?p=7')
         self.assertEqual(data['items'][0]['id'],digest('https://cn.example/story?p=7'))
         batch,_=assemble(None,{'news':data},NOW); validate(batch)
@@ -438,7 +688,7 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError): parse_plan(document(period='year'),{},'copilot-plans')
 
     def test_bad_official_evidence_never_refreshes_a_record(self):
-        record=dict(id='plan',vendor='Vendor',product='Coding',group='overseas',tagline=None,highlights=[],quotaBasis=None,supportedTools=['CLI'],modelIds=[],status='available',sourceUrl='https://vendor.example/plan',updatedAt='2026-09-16',checkMethod='auto',tiers=[dict(name='Pro',price=10,currency='USD',period='month',offerType='standard',note=None,features=['100 credits'],conditions='Individual subscription')])
+        record=dict(id='plan',vendor='Vendor',product='Coding',group='overseas',tagline=None,highlights=[],quotaBasis=None,supportedTools=['CLI'],models=[],status='available',source='official',sourceUrl='https://vendor.example/plan',updatedAt='2026-09-16',checkMethod='auto',rank=None,rankBasis=None,tiers=[dict(name='Pro',price=10,currency='USD',period='month',offerType='standard',note=None,features=['100 credits'],conditions='Individual subscription')])
         config=dict(record=record,approved=True,scope={'tag':'main','attrs':{}},evidenceHash=digest('100 credits'),evidenceText=['100 credits'])
         client=FakeClient(documents={record['sourceUrl']:'<main>Sold out</main>'})
         reviews=[]
