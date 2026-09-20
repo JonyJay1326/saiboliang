@@ -1275,7 +1275,9 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     seen=set()
     for source in sources:
         raw,final=client.get(source['url'])
-        require(normalize_url(final)==normalize_url(source['url']),'news source redirected unexpectedly')
+        # 失败信息带源 id 与落点：源级跳转在 CI 出口地区偶发，必须能一眼定位（2026-09-20）。
+        require(normalize_url(final)==normalize_url(source['url']),
+                'news source redirected unexpectedly: '+source['id']+' -> '+normalize_url(final))
         adapter=source.get('adapter','rss')
         require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog'),'unknown news adapter')
         official=source.get('official') is True
