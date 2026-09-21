@@ -121,11 +121,13 @@ export function scoreTier(score) {
 }
 
 /**
- * 上架票证（2026-09-18 用户定）：
- * 推荐分 ≥70 且未失效；<70 与已失效全站不展示（含详情页不生成、sitemap 排除）。
+ * 上架票证（2026-09-18 用户定；2026-09-21 补：逾期即下架）：
+ * 推荐分 ≥70、未失效（`expired !== true`）且未过期限（`overdue === false`）；
+ * 其余全站不展示（列表与首页不渲染、详情页不生成、sitemap 排除、相关票过滤）。
+ * `now` 默认构建期时间——站点每天重建三次，过滤随批次刷新。
  */
-export function listedTickets(list) {
-  return list.filter((t) => t.expired !== true && scoreTier(t.score) !== null);
+export function listedTickets(list, now = new Date()) {
+  return list.filter((t) => t.expired !== true && scoreTier(t.score) !== null && !overdue(t, now));
 }
 
 // ---------------------------------------------------------------- 模型（/models）
