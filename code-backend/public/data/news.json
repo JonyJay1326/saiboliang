@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-09-21T04:16:49Z",
+  "dataUpdatedAt": "2026-09-21T09:02:59Z",
   "items": [
+    {
+      "title": "国产数据库跑出AI新能力！OceanBase登顶国际Data Agent榜单",
+      "sourceUrl": "https://www.qbitai.com/2026/09/493231.html",
+      "publishedAt": "2026-09-21T07:31:26Z",
+      "source": "量子位",
+      "summary": "OceanBase团队提交的Data Agent方案登顶国际数据智能体基准Data Agent Benchmark",
+      "id": "4c749fffac0adbefd9a5e3a6012a945fd65ddc4f4cc7795c055407ffceb8f11c",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/493231.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-09-21T09:02:59Z",
+      "featured": true
+    },
+    {
+      "title": "GPT-6 Astra开进机器人身体！清华联手无问芯穹等开源RPent",
+      "sourceUrl": "https://www.qbitai.com/2026/09/493218.html",
+      "publishedAt": "2026-09-21T06:22:37Z",
+      "source": "量子位",
+      "summary": "在物理世界真正干活的具身智能体",
+      "id": "5c53179596f71aa743a393c69dd4b5e366b671fbfb4b7a66a0f84df375b340f8",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/493218.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-21T09:02:59Z",
+      "featured": true
+    },
     {
       "title": "百曜科技发起，《AI虚拟细胞（AIVC）技术趋势、产业生态与应用前景研究报告》正式发布",
       "sourceUrl": "https://www.qbitai.com/2026/09/493114.html",
@@ -1256,6 +1294,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-21T04:16:49Z",
-  "generatedAt": "2026-09-21T04:16:49Z"
+  "version": "2026-09-21T09:02:59Z",
+  "generatedAt": "2026-09-21T09:02:59Z"
 }
