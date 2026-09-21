@@ -3106,14 +3106,14 @@
     "createdAt": "2026-09-20T15:09:11Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
+    "kind": "plans",
+    "objectId": "bigmodel-coding-plan",
+    "reason": "official terms changed; retaining prior record",
     "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
+      "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview"
     },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "id": "a4f8d3a3f0210ff3b8517bccd93fa12e7cc498d1e00520147f5605507a79fef3",
     "status": "pending",
-    "createdAt": "2026-09-20T15:25:52Z"
+    "createdAt": "2026-09-21T01:02:06Z"
   }
 ]

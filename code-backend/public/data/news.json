@@ -1,6 +1,42 @@
 {
-  "dataUpdatedAt": "2026-09-20T15:25:52Z",
+  "dataUpdatedAt": "2026-09-21T01:02:06Z",
   "items": [
+    {
+      "title": "华为首发企业AI白皮书：AI让员工更快了，怎样让整个企业受益？",
+      "sourceUrl": "https://www.qbitai.com/2026/09/493068.html",
+      "publishedAt": "2026-09-20T14:23:52Z",
+      "source": "量子位",
+      "summary": "AI越来越能干，企业该怎么用",
+      "id": "4f698ebf37888bc7713a9baffffad8707a35fa7d33b6240d4266da1ab8164be5",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/493068.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-21T01:02:06Z"
+    },
+    {
+      "title": "APUS 开源国内首批Jev跨平台复现：国产模型实现秒级决策",
+      "sourceUrl": "https://www.qbitai.com/2026/09/492939.html",
+      "publishedAt": "2026-09-20T08:30:32Z",
+      "source": "量子位",
+      "summary": "9月19日，中国人工智能企业APUS旗下 AI 实验室公布了全球最早一批针对Jev的独立开源复现成果",
+      "id": "fc08fbba6b9d1f87691d88a7db90f0aec838fb555b7b61f700a78e5961796227",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/492939.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-21T01:02:06Z"
+    },
     {
       "title": "千问发布Qwen3.8-LiveTranslate:同传延迟降至2.3秒，还能保留你的音色",
       "sourceUrl": "https://www.aibase.com/zh/news/31174",
@@ -36,6 +72,24 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-09-20T01:31:22Z"
+    },
+    {
+      "title": "阿里发布 qwen-audio-3.1-realtime-plus",
+      "sourceUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-20&model=qwen-audio-3.1-realtime-plus",
+      "publishedAt": "2026-09-19T16:00:00Z",
+      "source": "阿里云百炼",
+      "summary": "支持实时双工语音对话，沿用 3.0 Plus 的接入协议，保留原有音色并新增 8 个系统音色。",
+      "id": "70f233180c6848c59992fcba2b7e12aebc8caf4c1fc46f1e2830f03f973d7af6",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "阿里云百炼",
+      "originalUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-20&model=qwen-audio-3.1-realtime-plus",
+      "originalVerifiedAt": "2026-09-21T01:02:06Z",
+      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-20&model=qwen-audio-3.1-realtime-plus",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-21T01:02:06Z"
     },
     {
       "title": "Copilot 代码审查：改进的审查体验",
@@ -1118,6 +1172,6 @@
       "addedAt": "2026-08-31T16:00:00Z"
     }
   ],
-  "version": "2026-09-21T00:52:13Z",
-  "generatedAt": "2026-09-21T00:52:13Z"
+  "version": "2026-09-21T01:02:06Z",
+  "generatedAt": "2026-09-21T01:02:06Z"
 }
