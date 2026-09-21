@@ -3115,5 +3115,17 @@
     "id": "a4f8d3a3f0210ff3b8517bccd93fa12e7cc498d1e00520147f5605507a79fef3",
     "status": "pending",
     "createdAt": "2026-09-21T01:02:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MoeKoeMusic/MoeKoeMusic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
+      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
+    },
+    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
+    "status": "pending",
+    "createdAt": "2026-09-21T04:16:49Z"
   }
 ]

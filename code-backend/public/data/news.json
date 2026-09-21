@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-09-21T01:55:50Z",
+  "dataUpdatedAt": "2026-09-21T04:16:49Z",
   "items": [
+    {
+      "title": "百曜科技发起，《AI虚拟细胞（AIVC）技术趋势、产业生态与应用前景研究报告》正式发布",
+      "sourceUrl": "https://www.qbitai.com/2026/09/493114.html",
+      "publishedAt": "2026-09-21T02:28:46Z",
+      "source": "量子位",
+      "summary": "《AI 虚拟细胞（AIVC）技术趋势、产业生态与应用前景研究报告——AI 时代生命科学的新型基础设施》正式发布。",
+      "id": "d7df69624b06e560ba28e04f3fa3da019f62eb121e3ebe44f8b13442cba16ac5",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/493114.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-21T04:16:49Z",
+      "featured": true
+    },
     {
       "title": "华为首发企业AI白皮书：AI让员工更快了，怎样让整个企业受益？",
       "sourceUrl": "https://www.qbitai.com/2026/09/493068.html",
@@ -1237,6 +1256,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-21T01:55:50Z",
-  "generatedAt": "2026-09-21T01:55:50Z"
+  "version": "2026-09-21T04:16:49Z",
+  "generatedAt": "2026-09-21T04:16:49Z"
 }
