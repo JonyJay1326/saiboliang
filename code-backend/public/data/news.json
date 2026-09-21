@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-09-21T09:02:59Z",
+  "dataUpdatedAt": "2026-09-21T17:06:12Z",
   "items": [
+    {
+      "title": "Grok 4.7 现已在 GitHub Copilot 中可用",
+      "sourceUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "publishedAt": "2026-09-21T14:54:12Z",
+      "source": "GitHub",
+      "summary": "xAI最新推理模型Grok 4.7在GitHub Copilot中推出，面向智能体编程与复杂多步工作流。",
+      "id": "9c38b0e540fa6708e9ee0116581d348eb13bc6f8450336dc337df4d0a6d637fa",
+      "originalTitle": "Grok 4.7 is now available in GitHub Copilot",
+      "translatedAt": "2026-09-21T17:06:12Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "originalVerifiedAt": "2026-09-21T17:06:12Z",
+      "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-21T17:06:12Z",
+      "featured": true
+    },
+    {
+      "title": "AI 安全是一个工程问题——如何在智能体栈的每一层解决它",
+      "sourceUrl": "https://blogs.nvidia.com/blog/ai-security-agent-stack/",
+      "publishedAt": "2026-09-21T14:51:34Z",
+      "source": "NVIDIA",
+      "summary": "开放研究、智能体栈各层控制与持续测试，帮助防御者构建并运行更安全的AI系统。",
+      "id": "a34d58b87503fec2d9bc653f10e4517245f4e04f40b1a2a626a68a0856240dcd",
+      "originalTitle": "AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack",
+      "translatedAt": "2026-09-21T17:06:12Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/ai-security-agent-stack/",
+      "originalVerifiedAt": "2026-09-21T17:06:12Z",
+      "url": "https://blogs.nvidia.com/blog/ai-security-agent-stack/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-21T17:06:12Z",
+      "featured": null
+    },
+    {
+      "title": "长三角安全人工智能安徽省实验室发布星界、星驭、星鉴三大AI安全解决方案",
+      "sourceUrl": "https://www.qbitai.com/2026/09/493235.html",
+      "publishedAt": "2026-09-21T07:52:46Z",
+      "source": "量子位",
+      "summary": "9月19日，第一届中国网络空间安全大会（CCSC 2026）的高水平专题论坛在安徽合肥正式举办。",
+      "id": "bb186ef0144f2caf3bfbb4f496eddf09b1a687100c79aa753037c704d50e498d",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/493235.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-21T17:06:12Z",
+      "featured": null
+    },
     {
       "title": "国产数据库跑出AI新能力！OceanBase登顶国际Data Agent榜单",
       "sourceUrl": "https://www.qbitai.com/2026/09/493231.html",
@@ -1294,6 +1351,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-21T09:02:59Z",
-  "generatedAt": "2026-09-21T09:02:59Z"
+  "version": "2026-09-21T17:06:12Z",
+  "generatedAt": "2026-09-21T17:06:12Z"
 }

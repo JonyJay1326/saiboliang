@@ -1,32 +1,50 @@
 {
-  "a00923bf4ddda715364788a2da3f2ff96c940524eada89a0c5609e53d1b669fd": {
-    "title": "推出澳大利亚青年安全蓝图",
-    "summary": "OpenAI 推出澳大利亚青年安全蓝图，这是一份六大支柱路线图，旨在打造更安全的 AI 体验，保护并赋能年轻人。",
-    "source": "deepseek-flash",
-    "at": "2026-09-19T09:07:57Z"
-  },
-  "d92122e53ec9d4f7bc6fea4bf37516858d0002585be805afba39f416420fc05c": {
-    "title": "新专家加入 Google 的 AI 与经济团队",
-    "summary": "绿色网格背景上布满“AI & Economy Research Program”文字，右下角有 Google G 标志",
-    "source": "deepseek-flash",
-    "at": "2026-09-19T09:07:57Z"
-  },
-  "44ec3a3d6fdc7de7b05fd571004bac1ebe440c6664f8e9edd521d6233cec0999": {
-    "title": "与 Google 共同创造时尚的未来",
-    "summary": "Jane Wade 和 Sergio Hudson",
-    "source": "deepseek-flash",
-    "at": "2026-09-19T09:07:57Z"
-  },
   "32006e5a8d11086972b602dbeb8fb8a0ec155e4c164b659ea32e5bbe6455deec": {
     "title": "使用 REST API 管理代码覆盖率规则集条件",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-19T09:07:57Z"
   },
-  "4f937e072c6920ec30d87d4366b23fe22b9cad653a4c577f45475097e4b6ba97": {
-    "title": "用于更安全自动化的仅暂存 npm 令牌",
-    "summary": "现在创建 npm 细粒度访问令牌时，可以选择“读取和写入（仅暂存）”。这使你的自动化工作流可以暂存包版本以供审查，而无需授予令牌……",
+  "39b901174b5433760268459014cd78aa913e65cfdad9f8acf94eedcb904e8042": {
+    "title": "推出 Grok 4.7",
+    "summary": "SpaceXAI 面向编程与知识工作的最强模型。速度是同类模型的两倍，价格仅为其一半。",
     "source": "deepseek-flash",
-    "at": "2026-09-19T09:07:57Z"
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "d2871d486c61275aa18316221b2aa4fe0c0c7a730e7f24a395d9c1672c5c3fc3": {
+    "title": "V7 如何为 AI 智能体赋予机构记忆",
+    "summary": "V7 使用 GPT-5.6，将分散的公司文件转化为智能体可用的上下文，以完成复杂且可溯源的工作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "9c38b0e540fa6708e9ee0116581d348eb13bc6f8450336dc337df4d0a6d637fa": {
+    "title": "Grok 4.7 现已在 GitHub Copilot 中可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "3c53544af87c504f1065c4986d28af745b3f0bf129cd820abcab9474f2ace6cf": {
+    "title": "为何大规模部署物理 AI 需要每一层的安全保障",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "658f98e3c9afdd9e137e7b7db8926a65897efd6c58b6e40d3823e66303e79184": {
+    "title": "从赋能到执行，埃及 AI 生态达到生产规模",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "a34d58b87503fec2d9bc653f10e4517245f4e04f40b1a2a626a68a0856240dcd": {
+    "title": "AI 安全是一个工程问题——如何在智能体栈的每一层解决它",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "a4ae64181a9872478003d2f953d68a65ee5c543d7999371415745cc4db199489": {
+    "title": "5 家使用 NVIDIA AI 推动清洁能源的公司",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
   }
 }

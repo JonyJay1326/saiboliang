@@ -10,5 +10,12 @@
       "d7df69624b06e560ba28e04f3fa3da019f62eb121e3ebe44f8b13442cba16ac5"
     ],
     "at": "2026-09-21T09:02:59Z"
+  },
+  "2026-09-22": {
+    "signature": "e8c4b0c6d0ec97d2165b47d7b2cd6bbc84f8670f0a7cce29977205bb7fee5779",
+    "picks": [
+      "9c38b0e540fa6708e9ee0116581d348eb13bc6f8450336dc337df4d0a6d637fa"
+    ],
+    "at": "2026-09-21T17:06:12Z"
   }
 }

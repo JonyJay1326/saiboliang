@@ -69,19 +69,29 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "laravel/boost": {
-    "text": "面向 Laravel 的 MCP 服务器，用于增强你的 AI 驱动本地开发体验。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "microsoft/AI-Engineering-Coach": {
-    "text": "更好的智能体工程",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T13:56:24Z"
-  },
   "openai/tunnel-client": {
     "text": "Secure MCP Tunnel 的客户自运行客户端：将私有或本地 MCP 服务器连接到 ChatGPT、Codex、Responses API 和 AgentKit，无需暴露到公网。",
     "source": "deepseek-flash",
     "at": "2026-09-20T13:56:24Z"
+  },
+  "BuilderIO/agent-native": {
+    "text": "用于构建 agentic 应用的框架",
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "modelcontextprotocol/go-sdk": {
+    "text": "Model Context Protocol 服务器和客户端的官方 Go SDK，与 Google 合作维护。",
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "agentjido/req_llm": {
+    "text": "基于 Req 和 Finch 构建的可组合 Elixir LLM 交互库",
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "magnitudedev/magnitude": {
+    "text": "面向消费级硬件优化的开源推理引擎。分析你的机器，推荐最适合的模型，然后下载、调优并运行。支持 Apple Silicon、NVIDIA、AMD 或仅 CPU。",
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
   }
 }

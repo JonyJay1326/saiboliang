@@ -1,7 +1,12 @@
 {
-  "c43e9379c6367f4757adddf5668860eea0774c7735dd842f0b67c3a62abfc9ba": {
-    "summary": "Meta推出Meta One订阅服务，覆盖Facebook、Instagram、WhatsApp和Meta AI，提供更多AI用量、表达功能及创作者与商家工具。",
+  "9c38b0e540fa6708e9ee0116581d348eb13bc6f8450336dc337df4d0a6d637fa": {
+    "summary": "xAI最新推理模型Grok 4.7在GitHub Copilot中推出，面向智能体编程与复杂多步工作流。",
     "source": "deepseek-flash",
-    "at": "2026-09-20T14:25:08Z"
+    "at": "2026-09-21T17:06:12Z"
+  },
+  "a34d58b87503fec2d9bc653f10e4517245f4e04f40b1a2a626a68a0856240dcd": {
+    "summary": "开放研究、智能体栈各层控制与持续测试，帮助防御者构建并运行更安全的AI系统。",
+    "source": "deepseek-flash",
+    "at": "2026-09-21T17:06:12Z"
   }
 }
