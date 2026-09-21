@@ -2354,7 +2354,8 @@
         "url": "https://www.qbitai.com/2026/09/493068.html",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-21T01:02:06Z"
+        "addedAt": "2026-09-21T01:02:06Z",
+        "featured": true
       },
       {
         "title": "APUS 开源国内首批Jev跨平台复现：国产模型实现秒级决策",
@@ -2372,7 +2373,8 @@
         "url": "https://www.qbitai.com/2026/09/492939.html",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-21T01:02:06Z"
+        "addedAt": "2026-09-21T01:02:06Z",
+        "featured": true
       },
       {
         "title": "千问发布Qwen3.8-LiveTranslate:同传延迟降至2.3秒，还能保留你的音色",
@@ -2390,7 +2392,8 @@
         "url": "https://www.aibase.com/zh/news/31174",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-20T01:31:22Z"
+        "addedAt": "2026-09-20T01:31:22Z",
+        "featured": true
       },
       {
         "title": "TypeSafe AI发布Jev:不生成文本的Transformer模型，主打低成本决策",
@@ -2408,7 +2411,8 @@
         "url": "https://www.aibase.com/zh/news/31171",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-20T01:31:22Z"
+        "addedAt": "2026-09-20T01:31:22Z",
+        "featured": true
       },
       {
         "title": "阿里发布 qwen-audio-3.1-realtime-plus",
@@ -2426,7 +2430,8 @@
         "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-20&model=qwen-audio-3.1-realtime-plus",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-21T01:02:06Z"
+        "addedAt": "2026-09-21T01:02:06Z",
+        "featured": true
       },
       {
         "title": "Copilot 代码审查：改进的审查体验",
@@ -2444,7 +2449,8 @@
         "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-19T08:51:34Z"
+        "addedAt": "2026-09-19T08:51:34Z",
+        "featured": true
       },
       {
         "title": "GitHub Copilot 每周发布 — 9 月 14 日",
@@ -2462,7 +2468,8 @@
         "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-20T01:31:22Z"
+        "addedAt": "2026-09-20T01:31:22Z",
+        "featured": true
       },
       {
         "title": "GitHub Copilot 部分模型将于十月中旬弃用",
@@ -2480,7 +2487,8 @@
         "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october",
         "category": "industry",
         "eventType": "action-required",
-        "addedAt": "2026-09-19T08:51:34Z"
+        "addedAt": "2026-09-19T08:51:34Z",
+        "featured": true
       },
       {
         "title": "智谱GLM-5.3-FlashX上线：最高 200 tokens/s",
@@ -2498,7 +2506,8 @@
         "url": "https://www.aibase.com/zh/news/31166",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-19T09:24:17Z"
+        "addedAt": "2026-09-19T09:24:17Z",
+        "featured": true
       },
       {
         "title": "阿里发布 Qwen3.8-Omni-Flash：原生全模态、百万上下文，音频成本砍掉 98%",
@@ -2516,7 +2525,8 @@
         "url": "https://www.aibase.com/zh/news/31158",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-18T05:50:48Z"
+        "addedAt": "2026-09-18T05:50:48Z",
+        "featured": true
       },
       {
         "title": "Anthropic 推出生命科学认证计划，三款主力模型纳入统一授权条款",
@@ -2534,7 +2544,8 @@
         "url": "https://www.aibase.com/zh/news/31152",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-19T12:16:16Z"
+        "addedAt": "2026-09-19T12:16:16Z",
+        "featured": true
       },
       {
         "title": "OpenAI 推出 Astra for Law：索引 2.3 亿 URL，法律问答正确率 54% 力压通用模型 15 个百分点",
@@ -2552,7 +2563,8 @@
         "url": "https://www.aibase.com/zh/news/31146",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-18T01:48:37Z"
+        "addedAt": "2026-09-18T01:48:37Z",
+        "featured": true
       },
       {
         "title": "推出 Grok Voice Transcribe 2.0",
@@ -2570,7 +2582,8 @@
         "url": "https://x.ai/news/grok-voice-transcribe-2",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-20T01:31:22Z"
+        "addedAt": "2026-09-20T01:31:22Z",
+        "featured": true
       },
       {
         "title": "Copilot 影响仪表板现显示功能参与度",
@@ -2588,7 +2601,8 @@
         "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-17T21:47:27Z"
+        "addedAt": "2026-09-17T21:47:27Z",
+        "featured": true
       },
       {
         "title": "千问APP升级未成年人保护模式，让青少年安全地用好AI",
@@ -2606,7 +2620,8 @@
         "url": "https://www.aibase.com/zh/news/31139",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-17T09:40:15Z"
+        "addedAt": "2026-09-17T09:40:15Z",
+        "featured": true
       },
       {
         "title": "阿里云展示全新升级的 Wan3.0 视频大模型：单条直出 30 秒长镜头，支持多达五条视频参考",
@@ -2624,7 +2639,8 @@
         "url": "https://www.aibase.com/zh/news/31126",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-17T06:16:32Z"
+        "addedAt": "2026-09-17T06:16:32Z",
+        "featured": true
       },
       {
         "title": "Copilot 预算增加请求正式可用",
@@ -2642,7 +2658,8 @@
         "url": "https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-19T08:51:34Z"
+        "addedAt": "2026-09-19T08:51:34Z",
+        "featured": true
       },
       {
         "title": "阿里发布 qwen3.8-omni-flash",
@@ -2660,7 +2677,8 @@
         "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-17&model=qwen3.8-omni-flash",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-16T16:00:00Z"
+        "addedAt": "2026-09-16T16:00:00Z",
+        "featured": true
       },
       {
         "title": "讯飞星火语音基座大模型上线：0.65B 编码器配 30B MoE，纯国产算力训练",
@@ -2678,7 +2696,8 @@
         "url": "https://www.aibase.com/zh/news/31102",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-16T09:22:12Z"
+        "addedAt": "2026-09-16T09:22:12Z",
+        "featured": true
       },
       {
         "title": "OpenAI 宣布 GPT-5.5 将于 10 月 14 日下线：ChatGPT 与 Codex 同步移除",
@@ -2696,7 +2715,8 @@
         "url": "https://www.aibase.com/zh/news/31070",
         "category": "industry",
         "eventType": "action-required",
-        "addedAt": "2026-09-16T01:22:23Z"
+        "addedAt": "2026-09-16T01:22:23Z",
+        "featured": true
       },
       {
         "title": "GitHub Copilot 可建议自定义属性定义",
@@ -2714,7 +2734,8 @@
         "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-15T19:07:47Z"
+        "addedAt": "2026-09-15T19:07:47Z",
+        "featured": true
       },
       {
         "title": "推出 Gemini 3.8 Live 与 3.8 Live Extended Thinking",
@@ -2732,7 +2753,8 @@
         "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-15T17:05:57Z"
+        "addedAt": "2026-09-15T17:05:57Z",
+        "featured": true
       },
       {
         "title": "阿里发布 qwen-mt-uni",
@@ -2750,7 +2772,8 @@
         "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-16&model=qwen-mt-uni",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-15T16:00:00Z"
+        "addedAt": "2026-09-15T16:00:00Z",
+        "featured": true
       },
       {
         "title": "推出 Meta One：一项拥有更多功能和 AI 的订阅服务，用于创作、连接和脱颖而出",
@@ -2768,7 +2791,8 @@
         "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-15T15:00:59Z"
+        "addedAt": "2026-09-15T15:00:59Z",
+        "featured": true
       },
       {
         "title": "阶跃星辰王炸发布 StepAudio 3 系列语音大模型，强势斩获多项全球第一！",
@@ -2786,7 +2810,8 @@
         "url": "https://www.aibase.com/zh/news/31066",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-15T09:55:38Z"
+        "addedAt": "2026-09-15T09:55:38Z",
+        "featured": true
       },
       {
         "title": "阶跃发布StepAudio3系列模型:五款模型同步上线开放平台",
@@ -2804,7 +2829,8 @@
         "url": "https://www.aibase.com/zh/news/31063",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-15T08:26:30Z"
+        "addedAt": "2026-09-15T08:26:30Z",
+        "featured": true
       },
       {
         "title": "在 Copilot 自动模型选择中配置成本与质量",
@@ -2822,7 +2848,8 @@
         "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-14T16:05:27Z"
+        "addedAt": "2026-09-14T16:05:27Z",
+        "featured": true
       },
       {
         "title": "Suno发布v6音乐模型：联合华纳、BMG 共创，自然语言就能改歌、混音、采样",
@@ -2840,7 +2867,8 @@
         "url": "https://www.aibase.com/zh/news/31033",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-14T08:51:23Z"
+        "addedAt": "2026-09-14T08:51:23Z",
+        "featured": true
       },
       {
         "title": "阿里发布 Qwen-Image-2.1",
@@ -2858,7 +2886,8 @@
         "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-14T03:47:26Z"
+        "addedAt": "2026-09-14T03:47:26Z",
+        "featured": true
       },
       {
         "title": "OpenAI 关停史上最快模型 GPT-5.3-Codex-Spark：从发布到下线只活了 7 个月",
@@ -2876,7 +2905,8 @@
         "url": "https://www.aibase.com/zh/news/31021",
         "category": "industry",
         "eventType": "action-required",
-        "addedAt": "2026-09-14T03:17:24Z"
+        "addedAt": "2026-09-14T03:17:24Z",
+        "featured": true
       },
       {
         "title": "Perplexity 将端到端系统托付给 GPT-6 Astra",
@@ -2894,7 +2924,8 @@
         "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-14T00:00:00Z"
+        "addedAt": "2026-09-14T00:00:00Z",
+        "featured": true
       },
       {
         "title": "将 VS Code Agents 添加到 Copilot 使用指标",
@@ -2912,7 +2943,8 @@
         "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-11T21:30:30Z"
+        "addedAt": "2026-09-11T21:30:30Z",
+        "featured": true
       },
       {
         "title": "Copilot 代码审查中的自动解决和分析更新",
@@ -2930,7 +2962,8 @@
         "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-11T20:00:07Z"
+        "addedAt": "2026-09-11T20:00:07Z",
+        "featured": true
       },
       {
         "title": "小米开源工业级目标说话人语音识别大模型 CocktailASR-1",
@@ -2948,7 +2981,8 @@
         "url": "https://www.aibase.com/zh/news/31001",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-11T10:05:59Z"
+        "addedAt": "2026-09-11T10:05:59Z",
+        "featured": true
       },
       {
         "title": "快速扩展在线存储以服务超过 10 亿 ChatGPT 用户",
@@ -2966,7 +3000,8 @@
         "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-11T10:00:00Z"
+        "addedAt": "2026-09-11T10:00:00Z",
+        "featured": true
       },
       {
         "title": "告别卡顿与机械感：OpenAI 推出全双工语音模型 GPT-Live-1",
@@ -2984,7 +3019,8 @@
         "url": "https://www.aibase.com/zh/news/30996",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-11T06:58:13Z"
+        "addedAt": "2026-09-11T06:58:13Z",
+        "featured": true
       },
       {
         "title": "Agent 优化的经济学：AI agent 治理如何控制成本并证明 ROI",
@@ -3002,7 +3038,8 @@
         "url": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-10T17:00:00Z"
+        "addedAt": "2026-09-10T17:00:00Z",
+        "featured": true
       },
       {
         "title": "DeepSeek Harness 0.1.5 更新：适配 V4.1 Flash，新增文件上传与侧边栏预览",
@@ -3020,7 +3057,8 @@
         "url": "https://www.aibase.com/zh/news/30969",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-10T09:43:23Z"
+        "addedAt": "2026-09-10T09:43:23Z",
+        "featured": true
       },
       {
         "title": "推出面向金融服务的 ChatGPT",
@@ -3038,7 +3076,8 @@
         "url": "https://openai.com/index/introducing-chatgpt-financial-services",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-10T07:00:00Z"
+        "addedAt": "2026-09-10T07:00:00Z",
+        "featured": true
       },
       {
         "title": "财跃星辰联合上海交大开源Alpha-R1：8B小模型如何颠覆资产配置？",
@@ -3056,7 +3095,8 @@
         "url": "https://www.aibase.com/zh/news/30956",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-10T06:00:15Z"
+        "addedAt": "2026-09-10T06:00:15Z",
+        "featured": true
       },
       {
         "title": "DeepSeek V4.1 Flash：更强、更快、更普惠",
@@ -3074,7 +3114,8 @@
         "url": "https://www.deepseek.com/news/deepseek-v4-1-flash/",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-09T16:00:00Z"
+        "addedAt": "2026-09-09T16:00:00Z",
+        "featured": true
       },
       {
         "title": "谷歌重磅福利：Gemini每日简报功能向全体免费用户全面开放",
@@ -3092,7 +3133,8 @@
         "url": "https://www.aibase.com/zh/news/30935",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-09T10:00:27Z"
+        "addedAt": "2026-09-09T10:00:27Z",
+        "featured": true
       },
       {
         "title": "蚂蚁开源 Ling-3.0-flash-VL：124B 参数原生多模态大模型正式登场",
@@ -3110,7 +3152,8 @@
         "url": "https://www.aibase.com/zh/news/30924",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-09T05:59:43Z"
+        "addedAt": "2026-09-09T05:59:43Z",
+        "featured": true
       },
       {
         "title": "推出 Muse：全球首个为所有人打造的个人 AI 智能体",
@@ -3128,7 +3171,8 @@
         "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-08T19:00:51Z"
+        "addedAt": "2026-09-08T19:00:51Z",
+        "featured": true
       },
       {
         "title": "GPT-5.6 Sol 如何帮助运行量子计算实验",
@@ -3146,7 +3190,8 @@
         "url": "https://openai.com/index/codex-quantum-computing-experiments",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-08T17:00:00Z"
+        "addedAt": "2026-09-08T17:00:00Z",
+        "featured": true
       },
       {
         "title": "推出 ChatGPT Images 2.5",
@@ -3164,7 +3209,8 @@
         "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-08T11:30:00Z"
+        "addedAt": "2026-09-08T11:30:00Z",
+        "featured": true
       },
       {
         "title": "微软发布 Project Opal：只说目标，AI 连干数小时帮你交付成品",
@@ -3182,7 +3228,8 @@
         "url": "https://www.aibase.com/zh/news/30909",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-08T08:39:11Z"
+        "addedAt": "2026-09-08T08:39:11Z",
+        "featured": true
       },
       {
         "title": "每日调用量破 10 亿次！微信开源 WeMM-Embedding 多模态大模型，全面领跑国际权威榜单",
@@ -3200,7 +3247,8 @@
         "url": "https://www.aibase.com/zh/news/30896",
         "category": "model",
         "eventType": "model-review",
-        "addedAt": "2026-09-08T02:23:39Z"
+        "addedAt": "2026-09-08T02:23:39Z",
+        "featured": true
       },
       {
         "title": "李飞飞团队推出世界模型 Atlas，或成通往 AGI 的核心原语",
@@ -3218,7 +3266,8 @@
         "url": "https://www.aibase.com/zh/news/30883",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-07T09:41:29Z"
+        "addedAt": "2026-09-07T09:41:29Z",
+        "featured": true
       },
       {
         "title": "微信视觉团队开源通用多模态嵌入模型WeMM-Embedding，日调用量突破十亿量级",
@@ -3236,7 +3285,8 @@
         "url": "https://www.aibase.com/zh/news/30866",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-07T03:37:36Z"
+        "addedAt": "2026-09-07T03:37:36Z",
+        "featured": true
       },
       {
         "title": "Google DeepMind发布气象大模型WeatherNext 3，实现每小时刷新与5公里高精度全球预报",
@@ -3254,7 +3304,8 @@
         "url": "https://www.aibase.com/zh/news/30844",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-04T07:37:08Z"
+        "addedAt": "2026-09-04T07:37:08Z",
+        "featured": true
       },
       {
         "title": "谷歌9月4日起停用Google Assistant，Gemini全面接棒",
@@ -3272,7 +3323,8 @@
         "url": "https://www.aibase.com/zh/news/30839",
         "category": "industry",
         "eventType": "action-required",
-        "addedAt": "2026-09-04T06:50:40Z"
+        "addedAt": "2026-09-04T06:50:40Z",
+        "featured": true
       },
       {
         "title": "推出 WeatherNext 3，我们最先进、最准确的全球天气 AI 模型",
@@ -3290,7 +3342,8 @@
         "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-03T15:02:08Z"
+        "addedAt": "2026-09-03T15:02:08Z",
+        "featured": true
       },
       {
         "title": "百度基础模型部大换血：北美大模型专家与前DeepSeek核心成员加盟，文心多模态迎关键升级",
@@ -3308,7 +3361,8 @@
         "url": "https://www.aibase.com/zh/news/30805",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-03T07:19:03Z"
+        "addedAt": "2026-09-03T07:19:03Z",
+        "featured": true
       },
       {
         "title": "AI 绩效评估从\"用量\"转向\"产出\"：Meta 弃用采用率仪表盘与 Token 指标",
@@ -3326,7 +3380,8 @@
         "url": "https://www.aibase.com/zh/news/30802",
         "category": "industry",
         "eventType": "action-required",
-        "addedAt": "2026-09-03T06:04:18Z"
+        "addedAt": "2026-09-03T06:04:18Z",
+        "featured": true
       },
       {
         "title": "为持久化智能体世界设计 Grok Bot",
@@ -3344,7 +3399,8 @@
         "url": "https://x.ai/news/designing-grok-bot",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-03T00:00:00Z"
+        "addedAt": "2026-09-03T00:00:00Z",
+        "featured": true
       },
       {
         "title": "推出 Gemini 3.8 Flash 和 3.8 Flash Cyber",
@@ -3362,7 +3418,8 @@
         "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-02T16:18:31Z"
+        "addedAt": "2026-09-02T16:18:31Z",
+        "featured": true
       },
       {
         "title": "ATV Big Air Tour 用 ChatGPT 将 3 天工作缩短为 3 小时",
@@ -3380,7 +3437,8 @@
         "url": "https://openai.com/index/atv-big-air-tour",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-02T12:00:00Z"
+        "addedAt": "2026-09-02T12:00:00Z",
+        "featured": true
       },
       {
         "title": "World Labs推出全球首个多模态世界模型Atlas，像素级镜头控制拍出电影级“子弹时间”大片",
@@ -3398,7 +3456,8 @@
         "url": "https://www.aibase.com/zh/news/30771",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-02T03:37:19Z"
+        "addedAt": "2026-09-02T03:37:19Z",
+        "featured": true
       },
       {
         "title": "决战OpenAI与Anthropic！谷歌Gemini 3.8 Flash内测代号“Skimaki”最快周三上线",
@@ -3416,7 +3475,8 @@
         "url": "https://www.aibase.com/zh/news/30769",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-02T02:47:56Z"
+        "addedAt": "2026-09-02T02:47:56Z",
+        "featured": true
       },
       {
         "title": "NVIDIA 与 CrowdStrike 强化智能体网络安全前沿",
@@ -3434,7 +3494,8 @@
         "url": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-01T21:19:20Z"
+        "addedAt": "2026-09-01T21:19:20Z",
+        "featured": true
       },
       {
         "title": "医疗机构现可将EHR及其他行业数据连接至ChatGPT",
@@ -3452,7 +3513,8 @@
         "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-09-01T12:00:00Z"
+        "addedAt": "2026-09-01T12:00:00Z",
+        "featured": true
       },
       {
         "title": "Runway发布首个界面世界模型Solaris，实时逐帧生成动态交互界面",
@@ -3470,7 +3532,8 @@
         "url": "https://www.aibase.com/zh/news/30756",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-01T07:37:37Z"
+        "addedAt": "2026-09-01T07:37:37Z",
+        "featured": true
       },
       {
         "title": "中国化工行业首个大模型3.0 Pro重磅发布，从“会答”迈向“会干”",
@@ -3488,7 +3551,8 @@
         "url": "https://www.aibase.com/zh/news/30750",
         "category": "model",
         "eventType": "model-release",
-        "addedAt": "2026-09-01T06:15:12Z"
+        "addedAt": "2026-09-01T06:15:12Z",
+        "featured": true
       },
       {
         "title": "阿里发布 qwen3.7-text-rerank",
@@ -3506,7 +3570,8 @@
         "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-01&model=qwen3.7-text-rerank",
         "category": "tool",
         "eventType": "major-update",
-        "addedAt": "2026-08-31T16:00:00Z"
+        "addedAt": "2026-08-31T16:00:00Z",
+        "featured": true
       }
     ]
   }

@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, summarize_news, translate_github, translate_news
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, select_featured, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -254,6 +254,22 @@ def load_news_summarizer(args,client,run,now):
     return summarize
 
 
+def load_news_featured(args,client,run,now):
+    """DeepSeek judgement for each admission day's at-most-six featured set."""
+    cache=read_json(args.state/'news-featured-cache.json',{})
+    require(isinstance(cache,dict),'invalid news featured cache')
+    try:
+        key=load_key(args.env_file,('DEEPSEEK_API_KEY','DEEPSEEK_KEY','DeepSeek_key'),'DEEPSEEK_API_KEY')
+    except DataError:
+        run.skipped.append('news-featured: no DEEPSEEK_API_KEY; fixed rule order supplies the picks')
+        key=None
+    def feature(items,days):
+        result=select_featured(client,items,cache,key,days,now,run.review)
+        write_json(args.state/'news-featured-cache.json',cache)
+        return result
+    return feature
+
+
 def collect(args):
     state=args.state; now=utcnow(); run=Run(state,now)
     sources,overrides,github_zh=load_config(args.editorial)
@@ -288,9 +304,10 @@ def collect(args):
                 require(news,'no admitted official news source')
                 news_translator=load_news_translator(args,client,run,now)
                 news_summarizer=load_news_summarizer(args,client,run,now)
+                news_featured=load_news_featured(args,client,run,now)
                 data=collect_news(client,news,originals,baseline['news'],now,run.guard,run.review,news_translator,
                                   summarize=news_summarizer,window_seconds=args.backfill_days*24*3600 or 72*3600,
-                                  backfill=args.backfill_days>0)
+                                  backfill=args.backfill_days>0,feature=news_featured)
             else:
                 data=load_tickets(args.editorial,raw_cache['tickets'],now)
             raw_candidate=copy.deepcopy(data)

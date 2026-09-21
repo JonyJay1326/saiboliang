@@ -318,6 +318,92 @@ def summarize_news(client,items,cached,key,now,review):
     return result
 
 
+EVENT_PRIORITY={event:index for index,event in enumerate(EVENTS)}
+
+NEWS_FEATURED_INSTRUCTIONS=('你是中文科技媒体的值班编辑，为站点「今日精选」挑选条目。从候选列表里按重要性最多选 6 条，'
+                            '优先重大模型发布、影响开发者日常的产品或接口变更、价格与免费额度变化、必须行动的迁移或弃用；'
+                            '同一型号或同一题材只留最重要的一条，企业合作、客户案例、活动、观点与教程靠后。'
+                            '只从候选里挑，不补充候选之外的信息；候选不足 6 条时按实际数量选，可以少选。'
+                            '只输出 JSON 对象 {"picks": [序号, ...]}，序号按重要性从高到低，不要输出其他内容。')
+
+
+def beijing_day(value):
+    return (datetime.fromisoformat(value)+timedelta(hours=8)).date().isoformat()
+
+
+def featured_order(item):
+    """Fixed fallback ranking for featured picks: event priority, then newest publication."""
+    return (EVENT_PRIORITY[item['eventType']],-datetime.fromisoformat(item['publishedAt']).timestamp(),item['id'])
+
+
+def featured_via_model(client,rows,key,review,day):
+    """Ask DeepSeek for the day's picks; returns None when the decision is unusable."""
+    candidates={str(index):dict(title=item['title'],source=item['source'],event=item['eventType'],
+                                summary=item['summary'] or '') for index,item in enumerate(rows,1)}
+    try:
+        body=dict(model=DEEPSEEK_MODEL,temperature=0,thinking=dict(type='disabled'),
+                  response_format=dict(type='json_object'),max_tokens=1024,
+                  messages=[dict(role='system',content=NEWS_FEATURED_INSTRUCTIONS),
+                            dict(role='user',content=json.dumps(candidates,ensure_ascii=False))])
+        payload=json.loads(client.post(DEEPSEEK_URL,body,{'Authorization':'Bearer '+key.strip()}))
+        require(isinstance(payload,dict),'featured response malformed')
+        choices=payload.get('choices')
+        require(isinstance(choices,list) and choices and isinstance(choices[0],dict),'featured choices missing')
+        message=choices[0].get('message')
+        require(isinstance(message,dict) and isinstance(message.get('content'),str),'featured content missing')
+        decision=json.loads(message['content'])
+        require(isinstance(decision,dict),'featured payload malformed')
+        picks=decision.get('picks')
+        require(isinstance(picks,list) and len(picks)<=6,'featured picks malformed')
+        chosen=[]
+        for value in picks:
+            number=str(value).strip()
+            require(number in candidates,'featured pick outside candidates')
+            identity=rows[int(number)-1]['id']
+            if identity not in chosen:
+                chosen.append(identity)
+        return chosen
+    except (ValueError,KeyError,TypeError,UnicodeError) as exc:
+        review('news-featured',day,'featured selection failed: '+str(exc),dict(candidates=len(rows)))
+        return None
+
+
+def select_featured(client,items,cached,key,days,now,review):
+    """Choose at most six featured items for each admission day.
+
+    DeepSeek ranks the day's candidates; without a key, on request failure or on an
+    unusable reply the fixed rule order supplies the picks. Only model decisions are
+    cached, keyed by the candidate set, so repeated runs of one day reuse them while
+    failed calls stay retryable.
+    """
+    by_day={}
+    for item in items:
+        by_day.setdefault(beijing_day(item['addedAt']),[]).append(item)
+    for day in list(cached):
+        if day not in by_day:
+            del cached[day]
+    result={}
+    for day in sorted(days):
+        rows=by_day.get(day)
+        if not rows:
+            cached.pop(day,None)
+            continue
+        signature=digest('\n'.join(sorted(item['id'] for item in rows)))
+        known={item['id'] for item in rows}
+        entry=cached.get(day)
+        if isinstance(entry,dict) and entry.get('signature')==signature and isinstance(entry.get('picks'),list) \
+                and all(identity in known for identity in entry['picks']):
+            result[day]=list(entry['picks'])
+            continue
+        picks=featured_via_model(client,rows,key,review,day) if key and client else None
+        if picks is None:
+            picks=[item['id'] for item in sorted(rows,key=featured_order)[:6]]
+        else:
+            cached[day]=dict(signature=signature,picks=picks,at=now)
+        result[day]=picks
+    return result
+
+
 GITHUB_LIMIT=30
 
 
@@ -1266,7 +1352,7 @@ def fill_news_summaries(client,items,summarize,limit=40):
 
 
 def collect_news(client,sources,originals,old,now,guard,review,translate=None,summarize=None,
-                 window_seconds=72*3600,backfill=False):
+                 window_seconds=72*3600,backfill=False,feature=None):
     """Official-first news collection.
 
     Items accumulate forever in the published file: `addedAt` marks admission and the
@@ -1277,7 +1363,9 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     `window_seconds` bounds admission age (72h in normal runs). `backfill` is the
     documented one-off mode: the window widens to the requested span and `addedAt` takes
     the publication time, so historical days stay on their own daily budgets. Items whose
-    source carries no summary get a model-drafted one through `summarize`.
+    source carries no summary get a model-drafted one through `summarize`. Admission
+    days touched this run are re-judged for the at-most-six featured set through
+    `feature`, whose picks are the only entries the front end displays.
     """
     candidates=[]; now_dt=datetime.fromisoformat(now)
     known={item['id'] for item in old.get('items',[])}
@@ -1383,30 +1471,27 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
                           category=CATEGORY_BY_EVENT[event],eventType=event,addedAt=added))
     # Daily quotas count items admitted on the same Beijing day; normal runs share one
     # budget (today), while the one-off backfill keeps every historical day separate.
-    def bj_day(value):
-        return (datetime.fromisoformat(value)+timedelta(hours=8)).date().isoformat()
     budget={}
     def slot(day):
         return budget.setdefault(day,dict(total=0,source={},event={}))
     for item in old.get('items',[]):
-        current=slot(bj_day(item['addedAt']))
+        current=slot(beijing_day(item['addedAt']))
         current['total']+=1
         current['source'][item['source']]=current['source'].get(item['source'],0)+1
         current['event'][item['eventType']]=current['event'].get(item['eventType'],0)+1
-    priority={event:index for index,event in enumerate(EVENTS)}
-    order=lambda i:(-datetime.fromisoformat(bj_day(i['addedAt'])+'T00:00:00+08:00').timestamp(),
-                    priority[i['eventType']],-datetime.fromisoformat(i['publishedAt']).timestamp(),i['id'])
+    order=lambda i:(-datetime.fromisoformat(beijing_day(i['addedAt'])+'T00:00:00+08:00').timestamp(),
+                    EVENT_PRIORITY[i['eventType']],-datetime.fromisoformat(i['publishedAt']).timestamp(),i['id'])
     # 相似排除只比对近 7 天入库的条目，避免长期库存永久压住同型号的后续事件。
     recent=[item for item in old.get('items',[])
             if (now_dt-datetime.fromisoformat(item['addedAt'])).total_seconds()<=7*24*3600]
     chosen=[]
     for item in sorted(items,key=order):
-        current=slot(bj_day(item['addedAt']))
-        if current['total']>=6:
+        current=slot(beijing_day(item['addedAt']))
+        if current['total']>=20:
             continue
         if any(similar_event(item,known) for known in recent):
             continue
-        if current['source'].get(item['source'],0)>=2 or current['event'].get(item['eventType'],0)>=2:
+        if current['source'].get(item['source'],0)>=5 or current['event'].get(item['eventType'],0)>=3:
             continue
         chosen.append(item)
         recent.append(item)
@@ -1416,6 +1501,15 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     merged=sorted(old.get('items',[])+chosen,key=news_order)
     if summarize:
         fill_news_summaries(client,merged,summarize,limit=200 if backfill else 40)
+    for item in merged:
+        # 旧口径（每日≤6）下入库的条目即为当日精选；新条目在判定前不视为精选。
+        item['featured']=True if 'featured' not in item and item['id'] in known else item.get('featured')
+    if feature and chosen:
+        picks=feature(merged,{beijing_day(item['addedAt']) for item in chosen})
+        for item in merged:
+            day=beijing_day(item['addedAt'])
+            if day in picks:
+                item['featured']=True if item['id'] in picks[day] else None
     return dict(dataUpdatedAt=now,items=merged)
 
 

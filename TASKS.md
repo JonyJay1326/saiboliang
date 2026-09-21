@@ -23,6 +23,7 @@
 | B14 | ✅ | **Kimi 源迁移到 kimi.ai** | openCode | [实测 2026-09-20] `kimi.com` 已迁到 `www.kimi.ai`，卡片链接由 `/en/blog/<slug>` 变为 `/blog/<slug>`。适配器接受两种形态（带/不带地区前缀）、身份固定 `https://www.kimi.ai/blog/<slug>`；`editorial/sources.json` 的 `url` 改 `https://www.kimi.ai/zh-hans/blog/`、`articleHosts` 改 `www.kimi.ai`。真实页面实测解析 9 条（最近 2026-07-16），窗口内无产出但源恢复健康；66 项单测全绿 |
 | B15 | ✅ | **资讯回补扩到 09-01（20 天）** | openCode | [实测 2026-09-20] 用户要求「补到 9 月 1 日」：`--backfill-days 20` 实跑。AIBase 回溯封顶按跨度缩放（每天 45 篇、上限 1200 个 id）、回补轮简介起草上限 40 → 200。**结果**：27 → **62 条**、覆盖 09-01 ~ 09-20（17 个有内容日）、**简介 62/62**；来源 AIBase 32 / OpenAI 7 / GitHub Copilot 5 / GitHub 4 / 阿里云百炼 3 / DeepMind 3 / Meta 2 / SpaceXAI 2 / Azure·DeepSeek·NVIDIA·阿里 HF 各 1；`pipeline validate` PASS、前端构建 35 页、/news 单页 HTML 83.9 KB |
 | B16 | ✅ | **票证逾期即下架 + 新增两张票（AutoClaw / Qoder）** | openCode | [实测 2026-09-21] 用户反馈「失效的还在列表」：`listedTickets` 增补 `overdue` 派生过滤（此前只滤 `expired === true`）——过期票全站下架（列表 / 首页 / 详情页 / sitemap / 相关票）。新增 `autoclaw-zhongqiu-202609`（智谱 AutoClaw 中秋 5 亿 Token，86）与 `qoder-qwen38flash-free-202609`（Qoder 免费 Qwen3.8-Flash 至 9/30，82）：用户给的非契约字段 `startsAt`/`preview`/`images` 已剥除，Qoder 链接按 §5.1 剥 `referral_code` 改官方页。数据 37 → 39 条、上架 11 → 12 条；`pipeline validate` PASS、构建 36 页。前端规格 §2.1/§2.3/§3.1/§3.4/§4.2/§5.7 已同步 |
+| B17 | ✅ | **资讯入库放宽 + 当日精选（news v3）** | openCode | [实测 2026-09-21] 用户拍板：入库配额每天≤6、每源≤2/天、每类≤2/天 → **每天≤20、每源≤5/天、每类≤3/天**；「每日≤6」转为前端展示策略——`NEWS` 新增 `featured`（`true`/`null`），DeepSeek `deepseek-flash` 从当日新增条目按重要性判精选（≤6 条），无 key／失败／回复不可用回落事件优先级→`publishedAt` 降序；判定按候选集签名缓存 `state/news-featured-cache.json`；`/news` 只渲染 `featured: true`，未入选条目仍永久累加、不展示；历史 65 条按旧口径回填 `featured: true`。68 项单测全绿、`pipeline validate` PASS；真实采集（临时 output/state，未动仓库数据）`news: OK`、新增 1 条、17 个历史日精选≤5、当日 4 条全选（本地无 key，走规则回落）。契约 §0/§2/§4.5/§6/§7/§8、架构 §0/§3.4/§8、data-review §1/§2/§3、frontend-spec §4.7/§5.5/§13、README、news-source-check 第八批已同步 |
 
 ## 线 1 · 前端（设计未定稿，当前只到盘点）
 
@@ -62,8 +63,8 @@
 ## 线 4 · 合规与版权（二期）
 
 > 来源：2026-09-18 抓取合规风险讨论。结论：一期**不做**，二期再评估。此处仅留痕，避免决策随对话丢失。
-> 现状基线（已做到，非待办）：只存「标题 + 链接 + 事实数据」——**不抓正文、`summary` 恒为 null**；频率克制（域间隔 1s、每天 3 次、单源 120s 预算）；UA 带站点标识 `Saiboliang/0.1 (+https://saiboliang.top)`。
-> 风险定位：标题 + 可见来源 + 跳转 = 「索引」而非「转载」；每源 ≤2 条、总量 ≤6 条 = 不构成对原站的实质性替代，是《反不正当竞争法》下最有力的抗辩基础。**若将来做站内全文阅读，性质立刻改变。**
+> 现状基线（已做到，非待办）：只存「标题 + 链接 + 事实数据」——**不抓正文、`summary` 只存来源摘要或 ≤80 字短简介（正文不落盘）**；频率克制（域间隔 1s、每天 3 次、单源 120s 预算）；UA 带站点标识 `Saiboliang/0.1 (+https://saiboliang.top)`。
+> 风险定位：标题 + 可见来源 + 跳转 = 「索引」而非「转载」；**页面每天只展示 6 条精选**（2026-09-21 起入库放宽到 ≤20/天、每源 ≤5、每类 ≤3，入库量与未入选条目均不展示）= 不构成对原站的实质性替代，是《反不正当竞争法》下最有力的抗辩基础。**若将来做站内全文阅读或全量展示，性质立刻改变。**
 
 | ID | 状态 | 任务 | 建议执行方 | 备注 / 验收 |
 |---|---|---|---|---|

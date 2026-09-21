@@ -209,3 +209,27 @@ AIBase 的报道链接属于中文报道；只有另行核实官方一手出处�
 
 [实测] 复采 `news: OK`：`alibaba-bailian 165 / tencent-tokenhub 7 / baidu-qianfan 165 / kimi-blog 9`，无错误；`pipeline.py validate` PASS。窗口内四源均无新条目（最新为百炼 2026-09-16），未发生补录。
 
+### 2026-09-21 第八批：入库放宽与「当日精选」（news v3）
+
+用户拍板：入库配额由每天≤6、每源≤2/天、每类≤2/天放宽为**每天≤20、每源≤5/天、每类≤3/天**；「每日≤6」转为前端展示策略——`NEWS` 新增 `featured`（`true`/`null`），`/news` 只渲染 `featured: true`，未入选条目仍永久累加、不展示。
+
+**实现：** `contract.py` 新增 `featured` 字段与「同入库日精选≤6」校验，日/源/类配额改为 20/5/3；`sources.py` 新增 `select_featured`（按入库北京日分组，交 DeepSeek `deepseek-flash` 按重要性判最多 6 条；无 key／请求失败／回复不可用时回落 `featured_order`：事件优先级→`publishedAt` 降序→`id` 升序；模型结论按候选集 SHA-256 签名缓存于 `state/news-featured-cache.json`）、`beijing_day`、`featured_via_model`；`collect_news` 新增 `feature` 回调，只重判本轮有新增的入库日、未入选置 `null`；`pipeline.py` 新增 `load_news_featured`，`state/news-featured-cache.json` 随 CI 回写；历史 65 条按旧口径（入库即精选）回填 `featured: true`。
+
+[实测] `python test_pipeline.py` 68 项全过（新增：精选模型判定与缓存复用、非法回复与无 key 的规则回落、只重判有新增的入库日、20/5/3 配额、`featured: false` 拒绝、同日 7 条 featured 拒绝）；`pipeline.py validate` PASS。
+
+[实测] 真实采集（`--modules news`，output/state 均指向临时目录、未动仓库数据）：`news: OK`——AIBase 因候选骤降保护跳过，其余源正常；新增 1 条入库，历史 17 个入库日精选数均 ≤5、当日 4 条全选；本地无 `DEEPSEEK_API_KEY`，走规则回落并记 `news-featured: no DEEPSEEK_API_KEY; fixed rule order supplies the picks`。DeepSeek 判定路径由 FakeClient 单测覆盖，待 CI 带 key 运行后复核名次样本。
+
+[未定] 精选为模型判定（`temperature=0` + 候选集签名缓存，同日候选集不变不重判）；同一入库日内新增候选会重判该日精选，跨日不回溯。若模型判定持续不稳，可改为「只判新增候选的取舍、保持既有精选」的增量规则。
+
+### 2026-09-21 第九批：公众号与 X 指定账号准入实测（结论：均不接入）
+
+用户提出接入：微信公众号「阶跃星辰（Step）」；X 账号 dotey、vista8、op7418、imxiaohu。以管道同款 UA 复核 robots、服务端可解析性与稳定入口。
+
+[实测] **微信 `mp.weixin.qq.com/robots.txt` 为 `User-agent: *` + `Disallow: /`**，仅放行 `/`、`/debug/`、`/qa/`、`/wiki`、`/cgi-bin/loginpage`、`/cgi-bin/wx`、`/webpoc/ruleCenter`、`/miniprogram/landing_page`——文章路径 `/s/*` 不在白名单，直采违规；公众号也没有官方 RSS／开放接口（第三方镜像依赖中间源、易失效且多不符合微信条款）。结论：**公众号文章页与账号页一律不抓**；阶跃动态继续由已启用的 `hf-stepfun`（模型发布）与 AIBase／量子位（二手体裁）覆盖。
+
+[实测] **阶跃官网**（`www.stepfun.com`）robots 无阻断条款，但 `sitemap.xml` 仅一条首页 URL；`/news`、`/blog` 均回落同一 2.3KB SPA 壳，与 2026-09-19 结论一致——无服务端可解析的官方更新入口。
+
+[实测] **X `x.com/robots.txt` 为 `User-agent: *` + `Disallow: /`**（仅命名爬虫 Googlebot／Bingbot／facebookexternalhit 等有白名单）。账号页虽能返回带时间线数据的 SSR HTML（`x.com/dotey` 200、约 242KB、含 `tweet_results` 与推文文本），但按本仓准入纪律 robots 阻断即不接入（同 YouTube 判例）。RSSHub 公共实例复测：`rsshub.app/twitter/user/dotey` 404，`rss.kael.ink` 连接失败；自建 RSSHub 需 `TWITTER_AUTH_TOKEN`（账号 Cookie，风控与条款风险）。合规路径只剩 **X 官方 API（付费、按量计费、无免费读取层）**。
+
+[未定] 待用户拍板：① 是否为 4 个 X 账号购买 X API 读取额度并做适配器；② 是否新增「人工清单」渠道（人工录入标题／链接／摘要，不抓页面，类似 tickets 的人工文件）——涉及契约新增来源类型与字段来源，需契约变更后再实现。
+

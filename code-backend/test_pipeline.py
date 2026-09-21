@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -197,11 +197,11 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(skipped['items'],[])
 
     def test_news_accumulation_daily_quota_and_order(self):
-        def item(identity,published,source='其他厂商官方',event='major-update'):
+        def item(identity,published,source='其他厂商官方',event='major-update',featured=True):
             url='https://vendor.example/'+identity
             return dict(id=digest(url),title='产品重要更新',originalTitle=None,translatedAt=None,summary=None,lang='zh',
                         source=source,sourceUrl=url,originalSource=source,originalUrl=url,originalVerifiedAt=NOW,url=url,
-                        publishedAt=published,addedAt=NOW,category='tool',eventType=event)
+                        publishedAt=published,addedAt=NOW,category='tool',eventType=event,featured=featured)
         old=dict(dataUpdatedAt=NOW,items=[item('a','2026-09-17T08:00:00Z'),item('b','2026-09-17T07:00:00Z')])
         feed=('<rss><channel>'
               '<item><title>新模型正式发布三</title><link>https://vendor.example/c</link><pubDate>Thu, 17 Sep 2026 10:00:00 +0000</pubDate></item>'
@@ -212,10 +212,12 @@ class PipelineTests(unittest.TestCase):
         # 已入库 id 不重复收录；新条目与库存合并后按 publishedAt 倒序。
         url=lambda name:'https://vendor.example/'+name
         self.assertEqual([i['sourceUrl'] for i in data['items']],[url('c'),url('a'),url('b')])
-        # 当日额度用尽后不再新增。
-        full=dict(dataUpdatedAt=NOW,items=[item(str(i),'2026-09-17T0%d:00:00Z'%i) for i in range(6)])
+        # 当日额度用尽后不再新增（每日上限 20）。
+        events=['model-release','major-update','price-or-free']
+        full=dict(dataUpdatedAt=NOW,items=[item('%02d'%i,'2026-09-17T%02d:00:00Z'%(i%11),
+                                              source='厂商%d'%(i%4),event=events[i%3]) for i in range(20)])
         data=collect_news(FakeClient(documents={source['url']:feed}),[source],{},full,NOW,lambda *x:None,lambda *x:None)
-        self.assertEqual(len(data['items']),6)
+        self.assertEqual(len(data['items']),20)
 
     def test_news_translate_cache_failure_and_prune(self):
         item=dict(id='a1',title='Introducing GPT-6',summary='A new model.')
@@ -358,18 +360,30 @@ class PipelineTests(unittest.TestCase):
         url='https://vendor.example/a'
         base=dict(id=digest(url),title='新模型正式发布',originalTitle=None,translatedAt=None,summary=None,lang='zh',
                   source='示例厂商官方',sourceUrl=url,originalSource='示例厂商官方',originalUrl=url,originalVerifiedAt=NOW,
-                  url=url,publishedAt='2026-09-17T08:00:00Z',addedAt=NOW,category='model',eventType='model-release')
+                  url=url,publishedAt='2026-09-17T08:00:00Z',addedAt=NOW,category='model',eventType='model-release',featured=None)
         batch=assemble(None,{'news':dict(dataUpdatedAt=NOW,items=[base])},NOW)[0]; validate(batch)
-        for broken in [dict(base,lang='en'),dict(base,lang='en',originalTitle='Original'),dict(base,translatedAt=NOW)]:
+        for broken in [dict(base,lang='en'),dict(base,lang='en',originalTitle='Original'),dict(base,translatedAt=NOW),
+                       dict(base,featured=False)]:
             with self.assertRaises(ValueError): assemble(None,{'news':dict(dataUpdatedAt=NOW,items=[broken])},NOW)
-        events=['action-required','model-release','major-update','price-or-free','upcoming','model-review','hands-on']
-        rows=[]
-        for i in range(7):
+        events=['action-required','model-release','major-update','price-or-free','upcoming','model-review','hands-on','deep-analysis']
+        def row(i, **extra):
             item_url='https://vendor.example/%d'%i
-            rows.append(dict(base,id=digest(item_url),source='厂商%d'%i,eventType=events[i],sourceUrl=item_url,originalUrl=item_url,url=item_url))
-        ok=sorted(rows[:6],key=lambda i:i['id'])
-        validate(assemble(None,{'news':dict(dataUpdatedAt=NOW,items=ok)},NOW)[0])
+            values=dict(id=digest(item_url),source='厂商%d'%i,eventType=events[i%len(events)],
+                        sourceUrl=item_url,originalUrl=item_url,url=item_url)
+            values.update(extra)
+            return dict(base,**values)
+        # 每日新增上限 20：20 条通过，21 条被拒。
+        rows=[row(i) for i in range(21)]
+        validate(assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted(rows[:20],key=lambda i:i['id']))},NOW)[0])
         with self.assertRaises(ValueError): assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted(rows,key=lambda i:i['id']))},NOW)
+        # 每来源 ≤5/天、每事件类型 ≤3/天。
+        with self.assertRaises(ValueError):
+            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,source='厂商A') for i in range(6)],key=lambda i:i['id']))},NOW)
+        with self.assertRaises(ValueError):
+            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,eventType='major-update',source='厂商%d'%i) for i in range(4)],key=lambda i:i['id']))},NOW)
+        # 每日精选上限 6：同一天 7 条 featured 被拒。
+        with self.assertRaises(ValueError):
+            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,featured=True) for i in range(7)],key=lambda i:i['id']))},NOW)
 
     def test_deepseek_official_news_adapter(self):
         html = ('<html><a href="/news/deepseek-v4-1-flash/"><span>动态</span>'
@@ -704,28 +718,83 @@ class PipelineTests(unittest.TestCase):
         stock=dict(dataUpdatedAt=NOW,items=[dict(id=digest('https://cn.example/a'),title='智谱GLM-5.3-FlashX上线：最高 200 tokens/s',
                     originalTitle=None,translatedAt=None,summary=None,lang='zh',source='中文媒体',sourceUrl='https://cn.example/a',
                     originalSource='中文媒体',originalUrl='https://cn.example/a',originalVerifiedAt=NOW,url='https://cn.example/a',
-                    publishedAt='2026-09-17T09:00:00Z',addedAt=NOW,category='model',eventType='model-release')])
+                    publishedAt='2026-09-17T09:00:00Z',addedAt=NOW,category='model',eventType='model-release',featured=True)])
         data=run([('智谱发布 GLM-5.3-FlashX:速度飙至200tokens/s，国产算力再提速','b')],stock)
         self.assertEqual(len(data['items']),1)
 
     def test_news_caps_by_source_and_event_type(self):
-        def rss(title, host, day):
-            return ('<item><title>' + title + '</title><link>https://' + host + '/' + str(abs(hash(title)) % 9999) +
-                    '</link><pubDate>Thu, ' + day + ' Sep 2026 09:00:00 +0000</pubDate></item>')
-        items = ''.join([
-            rss('DeepSeek V4.1 Flash 模型正式发布', 'cn.example', '17'),
-            rss('Qwen 4 模型正式发布，能力提升', 'cn.example', '17'),
-            rss('GLM-6 模型正式发布，全面开源', 'cn.example', '17'),
-            rss('另一个模型正式发布上线', 'other.example', '17'),
-        ])
-        source = dict(id='cn', name='中文媒体', url='https://cn.example/feed', articleHosts=['cn.example'])
-        other = dict(id='other', name='其它媒体', url='https://other.example/feed', articleHosts=['other.example'])
-        client = FakeClient(documents={source['url']: '<rss><channel>' + items + '</channel></rss>',
-                                       other['url']: '<rss><channel>' + rss('混元模型正式发布上线', 'other.example', '17') + '</channel></rss>'})
-        data = collect_news(client, [source, other], {}, {}, NOW, lambda *x: None, lambda *x: None)
-        # 同源最多 2 条、同事件类型最多 2 条
-        self.assertEqual(len(data['items']), 2)
+        def rss(title, host, index):
+            return ('<item><title>' + title + '</title><link>https://' + host + '/' + str(index) +
+                    '</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>')
+        def feed(rows):
+            return '<rss><channel>' + ''.join(rows) + '</channel></rss>'
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        # 同一事件类型最多 3 条/天：4 条模型发布只收 3 条。
+        data=collect_news(FakeClient(documents={source['url']:feed([rss('示例模型 %d 正式发布'%i,'cn.example',i)
+                                                                   for i in range(4)])}),
+                          [source],{}, {}, NOW, lambda *x: None, lambda *x: None)
+        self.assertEqual(len(data['items']), 3)
         self.assertTrue(all(i['eventType'] == 'model-release' for i in data['items']))
+        # 同一来源最多 5 条/天：两类事件共 6 条只收 5 条。
+        mixed=[rss('示例模型 %d 正式发布'%i,'cn.example',i) for i in range(3)]
+        mixed+=[rss('示例模型 %d 开启免费试用'%i,'cn.example',10+i) for i in range(3)]
+        data=collect_news(FakeClient(documents={source['url']:feed(mixed)}),
+                          [source],{}, {}, NOW, lambda *x: None, lambda *x: None)
+        self.assertEqual(len(data['items']), 5)
+
+    def test_news_featured_selection_model_cache_and_fallback(self):
+        def item(identity,published,event):
+            url='https://vendor.example/'+identity
+            return dict(id=digest(url),title='示例条目 '+identity,originalTitle=None,translatedAt=None,summary=None,lang='zh',
+                        source='其他厂商官方',sourceUrl=url,originalSource='其他厂商官方',originalUrl=url,originalVerifiedAt=NOW,url=url,
+                        publishedAt=published,addedAt=NOW,category='tool',eventType=event,featured=None)
+        events=['model-release','model-release','model-release','model-release','major-update','major-update','major-update']
+        rows=[item('%d'%i,'2026-09-17T0%d:00:00Z'%i,events[i]) for i in range(7)]
+        day=beijing_day(NOW)
+        reply=dict(choices=[dict(message=dict(content=json.dumps({'picks':[3,1]})))])
+        client=FakeClient(posts=[reply]); cache={}; reviews=[]
+        picks=select_featured(client,rows,cache,'k',{day},NOW,lambda *x:reviews.append(x))
+        # 模型名次按回复顺序保留，并写入按候选集签名的缓存。
+        self.assertEqual(picks[day],[rows[2]['id'],rows[0]['id']])
+        self.assertEqual(len(client.sent),1)
+        self.assertEqual(cache[day]['signature'],digest('\n'.join(sorted(i['id'] for i in rows))))
+        again=select_featured(FakeClient(),rows,cache,'k',{day},LATER,lambda *x:reviews.append(x))
+        self.assertEqual(again[day],picks[day])
+        # 无 key 或模型回复不可用时回落固定规则（事件优先级 + 最新发布，最多 6 条），且不写缓存。
+        expected=[rows[3]['id'],rows[2]['id'],rows[1]['id'],rows[0]['id'],rows[6]['id'],rows[5]['id']]
+        bad=dict(choices=[dict(message=dict(content=json.dumps({'picks':[9]})))])
+        too_many=dict(choices=[dict(message=dict(content=json.dumps({'picks':list(range(1,8))})))])
+        for client,key,fallback_cache in [(FakeClient(),None,{}),(FakeClient(posts=[bad]),'k',{}),(FakeClient(posts=[too_many]),'k',{})]:
+            reviews=[]
+            result=select_featured(client,rows,fallback_cache,key,{day},NOW,lambda *x:reviews.append(x))
+            self.assertEqual(result[day],expected)
+            self.assertEqual(fallback_cache,{})
+            if key:
+                self.assertEqual([r[0] for r in reviews],['news-featured'])
+
+    def test_collect_news_marks_featured_and_keeps_legacy_picks(self):
+        legacy_url='https://vendor.example/legacy'
+        legacy=dict(id=digest(legacy_url),title='产品重要更新',originalTitle=None,translatedAt=None,summary=None,lang='zh',
+                    source='其他厂商官方',sourceUrl=legacy_url,originalSource='其他厂商官方',originalUrl=legacy_url,
+                    originalVerifiedAt=NOW,url=legacy_url,publishedAt='2026-09-16T08:00:00Z',addedAt='2026-09-16T08:00:00Z',
+                    category='tool',eventType='major-update',featured=True)
+        feed=('<rss><channel>'
+              '<item><title>新模型正式发布一</title><link>https://vendor.example/a</link><pubDate>Thu, 17 Sep 2026 10:00:00 +0000</pubDate></item>'
+              '<item><title>新模型正式发布二</title><link>https://vendor.example/b</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'
+              '</channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        seen=[]
+        def feature(items,days):
+            seen.append(sorted(days))
+            return {beijing_day(NOW):[digest('https://vendor.example/a')]}
+        data=collect_news(FakeClient(documents={source['url']:feed}),[source],{},dict(dataUpdatedAt=NOW,items=[legacy]),NOW,
+                          lambda *x:None,lambda *x:None,feature=feature)
+        by_url={i['sourceUrl']:i for i in data['items']}
+        # 只重判本轮有新增的入库日；入选为 true、未入选为 null，历史精选不被清掉。
+        self.assertEqual(seen,[[beijing_day(NOW)]])
+        self.assertIs(by_url['https://vendor.example/a']['featured'],True)
+        self.assertIsNone(by_url['https://vendor.example/b']['featured'])
+        self.assertIs(by_url[legacy_url]['featured'],True)
 
     def test_contract_rejects_unknown_fields_and_mixed_versions(self):
         batch=empty_batch(NOW); validate(batch)
@@ -946,7 +1015,7 @@ class PipelineTests(unittest.TestCase):
         source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
         reviews=[]
         data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+items+'</channel></rss>'}),[source],{}, {},NOW,lambda *x:None,lambda *x:reviews.append(x))
-        self.assertEqual(len(data['items']),2)
+        self.assertEqual(len(data['items']),3)
         self.assertEqual(data['items'][0]['sourceUrl'],'https://cn.example/1')
         self.assertIsNone(data['items'][0]['originalUrl'])
         self.assertEqual(data['items'][0]['url'],data['items'][0]['sourceUrl'])

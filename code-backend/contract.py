@@ -115,7 +115,8 @@ CATEGORY_BY_EVENT = dict({'model-release':'model','model-review':'model','major-
 NEWS = dict(id=lambda v: require(isinstance(v,str) and re.fullmatch(r'[a-f0-9]{64}',v), 'invalid news ID'), title=text,
             originalTitle=nullable(text), translatedAt=nullable(stamp), summary=nullable(summary), lang=enum('zh','en'),
             source=text, sourceUrl=safe_url, originalSource=nullable(text), originalUrl=nullable(safe_url), originalVerifiedAt=nullable(stamp),
-            url=safe_url, publishedAt=stamp, addedAt=stamp, category=enum('model','tool','industry'), eventType=enum(*EVENTS))
+            url=safe_url, publishedAt=stamp, addedAt=stamp, category=enum('model','tool','industry'), eventType=enum(*EVENTS),
+            featured=nullable(lambda v: require(v is True,'invalid news featured')))
 
 
 def news_order(item):
@@ -208,6 +209,7 @@ def validate(batch, previous=None):
         key=(datetime.fromisoformat(i['addedAt'])+timedelta(hours=8)).date().isoformat()
         daily.setdefault(key,[]).append(i)
     for rows in daily.values():
-        require(len(rows)<=6,'news daily limit')
-        require(all(n<=2 for n in Counter(i['source'] for i in rows).values()),'news daily source limit')
-        require(all(n<=2 for n in Counter(i['eventType'] for i in rows).values()),'news daily event-type limit')
+        require(len(rows)<=20,'news daily limit')
+        require(all(n<=5 for n in Counter(i['source'] for i in rows).values()),'news daily source limit')
+        require(all(n<=3 for n in Counter(i['eventType'] for i in rows).values()),'news daily event-type limit')
+        require(sum(i['featured'] is True for i in rows)<=6,'news daily featured limit')
