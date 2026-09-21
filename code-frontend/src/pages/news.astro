@@ -1,7 +1,7 @@
 ---
 // /news 邸报 —— frontend-spec.md §4.7（2026-09-20 用户解封：资讯提前放开，按给定参考图落版）
 // 版式：页头（板块名 + 题头）→ 按北京时间自然日分组的条目列：
-// 左侧日期栏（竖排中文日期 + 本日条数，兼作报头）+ 竖向细线，右侧标题与来路行；
+// 左侧日期栏（竖排中文日期）+ 竖向细线，右侧标题与来路行；
 // 条目间虚线分隔、跨日压红线断开。窄屏日期栏改横向分隔条，正文占满宽度。
 // 数据：news.json（契约 §4.5 news v2）构建期注入；条目永久累加，按 publishedAt 降序、id 升序。
 // 版权纪律（§10.1 约束 #6）：只展示标题 + 短摘要 + 来路 + 跳转，不存正文、不提供站内阅读。
@@ -12,8 +12,8 @@ import { dibaoDate, toBeijing } from '../lib/format.js';
 
 const file = news();
 
-// 契约 §4.5：排序为 publishedAt 降序、id 升序（管道已排，此处兜底、只读派生）。
-const items = [...file.items].sort((a, b) => {
+// 契约 §4.5：列表只展示当日精选（`featured` 为 true）；未入选条目仍永久累加在数据文件里，不展示。
+const items = [...file.items].filter((item) => item.featured === true).sort((a, b) => {
   if (a.publishedAt !== b.publishedAt) return a.publishedAt < b.publishedAt ? 1 : -1;
   return a.id < b.id ? -1 : 1;
 });
@@ -77,7 +77,6 @@ const jsonLd = {
         <li class="dibao__day">
           <time class="dibao__date" datetime={day.key || undefined}>
             <span class="dibao__date-day">{day.label}</span>
-            <span class="dibao__date-count">本日 {day.items.length} 则</span>
           </time>
           <ol class="dibao__items">
             {day.items.map((item) => {

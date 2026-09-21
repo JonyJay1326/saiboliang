@@ -38,26 +38,62 @@ const SHOW_SKIN_TOGGLE = false;
         但只做即时替换、不模拟动画——与一期「关掉动画」的决策一致。 */}
     <ClientRouter fallback="swap" />
 
-    {/* 站名横额收起：滚动后只留菜单条在吸顶条上。
-        状态记在 <html> 上（软导航不丢），scroll 监听挂 window、只注册一次。
-        窄屏主导航横向滚动——进页时把当前板块滚到可见处，否则 /news 等靠后的入口开局在屏外。 */}
+    {/* 菜单条导航（2026-09-21 用户定：品牌与条目常驻，不随滚动显示隐藏）。
+        菜单条 transition:persist 后不再随软导航重建，故「当前页」标记须在此就地重算
+        （与 Nav.astro 构建期的 isActive 同规则）；副产物：品牌两张图不再重复解码，切页不闪。
+        窄屏主导航横向滚动——进页时把当前板块滚到可见处（否则 /news 等靠后的入口开局在屏外），
+        并在两端贴渐隐提示还有条目（属性由主导航的横滑位置派生，样式只在窄屏生效）。 */}
     <script is:inline>
       if (!window.__cgChrome) {
         window.__cgChrome = true;
-        const apply = () => {
-          document.documentElement.toggleAttribute('data-scrolled', window.scrollY > 16);
-        };
-        window.addEventListener('scroll', apply, { passive: true });
-        document.addEventListener('astro:page-load', apply);
-        apply();
 
-        const revealCurrent = () => {
-          const link = document.querySelector('.menubar nav[aria-label="主导航"] a[aria-current="page"]');
-          // block: 'nearest' —— 只横向挪动滚动容器，不牵动页面纵向位置
-          if (link) link.scrollIntoView({ block: 'nearest', inline: 'center' });
+        const syncCurrent = () => {
+          const path = location.pathname;
+          for (const link of document.querySelectorAll('.menubar nav a[href]')) {
+            const href = link.getAttribute('href');
+            if (href === '/' ? path === '/' : path.startsWith(href)) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+          }
         };
-        document.addEventListener('astro:page-load', revealCurrent);
-        revealCurrent();
+
+        // 只挪菜单条自身，绝不用 scrollIntoView：软导航的 View Transition 期间根滚动区会临时
+        // 宽出一条滚动条沟（1425 → 1440），scrollIntoView 会顺手把整页横滚 15px，
+        // 页面在快照里左右抖两帧（2026-09-21 headless 实测）。手算偏移量只作用于 ul。
+        const revealCurrent = () => {
+          const strip = document.querySelector('.menubar nav[aria-label="主导航"] ul');
+          const link = strip?.querySelector('a[aria-current="page"]');
+          if (!strip || !link) return;
+          const stripBox = strip.getBoundingClientRect();
+          const linkBox = link.getBoundingClientRect();
+          const delta = (linkBox.left + linkBox.right) / 2 - (stripBox.left + stripBox.right) / 2;
+          const max = strip.scrollWidth - strip.clientWidth;
+          strip.scrollLeft = Math.max(0, Math.min(max, strip.scrollLeft + delta));
+        };
+
+        const markEdges = () => {
+          const nav = document.querySelector('.menubar nav[aria-label="主导航"]');
+          const strip = nav?.querySelector('ul');
+          if (!nav || !strip) return;
+          const max = strip.scrollWidth - strip.clientWidth;
+          nav.toggleAttribute('data-nav-start', strip.scrollLeft > 2);
+          nav.toggleAttribute('data-nav-end', max > 2 && strip.scrollLeft < max - 2);
+        };
+
+        const setupNav = () => {
+          const strip = document.querySelector('.menubar nav[aria-label="主导航"] ul');
+          // 软导航不重建菜单条后这里只有一个实例；__cgEdges 仍防同页重复绑定
+          if (strip && !strip.__cgEdges) {
+            strip.__cgEdges = true;
+            strip.addEventListener('scroll', markEdges, { passive: true });
+          }
+          syncCurrent();
+          revealCurrent();
+          markEdges();
+        };
+
+        window.addEventListener('resize', markEdges, { passive: true });
+        document.addEventListener('astro:page-load', setupNav);
+        setupNav();
       }
     </script>
 
@@ -505,11 +541,29 @@ const SHOW_SKIN_TOGGLE = false;
   <body>
     {/* 全站星尘画布：固定层压在内容之下（site.css .bg-motes，z-index -1） */}
     <canvas class="bg-motes" data-bg-motes aria-hidden="true"></canvas>
-    {/* 菜单条吸顶；站名横额与菜单同行，滚动后收起（2026-09-18 用户校正）。 */}
-    <header class="menubar">
+    {/* 菜单条吸顶；站名横额与票碗徽记同行常驻（2026-09-21 用户定）。
+        transition:persist —— 软导航不重建菜单条，否则品牌两张图随 <body> 一起重建，
+        重新解码期间会闪一下（2026-09-21 用户反馈「切菜单时 logo 与徽记闪一下」）。
+        页脚**不**persist：它带本页的数据核验时间（§5.9、数据契约 §3.3）。 */}
+    <header class="menubar" transition:persist>
       <div class="menubar__inner">
         <a class="topbar__logo" href="/" aria-label="赛博粮站 · 回首页">
-          <img src="/font-images/brand.png" width="753" height="184" alt="赛博粮站" />
+          <img
+            class="topbar__logo-word"
+            src="/font-images/brand.png"
+            width="753"
+            height="184"
+            alt="赛博粮站"
+            decoding="sync"
+          />
+          <img
+            class="topbar__logo-mark"
+            src="/icon-192.png"
+            width="192"
+            height="192"
+            alt=""
+            decoding="sync"
+          />
         </a>
         <Nav />
         {SHOW_SKIN_TOGGLE && <SkinToggle />}

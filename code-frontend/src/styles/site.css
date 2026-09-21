@@ -71,7 +71,8 @@ a:hover {
   top: 0;
   z-index: 60;
   background: var(--ink);
-  border-bottom: 1px solid var(--line-dim);
+  /* 下边线用内阴影画在 64px 之内（border 会多加 1px，条高就不是整数 64 了） */
+  box-shadow: inset 0 -1px 0 var(--line-dim);
 }
 
 /* 合成层 bug 防护：内容区与「页面级页脚」隔离成独立组合，滚动时不得越过 sticky 菜单条。
@@ -86,6 +87,8 @@ body > footer {
 .menubar__inner {
   max-width: var(--wrap);
   margin: 0 auto;
+  /* 菜单条定高：一行内容垂直居中（2026-09-21 用户定 64px） */
+  min-height: 64px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -93,25 +96,31 @@ body > footer {
   padding: .55rem 1.25rem;
 }
 
-/* 站名横额：与菜单同行；滚动后收窄淡出，不占吸顶条空间 */
+/* 站名横额 + 票碗徽记：常驻组合，**不随滚动显示隐藏**（2026-09-21 用户定）。
+   两者都参与排版，品牌槽宽度恒定，导航按钮横坐标在整条菜单条里只有一次成型的位置。 */
 .topbar__logo {
   display: inline-flex;
-  overflow: hidden;
+  align-items: center;
+  gap: .55rem;
+  flex: none;
   line-height: 0;
-  max-width: 9rem;
-  transition: max-width .22s ease, opacity .18s ease;
 }
 
-.topbar__logo img {
+.topbar__logo-word,
+.topbar__logo-mark {
+  display: block;
   flex: none;
   max-width: none;
-  height: 34px;
   filter: drop-shadow(0 0 10px rgba(232, 183, 58, .4));
 }
 
-html[data-scrolled] .topbar__logo {
-  max-width: 0;
-  opacity: 0;
+.topbar__logo-word {
+  height: 34px;
+}
+
+.topbar__logo-mark {
+  height: 44px;
+  margin-top: -10px;
 }
 
 /* 皮肤强度档控件（右上角，独立组件） */
@@ -160,11 +169,21 @@ html[data-scrolled] .topbar__logo {
   font-size: 12.5px;
   letter-spacing: .22em;
   color: var(--text);
+  /* 状态过渡：颜色 / 描边 / 底色 / 内辉光，约 140ms；不做位移与缩放
+     （盒阴影而非 filter——吸顶条下的悬停效果不用 filter，见 §10.3 实现纪律） */
+  transition: color .14s ease, border-color .14s ease, background-color .14s ease, box-shadow .14s ease;
 }
 
 .menubar nav a:hover {
   border-color: var(--gold);
   color: var(--gold);
+  box-shadow: 0 0 12px rgba(232, 183, 58, .18), inset 0 0 10px rgba(232, 183, 58, .1);
+}
+
+/* 按下：只压内辉光与底色，不加位移，避免菜单条抖动 */
+.menubar nav a:active {
+  background-color: rgba(232, 183, 58, .16);
+  box-shadow: inset 0 0 12px rgba(232, 183, 58, .3);
 }
 
 .menubar nav a[aria-current="page"] {
@@ -174,8 +193,15 @@ html[data-scrolled] .topbar__logo {
   box-shadow: 0 0 12px rgba(232, 183, 58, .22);
 }
 
+.menubar nav a[aria-current="page"]:active {
+  box-shadow: 0 0 12px rgba(232, 183, 58, .22), inset 0 0 12px rgba(232, 183, 58, .3);
+}
+
+/* 次级入口（关于）：靠右分组 + 一道更弱的竖分隔，明确它是辅助入口而非板块 */
 .menubar nav[aria-label="次级导航"] {
   margin-left: auto;
+  padding-left: .9rem;
+  border-left: 1px solid var(--line-dim);
 }
 
 .menubar nav[aria-label="次级导航"] a {
@@ -2510,7 +2536,7 @@ td:first-child {
   border-bottom: 0;
 }
 
-/* 日期栏兼作报头：竖排中文日期 + 本日条数（只读派生自当日条目数） */
+/* 日期栏：竖排中文日期，右侧一条竖红线；跨日再压一条横红线断开 */
 .dibao__date {
   display: flex;
   flex-direction: column;
@@ -2523,17 +2549,11 @@ td:first-child {
 .dibao__date-day {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 600;
   letter-spacing: .18em;
   color: #d9564a;
   text-shadow: 0 0 10px rgba(200, 52, 42, .35);
-}
-
-.dibao__date-count {
-  font-size: 10.5px;
-  letter-spacing: .04em;
-  white-space: nowrap;
-  color: rgba(217, 86, 74, .85);
 }
 
 .dibao__items {
@@ -2698,49 +2718,107 @@ td:first-child {
 }
 
 /* ===== 窄屏 ===== */
-@media (max-width: 560px) {
-  .topbar__logo img {
-    height: 28px;
-  }
 
-  /* 菜单条收紧为单行：主导航横向滚动，次级入口跟在后面同一行，不再各占一行 */
+/* 单行菜单条（≤960px）：一行装不下六项时不再折行——主导航横向滚动、次级入口跟在同行右侧，
+   菜单条在全部档位都保持 64px 定高（2026-09-21 用户定）。
+   可横滑提示：两侧铺墨色渐隐，露出「还有条目」；滚到尽头一侧即收。 */
+@media (max-width: 960px) {
   .menubar__inner {
     flex-wrap: nowrap;
-    align-items: center;
-    gap: .3rem .5rem;
-    padding: .4rem .7rem;
-  }
-
-  /* 单行后横额不再换行让位——不缩，否则被压窄裁字（收起靠 max-width 动画，不受影响） */
-  .topbar__logo {
-    flex: none;
   }
 
   .menubar nav[aria-label="主导航"] {
     flex: 1 1 auto;
     min-width: 0;
+    /* 边缘渐隐的定位参照 */
+    position: relative;
   }
 
   .menubar nav[aria-label="主导航"] ul {
     flex-wrap: nowrap;
-    gap: .35rem;
     overflow-x: auto;
     scrollbar-width: none;
+  }
+
+  /* 条目保持原宽（不压窄、不折字），装不下时由主导航横滑，而不是把菜单条撑高 */
+  .menubar nav[aria-label="主导航"] ul li {
+    flex: none;
+  }
+
+  .menubar nav a {
+    white-space: nowrap;
   }
 
   .menubar nav[aria-label="主导航"] ul::-webkit-scrollbar {
     display: none;
   }
 
+  .menubar nav[aria-label="主导航"]::before,
+  .menubar nav[aria-label="主导航"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1.5rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .16s ease;
+  }
+
+  .menubar nav[aria-label="主导航"]::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--ink), transparent);
+  }
+
+  .menubar nav[aria-label="主导航"]::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--ink), transparent);
+  }
+
+  .menubar nav[aria-label="主导航"][data-nav-start]::before,
+  .menubar nav[aria-label="主导航"][data-nav-end]::after {
+    opacity: 1;
+  }
+
+  .menubar nav[aria-label="次级导航"] {
+    flex: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar__logo-word {
+    height: 28px;
+  }
+
+  .topbar__logo-mark {
+    height: 40px;
+  }
+
+  /* 菜单条再收紧：内边距与条目间距缩小，横额不缩（否则被压窄裁字） */
+  .menubar__inner {
+    gap: .3rem .5rem;
+    padding: .4rem .7rem;
+  }
+
+  .topbar__logo {
+    flex: none;
+  }
+
+  .menubar nav[aria-label="主导航"] ul {
+    gap: .35rem;
+  }
+
   .menubar nav a {
     padding: .2rem .5rem;
     font-size: 12px;
     letter-spacing: .1em;
-    white-space: nowrap;
   }
 
+  /* 单行里没有分组空间：撤掉竖分隔与组间距，次级入口紧跟主导航右侧 */
   .menubar nav[aria-label="次级导航"] {
     margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
     flex: none;
   }
 

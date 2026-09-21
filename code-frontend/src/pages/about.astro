@@ -5,7 +5,7 @@ import { github, models, news, tickets, version } from '../lib/data.js';
 import { listedTickets } from '../lib/format.js';
 
 const batch = version().version;
-const enabledNewsSources = news().items.map((n) => n.source);
+const newsSources = [...new Set(news().items.map((n) => n.source))];
 const plans = models().plans;
 const vendors = [...new Set(plans.map((p) => p.vendor))];
 
@@ -58,10 +58,11 @@ const oldest = times.sort()[0] ?? null;
           </td>
         </tr>
         <tr>
-          <td>中文资讯</td>
+          <td>邸报（资讯）</td>
           <td>
-            一期延期到二期，/news 为施工占位页。
-            {enabledNewsSources.length > 0 && `管道仍在采集（本批 ${enabledNewsSources.length} 条，来源：${[...new Set(enabledNewsSources)].join('、')}），但前端不展示。`}
+            厂商官方一手渠道（国内＋海外）与 AIBase、量子位二手兜底；页面只展示当日精选（每天最多 6 条），
+            只保留标题、简介与来路，点击直达原文。本批已收录 {news().items.length} 条、来源 {newsSources.length} 个
+            （{newsSources.join('、')}）。
           </td>
         </tr>
       </tbody>
