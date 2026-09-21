@@ -82,12 +82,14 @@ const jsonLd = {
 <Base title={ticket.title} description={description} dataUpdatedAt={tickets().dataUpdatedAt}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <article class="ticket ticket--detail" data-expired={String(isExpired)}>
+  <p><a href="/tickets/">← 返回粮票</a></p>
+
+  <article class="ticket ticket--detail" data-tier={scoreTier(ticket.score)} data-expired={String(isExpired)}>
     <span class="ticket__serial">{serial(ticket)}</span>
 
     <header class="ticket__head">
       <h1 class="ticket__title">{ticket.title}</h1>
-      <p class="ticket__vendor">{ticket.vendor}</p>
+      <p class="ticket__vendor">{ticket.vendor} · 推荐等级 {scoreTier(ticket.score)}等</p>
     </header>
 
     <dl class="ticket__fields">

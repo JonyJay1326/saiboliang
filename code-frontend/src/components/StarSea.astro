@@ -1,0 +1,11 @@
+---
+// 页头带 + 星海装饰层（frontend-spec.md §4.4 / §11.1，2026-09-20 用户拍板采用「甲」形态：极 5000 + 联动开）。
+// canvas 纯装饰：aria-hidden、零数据（星点不映射任何字段）；文字由 slot 传入、压在上层。
+// 引擎在 Base.astro 的星海加载器里惰性取件（独立 chunk，不计入首屏 JS，§10.2）。
+---
+<div class="page-head" data-star-sea>
+  <canvas class="page-head__canvas" data-star-sea-canvas aria-hidden="true" width="300" height="300"></canvas>
+  <div class="page-head__layer">
+    <slot />
+  </div>
+</div>

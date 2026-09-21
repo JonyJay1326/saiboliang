@@ -4,6 +4,7 @@
 // 周/月切换为轻量显隐（原生脚本，见 §7.1 / §10.2），两榜均在构建期渲染。默认周榜。
 import Base from '../layouts/Base.astro';
 import PageIntro from '../components/PageIntro.astro';
+import StarSea from '../components/StarSea.astro';
 import GithubLedgerRow from '../components/GithubLedgerRow.astro';
 import ToggleBar from '../components/ToggleBar.astro';
 import { github } from '../lib/data.js';
@@ -21,18 +22,20 @@ const boards = [
   description="GitHub Trending AI 热门精选，按区间新增 star 降序。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <PageIntro
-    eyebrow="STAR DECK"
-    name="观星台"
-    image="/font-images/sec-guanxing.png"
-    width={228}
-    height={80}
-    lede="GitHub AI 热门项目榜：夜观星象，看本周、本月哪几颗新星正在升起，按区间新增 star 排位。"
-  >
-    <p class="page-intro__note">
-      GitHub Trending · AI 热门精选。区间由 GitHub 定义，不标本站精确 7/30 天净增。
-    </p>
-  </PageIntro>
+  <StarSea>
+    <PageIntro
+      eyebrow="STAR DECK"
+      name="观星台"
+      image="/font-images/sec-guanxing.png"
+      width={228}
+      height={80}
+      lede="GitHub AI 热门项目榜：夜观星象，看本周、本月哪几颗新星正在升起，按区间新增 star 排位。"
+    >
+      <p class="page-intro__note">
+        GitHub Trending · AI 热门精选。区间由 GitHub 定义，不标本站精确 7/30 天净增。
+      </p>
+    </PageIntro>
+  </StarSea>
 
   <div data-toggle data-toggle-current={DEFAULT}>
     <ToggleBar label="榜单周期" options={boards} current={DEFAULT} />

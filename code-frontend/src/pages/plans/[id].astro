@@ -87,10 +87,11 @@ const jsonLd = {
 
       <p class="plan-detail__meta">
         <span>{plan.vendor}</span>
-        <span>起步 {startingPriceLabel(plan)}</span>
         {plan.quotaBasis && <span>{plan.quotaBasis}</span>}
         <span>更新 {plan.updatedAt}</span>
       </p>
+
+      <p class="plan-detail__price"><span>常规付费起步价</span><strong>{startingPriceLabel(plan)}</strong></p>
 
       {plan.tagline && <p class="plan-detail__tagline">{plan.tagline}</p>}
 
@@ -106,9 +107,9 @@ const jsonLd = {
 
       {
         plan.highlights.length > 0 && (
-          <ul class="plan-card__chips">
+          <ul class="plan-detail__highlights">
             {plan.highlights.map((h) => (
-              <li class="badge">{h}</li>
+              <li>{h}</li>
             ))}
           </ul>
         )
@@ -116,11 +117,12 @@ const jsonLd = {
     </header>
 
     <section aria-labelledby="plan-tiers">
-      <h2 id="plan-tiers">档位</h2>
+      <h2 id="plan-tiers">档位与额度</h2>
       {sharedConditions && <p class="plan-tier__conditions">{sharedConditions}</p>}
+      <div class="plan-tiers-grid">
       {
         plan.tiers.map((tier) => (
-          <section class="plan-tier">
+          <section class="plan-tier" data-offer={tier.offerType}>
             <header class="plan-tier__head">
               <h3>
                 {tier.name}
@@ -142,6 +144,7 @@ const jsonLd = {
           </section>
         ))
       }
+      </div>
     </section>
 
     <section aria-labelledby="plan-tools">

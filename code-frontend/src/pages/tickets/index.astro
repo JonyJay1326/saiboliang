@@ -3,31 +3,20 @@
 //
 // 上架规则（2026-09-18 用户定）：推荐分 <70 与已失效票全站不展示；其余全量渲染（契约 §4.2）。
 // 卡片在本页构建期渲染成静态 HTML（无 JS 可读、SEO 可抓）；
-// 筛选岛只接收「筛选与排序所需的 6 个字段」作为索引，不接收完整票证对象——
-// 避免卡片数据在 HTML 里重复两份（实测 content 字段就占序列化的 52%）。
+// 2026-09-21 用户确认移除筛选区域，按默认顺序直接展示全部上架票。
 import Base from '../../layouts/Base.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import TicketCard from '../../components/TicketCard.vue';
-import TicketsExplorer from '../../components/TicketsExplorer.vue';
 import { tickets } from '../../lib/data.js';
 import { listedTickets, ticketDefaultOrder } from '../../lib/format.js';
 
 const file = tickets();
 const list = listedTickets([...file.tickets]).sort(ticketDefaultOrder);
 
-const index = list.map((t) => ({
-  id: t.id,
-  category: t.category,
-  region: t.tags.region,
-  duration: t.tags.duration,
-  publishedAt: t.publishedAt,
-  score: t.score,
-  expired: t.expired,
-}));
 ---
 <Base
   title="粮票"
-  description="免费 AI 额度与试用活动列表，可筛选与排序。"
+  description="免费 AI 额度与试用活动列表，按推荐等级与收录时间展示全部上架粮票。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
   <PageIntro
@@ -41,7 +30,7 @@ const index = list.map((t) => ({
     <p class="page-intro__note">共 {list.length} 张在架票（推荐分 ≥70）。默认排序：推荐分降序 → 收录时间降序。</p>
   </PageIntro>
 
-  <TicketsExplorer client:load index={index} />
+  {list.length === 0 && <p>暂时空仓，稍后再来看看。</p>}
 
   <ul class="cards">
     {
