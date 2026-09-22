@@ -13,18 +13,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "blader/humanizer",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Agent skill that removes signs of AI-generated writing from text",
-      "sourceUrl": "https://github.com/blader/humanizer"
-    },
-    "id": "7ed17ff0b2220686a7533e70394a1ad5a2fbcde911d5e189e46965df542ccf49",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "petergyang/no-ai-slop",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -104,18 +92,6 @@
       "sourceUrl": "https://github.com/debpalash/VoiceStudio"
     },
     "id": "3f4dba959b0f55b4bfdc714dac6879671768b0460f83f09450f24786cded2e36",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "apache/maka",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Apache Maka (Incubating) is a high-performance agent workspace that keeps a complete record of everything it did.",
-      "sourceUrl": "https://github.com/apache/maka"
-    },
-    "id": "b319f7b159cf324b9b7fcdd94654f90e14453e8b3f4247a6ae0699bfcf541860",
     "status": "pending",
     "createdAt": "2026-09-17T11:02:17Z"
   },
@@ -372,18 +348,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "openai/plugins",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenAI Plugins",
-      "sourceUrl": "https://github.com/openai/plugins"
-    },
-    "id": "2e53828fcb2898d142667d3ab8654c2ffb2568234e1a1a70dd872da7865ff106",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "reconurge/flowsint",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -456,18 +420,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "navidrome/navidrome",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🎧 Your Personal Streaming Service",
-      "sourceUrl": "https://github.com/navidrome/navidrome"
-    },
-    "id": "83b06a2cf3b968b804edc6fb7c826590f379009d99a23cd00eaee654285ed8f7",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "kubernetes/kubernetes",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -475,18 +427,6 @@
       "sourceUrl": "https://github.com/kubernetes/kubernetes"
     },
     "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "e2b-dev/runtime",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The runtime behind every E2B stack: Cloud, Enterprise, and your own machine.",
-      "sourceUrl": "https://github.com/e2b-dev/runtime"
-    },
-    "id": "4928b32e1a2436154af88ec9050b20333dd7e75c00346dc9ab0736a68e7a3545",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -708,18 +648,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "jakevdp/PythonDataScienceHandbook",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Python Data Science Handbook: full text in Jupyter Notebooks",
-      "sourceUrl": "https://github.com/jakevdp/PythonDataScienceHandbook"
-    },
-    "id": "80831db4a6f2493cd2a788182c1cdf43bb5530c73e8aecc7b73ea65b7cca4f71",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "karpathy/nn-zero-to-hero",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -744,18 +672,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "duolahypercho/codex-router",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "External-model router for Codex with guided Kimi OAuth/API, DeepSeek, safe migration, and rollback.",
-      "sourceUrl": "https://github.com/duolahypercho/codex-router"
-    },
-    "id": "1812ad4c237dc3c99d3f0884ef0c282978681530277bb0139aab0af91b9852d4",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "JoeanAmier/TikTokDownloader",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -763,18 +679,6 @@
       "sourceUrl": "https://github.com/JoeanAmier/TikTokDownloader"
     },
     "id": "5591a59708952b7ee05e5cea8b98401dd178bc79d4126f7f82e1e6cee29900e2",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "xuanyustudio/LocalMiniDrama",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🎬 seedance2接入 开源本地 AI 短剧 & 漫剧生成工具 —— 从故事到成片一站式完成，数据不出本机，短剧工作流管理平台，高灵活度，AI真人剧，AI漫剧本地搞定。 Open-source local AI short drama maker: story → storyboard → video, fully offline, your data stays yours. 纳米流水线",
-      "sourceUrl": "https://github.com/xuanyustudio/LocalMiniDrama"
-    },
-    "id": "2a9b694aaff7b4cd48d3c22ed67066cf8b81a157ce2a6222e09f0c45e73d3e8d",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -792,18 +696,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "kunchenguid/lavish-axi",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "HTML is the new markdown. Lavish is the new editor for your HTML artifacts.",
-      "sourceUrl": "https://github.com/kunchenguid/lavish-axi"
-    },
-    "id": "5aece029a545caebabc92b4b3fe24901cb7905ad435475bdc0336eaafcfe000f",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "WorldFlowAI/everything-claude-code",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -811,18 +703,6 @@
       "sourceUrl": "https://github.com/WorldFlowAI/everything-claude-code"
     },
     "id": "6aacf9900e6957550197094a0246b4c4d7eac78f4138facdbdca83bdc1b1d050",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "react/react",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The library for web and native user interfaces.",
-      "sourceUrl": "https://github.com/react/react"
-    },
-    "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -888,30 +768,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "RayrenSX/iPhoneMirror",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Local Windows iPhone/iPad mirroring over USB and AirPlay with D3D11 preview, multi-device sessions, OBS output, and a standalone driver manager.",
-      "sourceUrl": "https://github.com/RayrenSX/iPhoneMirror"
-    },
-    "id": "de06690f00c6b34b7e290de95a74021c1ea8653f2c442dec72babc62d159dcfb",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pacifio/atlas",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
-      "sourceUrl": "https://github.com/pacifio/atlas"
-    },
-    "id": "c8a50562e93ce3a6bfe2a0c29eeceef0525abd1ed6e0c564de7b4b427b272db5",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "rustfs/rustfs",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -931,18 +787,6 @@
       "sourceUrl": "https://github.com/ankitects/anki"
     },
     "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "raine/workmux",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "git worktrees + tmux windows for zero-friction parallel dev",
-      "sourceUrl": "https://github.com/raine/workmux"
-    },
-    "id": "380e07425fb610ce14cc23bc5ea3bb0c71084441904e53c9ff5ef58c272dd791",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -1003,30 +847,6 @@
       "sourceUrl": "https://github.com/sepinf-inc/IPED"
     },
     "id": "cecae9ff652035e98ab004d6a6e502b36e4af71fa8b795e3db6f7b73c5bb547c",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "yuliskov/SmartTube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Browse media content with your own rules on Android TV",
-      "sourceUrl": "https://github.com/yuliskov/SmartTube"
-    },
-    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "fish2018/webhtv",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "WebHomeTV 基于FongMi二次开发，增强了 WebHome 自定义首页、App Native SDK、网盘链接检测 和 Nostr推荐首页。 这个项目的核心目标是让 CSP 站点首页可以变成一个真正可开发的网页应用：开发者可以用 HTML/CSS/JavaScript 定制首页，再通过 App 暴露的 Native 能力完成搜索、播放、跨域请求、资源代理、最近观看、网盘检测和状态同步。",
-      "sourceUrl": "https://github.com/fish2018/webhtv"
-    },
-    "id": "7a2476dffbe6dfbc269f42beb3e6a71859832251022fcd94100c83b2a5cbc268",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -1344,18 +1164,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "yuhonas/free-exercise-db",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
-      "sourceUrl": "https://github.com/yuhonas/free-exercise-db"
-    },
-    "id": "6e037d384e7c497e259b8b883032f755a28048ff31ac0307fe48e98b8b5c39ad",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "PanJiaChen/vue-element-admin",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1411,18 +1219,6 @@
       "sourceUrl": "https://github.com/vbenjs/vue-vben-admin"
     },
     "id": "b0f9adca5e933feec8843aa323db7632d912bec9f2515a335618787a1eda8498",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "VueTorrent/VueTorrent",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The sleekest looking WEBUI for qBittorrent made with Vuejs!",
-      "sourceUrl": "https://github.com/VueTorrent/VueTorrent"
-    },
-    "id": "dfadd939d07d2f4ee9f91dc261e463303d3d893fcd57238faac828a5d0e8f047",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -1555,18 +1351,6 @@
       "sourceUrl": "https://github.com/linshenkx/prompt-optimizer"
     },
     "id": "b4f92063df18f0251153b5022dc482de82860e037d7d4494381c0cb01947c386",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "maotoumao/MusicFree",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "插件化、定制化、无广告的免费音乐播放器",
-      "sourceUrl": "https://github.com/maotoumao/MusicFree"
-    },
-    "id": "22cf394ddba38bbf277ca3f399ce2baf4e191972ec5e99aa38d938aaadd8b26f",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -1992,18 +1776,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "PowerShell/PowerShell",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PowerShell for every system!",
-      "sourceUrl": "https://github.com/PowerShell/PowerShell"
-    },
-    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "TeamWheelWizard/WheelWizard",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2083,18 +1855,6 @@
       "sourceUrl": "https://github.com/aeron-io/aeron"
     },
     "id": "cd8efdb80dc6cd8882759b27ba2382b7f16db8f0e045ba91eecb451060a31228",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "crimera/piko",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "morphe patches for twitter and instagram",
-      "sourceUrl": "https://github.com/crimera/piko"
-    },
-    "id": "a4a20e9d6225b8836459d8cfe93d9aa35931452f4918c2ea6ebd366f90a0706e",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -2208,18 +1968,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "SuiteCRM/SuiteCRM",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "SuiteCRM - Open source CRM for the world",
-      "sourceUrl": "https://github.com/SuiteCRM/SuiteCRM"
-    },
-    "id": "07b16b4b0f6b4ec62cf9d5338f4183baae495015a0b3a9f922dcbdc2cc03fd35",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "zyronon/TypeWords",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2292,18 +2040,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "icoretech/codex-pooler",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The full featured self-hosted Codex gateway, for teams, agents and you",
-      "sourceUrl": "https://github.com/icoretech/codex-pooler"
-    },
-    "id": "f6e745911ead0cc4ed46d52057964bf69c2cc135df9eb14638753e69e5ee15c2",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ash-project/ash",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2335,30 +2071,6 @@
       "sourceUrl": "https://github.com/roboflow/supervision"
     },
     "id": "090a4dc8ef489355b6bf969f03459af44f5b92dd347a7489e24c2ad00d19a5c8",
-    "status": "pending",
-    "createdAt": "2026-09-20T13:56:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pytorch/pytorch",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-      "sourceUrl": "https://github.com/pytorch/pytorch"
-    },
-    "id": "641dedeef27bb4887725d88d17dec0b15f18ba9332d60e88534a85b04644084b",
-    "status": "pending",
-    "createdAt": "2026-09-20T13:56:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "firebase/firebase-ios-sdk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Firebase SDK for Apple App Development",
-      "sourceUrl": "https://github.com/firebase/firebase-ios-sdk"
-    },
-    "id": "8d9b9f0ffaeae5e079181f347985ec750faf70657f109eb298ae89ff526d2934",
     "status": "pending",
     "createdAt": "2026-09-20T13:56:24Z"
   },
@@ -2455,18 +2167,6 @@
       "sourceUrl": "https://github.com/php/pie"
     },
     "id": "6e4b7439a72fe7fc5668cfd29d23dfadd5d614d7623d5bf26325805e5526e6af",
-    "status": "pending",
-    "createdAt": "2026-09-20T13:56:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Tymeslot/tymeslot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open-source meeting scheduling platform built with Elixir/Phoenix LiveView. Self-host or use the managed cloud at tymeslot.app.",
-      "sourceUrl": "https://github.com/Tymeslot/tymeslot"
-    },
-    "id": "d36aa1ff753d0c9a7bd0d9d6a78266a4cba561c050e934ee60943f052ca0272f",
     "status": "pending",
     "createdAt": "2026-09-20T13:56:24Z"
   },
@@ -2575,18 +2275,6 @@
       "sourceUrl": "https://github.com/microsoft/calculator"
     },
     "id": "24ce37be0596d007f77360ca5d9fd73391535977750e1b472fda80b3c563fdf8",
-    "status": "pending",
-    "createdAt": "2026-09-20T13:56:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "languagetool-org/languagetool",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Style and Grammar Checker for 25+ Languages",
-      "sourceUrl": "https://github.com/languagetool-org/languagetool"
-    },
-    "id": "ca6879a3ae9d5f3a8912a08a7221907f600573a4a89c5f2dafe4fb711903a2d5",
     "status": "pending",
     "createdAt": "2026-09-20T13:56:24Z"
   },
@@ -2746,30 +2434,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "mamedev/mame",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "MAME",
-      "sourceUrl": "https://github.com/mamedev/mame"
-    },
-    "id": "32ce67ad34e83e3a6158f43bea38b796552a1653ca1995e9de7a3f8721a2e9e3",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google/perfetto",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Production-grade client-side tracing, profiling, and analysis for complex software systems.",
-      "sourceUrl": "https://github.com/google/perfetto"
-    },
-    "id": "ae9c667cedf3e8e4cd21f2895e017ca5c3bd6b9b53f6f9ea6afecb525a03db14",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "openai/codex-plugin-cc",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2806,18 +2470,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "git-ecosystem/git-credential-manager",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services.",
-      "sourceUrl": "https://github.com/git-ecosystem/git-credential-manager"
-    },
-    "id": "42174d2c0768deccb759985bb6c852314ca5ff7610b1254da7eec5377953bb08",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "bevyengine/bevy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2825,54 +2477,6 @@
       "sourceUrl": "https://github.com/bevyengine/bevy"
     },
     "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "arcboxlabs/arcbox",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run AI agents on real and isolated machines — own kernel, filesystem, and network — with <100ms boot. Local first, OCI compatible, pure Rust.",
-      "sourceUrl": "https://github.com/arcboxlabs/arcbox"
-    },
-    "id": "14e9b49b2cdfcb3d5d208a390eee1b58f2113bc311405f0c0fe72df71c11d1d8",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "logisim-evolution/logisim-evolution",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Digital logic design tool and simulator",
-      "sourceUrl": "https://github.com/logisim-evolution/logisim-evolution"
-    },
-    "id": "3f8021120e0925e490f0076b93907d4c7de5a9cdbe3fa77d55b8b3cce767114d",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hibernate/hibernate-orm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Idiomatic persistence for Java and relational databases",
-      "sourceUrl": "https://github.com/hibernate/hibernate-orm"
-    },
-    "id": "23a1d45048f777ad874b2158cdbc061c21334d2c3508eb9e359ccebece894f93",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "MCRcortex/voxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An LoD rendering mod for minecraft",
-      "sourceUrl": "https://github.com/MCRcortex/voxy"
-    },
-    "id": "163ede3d3f8f7661551faf50dadf408d6e777bd06cd4e23072c588344c722609",
     "status": "pending",
     "createdAt": "2026-09-21T17:06:12Z"
   },
@@ -2914,18 +2518,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "osTicket/osTicket",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The osTicket open source ticketing system official project repository, for versions 1.8 and later",
-      "sourceUrl": "https://github.com/osTicket/osTicket"
-    },
-    "id": "c47aef7347a769eeb2b9e18cea28a21c34ee7599f6b789096a632e293fa87929",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "geekgeekrun/geekgeekrun",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2945,42 +2537,6 @@
       "sourceUrl": "https://github.com/FlashML-org/FreeToken"
     },
     "id": "53202c323e7c6a0e43f34afe8816ed8bbc2d8f828f7b4d2a1ff55cc533f823b9",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "slackhq/nebula",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A scalable overlay networking tool with a focus on performance, simplicity and security",
-      "sourceUrl": "https://github.com/slackhq/nebula"
-    },
-    "id": "becdf176ab148222409fdeb608db3871241183b5cbff3ce76989bbbeafbb7ca8",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ikawrakow/ik_llama.cpp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "llama.cpp fork with additional SOTA quants and improved performance",
-      "sourceUrl": "https://github.com/ikawrakow/ik_llama.cpp"
-    },
-    "id": "36e5fbd6184ccd205889d472a9027746c51436fbcdbd1372d7e6ae3ea5184cee",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google/filament",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Filament is a real-time physically based rendering engine for Android, iOS, Windows, Linux, macOS, and WebGL2",
-      "sourceUrl": "https://github.com/google/filament"
-    },
-    "id": "4b4e0c73716b509029184201219e72c05d47b851fcf2e68be5e412dff25187ce",
     "status": "pending",
     "createdAt": "2026-09-21T17:06:12Z"
   },
@@ -3034,18 +2590,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "apache/iggy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Apache Iggy: Hyper-Efficient Message Streaming at Laser Speed",
-      "sourceUrl": "https://github.com/apache/iggy"
-    },
-    "id": "b2351ac363e40e0d17f0d5dfd6088409ad855646064e1d65dfadb78d82a7f9e2",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "oracle/graal",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -3094,18 +2638,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "frappe/crm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully featured, open source CRM",
-      "sourceUrl": "https://github.com/frappe/crm"
-    },
-    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "operately/operately",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -3113,30 +2645,6 @@
       "sourceUrl": "https://github.com/operately/operately"
     },
     "id": "4194ddc61808c2e15688cf1ea40a8a21cd6420a63e51e35d65792d1b345ba6d5",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "elixir-ecto/ecto",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A toolkit for data mapping and language integrated query.",
-      "sourceUrl": "https://github.com/elixir-ecto/ecto"
-    },
-    "id": "ce4734d522f3ae486ea48b69b3affc3acda49f5ddba7e0d12b2e9f980ef7457c",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "beyond-all-reason/teiserver",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Middleware server for online gaming",
-      "sourceUrl": "https://github.com/beyond-all-reason/teiserver"
-    },
-    "id": "46fcd961cc175721cefbb47d4bc5f0d6679e1ba7cd2e45a8fab7754f77ed0e7b",
     "status": "pending",
     "createdAt": "2026-09-21T17:06:12Z"
   },
@@ -3152,14 +2660,483 @@
     "createdAt": "2026-09-22T08:37:23Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
+    "kind": "github-classification",
+    "objectId": "sergebulaev/linkedin-skills",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
+      "description": "Claude skills for LinkedIn. 11 Claude Code and Codex skills that write human-sounding LinkedIn posts, craft comments that get noticed, analyze your feed, and build a publishing cadence, all from your terminal. Content engineering by Creative Content Crafts. MIT.",
+      "sourceUrl": "https://github.com/sergebulaev/linkedin-skills"
     },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "id": "a36c1489add4e10ddb8e58846a98fc2272290ee7963a11dae6df2876b5e62f94",
     "status": "pending",
-    "createdAt": "2026-09-22T08:37:23Z"
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ahmedkhaleel2004/gitdiagram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free, simple, fast interactive diagrams for any GitHub repository",
+      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
+    },
+    "id": "ec04343ef90aa61173013e5aea9df24941613657c2bb38cdd4e46a74294fbd4d",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "n8n-io/n8n",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "sourceUrl": "https://github.com/n8n-io/n8n"
+    },
+    "id": "ba4f255c7568f09c693bb8d9ef655527dd4c4c4b149866e99e73f82739e9fda9",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dream-num/univer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "sourceUrl": "https://github.com/dream-num/univer"
+    },
+    "id": "5faab1d040d45c10ed0a2d3e0999e2556cd7541c58cf0ae33311c0ec34ba9e1a",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vectorize-io/hindsight",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Hindsight: Agent Memory That Learns",
+      "sourceUrl": "https://github.com/vectorize-io/hindsight"
+    },
+    "id": "8b843c7c27471fea702d37d63f13c2acbe10e3d91752ecd3fa84e406f6a71cee",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MG1937/ASC",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+      "sourceUrl": "https://github.com/MG1937/ASC"
+    },
+    "id": "59f7e1867dd7b9b2d5d06300e3b149bebc961732520d6a8d800052aa71fd540f",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "agent-substrate/substrate",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Agent Substrate: the core system",
+      "sourceUrl": "https://github.com/agent-substrate/substrate"
+    },
+    "id": "3d1e8126636a1b3b3ed066e60654b7ed283f0f4d19ce1d32143c956d83a2ad8b",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "caddyserver/caddy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "sourceUrl": "https://github.com/caddyserver/caddy"
+    },
+    "id": "ff301507dc9946038e3a9d0fc71900a04b6011bbc1a4abb3bd8ff61064c8cc29",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "guohuiyuan/go-music-dl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
+      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
+    },
+    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Codensity30/Strivers-A2Z-DSA-Sheet",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Contains everything related to Stiver's A2Z sheet along with question, approach and code.",
+      "sourceUrl": "https://github.com/Codensity30/Strivers-A2Z-DSA-Sheet"
+    },
+    "id": "01ccf3a5e91c45f93062340f05898cec9f08b9ef2cd4f00af0159cc36c495ecb",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jtenniswood/espcontrol",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Esphome based smart home control panel",
+      "sourceUrl": "https://github.com/jtenniswood/espcontrol"
+    },
+    "id": "8f81d16d75c57ed5758cb503554401afbba8dc4e4517644406c106f01a0dfec4",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ocornut/imgui",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+      "sourceUrl": "https://github.com/ocornut/imgui"
+    },
+    "id": "bf67c9b6dd402f4dd5e36be900acb4e13f6fd3b99300c8f679b76f1519cb91a6",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/OmniParser",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A simple screen parsing tool towards pure vision based GUI agent",
+      "sourceUrl": "https://github.com/microsoft/OmniParser"
+    },
+    "id": "93c4df6875270cbd3a5c69cdfcb7e6a8ebc9c161be79167840292daa668a4d6f",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "GoogleCloudPlatform/generative-ai",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini Enterprise Agent Platform",
+      "sourceUrl": "https://github.com/GoogleCloudPlatform/generative-ai"
+    },
+    "id": "e01ee220b53f77b75270ad2498603354ea7964e506b55e1d7cf443ceb518892a",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "builtbybel/Flyoobe",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fly through your Windows 11 setup 🐝",
+      "sourceUrl": "https://github.com/builtbybel/Flyoobe"
+    },
+    "id": "cc01d19a638b43126fa338678f7f321c7149206de7a56b32b0334135f0a181b4",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "NickvisionApps/Parabolic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Download web video and audio",
+      "sourceUrl": "https://github.com/NickvisionApps/Parabolic"
+    },
+    "id": "6eaef829132b14d61aa0acb07d86971c8dcab874bfd9ea1ee5911e21d038d6b4",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SubtitleEdit/subtitleedit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "the subtitle editor :)",
+      "sourceUrl": "https://github.com/SubtitleEdit/subtitleedit"
+    },
+    "id": "878d8d5606ba4103740e3a799e1a7e1f8b49a2751d8f56a39d6176b2a5fab0a3",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dotnet/roslyn",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Roslyn .NET compiler provides C# and Visual Basic languages with rich code analysis APIs.",
+      "sourceUrl": "https://github.com/dotnet/roslyn"
+    },
+    "id": "9592f52b6a95e9bc190df8d229b6596c4df513de9ed5f3571143e683801285a0",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "umlx5h/LLPlayer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The media player for language learning, with dual subtitles, AI-generated subtitles, real-time translation, and more!",
+      "sourceUrl": "https://github.com/umlx5h/LLPlayer"
+    },
+    "id": "b2df83444499a5627b3f56ebb444120e877a509fed4c372a9fd54680eb7bb822",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Nasiko-Labs/nasiko",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Developer Control Plane for your AI Agents",
+      "sourceUrl": "https://github.com/Nasiko-Labs/nasiko"
+    },
+    "id": "657b592806de353174d26525f3df76e7e6f08c6d11ecf51c55be73058fce42cb",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "GCWing/OpenBitFun",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
+      "sourceUrl": "https://github.com/GCWing/OpenBitFun"
+    },
+    "id": "139af102b622448f180fb2484749b451b6a3b24d54787bb1bd9e1d33a7e21bf4",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rust-lang/rust",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "sourceUrl": "https://github.com/rust-lang/rust"
+    },
+    "id": "1a855e1f24fca2414d72b77b48df790bfdf98ecef7ca8e0a2067f53bf4faf1cd",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dataease/dataease",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🔥 人人可用的开源 BI 工具，数据可视化神器。An open-source BI tool alternative to Tableau.",
+      "sourceUrl": "https://github.com/dataease/dataease"
+    },
+    "id": "5052978edd9b741e6cc1b90b42fc79ee476ed04f4a3e0ef0600b4f065451e2df",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "agentscope-ai/agentscope-java",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build distributed, production-grade, long-running agents.",
+      "sourceUrl": "https://github.com/agentscope-ai/agentscope-java"
+    },
+    "id": "f927f50cff729cebfda8cee989b23638a9d777b8baace9aed6d131eb117bda32",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "danog/MadelineProto",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Async PHP client API for the telegram MTProto protocol",
+      "sourceUrl": "https://github.com/danog/MadelineProto"
+    },
+    "id": "9f1f2d9f28ccc2074b66491a30bab27da5334e2a016664a761ce6c6ccda5cf2d",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "easychen/opc-methodology",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群。",
+      "sourceUrl": "https://github.com/easychen/opc-methodology"
+    },
+    "id": "8f4399f3c3aaabb26d8e994475a96cd89c1db9e340d400477c00767cac58dfab",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "primefaces/primevue",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Next Generation Vue UI Component Library",
+      "sourceUrl": "https://github.com/primefaces/primevue"
+    },
+    "id": "33bb9f0f0f686e716da69064262306b66149c2e120c0a7c07064c5c870a11b3e",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "solidjs/solid",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "sourceUrl": "https://github.com/solidjs/solid"
+    },
+    "id": "a0d99660d3189716d8f9f9039060c05b2f116f5273b030536fc3379fecad97bf",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/agent-lightning",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The absolute trainer to light up AI agents.",
+      "sourceUrl": "https://github.com/microsoft/agent-lightning"
+    },
+    "id": "2b19bb6bd12b3b5459c57fdb1416f5c77908d07b7634d72341179d6a076daf0c",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "youssofal/MTPLX",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The fastest way to run Qwen 3.8 Flash Next and Qwen 3.8 27B on a Mac: 125 tok/s in OpenCode on an M5 Max. Native MTP speculative decoding on Apple Silicon, exact at any temperature. OpenAI and Anthropic compatible local server.",
+      "sourceUrl": "https://github.com/youssofal/MTPLX"
+    },
+    "id": "ee538ed4a93b5b1f60a18c81181d4ef80d5376cc9c938c6b05f3acd3691d412b",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "leejet/stable-diffusion.cpp",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++",
+      "sourceUrl": "https://github.com/leejet/stable-diffusion.cpp"
+    },
+    "id": "0cdaf4fa61a213576d4373f7c153853c815b39f45bb9281f4e8684a6cac96404",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "udlbook/udlbook",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Understanding Deep Learning - Simon J.D. Prince",
+      "sourceUrl": "https://github.com/udlbook/udlbook"
+    },
+    "id": "ab412d96137400e02f08166da66e10d2af82859ab28b5bcdbe57dcb034007739",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hellzerg/optimizer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The finest Windows Optimizer",
+      "sourceUrl": "https://github.com/hellzerg/optimizer"
+    },
+    "id": "19d5b125d44b1d431ab37519ee352636b46a59778ad61bc0afe0a80b459f0572",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "TechnitiumSoftware/DnsServer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Technitium DNS Server",
+      "sourceUrl": "https://github.com/TechnitiumSoftware/DnsServer"
+    },
+    "id": "a3160cc2b765c549ca4f5bbb37ef42d1c95fdfdc68a2e2113ea3227713e70fec",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "janhq/jan",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer.",
+      "sourceUrl": "https://github.com/janhq/jan"
+    },
+    "id": "5ab281a9abdcb5ab1fa378bdeb18738625feb037765cae32569dbebfc273205e",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Keeperorowner/NagramXF",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A fork of NagramX with additional features.",
+      "sourceUrl": "https://github.com/Keeperorowner/NagramXF"
+    },
+    "id": "a54971f94cacfcdcd1fbf08bddfa26bd2133312a6e9a78497ea129f88df5f116",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FIRST-Tech-Challenge/FtcRobotController",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "FTC Android Studio Workspace for robot programming in Android Studio",
+      "sourceUrl": "https://github.com/FIRST-Tech-Challenge/FtcRobotController"
+    },
+    "id": "69016dce13672cbb597e914eb17097db5269dc9d820be9e98abb4eb527f55024",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "thingsboard/thingsboard",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open-source IoT Platform - Device management, data collection, processing and visualization.",
+      "sourceUrl": "https://github.com/thingsboard/thingsboard"
+    },
+    "id": "2b337523f8a90c2c9f96a9a8ac82160b0a7dac65548d7aef9a2d5b1c38cbe792",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Automattic/jetpack",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Security, performance, marketing, and design tools — Jetpack is made by WordPress experts to make WP sites safer and faster, and help you grow your traffic.",
+      "sourceUrl": "https://github.com/Automattic/jetpack"
+    },
+    "id": "c059a20859edf63ef6fc042c40c30d22093109b084e3749cf9c5720c32d26fd2",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algora-io/algora",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Hire the top 1% OSS engineers",
+      "sourceUrl": "https://github.com/algora-io/algora"
+    },
+    "id": "baa8312a4a4e611753d40beeaaa2169f4a9f9b6b5fe1e15b57221873206a8104",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
   }
 ]
