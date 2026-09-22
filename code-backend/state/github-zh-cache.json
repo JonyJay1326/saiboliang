@@ -84,11 +84,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-21T17:06:12Z"
   },
-  "agentjido/req_llm": {
-    "text": "基于 Req 和 Finch 构建的可组合 Elixir LLM 交互库",
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
   "magnitudedev/magnitude": {
     "text": "面向消费级硬件优化的开源推理引擎。分析你的机器，推荐最适合的模型，然后下载、调优并运行。支持 Apple Silicon、NVIDIA、AMD 或仅 CPU。",
     "source": "deepseek-flash",

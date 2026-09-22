@@ -2626,18 +2626,6 @@
     "createdAt": "2026-09-20T14:25:08Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "zeronsh/zeron",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A native control plane for Claude Code, Codex, Cursor, Devin and other coding agents.",
-      "sourceUrl": "https://github.com/zeronsh/zeron"
-    },
-    "id": "f2a7fbe70230f795c577d8e018c3e5ad92ed210a38e7869e7620bd38e04bacbd",
-    "status": "pending",
-    "createdAt": "2026-09-20T15:09:11Z"
-  },
-  {
     "kind": "plans",
     "objectId": "bigmodel-coding-plan",
     "reason": "official terms changed; retaining prior record",
@@ -3151,5 +3139,27 @@
     "id": "46fcd961cc175721cefbb47d4bc5f0d6679e1ba7cd2e45a8fab7754f77ed0e7b",
     "status": "pending",
     "createdAt": "2026-09-21T17:06:12Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "copilot-coding-plan",
+    "reason": "official terms changed; retaining prior record",
+    "evidence": {
+      "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans"
+    },
+    "id": "aebe120bccb679e26687b0e4b3cac59a05ef570f1ea811c3a5d20c2ac80d69ae",
+    "status": "pending",
+    "createdAt": "2026-09-22T08:37:23Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-09-22T08:37:23Z"
   }
 ]

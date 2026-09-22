@@ -1,10 +1,4 @@
 {
-  "32006e5a8d11086972b602dbeb8fb8a0ec155e4c164b659ea32e5bbe6455deec": {
-    "title": "使用 REST API 管理代码覆盖率规则集条件",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-19T09:07:57Z"
-  },
   "39b901174b5433760268459014cd78aa913e65cfdad9f8acf94eedcb904e8042": {
     "title": "推出 Grok 4.7",
     "summary": "SpaceXAI 面向编程与知识工作的最强模型。速度是同类模型的两倍，价格仅为其一半。",
@@ -14,12 +8,6 @@
   "d2871d486c61275aa18316221b2aa4fe0c0c7a730e7f24a395d9c1672c5c3fc3": {
     "title": "V7 如何为 AI 智能体赋予机构记忆",
     "summary": "V7 使用 GPT-5.6，将分散的公司文件转化为智能体可用的上下文，以完成复杂且可溯源的工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
-  "9c38b0e540fa6708e9ee0116581d348eb13bc6f8450336dc337df4d0a6d637fa": {
-    "title": "Grok 4.7 现已在 GitHub Copilot 中可用",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-21T17:06:12Z"
   },
@@ -35,16 +23,52 @@
     "source": "deepseek-flash",
     "at": "2026-09-21T17:06:12Z"
   },
-  "a34d58b87503fec2d9bc653f10e4517245f4e04f40b1a2a626a68a0856240dcd": {
-    "title": "AI 安全是一个工程问题——如何在智能体栈的每一层解决它",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
   "a4ae64181a9872478003d2f953d68a65ee5c543d7999371415745cc4db199489": {
     "title": "5 家使用 NVIDIA AI 推动清洁能源的公司",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-21T17:06:12Z"
+  },
+  "08ffdb24bebd9aa2ffda2f849b7e7af9dba92daa36ecb3bc96d64f49fd7ead95": {
+    "title": "数学与人工智能咨询小组",
+    "summary": "OpenAI 正与独立的数学与人工智能咨询小组合作，指导新兴 AI 成果的审查与沟通。",
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
+  },
+  "8fe4474fdbb9c4c46a22f878515427114b676069cfc965f6786182578d7743d9": {
+    "title": "Higgsfield AI 借助 GPT-6 Astra 一天内推出新视频功能",
+    "summary": "借助 GPT-6 Astra，Higgsfield AI 让小企业更轻松地制作视频广告，并更快将新创意工具推向市场。",
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
+  },
+  "10538c022345675d1abd4a83236ec639afd16c383bf12f43a3ea4520388033d1": {
+    "title": "为 AI 下一阶段制定标准",
+    "summary": "OpenAI 提出通往全球共享 AI 标准的路径，呼吁协调评估、报告与治理以提升安全性。",
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
+  },
+  "2f8d9b98fc157bb338d3eee240b684935f4eb48a8a141e592a8d2b7cadec3422": {
+    "title": "OpenAI Academy 扩展新学习路径",
+    "summary": "探索 OpenAI Academy 面向员工、开发者、领导者、教育者和学生的新学习路径，培养并展示实用 AI 技能。",
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
+  },
+  "5580c57bea18417fa16e109bac093a9092fc25ada7bcd368757406bed949f996": {
+    "title": "全新仓库拉取请求页面正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
+  },
+  "f631d543deb02b097c676cd18705b536f8d5ebdfba596d3bfe4f9a69d2597e94": {
+    "title": "GitHub Enterprise 新增凭据清单导出",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
+  },
+  "9d552a651ead7d3a495ef4a48e180b1714c3b6e1973c7ecfd375941d801d2cb8": {
+    "title": "NVIDIA 推出 DSX Ready，为 AI 工厂认证电源与冷却产品",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-22T08:37:23Z"
   }
 }
