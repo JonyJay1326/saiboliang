@@ -1,86 +1,201 @@
 ---
-// /about 关于 —— frontend-spec §4.9
+// /about 关于 —— frontend-spec §4.8（2026-09-21 按 UI 审查 §12「站志」重构）
+// 定位：这一页不是说明文档，是「可信度展台」——规格 §1.4 把可信定成一票否决项，
+// 而展示可信手段（票面齐全 / 过程透明 / 口径写清）的地方就是这里。三件事：
+//   ① 把「局限」单独成行写出来（不能只写「口径与局限」混一格）
+//   ② 反向披露「本站不做什么」
+//   ③ 让状态可见（各模块新鲜度进页内，不再只躲在页脚一行）
+// 纪律：只用已定名词（§1.3），不引入新比喻；计数一律前端只读派生，不新增契约字段。
 import Base from '../layouts/Base.astro';
+import PageIntro from '../components/PageIntro.astro';
 import { github, models, news, tickets, version } from '../lib/data.js';
-import { listedTickets } from '../lib/format.js';
+import { freshness, listedTickets, toBeijing } from '../lib/format.js';
 
 const batch = version().version;
-const newsSources = [...new Set(news().items.map((n) => n.source))];
-const plans = models().plans;
+const ticketFile = tickets();
+const modelFile = models();
+const githubFile = github();
+const newsFile = news();
+
+const listed = listedTickets(ticketFile.tickets);
+const plans = modelFile.plans;
 const vendors = [...new Set(plans.map((p) => p.vendor))];
+const ghWeek = githubFile.week.items;
+const newsSources = [...new Set(newsFile.items.map((n) => n.source))];
+
+// 每条来路的现状（前端只读派生，不入库）
+const SOURCES = [
+  {
+    no: '01',
+    name: 'GitHub Trending',
+    url: 'https://github.com/trending',
+    collect: '自动采集',
+    freq: '每小时',
+    can: `官方全局榜与语言榜里，AI 应用与开发工具的区间新增 star，按来源顺序取。本期周榜入选 ${ghWeek.length} 项。`,
+    cannot: '区间由 GitHub 定义，不是本站精确 7/30 天净增；付费赞助位一律排除，所以你在榜上看不到它们。',
+    used: [{ href: '/github/', label: '观星台 · 望' }],
+  },
+  {
+    no: '02',
+    name: 'Artificial Analysis',
+    url: 'https://artificialanalysis.ai/',
+    collect: '自动采集',
+    freq: '每日',
+    can: `综合与编程两榜指数（各取前 30 条），以及公开市场参考价；另有 ${plans.length} 个编程套餐、覆盖 ${vendors.length} 家厂商。`,
+    cannot: '报价是 AA 的公开市场参考价，不代表原厂或全网最低价；指数不是本站评测，本站也不改分。',
+    used: [{ href: '/models/', label: '点将台 · 比' }, { href: '/plans/', label: '粮市 · 买' }],
+  },
+  {
+    no: '03',
+    name: '厂商官方页与二手兜底',
+    url: null,
+    collect: '自动 + 人工',
+    freq: '每天 3 次',
+    can: `厂商官方一手渠道的资讯与定价；票证由人工逐张核验证据页后手工上架，当前在架 ${listed.length} 张（推荐分 70 及以上、未失效）。邸报本批收录 ${newsFile.items.length} 条、来源 ${newsSources.length} 个。`,
+    cannot: '媒体兜底条目可能未经一手核实（页面会标「中文报道」）；票证额度与门槛一律以官方结算页为准，期限不确定的标为「未核实」。',
+    used: [{ href: '/tickets/', label: '粮票 · 领' }, { href: '/news/', label: '邸报 · 看' }],
+  },
+];
+
+// 仓门状态：逐模块核验时间 + 新鲜度档（§5.7 三态；level 在构建期算，展示值用绝对时间避免漂移）
+const GATES = [
+  { label: '粮票', value: `${listed.length} 张在架`, at: ticketFile.dataUpdatedAt },
+  { label: '点将台', value: `${modelFile.rankings.intelligence.length} 名入榜`, at: modelFile.dataUpdatedAt },
+  { label: '粮市', value: `${plans.length} 个套餐`, at: modelFile.dataUpdatedAt },
+  { label: '观星台', value: `本周 ${ghWeek.length} 项`, at: githubFile.dataUpdatedAt },
+  { label: '邸报', value: `${newsFile.items.length} 条在库`, at: newsFile.dataUpdatedAt },
+].map((g) => ({ ...g, state: freshness(g.at), clock: toBeijing(g.at)?.slice(11) ?? null }));
+
+// 口径词典（§1.3 名词表对用户公开：隐喻不解释就是黑话，解释了才是文化）
+// 用 <dl> 而不是四列表格：站点在 ≤560px 会把表格降级成块状排列，
+// 四列一降级就丢了「词—义」配对（实测读成「太仓 / 全站总览 / 俸禄 / 模型报价」四行无对应）。
+// 术语—释义本来就是 <dl> 的语义，顺带把这个坑一起修掉。
+const LEXICON = [
+  ['太仓', '全站总览（首页）'],
+  ['开仓', '厂商放出新活动'],
+  ['领粮', '去领取免费额度'],
+  ['作废', '过期 / 取消 / 链接失效'],
+  ['存粮', '上次成功采集到的数据'],
+  ['东市 / 西市', '国内组 / 海外组'],
+  ['俸禄', '模型报价'],
+  ['战力', '模型分数'],
+  ['座次', '榜内展示序号'],
+  ['点卯簿', '第 4 名起的榜单'],
+  ['拜将台', '前三名的台位'],
+  ['距榜首', '与榜首的分差'],
+];
 
 // 页脚核验时间取所消费模块里最早的一个（最保守口径，与首页一致）。
-const times = [tickets().dataUpdatedAt, models().dataUpdatedAt, github().dataUpdatedAt].filter(Boolean);
+const times = [ticketFile.dataUpdatedAt, modelFile.dataUpdatedAt, githubFile.dataUpdatedAt, newsFile.dataUpdatedAt].filter(Boolean);
 const oldest = times.sort()[0] ?? null;
 ---
-<Base title="关于" description="站点说明、数据来源清单与推广披露。" dataUpdatedAt={oldest}>
-  <h1>关于</h1>
+<Base title="关于" description="站点说明、数据来源清单、推广披露与本站不做什么。" dataUpdatedAt={oldest}>
+  <div class="stn">
+    <PageIntro
+      eyebrow="COLOPHON"
+      name="关于"
+      image="/font-images/sec-guanyu.png"
+      width={159}
+      height={80}
+      lede="赛博粮站聚合三类信息：免费 AI 额度与试用、GitHub AI 热门项目、模型能力与编程套餐报价。下面写清数据从哪来、什么算推广，以及我们不做什么。"
+    >
+      <dl class="stn-facts">
+        <div><dt>开仓频次</dt><dd>每天 3 次</dd></div>
+        <div><dt>开仓时刻</dt><dd>11:17 / 15:17 / 19:17</dd></div>
+        <div><dt>在架票</dt><dd>{listed.length} 张</dd></div>
+        <div><dt>本批批次</dt><dd>{toBeijing(batch)?.slice(5) ?? batch}</dd></div>
+      </dl>
+    </PageIntro>
 
-  <section aria-labelledby="about-site">
-    <h2 id="about-site">站点说明</h2>
-    <p>赛博粮站聚合三类信息：免费 AI 额度与试用、GitHub AI 热门项目、模型能力与编程套餐报价。</p>
-    <p>自动采集每天 3 次，北京时间 11:17 / 15:17 / 19:17 前后。当前批次：{batch}</p>
-  </section>
+    <section aria-labelledby="about-sources" class="stn-sec">
+      <h2 class="stn-h" id="about-sources"><span class="stn-no">01</span>仓廪志 · 各路来路</h2>
+      <ul class="src-list">
+        {SOURCES.map((s) => (
+          <li class="src">
+            <p class="src__h">
+              <span class="src__no">{s.no}</span>
+              <b>
+                {s.url ? <a href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a> : s.name}
+              </b>
+              <span class="src__chip">{s.collect}</span>
+              <span class="src__chip src__chip--f">{s.freq}</span>
+            </p>
+            <dl class="src__rows">
+              <div><dt>能说什么</dt><dd>{s.can}</dd></div>
+              <div class="src__limit"><dt>不能说什么</dt><dd>{s.cannot}</dd></div>
+              <div>
+                <dt>用在哪</dt>
+                <dd class="src__used">
+                  {s.used.map((u) => <a href={u.href}>{u.label}</a>)}
+                </dd>
+              </div>
+            </dl>
+          </li>
+        ))}
+      </ul>
+      <p class="stn-note">
+        源请求或结构解析失败时<strong>保留上一次存粮并标注新鲜度，绝不清空</strong>；降级不等于清空。
+      </p>
+    </section>
 
-  <section aria-labelledby="about-sources">
-    <h2 id="about-sources">数据来源清单</h2>
-    <table>
-      <thead>
-        <tr><th>来源</th><th>口径与局限</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub Trending</a></td>
-          <td>
-            官方全局榜与语言榜；只收 AI 应用与开发工具；按来源给出的区间新增 star 降序。
-            区间由 GitHub 定义，本站不标精确 7/30 天净增。付费赞助位一律排除。
-          </td>
-        </tr>
-        <tr>
-          <td><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></td>
-          <td>
-            综合与编程两榜指数，各取前 30 条；报价为 AA 公开市场参考价，
-            不代表原厂或全网最低价。
-          </td>
-        </tr>
-        <tr>
-          <td>厂商官方页面</td>
-          <td>
-            编程套餐来自厂商官方文档与定价页（当前 {plans.length} 个套餐，覆盖 {vendors.length} 家）。
-            条件与额度以官方结算页为准。
-          </td>
-        </tr>
-        <tr>
-          <td>免费活动（人工维护）</td>
-          <td>
-            票证由人工整理并核验证据页（当前在架 {listedTickets(tickets().tickets).length} 条，
-            推荐分 70 及以上且在架才展示），不自动抓取；期限如实标注，不确定的标为「未核实」。
-          </td>
-        </tr>
-        <tr>
-          <td>邸报（资讯）</td>
-          <td>
-            厂商官方一手渠道（国内＋海外）与 AIBase、量子位二手兜底；页面只展示当日精选（每天最多 6 条），
-            只保留标题、简介与来路，点击直达原文。本批已收录 {news().items.length} 条、来源 {newsSources.length} 个
-            （{newsSources.join('、')}）。
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <section aria-labelledby="about-promo" class="stn-sec">
+      <h2 class="stn-h" id="about-promo"><span class="stn-no">02</span>推广披露 · 一标一说明</h2>
+      <div class="promo">
+        <div class="promo__demo">
+          <span class="promo__flag">含推广</span>
+          <p>票卡与票证详情<strong>两处常驻</strong>这个角标。带角标 = 该领取链接含推广参数。</p>
+        </div>
+        <ul class="promo__list">
+          <li><b>怎么标</b>：票卡票面内 + 详情页各一处，不靠悬停、不折叠、不混排。</li>
+          <li><b>影响排序吗</b>：<strong>不影响。</strong>票证排序口径全部公开：未失效 → 推荐分降序 → 收录时间降序。</li>
+          <li><b>历史链接</b>：曾携带邀请码或推荐参数的链接，已在录入时剥除并改用官方页。</li>
+        </ul>
+      </div>
+    </section>
 
-  <section aria-labelledby="about-promo">
-    <h2 id="about-promo">推广披露</h2>
-    <p>
-      票证卡上的「含推广」角标表示该链接为推广链接。标记为推广<strong>不影响排序</strong>——
-      票证的排序规则（未失效 → 推荐分 → 收录时间）全部公开在
-      <a href="/tickets/">粮票</a>页说明中。
-    </p>
-    <p>历史链接若曾携带邀请码或推荐参数，已在录入时剥除并改用官方页。</p>
-  </section>
+    <section aria-labelledby="about-nope" class="stn-sec">
+      <h2 class="stn-h" id="about-nope"><span class="stn-no">03</span>本站不做的事</h2>
+      <ul class="nope">
+        <li><b>不存正文</b> —— 邸报只留标题、简介、来路，正文不落盘，点击直达原文。</li>
+        <li><b>不伪造评分</b> —— 推荐分是人工判断，只决定上架与等级，不宣称客观评测。</li>
+        <li><b>不隐藏推广</b> —— 含推广的链接一定带角标，永不与普通链接混排无标记。</li>
+        <li><b>不做跨市换算</b> —— 粮市只在同市（东市 / 西市）同币种同周期内比价，不换汇、不折算。</li>
+      </ul>
+    </section>
 
-  <section aria-labelledby="about-disclaimer">
-    <h2 id="about-disclaimer">免责</h2>
-    <p>信息仅供参考，领取前请核实官方页面。</p>
-  </section>
+    <section aria-labelledby="about-gate" class="stn-sec">
+      <h2 class="stn-h" id="about-gate"><span class="stn-no">04</span>仓门状态</h2>
+      <ul class="gate">
+        {GATES.map((g) => (
+          <li data-freshness={g.state.level}>
+            <span class="gate__dot" aria-hidden="true"></span>
+            <span class="gate__label">{g.label}</span>
+            <b>{g.value}</b>
+            <em>{g.clock ? `核验 ${g.clock}` : g.state.text}</em>
+          </li>
+        ))}
+      </ul>
+      <p class="stn-note">
+        圆点表示该模块的存粮年龄：<strong>正常</strong>（24 小时内）、<strong>提醒级</strong>（超 24 小时）、
+        <strong>明显提示</strong>（超 72 小时）。数据源失败时保留上次存粮，不清空。
+      </p>
+    </section>
+
+    <section aria-labelledby="about-lexicon" class="stn-sec">
+      <h2 class="stn-h" id="about-lexicon"><span class="stn-no">05</span>口径词典</h2>
+      <p class="stn-note">
+        站内用词有出处：一半取自粮站与票证，一半取自旧时衙署的记账语。摆在这里，免得它变成黑话。
+      </p>
+      <dl class="lexicon">
+        {LEXICON.map((r) => (
+          <div><dt>{r[0]}</dt><dd>{r[1]}</dd></div>
+        ))}
+      </dl>
+    </section>
+
+    <section aria-labelledby="about-disclaimer" class="stn-sec">
+      <h2 class="stn-h" id="about-disclaimer"><span class="stn-no">06</span>免责</h2>
+      <p>信息仅供参考，领取与购买前请核实官方页面。额度、价格与条件一律以官方结算页为准。</p>
+    </section>
+  </div>
 </Base>

@@ -8,7 +8,7 @@
 import Base from '../layouts/Base.astro';
 import { news } from '../lib/data.js';
 import { EVENT_TYPE } from '../lib/labels.js';
-import { dibaoDate, toBeijing } from '../lib/format.js';
+import { addedWithinDays, dibaoDate, toBeijing } from '../lib/format.js';
 
 const file = news();
 
@@ -26,6 +26,21 @@ for (const item of items) {
   if (last && last.key === key) last.items.push(item);
   else days.push({ key, label: dibaoDate(item.publishedAt) ?? '日期未提供', items: [item] });
 }
+
+// 本期提要（2026-09-21 用户确认「按 §4.7 优化」）：全部是前端只读派生，不入库、不新增字段。
+// 事件类型分布只统计本期已渲染条目；近七日入库按 addedAt 统计**全部**条目（含未入选），
+// 用来表达产出节奏，不是展示范围。
+const typeCounts = Object.entries(
+  items.reduce((acc, item) => {
+    const key = item.eventType ?? 'unknown';
+    acc[key] = (acc[key] ?? 0) + 1;
+    return acc;
+  }, {})
+)
+  .map(([key, count]) => ({ key, label: EVENT_TYPE[key] ?? key, count }))
+  .sort((a, b) => b.count - a.count || (a.key < b.key ? -1 : 1));
+
+const recentCount = addedWithinDays(file.items, 7, file.dataUpdatedAt);
 
 // 来路（契约 §4.5 跳转规则 / frontend-spec §5.5）：
 // 官方直采 = 三链同值，合并为一个「官方原文」入口；媒体条目有已核实一手 → 标题直达一手、
@@ -72,54 +87,80 @@ const jsonLd = {
   {items.length === 0 ? (
     <p class="dibao__empty">本期暂无邸报</p>
   ) : (
-    <ol class="dibao">
-      {days.map((day) => (
-        <li class="dibao__day">
-          <time class="dibao__date" datetime={day.key || undefined}>
-            <span class="dibao__date-day">{day.label}</span>
-          </time>
-          <ol class="dibao__items">
-            {day.items.map((item) => {
-              const link = entryLink(item);
-              return (
-                <li class="dibao__item">
-                  <h2 class="dibao__title">
-                    <a href={item.url} target="_blank" rel="noopener noreferrer">
-                      {item.title}
-                    </a>
-                  </h2>
-                  {item.summary && <p class="dibao__summary">{item.summary}</p>}
-                  <p class="dibao__meta">
-                    <span class="dibao__facts">
-                      <span class="dibao__badge">{EVENT_TYPE[item.eventType] ?? item.eventType}</span>
-                      <span class="dibao__time">{toBeijing(item.publishedAt)?.slice(11)}</span>
-                      <span class="dibao__source">{item.source}</span>
-                    </span>
-                    <span class="dibao__links">
-                      <a
-                        class="dibao__link"
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={link.title}
-                      >
-                        {link.label}
+    <div class="dibao-wrap">
+      <ol class="dibao">
+        {days.map((day) => (
+          <li class="dibao__day">
+            <time class="dibao__date" datetime={day.key || undefined}>
+              <span class="dibao__date-day">{day.label}</span>
+            </time>
+            <ol class="dibao__items">
+              {day.items.map((item) => {
+                const link = entryLink(item);
+                return (
+                  <li class="dibao__item">
+                    <h2 class="dibao__title">
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.title}
                       </a>
-                      {item.originalTitle && (
-                        <span class="dibao__flag">
-                          <span class="dibao__tag" title={item.originalTitle}>
-                            机译
+                    </h2>
+                    {item.summary && <p class="dibao__summary">{item.summary}</p>}
+                    <p class="dibao__meta">
+                      <span class="dibao__facts">
+                        <span class="dibao__badge">{EVENT_TYPE[item.eventType] ?? item.eventType}</span>
+                        <span class="dibao__time">{toBeijing(item.publishedAt)?.slice(11)}</span>
+                        <span class="dibao__source">{item.source}</span>
+                      </span>
+                      <span class="dibao__links">
+                        <a
+                          class="dibao__link"
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={link.title}
+                        >
+                          {link.label}
+                        </a>
+                        {item.originalTitle && (
+                          <span class="dibao__flag">
+                            <span class="dibao__tag" title={item.originalTitle}>
+                              机译
+                            </span>
                           </span>
-                        </span>
-                      )}
-                    </span>
-                  </p>
-                </li>
-              );
-            })}
-          </ol>
-        </li>
-      ))}
-    </ol>
+                        )}
+                      </span>
+                    </p>
+                  </li>
+                );
+              })}
+            </ol>
+          </li>
+        ))}
+      </ol>
+
+      {/* 本期提要：只读派生计数，不参与阅读流（frontend-spec §4.7） */}
+      <aside class="dibao-rail" aria-labelledby="dibao-rail-title">
+        <h2 class="dibao-rail__title" id="dibao-rail-title">本期提要</h2>
+        <dl class="dibao-rail__list">
+          <div class="dibao-rail__lead">
+            <dt>本期条目</dt>
+            <dd>{items.length}</dd>
+          </div>
+          <div class="dibao-rail__lead">
+            <dt>覆盖天数</dt>
+            <dd>{days.length}</dd>
+          </div>
+          {typeCounts.map((type) => (
+            <div>
+              <dt>{type.label}</dt>
+              <dd>{type.count}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="dibao-rail__foot">
+          近七日入库<b>{recentCount}</b> 条
+        </p>
+      </aside>
+    </div>
   )}
 </Base>

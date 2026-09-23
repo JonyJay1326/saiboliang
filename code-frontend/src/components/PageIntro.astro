@@ -1,13 +1,15 @@
 ---
-// 页头简介块（frontend-spec.md §4.2 / §4.4 / §4.5 / §4.6；2026-09-20 用户确认）：
+// 页头简介块（frontend-spec.md §4.2 / §4.4 / §4.5 / §4.6 / §4.8；2026-09-20 用户确认）：
 // 眉标（英文代号，等宽系统语）→ 板块名（字体图 H1）→ 导语（白话功能 + 粮站隐喻同句）→ 口径小字。
 // 口径小字由各页以 <p class="page-intro__note"> 传入（来源 / 计数 / 排序规则），保持逐页差异可见。
-const { eyebrow, name, image, width, height, lede } = Astro.props;
+// 2026-09-21：`image` 改为可选 —— 「关于」不在出图范围内（§11.1 只出站名横额 / 板块名 / Slogan / 印章），
+// 没有字体图可用；此时回落为文字 H1（.page-title--text），字号与字色对齐字体图的白字 + 金辉，语义不丢。
+const { eyebrow, name, image = null, width = null, height = null, lede } = Astro.props;
 ---
 <header class="page-intro">
   <p class="page-intro__eyebrow" lang="en">{eyebrow}</p>
-  <h1 class="page-title">
-    <img src={image} width={width} height={height} alt={name} />
+  <h1 class={image ? 'page-title' : 'page-title page-title--text'}>
+    {image ? <img src={image} width={width} height={height} alt={name} /> : name}
   </h1>
   <p class="page-intro__lede">{lede}</p>
   <slot />

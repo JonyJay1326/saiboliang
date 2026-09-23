@@ -85,6 +85,25 @@ export function addedThisWeek(list, now = new Date()) {
   return list.filter((x) => x.publishedAt >= from && x.publishedAt <= to);
 }
 
+/**
+ * 前端只读派生：近 N 个北京时间自然日（含锚点当日）的入库条数。
+ * 锚点取模块核验时间 dataUpdatedAt（缺失时回落到条目里最新的一条），
+ * 让数字与「本批数据」对齐、不随构建时刻漂移；口径与 --addedThisWeek 同源。
+ * 入库时间用 addedAt，缺失回落到 publishedAt（契约 §4.5 两字段都在）。
+ */
+export function addedWithinDays(list, days, anchor) {
+  const stamp = (x) => x?.addedAt ?? x?.publishedAt ?? null;
+  const latest = list.map(stamp).filter(Boolean).sort().at(-1) ?? null;
+  const to = toBeijing(anchor ?? latest)?.slice(0, 10);
+  if (!to) return 0;
+  const fromDate = new Date(new Date(`${to}T00:00:00Z`).getTime() - (days - 1) * 86_400_000);
+  const from = `${fromDate.getUTCFullYear()}-${pad(fromDate.getUTCMonth() + 1)}-${pad(fromDate.getUTCDate())}`;
+  return list.filter((x) => {
+    const day = toBeijing(stamp(x))?.slice(0, 10);
+    return Boolean(day) && day >= from && day <= to;
+  }).length;
+}
+
 /** 契约 §3.4：票号 = No. {publishedAt 月日 4 位}-{id 的 3 位 hash}。 */
 export function serial(ticket) {
   const md = String(ticket?.publishedAt ?? '').slice(5, 10).replace('-', '');
