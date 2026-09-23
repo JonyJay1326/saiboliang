@@ -1395,7 +1395,10 @@ export function mount() {
   const canvas = host?.querySelector('[data-steelyard-canvas]');
   if (!host || !canvas?.getContext) return { release() {} };
   /* 画布被 CSS 关掉（窄屏）时不起引擎——可见性由 CSS 决定 */
-  if (!canvas.offsetWidth || !canvas.offsetHeight) return { release() {} };
+  if (!canvas.offsetWidth || !canvas.offsetHeight) {
+    host.dataset.totem = 'off';
+    return { release() {} };
+  }
 
   const style = getComputedStyle(host);
   const motion = style.getPropertyValue('--totem-motion').trim() !== '0';
@@ -1453,6 +1456,8 @@ export function mount() {
      reduced-motion 才退回单帧。 */
   if (!reduced.matches) engine.start();
   else engine.safePaint(0, 0);
+  /* 首帧已绘出：让页面收掉图腾区的 CSS 加载态（site.css「图腾区加载态」） */
+  host.dataset.totem = 'ready';
 
   return {
     release() {

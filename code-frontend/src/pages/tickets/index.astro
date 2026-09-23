@@ -32,7 +32,7 @@ const list = listedTickets([...file.tickets]).sort(ticketDefaultOrder);
 
   {list.length === 0 && <p>暂时空仓，稍后再来看看。</p>}
 
-  <ul class="cards">
+  <ul class="cards cards--wall">
     {
       list.map((t) => (
         <li data-ticket-id={t.id}>

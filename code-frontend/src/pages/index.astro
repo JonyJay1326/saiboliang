@@ -2,10 +2,13 @@
 // / 太仓（首页）—— frontend-spec §4.1
 // 五块：Hero / 票卡列表 / 观星台摘要 / 点将台摘要 / 页脚声明。
 // Hero 不含开仓摘要（2026-09-18 用户拍板移除）；一期不放「邸报摘要」块（资讯延期，见 §4.7）。
+// 两块摘要复用专页列表样式（2026-09-23 用户定）：观星台摘要 = 星历表行（§5.2，周榜前 10），
+// 点将台摘要 = 点卯簿六列行 + 列名表头（§5.3，综合榜前 5）；页面级表头 / 脚注不搬。
+// 点将台摘要不带报价来源标注（2026-09-23 用户定「不需要」，标注只在 /models 页头一次）。
 import Base from '../layouts/Base.astro';
 import TicketCard from '../components/TicketCard.vue';
-import GithubRow from '../components/GithubRow.astro';
-import ModelRow from '../components/ModelRow.astro';
+import GithubLedgerRow from '../components/GithubLedgerRow.astro';
+import ModelRollRow from '../components/ModelRollRow.astro';
 import { github, models, tickets } from '../lib/data.js';
 import { listedTickets, ticketDefaultOrder } from '../lib/format.js';
 
@@ -15,7 +18,7 @@ const md = models();
 
 // 首页只摆一行票卡（桌面 4 列铺满一行；2026-09-18 用户定）。
 const topTickets = listedTickets([...allTickets]).sort(ticketDefaultOrder).slice(0, 4);
-const ghTop = gh.week.items.slice(0, 5);
+const ghTop = gh.week.items.slice(0, 10);
 const modelTop = md.rankings.intelligence.slice(0, 5);
 const modelById = new Map(md.models.map((m) => [m.id, m]));
 
@@ -32,7 +35,7 @@ const oldest = times.sort()[0] ?? null;
 
   <section aria-labelledby="home-tickets">
     <h2 id="home-tickets">今日份口粮</h2>
-    <ul class="cards">
+    <ul class="cards cards--home">
       {topTickets.map((t) => <li><TicketCard ticket={t} /></li>)}
     </ul>
     <p class="more"><a href="/tickets/">全部粮票 →</a></p>
@@ -40,18 +43,31 @@ const oldest = times.sort()[0] ?? null;
 
   <section aria-labelledby="home-github">
     <h2 id="home-github">观星台摘要</h2>
-    <ol class="ranking">
-      {ghTop.map((item, i) => <GithubRow item={item} index={i + 1} />)}
-    </ol>
+    <div class="ledger">
+      <ol>
+        {ghTop.map((item, i) => <GithubLedgerRow item={item} index={i + 1} />)}
+      </ol>
+    </div>
     <p class="more"><a href="/github/">观星台 →</a></p>
   </section>
 
   <section aria-labelledby="home-models">
     <h2 id="home-models">点将台摘要</h2>
-    <p class="source-note">报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。</p>
-    <ol class="ranking">
-      {modelTop.map((row, i) => <ModelRow row={{ ...row, model: modelById.get(row.modelId) }} index={i + 1} />)}
-    </ol>
+    <div class="roll">
+      <div class="roll__head" aria-hidden="true">
+        <span>座次<em>排名</em></span>
+        <span>名将<em>模型</em></span>
+        <span>入营<em>上线</em></span>
+        <span>俸禄<em>输入 / 输出</em></span>
+        <span class="roll__num">战力<em>AA 分</em></span>
+        <span class="roll__num">距榜首<em>分差</em></span>
+      </div>
+      <ol class="roll__rows">
+        {modelTop.map((row) => (
+          <ModelRollRow row={row} model={modelById.get(row.modelId) ?? null} topScore={modelTop[0].score} />
+        ))}
+      </ol>
+    </div>
     <p class="more"><a href="/models/">点将台 →</a></p>
   </section>
 </Base>

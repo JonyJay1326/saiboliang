@@ -4,7 +4,7 @@
 // 模型芯片、档位名+价格。
 // 完整信息（tagline、highlights、档位要点、条件、来源）在详情页 /plans/[id]/，
 // 列表页整卡可点、弹框预览（§5.11）：产品名链接以铺满卡面的触达层实现（site.css）。
-import { planStatusLabel, startingPriceLabel, tierPrice } from '../lib/format.js';
+import { planStatusLabel, hasFreeTier, startingPrice, startingPriceLabel, tierOfferKey, tierOfferLabel, tierPrice } from '../lib/format.js';
 import { planIcon, vendorInitial } from '../lib/vendors.js';
 
 const { plan, index } = Astro.props;
@@ -13,6 +13,10 @@ const icon = planIcon(plan.vendor);
 const CHIP_LIMIT = 4;
 const chips = plan.models.slice(0, CHIP_LIMIT);
 const restChips = plan.models.length - chips.length;
+// 免费档与起步价分开说（2026-09-23 UI 审查 01）：有免费档时不能只留一个「¥49/月起」，
+// 否则会被读成全档最低价。口径仍是前端只读派生，不动数据（契约 §5.2）。
+const free = hasFreeTier(plan);
+const start = startingPrice(plan);
 ---
 <article class="plan-card" data-group={plan.group}>
   <div class="plan-card__head">
@@ -41,6 +45,8 @@ const restChips = plan.models.length - chips.length;
   </h3>
 
   <p class="plan-card__start">
+    {free && <span class="plan-card__free">有免费档</span>}
+    {free && start && <span class="plan-card__start-label">付费档</span>}
     <strong>{startingPriceLabel(plan)}</strong>
     {plan.quotaBasis && <span class="plan-card__quota">{plan.quotaBasis}</span>}
   </p>
@@ -60,7 +66,10 @@ const restChips = plan.models.length - chips.length;
     {
       plan.tiers.map((tier) => (
         <div>
-          <dt>{tier.name}</dt>
+          <dt>
+            <span class="plan-card__offer" data-offer={tierOfferKey(tier)}>{tierOfferLabel(tier)}</span>
+            {tier.name}
+          </dt>
           <dd>{tierPrice(tier)}</dd>
         </div>
       ))

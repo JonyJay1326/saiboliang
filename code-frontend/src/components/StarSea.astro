@@ -5,10 +5,24 @@
 // 但太极中心对齐右侧器物位中心——`data-plate-probe` 量的是 site.css 里同一支变量 --totem-plate，
 // 器物位改宽度时星海中心跟着走，不需要第二处硬编码。
 // 引擎在 Base.astro 的星海加载器里惰性取件（独立 chunk，不计入首屏 JS，§10.2）。
+// 取件完成前，器物位里先摆一层纯 CSS 加载态（三页共用一枚扫光徽记，见 site.css「图腾区加载态」），
+// 引擎 mount 成功后写 data-totem="ready" 淡出；起不来写 "off" 直接收起。
 ---
 <div class="page-head page-head--sea" data-star-sea>
   <canvas class="page-head__canvas" data-star-sea-canvas aria-hidden="true" width="300" height="300"></canvas>
   <span class="page-head__plate-probe" data-plate-probe aria-hidden="true"></span>
+  <div class="totem-plate">
+    <span class="totem-loading" aria-hidden="true">
+      <span class="totem-loading__halo">
+        <i class="totem-loading__corner totem-loading__corner--tl"></i>
+        <i class="totem-loading__corner totem-loading__corner--tr"></i>
+        <i class="totem-loading__corner totem-loading__corner--bl"></i>
+        <i class="totem-loading__corner totem-loading__corner--br"></i>
+        <i class="totem-loading__sweep"><i class="totem-loading__head"></i></i>
+        <i class="totem-loading__core"></i>
+      </span>
+    </span>
+  </div>
   <div class="page-head__layer">
     <slot />
   </div>

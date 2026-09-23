@@ -363,7 +363,10 @@ export function mount() {
   const canvas = host?.querySelector('[data-star-sea-canvas]');
   if (!host || !canvas?.getContext) return { release() {} };
   /* 画布被 CSS 关掉（窄屏 / 未启用装饰）时不起引擎——可见性由 CSS 决定 */
-  if (!canvas.offsetWidth || !canvas.offsetHeight) return { release() {} };
+  if (!canvas.offsetWidth || !canvas.offsetHeight) {
+    host.dataset.totem = 'off';
+    return { release() {} };
+  }
 
   const style = getComputedStyle(host);
   const want = Number.parseInt(style.getPropertyValue('--sea-count'), 10);
@@ -448,6 +451,8 @@ export function mount() {
   document.addEventListener('visibilitychange', onVisibility);
   reduced.addEventListener?.('change', onReduced);
   if (!reduced.matches && field.visible) field.start();
+  /* 引擎已绘出（首帧已画）：让页面收掉图腾区的 CSS 加载态（site.css「图腾区加载态」） */
+  host.dataset.totem = 'ready';
 
   return {
     release() {

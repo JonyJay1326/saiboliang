@@ -19,12 +19,21 @@ const items = [...file.items].filter((item) => item.featured === true).sort((a, 
 });
 
 // 按北京时间自然日分组：一天一格日期，同日多条共用一个日期。
+// 日期栏顺带产出锚点 id 与短标签（9/23），给右侧「日期跳转」用（2026-09-23 UI 审查 01）。
 const days = [];
 for (const item of items) {
   const key = toBeijing(item.publishedAt)?.slice(0, 10) ?? '';
   const last = days.at(-1);
   if (last && last.key === key) last.items.push(item);
-  else days.push({ key, label: dibaoDate(item.publishedAt) ?? '日期未提供', items: [item] });
+  else {
+    const [, month, date] = key.split('-');
+    days.push({
+      key,
+      label: dibaoDate(item.publishedAt) ?? '日期未提供',
+      short: key ? `${Number(month)}/${Number(date)}` : '—',
+      items: [item],
+    });
+  }
 }
 
 // 本期提要（2026-09-21 用户确认「按 §4.7 优化」）：全部是前端只读派生，不入库、不新增字段。
@@ -45,13 +54,28 @@ const recentCount = addedWithinDays(file.items, 7, file.dataUpdatedAt);
 // 来路（契约 §4.5 跳转规则 / frontend-spec §5.5）：
 // 官方直采 = 三链同值，合并为一个「官方原文」入口；媒体条目有已核实一手 → 标题直达一手、
 // 另附「中文报道」；无可靠一手 → 标题直达报道，标签仍写「中文报道」、未核实信息放悬停提示。
+//
+// 2026-09-23 UI 审查 02：未核实状态不再只藏在 title 悬停里——`.dibao__tag` 在来源行常显
+// 「二手 · 一手未核实」，同时作为筛选维度之一（下方轻筛只控制已渲染条目的显隐）。
 function entryLink(item) {
   const official =
     item.originalUrl !== null && item.originalUrl === item.sourceUrl && item.sourceUrl === item.url;
-  if (official) return { href: item.url, label: '官方原文', title: null };
-  if (item.originalUrl) return { href: item.sourceUrl, label: '中文报道', title: null };
-  return { href: item.sourceUrl, label: '中文报道', title: '未核实一手来源' };
+  if (official) return { href: item.url, label: '官方原文', title: null, verify: 'official' };
+  if (item.originalUrl) return { href: item.sourceUrl, label: '中文报道', title: null, verify: 'press' };
+  return { href: item.sourceUrl, label: '中文报道', title: '未核实一手来源', verify: 'unverified' };
 }
+
+// 轻筛维度（2026-09-23 UI 审查 01）：按事件类型 + 按来路可靠度，两组都只筛页面已渲染的条目。
+// 计数一律现算，不入库、不改契约（同 §4.7 只读派生纪律）。
+const VERIFY_LABEL = { official: '官方原文', press: '中文报道已核实', unverified: '二手 · 一手未核实' };
+const verifyCounts = items.reduce((acc, item) => {
+  const key = entryLink(item).verify;
+  acc[key] = (acc[key] ?? 0) + 1;
+  return acc;
+}, {});
+const verifyFilters = ['official', 'press', 'unverified']
+  .filter((key) => verifyCounts[key])
+  .map((key) => ({ key, label: VERIFY_LABEL[key], count: verifyCounts[key] }));
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -87,10 +111,10 @@ const jsonLd = {
   {items.length === 0 ? (
     <p class="dibao__empty">本期暂无邸报</p>
   ) : (
-    <div class="dibao-wrap">
+    <div class="dibao-wrap" data-dibao>
       <ol class="dibao">
         {days.map((day) => (
-          <li class="dibao__day">
+          <li class="dibao__day" id={`dibao-${day.key}`} data-dibao-day>
             <time class="dibao__date" datetime={day.key || undefined}>
               <span class="dibao__date-day">{day.label}</span>
             </time>
@@ -98,7 +122,7 @@ const jsonLd = {
               {day.items.map((item) => {
                 const link = entryLink(item);
                 return (
-                  <li class="dibao__item">
+                  <li class="dibao__item" data-dibao-item data-dibao-event={item.eventType ?? 'unknown'} data-dibao-verify={link.verify}>
                     <h2 class="dibao__title">
                       <a href={item.url} target="_blank" rel="noopener noreferrer">
                         {item.title}
@@ -121,6 +145,13 @@ const jsonLd = {
                         >
                           {link.label}
                         </a>
+                        {link.verify === 'unverified' && (
+                          <span class="dibao__flag dibao__flag--warn">
+                            <span class="dibao__tag dibao__tag--warn" title={link.title}>
+                              二手 · 一手未核实
+                            </span>
+                          </span>
+                        )}
                         {item.originalTitle && (
                           <span class="dibao__flag">
                             <span class="dibao__tag" title={item.originalTitle}>
@@ -138,7 +169,8 @@ const jsonLd = {
         ))}
       </ol>
 
-      {/* 本期提要：只读派生计数，不参与阅读流（frontend-spec §4.7） */}
+      {/* 本期提要：只读派生计数 + 日期索引 + 事件/来路轻筛（frontend-spec §4.7）。
+          轻筛只控制已渲染条目的显隐，不重排数据、不改契约；无 JS 时全部条目照常可见。 */}
       <aside class="dibao-rail" aria-labelledby="dibao-rail-title">
         <h2 class="dibao-rail__title" id="dibao-rail-title">本期提要</h2>
         <dl class="dibao-rail__list">
@@ -150,17 +182,77 @@ const jsonLd = {
             <dt>覆盖天数</dt>
             <dd>{days.length}</dd>
           </div>
-          {typeCounts.map((type) => (
-            <div>
-              <dt>{type.label}</dt>
-              <dd>{type.count}</dd>
-            </div>
-          ))}
         </dl>
         <p class="dibao-rail__foot">
           近七日入库<b>{recentCount}</b> 条
         </p>
+
+        <div class="dibao-rail__block">
+          <h3 class="dibao-rail__h">日期跳转</h3>
+          <ul class="dibao-days">
+            {days.map((day) => (
+              <li><a href={`#dibao-${day.key}`} title={`跳至 ${day.key}`}>{day.short}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="dibao-rail__block">
+          <h3 class="dibao-rail__h">按事件筛</h3>
+          <div class="dibao-filter">
+            <button type="button" data-dibao-filter="all" aria-pressed="true">全部 {items.length}</button>
+            {typeCounts.map((type) => (
+              <button type="button" data-dibao-filter={`event:${type.key}`} aria-pressed="false">
+                {type.label} {type.count}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="dibao-rail__block">
+          <h3 class="dibao-rail__h">按来路筛</h3>
+          <div class="dibao-filter">
+            {verifyFilters.map((v) => (
+              <button type="button" data-dibao-filter={`verify:${v.key}`} aria-pressed="false">
+                {v.label} {v.count}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <p class="dibao-rail__count" data-dibao-count aria-live="polite">共 {items.length} 条</p>
       </aside>
     </div>
   )}
+
+  {/* 邸报轻筛（2026-09-23 UI 审查 01）：不加依赖、不进首屏 JS 之外——一段行内委托脚本，
+      只切已渲染条目的 hidden、并同步空日与计数；不做滚动加载（列表已能按日/类定位，
+      85 条一次性渲染对 SEO 与无 JS 环境都更稳）。 */}
+  <script is:inline>
+    document.addEventListener('click', (event) => {
+      const btn = event.target instanceof Element ? event.target.closest('[data-dibao-filter]') : null;
+      const root = btn?.closest('[data-dibao]');
+      if (!root) return;
+      const value = btn.dataset.dibaoFilter;
+      for (const b of root.querySelectorAll('[data-dibao-filter]')) {
+        b.setAttribute('aria-pressed', String(b === btn));
+      }
+      let shown = 0;
+      for (const item of root.querySelectorAll('[data-dibao-item]')) {
+        const ok =
+          value === 'all' ||
+          (value.startsWith('event:') && item.dataset.dibaoEvent === value.slice(6)) ||
+          (value.startsWith('verify:') && item.dataset.dibaoVerify === value.slice(7));
+        item.hidden = !ok;
+        if (ok) shown += 1;
+      }
+      for (const day of root.querySelectorAll('[data-dibao-day]')) {
+        day.hidden = !day.querySelector('[data-dibao-item]:not([hidden])');
+      }
+      const count = root.querySelector('[data-dibao-count]');
+      if (count) {
+        const total = root.querySelectorAll('[data-dibao-item]').length;
+        count.textContent = shown === total ? `共 ${total} 条` : `筛选后 ${shown} 条 / 共 ${total} 条`;
+      }
+    });
+  </script>
 </Base>

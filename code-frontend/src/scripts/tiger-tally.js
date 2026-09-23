@@ -18,7 +18,10 @@ export function mount() {
   const host = document.querySelector('[data-tiger-tally]');
   const canvas = host?.querySelector('[data-tiger-canvas]');
   if (!host || !canvas?.getContext) return { release() {} };
-  if (!canvas.offsetWidth || !canvas.offsetHeight) return { release() {} };
+  if (!canvas.offsetWidth || !canvas.offsetHeight) {
+    host.dataset.totem = 'off';
+    return { release() {} };
+  }
 
   const motion = getComputedStyle(host).getPropertyValue('--totem-motion').trim() === '1';
   let engine = null;
@@ -32,10 +35,13 @@ export function mount() {
     });
   } catch (error) {
     host.dataset.tiger = 'unavailable';
+    host.dataset.totem = 'off';
     console.warn('虎符图腾未能启用：', error);
     return { release() {} };
   }
   canvas.dataset.renderer = 'webgl2';
+  /* 首帧已绘出：让页面收掉图腾区的 CSS 加载态（site.css「图腾区加载态」） */
+  host.dataset.totem = 'ready';
 
   /* 页面联动（2026-09-22 用户定）：
      ① 切综合榜 / 编程榜 = 拆解与收合**一次**（不带整段合符流程；顺带给了键盘可达的入口）；

@@ -6,10 +6,22 @@
 // 交互（与堂内语法一致）：拖秤砣 / 拽秤盘 / 点载荷（笼绷一记）/ 移入唤醒扫一道光 / 连点两下复位；
 // 东市 / 西市切换 = 载荷换手感位（键盘可达，是这一页唯一的无障碍控件）；指针只认鼠标，触摸不参与。
 // 引擎在 Base.astro 的杆秤加载器里惰性取件（独立 chunk，不计入首屏 JS，§10.2）。
+// 取件完成前，器物位里先摆一层纯 CSS 加载态（三页共用一枚扫光徽记，见 site.css「图腾区加载态」），
+// 引擎 mount 成功后写 data-totem="ready" 淡出；起不来写 "off" 直接收起。
 ---
 <div class="page-head page-head--totem page-head--scale" data-steelyard>
   <div class="totem-plate">
     <canvas class="page-head__canvas page-head__canvas--totem" data-steelyard-canvas aria-hidden="true" width="300" height="300"></canvas>
+    <span class="totem-loading" aria-hidden="true">
+      <span class="totem-loading__halo">
+        <i class="totem-loading__corner totem-loading__corner--tl"></i>
+        <i class="totem-loading__corner totem-loading__corner--tr"></i>
+        <i class="totem-loading__corner totem-loading__corner--bl"></i>
+        <i class="totem-loading__corner totem-loading__corner--br"></i>
+        <i class="totem-loading__sweep"><i class="totem-loading__head"></i></i>
+        <i class="totem-loading__core"></i>
+      </span>
+    </span>
   </div>
   <div class="page-head__layer">
     <slot />

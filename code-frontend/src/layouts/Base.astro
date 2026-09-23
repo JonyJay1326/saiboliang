@@ -308,10 +308,16 @@ const DEFAULT_SKIN = 'cyber';
         seaQueued = idle(() => {
           seaQueued = null;
           if (!document.querySelector('[data-star-sea-canvas]')) return;
-          import('../scripts/star-sea.js').then(({ mount }) => {
-            seaRelease();
-            sea = mount();
-          });
+          import('../scripts/star-sea.js')
+            .then(({ mount }) => {
+              seaRelease();
+              sea = mount();
+            })
+            // 取件或初始化失败：收掉图腾区加载态，别让占位一直转（该页文字与榜单照常可用）
+            .catch((error) => {
+              console.warn('星海未能启用：', error);
+              document.querySelector('[data-star-sea]')?.setAttribute('data-totem', 'off');
+            });
         });
       };
       document.addEventListener('astro:before-swap', seaRelease);
@@ -339,10 +345,16 @@ const DEFAULT_SKIN = 'cyber';
         tallyQueued = idle(() => {
           tallyQueued = null;
           if (!document.querySelector('[data-tiger-canvas]')) return;
-          import('../scripts/tiger-tally.js').then(({ mount }) => {
-            tallyRelease();
-            tally = mount();
-          });
+          import('../scripts/tiger-tally.js')
+            .then(({ mount }) => {
+              tallyRelease();
+              tally = mount();
+            })
+            // 取件或初始化失败：收掉图腾区加载态（虎符已有 unavailable 分支，这里是兜底）
+            .catch((error) => {
+              console.warn('虎符图腾未能启用：', error);
+              document.querySelector('[data-tiger-tally]')?.setAttribute('data-totem', 'off');
+            });
         });
       };
       document.addEventListener('astro:before-swap', tallyRelease);
@@ -370,10 +382,16 @@ const DEFAULT_SKIN = 'cyber';
         scaleQueued = idle(() => {
           scaleQueued = null;
           if (!document.querySelector('[data-steelyard-canvas]')) return;
-          import('../scripts/steelyard.js').then(({ mount }) => {
-            scaleRelease();
-            scale = mount();
-          });
+          import('../scripts/steelyard.js')
+            .then(({ mount }) => {
+              scaleRelease();
+              scale = mount();
+            })
+            // 取件或初始化失败：收掉图腾区加载态，别让占位一直转（套餐列表照常可用）
+            .catch((error) => {
+              console.warn('杆秤图腾未能启用：', error);
+              document.querySelector('[data-steelyard]')?.setAttribute('data-totem', 'off');
+            });
         });
       };
       document.addEventListener('astro:before-swap', scaleRelease);
@@ -387,21 +405,31 @@ const DEFAULT_SKIN = 'cyber';
         只有左键普通点击才拦下来开弹框。内容按需 fetch 该 URL 并抽取 <main>，
         **不把详情内联进列表页**（§10.2「列表类页面的数据只允许出现一份」）。
 
+        历史行为（2026-09-23 UI 审查：粮票详情 02 / 套餐详情 02）：
+        预览**压入一条自己的历史条目**（state 带 cgPreview / base），于是——
+        后退 = 关闭预览并回到打开前地址，前进 = 重开预览，Esc / 关闭键与浏览器后退等价。
         两处关键取舍（都有实测依据）：
-        1. 用捕获阶段 + stopPropagation 压住 ClientRouter——它的 click 监听是冒泡阶段
-           （`addEventListener("click", …)`，无 capture 选项），捕获阶段先执行即可拦下。
-        2. 用 replaceState 而非 pushState 同步 URL——ClientRouter 同时监听 popstate，
-           新增历史条目会让它的软导航与弹框关闭互相打架。代价：后退键不关闭弹框，
-           而是回到上一个真实页面；URL 仍可分享、刷新即还原为独立详情页。
-        3. 关闭时回到「打开前的地址」，而不是按规则推导列表路径——首页、
-           关联跳转等入口都能正确还原。 */}
+        1. 用捕获阶段 + stopPropagation 压住 ClientRouter 的 click 监听（它在冒泡阶段）。
+        2. popstate 必须**先于** ClientRouter 的监听被处理：本段是 <head> 里的行内经典脚本，
+           先于 ClientRouter 的模块脚本注册；接管时 stopImmediatePropagation，避免它把
+           同一跳转再做一次软导航（那会让弹框与地址互相打架）。
+           其余 popstate 一律放行给 ClientRouter（例如预览条目已过期、底层页面已换）。
+
+        动效（动效专项 P1）：入场保持现有 CSS（约 160–220ms）；退场补一段等长反馈
+        （约 170ms），骨架 → 正文不改到达时间、只把新内容淡入（约 140ms）。
+        只动 opacity / transform，不改弹框尺寸；重复操作取消旧动画；
+        prefers-reduced-motion 下全部直切。 */}
     <script is:inline>
       if (!window.__cgPreview) {
         window.__cgPreview = true;
         const LINK = 'a[href^="/tickets/"], a[href^="/plans/"]';
+        const EXIT_MS = 170;
+        const SWAP_IN_MS = 140;
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 
         let overlay = null;
         let panel = null;
+        let backdrop = null;
         let scroller = null;
         let content = null;
         let lastFocus = null;
@@ -409,6 +437,13 @@ const DEFAULT_SKIN = 'cyber';
         let request = null;
         let dock = null;
         let background = [];
+        let exitAnimations = [];
+        let exitRun = 0;
+        let closing = false;
+        let suppressPopstate = false;
+        let swapToken = 0;
+        // 当前**渲染内容**对应的地址（弹框只改地址栏、不换内容，故不能读 location）
+        let docUrl = location.pathname + location.search + location.hash;
 
         // 软导航会整体替换 <body>，缓存节点随之离线——必须以「是否仍在文档中」判断重建，
         // 否则第二次打开弹框时 build() 直接返回，弹框永远不出现（2026-09-18 实测踩坑）。
@@ -438,6 +473,7 @@ const DEFAULT_SKIN = 'cyber';
             '</div>';
           document.body.appendChild(overlay);
           panel = overlay.querySelector('.preview__panel');
+          backdrop = overlay.querySelector('.preview__backdrop');
           scroller = overlay.querySelector('.preview__scroll');
           content = overlay.querySelector('[data-preview-content]');
           dock = overlay.querySelector('.preview__dock');
@@ -462,33 +498,137 @@ const DEFAULT_SKIN = 'cyber';
           document.body.style.paddingRight = '';
         };
 
-        const close = () => {
-          if (!overlay || overlay.hidden) return;
-          request?.abort();
-          request = null;
+        // 入场是 CSS 动画（display:none → block 会自然重放）；退场前把它清掉，
+        // 免得 fill: both 的结束态和退场动画抢同一条属性。
+        const clearEntryAnimations = () => {
+          for (const el of [backdrop, panel]) {
+            if (!el?.getAnimations) continue;
+            for (const a of el.getAnimations()) if (a.animationName) a.cancel();
+          }
+        };
+
+        const cancelExit = () => {
+          exitRun += 1;
+          const ran = exitAnimations.length > 0;
+          for (const a of exitAnimations) a.cancel();
+          exitAnimations = [];
+          return ran;
+        };
+
+        // 退场：约 170ms，只动 opacity / transform。动画结束才真正隐藏；
+        // 重复关闭（Esc 连按 / 遮罩连点）由 closing 位挡住。
+        const animateExit = (onDone) => {
+          exitRun += 1;
+          const run = exitRun;
+          for (const a of exitAnimations) a.cancel();
+          exitAnimations = [];
+          if (reduced.matches || typeof panel?.animate !== 'function') {
+            onDone();
+            return;
+          }
+          clearEntryAnimations();
+          const fade = backdrop?.animate([{ opacity: 1 }, { opacity: 0 }], {
+            duration: EXIT_MS,
+            easing: 'ease',
+            fill: 'forwards',
+          });
+          const rise = panel.animate(
+            [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(8px)' }],
+            { duration: EXIT_MS, easing: 'cubic-bezier(.4, 0, .7, .2)', fill: 'forwards' }
+          );
+          exitAnimations = [fade, rise].filter(Boolean);
+          Promise.allSettled(exitAnimations.map((a) => a.finished)).then(() => {
+            if (run !== exitRun) return;
+            for (const a of exitAnimations) a.cancel();
+            exitAnimations = [];
+            onDone();
+          });
+        };
+
+        // 快开快关：退场途中重开时，先取消退场，再补一段短促的「回位」，
+        // 避免面板从半透明瞬跳回全亮（只此一处额外动画，reduced 下不挂）。
+        const settleIn = () => {
+          const interrupted = cancelExit();
+          if (!interrupted || reduced.matches || typeof panel?.animate !== 'function') return;
+          panel.animate(
+            [{ opacity: .35, transform: 'translateY(5px)' }, { opacity: 1, transform: 'none' }],
+            { duration: 160, easing: 'cubic-bezier(.2, .7, .3, 1)' }
+          );
+          backdrop?.animate([{ opacity: .4 }, { opacity: 1 }], { duration: 160, easing: 'ease' });
+        };
+
+        // 骨架 → 正文（失败态同理）：不延后内容到达，只把新内容淡入约 140ms。
+        const swapContent = (html) => {
+          swapToken += 1;
+          content.innerHTML = html;
+          if (reduced.matches || typeof content.animate !== 'function') return;
+          content.animate(
+            [{ opacity: .3, transform: 'translateY(4px)' }, { opacity: 1, transform: 'none' }],
+            { duration: SWAP_IN_MS, easing: 'cubic-bezier(.2, .7, .3, 1)' }
+          );
+        };
+
+        const historyIsPreview = () => Boolean(window.history.state && window.history.state.cgPreview);
+
+        const finishClose = () => {
+          closing = false;
+          if (!overlay) return;
           overlay.hidden = true;
-          background.forEach((el) => { el.inert = false; });
-          background = [];
-          unlockScroll();
-          if (fromUrl) window.history.replaceState(window.history.state, '', fromUrl);
-          fromUrl = null;
+          overlay.removeAttribute('aria-busy');
           if (lastFocus instanceof HTMLElement && lastFocus.isConnected) lastFocus.focus({ preventScroll: true });
           lastFocus = null;
         };
 
-        const open = async (url) => {
+        // viaHistory = 由浏览器后退/前进触发的关闭：地址已经由浏览器改好，这里不再动历史。
+        const close = ({ viaHistory = false } = {}) => {
+          if (!overlay || overlay.hidden || closing) return;
+          closing = true;
+          swapToken += 1;
+          request?.abort();
+          request = null;
+          // 退场期间就放开背景：动画不延后「点回列表」的响应
+          background.forEach((el) => { el.inert = false; });
+          background = [];
+          unlockScroll();
+          if (!viaHistory) {
+            if (historyIsPreview()) {
+              // 打开时压入的就是本弹框的条目：后退一条 = 回到打开前地址（popstate 由上面接管）
+              suppressPopstate = true;
+              window.history.back();
+            } else if (fromUrl) {
+              window.history.replaceState(window.history.state, '', fromUrl);
+            }
+          }
+          fromUrl = null;
+          animateExit(finishClose);
+        };
+
+        const open = async (url, options = {}) => {
           build();
+          const fresh = overlay.hidden;   // 全新打开（false = 换对象或退场途中重开）
+          closing = false;
+          settleIn();
           request?.abort();
           const controller = new AbortController();
           request = controller;
-          if (overlay.hidden) {
-            fromUrl = window.location.pathname + window.location.search + window.location.hash;
+          if (fresh) {
+            // 前进回到预览条目时，打开前地址要按条目里记的 base 还原，不能读当前 location；
+            // 这一条历史本来就属于本弹框，viaHistory 下不再新增条目（否则回退链会越走越长）
+            fromUrl = options.base ?? window.location.pathname + window.location.search + window.location.hash;
             lastFocus = document.activeElement;
-            lockScroll();
-            background = [...document.body.children].filter((el) => el instanceof HTMLElement && el !== overlay && !el.inert && !['SCRIPT', 'STYLE'].includes(el.tagName));
-            background.forEach((el) => { el.inert = true; });
+            if (!options.viaHistory) {
+              window.history.pushState({ ...window.history.state, cgPreview: url, base: fromUrl }, '', url);
+            }
+          } else {
+            // 弹框内换对象（同一入口连续点开）：替换当前预览条目，后退仍一步回到列表
+            window.history.replaceState({ ...window.history.state, cgPreview: url, base: fromUrl }, '', url);
           }
           overlay.hidden = false;
+          // 背景态（inert + 滚动锁）每次重算：退场途中重开时，close() 已经把它们撤掉过一次
+          background.forEach((el) => { el.inert = false; });
+          background = [...document.body.children].filter((el) => el instanceof HTMLElement && el !== overlay && !el.inert && !['SCRIPT', 'STYLE'].includes(el.tagName));
+          background.forEach((el) => { el.inert = true; });
+          lockScroll();
           const kind = url.startsWith('/plans/') ? 'plans' : 'tickets';
           overlay.dataset.kind = kind;
           overlay.querySelector('.preview__label').textContent = kind === 'plans' ? '粮市 / 套餐档案' : '粮票 / 票面详情';
@@ -500,7 +640,6 @@ const DEFAULT_SKIN = 'cyber';
           dock.hidden = true;
           if (scroller) scroller.scrollTop = 0;
           panel.focus();
-          window.history.replaceState(window.history.state, '', url);
           const timeout = window.setTimeout(() => controller.abort(), 15000);
           try {
             const res = await fetch(url, { headers: { Accept: 'text/html' }, signal: controller.signal });
@@ -522,17 +661,18 @@ const DEFAULT_SKIN = 'cyber';
                 p.remove();
               }
             });
-            content.innerHTML = main.innerHTML;
+            const actions = main.querySelector('.plan-detail__foot, .ticket__actions');
+            if (actions) actions.remove();
+            swapContent(main.innerHTML);
             const heading = content.querySelector('h1');
             if (heading) overlay.setAttribute('aria-label', heading.textContent.trim());
-            const actions = content.querySelector('.plan-detail__foot, .ticket__actions');
             if (actions) {
               dock.appendChild(actions);
               dock.hidden = false;
             }
           } catch (error) {
             if (request !== controller || overlay.hidden) return;
-            content.innerHTML = '<p class="preview__error" role="alert">' + (controller.signal.aborted ? '取件超时' : '取件失败') + '，<a data-preview-page data-astro-reload href="' + url + '">直接打开详情页</a>。</p>';
+            swapContent('<p class="preview__error" role="alert">' + (controller.signal.aborted ? '取件超时' : '取件失败') + '，<a data-preview-page data-astro-reload href="' + url + '">直接打开详情页</a>。</p>');
           } finally {
             window.clearTimeout(timeout);
             if (request === controller) overlay.removeAttribute('aria-busy');
@@ -565,8 +705,31 @@ const DEFAULT_SKIN = 'cyber';
           if (target?.closest('[data-preview-close]')) close();
         });
 
+        // 必须在 ClientRouter 的 popstate 之前接管（本脚本是行内经典脚本，注册在先）：
+        // ① 自己发起的后退（关闭弹框）→ 吃掉这一次，别让它再走软导航；
+        // ② 弹框开着时的前进/后退 → 先关弹框，地址交给浏览器；
+        // ③ 弹框已关、又前进回到预览条目且底层页面还是打开它的那一页 → 重开；
+        // 其余一律放行（例如底层页面已换，让 ClientRouter 正常软导航）。
+        window.addEventListener('popstate', (event) => {
+          if (suppressPopstate) {
+            suppressPopstate = false;
+            event.stopImmediatePropagation();
+            return;
+          }
+          if (overlay && !overlay.hidden) {
+            event.stopImmediatePropagation();
+            close({ viaHistory: true });
+            return;
+          }
+          const state = window.history.state;
+          if (state && state.cgPreview && state.base === docUrl) {
+            event.stopImmediatePropagation();
+            open(state.cgPreview, { base: state.base, viaHistory: true });
+          }
+        });
+
         document.addEventListener('keydown', (event) => {
-          if (!overlay || overlay.hidden) return;
+          if (!overlay || overlay.hidden || closing) return;
           if (event.key === 'Escape') {
             event.preventDefault();
             close();
@@ -586,16 +749,25 @@ const DEFAULT_SKIN = 'cyber';
           }
         });
 
+        // 记录「当前渲染内容」的地址：软导航换页后前进回到预览条目要按它判断能不能重开
+        document.addEventListener('astro:page-load', () => {
+          docUrl = location.pathname + location.search + location.hash;
+        });
+
         // 弹框内点走真实导航（回列表链接、外链之外的站内链）时，软导航只换 <body>：
         // 缓存的弹框节点离线、<html> 上的内联 overflow 却会留下——不清理就会带着滚动锁进新页
         //（2026-09-20 实测踩坑）。这里只复位状态，不动 history。
         document.addEventListener('astro:after-swap', () => {
           if (!overlay) return;
+          closing = false;
+          cancelExit();
+          swapToken += 1;
           request?.abort();
           request = null;
           background.forEach((el) => { el.inert = false; });
           background = [];
           overlay.hidden = true;
+          overlay.removeAttribute('aria-busy');
           unlockScroll();
           fromUrl = null;
           lastFocus = null;
