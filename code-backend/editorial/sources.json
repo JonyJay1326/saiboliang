@@ -802,7 +802,7 @@
         ],
         "status": "available",
         "source": "official",
-        "sourceUrl": "https://opencode.ai/zh/go",
+        "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE",
         "updatedAt": "2026-09-17",
         "checkMethod": "auto"
       }
@@ -997,7 +997,7 @@
       ],
       "record": {
         "id": "xfyun-astron-plan",
-        "rank": 7,
+        "rank": 8,
         "rankBasis": "9 万次/月量大，模型版本滞后半代",
         "vendor": "讯飞星辰",
         "product": "Astron Coding Plan",

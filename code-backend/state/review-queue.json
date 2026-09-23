@@ -252,17 +252,6 @@
     "createdAt": "2026-09-17T22:57:33Z"
   },
   {
-    "kind": "plans",
-    "objectId": "opencode-go-plan",
-    "reason": "official terms changed; retaining prior record",
-    "evidence": {
-      "sourceUrl": "https://opencode.ai/zh/go"
-    },
-    "id": "2cc3441911bd3853ee75a9b2eaa8cddc02f543c9c37f7ac666922cdea9473892",
-    "status": "pending",
-    "createdAt": "2026-09-18T02:37:02Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "jamiepine/voicebox",
     "reason": "AI applicability uncertain",
@@ -2303,17 +2292,6 @@
     "createdAt": "2026-09-20T13:56:24Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "aibase",
-    "reason": "candidate count dropped below 60%: aibase",
-    "evidence": {
-      "url": "https://www.aibase.com/zh/news"
-    },
-    "id": "df57fa2a5ee715c071d28072a636b0623f9bb7b1f99a2ab83d54286c5a7480fb",
-    "status": "pending",
-    "createdAt": "2026-09-20T14:25:08Z"
-  },
-  {
     "kind": "plans",
     "objectId": "bigmodel-coding-plan",
     "reason": "official terms changed; retaining prior record",
@@ -3138,5 +3116,49 @@
     "id": "baa8312a4a4e611753d40beeaaa2169f4a9f9b6b5fe1e15b57221873206a8104",
     "status": "pending",
     "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "7663b51ef99ebb29ab6a7e62d427edd3e392b5aae6057cc6aa7d113b337a685a",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "6af8b13be2dacbb7a78152de2faed6d8a38dd75def22457fe92eafe433a3263a",
+    "status": "pending",
+    "createdAt": "2026-09-23T02:15:54Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "qbit",
+    "reason": "network error: RemoteDisconnected",
+    "evidence": {
+      "url": "https://www.qbitai.com/feed"
+    },
+    "id": "feee75760fedc917c21a16337e75c2148546a79aeb4e3770d87a30dfe6f4be86",
+    "status": "pending",
+    "createdAt": "2026-09-23T02:15:54Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "opencode-go-plan",
+    "reason": "official terms changed; retaining prior record",
+    "evidence": {
+      "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE"
+    },
+    "id": "4bdd56839dfafa2fe251223407755f8efbacf0bd232d39985a6a2a5acb3963b7",
+    "status": "pending",
+    "createdAt": "2026-09-23T03:00:27Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "aibase",
+    "reason": "candidate count dropped below 60%: aibase",
+    "evidence": {
+      "url": "https://www.aibase.com/zh/news"
+    },
+    "id": "df57fa2a5ee715c071d28072a636b0623f9bb7b1f99a2ab83d54286c5a7480fb",
+    "status": "pending",
+    "createdAt": "2026-09-23T03:02:47Z"
   }
 ]

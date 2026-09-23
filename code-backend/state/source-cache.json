@@ -746,161 +746,161 @@
     ]
   },
   "models": {
-    "dataUpdatedAt": "2026-09-22T08:37:23Z",
+    "dataUpdatedAt": "2026-09-23T03:00:27Z",
     "rankings": {
       "source": "artificial-analysis",
       "sourceUrl": "https://artificialanalysis.ai/",
       "indexVersion": "4.3",
-      "updatedAt": "2026-09-22T08:37:23Z",
+      "updatedAt": "2026-09-23T03:00:27Z",
       "intelligence": [
+        {
+          "modelId": "claude-opus-5-5",
+          "score": 57.6,
+          "rank": 1
+        },
         {
           "modelId": "claude-fable-5-1",
           "score": 53.4,
-          "rank": 1
+          "rank": 2
         },
         {
           "modelId": "gpt-6-astra",
           "score": 52.7,
-          "rank": 2
+          "rank": 3
         },
         {
           "modelId": "claude-opus-5",
           "score": 50.8,
-          "rank": 3
+          "rank": 4
         },
         {
           "modelId": "claude-fable-5",
           "score": 49.6,
-          "rank": 4
+          "rank": 5
         },
         {
           "modelId": "muse-spark-1-3",
           "score": 48.1,
-          "rank": 5
+          "rank": 6
+        },
+        {
+          "modelId": "gpt-6-sol",
+          "score": 47.5,
+          "rank": 7
         },
         {
           "modelId": "gpt-5-6-sol",
           "score": 47,
-          "rank": 6
+          "rank": 8
         },
         {
           "modelId": "grok-4-7",
           "score": 46.4,
-          "rank": 7
+          "rank": 9
         },
         {
           "modelId": "mimo-v2-6-pro",
           "score": 46.3,
-          "rank": 8
+          "rank": 10
         },
         {
           "modelId": "qwen3-8-max",
           "score": 45.4,
-          "rank": 9
+          "rank": 11
         },
         {
           "modelId": "glm-5-3",
           "score": 44.8,
-          "rank": 10
+          "rank": 12
         },
         {
           "modelId": "grok-4-6",
           "score": 44.3,
-          "rank": 11
+          "rank": 13
         },
         {
           "modelId": "step-5",
           "score": 43.7,
-          "rank": 12
+          "rank": 14
         },
         {
           "modelId": "kimi-k3",
           "score": 43.6,
-          "rank": 13
+          "rank": 15
         },
         {
           "modelId": "gpt-5-6-terra",
           "score": 42.1,
-          "rank": 14
+          "rank": 16
         },
         {
           "modelId": "claude-opus-4-8",
           "score": 41.8,
-          "rank": 15
+          "rank": 17
         },
         {
           "modelId": "glm-5-3-flash",
           "score": 41.8,
-          "rank": 16
+          "rank": 18
         },
         {
           "modelId": "gemini-3-8-flash",
           "score": 40.9,
-          "rank": 17
+          "rank": 19
         },
         {
           "modelId": "claude-opus-4-7",
           "score": 40.7,
-          "rank": 18
+          "rank": 20
         },
         {
           "modelId": "qwen3-8-max-0803",
           "score": 40.2,
-          "rank": 19
+          "rank": 21
         },
         {
           "modelId": "qwen3-8-2-4t-a95b",
           "score": 39.9,
-          "rank": 20
+          "rank": 22
         },
         {
           "modelId": "qwen3-8-flash-next",
           "score": 39.8,
-          "rank": 21
+          "rank": 23
         },
         {
           "modelId": "gemini-3-7-flash-medium",
           "score": 39.6,
-          "rank": 22
+          "rank": 24
         },
         {
           "modelId": "muse-spark-1-2",
           "score": 39.6,
-          "rank": 23
+          "rank": 25
         },
         {
           "modelId": "deepseek-v4-1-flash",
           "score": 39.5,
-          "rank": 24
+          "rank": 26
         },
         {
           "modelId": "gpt-5-4",
           "score": 39,
-          "rank": 25
+          "rank": 27
         },
         {
           "modelId": "grok-4-5",
           "score": 38.8,
-          "rank": 26
+          "rank": 28
         },
         {
           "modelId": "gpt-5-5",
           "score": 38.4,
-          "rank": 27
+          "rank": 29
         },
         {
           "modelId": "claude-sonnet-5",
           "score": 38.2,
-          "rank": 28
-        },
-        {
-          "modelId": "gpt-5-6-luna",
-          "score": 37.3,
-          "rank": 29
-        },
-        {
-          "modelId": "deepseek-v4-pro",
-          "score": 36,
           "rank": 30
         }
       ],
@@ -1068,7 +1068,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "claude-fable-5-1",
@@ -1080,7 +1080,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "claude-opus-4-7",
@@ -1092,7 +1092,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-7",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "claude-opus-4-8",
@@ -1104,7 +1104,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-8",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "claude-opus-5",
@@ -1116,7 +1116,19 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
+      },
+      {
+        "id": "claude-opus-5-5",
+        "name": "Claude Opus 5.5",
+        "vendor": "Anthropic",
+        "aaId": "2f3c4dc9-a450-4303-8697-0237257cf08f",
+        "releasedAt": "2026-09-22",
+        "inputCost": 4.0,
+        "outputCost": 20.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "claude-sonnet-5",
@@ -1128,7 +1140,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "deepseek-v4-1-flash",
@@ -1140,7 +1152,7 @@
         "outputCost": 1.2,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "deepseek-v4-flash",
@@ -1152,7 +1164,7 @@
         "outputCost": 1.32,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "deepseek-v4-pro",
@@ -1164,7 +1176,7 @@
         "outputCost": 3.96,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-pro",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gemini-3-1-pro-preview",
@@ -1176,7 +1188,7 @@
         "outputCost": 12.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gemini-3-6-flash",
@@ -1188,7 +1200,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-6-flash",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gemini-3-7-flash-medium",
@@ -1200,7 +1212,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-7-flash-medium",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gemini-3-8-flash",
@@ -1212,7 +1224,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "glm-5-3",
@@ -1224,7 +1236,7 @@
         "outputCost": 4.4,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "glm-5-3-flash",
@@ -1236,7 +1248,7 @@
         "outputCost": 0.5,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3-flash",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gpt-5-4",
@@ -1248,7 +1260,7 @@
         "outputCost": 15.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-4",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gpt-5-5",
@@ -1260,7 +1272,7 @@
         "outputCost": 30.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gpt-5-6-luna",
@@ -1272,7 +1284,7 @@
         "outputCost": 1.2,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-luna",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gpt-5-6-sol",
@@ -1284,7 +1296,7 @@
         "outputCost": 20.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gpt-5-6-terra",
@@ -1296,7 +1308,7 @@
         "outputCost": 12.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-terra",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "gpt-6-astra",
@@ -1308,7 +1320,19 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-astra",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
+      },
+      {
+        "id": "gpt-6-sol",
+        "name": "GPT-6 Sol",
+        "vendor": "OpenAI",
+        "aaId": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+        "releasedAt": "2026-09-22",
+        "inputCost": 2.0,
+        "outputCost": 10.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-sol",
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "grok-4-5",
@@ -1320,7 +1344,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-5",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "grok-4-6",
@@ -1332,7 +1356,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-6",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "grok-4-7",
@@ -1344,7 +1368,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-7",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "kimi-k3",
@@ -1356,7 +1380,7 @@
         "outputCost": 15.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "mimo-v2-6-pro",
@@ -1368,7 +1392,7 @@
         "outputCost": 0.87,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "muse-spark-1-1",
@@ -1380,7 +1404,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-1",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "muse-spark-1-2",
@@ -1392,7 +1416,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-2",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "muse-spark-1-3",
@@ -1404,7 +1428,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "qwen3-8-2-4t-a95b",
@@ -1416,7 +1440,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "qwen3-8-flash-next",
@@ -1428,7 +1452,7 @@
         "outputCost": 0.47,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "qwen3-8-max",
@@ -1440,7 +1464,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "qwen3-8-max-0803",
@@ -1452,7 +1476,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       },
       {
         "id": "step-5",
@@ -1464,7 +1488,7 @@
         "outputCost": 2.7,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/step-5",
-        "priceUpdatedAt": "2026-09-22T08:37:23Z"
+        "priceUpdatedAt": "2026-09-23T03:00:27Z"
       }
     ],
     "plans": [
@@ -1712,7 +1736,7 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://x.ai/pricing",
-        "updatedAt": "2026-09-22",
+        "updatedAt": "2026-09-23",
         "checkMethod": "auto"
       },
       {
@@ -1844,12 +1868,12 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://claude.com/pricing",
-        "updatedAt": "2026-09-22",
+        "updatedAt": "2026-09-23",
         "checkMethod": "auto"
       },
       {
         "id": "xfyun-astron-plan",
-        "rank": 7,
+        "rank": 8,
         "rankBasis": "9 万次/月量大，模型版本滞后半代",
         "vendor": "讯飞星辰",
         "product": "Astron Coding Plan",
@@ -1916,7 +1940,7 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
-        "updatedAt": "2026-09-22",
+        "updatedAt": "2026-09-23",
         "checkMethod": "auto"
       }
     ]
@@ -2327,8 +2351,274 @@
     }
   },
   "news": {
-    "dataUpdatedAt": "2026-09-22T15:32:21Z",
+    "dataUpdatedAt": "2026-09-23T03:02:47Z",
     "items": [
+      {
+        "title": "GitHub Copilot 应用中的 OpenTelemetry",
+        "sourceUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+        "publishedAt": "2026-09-23T02:14:54Z",
+        "source": "GitHub Copilot",
+        "summary": "GitHub Copilot 应用现支持通过企业托管设置配置 OpenTelemetry。",
+        "id": "cf4f876c079667faff5539807a45f8536ca44ae7c7060c9b23525f37702b0fe6",
+        "originalTitle": "OpenTelemetry in the GitHub Copilot app",
+        "translatedAt": "2026-09-23T02:36:28Z",
+        "lang": "en",
+        "originalSource": "GitHub Copilot",
+        "originalUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+        "originalVerifiedAt": "2026-09-23T02:36:28Z",
+        "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-23T02:14:54Z",
+        "featured": null
+      },
+      {
+        "title": "世卫组织发布重磅报告，呼吁全面升级医疗 AI 研究伦理监管",
+        "sourceUrl": "https://www.aibase.com/zh/news/31289",
+        "source": "AIBase",
+        "summary": "世界卫生组织（WHO）于2026年9月21日正式发布了一份题为《人工智能相关健康研究:伦理审查与监管》的全新报告。",
+        "publishedAt": "2026-09-23T01:46:50Z",
+        "id": "f13e5c9f512dfd53d0ae7636134a7e23b8a6e39eac6ac607129fd364308085c2",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31289",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-23T01:46:50Z",
+        "featured": null
+      },
+      {
+        "title": "虎鲸文娱发布“鲸锐AI”，布局AI影视制作与管理平台",
+        "sourceUrl": "https://www.aibase.com/zh/news/31288",
+        "source": "AIBase",
+        "summary": "在2026云栖大会“AI+文化传媒”技术发展论坛上，虎鲸文娱集团发布AI影视制作与管理平台“鲸锐AI”，定位于面向影视行业的新型AI制作基础设施",
+        "publishedAt": "2026-09-23T01:37:01Z",
+        "id": "01fe0d4f0bfbb1d6c1fd6ef51d6a1649fb4e0b68d5a6e928e3c8eabe0e752210",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31288",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-23T01:37:01Z",
+        "featured": null
+      },
+      {
+        "title": "OpenAI 重磅发布 GPT-6 Sol 与 Luna 模型：API 价格腰斩，性能直逼顶级旗舰",
+        "sourceUrl": "https://www.aibase.com/zh/news/31284",
+        "source": "AIBase",
+        "summary": "OpenAI 今日正式发布了 GPT-6系列的最新成员 ——GPT-6Sol 与 GPT-6Luna。",
+        "publishedAt": "2026-09-23T01:26:29Z",
+        "id": "fbb6a12c19b9728fce985b7b1f554098db9f04158657251fc57f9a287efd4a77",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31284",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-23T01:26:29Z",
+        "featured": true
+      },
+      {
+        "title": "Anthropic发布Claude Opus5.5:任务成本降40%、输出提速30%，9项测试7项领先GPT-6Astra",
+        "sourceUrl": "https://www.aibase.com/zh/news/31283",
+        "source": "AIBase",
+        "summary": "Anthropic于9月23日凌晨发布Claude5.5系列首款模型Opus5.5，官方称多数任务表现与Fable5.1相当",
+        "publishedAt": "2026-09-23T01:19:55Z",
+        "id": "77cb5c24ca4e52674949bc942b453d2921457a655fabd4144cc48f19096fc254",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31283",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-23T01:19:55Z",
+        "featured": true
+      },
+      {
+        "title": "Anthropic上线Claude Opus 5.5 ，任务成本大降 40%",
+        "sourceUrl": "https://www.aibase.com/zh/news/31277",
+        "source": "AIBase",
+        "summary": "Anthropic 发布 Claude Opus 5.5，这是 Claude 5.5 系列的首款模型。",
+        "publishedAt": "2026-09-23T00:53:24Z",
+        "id": "8b9933678cbcc8c3b208a60f3b563b58ca43e609e2957b9bafc48471283cb519",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31277",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-23T00:53:24Z",
+        "featured": null
+      },
+      {
+        "title": "Copilot for JetBrains 的新功能与改进",
+        "sourceUrl": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains",
+        "publishedAt": "2026-09-23T00:34:18Z",
+        "source": "GitHub",
+        "summary": "GitHub Copilot for JetBrains 1.18.0 带来 AI 辅助工具审批、代理对话控制及组织共享技能与指令。",
+        "id": "18036a2d23f1f8494acfaf6bffcb6d42783ba3cfa74c64a6f5002e7faeb94828",
+        "originalTitle": "New features and improvements in Copilot for JetBrains",
+        "translatedAt": "2026-09-23T02:36:28Z",
+        "lang": "en",
+        "originalSource": "GitHub",
+        "originalUrl": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains",
+        "originalVerifiedAt": "2026-09-23T02:36:28Z",
+        "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-23T00:34:18Z",
+        "featured": true
+      },
+      {
+        "title": "Claude Opus 5.5 现已在 GitHub Copilot 中可用",
+        "sourceUrl": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+        "publishedAt": "2026-09-22T17:10:23Z",
+        "source": "GitHub",
+        "summary": "Anthropic最新Opus模型Claude Opus 5.5已在GitHub Copilot上线，可用于智能体编程、长时间智能体任务和知识工作。",
+        "id": "235d6f2bbf750d6c0d6191c6fdd19a55df7f87d7d25460229b60d1a97c7e9f5d",
+        "originalTitle": "Claude Opus 5.5 is now available in GitHub Copilot",
+        "translatedAt": "2026-09-23T02:15:54Z",
+        "lang": "en",
+        "originalSource": "GitHub",
+        "originalUrl": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+        "originalVerifiedAt": "2026-09-23T02:15:54Z",
+        "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-22T17:10:23Z",
+        "featured": true
+      },
+      {
+        "title": "小米18 Pro系列首发传奇一瞬大模型影像，用端到端大模型把相机级光学虚化装进手机",
+        "sourceUrl": "https://www.aibase.com/zh/news/31272",
+        "source": "AIBase",
+        "summary": "9月22日，小米官宣小米18Pro系列将于9月23日晚7点登场，包含18Pro与18Pro Max两款机型。",
+        "publishedAt": "2026-09-22T08:15:00Z",
+        "id": "d7d42e82f655ef4bdaf4cdb9e488d68e3c60bdd4bf59c0d1041144dd53ffc16b",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31272",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-22T08:15:00Z",
+        "featured": true
+      },
+      {
+        "title": "OpenAI内部AI已能自主训练模型，奥特曼发布全球安全倡议应对RSI逼近",
+        "sourceUrl": "https://www.aibase.com/zh/news/31271",
+        "source": "AIBase",
+        "summary": "OpenAI生产线深处正在发生一件令人脊背发凉的事:内部的AI模型已经能够自主接管实验性AI模型的训练全流程。",
+        "publishedAt": "2026-09-22T08:02:05Z",
+        "id": "35f763c02388066e08cbeb8bd3af8380f8266c4a79bdea60d0c2547b46788d99",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31271",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-22T08:02:05Z",
+        "featured": true
+      },
+      {
+        "title": "SpaceXAI 最强模型 Grok 4.7 上线：长任务能力拉满，价格只有旗舰一半",
+        "sourceUrl": "https://www.aibase.com/zh/news/31268",
+        "source": "AIBase",
+        "summary": "今天一早，SpaceXAI 推出最强模型 Grok4.7。发布页开头只有一句极具“攻击性”的定位:面向编程与知识工作的最强模型，速度达可比模型两倍，价格仅一半。",
+        "publishedAt": "2026-09-22T07:05:43Z",
+        "id": "bbdd60b44b92552d08ff1c08c1f7639c668fc41b84989e33db1dba4e385b8de2",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31268",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-22T07:05:43Z",
+        "featured": true
+      },
+      {
+        "title": "蚂蚁阿福健康专区进入2000多家商超，AI营养师走向线下",
+        "sourceUrl": "https://www.aibase.com/zh/news/31267",
+        "source": "AIBase",
+        "summary": "9月22日，蚂蚁阿福健康专区开始规模进入线下商超，目前全国已有2000多家门店陆续上线",
+        "publishedAt": "2026-09-22T06:46:16Z",
+        "id": "447e779e510240d8ce42626fdc8c40591888861f80a52c6c6dee0d605c8159a0",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31267",
+        "category": "industry",
+        "eventType": "deep-analysis",
+        "addedAt": "2026-09-22T06:46:16Z",
+        "featured": true
+      },
+      {
+        "title": "小米发布并开源 MiMo-V2.6:AA 智能指数46分登顶最强开源模型",
+        "sourceUrl": "https://www.aibase.com/zh/news/31249",
+        "source": "AIBase",
+        "summary": "小米9月22日发布并开源 MiMo-V2.6系列，含 MiMo-V2.6-Pro 与 MiMo-V2.6-Flash 两款原生全模态模型",
+        "publishedAt": "2026-09-22T01:37:34Z",
+        "id": "8ab5e5b3cea16ee997db59bbe9e7fa36a57adf095a2398363cb75552362511a1",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31249",
+        "category": "model",
+        "eventType": "model-review",
+        "addedAt": "2026-09-22T01:37:34Z",
+        "featured": true
+      },
+      {
+        "title": "NVIDIA 推出 DSX Ready，为 AI 工厂认证电源与冷却产品",
+        "sourceUrl": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+        "publishedAt": "2026-09-21T18:00:07Z",
+        "source": "NVIDIA",
+        "summary": "NVIDIA 推出 DSX Ready 认证计划，首批覆盖电池储能系统与冷却分配单元。",
+        "id": "9d552a651ead7d3a495ef4a48e180b1714c3b6e1973c7ecfd375941d801d2cb8",
+        "originalTitle": "NVIDIA Launches DSX Ready to Qualify Power and Cooling Products for AI Factories",
+        "translatedAt": "2026-09-23T02:36:28Z",
+        "lang": "en",
+        "originalSource": "NVIDIA",
+        "originalUrl": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+        "originalVerifiedAt": "2026-09-23T02:36:28Z",
+        "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-21T18:00:07Z",
+        "featured": true
+      },
       {
         "title": "Grok 4.7 现已在 GitHub Copilot 中可用",
         "sourceUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
@@ -2366,6 +2656,25 @@
         "eventType": "major-update",
         "addedAt": "2026-09-21T17:06:12Z",
         "featured": null
+      },
+      {
+        "title": "月之暗面推出Kimi Code Desktop桌面端，把AI编程Agent直接搬上macOS和Windows",
+        "sourceUrl": "https://www.aibase.com/zh/news/31239",
+        "source": "AIBase",
+        "summary": "月之暗面同步上线了Kimi Code Desktop的macOS与Windows版本，作为Kimi Code的官方桌面客户端",
+        "publishedAt": "2026-09-21T09:26:35Z",
+        "id": "d712385ece48413c24f512dd415f5ca48bc90e94a37c1740a2e1e0bd888dc5db",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31239",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-21T09:26:35Z",
+        "featured": true
       },
       {
         "title": "长三角安全人工智能安徽省实验室发布星界、星驭、星鉴三大AI安全解决方案",
@@ -2406,6 +2715,25 @@
         "featured": true
       },
       {
+        "title": "Claude Opus 5. 5 疑遭内测泄露：跳级直冲GPT-6，百万Token价格腰斩至 4 美元",
+        "sourceUrl": "https://www.aibase.com/zh/news/31231",
+        "source": "AIBase",
+        "summary": "所有人都在守着Opus5.2的档期，可Anthropic这回偏不按常理出牌。最新线报显示",
+        "publishedAt": "2026-09-21T07:09:06Z",
+        "id": "b67c8253e438434fb27d70b2c4dfe97fe737d5c0ea3717ccb5d2405aa963feea",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31231",
+        "category": "industry",
+        "eventType": "action-required",
+        "addedAt": "2026-09-21T07:09:06Z",
+        "featured": true
+      },
+      {
         "title": "GPT-6 Astra开进机器人身体！清华联手无问芯穹等开源RPent",
         "sourceUrl": "https://www.qbitai.com/2026/09/493218.html",
         "publishedAt": "2026-09-21T06:22:37Z",
@@ -2425,6 +2753,44 @@
         "featured": true
       },
       {
+        "title": "登顶国际Data Agent榜单，OceanBase超过多项GPT、Claude方案",
+        "sourceUrl": "https://www.aibase.com/zh/news/31229",
+        "source": "AIBase",
+        "summary": "近日， OceanBase团队提交的Data Agent方案登顶国际数据智能体基准Data Agent Benchmark（简称DAB）",
+        "publishedAt": "2026-09-21T06:08:11Z",
+        "id": "72753a56c05ba95eaa34bf0b08f575dfb4ab028225ff752d8773714cd6bfb156",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31229",
+        "category": "model",
+        "eventType": "model-review",
+        "addedAt": "2026-09-21T06:08:11Z",
+        "featured": null
+      },
+      {
+        "title": "阿里 70 亿参数图像模型Qwen-Image-2. 1 开源发布，号称以瘦身之躯叫板闭源巨头",
+        "sourceUrl": "https://www.aibase.com/zh/news/31227",
+        "source": "AIBase",
+        "summary": "阿里通义千问团队近日端出了一道让开源社区眼前一亮的菜:开放权重的图像生成与编辑模型Qwen-Image-2.1正式登场。",
+        "publishedAt": "2026-09-21T03:44:56Z",
+        "id": "1833079b11dfd9e49ae5c9ded830a55cfb96a9960169f54b1168569e0edd48f3",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31227",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-21T03:44:56Z",
+        "featured": true
+      },
+      {
         "title": "百曜科技发起，《AI虚拟细胞（AIVC）技术趋势、产业生态与应用前景研究报告》正式发布",
         "sourceUrl": "https://www.qbitai.com/2026/09/493114.html",
         "publishedAt": "2026-09-21T02:28:46Z",
@@ -2441,6 +2807,44 @@
         "category": "tool",
         "eventType": "major-update",
         "addedAt": "2026-09-21T04:16:49Z",
+        "featured": null
+      },
+      {
+        "title": "TypeSafe AI 推出决策专用模型 Jev：比大语言模型快 10 倍、成本仅十分之一",
+        "sourceUrl": "https://www.aibase.com/zh/news/31215",
+        "source": "AIBase",
+        "summary": "旧金山初创公司 TypeSafe AI 近日发布了一款名为 Jev 的新型 AI 模型。",
+        "publishedAt": "2026-09-21T01:22:39Z",
+        "id": "0551d454b7374c61c8df56bb337a896f80c418094e796090c33141a501ade7a5",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31215",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-21T01:22:39Z",
+        "featured": true
+      },
+      {
+        "title": "推出 Grok 4.7",
+        "sourceUrl": "https://x.ai/news/grok-4-7",
+        "source": "SpaceXAI",
+        "summary": "SpaceXAI 面向编程与知识工作的最强模型。速度是同类模型的两倍，价格仅为其一半。",
+        "publishedAt": "2026-09-21T00:00:00Z",
+        "id": "39b901174b5433760268459014cd78aa913e65cfdad9f8acf94eedcb904e8042",
+        "originalTitle": "Introducing Grok 4.7",
+        "translatedAt": "2026-09-23T02:36:28Z",
+        "lang": "en",
+        "originalSource": "SpaceXAI",
+        "originalUrl": "https://x.ai/news/grok-4-7",
+        "originalVerifiedAt": "2026-09-23T02:36:28Z",
+        "url": "https://x.ai/news/grok-4-7",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-21T00:00:00Z",
         "featured": true
       },
       {
@@ -2460,7 +2864,64 @@
         "category": "tool",
         "eventType": "major-update",
         "addedAt": "2026-09-21T01:02:06Z",
+        "featured": null
+      },
+      {
+        "title": "剪映发布全新 AI 能力：专业版上线“剪映 Hub”，移动端推 AI 助手“小映”",
+        "sourceUrl": "https://www.aibase.com/zh/news/31206",
+        "source": "AIBase",
+        "summary": "剪映举办“AI 新创作发布会”，推出剪映 Hub、AI 创作助手“小映”等多项 AI 新功能，并升级创作者生态，打造覆盖从新手到专业的全场景智能创作平台。",
+        "publishedAt": "2026-09-20T09:28:53Z",
+        "id": "c441bf6f13da81edd5506a94e9476d8a442eca16d0b0cc2a723c7498dc79ef59",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31206",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-20T09:28:53Z",
         "featured": true
+      },
+      {
+        "title": "阿里发布 Qwen-Image-2.1-PE-I2I",
+        "sourceUrl": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+        "publishedAt": "2026-09-20T08:46:47Z",
+        "source": "阿里（Hugging Face）",
+        "summary": "阿里发布 Qwen-Image-2.1-PE-I2I，推动人工智能开源开放。",
+        "id": "413e4ee860ab5e965ff1844e8ef51428eaca52e446ddea5e5d89f3c25950bb35",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": "阿里（Hugging Face）",
+        "originalUrl": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+        "originalVerifiedAt": "2026-09-23T02:36:28Z",
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-20T08:46:47Z",
+        "featured": true
+      },
+      {
+        "title": "阿里发布 Qwen-Image-2.1-PE-T2I",
+        "sourceUrl": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I",
+        "publishedAt": "2026-09-20T08:45:29Z",
+        "source": "阿里（Hugging Face）",
+        "summary": "阿里发布 Qwen-Image-2.1-PE-T2I，推动人工智能开源开放。",
+        "id": "5eedd09eb4922e0c4f487d2db83174e2667e58d268cd58aedc3f1bca808951fe",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": "阿里（Hugging Face）",
+        "originalUrl": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I",
+        "originalVerifiedAt": "2026-09-23T02:36:28Z",
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-09-20T08:45:29Z",
+        "featured": null
       },
       {
         "title": "APUS 开源国内首批Jev跨平台复现：国产模型实现秒级决策",
@@ -2479,6 +2940,44 @@
         "category": "model",
         "eventType": "model-release",
         "addedAt": "2026-09-21T01:02:06Z",
+        "featured": null
+      },
+      {
+        "title": "B站上线\"AI 无限竞技场\"测评榜：上百模型同场厮杀，GPT-6 暂坐头把交椅",
+        "sourceUrl": "https://www.aibase.com/zh/news/31192",
+        "source": "AIBase",
+        "summary": "B站今天端出了一块大模型擂台——&quot;AI 无限竞技场&quot;测评榜，并同步亮出首轮排行榜。",
+        "publishedAt": "2026-09-20T06:13:44Z",
+        "id": "ad3452bb93e0abb505cf4572638317ce324a5a78bbdfa6c938d16aa6db9dde73",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31192",
+        "category": "model",
+        "eventType": "model-review",
+        "addedAt": "2026-09-20T06:13:44Z",
+        "featured": true
+      },
+      {
+        "title": "阶跃星辰发布Step5Preview，单任务成本仅为Claude Opus5的1/8",
+        "sourceUrl": "https://www.aibase.com/zh/news/31187",
+        "source": "AIBase",
+        "summary": "阶跃星辰发布新一代旗舰基座模型Step5Preview，重点面向AI编程、软件工程、专业知识工作及金融等场景，提升模型在真实世界Agentic任务中的综合表现",
+        "publishedAt": "2026-09-20T03:07:17Z",
+        "id": "0168996246e5cb54ef1ac631d9197b1ac5a89900197c111c4bb909471075e62e",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.aibase.com/zh/news/31187",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-09-20T03:07:17Z",
         "featured": true
       },
       {
