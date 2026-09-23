@@ -438,5 +438,16 @@
     "id": "df57fa2a5ee715c071d28072a636b0623f9bb7b1f99a2ab83d54286c5a7480fb",
     "status": "pending",
     "createdAt": "2026-09-23T03:02:47Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "df9470ece6bb3f9c80c05f98899ee6a8114fc4158c0fe96f48a7d90122dc009d",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "5051f9938ae23f64c6752ed08561d7a6ed313b3d57385fba6bfd2aa6b30a169b",
+    "status": "pending",
+    "createdAt": "2026-09-23T08:39:49Z"
   }
 ]
