@@ -440,5 +440,16 @@
     "id": "c84f525646cdcc949b4859a01db13f8b45e71de6270b3f7b1481db474e6e23b9",
     "status": "pending",
     "createdAt": "2026-09-23T15:28:02Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-09-23T15:36:51Z"
   }
 ]

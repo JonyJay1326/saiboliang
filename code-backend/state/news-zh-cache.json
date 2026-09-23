@@ -137,12 +137,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T15:28:02Z"
   },
-  "81481aa316e38773fdfe4ad811ac70acba975a0782f6864539cabab4e543f92d": {
-    "title": "Gemini 3.8 文本转语音说你好",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
   "63e0251438a40139e79aeee04caee78a761474d1ca46b1e3556b8e8cc9b43e6b": {
     "title": "GitHub Copilot 应用中的本地沙盒",
     "summary": null,
