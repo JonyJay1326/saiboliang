@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-09-23T03:21:32Z",
+  "dataUpdatedAt": "2026-09-23T03:56:39Z",
   "items": [
     {
       "title": "GitHub Copilot 应用中的 OpenTelemetry",
@@ -1826,6 +1826,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-23T03:21:32Z",
-  "generatedAt": "2026-09-23T03:21:32Z"
+  "version": "2026-09-23T03:56:39Z",
+  "generatedAt": "2026-09-23T03:56:39Z"
 }
