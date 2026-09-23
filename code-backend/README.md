@@ -85,6 +85,6 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 
 - `github`：仓库名对应 `allow` / `exclude`，只影响原榜内项目。
 - `news`：`featuredExclude` 是规范化 `sourceUrl` 列表（`utm_*` 等跟踪参数由管道剥离后比对）。命中条目即使被 DeepSeek 或回落规则选中也不进「当日精选」，条目仍永久累加；编辑排除优先，跨轮次稳定生效。
-- `records`：整条人工纠正，包含 `module`（仅 `plans`）、`record`、`reason`、`evidenceUrl`、`at`。record 必须保留人工核验日期，`checkMethod` 为 manual；覆盖优先于自动采集，并写入审计。
+- `records`：整条人工纠正，包含 `module`（仅 `plans`）、`record`、`reason`、`evidenceUrl`、`at`。record 必须保留人工核验日期，`checkMethod` 为 manual；覆盖优先于自动采集，并写入审计。**`tiers[].conditions` 可空且只写一句**：取官方口径第一句（来源 / 核验声明，如「价格与额度取自…（…人工核验）」，或该档最关键的实质限制），不追加后续分句、不写税费与结算兜底句；没有可写内容填 `null`（`doc-data/cyber-granary-data-contract.md` §4.3）。
 
 不要手改 `public/data/`（`tickets.json` 也不例外，它的源在 `editorial/tickets.json`）。不支持在公共记录中增加临时字段，新增公共字段必须先确认契约变更。

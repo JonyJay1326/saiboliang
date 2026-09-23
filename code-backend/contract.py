@@ -100,7 +100,7 @@ MODEL = dict(id=identifier, name=text, vendor=text, aaId=nullable(text), release
              inputCost=nullable(number), outputCost=nullable(number), priceSource=nullable(enum('artificial-analysis')),
              priceSourceUrl=nullable(safe_url), priceUpdatedAt=nullable(stamp))
 TIER = dict(name=text, price=nullable(number), currency=enum('CNY','USD'), period=enum('month','year'),
-            offerType=enum('standard','promotion','new-user'), note=nullable(text), features=array(text), conditions=text)
+            offerType=enum('standard','promotion','new-user'), note=nullable(text), features=array(text), conditions=nullable(text))
 PLAN = dict(id=identifier, vendor=text, product=text, group=enum('domestic','overseas'), tagline=nullable(text),
             highlights=array(text), quotaBasis=nullable(text), supportedTools=array(text), tiers=array(lambda v: obj(v,TIER)),
             models=array(text), status=enum('available','unavailable','unknown'), source=enum('official','aggregator'),

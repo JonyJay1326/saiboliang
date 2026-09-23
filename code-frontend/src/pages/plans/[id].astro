@@ -31,7 +31,8 @@ const currencies = [...new Set(priced.map((t) => t.currency))];
 // 档位条件去重（frontend-spec §4.6）：实测 17/17 套餐的所有档位 conditions 完全相同，
 // 逐档重复输出 4662 字符、去重后仅需 1135（省 76%）。全同则提到「档位」区开头显示一次，
 // 有差异时才逐档各自显示。
-const tierConditions = [...new Set(plan.tiers.map((t) => t.conditions))];
+// conditions 可为 null（契约 §4.3：只写一句，没有可写内容就为 null），null 一律不渲染。
+const tierConditions = [...new Set(plan.tiers.map((t) => t.conditions).filter(Boolean))];
 const sharedConditions = tierConditions.length === 1 ? tierConditions[0] : null;
 
 const jsonLd = {
@@ -140,7 +141,7 @@ const jsonLd = {
                 ))}
               </ul>
             )}
-            {!sharedConditions && <p class="plan-tier__conditions">{tier.conditions}</p>}
+            {!sharedConditions && tier.conditions && <p class="plan-tier__conditions">{tier.conditions}</p>}
           </section>
         ))
       }

@@ -641,6 +641,21 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(set(by_id),{'demo-plan','ok-plan'})
         self.assertEqual(by_id['ok-plan']['checkMethod'],'auto')
 
+    def test_plan_tier_conditions_nullable(self):
+        # 2026-09-23 用户决定：没有实质限制的档位 conditions 填 null（空串与缺字段仍非法）。
+        batch=empty_batch(NOW)
+        plan=dict(id='demo-plan',vendor='示例',product='示例套餐',group='domestic',tagline=None,
+                  highlights=[],quotaBasis=None,supportedTools=['工具'],
+                  tiers=[dict(name='基础',price=10,currency='CNY',period='month',offerType='standard',
+                              note=None,features=['功能'],conditions=None)],
+                  models=[],status='available',source='official',
+                  sourceUrl='https://vendor.example/plans',updatedAt='2026-09-17',checkMethod='manual',
+                  rank=None,rankBasis=None)
+        batch['models']['plans']=[plan]; validate(batch)
+        for broken_tier in (dict(plan['tiers'][0],conditions=''),{k:v for k,v in plan['tiers'][0].items() if k!='conditions'}):
+            bad=copy.deepcopy(batch); bad['models']['plans']=[dict(plan,tiers=[broken_tier])]
+            with self.assertRaises(ValueError): validate(bad)
+
     def test_clip_summary_boundary(self):
         self.assertEqual(clip('短文本',80),'短文本')
         sentence='第一句话结束了。'*30
