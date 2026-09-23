@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip, news_featured_exclusions
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -376,14 +376,15 @@ class PipelineTests(unittest.TestCase):
         rows=[row(i) for i in range(21)]
         validate(assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted(rows[:20],key=lambda i:i['id']))},NOW)[0])
         with self.assertRaises(ValueError): assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted(rows,key=lambda i:i['id']))},NOW)
-        # 每来源 ≤5/天、每事件类型 ≤3/天。
+        # 每来源 ≤5/天、每事件类型 ≤5/天。
         with self.assertRaises(ValueError):
             assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,source='厂商A') for i in range(6)],key=lambda i:i['id']))},NOW)
         with self.assertRaises(ValueError):
-            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,eventType='major-update',source='厂商%d'%i) for i in range(4)],key=lambda i:i['id']))},NOW)
-        # 每日精选上限 6：同一天 7 条 featured 被拒。
+            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,eventType='major-update',source='厂商%d'%i) for i in range(6)],key=lambda i:i['id']))},NOW)
+        # 每日精选上限 8：同一天 8 条 featured 通过、9 条被拒。
+        validate(assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,featured=True) for i in range(8)],key=lambda i:i['id']))},NOW)[0])
         with self.assertRaises(ValueError):
-            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,featured=True) for i in range(7)],key=lambda i:i['id']))},NOW)
+            assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,featured=True) for i in range(9)],key=lambda i:i['id']))},NOW)
 
     def test_deepseek_official_news_adapter(self):
         html = ('<html><a href="/news/deepseek-v4-1-flash/"><span>动态</span>'
@@ -729,11 +730,11 @@ class PipelineTests(unittest.TestCase):
         def feed(rows):
             return '<rss><channel>' + ''.join(rows) + '</channel></rss>'
         source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
-        # 同一事件类型最多 3 条/天：4 条模型发布只收 3 条。
+        # 同一事件类型最多 5 条/天：6 条模型发布只收 5 条。
         data=collect_news(FakeClient(documents={source['url']:feed([rss('示例模型 %d 正式发布'%i,'cn.example',i)
-                                                                   for i in range(4)])}),
+                                                                   for i in range(6)])}),
                           [source],{}, {}, NOW, lambda *x: None, lambda *x: None)
-        self.assertEqual(len(data['items']), 3)
+        self.assertEqual(len(data['items']), 5)
         self.assertTrue(all(i['eventType'] == 'model-release' for i in data['items']))
         # 同一来源最多 5 条/天：两类事件共 6 条只收 5 条。
         mixed=[rss('示例模型 %d 正式发布'%i,'cn.example',i) for i in range(3)]
@@ -760,10 +761,10 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(cache[day]['signature'],digest('\n'.join(sorted(i['id'] for i in rows))))
         again=select_featured(FakeClient(),rows,cache,'k',{day},LATER,lambda *x:reviews.append(x))
         self.assertEqual(again[day],picks[day])
-        # 无 key 或模型回复不可用时回落固定规则（事件优先级 + 最新发布，最多 6 条），且不写缓存。
-        expected=[rows[3]['id'],rows[2]['id'],rows[1]['id'],rows[0]['id'],rows[6]['id'],rows[5]['id']]
+        # 无 key 或模型回复不可用时回落固定规则（事件优先级 + 最新发布，最多 10 条），且不写缓存。
+        expected=[rows[3]['id'],rows[2]['id'],rows[1]['id'],rows[0]['id'],rows[6]['id'],rows[5]['id'],rows[4]['id']]
         bad=dict(choices=[dict(message=dict(content=json.dumps({'picks':[9]})))])
-        too_many=dict(choices=[dict(message=dict(content=json.dumps({'picks':list(range(1,8))})))])
+        too_many=dict(choices=[dict(message=dict(content=json.dumps({'picks':list(range(1,12))})))])
         for client,key,fallback_cache in [(FakeClient(),None,{}),(FakeClient(posts=[bad]),'k',{}),(FakeClient(posts=[too_many]),'k',{})]:
             reviews=[]
             result=select_featured(client,rows,fallback_cache,key,{day},NOW,lambda *x:reviews.append(x))
@@ -795,6 +796,19 @@ class PipelineTests(unittest.TestCase):
         self.assertIs(by_url['https://vendor.example/a']['featured'],True)
         self.assertIsNone(by_url['https://vendor.example/b']['featured'])
         self.assertIs(by_url[legacy_url]['featured'],True)
+
+    def test_news_featured_editorial_exclusion_overrides_picks(self):
+        feed=('<rss><channel>'
+              '<item><title>新模型正式发布一</title><link>https://vendor.example/a</link><pubDate>Thu, 17 Sep 2026 10:00:00 +0000</pubDate></item>'
+              '</channel></rss>')
+        source=dict(id='vendor',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        identity=digest('https://vendor.example/a')
+        # 排除项按规范化 sourceUrl 计算 id：utm_* 等跟踪参数不影响命中。
+        self.assertEqual(news_featured_exclusions(['https://vendor.example/a?utm_source=x']),{identity})
+        data=collect_news(FakeClient(documents={source['url']:feed}),[source],{}, {}, NOW, lambda *x:None, lambda *x:None,
+                          feature=lambda items,days:{beijing_day(NOW):[identity]}, exclude={identity})
+        self.assertEqual(len(data['items']),1)
+        self.assertIsNone(data['items'][0]['featured'])
 
     def test_contract_rejects_unknown_fields_and_mixed_versions(self):
         batch=empty_batch(NOW); validate(batch)
@@ -853,6 +867,14 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(is_ai(row,{}))
         self.assertFalse(is_ai(dict(row,description='awesome list of LLM tools'),{}))
         self.assertFalse(is_ai(row,{'vendor/tool':'exclude'}))
+        for blurb in ('A coding-agent skill for security audits','Open Multi-Agent Interactive Classroom',
+                      'High-Quality Voice Cloning TTS for 600+ Languages','The open-source AI voice studio',
+                      'TimesFM is a pretrained time-series foundation model','A cloud-native vector database for ANN search',
+                      'Fault-tolerant GPU orchestration and a machine learning framework','Voice-to-text dictation app'):
+            self.assertTrue(is_ai(dict(row,description=blurb),{}),blurb)
+        for blurb in ('12 weeks, 26 lessons, classic Machine Learning for all','Neural Networks: Zero to Hero',
+                      'A series of Jupyter notebooks about Deep Learning','A Python handbook for beginners'):
+            self.assertFalse(is_ai(dict(row,description=blurb),{}),blurb)
         with self.assertRaises(ValueError): parse_trending('<html>rate limit</html>')
         row=parse_trending(html.replace('<span>15 stars this week</span>',''))[0]
         self.assertIsNone(row['periodStars'])
@@ -1121,7 +1143,7 @@ class PipelineTests(unittest.TestCase):
             root=Path(tmp); output=root/'data'; editorial=root/'editorial'
             save_candidate(output,empty_batch(NOW))
             write_json(editorial/'sources.json',dict(github=['python'],news=[],plans=[]))
-            write_json(editorial/'overrides.json',dict(github={},records=[]))
+            write_json(editorial/'overrides.json',dict(github={},news=dict(featuredExclude=[]),records=[]))
             args=['collect','--modules','github','--output',str(output),'--state',str(root/'state'),'--editorial',str(editorial),'--candidate',str(root/'candidate')]
             with patch('pipeline.collect_github',side_effect=DataError('HTTP 503')):
                 self.assertEqual(main(args),1)
@@ -1150,7 +1172,7 @@ class PipelineTests(unittest.TestCase):
             root=Path(tmp); output=root/'data'; state=root/'state'; editorial=root/'editorial'; candidate=root/'candidate'
             save_candidate(output,empty_batch(NOW))
             write_json(editorial/'sources.json',dict(github=['python'],news=[],plans=[]))
-            write_json(editorial/'overrides.json',dict(github={},records=[]))
+            write_json(editorial/'overrides.json',dict(github={},news=dict(featuredExclude=[]),records=[]))
             gh=empty_batch(LATER)['github']; gh['dataUpdatedAt']=LATER
             argv=['collect','--modules','github','--output',str(output),'--state',str(state),'--editorial',str(editorial),'--candidate',str(candidate),'--build-command','fake-build']
             with patch('pipeline.collect_github',return_value=gh),patch('pipeline.utcnow',return_value=LATER),patch('pipeline.subprocess.run') as build:

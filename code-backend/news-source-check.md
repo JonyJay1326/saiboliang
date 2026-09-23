@@ -233,3 +233,21 @@ AIBase 的报道链接属于中文报道；只有另行核实官方一手出处�
 
 [未定] 待用户拍板：① 是否为 4 个 X 账号购买 X API 读取额度并做适配器；② 是否新增「人工清单」渠道（人工录入标题／链接／摘要，不抓页面，类似 tickets 的人工文件）——涉及契约新增来源类型与字段来源，需契约变更后再实现。
 
+### 2026-09-23 第十批：展示配额再放宽（每类≤5、精选≤10）
+
+用户反馈「每天展示的条数是不是可以再放开一些，像今天发布很多重磅模型」。背景：09-22 CI 两次运行均入库 0 条（当日 9 条英文候选翻译成功但全部未过事件判定：客户案例/教育/政策/非 AI 主题的工具页更新）；09-23 回补后 09-21/22/23 的 `model-release` 与 `major-update` 都恰好卡在 ≤3/天，官方条目（OpenAI 提示缓存、GitHub JetBrains、NVIDIA Isaac ROS/DSX）被 AIBase 同类型条目挤掉。
+
+用户拍板：① 每事件类型 ≤3/天 → **≤5/天**（每天 ≤20、每来源 ≤5/天 不变）；② 当日精选 `featured` ≤6 → **≤10**；同日复核精选质量（反馈「现在看有些消息算不上精选了」）后**收紧为 ≤8**（每类 ≤5 不变）。
+
+**实现：** `sources.py` 精选提示词改「最多选 8 条」、模型回复上限 `<=8`、无 key 回落取前 8、配额循环每类 `>=5`；`contract.py` 校验上限改 5/8；`cache-tools/check-front-spec.py` B3 字面改 `≤8`；`cyber-granary-data-contract.md` §4.5/§6/§7、`cyber-granary-architecture.md` §0/§3.4/§6、`cyber-granary-data-review.md` §1/§3、`frontend-spec.md` §4.7/§13 与 README 同步；前端渲染逻辑不变（仍只渲染 `featured === true`）。
+
+[实测] 单测 `python -m unittest discover -s code-backend` **68 项全过**（配额断言改 5/8：同类型 6 条只收 5、同日 8 条 featured 通过、9 条拒绝；回落取前 8）；`check-front-spec.py` PASS。
+
+[实测] 回补重跑（`--modules news --backfill-days 4`，基线=线上 09-22 批次）：线上 71 条**零丢失**，总量 71 → **96 条**；09-21/22/23 按入库北京日 12/9/8 条（同类型各 5/4/5 与 4/3/3），改前精选 6/6/3。本轮补进官方条目：NVIDIA DSX Ready（09-21）、SpaceXAI Grok 4.7（09-21）、GitHub Copilot for JetBrains（09-23）、GitHub Copilot OpenTelemetry（09-23）。
+
+[实测] **上限调低的存量重判**：`featured` 只在「该入库日候选集变化」时重判，候选集不变的旧入库日不会自动跟随新上限（`pipeline.py validate` 以 `news daily featured limit` 拒绝整批，`collect` 也随之中止）。新增本机维护脚本 `cache-tools/rejudge-featured.py`（不发布）：对超限入库日清除精选缓存、调用同一 `select_featured`，再走「候选 → 校验 → 提升」同一事务路径；`--apply` 实跑 09-21：10 → 8 条，`pipeline.py validate` PASS；全库精选按日 ≤8（09-19/20/21/22/23 = 5/8/8/7/7）。
+
+[实测] **编辑排除（2026-09-23 用户点名删除三条）**：用户按 `/news` 实图指出「GitHub Copilot 应用中的 OpenTelemetry」「世卫组织发布重磅报告…」「虎鲸文娱发布“鲸锐AI”…」三条不该入选。契约不允许删条目，故改为**编辑排除**：`editorial/overrides.json` 新增 `news.featuredExclude`（规范化 `sourceUrl` 列表），`sources.py` 新增 `news_featured_exclusions`，`collect_news` 在模型/回落判定后统一把命中条目置 `featured: null`（排除优先、跨轮次稳定，未来重判也不会回来）；`pipeline.load_config` 校验该段，README 编辑入口与契约 §4.5 同步。实跑 `rejudge-featured.py --apply`：3 条移出精选，09-23 精选 7 → 4 条，`pipeline.py validate` PASS；单测 69 项全过（新增编辑排除覆盖模型选中的用例）。
+
+[未定] 两条官方条目仍未被收录，原因不同：① OpenAI「GPT-6 更优的提示缓存」被判 model-release 后命中相似排除（与 GPT-6 Astra 条目共享品牌标记 `gpt6`，同型号只留最重要的一条）——按现行规则属预期；② NVIDIA「Isaac ROS 5.0」的机译标题用了「代理式」（非「智能体式」），`NEWS_TOPICS` 未命中而整条被挡，且译文已进 `state/news-zh-cache.json`（缓存命中即不再重译，条目会一直被挡）。可选修法（待用户拍板）：把 `机器人/robotics` 一类词补进主题词表，或对「已翻译但未过事件判定」的候选做缓存失效、下轮重译。
+

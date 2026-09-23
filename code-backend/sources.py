@@ -137,9 +137,16 @@ def is_ai(repo, overrides):
         require(decision in ('allow','exclude'),'unknown GitHub override')
         return decision=='allow'
     text=(repo['repo']+' '+(repo['description'] or '')).lower()
-    if re.search(r'\b(awesome|tutorials?|course|curriculum|papers|collection of|list of)\b|教程|资源合集|提示词合集',text):
+    if re.search(r'\b(awesome|tutorials?|course|curriculum|lessons?|for beginners|zero to hero|handbook'
+                 r'|papers|collection of|list of|series of)\b|教程|课程|入门|资源合集|提示词合集',text):
         return False
-    if re.search(r'\b(llm|large language model|mcp|rag|ai[- ]powered|ai agent|ai coding|coding agent|agentic|local models?|inference engine|model context protocol)\b|大模型|智能体|人工智能',text):
+    if re.search(r'\b(llm|large language models?|mcp|rag|ai'
+                 r'|agent skills?|(?:ai|coding|multi|autonomous)[- ]?agents?|agentic|for agents?'
+                 r'|machine learning|deep learning|neural networks?|computer vision|vector database'
+                 r'|text-to-speech|tts|speech synthesis|voice clon|voice[- ]to[- ]text'
+                 r'|image generation|video generation|diffusion models?|foundation models?|model serving|inference'
+                 r'|embeddings?|fine-?tun|local models?|model context protocol)\b'
+                 r'|大模型|智能体|人工智能|机器学习|深度学习|神经网络|生成式',text):
         return True
     return None
 
@@ -320,10 +327,10 @@ def summarize_news(client,items,cached,key,now,review):
 
 EVENT_PRIORITY={event:index for index,event in enumerate(EVENTS)}
 
-NEWS_FEATURED_INSTRUCTIONS=('你是中文科技媒体的值班编辑，为站点「今日精选」挑选条目。从候选列表里按重要性最多选 6 条，'
+NEWS_FEATURED_INSTRUCTIONS=('你是中文科技媒体的值班编辑，为站点「今日精选」挑选条目。从候选列表里按重要性最多选 8 条，'
                             '优先重大模型发布、影响开发者日常的产品或接口变更、价格与免费额度变化、必须行动的迁移或弃用；'
                             '同一型号或同一题材只留最重要的一条，企业合作、客户案例、活动、观点与教程靠后。'
-                            '只从候选里挑，不补充候选之外的信息；候选不足 6 条时按实际数量选，可以少选。'
+                            '只从候选里挑，不补充候选之外的信息；候选不足 8 条时按实际数量选，可以少选。'
                             '只输出 JSON 对象 {"picks": [序号, ...]}，序号按重要性从高到低，不要输出其他内容。')
 
 
@@ -354,7 +361,7 @@ def featured_via_model(client,rows,key,review,day):
         decision=json.loads(message['content'])
         require(isinstance(decision,dict),'featured payload malformed')
         picks=decision.get('picks')
-        require(isinstance(picks,list) and len(picks)<=6,'featured picks malformed')
+        require(isinstance(picks,list) and len(picks)<=8,'featured picks malformed')
         chosen=[]
         for value in picks:
             number=str(value).strip()
@@ -369,7 +376,7 @@ def featured_via_model(client,rows,key,review,day):
 
 
 def select_featured(client,items,cached,key,days,now,review):
-    """Choose at most six featured items for each admission day.
+    """Choose at most eight featured items for each admission day.
 
     DeepSeek ranks the day's candidates; without a key, on request failure or on an
     unusable reply the fixed rule order supplies the picks. Only model decisions are
@@ -397,11 +404,20 @@ def select_featured(client,items,cached,key,days,now,review):
             continue
         picks=featured_via_model(client,rows,key,review,day) if key and client else None
         if picks is None:
-            picks=[item['id'] for item in sorted(rows,key=featured_order)[:6]]
+            picks=[item['id'] for item in sorted(rows,key=featured_order)[:8]]
         else:
             cached[day]=dict(signature=signature,picks=picks,at=now)
         result[day]=picks
     return result
+
+
+def news_featured_exclusions(urls):
+    """Editorial featured exclusions (`editorial/overrides.json` news.featuredExclude).
+
+    Values are normalized `sourceUrl` entries; the item identity is its SHA-256, the
+    same derivation used for `id`, so an excluded entry can never re-enter featured.
+    """
+    return {digest(normalize_url(url)) for url in urls}
 
 
 GITHUB_LIMIT=30
@@ -1352,7 +1368,7 @@ def fill_news_summaries(client,items,summarize,limit=40):
 
 
 def collect_news(client,sources,originals,old,now,guard,review,translate=None,summarize=None,
-                 window_seconds=72*3600,backfill=False,feature=None):
+                 window_seconds=72*3600,backfill=False,feature=None,exclude=None):
     """Official-first news collection.
 
     Items accumulate forever in the published file: `addedAt` marks admission and the
@@ -1491,7 +1507,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             continue
         if any(similar_event(item,known) for known in recent):
             continue
-        if current['source'].get(item['source'],0)>=5 or current['event'].get(item['eventType'],0)>=3:
+        if current['source'].get(item['source'],0)>=5 or current['event'].get(item['eventType'],0)>=5:
             continue
         chosen.append(item)
         recent.append(item)
@@ -1510,6 +1526,10 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             day=beijing_day(item['addedAt'])
             if day in picks:
                 item['featured']=True if item['id'] in picks[day] else None
+    for item in merged:
+        # Editorial exclusion wins over any judgement, including cached picks.
+        if exclude and item['id'] in exclude:
+            item['featured']=None
     return dict(dataUpdatedAt=now,items=merged)
 
 

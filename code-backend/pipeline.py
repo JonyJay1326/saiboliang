@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, select_featured, summarize_news, translate_github, translate_news
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, news_featured_exclusions, select_featured, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -167,8 +167,14 @@ def load_config(editorial):
     require(sources['github'] and all(isinstance(s,str) and re.fullmatch(r'[a-z0-9+#.-]+',s) for s in sources['github']),'invalid github language pages')
     require(len(set(sources['github']))==len(sources['github']),'duplicate github language page')
     overrides=read_json(editorial/'overrides.json')
-    require(isinstance(overrides,dict) and set(overrides)=={'github','records'},'invalid overrides')
+    require(isinstance(overrides,dict) and set(overrides)=={'github','news','records'},'invalid overrides')
     require(isinstance(overrides['github'],dict) and isinstance(overrides['records'],list),'invalid override records')
+    from common import safe_url
+    require(isinstance(overrides['news'],dict) and set(overrides['news'])=={'featuredExclude'}
+            and isinstance(overrides['news']['featuredExclude'],list),'invalid news overrides')
+    for url in overrides['news']['featuredExclude']:
+        require(isinstance(url,str),'invalid news featured exclusion')
+        safe_url(url)
     zh=read_json(editorial/'github-zh.json',{})
     require(isinstance(zh,dict),'invalid github zh map')
     for repo,blurb in zh.items():
@@ -307,7 +313,8 @@ def collect(args):
                 news_featured=load_news_featured(args,client,run,now)
                 data=collect_news(client,news,originals,baseline['news'],now,run.guard,run.review,news_translator,
                                   summarize=news_summarizer,window_seconds=args.backfill_days*24*3600 or 72*3600,
-                                  backfill=args.backfill_days>0,feature=news_featured)
+                                  backfill=args.backfill_days>0,feature=news_featured,
+                                  exclude=news_featured_exclusions(overrides['news']['featuredExclude']))
             else:
                 data=load_tickets(args.editorial,raw_cache['tickets'],now)
             raw_candidate=copy.deepcopy(data)

@@ -211,5 +211,5 @@ def validate(batch, previous=None):
     for rows in daily.values():
         require(len(rows)<=20,'news daily limit')
         require(all(n<=5 for n in Counter(i['source'] for i in rows).values()),'news daily source limit')
-        require(all(n<=3 for n in Counter(i['eventType'] for i in rows).values()),'news daily event-type limit')
-        require(sum(i['featured'] is True for i in rows)<=6,'news daily featured limit')
+        require(all(n<=5 for n in Counter(i['eventType'] for i in rows).values()),'news daily event-type limit')
+        require(sum(i['featured'] is True for i in rows)<=8,'news daily featured limit')

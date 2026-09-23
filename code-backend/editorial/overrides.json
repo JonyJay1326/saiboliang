@@ -1,5 +1,16 @@
 {
-  "github": {},
+  "github": {
+    "babalae/better-genshin-impact": "exclude",
+    "blader/humanizer": "exclude",
+    "petergyang/no-ai-slop": "exclude"
+  },
+  "news": {
+    "featuredExclude": [
+      "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+      "https://www.aibase.com/zh/news/31289",
+      "https://www.aibase.com/zh/news/31288"
+    ]
+  },
   "records": [
     {
       "module": "plans",
@@ -202,7 +213,7 @@
       "module": "plans",
       "record": {
         "id": "xiaomi-mimo-plan",
-        "rank": 8,
+        "rank": 9,
         "rankBasis": "Credits 量巨大，实测口碑一般",
         "vendor": "小米",
         "product": "MiMo Token Plan",
@@ -399,7 +410,7 @@
       "module": "plans",
       "record": {
         "id": "volcengine-agent-plan",
-        "rank": 6,
+        "rank": 7,
         "rankBasis": "Agent 形态含 Kimi K3 / GLM-5.3，¥40 起",
         "vendor": "火山引擎方舟",
         "product": "方舟 Agent Plan",
@@ -1241,6 +1252,162 @@
       "reason": "中国站为 JS 渲染不可直出，按第三方整理数据录入；国际站记录保留为独立产品线",
       "evidenceUrl": "https://codingplan.org/plans/minimax",
       "at": "2026-09-17T16:30:00Z"
+    },
+    {
+      "module": "plans",
+      "record": {
+        "id": "baidu-qianfan-token-plan",
+        "rank": 6,
+        "rankBasis": "百度云背书，¥9.9 起步四档，Token / 积分双轨计量",
+        "vendor": "百度千帆",
+        "product": "Token Plan 个人版",
+        "group": "domestic",
+        "tagline": "大模型 Token 量包式订阅，Token 制与积分制双轨计费",
+        "highlights": [
+          "1000 万 – 7 亿 Tokens/月四档",
+          "Token 制与积分制双轨计费",
+          "兼容 OpenAI 与 Anthropic 协议",
+          "官方称取消原 Coding Plan 三层限流"
+        ],
+        "quotaBasis": "1000 万 – 7 亿 Tokens/月（积分制 1,400 – 165,000 积分/月）",
+        "supportedTools": [
+          "OpenClaw",
+          "Claude Code",
+          "OpenCode",
+          "Cursor",
+          "Cline",
+          "CodeX",
+          "Qwen Code",
+          "Cherry Studio",
+          "Kilo CLI",
+          "Kilo Code",
+          "cc-switch",
+          "Hermes Agent"
+        ],
+        "tiers": [
+          {
+            "name": "Mini",
+            "price": 9.9,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": "首购五折 ¥4.9/月（新用户秒杀）",
+            "features": [
+              "1000 万 Tokens/月（积分制 1,400 积分/月）",
+              "适合约 166 次日常编程调用",
+              "全场景额度共享，模型可切换"
+            ],
+            "conditions": "价格与额度取自百度智能云官方文档（2026-09-23 人工核验）；每百度云账号限购一份、不支持退订与降配，支持补差价升配；仅限交互式 AI 编程 / 智能体工具使用，禁用于自动化脚本或应用后端；积分制 5 小时 / 7 天限额当前限时取消；首购五折与续费 6 折为官方活动价，期限与库存以官方产品页为准；税费与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Lite",
+            "price": 40.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": "首购五折 ¥19.9/月（新用户秒杀）",
+            "features": [
+              "4200 万 Tokens/月（积分制 6,600 积分/月）",
+              "适合约 700 次日常编程调用",
+              "全场景额度共享，模型可切换"
+            ],
+            "conditions": "价格与额度取自百度智能云官方文档（2026-09-23 人工核验）；每百度云账号限购一份、不支持退订与降配，支持补差价升配；仅限交互式 AI 编程 / 智能体工具使用，禁用于自动化脚本或应用后端；积分制 5 小时 / 7 天限额当前限时取消；首购五折与续费 6 折为官方活动价，期限与库存以官方产品页为准；税费与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Pro",
+            "price": 200.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": "首购五折 ¥99.9/月（新用户秒杀）",
+            "features": [
+              "2.3 亿 Tokens/月（积分制 45,000 积分/月）",
+              "Token 配额为 Lite 版 5 倍",
+              "适合高频 AI 开发"
+            ],
+            "conditions": "价格与额度取自百度智能云官方文档（2026-09-23 人工核验）；每百度云账号限购一份、不支持退订与降配，支持补差价升配；仅限交互式 AI 编程 / 智能体工具使用，禁用于自动化脚本或应用后端；积分制 5 小时 / 7 天限额当前限时取消；首购五折与续费 6 折为官方活动价，期限与库存以官方产品页为准；税费与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Max",
+            "price": 600.0,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "standard",
+            "note": "首购五折 ¥299.9/月（新用户秒杀）",
+            "features": [
+              "7 亿 Tokens/月（积分制 165,000 积分/月）",
+              "Token 配额为 Lite 版 16 倍",
+              "适合重度 AI 开发"
+            ],
+            "conditions": "价格与额度取自百度智能云官方文档（2026-09-23 人工核验）；每百度云账号限购一份、不支持退订与降配，支持补差价升配；仅限交互式 AI 编程 / 智能体工具使用，禁用于自动化脚本或应用后端；积分制 5 小时 / 7 天限额当前限时取消；首购五折与续费 6 折为官方活动价，期限与库存以官方产品页为准；税费与支付条件以官方结算页为准。"
+          },
+          {
+            "name": "Mini 首购",
+            "price": 4.9,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "new-user",
+            "note": "首购五折，每日 10 点秒杀限量",
+            "features": [
+              "同 Mini 额度"
+            ],
+            "conditions": "首购五折为官方活动价（仅新用户，每日 10:00 限量秒杀），具体期限与库存以官方产品页为准；价格与额度取自百度智能云官方文档（2026-09-23 人工核验）。"
+          },
+          {
+            "name": "Lite 首购",
+            "price": 19.9,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "new-user",
+            "note": "首购五折，每日 10 点秒杀限量",
+            "features": [
+              "同 Lite 额度"
+            ],
+            "conditions": "首购五折为官方活动价（仅新用户，每日 10:00 限量秒杀），具体期限与库存以官方产品页为准；价格与额度取自百度智能云官方文档（2026-09-23 人工核验）。"
+          },
+          {
+            "name": "Pro 首购",
+            "price": 99.9,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "new-user",
+            "note": "首购五折，每日 10 点秒杀限量",
+            "features": [
+              "同 Pro 额度"
+            ],
+            "conditions": "首购五折为官方活动价（仅新用户，每日 10:00 限量秒杀），具体期限与库存以官方产品页为准；价格与额度取自百度智能云官方文档（2026-09-23 人工核验）。"
+          },
+          {
+            "name": "Max 首购",
+            "price": 299.9,
+            "currency": "CNY",
+            "period": "month",
+            "offerType": "new-user",
+            "note": "首购五折，每日 10 点秒杀限量",
+            "features": [
+              "同 Max 额度"
+            ],
+            "conditions": "首购五折为官方活动价（仅新用户，每日 10:00 限量秒杀），具体期限与库存以官方产品页为准；价格与额度取自百度智能云官方文档（2026-09-23 人工核验）。"
+          }
+        ],
+        "models": [
+          "DeepSeek-V4-Pro",
+          "DeepSeek-V4-Flash",
+          "GLM-5.3",
+          "GLM-5.3-Flash",
+          "GLM-5.2",
+          "GLM-5.1",
+          "Kimi-K2.6"
+        ],
+        "status": "available",
+        "source": "official",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan/s/Dmrabu8b6",
+        "updatedAt": "2026-09-23",
+        "checkMethod": "manual"
+      },
+      "reason": "官方文档页为 JS 渲染、无稳定结构化入口，按官方页内容人工核验录入",
+      "evidenceUrl": "https://cloud.baidu.com/doc/qianfan/s/Dmrabu8b6",
+      "at": "2026-09-23T02:50:00Z"
     }
   ]
 }
