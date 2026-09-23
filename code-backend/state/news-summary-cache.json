@@ -1,37 +1,7 @@
 {
-  "9c38b0e540fa6708e9ee0116581d348eb13bc6f8450336dc337df4d0a6d637fa": {
-    "summary": "xAI最新推理模型Grok 4.7在GitHub Copilot中推出，面向智能体编程与复杂多步工作流。",
+  "81481aa316e38773fdfe4ad811ac70acba975a0782f6864539cabab4e543f92d": {
+    "summary": "Gemini 3.8 Flash-Lite TTS与Gemini 3.8 Flash TTS是迄今最具表现力的音频模型。",
     "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
-  "a34d58b87503fec2d9bc653f10e4517245f4e04f40b1a2a626a68a0856240dcd": {
-    "summary": "开放研究、智能体栈各层控制与持续测试，帮助防御者构建并运行更安全的AI系统。",
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
-  "cf4f876c079667faff5539807a45f8536ca44ae7c7060c9b23525f37702b0fe6": {
-    "summary": "GitHub Copilot 应用现支持通过企业托管设置配置 OpenTelemetry。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:36:28Z"
-  },
-  "18036a2d23f1f8494acfaf6bffcb6d42783ba3cfa74c64a6f5002e7faeb94828": {
-    "summary": "GitHub Copilot for JetBrains 1.18.0 带来 AI 辅助工具审批、代理对话控制及组织共享技能与指令。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:36:28Z"
-  },
-  "9d552a651ead7d3a495ef4a48e180b1714c3b6e1973c7ecfd375941d801d2cb8": {
-    "summary": "NVIDIA 推出 DSX Ready 认证计划，首批覆盖电池储能系统与冷却分配单元。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:36:28Z"
-  },
-  "413e4ee860ab5e965ff1844e8ef51428eaca52e446ddea5e5d89f3c25950bb35": {
-    "summary": "阿里发布 Qwen-Image-2.1-PE-I2I，推动人工智能开源开放。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:36:28Z"
-  },
-  "5eedd09eb4922e0c4f487d2db83174e2667e58d268cd58aedc3f1bca808951fe": {
-    "summary": "阿里发布 Qwen-Image-2.1-PE-T2I，推动人工智能开源开放。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:36:28Z"
+    "at": "2026-09-23T15:28:02Z"
   }
 }

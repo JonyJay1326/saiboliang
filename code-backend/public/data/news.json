@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-09-23T08:39:49Z",
+  "dataUpdatedAt": "2026-09-23T15:28:02Z",
   "items": [
+    {
+      "title": "Gemini 3.8 文本转语音说你好",
+      "sourceUrl": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "publishedAt": "2026-09-23T15:25:14Z",
+      "source": "Google DeepMind",
+      "summary": "Gemini 3.8 Flash-Lite TTS与Gemini 3.8 Flash TTS是迄今最具表现力的音频模型。",
+      "id": "81481aa316e38773fdfe4ad811ac70acba975a0782f6864539cabab4e543f92d",
+      "originalTitle": "Gemini 3.8 text-to-speech says hello",
+      "translatedAt": "2026-09-23T15:28:02Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "originalVerifiedAt": "2026-09-23T15:28:02Z",
+      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-23T15:28:02Z",
+      "featured": true
+    },
+    {
+      "title": "斑马智能发布端模型AutoOmni2.0，让元神AI更懂“我的世界”",
+      "sourceUrl": "https://www.qbitai.com/2026/09/496471.html",
+      "publishedAt": "2026-09-23T08:45:22Z",
+      "source": "量子位",
+      "summary": "9月23日云栖大会期间，斑马智能发布新一代全模态端侧大模型AutoOmni 2.0-23B-A3B",
+      "id": "c366257bbf6260fb1d5aa93c233497487eb3d4f5db11e7788834677d4e514b62",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/496471.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-23T15:28:02Z",
+      "featured": true
+    },
     {
       "title": "GitHub Copilot 应用中的 OpenTelemetry",
       "sourceUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
@@ -1826,6 +1864,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-23T08:39:49Z",
-  "generatedAt": "2026-09-23T08:39:49Z"
+  "version": "2026-09-23T15:28:02Z",
+  "generatedAt": "2026-09-23T15:28:02Z"
 }

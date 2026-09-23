@@ -124,5 +124,35 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-23T02:36:28Z"
+  },
+  "9328fa400dd37e6b9e773781e78a2a50934d49d24282a5ac7e2d36068da55aca": {
+    "title": "OpenAI 将网络访问权限扩展至乌克兰用于民用防御",
+    "summary": "OpenAI 正在将其 Daybreak 计划的访问权限扩展至乌克兰政府，以支持民用基础设施的网络防御。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
+  },
+  "5ab590850491008e2cefeb696721869fa1b9dd449fc9a908867a23da166dfb52": {
+    "title": "Grab 与 OpenAI 将实用 AI 技能带到东南亚",
+    "summary": "OpenAI 与 Grab 推出 GO Forward with AI，一项区域性计划，帮助东南亚 30,000 名合作伙伴培养实用 AI 技能。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
+  },
+  "81481aa316e38773fdfe4ad811ac70acba975a0782f6864539cabab4e543f92d": {
+    "title": "Gemini 3.8 文本转语音说你好",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
+  },
+  "63e0251438a40139e79aeee04caee78a761474d1ca46b1e3556b8e8cc9b43e6b": {
+    "title": "GitHub Copilot 应用中的本地沙盒",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
+  },
+  "4ab32af44318036a6678d60b40b879ed1caa589e30f1788e71b006cfed634216": {
+    "title": "Sakeena Fiza 助力 NVIDIA 硬件大规模成功",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
   }
 }

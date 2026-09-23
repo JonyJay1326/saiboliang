@@ -109,18 +109,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "tinyhumansai/openhuman",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenHuman is an open source agent harness with local-first memory, agent orchestration, and workflows",
-      "sourceUrl": "https://github.com/tinyhumansai/openhuman"
-    },
-    "id": "a104f234f1fb3cc5a9bcd5da2e52a0dd381a925e3f1fb95482b17147b497e6a2",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "k1tbyte/Wand-Enhancer",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -253,18 +241,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "securo-finance/securo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open-source personal finance manager. Self-hosted, privacy-first.",
-      "sourceUrl": "https://github.com/securo-finance/securo"
-    },
-    "id": "6c1450ec2f6143648dd5c541b873b7f8b6d0fc5ed52ae79913ebe36091593d46",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "fmtlib/fmt",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -298,18 +274,6 @@
     "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "666ghj/MiroFish",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
-      "sourceUrl": "https://github.com/666ghj/MiroFish"
-    },
-    "id": "b3cf26c914ae8ba1593368a593b059cd0a36f7bc1943ad6187ef5fcc9a138155",
-    "status": "pending",
-    "createdAt": "2026-09-20T13:56:24Z"
   },
   {
     "kind": "github-classification",
@@ -395,18 +359,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "vectorize-io/hindsight",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Hindsight: Agent Memory That Learns",
-      "sourceUrl": "https://github.com/vectorize-io/hindsight"
-    },
-    "id": "8b843c7c27471fea702d37d63f13c2acbe10e3d91752ecd3fa84e406f6a71cee",
-    "status": "pending",
-    "createdAt": "2026-09-22T15:32:21Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "agent-substrate/substrate",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -449,5 +401,44 @@
     "id": "5051f9938ae23f64c6752ed08561d7a6ed313b3d57385fba6bfd2aa6b30a169b",
     "status": "pending",
     "createdAt": "2026-09-23T08:39:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cloudflare/quiche",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+      "sourceUrl": "https://github.com/cloudflare/quiche"
+    },
+    "id": "ebd9b0f4bf4a8c0a20951116dde9f288c231f8ea526612913191d4a4383d07d8",
+    "status": "pending",
+    "createdAt": "2026-09-23T15:28:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "mvt-project/mvt",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "sourceUrl": "https://github.com/mvt-project/mvt"
+    },
+    "id": "bb8575980dec4af44620ee4d4adec207840aca32e6ebbc8a27d26343726a4881",
+    "status": "pending",
+    "createdAt": "2026-09-23T15:28:02Z"
+  },
+  {
+    "kind": "news-future",
+    "objectId": "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2",
+    "reason": "publication is in the future",
+    "evidence": {
+      "title": "Two years of OpenAI Academy",
+      "sourceUrl": "https://openai.com/index/two-years-of-openai-academy",
+      "publishedAt": "2026-09-23T16:00:00Z",
+      "source": "OpenAI",
+      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities."
+    },
+    "id": "c84f525646cdcc949b4859a01db13f8b45e71de6270b3f7b1481db474e6e23b9",
+    "status": "pending",
+    "createdAt": "2026-09-23T15:28:02Z"
   }
 ]

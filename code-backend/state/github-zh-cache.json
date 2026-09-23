@@ -69,11 +69,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "n8n-io/n8n": {
-    "text": "公平代码工作流自动化平台，原生支持 AI 能力。可视化搭建与自定义代码结合，可自托管或云端，400+ 集成。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "higgsfield-ai/higgsfield": {
     "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型设计的机器学习框架",
     "source": "deepseek-flash",
@@ -89,28 +84,13 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "Nasiko-Labs/nasiko": {
-    "text": "面向 AI 代理的开发者控制平面",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "yyjeqhc/webcodex": {
     "text": "让云端 AI 代理在你自己的机器上获得真实开发环境。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "roboflow/supervision": {
-    "text": "我们编写你可复用的计算机视觉工具。💜",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "krillinai/OpenCreator": {
     "text": "前身为 KrillinAI。面向创作者的开源 AI 工作区，由 Codex 驱动。在同一个地方用代理创建视频、图像、语音、虚拟形象、视频翻译与剪辑。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "MG1937/ASC": {
-    "text": "ASC 是面向代理/移动研究人员的超快速 Android 反编译前端。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -179,14 +159,19 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "linshenkx/prompt-optimizer": {
-    "text": "AI 提示词优化器，用于写出更好的提示词并获得更好的 AI 结果。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "WorldFlowAI/everything-claude-code": {
     "text": "Claude Code 工具集——代理、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
+  },
+  "FareedKhan-dev/train-llm-from-scratch": {
+    "text": "从下载数据到生成文本，训练你的LLM的简明方法。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
+  },
+  "superdesigndev/treg": {
+    "text": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T15:28:02Z"
   }
 }
