@@ -1,10 +1,4 @@
 {
-  "39b901174b5433760268459014cd78aa913e65cfdad9f8acf94eedcb904e8042": {
-    "title": "推出 Grok 4.7",
-    "summary": "SpaceXAI 面向编程与知识工作的最强模型。速度是同类模型的两倍，价格仅为其一半。",
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
   "d2871d486c61275aa18316221b2aa4fe0c0c7a730e7f24a395d9c1672c5c3fc3": {
     "title": "V7 如何为 AI 智能体赋予机构记忆",
     "summary": "V7 使用 GPT-5.6，将分散的公司文件转化为智能体可用的上下文，以完成复杂且可溯源的工作。",
@@ -65,12 +59,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-22T08:37:23Z"
   },
-  "9d552a651ead7d3a495ef4a48e180b1714c3b6e1973c7ecfd375941d801d2cb8": {
-    "title": "NVIDIA 推出 DSX Ready，为 AI 工厂认证电源与冷却产品",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-22T08:37:23Z"
-  },
   "3822e53281df1dc0922def79e019abc9a4028d437550f2c8462c121a6c28be60": {
     "title": "弃用通知：全平台 CodeQL bundle",
     "summary": null,
@@ -127,12 +115,6 @@
   },
   "01037b2410289b4f9f5f94f3f0b0d376c3b8d334c06a00ed025be7481181aa3e": {
     "title": "SSH 的安全改进",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "dd3c176ae5526b3e632ac3d95cd7ef1c00cefe869b3423c58edb25d1a13c6f5e": {
-    "title": "GPT-6 Astra、Sol 和 Luna：用于 Microsoft Foundry 中的生产智能体",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-23T02:15:54Z"

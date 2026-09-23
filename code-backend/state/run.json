@@ -1,9 +1,13 @@
 {
-  "at": "2026-09-23T03:02:47Z",
+  "at": "2026-09-23T03:21:32Z",
   "success": [
+    "tickets",
+    "github",
     "news"
   ],
   "errors": {},
-  "skipped": [],
-  "retired": 0
+  "skipped": [
+    "models: daily sources already checked"
+  ],
+  "retired": 227
 }

@@ -39,59 +39,154 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "tradesdontlie/tradingview-mcp": {
-    "text": "AI 辅助的 TradingView 图表分析——将 Claude Code 连接到你的 TradingView Desktop，实现个人工作流自动化",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "kubernetes-sigs/agent-sandbox": {
-    "text": "agent-sandbox 可轻松管理隔离的、有状态的单例工作负载，适用于 AI 代理运行时和强化学习（RL）等场景。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "LaurieWired/GhidraMCP": {
-    "text": "用于 Ghidra 的 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "tech-leads-club/agent-skills": {
     "text": "面向专业 AI 编码代理的安全、经过验证的技能注册表。以绝对信心扩展 Antigravity、Claude Code、Cursor、Copilot 等。",
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
-  },
-  "google/magika": {
-    "text": "快速准确的 AI 驱动文件内容类型检测",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "microsoft/semantic-kernel": {
-    "text": "将前沿 LLM 技术快速轻松地集成到你的应用中",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "openai/tunnel-client": {
-    "text": "Secure MCP Tunnel 的客户自运行客户端：将私有或本地 MCP 服务器连接到 ChatGPT、Codex、Responses API 和 AgentKit，无需暴露到公网。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T13:56:24Z"
   },
   "magnitudedev/magnitude": {
     "text": "面向消费级硬件优化的开源推理引擎。分析你的机器，推荐最适合的模型，然后下载、调优并运行。支持 Apple Silicon、NVIDIA、AMD 或仅 CPU。",
     "source": "deepseek-flash",
     "at": "2026-09-21T17:06:12Z"
   },
-  "gastownhall/beads": {
-    "text": "Beads - 为你的编码代理提供记忆升级",
+  "cloudflare/security-audit-skill": {
+    "text": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
     "source": "deepseek-flash",
-    "at": "2026-09-22T15:32:21Z"
+    "at": "2026-09-23T03:21:32Z"
   },
-  "EricLBuehler/mistral.rs": {
-    "text": "快速、灵活的 LLM 推理",
+  "alphaXiv/OpenResearch": {
+    "text": "将你的编码代理转变为研究代理",
     "source": "deepseek-flash",
-    "at": "2026-09-22T15:32:21Z"
+    "at": "2026-09-23T03:21:32Z"
   },
-  "agentjido/req_llm": {
-    "text": "基于 Req 和 Finch 构建的可组合 Elixir LLM 交互库",
+  "TencentCloud/Octop": {
+    "text": "更智能的自托管 AI 助手——多用户、多代理。",
     "source": "deepseek-flash",
-    "at": "2026-09-22T15:32:21Z"
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "jamiepine/voicebox": {
+    "text": "开源 AI 语音工作室。克隆、听写、创作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "n8n-io/n8n": {
+    "text": "公平代码工作流自动化平台，原生支持 AI 能力。可视化搭建与自定义代码结合，可自托管或云端，400+ 集成。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "higgsfield-ai/higgsfield": {
+    "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型设计的机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "multica-ai/multica": {
+    "text": "让人类与 AI 代理作为一个团队协作——开源且可自托管。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "Crosstalk-Solutions/project-nomad": {
+    "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在你拥有的硬件上，无需联网。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "Nasiko-Labs/nasiko": {
+    "text": "面向 AI 代理的开发者控制平面",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "yyjeqhc/webcodex": {
+    "text": "让云端 AI 代理在你自己的机器上获得真实开发环境。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "roboflow/supervision": {
+    "text": "我们编写你可复用的计算机视觉工具。💜",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "krillinai/OpenCreator": {
+    "text": "前身为 KrillinAI。面向创作者的开源 AI 工作区，由 Codex 驱动。在同一个地方用代理创建视频、图像、语音、虚拟形象、视频翻译与剪辑。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "MG1937/ASC": {
+    "text": "ASC 是面向代理/移动研究人员的超快速 Android 反编译前端。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "dream-num/univer": {
+    "text": "面向 AI 代理的 Office 工具集——电子表格、文档、幻灯片、画布、关系表与 PDF 集于一个运行时。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "tt-a1i/archify": {
+    "text": "用于生成美观、可验证的架构、工作流、时序、数据流与生命周期图的代理技能——自包含 HTML，带动效与清晰导出。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "THU-MAIC/OpenMAIC": {
+    "text": "开放多代理互动课堂——一键获得沉浸式多代理学习体验",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "FlashML-org/FreeToken": {
+    "text": "FreeToken 将数据中心级模型服务带到你的桌面。在本地快速高效运行大型模型。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "heygen-com/hyperframes": {
+    "text": "编写 HTML。渲染视频。为代理而构建。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "google-research/timesfm": {
+    "text": "TimesFM（时间序列基础模型）是 Google Research 开发的用于时间序列预测的预训练时间序列基础模型。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "k2-fsa/OmniVoice": {
+    "text": "面向 600+ 语言的高质量语音克隆 TTS",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "chaitanyagiri/munder-difflin": {
+    "text": "本地多代理工具集，兼容你现有的 Claude Code、Codex 订阅，让你运行一个代理办公室",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "akitaonrails/ai-memory": {
+    "text": "面向代理编码 CLI 的长期记忆解决方案，并便于在不同代理供应商之间交接",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "vxcontrol/pentagi": {
+    "text": "完全自主的 AI 代理系统，能够执行复杂的渗透测试任务",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "OpenWhispr/openwhispr": {
+    "text": "语音转文字听写应用，支持本地（Nvidia Parakeet/Whisper）与云端模型（BYOK）。隐私优先，跨平台可用。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "marin-community/marin": {
+    "text": "用于基础模型研究与开发的开源框架。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "jo-inc/camofox-browser": {
+    "text": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "linshenkx/prompt-optimizer": {
+    "text": "AI 提示词优化器，用于写出更好的提示词并获得更好的 AI 结果。",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
+  },
+  "WorldFlowAI/everything-claude-code": {
+    "text": "Claude Code 工具集——代理、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
+    "source": "deepseek-flash",
+    "at": "2026-09-23T03:21:32Z"
   }
 }
