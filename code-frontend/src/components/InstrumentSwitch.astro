@@ -1,0 +1,101 @@
+---
+// 三器切换控件（frontend-spec §7.1 切换条外观）。
+// 来源：cache-tools/design-lab/three-instruments-v3.html（2026-09-23 用户拍板移植到实际页面）：
+//   army   /models  错金兵符（分片 + 磁场牵引）
+//   market /plans   悬签（提签 / 翻面 / 回落）
+//   sky    /github  星历拨盘（双环转位 + 盘心可拨）
+// 契约不变：容器 [data-toggle]、按钮 [data-toggle-value]、面板 [data-toggle-panel]，
+// 显隐 / 键盘 / aria 仍由 Base.astro 的原生脚本处理；本组件只换外观，
+// 画布美术、切换动效与流光在 src/scripts/instrument-switch.js（独立 chunk）。
+// 画布纯装饰：aria-hidden、零数据（不映射任何榜单 / 套餐字段）。
+const { kind, label, options, current } = Astro.props;
+const numerals = ['壹', '贰'];
+// 右侧静态提示（2026-09-23 用户定：不再随切换播过程词，每页固定一条，直接构建期渲染）
+const HINTS = { army: '错金兵符', market: '翻签换市', sky: '星历拨盘 · 可拨动' };
+---
+<div class="instrument" data-instrument data-kind={kind}>
+  <div class="instrument__widget">
+    <canvas class="instrument__canvas" aria-hidden="true"></canvas>
+    <div class="instrument__tabs" role="tablist" aria-label={label}>
+      {
+        options.map((option, i) => (
+          <button
+            type="button"
+            role="tab"
+            class="instrument__tab"
+            data-toggle-value={option.key}
+            aria-selected={String(option.key === current)}
+          >
+            {kind === 'army' && (
+              <>
+                <span class="instrument__leaf instrument__leaf--top" />
+                <span class="instrument__leaf instrument__leaf--bottom" />
+                <i class="instrument__seam" />
+                <i class="instrument__rivet" />
+                <i class="instrument__rivet" />
+              </>
+            )}
+            {kind === 'market' ? (
+              <span class="instrument__sign">
+                <span class="instrument__tag" />
+                <i class="instrument__eyelet" />
+                <i class="instrument__eyelet instrument__eyelet--second" />
+                <span class="instrument__label">
+                  {option.label}
+                  <small class="instrument__sub">{option.sub}</small>
+                </span>
+              </span>
+            ) : (
+              <span class="instrument__label">
+                {kind === 'army' && <small>{numerals[i]}</small>}
+                {option.label}
+              </span>
+            )}
+          </button>
+        ))
+      }
+    </div>
+    {
+      kind === 'sky' && (
+        <button
+          type="button"
+          class="instrument__dial"
+          aria-label="拨动星历盘，切换周榜或月榜"
+          title="点击切换，或向左右拨动"
+        />
+      )
+    }
+  </div>
+  <span class="instrument__hint" aria-hidden="true">{HINTS[kind]}</span>
+  <i class="instrument__beam" aria-hidden="true"></i>
+</div>
+
+<script>
+  // 引擎按站内一贯的取件纪律惰性加载（与星海 / 虎符 / 杆秤同一套生命周期）：
+  // 排在首屏之后、独立 chunk，不进首屏 JS（frontend-spec §10.2）；
+  // 软导航按 astro:page-load 重建、astro:before-swap 释放。
+  let instrument = null;
+  let instrumentQueued = null;
+  const instrumentRelease = () => {
+    if (instrumentQueued) cancelIdleCallback?.(instrumentQueued);
+    instrumentQueued = null;
+    instrument?.release();
+    instrument = null;
+  };
+  const instrumentBoot = () => {
+    if (!document.querySelector('[data-instrument]')) return instrumentRelease();
+    if (instrument || instrumentQueued) return;
+    const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 240));
+    instrumentQueued = idle(() => {
+      instrumentQueued = null;
+      if (!document.querySelector('[data-instrument]')) return;
+      import('../scripts/instrument-switch.js').then(({ mount }) => {
+        instrumentRelease();
+        instrument = mount();
+      });
+    });
+  };
+  document.addEventListener('astro:before-swap', instrumentRelease);
+  document.addEventListener('astro:page-load', instrumentBoot);
+  instrumentBoot();
+</script>

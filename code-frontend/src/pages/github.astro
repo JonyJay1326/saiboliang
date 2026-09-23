@@ -6,7 +6,7 @@ import Base from '../layouts/Base.astro';
 import PageIntro from '../components/PageIntro.astro';
 import StarSea from '../components/StarSea.astro';
 import GithubLedgerRow from '../components/GithubLedgerRow.astro';
-import ToggleBar from '../components/ToggleBar.astro';
+import InstrumentSwitch from '../components/InstrumentSwitch.astro';
 import { github } from '../lib/data.js';
 import { toBeijing } from '../lib/format.js';
 
@@ -38,7 +38,7 @@ const boards = [
   </StarSea>
 
   <div data-toggle data-toggle-current={DEFAULT}>
-    <ToggleBar label="榜单周期" options={boards} current={DEFAULT} />
+    <InstrumentSwitch kind="sky" label="榜单周期" options={boards} current={DEFAULT} />
 
     {
       boards.map((board) => (

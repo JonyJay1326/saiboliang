@@ -1,10 +1,14 @@
 ---
 // 页头带 + 星海装饰层（frontend-spec.md §4.4 / §11.1，2026-09-20 用户拍板采用「甲」形态：极 5000 + 联动开）。
 // canvas 纯装饰：aria-hidden、零数据（星点不映射任何字段）；文字由 slot 传入、压在上层。
+// 2026-09-22 三页图腾落位统一：星海仍铺满整条页头带（它的身份是「场」，不是器物），
+// 但太极中心对齐右侧器物位中心——`data-plate-probe` 量的是 site.css 里同一支变量 --totem-plate，
+// 器物位改宽度时星海中心跟着走，不需要第二处硬编码。
 // 引擎在 Base.astro 的星海加载器里惰性取件（独立 chunk，不计入首屏 JS，§10.2）。
 ---
-<div class="page-head" data-star-sea>
+<div class="page-head page-head--sea" data-star-sea>
   <canvas class="page-head__canvas" data-star-sea-canvas aria-hidden="true" width="300" height="300"></canvas>
+  <span class="page-head__plate-probe" data-plate-probe aria-hidden="true"></span>
   <div class="page-head__layer">
     <slot />
   </div>

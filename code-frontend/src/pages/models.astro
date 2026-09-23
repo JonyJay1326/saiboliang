@@ -4,7 +4,8 @@
 // 两榜切换为轻量显隐（原生脚本，见 §7.1 / §10.2），两榜均在构建期渲染。默认综合榜。
 import Base from '../layouts/Base.astro';
 import PageIntro from '../components/PageIntro.astro';
-import ToggleBar from '../components/ToggleBar.astro';
+import TigerTally from '../components/TigerTally.astro';
+import InstrumentSwitch from '../components/InstrumentSwitch.astro';
 import ModelPodium from '../components/ModelPodium.astro';
 import ModelRollRow from '../components/ModelRollRow.astro';
 import { models } from '../lib/data.js';
@@ -24,23 +25,23 @@ const withModel = (row) => ({ ...row, model: modelById.get(row.modelId) ?? null 
   description="Artificial Analysis 综合与编程两榜，附公开市场参考价。"
   dataUpdatedAt={file.dataUpdatedAt}
 >
-  <PageIntro
-    eyebrow="MODEL MUSTER"
-    name="点将台"
-    image="/font-images/sec-jiang.png"
-    width={226}
-    height={80}
-    lede="AI 模型榜：把各家模型拉上点将台，综合与编程两榜依次点卯——战力看指数，俸禄看报价，谁堪大用一榜见分晓。"
-  >
-    <p class="page-intro__note">
-      俸禄单位为 USD / 百万 Token；报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。
-    </p>
-  </PageIntro>
+  <TigerTally>
+    <PageIntro
+      eyebrow="MODEL MUSTER"
+      name="点将台"
+      image="/font-images/sec-jiang.png"
+      width={226}
+      height={80}
+      lede="AI 模型榜：把各家模型拉上点将台，综合与编程两榜依次点卯——战力看指数，俸禄看报价，谁堪大用一榜见分晓。"
+    >
+      <p class="page-intro__note">
+        俸禄单位为 USD / 百万 Token；报价为 Artificial Analysis 公开市场参考价，不代表原厂或全网最低价。
+      </p>
+    </PageIntro>
+  </TigerTally>
 
   <div data-toggle data-toggle-current={DEFAULT}>
-    <div class="board-switch">
-      <ToggleBar label="榜单类型" options={boards} current={DEFAULT} />
-    </div>
+    <InstrumentSwitch kind="army" label="榜单类型" options={boards} current={DEFAULT} />
 
     {
       boards.map((board) => {

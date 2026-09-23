@@ -1,0 +1,17 @@
+---
+// 页头带 + 电磁虎符图腾（frontend-spec.md §4.5，2026-09-22 用户拍板：3D 试作落 /models 页头右侧）。
+// 画布纯装饰：aria-hidden、零数据（虎符不映射任何榜单字段）；文字由 slot 传入、压在上层。
+// 交互（2026-09-22 反馈二轮）：**点器物本体** = 拆解 / 收合切换（无按钮、无键盘入口）；
+// 切综合榜 / 编程榜 = 同一次切换（键盘可达）；点模型卡 / 点卯簿行不再触发动效（反馈十五轮，2026-09-22 用户撤销）；
+// 手动收合到位的一瞬补一击（闪光 + 后坐抖动 + 地面环暴亮 + 余辉）。
+// 器物位（.page-head--totem / .totem-plate）与粮市杆秤共用同一套落位，见 site.css「三页图腾落位」。
+// 引擎在 Base.astro 的虎符加载器里惰性取件（独立 chunk，不计入首屏 JS，§10.2）。
+---
+<div class="page-head page-head--totem page-head--tiger" data-tiger-tally>
+  <div class="totem-plate">
+    <canvas class="page-head__canvas page-head__canvas--totem page-head__canvas--tiger" data-tiger-canvas aria-hidden="true" width="300" height="300"></canvas>
+  </div>
+  <div class="page-head__layer">
+    <slot />
+  </div>
+</div>

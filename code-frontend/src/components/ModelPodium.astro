@@ -2,7 +2,8 @@
 // 拜将台卡（/models 前三名，frontend-spec §5.3）
 // 版式线：cache-tools/design-lab/dianjiangtai-v2.html（本机试作，不发布）；
 // 装饰层 2026-09-20 用户确认从试作同步：大字水印（壹 / 贰 / 叁）+ 榜首常驻粒子。
-// 粒子位置 / 时长 / 延迟构建期写死，不依赖脚本；帅旗与将衔未采用。
+// 粒子位置 / 时长 / 延迟构建期写死（无 JS 也照常飘）；帅旗与将衔未采用。
+// 悬停加速 2026-09-21 用户定：只由文末脚本按 WAAPI 调 playbackRate，构建期参数不动。
 import { modelIcon, vendorInitial } from '../lib/vendors.js';
 import { modelPriceLabel } from '../lib/format.js';
 
@@ -62,3 +63,61 @@ const particles =
   <p class="podium__pay">俸禄 {modelPriceLabel(model)}</p>
   <span class="podium__score">{row.score} 分</span>
 </article>
+
+<script>
+  // 榜首粒子悬停加速（2026-09-21 用户定）：指针压上第一名卡片即提速，移开回到原速。
+  // 为什么不走 CSS：粒子的时长 / 延迟是构建期写死在行内 style 上的，覆盖 animation-duration
+  // 会让浏览器按新时长重算相位——44 颗粒子会一起瞬移一下；改 playbackRate 只动速度，位置连续。
+  // 事件委托挂 document：软导航只换 <body>，委托不需要重绑，也不会随组件替换重复绑定（§7.2）。
+  const BOOST = 2.6;    // 悬停倍速
+  const RAMP = 360;     // 提速 / 复位各走一段短坡（ms），速度不硬切
+  const TOP = '.podium__card--1';
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+
+  const states = new Map();  // 卡片 → { dots, from, to, at, rate }
+  let frame = 0;
+
+  const tick = (now) => {
+    frame = 0;
+    for (const [card, ramp] of states) {
+      const t = Math.min(1, (now - ramp.at) / RAMP);
+      const eased = t * t * (3 - 2 * t);  // smoothstep：起步与收尾都软
+      ramp.rate = ramp.from + (ramp.to - ramp.from) * eased;
+      for (const anim of ramp.dots) anim.playbackRate = ramp.rate;
+      // 复位到位即注销；提速态留在表里，作为下一次降速的起点
+      if (t === 1 && ramp.to === 1) states.delete(card);
+    }
+    if (states.size > 0) frame = requestAnimationFrame(tick);
+  };
+
+  const glide = (card, to) => {
+    const dots = [];
+    for (const dot of card.querySelectorAll('.podium__aura i')) dots.push(...dot.getAnimations());
+    if (dots.length === 0) return;
+    const previous = states.get(card);
+    const from = previous ? previous.rate : 1;
+    states.set(card, { dots, from, to, at: performance.now(), rate: from });
+    if (!frame) frame = requestAnimationFrame(tick);
+  };
+
+  document.addEventListener('pointerover', (event) => {
+    if (event.pointerType !== 'mouse' || reduced.matches) return;
+    const card = event.target instanceof Element ? event.target.closest(TOP) : null;
+    if (card) glide(card, BOOST);
+  });
+
+  document.addEventListener('pointerout', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    const card = event.target instanceof Element ? event.target.closest(TOP) : null;
+    if (!card) return;
+    const next = event.relatedTarget instanceof Element ? event.relatedTarget.closest(TOP) : null;
+    if (next !== card) glide(card, 1);
+  });
+
+  // 软导航前停坡清表：卡片随 <body> 下线，旧节点的动画引用没有意义
+  document.addEventListener('astro:before-swap', () => {
+    states.clear();
+    if (frame) cancelAnimationFrame(frame);
+    frame = 0;
+  });
+</script>

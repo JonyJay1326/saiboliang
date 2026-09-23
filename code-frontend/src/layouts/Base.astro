@@ -315,6 +315,68 @@ const SHOW_SKIN_TOGGLE = false;
       seaBoot();
     </script>
 
+    {/* 点将台页头 · 电磁虎符图腾（frontend-spec §4.5，2026-09-22 用户拍板）。
+        与星海同一套加载纪律：只有 /models 页头出画布时才取引擎，取件排在首屏之后，
+        引擎是独立 chunk，不进首屏 JS（§10.2 无岛页预算）；软导航按 astro:page-load 重建、
+        astro:before-swap 释放。 */}
+    <script>
+      let tally = null;
+      let tallyQueued = null;
+      const tallyRelease = () => {
+        if (tallyQueued) cancelIdleCallback?.(tallyQueued);
+        tallyQueued = null;
+        tally?.release();
+        tally = null;
+      };
+      const tallyBoot = () => {
+        if (!document.querySelector('[data-tiger-canvas]')) return tallyRelease();
+        if (tally || tallyQueued) return;
+        const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 240));
+        tallyQueued = idle(() => {
+          tallyQueued = null;
+          if (!document.querySelector('[data-tiger-canvas]')) return;
+          import('../scripts/tiger-tally.js').then(({ mount }) => {
+            tallyRelease();
+            tally = mount();
+          });
+        });
+      };
+      document.addEventListener('astro:before-swap', tallyRelease);
+      document.addEventListener('astro:page-load', tallyBoot);
+      tallyBoot();
+    </script>
+
+    {/* 粮市页头 · 杆秤图腾（frontend-spec §4.6，2026-09-22 用户拍板：乙案「杆秤 · 称量」+ 光核）。
+        与星海 / 虎符同一套加载纪律：只有 /plans 页头出画布时才取引擎，取件排在首屏之后，
+        引擎是独立 chunk，不进首屏 JS（§10.2 无岛页预算）；软导航按 astro:page-load 重建、
+        astro:before-swap 释放。 */}
+    <script>
+      let scale = null;
+      let scaleQueued = null;
+      const scaleRelease = () => {
+        if (scaleQueued) cancelIdleCallback?.(scaleQueued);
+        scaleQueued = null;
+        scale?.release();
+        scale = null;
+      };
+      const scaleBoot = () => {
+        if (!document.querySelector('[data-steelyard-canvas]')) return scaleRelease();
+        if (scale || scaleQueued) return;
+        const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 240));
+        scaleQueued = idle(() => {
+          scaleQueued = null;
+          if (!document.querySelector('[data-steelyard-canvas]')) return;
+          import('../scripts/steelyard.js').then(({ mount }) => {
+            scaleRelease();
+            scale = mount();
+          });
+        });
+      };
+      document.addEventListener('astro:before-swap', scaleRelease);
+      document.addEventListener('astro:page-load', scaleBoot);
+      scaleBoot();
+    </script>
+
     {/* 详情弹框预览（frontend-spec §5.10 票证 / §5.11 套餐）。
         渐进增强：`<a href="/tickets/xxx/">`、`<a href="/plans/xxx/">` 保持真链接——
         爬虫可抓、新窗口可开、无 JS 正常跳转、直接访问该 URL 仍是完整独立页。

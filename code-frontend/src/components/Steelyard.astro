@@ -1,0 +1,17 @@
+---
+// 页头带 + 杆秤图腾（frontend-spec.md §4.6；2026-09-22 用户拍板：
+// lab `cache-tools/design-lab/dianjiang-liangshi-totems-v1.html` 乙案「杆秤 · 称量」
+// ＋ 盘内容「光核 · 束缚」落 /plans 页头右侧）。
+// 画布纯装饰：aria-hidden、零数据（砣位 / 刻星 / 光核都不映射任何套餐字段）；文字由 slot 传入、压在上层。
+// 交互（与堂内语法一致）：拖秤砣 / 拽秤盘 / 点载荷（笼绷一记）/ 移入唤醒扫一道光 / 连点两下复位；
+// 东市 / 西市切换 = 载荷换手感位（键盘可达，是这一页唯一的无障碍控件）；指针只认鼠标，触摸不参与。
+// 引擎在 Base.astro 的杆秤加载器里惰性取件（独立 chunk，不计入首屏 JS，§10.2）。
+---
+<div class="page-head page-head--totem page-head--scale" data-steelyard>
+  <div class="totem-plate">
+    <canvas class="page-head__canvas page-head__canvas--totem" data-steelyard-canvas aria-hidden="true" width="300" height="300"></canvas>
+  </div>
+  <div class="page-head__layer">
+    <slot />
+  </div>
+</div>

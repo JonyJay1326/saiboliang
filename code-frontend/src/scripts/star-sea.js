@@ -119,11 +119,11 @@ class StarField {
     this.spinFrom = 0;
     this.spinTo = 0;
     this.spinT = 1;
-    this.turns = 0;
     this.frame = 0;
     this.running = false;
     this.visible = false;
     this.motion = opts.motion;
+    this.padY = opts.padY || 0;
 
     this.ro = new ResizeObserver(() => {
       clearTimeout(this.rt);
@@ -147,7 +147,9 @@ class StarField {
     this.canvas.width = Math.round(w * dpr);
     this.canvas.height = Math.round(h * dpr);
     this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    this.R = Math.min(w, h) * cfg.fit;
+    /* 画布上下各溢出 --sea-pad（CSS 同步放大画布盒），太极尺寸仍按页头带本体算
+       （h - 2×pad），换来的余量给旋转滞回与爆散外冲用——不再被页头带边缘裁掉。 */
+    this.R = Math.min(w, h - 2 * this.padY) * cfg.fit;
     this.cx = w * cfg.cx;
     this.cy = h * cfg.cy;
     this.seed();
@@ -316,10 +318,11 @@ class StarField {
     this.paint(0);
   }
 
-  flip() {
-    this.turns += 1;
+  flip(direction = 1) {
+    /* 两仪互易：按目标榜位定方向（2026-09-23 用户定）——周榜 = 逆时针、月榜 = 顺时针，
+       与同页星历拨盘的双向转动（pos 0↔1 来回）一致。 */
     this.spinFrom = this.spin;
-    this.spinTo = Math.PI * this.turns;
+    this.spinTo = this.spin + Math.PI * (direction < 0 ? -1 : 1);
     this.spinT = 0;
     if (!this.running) {
       this.spinT = 1;
@@ -365,14 +368,24 @@ export function mount() {
   const style = getComputedStyle(host);
   const want = Number.parseInt(style.getPropertyValue('--sea-count'), 10);
   const motion = style.getPropertyValue('--sea-motion').trim() !== '0';
+  /* 画布盒上下溢出的余量（与 CSS 同一支 --sea-pad）：只放宽粒子活动范围，太极尺寸不变 */
+  const padY = Number.parseFloat(style.getPropertyValue('--sea-pad')) || 0;
   const count = Math.min(Number.isFinite(want) ? want : deviceCap(), deviceCap());
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  /* 三页图腾落位统一（2026-09-22）：星海铺满页头带，但太极中心对齐右侧器物位中心。
+     器物位宽度只有一支来源（site.css :root --totem-plate），这里用组件里的探针量它，
+     器物位改宽度时星海自动跟着走；量不到（老结构 / 变量缺失）就回落到原来的 0.71。 */
+  const probe = host.querySelector('[data-plate-probe]');
+  const bandW = host.getBoundingClientRect().width;
+  const plateW = probe ? probe.getBoundingClientRect().width : 0;
+  const cx = bandW > 0 && plateW > 0 && plateW < bandW ? 1 - plateW / (2 * bandW) : 0.71;
   const field = new StarField(canvas, host, {
     count,
     motion,
+    padY,
     fit: 0.46,
-    cx: 0.71,
+    cx,
     cy: 0.5,
     push: 0.45,
     influence: 0.42,
@@ -395,11 +408,13 @@ export function mount() {
     if (!field.running) field.paint(0);
   };
 
-  /* 周 / 月切换 = 两仪互易：只监听已有按钮，不加 DOM、不加状态位 */
+  /* 周 / 月切换 = 两仪互易（方向按目标榜位：第一个榜逆时针、后面的榜顺时针）：
+     只监听已有按钮，不加 DOM、不加状态位 */
   const onToggle = (event) => {
     const btn = event.target instanceof Element ? event.target.closest('[data-toggle-value]') : null;
     if (!btn || !btn.closest('[data-toggle]')) return;
-    field.flip();
+    const tabs = btn.parentElement ? [...btn.parentElement.children] : [];
+    field.flip(tabs.indexOf(btn) > 0 ? 1 : -1);
     field.burst(2.2);
   };
 
