@@ -209,6 +209,29 @@ export function startingPriceLabel(plan) {
   return `${currencySymbol(start.currency)}${start.price}/月起`;
 }
 
+/**
+ * 前端只读派生：是否含免费档（`price === 0`；契约 §4.3 允许 price 为 0）。
+ * 「起步价」口径明确排除免费档（契约 §5.2），所以卡面上两者必须分开说：
+ * 有免费档时写「有免费档 · 付费档 ¥49/月起」，避免把起步价读成全档最低价。
+ */
+export function hasFreeTier(plan) {
+  return (plan?.tiers ?? []).some((t) => typeof t.price === 'number' && t.price === 0);
+}
+
+/** 档位口径文案（契约 §4.3 的 offerType）：免费 / 首购 / 限时 / 常规。 */
+export function tierOfferLabel(tier) {
+  if (typeof tier?.price === 'number' && tier.price === 0) return '免费';
+  if (tier?.offerType === 'new-user') return '首购';
+  if (tier?.offerType === 'promotion') return '限时';
+  return '常规';
+}
+
+/** 档位口径键（样式钩子，不入库）：free / new-user / promotion / standard。 */
+export function tierOfferKey(tier) {
+  if (typeof tier?.price === 'number' && tier.price === 0) return 'free';
+  return tier?.offerType === 'new-user' || tier?.offerType === 'promotion' ? tier.offerType : 'standard';
+}
+
 /** 排序用：起步价数值，无价视为正无穷（排最后）。 */
 export function startingPriceValue(plan) {
   return startingPrice(plan)?.price ?? Number.POSITIVE_INFINITY;

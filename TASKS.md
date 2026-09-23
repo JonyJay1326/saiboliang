@@ -59,6 +59,7 @@
 | A3 | ✅ | 喜鹊万人造字体退场（2026-09-17 用户确认）：字体线收敛为 4 款喜鹊字体，气泡图 `bub-shou.png` / `bub-hui.png` 已随字体一并删除，`font-assets-preview.html` 对应组已移除 | 用户 | 后续气泡文案不再出图；如需恢复须用户重新确认授权 |
 | A4 | ✅ | `brand.png` 倍率复核：此前实测 1.71x（目标 ≥2x），需重出 2x | 用户 + cache-tools | [实测 2026-09-18] 随字配调整一并重出：brand.png 753×184（展示 376×92，即 2x）、slogan 685×80、sec-*×6 各 80px 高实像素；脚本 `cache-tools/render-site-assets.py`，旧版备份 `cache-tools/backup/original-assets-2026-09-18/`；尺寸为试用值（见 `frontend-inventory.md` §3） |
 | A5 | ⬜ | 字体图片化工程军规落地（真实 width/height 属性、`img{width:auto;height:auto}`、`inline-block`） | Codex / Cursor | F5 实现时执行 |
+| A6 | ✅ | 板块名字体图补齐（驿传）：`sec-yichuan.png` | cache-tools | [实测 2026-09-23] **158×80** / 展示 79×40，喜鹊古字典体，与既有 `sec-*.png` 同规则；走 `cache-tools/render-site-assets.py`（`SECTIONS` 加项后重跑，其余 16 张**逐字节不变**），已拷入 `code-frontend/public/font-images/`。同时把「出图后需手工拷贝到 `public/font-images/`」这条历史上的隐性步骤写进脚本 docstring |
 
 ## 线 4 · 合规与版权（二期）
 
@@ -69,7 +70,24 @@
 | ID | 状态 | 任务 | 建议执行方 | 备注 / 验收 |
 |---|---|---|---|---|
 | C1 | ⏸ | **robots.txt 自动检查**：采集前拉取并解析，命中 `Disallow` 的入口标记为待确认，替代目前的人工发现 | Codex | 2026-09-18 用户决定暂缓二期。现状：项目内**无任何 robots 检查**；`code-backend/news-source-check.md` 的准入结论全靠人工核验（例：InfoQ `/feed` 被 `Disallow: /feed/` 覆盖但 `/feed` 不在该前缀内，当时靠人工判断 + 用户拍板保留） |
-| C2 | ⏸ | **`/about` 增加「版权与下架」入口**（申诉/联系方式），收到权利人通知即删 | Codex / 用户 | 2026-09-18 用户决定暂缓二期，且**菜单不占位**。恢复条件：对外开放流量到一定量级，或收到权利人通知时优先做 |
+| C2 | 🔄 | **`/about` 增加「联络与下架」入口**（申诉/联系方式），收到权利人通知即删 | Codex / 用户 | 2026-09-23 **提前解封并与驿传合流**（见线 5 · T5）：自 `/tip` 开始收 `contact`，「收集个人信息却无告知」（PIPL 第 17 条）即由「二期可缓」变为**上线前置**。落点扩为 `/about` 新增 **07 联络与下架** + **08 隐私** 两块（段号牌 01–06 → 01–08）。仍**菜单不占位** |
+
+## 线 5 · 驿传（线报提交，2026-09-23 立项）
+
+> 上游：`doc-data/cyber-granary-change-proposal-tip-submission.md`（已拍板）、`doc-data/cyber-granary-impl-spec-tip-submission.md`（**施工图，实施以它为准**）。
+> 决策：接收端 **B · CF Worker Route** ／ 路径 **`/tip`** ／ 板块名 **驿传**（入口链接名 `驿传 · 报`）／ 范围 **Phase 1 + C2 合流**。
+> 定位：本站**首个访客输入入口**，补票证线的供给端（票证此前全靠人工维护、无外部输入源）；报料是**运营输入**，不进契约、不公开展示。
+> 交付方式：`doc-data/cyber-granary-handoff-tip-submission.md`（**派生物**：批次切分 5 批 + 每批可粘贴话术 + 验收命令 + 待拍板缺口）。与施工单冲突以施工单为准。
+
+| ID | 状态 | 任务 | 建议执行方 | 备注 / 验收 |
+|---|---|---|---|---|
+| T1 | ✅ | `code-edge/`：Worker（Origin → 蜜罐 → Turnstile → 字段校验 → 推送站长）+ wrangler 配置 + README | 实施方 | 施工单 §3 + **§3.9 落地回执**。**代码已交付并复核** [2026-09-23]：文件清单齐备、四闸次序与文案逐条对单、零依赖无 Secret；D7/D8/命名三处修订（超时 4000 / 缺密钥 502 / `MAX_BODY_CHARS`）已落地核对。复核另修一处 P0——根 `.gitignore` 原把 `code-edge/` 全挡（进不了仓库），已补 `!/code-edge/`。⚠️ 加固建议（闸 3 判据 `!== true`）**已落地** [2026-09-23]：三态 fail-closed、顺序不再影响安全性。**`code-edge/` 已收口**；部署属 T2、端到端验收属 T7 |
+| T2 | ✅ | CF 侧：Turnstile widget + 2 个 Secret + Route `saiboliang.top/api/*` | 用户 | 施工单 §8。**已完成** [实测 2026-09-23]：widget 建好；两个 Secret 已设（带非空 `turnstileToken` 探测得 `400`「请先完成人机校验」而非 `502`「驿传暂闭」，即 **Secret 就位**）；Route 生效（连通性 6 条全过，见 §9 打勾项 + handoff §4 实测记录表） |
+| T3 | ✅ | `/tip` 页面：结构 + 无障碍七条 + 原生脚本 + 参数预填 + **页头 H1 用已出的 `sec-yichuan.png`** + **sitemap 收录**（staticPaths 加 `/tip/`） | 实施方 | 施工单 §4 + **§5.1**。字体图 **158×80 已入 `public/font-images/`，H1 直接用图、不需要文字回落**；**不得引入框架岛**（`frontend-spec.md` §10.2 阈值 60%）；sitemap 只加路径、不加 `lastmod` / `priority` / `changefreq`、不动 `robots.txt`。**代码已交付** [2026-09-23]：`tip.astro` 421 行、**§4.2/§4.3/§4.6/§4.7 逐条落地**、`build` 通过（37 pages）、首屏 JS **9.31 KB < 15 KB**、sitemap 序 `news → tip → about`。✅ **P0 已修复** [2026-09-23]：`from` 校验正则漏挡 `//evil.com`（**开放重定向**；**规格写错、实施方照抄**）已加上 `(?!\/)` 前瞻，**双重验证通过**（从源码提取正则实跑 + `new URL().origin` 验证，14 用例**跨源数 = 0**）。浏览器点击端到端随批 4 入口上线后一并验 |
+| T4 | ✅ | 入口四处：页脚常驻第四项 / 票证页与弹框（**「去领取」左侧**）/ 套餐页与弹框（**改指** footer 里现成的「信息有误？」）/ `/about` 第 07 块 | 实施方 | 施工单 §5 表（含「**页面内的位置**」列）。**零 CSS 改动**（2026-09-23 无头 Chrome 实测坐实）——两处容器（`.ticket__actions` / `.plan-detail__foot`）已是 `flex` + `gap .8rem`，且详情页已把 CTA 的 `margin-left:auto` 覆盖为 0；**弹框内同样可见**（行动区被搬进面板底部常驻操作区，不是移除——实测套餐弹框内该容器 1028×78、现成的「信息有误？」80×26 px 可见，原内容区已无行动区）；**注入的 `/tip/…` 入口点击后正常导航、不被弹框吞掉**；**不加主导航项**。**✅ 已完成** [2026-09-23 读码核对三处]：页脚 `Footer.astro` L13 `tipFrom = Astro.url.pathname` + L24 `驿传 · 报`（落 disclosure 行第 4 位）；票证页 `tickets/[id].astro` L109 `<a href={tipHref}>此票不作数？</a>` **在 L110 `.ticket__cta` 之前**；套餐页 `plans/[id].astro` **L214 只改 `href`**（文字仍「信息有误？」、元素位置未动）。三处构造均合规：`from` 不编码、`title`/`url` 走 `encodeURIComponent`、`title` 截 120 |
+| T5 | ✅ | C2 合流：`/about` **07 联络与下架** + **08 隐私** | 实施方 | 施工单 §6 **与 §6.1**（正文已定稿，照抄不自拟）；`[[联络邮箱]]` 为唯一待填占位、**未填不得上线**；与线 4 · C2 是同一件事。**✅ 代码已完成** [2026-09-23 逐句核对]：`about.astro` L222–254 两块 12 句与 §6.1 定稿**逐字一致**（07 四句 + 08 六句），段号牌 07/08 连续、`aria-labelledby`（`about-contact` / `about-privacy`）、行内链接「驿传 · 报」→ `/tip/?from=/about/` 全部在位，写法沿用 01–06。✅ **全部完成** [2026-09-23]：邮箱定值 `tip@saiboliang.top`（CF Email Routing），**代码两处已替换**（`about.astro` L228 / L249，纯文本形态；**构建产物 `dist/about/index.html` 实测两句渲染通顺**，残句问题确认不存在）；`tip.astro` 的 `errorCallback` 已挂（**打包产物 `tip.astro_*.js` 内实测在 bundle 内**）。`npm run build` 通过（37 pages）。⚠️ 上线后仍需**人工发一封测试邮件**验真收信（控制台数字对 ≠ 真的通） |
+| T6 | ✅ | **文档同步**：`frontend-spec.md`（§1.3/§1.5/§2/§2.2/**§2.3**/§4.8/§4.9/§5.9/§7.1/§8/§10.2/§10.3/§13/变更记录）、`AGENTS.md` §3/§7、`architecture.md` §6.1/§6.3、`frontend-inventory.md` §3、本表、`check-front-spec.py`、`render-site-assets.py` | WorkBuddy | [实测 2026-09-23] **当前 PASS（B1 覆盖 93 字段 / 白名单 136）**。同日曾因「UI 审查 05 轮」写进 §5.10 的 8 个平台名字（`base` / `closing` / `index` / `inert` / `opacity` / `replace` / `transform` / `window`）触发 B1 FAIL；用户拍板按「**平台术语独立白名单**」修——新增 `PLATFORM_TERMS` 组、平台类词移出 `FRONTEND_OWNED`、补上漏收的 `pushState`，脚本回到 PASS。`cyber-granary-data-contract.md` **未改** |
+| T7 | 🔄 | 验收：Route 生效 + 四道闸逐条 + 摘除回滚 + 端到端真提交 | 用户 + 实施方 | 施工单 §9。**✅ Route + Secret + 连通性全过** [实测 2026-09-23]：六条响应体均为 Worker 的 JSON（`404` 无此端点 / `405` 方法不允许 / `403` 来源不合法 / `400` 请求格式不正确 / `400` 请先完成人机校验 / `GET /` 200）。**剩**：四道闸里「蜜罐命中」「token 复用」「越界字段」三条；**摘除回滚演练**；**端到端真提交**（需批 3 `/tip` 上线后）。⚠️ 判据是**响应体**不是状态码（405/404 与 Pages 同值），命令见手递单 §4 |
 
 ---
 

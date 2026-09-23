@@ -22,6 +22,11 @@ const plans = modelFile.plans;
 const vendors = [...new Set(plans.map((p) => p.vendor))];
 const ghWeek = githubFile.week.items;
 const newsSources = [...new Set(newsFile.items.map((n) => n.source))];
+// 邸报两个口径（2026-09-23 UI 审查 02）：在库 = news.json 全部条目（永久累加），
+// 精选 = 出现在 /news 上的条目（featured === true）。两个数字必须能直接对上，
+// 否则「96 条在库」与邸报页「本期 85 条」读起来像互相矛盾（契约 §4.5）。
+const newsStored = newsFile.items.length;
+const newsFeatured = newsFile.items.filter((n) => n.featured === true).length;
 
 // 每条来路的现状（前端只读派生，不入库）
 const SOURCES = [
@@ -51,20 +56,28 @@ const SOURCES = [
     url: null,
     collect: '自动 + 人工',
     freq: '每天 3 次',
-    can: `厂商官方一手渠道的资讯与定价；票证由人工逐张核验证据页后手工上架，当前在架 ${listed.length} 张（推荐分 70 及以上、未失效）。邸报本批收录 ${newsFile.items.length} 条、来源 ${newsSources.length} 个。`,
+    can: `厂商官方一手渠道的资讯与定价；票证由人工逐张核验证据页后手工上架，当前在架 ${listed.length} 张（推荐分 70 及以上、未失效）。邸报 ${newsStored} 条在库，其中 ${newsFeatured} 条精选展示、来源 ${newsSources.length} 个。`,
     cannot: '媒体兜底条目可能未经一手核实（页面会标「中文报道」）；票证额度与门槛一律以官方结算页为准，期限不确定的标为「未核实」。',
     used: [{ href: '/tickets/', label: '粮票 · 领' }, { href: '/news/', label: '邸报 · 看' }],
   },
 ];
 
-// 仓门状态：逐模块核验时间 + 新鲜度档（§5.7 三态；level 在构建期算，展示值用绝对时间避免漂移）
+// 仓门状态：逐模块核验时间 + 新鲜度档（§5.7 三态；level 在构建期算，展示值用绝对时间避免漂移）。
+// 2026-09-23 UI 审查 01：时分之外必须给完整日期与状态文字——跨日时只写「核验 08:52」
+// 无法判断数据年龄，用户要能独立核对「这份存粮是哪天的」。
+const FRESHNESS_TEXT = { ok: '24 小时内', warn: '超 24 小时', stale: '超 72 小时', none: '尚未核验' };
 const GATES = [
   { label: '粮票', value: `${listed.length} 张在架`, at: ticketFile.dataUpdatedAt },
   { label: '点将台', value: `${modelFile.rankings.intelligence.length} 名入榜`, at: modelFile.dataUpdatedAt },
   { label: '粮市', value: `${plans.length} 个套餐`, at: modelFile.dataUpdatedAt },
   { label: '观星台', value: `本周 ${ghWeek.length} 项`, at: githubFile.dataUpdatedAt },
-  { label: '邸报', value: `${newsFile.items.length} 条在库`, at: newsFile.dataUpdatedAt },
-].map((g) => ({ ...g, state: freshness(g.at), clock: toBeijing(g.at)?.slice(11) ?? null }));
+  { label: '邸报', value: `${newsStored} 条在库，其中 ${newsFeatured} 条精选`, at: newsFile.dataUpdatedAt },
+].map((g) => ({
+  ...g,
+  state: freshness(g.at),
+  full: toBeijing(g.at),
+  stateText: FRESHNESS_TEXT[freshness(g.at).level] ?? '',
+}));
 
 // 口径词典（§1.3 名词表对用户公开：隐喻不解释就是黑话，解释了才是文化）
 // 用 <dl> 而不是四列表格：站点在 ≤560px 会把表格降级成块状排列，
@@ -171,7 +184,14 @@ const oldest = times.sort()[0] ?? null;
             <span class="gate__dot" aria-hidden="true"></span>
             <span class="gate__label">{g.label}</span>
             <b>{g.value}</b>
-            <em>{g.clock ? `核验 ${g.clock}` : g.state.text}</em>
+            {g.full ? (
+              <span class="gate__when">
+                <time datetime={g.at}>{`核验 ${g.full}`}</time>
+                <em>{g.stateText}</em>
+              </span>
+            ) : (
+              <span class="gate__when"><em>{g.state.text}</em></span>
+            )}
           </li>
         ))}
       </ul>
@@ -196,6 +216,41 @@ const oldest = times.sort()[0] ?? null;
     <section aria-labelledby="about-disclaimer" class="stn-sec">
       <h2 class="stn-h" id="about-disclaimer"><span class="stn-no">06</span>免责</h2>
       <p>信息仅供参考，领取与购买前请核实官方页面。额度、价格与条件一律以官方结算页为准。</p>
+    </section>
+
+    {/* 07 / 08：施工单 §6.1 定稿照抄 */}
+    <section aria-labelledby="about-contact" class="stn-sec">
+      <h2 class="stn-h" id="about-contact"><span class="stn-no">07</span>联络与下架</h2>
+      <p>
+        <strong>信息纠错</strong> —— 走驿传：<a href="/tip/?from=/about/">驿传 · 报</a>。票证失效、价格有变、来源写错、哪张该下架，写清楚递过来就行，不必绕别的门路。
+      </p>
+      <p>
+        <strong>版权与下架</strong> —— 来函至 tip@saiboliang.top。本站只收录标题、简介、链接与事实性数据，不存正文；权利人如认为某条内容侵犯权益，写清条目地址即可，核实后即刻下架，不设其它程序。
+      </p>
+      <p>
+        <strong>回信</strong> —— 留了联络方式的，48 小时内回；没留的，处理结果以站内变化为准（条目更正或下架即为已办）。
+      </p>
+      <p>来函一律不公开。更正与下架<strong>即时生效</strong>，不另行公告。</p>
+    </section>
+
+    <section aria-labelledby="about-privacy" class="stn-sec">
+      <h2 class="stn-h" id="about-privacy"><span class="stn-no">08</span>隐私</h2>
+      <p>
+        <strong>收什么</strong> —— 全站只有一处会向你索取信息：驿传表单。除此之外，本站没有账号、没有登录、没有第三方统计脚本。
+      </p>
+      <p>
+        <strong>为什么收</strong> —— 只为核对这一条报料。联络方式是选填，用于必要时回信；不填也能提交。
+      </p>
+      <p>
+        <strong>怎么存</strong> —— 站点本身不落库：内容经人机校验后直接推送给站长，核对完成后即删；不进公开数据、不做报料墙、不用于任何其它用途。
+      </p>
+      <p><strong>谁能看</strong> —— 只有站长本人。</p>
+      <p>
+        <strong>你的权利</strong> —— 可随时要求查阅或删除你提交过的内容，来函至 tip@saiboliang.top，说明提交时间与内容要点便于定位。
+      </p>
+      <p>
+        另有两处技术说明：人机校验由 Cloudflare Turnstile 提供，其对数据的处理依 Cloudflare 的隐私政策；皮肤偏好只存在你自己的浏览器本地，不随任何表单上传。
+      </p>
     </section>
   </div>
 </Base>

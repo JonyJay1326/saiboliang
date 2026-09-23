@@ -1,13 +1,16 @@
 ---
-// 页脚（frontend-spec §5.9）：数据来源链接、推广披露入口（→ /about）、数据核验时间三件常驻。
+// 页脚（frontend-spec §5.9）：数据来源链接、推广披露入口（→ /about）、驿传入口、数据核验时间四件常驻。
 // 另加两行「名物小志」（2026-09-20 用户选定方案 C）：站点名物由来 + 设计来路。
 // 末行以 © 起头（2026-09-20 用户选定方案 B）；年份构建期取当前年，SSG 每日重建自动跟随。
 // 核验时间按页面取对应模块的 dataUpdatedAt（契约 §3.3：各页面展示该文件的核验时间）。
+// colophon 第一句枚举六个主导航板块，驿传是辅助入口，不写入该句。
 import { freshness, toBeijing } from '../lib/format.js';
 
 const { dataUpdatedAt = null, sourceLabel = null } = Astro.props;
 const state = freshness(dataUpdatedAt);
 const year = new Date().getFullYear();
+// from 只取 pathname、不做编码（施工单 §5；带 % 会被 /tip 校验拒收）
+const tipFrom = Astro.url.pathname;
 ---
 <footer>
   <p class="colophon">太仓存数、粮票记惠、观星台看榜、点将台比将、粮市问价、邸报读讯。</p>
@@ -17,6 +20,8 @@ const year = new Date().getFullYear();
     <span class="disclosure__sep" aria-hidden="true">·</span>
     {sourceLabel && <span>{sourceLabel} · </span>}
     数据来源与推广披露见 <a href="/about/">关于</a>
+    <span class="disclosure__sep" aria-hidden="true">·</span>
+    <a href={`/tip/?from=${tipFrom}`}>驿传 · 报</a>
     <span class="disclosure__sep" aria-hidden="true">·</span>
     <span class="freshness" data-freshness={state.level}>
       数据核验时间：{toBeijing(dataUpdatedAt) ?? state.text}

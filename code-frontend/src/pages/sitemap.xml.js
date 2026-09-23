@@ -1,5 +1,7 @@
 // sitemap.xml —— 构建期生成，含全部 /tickets/[id] 与 /plans/[id]（frontend-spec §2.3）
 // /news 邸报已解封为正式页（2026-09-20），随静态页一并收录。
+// /tip 驿传报料页收录（2026-09-23 定）：驿传的供给端就是访客，入口被藏起来等于自断供给。
+// 垃圾提交已由 Turnstile + 蜜罐 + 服务端四道闸三层挡住，被索引的代价低于不可发现。
 import { models, tickets } from '../lib/data.js';
 import { listedTickets } from '../lib/format.js';
 
@@ -15,6 +17,7 @@ export function GET({ site }) {
     '/models/',
     '/plans/',
     '/news/',
+    '/tip/',
     '/about/',
   ];
 

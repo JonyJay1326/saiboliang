@@ -19,6 +19,9 @@ const { ticket } = Astro.props;
 const isExpired = ticket.expired === true;
 const isOverdue = !isExpired && overdue(ticket);
 
+// 驿传入口（施工单 §5 第 2 项）：from 不做编码；title/url 须 encodeURIComponent，title ≤120
+const tipHref = `/tip/?from=/tickets/${ticket.id}/&type=rotten&ticket=${ticket.id}&title=${encodeURIComponent(String(ticket.title).slice(0, 120))}&url=${encodeURIComponent(ticket.link)}`;
+
 // 受控 Markdown → HTML：先转义，再只放行白名单语法（契约 §4.2 / §5.1）。
 const escapeHtml = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -103,6 +106,7 @@ const jsonLd = {
     <section class="ticket__content" set:html={renderContent(ticket.content)} />
 
     <p class="ticket__actions">
+      <a href={tipHref}>此票不作数？</a>
       <a class="ticket__cta" href={ticket.link} target="_blank" rel="noopener noreferrer">去领取</a>
     </p>
 

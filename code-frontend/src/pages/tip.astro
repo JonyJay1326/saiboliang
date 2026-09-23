@@ -1,0 +1,424 @@
+---
+// /tip 驿传 —— frontend-spec §4.9 / 施工单 §4
+// 无岛页：原生脚本挂 astro:page-load；不引入 Vue 岛（§10.2 有岛页已超 60% 阈值）。
+// 视觉：复用站内既有类名（stn / stn-note / visually-hidden / ticket__cta），表单件样式见 site.css「驿传」段。
+import Base from '../layouts/Base.astro';
+import PageIntro from '../components/PageIntro.astro';
+---
+<Base
+  title="驿传"
+  description="向赛博粮站递交线报：报新粮、报作废、报差错。站长逐条核对后决定是否开仓。"
+>
+  <div class="stn">
+    <PageIntro
+      eyebrow="TIP DESK"
+      name="驿传"
+      image="/font-images/sec-yichuan.png"
+      width={158}
+      height={80}
+      lede="手上有本站还没收录的粮票，或哪张票已经作废、哪处信息写错了——写在这里递过来。站长逐条核对后决定是否开仓。"
+    />
+
+    <section class="stn-sec" aria-label="驿传表单">
+      <form id="tip-form" class="tip-form" novalidate>
+        <fieldset>
+          <legend>类型</legend>
+          <label><input type="radio" name="type" value="new" checked /> 报新粮</label>
+          <label><input type="radio" name="type" value="rotten" /> 报作废</label>
+          <label><input type="radio" name="type" value="feedback" /> 报差错</label>
+        </fieldset>
+
+        <p>
+          <label for="tip-title">标题</label>
+          <input
+            id="tip-title"
+            name="title"
+            type="text"
+            maxlength="120"
+            required
+            autocomplete="off"
+            aria-describedby="err-title"
+          />
+          <span id="err-title" class="stn-note" hidden></span>
+        </p>
+
+        <p>
+          <label for="tip-url">相关链接</label>
+          <input
+            id="tip-url"
+            name="url"
+            type="url"
+            maxlength="500"
+            inputmode="url"
+            autocomplete="off"
+            placeholder="https://"
+            aria-describedby="err-url"
+          />
+          <span id="err-url" class="stn-note" hidden></span>
+        </p>
+
+        <p>
+          <label for="tip-detail">详情</label>
+          <textarea
+            id="tip-detail"
+            name="detail"
+            rows="6"
+            maxlength="4000"
+            required
+            placeholder="在哪看到的？额度多少、怎么领、什么时候截止…"
+            aria-describedby="err-detail"
+          ></textarea>
+          <span id="err-detail" class="stn-note" hidden></span>
+        </p>
+
+        <p>
+          <label for="tip-contact">联系方式</label>
+          <input
+            id="tip-contact"
+            name="contact"
+            type="text"
+            maxlength="200"
+            autocomplete="off"
+            placeholder="邮箱 / 微信 / QQ 均可，选填"
+          />
+          <span class="stn-note tip-aside">仅站长可见 · 不公开</span>
+        </p>
+
+        {/* 蜜罐：人类恒空；.hp-field 为施工单标识，visually-hidden 复用站内既有隐藏类 */}
+        <div class="visually-hidden" aria-hidden="true">
+          <label>
+            网站
+            <input class="hp-field" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </label>
+        </div>
+
+        <input type="hidden" name="ticket" value="" />
+
+        <div id="ts-widget"></div>
+        <p id="ts-hint" class="stn-note" hidden></p>
+
+        <p id="tip-status" role="status" aria-live="polite"></p>
+
+        <p>
+          <button type="submit" class="ticket__cta tip-submit">递交</button>
+        </p>
+      </form>
+
+      <div id="tip-done" class="stn-sec tip-done" hidden tabindex="-1">
+        <h2 class="stn-h">已递到驿传</h2>
+        <p><a id="tip-back" href="/">回太仓 →</a></p>
+      </div>
+
+      <noscript>
+        <p class="stn-note">本页需启用 JavaScript 才能提交报料。</p>
+      </noscript>
+    </section>
+  </div>
+</Base>
+
+<script>
+  // 驿传表单：全部初始化挂 astro:page-load（施工单 §4.7 第 10 条）
+  // sitekey 留空 → 未配置态；填入 Turnstile sitekey（0x…）后生效。允许官方测试键。
+  const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname);
+  const TURNSTILE_SITEKEY = isLocal ? '1x00000000000000000000AA' : '0x4AAAAAAFBCxANqZc3aaz3C';
+
+  /** 解析查询串单键（含 + → %20，再 decode） */
+  function qs(name) {
+    const pairs = location.search.replace(/^\?/, '').split('&');
+    for (let i = 0; i < pairs.length; i++) {
+      const kv = pairs[i].split('=');
+      if (kv[0] === name && kv.length > 1) {
+        try {
+          return decodeURIComponent(kv.slice(1).join('=').replace(/\+/g, '%20'));
+        } catch {
+          return '';
+        }
+      }
+    }
+    return '';
+  }
+
+  /**
+   * 读 from 原值——不得 decodeURIComponent（§4.7 第 9 条，防 %2f / %2e 绕过）
+   */
+  function qsFromRaw() {
+    const pairs = location.search.replace(/^\?/, '').split('&');
+    for (let i = 0; i < pairs.length; i++) {
+      const kv = pairs[i].split('=');
+      if (kv[0] === 'from' && kv.length > 1) return kv.slice(1).join('=');
+    }
+    return '';
+  }
+
+  /** 校验站内 from；通过才可用，否则回落 / */
+  function safeFromHref(raw) {
+    return /^\/(?!\/)[A-Za-z0-9\-/_.]*$/.test(raw) ? raw : '/';
+  }
+
+  /** 按类型切换详情 placeholder */
+  function applyDetailPlaceholder(form) {
+    const type = form.elements.type.value;
+    const detail = form.elements.detail;
+    if (type === 'rotten') {
+      detail.placeholder = '哪里失效了？报错时间、错误页面…';
+    } else if (type === 'feedback') {
+      detail.placeholder = '哪里写错了？价格、权益、链接…';
+    } else {
+      detail.placeholder = '在哪看到的？额度多少、怎么领、什么时候截止…';
+    }
+  }
+
+  /** 切入成功块并移交焦点（§4.6 第 7 条） */
+  function showSuccess(form, done) {
+    form.hidden = true;
+    done.hidden = false;
+    done.focus();
+  }
+
+  /** 挂载本页逻辑；同一 form 只绑一次 */
+  function bootTip() {
+    const form = document.getElementById('tip-form');
+    const status = document.getElementById('tip-status');
+    const done = document.getElementById('tip-done');
+    if (!form || !status || !done || form.dataset.tipReady === '1') return;
+    form.dataset.tipReady = '1';
+
+    const submitBtn = form.querySelector('.tip-submit');
+    const tsHint = document.getElementById('ts-hint');
+    let widgetId = null;
+    const sitekeyOk = /^(0x|1x|2x|3x)[A-Za-z0-9]+$/.test(TURNSTILE_SITEKEY);
+
+    // —— 预填（§4.7 第 1 / 2 条）——
+    const type = qs('type');
+    if (['new', 'rotten', 'feedback'].includes(type)) {
+      const radio = form.querySelector(`input[name="type"][value="${type}"]`);
+      if (radio) radio.checked = true;
+    }
+    const title = qs('title');
+    if (title) form.elements.title.value = title.slice(0, 120);
+    const url = qs('url');
+    if (url && /^https?:\/\//i.test(url)) form.elements.url.value = url.slice(0, 500);
+    const ticket = qs('ticket');
+    if (ticket && /^[a-z0-9-]{1,64}$/.test(ticket)) form.elements.ticket.value = ticket;
+    applyDetailPlaceholder(form);
+
+    // —— 返回入口（§4.7 第 9 条：禁止 history.back；校验后再写 href）——
+    const fromRaw = qsFromRaw();
+    const back = document.getElementById('tip-back');
+    const href = safeFromHref(fromRaw);
+    if (back) {
+      back.setAttribute('href', href);
+      back.textContent = href === '/' ? '回太仓 →' : '返回上一页';
+    }
+
+    form.addEventListener('change', (ev) => {
+      if (ev.target && ev.target.name === 'type') applyDetailPlaceholder(form);
+    });
+
+    /** 写状态行 */
+    function setStatus(msg) {
+      status.textContent = msg;
+    }
+
+    /** 字段级错误（noFocus=true 时不抢焦点） */
+    function fieldError(name, msg, noFocus) {
+      const input = form.elements[name];
+      const err = document.getElementById(`err-${name}`);
+      if (!err) {
+        setStatus(msg);
+        if (!noFocus && input) input.focus();
+        return;
+      }
+      err.textContent = msg;
+      err.hidden = false;
+      input.setAttribute('aria-invalid', 'true');
+      if (!noFocus) input.focus();
+    }
+
+    /** 清除字段级错误 */
+    function clearFieldError(name) {
+      const input = form.elements[name];
+      const err = document.getElementById(`err-${name}`);
+      if (err) {
+        err.hidden = true;
+        err.textContent = '';
+      }
+      if (input) input.removeAttribute('aria-invalid');
+    }
+
+    // 与 Worker §3.6 字面同源
+    const VALIDATORS = {
+      title(v) {
+        const t = v.trim();
+        if (t.length < 2) return '标题至少写两个字';
+        if (t.length > 120) return '标题太长了，最多 120 个字';
+        return '';
+      },
+      url(v) {
+        const t = v.trim();
+        if (!t) return '';
+        if (!/^https?:\/\//i.test(t)) return '链接要以 http(s):// 开头';
+        if (t.length > 500) return '链接太长了，最多 500 个字';
+        return '';
+      },
+      detail(v) {
+        const t = v.trim();
+        if (t.length < 5) return '详情再写几句吧（至少 5 个字）';
+        if (t.length > 4000) return '详情太长了，最多 4000 个字';
+        return '';
+      },
+    };
+
+    /** 提交闸：有错返回 true */
+    function gate(name) {
+      const msg = VALIDATORS[name](form.elements[name].value);
+      if (msg) {
+        fieldError(name, msg);
+        return true;
+      }
+      return false;
+    }
+
+    const edited = {};
+    form.addEventListener('input', (ev) => {
+      const name = ev.target && ev.target.name;
+      if (!name) return;
+      edited[name] = true;
+      if (VALIDATORS[name]) clearFieldError(name);
+    });
+    form.addEventListener('focusout', (ev) => {
+      const name = ev.target && ev.target.name;
+      if (!name || !VALIDATORS[name] || !edited[name]) return;
+      const msg = VALIDATORS[name](form.elements[name].value);
+      if (msg) fieldError(name, msg, true);
+      else clearFieldError(name);
+    });
+
+    /** 读 Turnstile token */
+    function turnstileToken() {
+      try {
+        return widgetId === null ? '' : window.turnstile.getResponse(widgetId) || '';
+      } catch {
+        return '';
+      }
+    }
+
+    /** 重置 Turnstile */
+    function turnstileReset() {
+      try {
+        if (widgetId !== null) window.turnstile.reset(widgetId);
+      } catch {
+        /* ignore */
+      }
+    }
+
+    /** 人机校验加载失败提示 */
+    function tsFail(msg) {
+      if (tsHint) {
+        tsHint.hidden = false;
+        tsHint.textContent = msg;
+      }
+      setStatus(msg);
+    }
+
+    if (sitekeyOk) {
+      const renderWidget = () => {
+        try {
+          widgetId = window.turnstile.render('#ts-widget', {
+            sitekey: TURNSTILE_SITEKEY,
+            theme: 'dark',
+            errorCallback: () => tsFail('人机校验加载失败，请刷新页面或稍后再试。'),
+          });
+        } catch {
+          tsFail('人机校验加载失败，请刷新页面或稍后再试。');
+        }
+      };
+      if (window.turnstile) {
+        renderWidget();
+      } else if (!document.querySelector('script[data-tip-turnstile]')) {
+        const s = document.createElement('script');
+        s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        s.async = true;
+        s.dataset.tipTurnstile = '1';
+        s.onload = renderWidget;
+        s.onerror = () => tsFail('人机校验加载失败，请刷新页面或稍后再试。');
+        document.head.appendChild(s);
+      } else {
+        // 脚本已在加载中：等 api 就绪
+        const wait = setInterval(() => {
+          if (!window.turnstile) return;
+          clearInterval(wait);
+          renderWidget();
+        }, 200);
+        setTimeout(() => clearInterval(wait), 8000);
+      }
+    } else {
+      if (tsHint) {
+        tsHint.hidden = false;
+        tsHint.textContent = '本站暂不可提交，请稍后再来。';
+      }
+      setStatus('本站暂不可提交，请稍后再来。');
+      if (submitBtn) submitBtn.disabled = true;
+    }
+
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      // 闸序：蜜罐 → 字段 → 人机（§4.7 第 5 条；与服务端闸序不同是有意的）
+      if (form.elements.website.value) {
+        showSuccess(form, done);
+        return;
+      }
+      clearFieldError('title');
+      clearFieldError('url');
+      clearFieldError('detail');
+      setStatus('');
+      if (gate('title') || gate('detail') || gate('url')) return;
+      if (!sitekeyOk) {
+        setStatus('本站暂不可提交，请稍后再来。');
+        return;
+      }
+      if (!turnstileToken()) {
+        setStatus('请先完成人机校验');
+        return;
+      }
+      submitBtn.disabled = true;
+      setStatus('正在递送…');
+      fetch('/api/tip', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          type: form.elements.type.value,
+          title: form.elements.title.value.trim(),
+          url: form.elements.url.value.trim(),
+          detail: form.elements.detail.value.trim(),
+          contact: form.elements.contact.value.trim(),
+          ticket: form.elements.ticket.value,
+          website: form.elements.website.value,
+          turnstileToken: turnstileToken(),
+        }),
+      })
+        .then((res) =>
+          res
+            .json()
+            .catch(() => ({ ok: false, error: '驿传暂闭，请稍后再试' }))
+            .then((data) => ({ status: res.status, data })),
+        )
+        .then((r) => {
+          if (r.status === 200 && r.data.ok === true) {
+            showSuccess(form, done);
+            return;
+          }
+          submitBtn.disabled = false;
+          turnstileReset();
+          setStatus((r.data && r.data.error) || '驿传暂闭，请稍后再试');
+        })
+        .catch(() => {
+          submitBtn.disabled = false;
+          turnstileReset();
+          setStatus('驿传暂闭，请稍后再试');
+        });
+    });
+  }
+
+  document.addEventListener('astro:page-load', bootTip);
+</script>

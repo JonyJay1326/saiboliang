@@ -8,6 +8,8 @@ import {
   planSourceLabel,
   planStatusLabel,
   startingPriceLabel,
+  tierOfferKey,
+  tierOfferLabel,
   tierPrice,
 } from '../../lib/format.js';
 import { planIcon, vendorInitial } from '../../lib/vendors.js';
@@ -22,6 +24,41 @@ const file = models();
 const icon = planIcon(plan.vendor);
 const statusLabel = planStatusLabel(plan.status);
 const sourceNote = planSourceLabel(plan.source);
+
+// 价格依据（2026-09-23 UI 审查 01：第三方证据要能直接点开核对）：
+// 证据站点只写在契约的 `conditions` 一句话里（契约 §4.3 不新增字段），所以这里在**展示层**
+// 把明文域名 / http(s) 链接放行为可点链接——先转义、再用单次 replace 放行，不引入任何注入面。
+// 官方页 / 第三方页的区别仍由 source + sourceUrl 表达，抓取日期取 updatedAt。
+// 页脚证据行的链接标签按 source 分两种（2026-09-23 用户定）：`sourceUrl` 在数据里始终优先填
+// **官方页**（契约 §4.3；它同时是「去订阅」的目标），所以 aggregator 套餐里它**不是**价格出处——
+// 真出处（如 codingplan.org）只写在 `conditions` 里、由「档位与额度」区那句承载。
+// aggregator 标「官方页」、official 才标「价格依据」，避免把官方入口页说成价格依据。
+const escapeHtml = (s) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+const LINKABLE =
+  /(https?:\/\/[^\s，。；、）)"'<>]+)|(?<![\w@./-])((?:[a-z0-9-]+\.)+(?:com|cn|org|net|io|ai|dev|top)(?:\/[^\s，。；、）)"'<>]*)?)/gi;
+
+function linkify(text) {
+  return escapeHtml(text).replace(LINKABLE, (match, full, bare) =>
+    full
+      ? `<a href="${full}" target="_blank" rel="noopener noreferrer">${full}</a>`
+      : `<a href="https://${bare}" target="_blank" rel="noopener noreferrer">${bare}</a>`
+  );
+}
+
+const sourceHost = (() => {
+  try {
+    return new URL(plan.sourceUrl).host;
+  } catch {
+    return plan.sourceUrl;
+  }
+})();
+
+// 驿传入口（施工单 §5 第 3 项）：只改指「信息有误？」；from 不做编码；title/url 编码
+const tipTitle = encodeURIComponent(`${plan.vendor} ${plan.product}`.slice(0, 120));
+const tipUrl = encodeURIComponent(`https://saiboliang.top/plans/${plan.id}/`);
+const tipHref = `/tip/?from=/plans/${plan.id}/&type=feedback&title=${tipTitle}&url=${tipUrl}`;
 
 const priced = plan.tiers.filter(
   (t) => t.offerType === 'standard' && typeof t.price === 'number' && t.price > 0
@@ -119,7 +156,14 @@ const jsonLd = {
 
     <section aria-labelledby="plan-tiers">
       <h2 id="plan-tiers">档位与额度</h2>
-      {sharedConditions && <p class="plan-tier__conditions">{sharedConditions}</p>}
+      {
+        sharedConditions && (
+          <p class="plan-tier__conditions">
+            <span class="plan-tier__label">价格依据</span>
+            <span set:html={linkify(sharedConditions)} />
+          </p>
+        )
+      }
       <div class="plan-tiers-grid">
       {
         plan.tiers.map((tier) => (
@@ -127,7 +171,9 @@ const jsonLd = {
             <header class="plan-tier__head">
               <h3>
                 {tier.name}
-                {tier.offerType !== 'standard' && <span class="badge">优惠</span>}
+                {tierOfferKey(tier) !== 'standard' && (
+                  <span class="badge" data-offer={tierOfferKey(tier)}>{tierOfferLabel(tier)}</span>
+                )}
               </h3>
               <p class="plan-tier__price">
                 <strong>{tierPrice(tier)}</strong>
@@ -141,7 +187,12 @@ const jsonLd = {
                 ))}
               </ul>
             )}
-            {!sharedConditions && tier.conditions && <p class="plan-tier__conditions">{tier.conditions}</p>}
+            {!sharedConditions && tier.conditions && (
+              <p class="plan-tier__conditions">
+                <span class="plan-tier__label">价格依据</span>
+                <span set:html={linkify(tier.conditions)} />
+              </p>
+            )}
           </section>
         ))
       }
@@ -160,7 +211,16 @@ const jsonLd = {
         去订阅
       </a>
       {sourceNote && <span class="badge">{sourceNote}</span>}
-      <a href="/about/">信息有误？</a>
+      <a href={tipHref}>信息有误？</a>
+      <p class="plan-detail__evidence">
+        {plan.source === 'aggregator' ? '官方页' : '价格依据'}：<a href={plan.sourceUrl} target="_blank" rel="noopener noreferrer">{sourceHost} ↗</a>
+        <span class="plan-detail__evidence-sep">·</span>
+        {plan.source === 'aggregator' ? '第三方整理价' : '官方页标价'}
+        <span class="plan-detail__evidence-sep">·</span>
+        核验于 <time datetime={plan.updatedAt}>{plan.updatedAt}</time>
+        <span class="plan-detail__evidence-sep">·</span>
+        购买前以<strong>官方结算页</strong>为准
+      </p>
     </footer>
   </article>
 </Base>

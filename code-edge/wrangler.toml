@@ -1,0 +1,9 @@
+name = "saiboliang-tip"
+main = "src/worker.js"
+compatibility_date = "2024-11-12"
+
+# 一条 Route 覆盖 /api/*；Worker 内仅认 POST /api/tip，其余 404 JSON
+# 摘除本 Route 即完全还原（回 GitHub Pages 的 405+HTML）
+routes = [
+  { pattern = "saiboliang.top/api/*", zone_name = "saiboliang.top" }
+]

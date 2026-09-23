@@ -22,6 +22,7 @@
 | `demo-html/`     | 参考页面 + 字体 + 19 张 PNG 资产    | **仅风格参考，不作实现依据**                          |
 | `code-backend/`  | 数据管道代码（采集脚本，只产 JSON 不提供服务） | 将发布到 GitHub，注意 §6 隐私红线                    |
 | `code-frontend/` | 前端代码（Astro + Vue 岛）        | 将发布到 GitHub，注意 §6 隐私红线                    |
+| `code-edge/`     | 边缘收单端点（Cloudflare Worker，只接管 `/api/*`） | 独立部署，**不入 GitHub Pages 链路**；Phase 1 不落库；将发布到 GitHub，注意 §6 隐私红线 |
 | `cache-tools/`   | 本地临时工具（如字体库生成图片脚本）         | **不部署、不发布**，只在本机用                         |
 | `research/`      | 外部调研与证据留档（如 freeegg 逆向拆解）  | **事实参考，不是规格**；实现决定回到 doc-data / doc-front |
 
@@ -52,6 +53,7 @@
 - GitHub Actions：采集 + 构建 + 部署在**同一个 workflow**；cron 每天 3 次、避开整点（UTC 03:17 / 07:17 / 11:17）。
 - 技术栈：**Astro + Vue 岛**；真实路径路由，**禁用 hash 路由**。
 - 数据双轨：构建期注入 JSON（SEO）+ 运行时比对 `version.json`（实时性）。
+- **`/api/*` 由 Cloudflare Worker 接管**（2026-09-23 用户拍板，为 `/tip` 驿传页的收单端点）：域名 NS 已在 Cloudflare，加一条**路径级 Route** 即可，**站点其余部分仍由 GitHub Pages 出**、Actions 部署链路一行不动；该 Route 可整条摘除，摘除后站点完全还原。这是本方案**唯一的运行时后端例外**（无用户系统、无数据库，Phase 1 不落库），边界与失败隔离见 `cyber-granary-architecture.md` §6.3。**除此之外不得再更换或新增部署形态。**
 
 ## 8. 工具分工（用户当前规划）
 

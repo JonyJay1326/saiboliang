@@ -40,8 +40,10 @@ const PAGES = [
   ['/ (首页，无岛)', 'index.html'],
   ['/tickets/ (筛选岛)', 'tickets/index.html'],
   ['/github/ (无岛)', 'github/index.html'],
-  ['/tickets/[id]/ (详情)', 'tickets/opencode-zen-free-202608/index.html'],
+  ['/tickets/[id]/ (详情)', 'tickets/qoder-qwen38flash-free-202609/index.html'],
   ['/news/ (施工页)', 'news/index.html'],
+  ['/tip/ (驿传，无岛)', 'tip/index.html'],
+  ['/about/ (无岛)', 'about/index.html'],
 ];
 
 console.log('页面'.padEnd(26) + 'HTML raw'.padStart(11) + 'HTML gzip'.padStart(11) + 'JS gzip'.padStart(10) + '  脚本');

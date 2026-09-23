@@ -12,6 +12,9 @@
 !/.gitattributes
 !/code-frontend/
 !/code-backend/
+# code-edge/：边缘收单端点（Phase 1 不落库、零依赖、无 Secret）。
+# AGENTS.md §3 已定「将发布到 GitHub」；缺了这行整个 Worker 进不了仓库。
+!/code-edge/
 !/.github/
 !README.md
 !AGENTS.md
