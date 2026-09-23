@@ -22,9 +22,12 @@ const SITE_NAME = '赛博粮站';
 const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
 // 皮肤档切换控件开发期暂隐（2026-09-20 用户定）：两档全部开发完毕后再置 true 恢复显示。
 const SHOW_SKIN_TOGGLE = false;
+// 默认档 = 赛博档（2026-09-23 用户拍板，由朴素档翻回）；赛博增量未定稿期间生效的只有
+// site.css 的三支强度变量（星海粒子 / 星海动效 / 器物动效），见 frontend-spec.md §11.1。
+const DEFAULT_SKIN = 'cyber';
 ---
 <!doctype html>
-<html lang="zh-CN" data-skin="plain" transition:animate="none">
+<html lang="zh-CN" data-skin={DEFAULT_SKIN} transition:animate="none">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -103,7 +106,8 @@ const SHOW_SKIN_TOGGLE = false;
       if (!window.__cgSkin) {
         window.__cgSkin = true;
         const KEY = 'cg:skin';
-        const normalize = (value) => (value === 'cyber' ? 'cyber' : 'plain');
+        // 兜底 = 赛博档（与构建期 data-skin 默认值同源，2026-09-23 用户拍板）
+        const normalize = (value) => (value === 'plain' ? 'plain' : 'cyber');
 
         const apply = () => {
           let stored = null;
