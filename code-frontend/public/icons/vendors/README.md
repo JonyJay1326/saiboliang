@@ -16,15 +16,16 @@
 **例外（非 Lobe 来源）**：
 - `commandcode.svg` 取 Command Code 官网结构化数据里的品牌 SVG（`https://commandcode.ai/logos/command-code-light.svg`，2026-09-18 抓取），仅抽取其图形标记（去字标）、`fill` 改为 `currentColor`。商标归 Command Code 所有。
 - `xingchen.svg` 取讯飞星辰 MaaS 平台官网头图 SVG（`https://maas.xfyun.cn/svg/common-logo-13ec678e.svg`，2026-09-18 抓取），仅抽取其中的图形标记（去「讯飞星辰 MaaS 平台」字标），保留品牌原色。商标归科大讯飞所有。
+- `qianfan.svg` 取百度智能云国际站千帆产品页官方标（`https://intl.cloud.baidu.com/zh/product/qianfan.html`，2026-09-23 抓取）：原文件的六边形标记位图蒙版（内嵌 PNG），此处**只取其官方矢量轮廓路径**（`path-1` 三段分开）重建为纯矢量，颜色按官方位图采样改为三段线性渐变（绿 `#0FEF78`→`#26D979`、蓝 `#0D5EFF`→`#6D67FF`、橙红 `#FF8745`→`#FF3360`），去字标。商标归百度所有。**`baidu.svg`（Lobe 的百度公司标）继续供 AA 厂商 `Baidu` 使用，千帆套餐走本文件。**
 
 **本地改动（Lobe 原文件之上）**：
 - `kimi.svg`（2026-09-19）：在 `<title>` 后加 `<rect width="24" height="24" rx="5" fill="#000">` 整幅深色圆角底；图形、蓝色 `#1783FF` 标注与 `fill="#fff"` 白 K 均未改动。原因：原文件是透明底「白 K」，放在浅色纸色底板上白色笔画不可见（点将台 / 套餐场景）。
 
 ## 命名
 
-**统一为 `{slug}.svg`（59 个文件）**，不再区分 `.color` 后缀——文件名就是 slug，直接可拼。
+**统一为 `{slug}.svg`（60 个文件）**，不再区分 `.color` 后缀——文件名就是 slug，直接可拼。
 
-- 有彩色版的取彩色版；Lobe 没有彩色版的取单色版；`commandcode` 为官网单色标、`xingchen` 为官网原色标（两者非 Lobe 文件）。
+- 有彩色版的取彩色版；Lobe 没有彩色版的取单色版；`commandcode` 为官网单色标、`xingchen` 为官网原色标、`qianfan` 为官网矢量轮廓重建（三者非 Lobe 文件）。
 - 单色版厂商：`OpenAI`、`xAI`、`Grok`、`Anthropic`、`IBM`、`Liquid AI`、`Xiaomi(MiMo)`、`Nous Research`、`AI21 Labs`、`Inception`、`KwaiKAT`、`Command Code`。
 - 单色版是 `currentColor`，经 `<img>` 加载时解析为纯黑，浅色底上直接可见。
 - **底板约定**：套餐卡（`site.css` 的 `.plan-card__icon--mono`）只给单色标加纸色底；点将台（2026-09-19，`.podium__logo` / `.roll__logo`）按版式线对**全部厂商标**统一加纸色底——彩色标、单色标、自带深底的标（`kimi.svg`、`xingchen.svg`）在纸色底板上都成立。
@@ -58,7 +59,7 @@ AA 的 `vendor` 不能直接 slug 化。实测反例：
 4. **商标声明**：MIT 只覆盖 Lobe 仓库的分发，**不覆盖商标权**。logo 归各厂商所有，此处仅用于指代对应模型/厂商。站点需在"关于"页声明品牌与商标归属。
 5. 新增厂商时：补下图标 + 更新 `vendor-map.json`，不要引用未落盘的 slug。
 
-## 覆盖（59 个文件）
+## 覆盖（60 个文件）
 
 | 分组 | 数量 | 示例 |
 |---|---|---|
