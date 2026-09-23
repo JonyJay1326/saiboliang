@@ -7,9 +7,14 @@
   /* 色 —— 共用基础盘 */
   --ink: #0b0916;
   --paper: #f5ecd8;
-  --text: rgba(240, 234, 220, .85);
-  --dim: rgba(240, 234, 220, .55);
-  --faint: rgba(240, 234, 220, .35);
+  /* 三级文字层次（2026-09-21 实测校正）：按 --ink 逐层合成后的对比度
+     --text .88 → 12.6:1 ｜ --dim .72 → 8.7:1 ｜ --faint .58 → 5.9:1
+     旧值 .85 / .55 / .35 中，--faint 只有 2.80:1，低于 frontend-spec.md §9
+     「正文对比度 ≥ 4.5:1（含次要文字）」的硬要求；已按下限反推抬到 .58。
+     三档全部过线，且相邻档间距仍 ≥ 2.5:1，层次不被压平。 */
+  --text: rgba(240, 234, 220, .88);
+  --dim: rgba(240, 234, 220, .72);
+  --faint: rgba(240, 234, 220, .58);
   --gold: #e8b73a;
   --gold-deep: #9a6b14;
   --cyan: #3fd9c0;
@@ -17,9 +22,16 @@
   --line: rgba(232, 183, 58, .35);
   --line-dim: rgba(120, 140, 180, .25);
 
-  /* 字（字号下限 11px，frontend-spec.md §9） */
-  --song: "Noto Serif SC", "Songti SC", "SimSun", serif;
-  --mono: Consolas, "SFMono-Regular", Menlo, monospace;
+  /* 字（字号下限 12px，frontend-spec.md §9；2026-09-21 由 11px 上调）
+     角色分治（字体专项 11.2 E 方案，2026-09-21 用户拍板）：西文按角色分两套栈，
+     逐字符回落就能命中，零下载、不碰字体授权红线（AGENTS.md §6）。
+       --song  名词 —— 标题 / 型号 / 厂商 / 正文：西文走系统衬线 Cambria / Georgia；
+       --code  编号 —— 仓库路径 / 票号 / 序号 / 报价 / 分数 / 计数 / 时间：等宽、数字对齐；
+       --mono  通用等宽 —— 英文眉标等系统语；值同 --code。
+     两栈尾部都补衬线族（11.3 第 1 条）：等宽栈里的汉字（「月」「总」）不再掉到 NSimSun。 */
+  --song: Cambria, Georgia, "Times New Roman", "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --mono: Consolas, "SFMono-Regular", Menlo, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", monospace;
+  --code: var(--mono);
 
   /* 版式（中心区宽度对齐参考稿 .page 的 1400px） */
   --wrap: 1400px;

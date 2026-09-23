@@ -3,7 +3,10 @@
    （粮票 / 票证详情 / 粮市 / 套餐详情 / 点将台 / 观星台 / 关于 / 施工页）。
    落笔依据：基调板 v1（tokens.css）+ frontend-spec.md §4–§6；
    版式语言参考 demo-html/saiboliang-style-preview.html（仅风格，不抄结构）。
-   2026-09-18 全站过完，placeholder.css 已删。 */
+   2026-09-18 全站过完，placeholder.css 已删。
+   字体角色（2026-09-21 字体专项 11.2 E 方案）：名词走 var(--song)、编号（路径 / 票号 /
+   序号 / 报价 / 分数 / 计数 / 时间）走 var(--code) 并补 tabular-nums；字号下限 12px
+   （frontend-spec.md §9，同日由 11px 上调）。 */
 
 /* ===== 基础 ===== */
 *,
@@ -44,6 +47,21 @@ a {
 
 a:hover {
   color: var(--gold);
+}
+
+/* 文字链的最小点击目标（2026-09-21）：WCAG 2.2 AA 2.5.8 要求 ≥24×24 CSS px。
+   行内元素的 padding-block 只撑大命中区、**不改变行盒高度**，所以正文行距与整页版式
+   完全不动。实测低于下限的几处：邸报来路链 / 关于表内链 / 「xx →」入口 / 相关票（19px），
+   观星台 repo 链（22px），星历表头来源芯片（20px）。 */
+.more a,
+ol.ranking a,
+.ledger .repo,
+.ledger__head .sp,
+.dibao__link,
+section[aria-labelledby="related"] a,
+section[aria-labelledby^="about"] a,
+table a {
+  padding-block: 3px;
 }
 
 :focus-visible {
@@ -127,7 +145,7 @@ body > footer {
 .skin-toggle {
   display: inline-flex;
   border: 1px solid var(--line);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .2em;
 }
 
@@ -253,7 +271,7 @@ section > h2 {
 
 .source-note {
   margin: -.4rem 0 1rem;
-  font-size: 11.5px;
+  font-size: 12px;
   letter-spacing: .05em;
   color: var(--faint);
 }
@@ -352,8 +370,9 @@ ul.cards > li > .plan-card {
 }
 
 .ticket__serial {
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 12px;
+  font-variant-numeric: tabular-nums;
   letter-spacing: .14em;
   color: var(--gold);
   text-shadow: 0 0 10px rgba(232, 183, 58, .7);
@@ -396,7 +415,7 @@ ul.cards > li > .plan-card {
 }
 
 .ticket__fields dt {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .3em;
   color: var(--dim);
 }
@@ -414,7 +433,7 @@ ul.cards > li > .plan-card {
 
 .ticket__overdue {
   margin: 0;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .12em;
   color: #e06a5a;
 }
@@ -545,7 +564,7 @@ ul.cards > li > .plan-card {
 
 .ticket:not(.ticket--detail) .ticket__vendor {
   margin-top: .35rem;
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: .42em;
   text-indent: .42em;
 }
@@ -575,7 +594,7 @@ ul.cards > li > .plan-card {
 /* 摘要做脚注，2 行截断 */
 .ticket:not(.ticket--detail) .ticket__summary {
   margin: .7rem 0 0;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.9;
   letter-spacing: .06em;
   color: var(--dim);
@@ -612,7 +631,7 @@ ul.cards > li > .plan-card {
 }
 
 .ticket__motto {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .3em;
   color: var(--faint);
 }
@@ -682,7 +701,7 @@ ul.cards > li > .plan-card {
   top: 10px;
   right: 12px;
   padding: 1px 8px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .14em;
   color: var(--cyan);
   border: 1px solid rgba(63, 217, 192, .5);
@@ -737,13 +756,15 @@ ol.ranking li {
   min-width: 1.9em;
   padding: 0 .4rem;
   text-align: center;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 12px;
+  font-variant-numeric: tabular-nums;
   color: var(--gold);
   border: 1px solid var(--line);
 }
 
 ol.ranking a {
+  font-family: var(--code);
   color: var(--text);
   font-size: 13.5px;
 }
@@ -754,10 +775,19 @@ ol.ranking a:hover {
 
 .badge {
   padding: 0 .4rem;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .12em;
   color: var(--dim);
   border: 1px solid var(--line-dim);
+}
+
+/* 首页榜单行（观星台摘要）：语言芯片与两个数字都走编号栈——
+   与 /github 星历表同一套口径（.ledger .chip--lang / .val / .sub） */
+ol.ranking .badge,
+ol.ranking .val,
+ol.ranking .sub {
+  font-family: var(--code);
+  font-variant-numeric: tabular-nums;
 }
 
 ol.ranking li > span {
@@ -786,12 +816,14 @@ ol.ranking li > span {
 }
 
 .model-score {
-  font-family: var(--mono);
+  font-family: var(--code);
+  font-variant-numeric: tabular-nums;
   color: var(--gold);
 }
 
 .model-price {
-  font-family: var(--mono);
+  font-family: var(--code);
+  font-variant-numeric: tabular-nums;
   color: var(--cyan);
 }
 
@@ -821,7 +853,7 @@ ol.ranking li > span {
 }
 
 .ledger__head .date {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--faint);
 }
 
@@ -858,6 +890,7 @@ ol.ranking li > span {
 }
 
 .ledger .repo {
+  font-family: var(--code);
   color: var(--text);
 }
 
@@ -867,21 +900,24 @@ ol.ranking li > span {
 
 .ledger .val {
   margin-left: auto;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
   color: var(--gold);
   text-shadow: 0 0 12px rgba(232, 183, 58, .65);
 }
 
 .ledger .sub {
-  font-size: 11px;
+  font-family: var(--code);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
   color: var(--faint);
 }
 
 .ledger .desc {
   flex: 0 0 100%;
   margin: 0;
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1.75;
   color: var(--dim);
   display: -webkit-box;
@@ -900,7 +936,7 @@ ol.ranking li > span {
 .ledger__foot {
   margin: 0;
   padding: .5rem 1rem;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--faint);
   border-top: 1px solid var(--line-dim);
 }
@@ -910,7 +946,7 @@ ol.ranking li > span {
 .chip {
   display: inline-block;
   padding: 0 .45em;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--dim);
   border: 1px solid var(--line-dim);
   border-radius: 2px;
@@ -920,7 +956,8 @@ ol.ranking li > span {
 .chip--lang {
   --c: var(--gold);
   padding: .12em .62em .12em .5em;
-  font-size: 11.5px;
+  font-family: var(--code);
+  font-size: 12px;
   letter-spacing: .04em;
   color: color-mix(in srgb, var(--c) 78%, #f0eadc);
   border-color: color-mix(in srgb, var(--c) 42%, transparent);
@@ -1056,8 +1093,9 @@ ol.ranking li > span {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 16px;
+  font-variant-numeric: tabular-nums;
   color: #241105;
 }
 
@@ -1119,23 +1157,25 @@ ol.ranking li > span {
 
 .podium__meta {
   margin: 0;
-  font-size: 11.5px;
+  font-size: 12px;
   letter-spacing: .06em;
   color: var(--dim);
 }
 
 .podium__pay {
   margin: 0;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 12px;
+  font-variant-numeric: tabular-nums;
   color: var(--cyan);
 }
 
 .podium__score {
   display: inline-block;
   padding: .05rem .6rem;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 13px;
+  font-variant-numeric: tabular-nums;
   color: var(--gold);
   border: 1px solid var(--line);
   border-radius: 3px;
@@ -1188,7 +1228,7 @@ ol.ranking li > span {
   display: block;
   margin-left: 0;
   font-style: normal;
-  font-size: 11.5px;
+  font-size: 12px;
   letter-spacing: .04em;
   opacity: .7;
 }
@@ -1260,8 +1300,9 @@ ol.ranking li > span {
 }
 
 .roll__cell {
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 15px;
+  font-variant-numeric: tabular-nums;
   color: var(--text);
 }
 
@@ -1269,7 +1310,8 @@ ol.ranking li > span {
 
 .roll__score,
 .roll__delta {
-  font-family: var(--mono);
+  font-family: var(--code);
+  font-variant-numeric: tabular-nums;
   text-align: right;
 }
 
@@ -1333,7 +1375,9 @@ ol.ranking li > span {
 .podium__card--2 .podium__glyph { color: rgba(223, 230, 245, .06); }
 .podium__card--3 .podium__glyph { color: rgba(95, 245, 230, .06); }
 
-/* 榜首常驻彩色粒子：44 颗，全息色混站点金 / 青 / 朱（标记里已写死随机值，无需脚本）；自下而上飘升 */
+/* 榜首常驻彩色粒子：44 颗，全息色混站点金 / 青 / 朱（标记里已写死随机值，无 JS 也照常飘）；自下而上飘升。
+   悬停加速（2026-09-21 用户定）不在这里做——覆盖 animation-duration 会连同相位一起重算、
+   粒子瞬移，改由 ModelPodium 的脚本按 WAAPI 调 playbackRate（构建期参数一概不动）。 */
 .podium__aura {
   position: absolute;
   inset: 0;
@@ -1466,7 +1510,7 @@ body > footer .colophon + .colophon {
 /* 三件常驻声明合并为一行：数据来源 / 推广披露 / 数据核验时间 */
 body > footer .disclosure {
   margin-top: .9rem;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--faint);
 }
 
@@ -1480,7 +1524,7 @@ body > footer .copyright {
 }
 
 body > footer .freshness {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--faint);
 }
 
@@ -1742,11 +1786,26 @@ main > h1 + p {
 :root {
   --sea-count: 700;
   --sea-motion: 0;
+  --totem-motion: 0;
 }
 
 [data-skin="cyber"] {
   --sea-count: 5000;
   --sea-motion: 1;
+  --totem-motion: 1;
+}
+
+/* 星海画布上下溢出的余量（2026-09-23 用户反馈「旋转放大时被页头带边缘裁切」）：
+   两仪互易的旋转滞回与爆散外冲会短暂超出页头带，画布盒上下各放宽 --sea-pad 给它落脚；
+   太极尺寸仍按页头带本体算（引擎读同一支变量，见 star-sea.js 的 padY），所以视觉大小不变。
+   写 px 数值：引擎直接 parseFloat 读取。溢出段落在菜单条（z-index 60）之下、正文之上。 */
+[data-star-sea] {
+  --sea-pad: 40px;
+}
+
+.page-head--sea .page-head__canvas {
+  top: calc(-1 * var(--sea-pad));
+  height: calc(100% + 2 * var(--sea-pad));
 }
 
 .page-head {
@@ -1776,7 +1835,10 @@ main > h1 + p {
 
 @media (min-width: 761px) {
   .page-head {
-    min-height: 22rem; /* 给右侧太极留出落点；窄屏不留，画布也关掉 */
+    /* 三页页头带同高：让三个图腾共用同一条垂直中心线。
+       24rem → 18rem（2026-09-22 用户反馈「空的太多了」）：文案只占顶部一半，
+       多出来的高度是死白；三页一起收，图腾按 0.75 倍自适应缩放，中心线仍统一。 */
+    min-height: 18rem;
   }
 }
 
@@ -1785,6 +1847,111 @@ main > h1 + p {
     display: none;
   }
 }
+
+/* ============================================================
+   三页图腾落位（2026-09-22 统一：观星台 / 点将台 / 粮市）
+   器物位 .totem-plate = 页头带右侧固定分区；宽度只有一支来源 --totem-plate（定义在 :root，
+   窄桌面收窄给文字让位）。三个图腾共用这套参数：点将台虎符、粮市杆秤直接落在器物位里；
+   观星台星海仍铺满整条页头带（它的身份是「场」不是器物），用 data-plate-probe 量同一支变量，
+   把太极中心也对齐器物位中心——器物位改宽度时星海自动跟着走，不会有第二处硬编码。
+   器物位不自带底色 / 边框 / 背景动画：画布透明，器物直接落在页面自己的底上（只有接地软影）。
+   ============================================================ */
+:root {
+  --totem-plate: 100%; /* 窄屏不设器物位（画布也被关掉），给变量一个安全默认值 */
+  /* 虎符取景框高度（2026-09-22 反馈八轮用户定）：一张画框要同时装下「合璧」与整段「拆解」，
+     所以比 18rem 页头带高、上下居中溢出（画布透明，静止时看不出与页头带的差别）；
+     相机随画框同步拉远，静止像素尺寸只按用户口径略收，展开全程零推拉。 */
+  --tiger-frame: 36rem;
+}
+
+@media (min-width: 761px) {
+  :root {
+    --totem-plate: min(50%, 36rem);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  :root {
+    --totem-plate: min(44%, 26rem);
+  }
+}
+
+.page-head__plate-probe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--totem-plate);
+  height: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.totem-plate {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  .totem-plate {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: var(--totem-plate);
+  }
+
+  /* 点将台虎符：画框高过页头带（上下居中）——全幅拆解也落在同一张画框里，镜头不必推拉。
+     其余两个图腾（粮市杆秤 / 观星台星海）不适用，保持页头带高度。 */
+  .page-head--tiger .totem-plate {
+    top: 50%;
+    bottom: auto;
+    height: var(--tiger-frame);
+    transform: translateY(-40%);
+  }
+}
+
+.page-head__canvas--totem {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y; /* 只吃横向拖拽，竖向留给页面滚动 */
+}
+
+/* 画布上的器物要能拖 / 能点：文字层不挡指针，层里的链接例外（这几页口径小字没有链接，留作兜底） */
+.page-head--totem .page-head__layer {
+  pointer-events: none;
+}
+
+.page-head--totem .page-head__layer a {
+  pointer-events: auto;
+}
+
+/* 文字区不伸进器物位（§1.4 左右分区，互不遮挡）：器物位宽度随页头走，文字上限随之收窄 */
+.page-head--totem .page-intro {
+  max-width: min(40rem, calc(100% - var(--totem-plate) - 2rem));
+}
+
+/* 点将台：虎符可拖动转视角，光标常驻 grab；点本体 = 拆解 / 合璧 */
+.page-head__canvas--tiger {
+  cursor: grab;
+}
+
+.page-head__canvas--tiger:active {
+  cursor: grabbing;
+}
+
+/* 画布起不来（无 WebGL 2 / 显卡连接断）：器物位整个撤掉，不留空位，文字恢复原上限 */
+.page-head--tiger[data-tiger="unavailable"] .totem-plate {
+  display: none;
+}
+
+.page-head--tiger[data-tiger="unavailable"] .page-intro {
+  max-width: 40rem;
+}
+
+/* 粮市：杆秤只有秤砣 / 秤盘可抓，光标由 steelyard.js 按命中区动态给（grab / grabbing） */
 
 /* 页头简介块（2026-09-20 用户确认）：眉标（英文代号，系统语）→ 板块名 → 导语 → 口径小字。
    导语一句话讲清「白话功能 + 粮站隐喻」；口径小字逐页保留（来源 / 计数 / 排序规则）。 */
@@ -1799,7 +1966,7 @@ main > h1 + p {
 .page-intro__eyebrow {
   margin: 0 0 .6rem;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .34em;
   color: var(--gold);
   text-shadow: 0 0 12px rgba(232, 183, 58, .45);
@@ -1889,7 +2056,7 @@ main > p:last-child {
 }
 
 .filters__label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .3em;
   color: var(--gold);
 }
@@ -1935,7 +2102,7 @@ main > p:last-child {
   margin: 0;
   padding-top: .65rem;
   border-top: 1px dashed rgba(120, 140, 180, .22);
-  font-size: 11.5px;
+  font-size: 12px;
   letter-spacing: .16em;
   color: var(--dim);
 }
@@ -2135,7 +2302,7 @@ section[aria-labelledby="related"] a:hover {
 .plan-card__status {
   margin-left: auto;
   padding: 1px 8px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .14em;
   color: var(--dim);
   border: 1px solid var(--line-dim);
@@ -2167,15 +2334,17 @@ section[aria-labelledby="related"] a:hover {
 }
 
 .plan-card__start strong {
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 15px;
+  font-variant-numeric: tabular-nums;
   font-weight: 400;
   color: var(--cyan);
   text-shadow: 0 0 10px rgba(63, 217, 192, .5);
 }
 
 .plan-card__quota {
-  font-size: 11.5px;
+  font-family: var(--code);
+  font-size: 12px;
   color: var(--dim);
 }
 
@@ -2211,8 +2380,9 @@ section[aria-labelledby="related"] a:hover {
 
 .plan-card__tiers dd {
   margin: 0;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
   color: var(--gold);
 }
 
@@ -2305,8 +2475,9 @@ section[aria-labelledby="related"] a:hover {
 }
 
 .plan-tier__price strong {
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 15px;
+  font-variant-numeric: tabular-nums;
   font-weight: 400;
   color: var(--gold);
   text-shadow: 0 0 10px rgba(232, 183, 58, .45);
@@ -2314,7 +2485,7 @@ section[aria-labelledby="related"] a:hover {
 
 .plan-tier__note {
   margin-left: .5rem;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--dim);
 }
 
@@ -2331,7 +2502,7 @@ section[aria-labelledby="related"] a:hover {
 
 .plan-tier__conditions {
   margin: .2rem 0 0;
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1.8;
   color: var(--dim);
 }
@@ -2421,7 +2592,7 @@ table {
 
 th {
   padding: .5rem .7rem;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: .3em;
   text-align: left;
@@ -2511,13 +2682,128 @@ td:first-child {
   color: var(--dim);
 }
 
-/* 单列 + 阅读宽度受控：标题与摘要同一宽度，窗口再宽也不拉长行宽（2026-09-21 用户反馈） */
+/* 单列 + 阅读宽度受控：标题与摘要同一宽度，窗口再宽也不拉长行宽（2026-09-21 用户反馈）
+   2026-09-21 补：右侧接一条「本期提要」栏。阅读列宽度不变（仍锁 46rem），
+   提要栏只承载只读派生的计数，不参与阅读流；窄屏塌到正文下方。 */
+.dibao-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 12rem);
+  gap: 2.2rem;
+  align-items: start;
+}
+
 .dibao {
   max-width: 46rem;
   margin: 0;
   padding: 0;
   list-style: none;
   border-top: 1px dashed var(--line-dim);
+}
+
+/* 本期提要（只读派生：本期条目 / 覆盖天数 / 事件类型分布 / 近七日入库）
+   计数全部来自已渲染条目或已注入的 news.json，不入库、不改契约（§3.4）。 */
+.dibao-rail {
+  position: sticky;
+  top: 5rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(200, 52, 42, .35);
+}
+
+.dibao-rail__title {
+  margin: 0 0 .7rem;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3em;
+  color: #d9564a;
+}
+
+.dibao-rail__list {
+  margin: 0;
+  padding: 0;
+}
+
+.dibao-rail__list > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .8rem;
+  padding: .3rem 0;
+  border-bottom: 1px dashed var(--line-dim);
+}
+
+.dibao-rail__list dt {
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.dibao-rail__list dd {
+  margin: 0;
+  font-family: var(--code);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+/* 两个领读数字（本期条目 / 覆盖天数）抬一档，类型分布留在次级层次 */
+.dibao-rail__lead dd {
+  font-size: 15px;
+  color: var(--gold);
+}
+
+.dibao-rail__foot {
+  margin: .85rem 0 0;
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.dibao-rail__foot b {
+  margin-left: .3em;
+  font-family: var(--code);
+  font-weight: 400;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold);
+}
+
+/* 窄屏：提单列，提要从右侧挪到正文下方（竖排线改横排线），不抢阅读宽度 */
+@media (max-width: 900px) {
+  .dibao-wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.6rem;
+  }
+
+  .dibao-rail {
+    position: static;
+    padding: 1rem 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(200, 52, 42, .3);
+  }
+
+  /* 塌到正文下方后列变宽，收敛内宽，免得「本期条目 ⋯⋯ 65」横跨整屏 */
+  .dibao-rail__list,
+  .dibao-rail__foot {
+    max-width: 22rem;
+  }
+}
+
+/* 条目入场：滚动驱动的纯 CSS 一次性淡入（animation-timeline: view()）。
+   选它而不是 IntersectionObserver 的理由：无岛页面首屏 JS 预算 15KB，
+   这条动效不值得再加 0.4KB JS；且 CSS 版没有「脚本执行前已绘制」的闪帧。
+   降级：不支持 view() 时间轴的浏览器整条不生效（条目照常可见）；
+   prefers-reduced-motion 下媒体查询不匹配，动画完全不挂载。 */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .dibao__item {
+      animation: dibaoIn linear both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 42%;
+    }
+  }
+}
+
+@keyframes dibaoIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
 }
 
 .dibao__day {
@@ -2601,7 +2887,7 @@ td:first-child {
   align-items: center;
   gap: .3rem 1.1rem;
   margin: .55rem 0 0;
-  font-size: 11.5px;
+  font-size: 12px;
   letter-spacing: .06em;
   color: var(--dim);
 }
@@ -2625,7 +2911,7 @@ td:first-child {
 
 .dibao__badge {
   padding: 0 .45em;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .12em;
   color: var(--gold);
   border: 1px solid var(--line);
@@ -2633,8 +2919,9 @@ td:first-child {
 }
 
 .dibao__time {
-  font-family: var(--mono);
-  color: var(--faint);
+  font-family: var(--code);
+  font-variant-numeric: tabular-nums;
+  color: var(--dim);
 }
 
 .dibao__link {
@@ -2654,10 +2941,10 @@ td:first-child {
 .dibao__tag {
   display: inline-block;
   padding: .15em .5em;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   letter-spacing: .08em;
-  color: var(--faint);
+  color: var(--dim);
   border: 1px dashed var(--line-dim);
   border-radius: 2px;
 }
@@ -3066,6 +3353,421 @@ td:first-child {
   }
 }
 
+/* 切换条两端的小装饰（2026-09-22 用户定「模式边上加一些小而美的装饰」）：
+   纯 CSS、无新增 DOM、无图片、无动画——外侧一条渐隐细线，内端一枚小菱（◆，系统字体字符），
+   与令牌按钮的「旗杆 + 菱」同一套语言；窄屏收掉，不挤压换行后的切换条。 */
+.board-switch {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.board-switch::before,
+.board-switch::after {
+  content: "◆";
+  flex: none;
+  display: flex;
+  align-items: center;
+  width: 3.4rem;
+  height: 12px;
+  font-size: 7px;
+  line-height: 1;
+  color: rgba(232, 183, 58, .62);
+  text-shadow: 0 0 9px rgba(232, 183, 58, .4);
+}
+
+.board-switch::before {
+  justify-content: flex-end;
+  background: linear-gradient(90deg, transparent, rgba(232, 183, 58, .5)) left center / 2.7rem 1px no-repeat;
+}
+
+.board-switch::after {
+  justify-content: flex-start;
+  background: linear-gradient(270deg, transparent, rgba(232, 183, 58, .5)) right center / 2.7rem 1px no-repeat;
+}
+
+@media (max-width: 640px) {
+  .board-switch::before,
+  .board-switch::after {
+    display: none;
+  }
+}
+
+/* ===== 关于：站志（/about，frontend-spec.md §4.8；2026-09-21 重构） =====
+   定位是「可信度展台」而不是说明文档。三条设计意图：
+   ① 局限单独成行（.src__limit）——主动交代局限是最省成本的可信度设计；
+   ② 反向披露「本站不做的事」（.nope 的 ✕ 前缀）；
+   ③ 状态可见（.gate 的新鲜度圆点，绑各模块 dataUpdatedAt 的 §5.7 三态）。
+   名词一律取自 §1.3，不引入新比喻；计数全部前端只读派生，不新增契约字段。 */
+
+/* 文字 H1：PageIntro 传了 image 就用字体图，没传才回落到这里。
+   2026-09-21 补出 sec-guanyu.png 之后站内已无页面使用，但保留为组件能力——
+   将来若新增没有字体图的板块，H1 不会掉成浏览器默认样式。
+   字色与字辉对齐字体图（米白 + 金辉）。 */
+.page-title--text {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: .3em;
+  text-indent: .3em;
+  color: #f5ecd8;
+  text-shadow: 0 0 14px rgba(232, 183, 58, .45);
+}
+
+.stn .page-intro { margin-bottom: 2.2rem; }
+
+/* 事实条：页头右下的一行速查（开仓节奏 / 存量 / 批次） */
+.stn-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.7rem;
+  margin: 1rem 0 0;
+  padding: .7rem 0 0;
+  border-top: 1px dashed var(--line-dim);
+}
+
+.stn-facts > div {
+  display: flex;
+  align-items: baseline;
+  gap: .45rem;
+}
+
+.stn-facts dt {
+  font-size: 12px;
+  letter-spacing: .2em;
+  color: var(--faint);
+}
+
+.stn-facts dd {
+  margin: 0;
+  font-family: var(--code);
+  font-size: 13px;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.stn-sec { margin: 0 0 2.6rem; }
+
+/* 段号牌：与票号 / 星历表序号同一套「批号」语言（§5.2） */
+.stn-h {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  margin: 0 0 .9rem;
+  padding-bottom: .5rem;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  color: var(--gold);
+  border-bottom: 1px dashed var(--line-dim);
+}
+
+.stn-no {
+  padding: 0 .42em;
+  font-family: var(--code);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: #241105;
+  background: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.stn-note {
+  margin: .9rem 0 0;
+  font-size: 12px;
+  line-height: 1.85;
+  color: var(--dim);
+}
+
+.stn-note strong { color: #ffe9c0; font-weight: 600; }
+
+/* ---- 01 仓廪志：来源条目卡 ---- */
+.src-list {
+  display: grid;
+  gap: .7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.src {
+  padding: .65rem .85rem .7rem;
+  border-left: 2px solid rgba(232, 183, 58, .45);
+  background: rgba(232, 183, 58, .035);
+}
+
+.src__h {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .3rem .5rem;
+  margin: 0 0 .45rem;
+}
+
+.src__h b { font-size: 14px; font-weight: 600; letter-spacing: .04em; }
+
+.src__h b a { color: #ffe9c0; }
+
+.src__h b a:hover { color: var(--gold); }
+
+.src__no {
+  padding: 0 .4em;
+  font-family: var(--code);
+  font-size: 12px;
+  color: var(--gold);
+  border: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+}
+
+.src__chip {
+  padding: 0 .45em;
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--dim);
+  border: 1px solid rgba(120, 140, 180, .32);
+}
+
+.src__chip--f { color: var(--cyan); border-color: rgba(63, 217, 192, .45); }
+
+.src__rows {
+  display: grid;
+  gap: .3rem;
+  margin: 0;
+}
+
+.src__rows > div {
+  display: grid;
+  grid-template-columns: 5.4rem minmax(0, 1fr);
+  gap: .6rem;
+}
+
+.src__rows dt {
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--faint);
+}
+
+.src__rows dd {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--dim);
+}
+
+/* 「不能说什么」单独一行、朱红左边线：局限要被看见，不和口径混成一格 */
+.src__limit dd {
+  padding-left: .55rem;
+  color: #e0a89a;
+  border-left: 2px solid rgba(200, 52, 42, .55);
+}
+
+.src__used { display: flex; flex-wrap: wrap; gap: .3rem .8rem; }
+
+.src__used a { color: var(--cyan); }
+
+/* ---- 02 推广披露 ---- */
+.promo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.promo__demo {
+  padding: .8rem .85rem;
+  border: 1px dashed rgba(63, 217, 192, .4);
+}
+
+/* 角标样式与票卡内的 .ticket__flag 同一套色，是它的「图例」 */
+.promo__flag {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--cyan);
+  border: 1px solid rgba(63, 217, 192, .5);
+  border-radius: 2px;
+}
+
+.promo__demo p {
+  margin: .5rem 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--dim);
+}
+
+.promo__demo strong { color: #ffe9c0; }
+
+.promo__list { margin: 0; padding-left: 1.15rem; }
+
+.promo__list li {
+  margin: .3rem 0;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--dim);
+}
+
+.promo__list b { color: #ffe9c0; font-weight: 600; }
+
+.promo__list strong { color: #ffe9c0; }
+
+/* ---- 03 本站不做的事 ---- */
+.nope { margin: 0; padding: 0; list-style: none; }
+
+.nope li {
+  position: relative;
+  padding: .5rem 0 .5rem 1.55rem;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--dim);
+  border-bottom: 1px dashed var(--line-dim);
+}
+
+.nope li:last-child { border-bottom: 0; }
+
+.nope li::before {
+  content: "✕";
+  position: absolute;
+  left: .25rem;
+  top: .5rem;
+  font-size: 12px;
+  color: #e06a5a;
+}
+
+.nope b { color: #ffe9c0; font-weight: 600; }
+
+/* ---- 05 口径词典 ---- */
+/* 两列并排、窄屏回落单列。用 dl 而非 table：站点 ≤560px 会把表格降级成块状排列，
+   四列表格一降级就丢了「词—义」配对。 */
+.lexicon {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+  margin: 0;
+}
+
+.lexicon > div {
+  display: grid;
+  grid-template-columns: 6.6rem minmax(0, 1fr);
+  gap: .6rem;
+  align-items: baseline;
+  padding: .34rem 0;
+  border-bottom: 1px dashed var(--line-dim);
+}
+
+.lexicon dt { font-size: 12.5px; color: #ffe9c0; }
+
+.lexicon dd { margin: 0; font-size: 12.5px; line-height: 1.7; color: var(--dim); }
+
+@media (max-width: 760px) {
+  .lexicon { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---- 04 仓门状态 ---- */
+.gate {
+  display: grid;
+  gap: .4rem;
+  /* 收敛行宽：窄屏不变，宽屏不让「核验 HH:mm」被推到 1000px 之外，值和时间才会读成一行 */
+  max-width: 40rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gate li {
+  display: flex;
+  align-items: baseline;
+  gap: .55rem;
+  padding: .45rem .7rem;
+  border-left: 2px solid var(--line-dim);
+  background: rgba(255, 255, 255, .012);
+}
+
+.gate b { color: #ffe9c0; font-weight: 600; font-size: 13px; }
+
+.gate__label {
+  min-width: 3.4rem;
+  font-size: 12.5px;
+  color: var(--dim);
+}
+
+.gate em {
+  margin-left: auto;
+  font-style: normal;
+  font-family: var(--code);
+  font-size: 12px;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 新鲜度圆点：§5.7 三态。周期本身携带信息 —— 越急跳得越快。
+   level 在构建期算（与页脚 freshness 同源）；展示值用绝对时间，不受构建时刻影响。 */
+.gate__dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.gate li[data-freshness="ok"] { border-left-color: rgba(63, 217, 192, .6); }
+
+.gate li[data-freshness="ok"] .gate__dot {
+  box-shadow: 0 0 9px var(--cyan);
+  animation: gatePulse 1.9s ease-in-out infinite;
+}
+
+.gate li[data-freshness="warn"] { border-left-color: rgba(232, 183, 58, .6); }
+
+.gate li[data-freshness="warn"] .gate__dot {
+  background: var(--gold);
+  box-shadow: 0 0 9px var(--gold);
+  animation: gatePulse 1.4s ease-in-out infinite;
+}
+
+.gate li[data-freshness="stale"] { border-left-color: rgba(224, 106, 90, .7); }
+
+.gate li[data-freshness="stale"] .gate__dot {
+  background: #e06a5a;
+  box-shadow: 0 0 9px #e06a5a;
+  animation: gateBlink 1s steps(2) infinite;
+}
+
+.gate li[data-freshness="none"] .gate__dot { background: var(--line-dim); box-shadow: none; }
+
+@keyframes gatePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .28; }
+}
+
+@keyframes gateBlink { 50% { opacity: .4; } }
+
+/* 关于页的入场：只给小单元做（条目卡 / 状态行），不做整段 ——
+   段落比视口高时，view() 的 entry 区间可能永远走不完，会留下半透明的内容。 */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .src,
+    .gate li {
+      animation: dibaoIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .page-title--text { font-size: 23px; letter-spacing: .22em; }
+
+  .src__rows > div { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+
+  .gate { gap: .35rem; }
+
+  .gate li { flex-wrap: wrap; }
+
+  .gate em { margin-left: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -3073,5 +3775,518 @@ td:first-child {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
+  }
+}
+
+/* ===== 三器切换控件（/models 错金兵符 · /plans 悬签 · /github 星历拨盘，2026-09-23 用户拍板）
+   来源：cache-tools/design-lab/three-instruments-v3.html（本机留档，不发布）。
+   契约不变：容器 [data-toggle]、按钮 [data-toggle-value]、面板 [data-toggle-panel]，
+   显隐 / 键盘 / aria 仍走 Base.astro 的原生脚本；本段只负责外观：
+   · 画布 .instrument__canvas 画在按钮下层（横向溢出一圈给提梁 / 绳线 / 星轨留位）；
+   · 静置美术（兵符两片 / 悬签 / 盘面）在 instrument-switch.js 里按按钮盒绘制；
+   · 面板卡片与流光的时机见同名前缀的 WAAPI / canvas 逻辑。 ===== */
+.instrument {
+  --a: 232, 183, 58;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 68px;
+  margin: 4px 0 12px;
+  isolation: isolate;
+}
+
+.instrument:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(var(--a), .45), rgba(var(--a), .09) 65%, transparent);
+  pointer-events: none;
+}
+
+.instrument__widget {
+  position: relative;
+  width: 350px;
+  height: 68px;
+  flex: 0 0 auto;
+  isolation: isolate;
+}
+
+.instrument__canvas {
+  position: absolute;
+  inset: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.instrument__tabs {
+  position: absolute;
+  inset: 12px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  perspective: 600px;
+}
+
+.instrument__tab {
+  appearance: none;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--dim);
+  padding: 0;
+  min-width: 0;
+  min-height: 44px;
+  cursor: pointer;
+  font-family: var(--song);
+  isolation: isolate;
+  touch-action: manipulation;
+}
+
+.instrument__tab:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 8px;
+}
+
+.instrument__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  height: 100%;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: var(--dim);
+  z-index: 3;
+  text-shadow: 0 1px 5px #000;
+  pointer-events: none;
+  transition: color .2s;
+}
+
+.instrument__label small {
+  font-size: 11px;
+  letter-spacing: 0;
+  color: rgba(var(--a), .65);
+}
+
+.instrument__tab[aria-selected="true"] .instrument__label {
+  color: var(--paper);
+}
+
+.instrument__tab:active .instrument__label {
+  transform: translateY(1px);
+}
+
+.instrument__hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(var(--a), .78);
+  pointer-events: none;
+}
+
+.instrument__hint:before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: rgba(var(--a), .45);
+}
+
+/* —— 兵符（army）：错金两片 + 中缝 + 铆钉 —— */
+.instrument__leaf {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(125deg, #ad8d4f, #564322 32%, #bd9951 52%, #64522e);
+  clip-path: polygon(8px 0, calc(100% - 13px) 0, 100% 12px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 13px 100%, 0 calc(100% - 12px), 0 8px);
+  transform-style: preserve-3d;
+}
+
+.instrument__leaf:before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  clip-path: inherit;
+  background:
+    radial-gradient(ellipse at var(--px, 35%) var(--py, 10%), #cfb17530, transparent 80%),
+    repeating-linear-gradient(110deg, #b194460b 0 1px, transparent 1px 5px),
+    linear-gradient(120deg, #252722, #191c1a 65%, #34332a);
+}
+
+.instrument__leaf:after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid #b69a4b55;
+  clip-path: inherit;
+  background: linear-gradient(100deg, transparent 35%, #ffe9b215 50%, transparent 70%);
+  opacity: .6;
+  transition: opacity .3s;
+}
+
+.instrument__leaf--top {
+  clip-path: polygon(8px 0, calc(100% - 13px) 0, 100% 12px, 100% 51%, 0 51%, 0 8px);
+  transform-origin: center 0;
+}
+
+.instrument__leaf--bottom {
+  clip-path: polygon(0 49%, 100% 49%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 13px 100%, 0 calc(100% - 12px));
+  transform-origin: center 100%;
+}
+
+.instrument__tab:not([aria-selected="true"]) .instrument__leaf {
+  filter: brightness(.6) saturate(.7);
+}
+
+.instrument__tab[aria-selected="true"] .instrument__leaf:before {
+  background:
+    radial-gradient(ellipse at var(--px, 35%) var(--py, 10%), #efcb7244, transparent 80%),
+    repeating-linear-gradient(110deg, #b1944610 0 1px, transparent 1px 5px),
+    linear-gradient(125deg, #413b28, #252c22 60%, #3b3527);
+}
+
+.instrument__tab:hover .instrument__leaf:after {
+  opacity: 1;
+}
+
+.instrument__seam {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  right: 7px;
+  height: 1px;
+  background: #000;
+  box-shadow: 0 1px #ddbc6f25;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.instrument__rivet {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 7px;
+  width: 4px;
+  height: 4px;
+  background: #96804a;
+  box-shadow: 0 1px 2px #000;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.instrument__rivet:last-of-type {
+  left: auto;
+  right: 7px;
+}
+
+/* —— 悬签（market）：市签挂绳 + 双孔 + 市别小字 ——
+   2026-09-23 用户口径：签太大 → 收一档（器物位 280×90 → 240×78，签面 96×58 → 78×48）；
+   随后「国内 / 海外 不换行」→ 小字与市名并排一行，签面改横向（96×46），
+   器物位随之放宽到 264×74，字 19/11 → 15/12（小字回到全站 12px 下限）。 */
+.instrument[data-kind="market"] {
+  --a: 230, 190, 112;
+  min-height: 74px;
+}
+
+.instrument[data-kind="market"] .instrument__widget {
+  width: 264px;
+  height: 74px;
+}
+
+.instrument[data-kind="market"] .instrument__tabs {
+  inset: 20px 20px 8px;
+  gap: 32px;
+  perspective: 550px;
+}
+
+.instrument[data-kind="market"] .instrument__tab {
+  perspective: 400px;
+}
+
+.instrument__sign {
+  display: block;
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% -11px;
+  transform: translateY(2px) rotate(-3deg);
+  transition: transform .55s cubic-bezier(.18, .85, .3, 1.2);
+  pointer-events: none;
+  filter: drop-shadow(3px 7px 5px #0008);
+}
+
+.instrument__tab:nth-child(2) .instrument__sign {
+  transform: translateY(2px) rotate(3deg);
+}
+
+.instrument__tag {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 12px);
+  background: linear-gradient(110deg, #b3a375, #5a5640 60%, #b3a375);
+  padding: 1px;
+}
+
+.instrument__tag:before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  clip-path: inherit;
+  background:
+    repeating-linear-gradient(2deg, #ecd5a007 0 1px, transparent 1px 4px),
+    radial-gradient(ellipse at 20% 0, #aaa07022, transparent 80%),
+    #242820;
+}
+
+.instrument__tag:after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid #c5ab6866;
+  clip-path: inherit;
+}
+
+.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__sign {
+  transform: translateY(-4px) rotate(0deg);
+}
+
+.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__tag {
+  background: #e4ca8b;
+}
+
+.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__tag:before {
+  background:
+    repeating-linear-gradient(2deg, #634c1512 0 1px, transparent 1px 4px),
+    linear-gradient(115deg, #ead6a1, #c4a669 60%, #debd78);
+}
+
+.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__tag:after {
+  border-color: #56472366;
+}
+
+.instrument__eyelet {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #aaa074;
+  border-radius: 50%;
+  background: #13170f;
+  box-shadow: 0 1px #ffefbc55;
+}
+
+.instrument__eyelet--second {
+  left: auto;
+  right: 16px;
+}
+
+.instrument[data-kind="market"] .instrument__label {
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 2px 0 0 3px;
+  text-shadow: none;
+  flex-direction: row;
+  gap: 5px;
+  color: #d7d2bd;
+}
+
+.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__label {
+  color: #302612;
+}
+
+.instrument__label .instrument__sub {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: var(--song);
+  color: inherit;
+  opacity: .72;
+}
+
+.instrument[data-kind="market"] .instrument__tab:not([aria-selected="true"]):hover .instrument__sign {
+  transform: translateY(-1px) rotate(0deg);
+}
+
+.instrument[data-kind="market"] .instrument__tab:hover .instrument__tag {
+  background: #f3d99c;
+}
+
+/* —— 星历拨盘（sky）：中央盘心画在画布上，两侧文字 + 底刻线 —— */
+.instrument[data-kind="sky"] {
+  --a: 161, 206, 226;
+  min-height: 90px;
+}
+
+.instrument[data-kind="sky"] .instrument__widget {
+  width: 324px;
+  height: 90px;
+}
+
+.instrument[data-kind="sky"] .instrument__tabs {
+  inset: 22px 4px 21px;
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  perspective: none;
+}
+
+.instrument[data-kind="sky"] .instrument__tab {
+  width: 90px;
+  flex: 0 0 90px;
+}
+
+.instrument[data-kind="sky"] .instrument__label {
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: #acaeb6;
+  transition: color .25s;
+}
+
+.instrument[data-kind="sky"] .instrument__tab[aria-selected="true"] .instrument__label {
+  color: #f4dfae;
+  text-shadow: 0 0 12px #e9c97966;
+}
+
+.instrument[data-kind="sky"] .instrument__tab:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse, #0b0916 0 45%, #0b091600 75%);
+  pointer-events: none;
+}
+
+.instrument[data-kind="sky"] .instrument__tab:after {
+  content: "";
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 5px;
+  height: 1px;
+  background: #d3b47033;
+  transition: background .25s, transform .25s;
+}
+
+.instrument[data-kind="sky"] .instrument__tab[aria-selected="true"]:after {
+  background: #dfc797;
+  transform: scaleX(1.3);
+  box-shadow: 0 0 8px #d3b47055;
+}
+
+.instrument__dial {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: 5px;
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  z-index: 3;
+  cursor: ew-resize;
+  touch-action: pan-y;
+  padding: 0;
+}
+
+.instrument__dial:focus-visible {
+  outline: 1px solid #eddb9c;
+  outline-offset: 5px;
+}
+
+.instrument__dial:hover {
+  background: radial-gradient(circle, #e8ddb50a, transparent 75%);
+}
+
+.instrument[data-kind="sky"] .instrument__hint {
+  letter-spacing: 1px;
+}
+
+/* —— 切换时横贯控件的一道亮线 —— */
+.instrument__beam {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, transparent, rgba(var(--a), .6), #fff4c2);
+  box-shadow: 0 0 8px rgba(var(--a), .5);
+}
+
+/* —— 流光全景层（固定画布，切换时从按钮飞向图腾，1.35s 后自清） —— */
+.instrument__field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 760px) {
+  .instrument {
+    margin-top: 5px;
+    gap: 0;
+  }
+
+  .instrument__widget {
+    width: min(100%, 350px);
+    height: 68px;
+  }
+
+  .instrument__hint {
+    display: none;
+  }
+
+  .instrument__label {
+    font-size: 14px;
+  }
+
+  .instrument__label small {
+    display: none;
+  }
+
+  .instrument__tabs {
+    gap: 16px;
+  }
+
+  .instrument[data-kind="market"] .instrument__widget {
+    width: min(100%, 264px);
+    height: 74px;
+  }
+
+  .instrument[data-kind="market"] .instrument__label .instrument__sub {
+    display: inline;
+  }
+
+  .instrument[data-kind="sky"] .instrument__widget {
+    width: min(100%, 324px);
+    height: 90px;
+  }
+
+  .instrument[data-kind="sky"] .instrument__tabs {
+    gap: 0;
+  }
+
+  .instrument[data-kind="sky"] .instrument__tab {
+    width: 25%;
+    flex-basis: 25%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instrument__sign {
+    transition: none !important;
+  }
+
+  .instrument__field {
+    display: none;
   }
 }

@@ -5,10 +5,10 @@
 .plan-detail__title .plan-card__icon { flex-shrink: 0; }
 .plan-detail__price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1rem; margin: .3rem 0; }
 .plan-detail__price > span { font-size: 12px; color: var(--dim); }
-.plan-detail__price strong { font: 30px/1.35 var(--mono); color: var(--paper); }
+.plan-detail__price strong { font: 30px/1.35 var(--code); color: var(--paper); }
 .plan-detail__tagline { font-size: 15px; }
 .plan-detail__highlights { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem 1.4rem; margin: .2rem 0 0; padding-left: 1.1rem; font-size: 13px; }
-.plan-detail .plan-card__chips .badge { border-color: rgba(120, 140, 180, .22); font-size: 11px; }
+.plan-detail .plan-card__chips .badge { border-color: rgba(120, 140, 180, .22); font-size: 12px; }
 .plan-detail__highlights li::marker { color: var(--gold-deep); }
 .plan-tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: .85rem; margin: 1rem 0 1.8rem; }
 .plan-tier { align-content: start; gap: .75rem; margin: 0; padding: 1.1rem; border: 1px solid var(--line-dim); border-top: 2px solid var(--gold-deep); background: rgba(232, 183, 58, .025); overflow-wrap: anywhere; }
@@ -16,7 +16,7 @@
 .plan-tier__head { display: grid; align-content: start; gap: .8rem; }
 .plan-tier__head h3 { min-height: 1.65em; }
 .plan-tier__price { display: grid; gap: .4rem; }
-.plan-tier__price strong { font-size: 22px; text-shadow: none; font-variant-numeric: tabular-nums; }
+.plan-tier__price strong { font-family: var(--code); font-size: 22px; text-shadow: none; font-variant-numeric: tabular-nums; }
 .plan-tier__note { margin: 0; font-size: 12px; }
 .plan-tier__features { margin: 0; font-size: 13px; }
 .plan-tier__conditions { font-size: 12px; }
@@ -44,7 +44,7 @@
 .preview__dock { flex-shrink: 0; padding: .9rem 1.8rem max(.9rem, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: #100e1b; }
 .preview__dock[hidden] { display: none; }
 .preview__dock .plan-detail__foot, .preview__dock .ticket__actions { margin: 0; padding: 0; border: 0; }
-.preview__dock .plan-detail__foot > .badge { font-size: 11px; }
+.preview__dock .plan-detail__foot > .badge { font-size: 12px; }
 .preview__dock .plan-detail__foot > a:last-child { margin-left: auto; font-size: 12px; }
 .preview__dock .ticket__actions { justify-content: flex-end; }
 .preview__skeleton { display: grid; gap: 1rem; padding: 1.8rem 0 0; }
@@ -59,7 +59,7 @@
 @media (max-width: 560px) {
   .preview__bar { flex-wrap: wrap; gap: .4rem; padding: max(.5rem, env(safe-area-inset-top)) .8rem .5rem; }
   .preview__label { letter-spacing: .02em; }
-  .preview__page { font-size: 11px; }
+  .preview__page { font-size: 12px; }
   .preview__scroll { padding: 1.2rem; }
   .preview__dock { padding-inline: 1.2rem; }
   .preview__dock .plan-detail__foot { gap: .5rem; }
