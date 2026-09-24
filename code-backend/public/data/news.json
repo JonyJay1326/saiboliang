@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-09-24T03:48:13Z",
+  "dataUpdatedAt": "2026-09-24T08:32:19Z",
   "items": [
+    {
+      "title": "Meta靠自研Manus翻身！股价一夜暴涨11%，登顶苹果商店，增速反超ChatGPT",
+      "sourceUrl": "https://www.qbitai.com/2026/09/496647.html",
+      "publishedAt": "2026-09-24T02:23:12Z",
+      "source": "量子位",
+      "summary": "美国也开启了全民养虾狂潮",
+      "id": "8b93b4b59036090876512165ef2c1fe0b8d30f0003ea000974e596b35db8b009",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/496647.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-09-24T08:32:19Z",
+      "featured": true
+    },
     {
       "title": "更多请求和配置Copilot代码审查的方式",
       "sourceUrl": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews",
@@ -1921,6 +1940,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-24T03:48:13Z",
-  "generatedAt": "2026-09-24T03:48:13Z"
+  "version": "2026-09-24T08:32:19Z",
+  "generatedAt": "2026-09-24T08:32:19Z"
 }

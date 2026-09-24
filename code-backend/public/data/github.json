@@ -1,15 +1,15 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-09-24T03:48:13Z",
+  "dataUpdatedAt": "2026-09-24T08:32:19Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-09-24T03:48:13Z",
+    "fetchedAt": "2026-09-24T08:32:19Z",
     "items": [
       {
         "repo": "cloudflare/security-audit-skill",
         "sourceRank": 3,
-        "stars": 20968,
+        "stars": 21062,
         "periodStars": 15280,
         "language": "JavaScript",
         "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
@@ -18,7 +18,7 @@
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 40291,
+        "stars": 40408,
         "periodStars": 9833,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -27,7 +27,7 @@
       {
         "repo": "stablyai/orca",
         "sourceRank": 2,
-        "stars": 76719,
+        "stars": 76928,
         "periodStars": 6435,
         "language": "TypeScript",
         "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -36,7 +36,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 29432,
+        "stars": 29524,
         "periodStars": 4522,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -45,7 +45,7 @@
       {
         "repo": "Tencent/BrowserSkill",
         "sourceRank": 7,
-        "stars": 6966,
+        "stars": 7019,
         "periodStars": 4513,
         "language": "TypeScript",
         "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
@@ -54,7 +54,7 @@
       {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 2,
-        "stars": 98741,
+        "stars": 98774,
         "periodStars": 3867,
         "language": "JavaScript",
         "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -63,7 +63,7 @@
       {
         "repo": "Panniantong/Agent-Reach",
         "sourceRank": 11,
-        "stars": 85128,
+        "stars": 85171,
         "periodStars": 2830,
         "language": "Python",
         "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
@@ -72,7 +72,7 @@
       {
         "repo": "anthropics/claude-code",
         "sourceRank": 1,
-        "stars": 147830,
+        "stars": 147855,
         "periodStars": 2762,
         "language": "TypeScript",
         "description": "Claude Code 是一个代理式编码工具，运行在终端中，理解你的代码库，通过自然语言命令执行日常任务、解释复杂代码并处理 git 工作流，帮助你更快编码。",
@@ -81,7 +81,7 @@
       {
         "repo": "TencentCloud/Octop",
         "sourceRank": 3,
-        "stars": 4786,
+        "stars": 4807,
         "periodStars": 1877,
         "language": "Python",
         "description": "更智能的自托管 AI 助手——多用户、多代理。",
@@ -90,7 +90,7 @@
       {
         "repo": "alphaXiv/OpenResearch",
         "sourceRank": 2,
-        "stars": 5649,
+        "stars": 5662,
         "periodStars": 1764,
         "language": "Rust",
         "description": "将你的编码代理转变为研究代理",
@@ -99,7 +99,7 @@
       {
         "repo": "dream-num/univer",
         "sourceRank": 9,
-        "stars": 16441,
+        "stars": 16567,
         "periodStars": 1711,
         "language": "TypeScript",
         "description": "面向 AI 代理的 Office 工具集——电子表格、文档、幻灯片、画布、关系表与 PDF 集于一个运行时。",
@@ -108,7 +108,7 @@
       {
         "repo": "jamiepine/voicebox",
         "sourceRank": 17,
-        "stars": 55542,
+        "stars": 55555,
         "periodStars": 1574,
         "language": "TypeScript",
         "description": "开源 AI 语音工作室。克隆、听写、创作。",
@@ -117,7 +117,7 @@
       {
         "repo": "Fission-AI/OpenSpec",
         "sourceRank": 5,
-        "stars": 70083,
+        "stars": 70117,
         "periodStars": 1538,
         "language": "TypeScript",
         "description": "面向 AI 编码助手的规范驱动开发（SDD）。",
@@ -126,7 +126,7 @@
       {
         "repo": "zhouxiaoka/autoclip",
         "sourceRank": 7,
-        "stars": 8844,
+        "stars": 8860,
         "periodStars": 1489,
         "language": "Python",
         "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
@@ -144,7 +144,7 @@
       {
         "repo": "vastsa/PI-Desktop",
         "sourceRank": 12,
-        "stars": 5432,
+        "stars": 5481,
         "periodStars": 1381,
         "language": "TypeScript",
         "description": "本地优先的 AI 编程 Agent 桌面端：Electron + Rust 宿主内核 + pi Agent Harness，支持用户自行安装插件。",
@@ -153,7 +153,7 @@
       {
         "repo": "FareedKhan-dev/train-llm-from-scratch",
         "sourceRank": 10,
-        "stars": 10894,
+        "stars": 10902,
         "periodStars": 1271,
         "language": "Python",
         "description": "从下载数据到生成文本，训练你的LLM的简明方法。",
@@ -162,7 +162,7 @@
       {
         "repo": "akitaonrails/ai-memory",
         "sourceRank": 3,
-        "stars": 8239,
+        "stars": 8252,
         "periodStars": 1208,
         "language": "Rust",
         "description": "面向代理编码 CLI 的长期记忆解决方案，并便于在不同代理供应商之间交接",
@@ -171,7 +171,7 @@
       {
         "repo": "Crosstalk-Solutions/project-nomad",
         "sourceRank": 15,
-        "stars": 38216,
+        "stars": 38226,
         "periodStars": 1194,
         "language": "TypeScript",
         "description": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在你拥有的硬件上，无需联网。",
@@ -180,7 +180,7 @@
       {
         "repo": "multica-ai/multica",
         "sourceRank": 11,
-        "stars": 51246,
+        "stars": 51266,
         "periodStars": 1182,
         "language": "Go",
         "description": "让人类与 AI 代理作为一个团队协作——开源且可自托管。",
@@ -189,7 +189,7 @@
       {
         "repo": "cline/cline",
         "sourceRank": 4,
-        "stars": 69188,
+        "stars": 69200,
         "periodStars": 1177,
         "language": "TypeScript",
         "description": "可作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
@@ -198,7 +198,7 @@
       {
         "repo": "superdesigndev/treg",
         "sourceRank": 6,
-        "stars": 2784,
+        "stars": 2877,
         "periodStars": 1067,
         "language": "Python",
         "description": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
@@ -207,7 +207,7 @@
       {
         "repo": "multimodal-art-projection/YuE",
         "sourceRank": 12,
-        "stars": 10210,
+        "stars": 10231,
         "periodStars": 1030,
         "language": "Python",
         "description": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
@@ -216,7 +216,7 @@
       {
         "repo": "ggml-org/llama.cpp",
         "sourceRank": 4,
-        "stars": 129359,
+        "stars": 129382,
         "periodStars": 1010,
         "language": "C++",
         "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -225,7 +225,7 @@
       {
         "repo": "LibreChat-AI/LibreChat",
         "sourceRank": 3,
-        "stars": 44811,
+        "stars": 44826,
         "periodStars": 949,
         "language": "TypeScript",
         "description": "增强版 ChatGPT 克隆：支持 Agents、MCP、Skills、DeepSeek、Anthropic、AWS、OpenAI、Responses API、Azure、Groq、o1、GPT-5、Mistral、OpenRouter、Vertex AI、Gemini、Artifacts、AI 模型切换、消息搜索、Code Interpreter、langchain、DALL-E-3、OpenAPI Actions、Functions、安全多用户认证、预设，开源可自托管。活跃",
@@ -234,7 +234,7 @@
       {
         "repo": "yyjeqhc/webcodex",
         "sourceRank": 4,
-        "stars": 1793,
+        "stars": 1805,
         "periodStars": 867,
         "language": "Rust",
         "description": "让云端 AI 代理在你自己的机器上获得真实开发环境。",
@@ -243,7 +243,7 @@
       {
         "repo": "krillinai/OpenCreator",
         "sourceRank": 8,
-        "stars": 12256,
+        "stars": 12272,
         "periodStars": 855,
         "language": "TypeScript",
         "description": "前身为 KrillinAI。面向创作者的开源 AI 工作区，由 Codex 驱动。在同一个地方用代理创建视频、图像、语音、虚拟形象、视频翻译与剪辑。",
@@ -252,7 +252,7 @@
       {
         "repo": "NVIDIA/SkillSpector",
         "sourceRank": 15,
-        "stars": 18188,
+        "stars": 18192,
         "periodStars": 759,
         "language": "Python",
         "description": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
@@ -261,7 +261,7 @@
       {
         "repo": "decolua/9router",
         "sourceRank": 13,
-        "stars": 29698,
+        "stars": 29713,
         "periodStars": 707,
         "language": "JavaScript",
         "description": "无限免费 AI 编码。通过 40+ 提供商将 Claude Code、Codex、Cursor、Cline、Copilot、Antigravity 连接到免费的 Claude/GPT/Gemini。自动回退，RTK 减少 40% token，永不触及限制。",
@@ -270,7 +270,7 @@
       {
         "repo": "max-sixty/worktrunk",
         "sourceRank": 8,
-        "stars": 8375,
+        "stars": 8385,
         "periodStars": 558,
         "language": "Rust",
         "description": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 代理工作流设计",
@@ -281,12 +281,12 @@
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-09-24T03:48:13Z",
+    "fetchedAt": "2026-09-24T08:32:19Z",
     "items": [
       {
         "repo": "tt-a1i/archify",
         "sourceRank": 2,
-        "stars": 70726,
+        "stars": 70867,
         "periodStars": 55857,
         "language": "JavaScript",
         "description": "用于生成美观、可验证的架构、工作流、时序、数据流与生命周期图的代理技能——自包含 HTML，带动效与清晰导出。",
@@ -295,7 +295,7 @@
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 2,
-        "stars": 50740,
+        "stars": 50797,
         "periodStars": 27477,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -304,7 +304,7 @@
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 40291,
+        "stars": 40408,
         "periodStars": 19196,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -313,7 +313,7 @@
       {
         "repo": "THU-MAIC/OpenMAIC",
         "sourceRank": 1,
-        "stars": 38814,
+        "stars": 38851,
         "periodStars": 18072,
         "language": "TypeScript",
         "description": "开放多代理互动课堂——一键获得沉浸式多代理学习体验",
@@ -322,7 +322,7 @@
       {
         "repo": "cloudflare/security-audit-skill",
         "sourceRank": 3,
-        "stars": 20968,
+        "stars": 21062,
         "periodStars": 17893,
         "language": "JavaScript",
         "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
@@ -331,7 +331,7 @@
       {
         "repo": "K-Dense-AI/scientific-agent-skills",
         "sourceRank": 5,
-        "stars": 46375,
+        "stars": 46417,
         "periodStars": 12304,
         "language": "Python",
         "description": "把任意 AI Agent 变成「AI 科学家」：165 个经验证的开箱技能 + 100 多个科学数据库，覆盖生物、化学、医学与药物研发，兼容 Cursor / Claude Code / Codex 等。",
@@ -340,7 +340,7 @@
       {
         "repo": "FlashML-org/FreeToken",
         "sourceRank": 9,
-        "stars": 13702,
+        "stars": 13719,
         "periodStars": 10806,
         "language": "Python",
         "description": "FreeToken 将数据中心级模型服务带到你的桌面。在本地快速高效运行大型模型。",
@@ -349,7 +349,7 @@
       {
         "repo": "heygen-com/hyperframes",
         "sourceRank": 12,
-        "stars": 52699,
+        "stars": 52751,
         "periodStars": 10571,
         "language": "TypeScript",
         "description": "编写 HTML。渲染视频。为代理而构建。",
@@ -358,7 +358,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 29432,
+        "stars": 29524,
         "periodStars": 9078,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -367,7 +367,7 @@
       {
         "repo": "tashfeenahmed/freellmapi",
         "sourceRank": 9,
-        "stars": 28332,
+        "stars": 28364,
         "periodStars": 9007,
         "language": "TypeScript",
         "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -376,7 +376,7 @@
       {
         "repo": "jingyaogong/minimind",
         "sourceRank": 4,
-        "stars": 62372,
+        "stars": 62403,
         "periodStars": 7561,
         "language": "Python",
         "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
@@ -385,7 +385,7 @@
       {
         "repo": "Tencent/BrowserSkill",
         "sourceRank": 5,
-        "stars": 6966,
+        "stars": 7019,
         "periodStars": 5647,
         "language": "TypeScript",
         "description": "让 AI Agent 使用你已登录的真实浏览器且不打断你干活：CLI + 扩展，适用于任何支持 shell 的 AI Agent。",
@@ -394,7 +394,7 @@
       {
         "repo": "google-research/timesfm",
         "sourceRank": 3,
-        "stars": 33587,
+        "stars": 33597,
         "periodStars": 5563,
         "language": "Python",
         "description": "TimesFM（时间序列基础模型）是 Google Research 开发的用于时间序列预测的预训练时间序列基础模型。",
@@ -403,7 +403,7 @@
       {
         "repo": "k2-fsa/OmniVoice",
         "sourceRank": 18,
-        "stars": 13796,
+        "stars": 13807,
         "periodStars": 4505,
         "language": "Python",
         "description": "面向 600+ 语言的高质量语音克隆 TTS",
@@ -412,7 +412,7 @@
       {
         "repo": "ggml-org/llama.cpp",
         "sourceRank": 19,
-        "stars": 129359,
+        "stars": 129382,
         "periodStars": 4472,
         "language": "C++",
         "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -421,7 +421,7 @@
       {
         "repo": "chaitanyagiri/munder-difflin",
         "sourceRank": 14,
-        "stars": 7879,
+        "stars": 7889,
         "periodStars": 4140,
         "language": "TypeScript",
         "description": "本地多代理工具集，兼容你现有的 Claude Code、Codex 订阅，让你运行一个代理办公室",
@@ -430,7 +430,7 @@
       {
         "repo": "akitaonrails/ai-memory",
         "sourceRank": 6,
-        "stars": 8240,
+        "stars": 8252,
         "periodStars": 4043,
         "language": "Rust",
         "description": "面向代理编码 CLI 的长期记忆解决方案，并便于在不同代理供应商之间交接",
@@ -439,7 +439,7 @@
       {
         "repo": "weave-os/router",
         "sourceRank": 12,
-        "stars": 5008,
+        "stars": 5041,
         "periodStars": 3999,
         "language": "Go",
         "description": "面向智能体系统的模型路由器。在 50ms 内将每个提示路由到合适的模型。仅需更改端点即可降低成本 40-70%。",
@@ -448,7 +448,7 @@
       {
         "repo": "TencentCloud/Octop",
         "sourceRank": 16,
-        "stars": 4786,
+        "stars": 4807,
         "periodStars": 3672,
         "language": "Python",
         "description": "更智能的自托管 AI 助手——多用户、多代理。",
@@ -457,7 +457,7 @@
       {
         "repo": "magnitudedev/magnitude",
         "sourceRank": 3,
-        "stars": 4956,
+        "stars": 4974,
         "periodStars": 3430,
         "language": "TypeScript",
         "description": "面向消费级硬件优化的开源推理引擎。分析你的机器，推荐最适合的模型，然后下载、调优并运行。支持 Apple Silicon、NVIDIA、AMD 或仅 CPU。",
@@ -466,7 +466,7 @@
       {
         "repo": "NVIDIA/SkillSpector",
         "sourceRank": 19,
-        "stars": 18188,
+        "stars": 18192,
         "periodStars": 3316,
         "language": "Python",
         "description": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
@@ -475,7 +475,7 @@
       {
         "repo": "melgarafael/DeskcommCRM",
         "sourceRank": 7,
-        "stars": 3624,
+        "stars": 3644,
         "periodStars": 3113,
         "language": "TypeScript",
         "description": "开源 AI 销售系统：自托管 CRM，内置 AI Agent 与 WhatsApp（WAHA）集成，可替代 Kommo / Octadesk / Intercom，支持 MCP、多租户与 LGPD。",
@@ -484,7 +484,7 @@
       {
         "repo": "vxcontrol/pentagi",
         "sourceRank": 20,
-        "stars": 24908,
+        "stars": 24921,
         "periodStars": 3053,
         "language": "Go",
         "description": "完全自主的 AI 代理系统，能够执行复杂的渗透测试任务",
@@ -493,7 +493,7 @@
       {
         "repo": "OpenWhispr/openwhispr",
         "sourceRank": 8,
-        "stars": 8501,
+        "stars": 8514,
         "periodStars": 2865,
         "language": "JavaScript",
         "description": "语音转文字听写应用，支持本地（Nvidia Parakeet/Whisper）与云端模型（BYOK）。隐私优先，跨平台可用。",
@@ -502,7 +502,7 @@
       {
         "repo": "jo-inc/camofox-browser",
         "sourceRank": 7,
-        "stars": 11180,
+        "stars": 11185,
         "periodStars": 2415,
         "language": "JavaScript",
         "description": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
@@ -511,7 +511,7 @@
       {
         "repo": "marin-community/marin",
         "sourceRank": 17,
-        "stars": 3801,
+        "stars": 3803,
         "periodStars": 2365,
         "language": "Python",
         "description": "用于基础模型研究与开发的开源框架。",
@@ -520,7 +520,7 @@
       {
         "repo": "max-sixty/worktrunk",
         "sourceRank": 1,
-        "stars": 8375,
+        "stars": 8385,
         "periodStars": 1917,
         "language": "Rust",
         "description": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 代理工作流设计",
@@ -529,7 +529,7 @@
       {
         "repo": "WorldFlowAI/everything-claude-code",
         "sourceRank": 9,
-        "stars": 3520,
+        "stars": 3525,
         "periodStars": 1907,
         "language": "JavaScript",
         "description": "Claude Code 工具集——代理、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
@@ -538,7 +538,7 @@
       {
         "repo": "tech-leads-club/agent-skills",
         "sourceRank": 4,
-        "stars": 6720,
+        "stars": 6731,
         "periodStars": 1759,
         "language": "TypeScript",
         "description": "面向专业 AI 编码代理的安全、经过验证的技能注册表。以绝对信心扩展 Antigravity、Claude Code、Cursor、Copilot 等。",
@@ -555,6 +555,6 @@
       }
     ]
   },
-  "version": "2026-09-24T03:48:13Z",
-  "generatedAt": "2026-09-24T03:48:13Z"
+  "version": "2026-09-24T08:32:19Z",
+  "generatedAt": "2026-09-24T08:32:19Z"
 }
