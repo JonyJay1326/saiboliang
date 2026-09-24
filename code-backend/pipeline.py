@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, news_featured_exclusions, select_featured, summarize_news, translate_github, translate_news
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, news_featured_exclusions, reclassify_news_items, select_featured, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -181,6 +181,34 @@ def load_config(editorial):
         require(isinstance(repo,str) and re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repo),'invalid github zh repo')
         require(isinstance(blurb,str) and blurb.strip() and '\n' not in blurb,'invalid github zh blurb')
     return sources,overrides,zh
+
+
+def run_news_reclassify(args):
+    """One-off: re-type stored news items whose eventType left the enum (2026-09-24 拆分口径回填).
+
+    Reads the batch **without** schema validation on purpose: the stored file still carries
+    values the new enum rejects, which is exactly what this pass repairs. The migrated batch
+    goes through `assemble`, which validates it before it can be promoted.
+    """
+    now=utcnow(); run=Run(args.state,now)
+    files=[args.output/(name+'.json') for name in ('version',*MODULES)]
+    require(all(p.exists() for p in files),'incomplete saved batch; restore it before collecting')
+    old={p.stem:read_json(p) for p in files}
+    report={}
+    data=reclassify_news_items(old['news'],report)
+    if data is None:
+        print('news reclassify: nothing to update',flush=True)
+    else:
+        batch,changed=assemble(old,{'news':data},now)
+        if changed:
+            save_candidate(args.candidate,batch)
+            promote(args.candidate,args.output)
+        for identity,event in report['retyped']:
+            print('news reclassify: '+identity[:12]+' -> '+event,flush=True)
+        print('news reclassify: '+str(len(report['retyped']))+' item(s) retyped, '
+              +str(len(report['removed']))+' removed (unclassifiable under the current rules)',flush=True)
+    run.save()
+    return 0
 
 
 def load_tickets(editorial,old,now):
@@ -377,7 +405,7 @@ def collect(args):
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=('init','collect','validate'))
+    parser.add_argument('command',choices=('init','collect','reclassify','validate'))
     parser.add_argument('--output',type=Path,default=ROOT/'public'/'data')
     parser.add_argument('--candidate',type=Path,default=ROOT/'.cache'/'candidate')
     parser.add_argument('--state',type=Path,default=ROOT/'state')
@@ -402,6 +430,8 @@ def main(argv=None):
                 promote(args.candidate,args.output)
                 print('initialized empty unverified batch')
                 return 0
+            if args.command=='reclassify':
+                return run_news_reclassify(args)
             return collect(args)
     except (ValueError,OSError) as exc:
         # Network errors are sanitized in Client; never print raw request headers.

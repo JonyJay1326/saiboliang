@@ -79,6 +79,8 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 
 `editorial/news-originals.json`（仅媒体回退源被临时启用时使用）按规范化中文报道 URL 的 SHA-256 保存一手来源证据，值包含 `url`、`publisher`、`articleEvidence`、`originalEvidence`、`eventSpecific`。编辑前须核实发布者官方身份。运行时再次检查报道出处链接、两页事件文本和最终目标；失败回退报道，官方仓库根链接不用于事件合并。
 
+事件分类（`eventType`）**2026-09-24 用户拍板拆分**：原 `action-required`（界面文案「需行动」读者看不懂）一分为二——`security-risk`「安全风险」与 `service-retirement`「停服·迁移」；裸「泄露」不再算风险提示（模型内测泄露属传闻、不发布），「停用 / 弃用 / 迁移」必须伴随服务或产品信号。存量条目可用 `python pipeline.py reclassify` 一次性回填：只重判 `eventType` 已不在枚举内的条目，判不出类型的移出批次（**不刷新 `dataUpdatedAt`**，没有发生采集），有变更才推版本；口径见 `cyber-granary-data-contract.md` §4.5。
+
 `editorial/github-zh.json` 保存 GitHub 榜单项目的人工中文简介（`repo -> 简介`，键为 `owner/name`，值为单行、非空）：采集时命中条目用中文简介替换仓库原文。人工未覆盖的条目在配置 `DEEPSEEK_API_KEY` 时调用 DeepSeek（`deepseek-flash` = V4.1-Flash，非思考档 + JSON 输出）生成中文草稿：整榜一次批量请求，按 repo 缓存于 `state/github-zh-cache.json`，命中缓存的 repo 不再请求；译文只作待审校草稿，人工简介优先于缓存。缺 key、翻译失败或译文非中文时保留仓库原文并记入待确认队列，不阻塞发布。
 
 `editorial/overrides.json`：

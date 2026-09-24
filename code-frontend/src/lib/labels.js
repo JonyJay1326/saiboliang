@@ -19,8 +19,13 @@ export const DURATION = {
   unknown: '未知',
 };
 
+// 事件类型角标（frontend-spec.md §5.5 / §8）：与契约 eventType 枚举一一对应。
+// 2026-09-24 用户拍板：原 `action-required`（旧文案「需行动」读者看不懂）一分为二——
+// `security-risk`「安全风险」（漏洞 / 数据泄露 / 安全公告）与 `service-retirement`「停服·迁移」
+// （服务或模型停用、下线、弃用，可能要迁移）。契约 `cyber-granary-data-contract.md` §4.5 同批改。
 export const EVENT_TYPE = {
-  'action-required': '需行动',
+  'security-risk': '安全风险',
+  'service-retirement': '停服·迁移',
   'model-release': '模型发布',
   'major-update': '重要更新',
   'price-or-free': '价格·免费',

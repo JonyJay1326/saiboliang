@@ -680,6 +680,16 @@ PRODUCT_RE=re.compile(r'功能|工具|浏览器|Firefox|Office|插件|客户端|
                       r'|Copilot|Claude Code|Cursor|Ollama|ChatGPT|智能体|Agent',re.I)
 MODEL_SIGNAL_RE=re.compile(r'模型|GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d'
                            r'|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d')
+# 安全类与停服类（2026-09-24 用户拍板拆分，原 action-required 一分为二）：
+#   风险提示只认「漏洞」与「数据/信息/凭证/密钥泄露」——裸「泄露」不再入库，模型内测泄露属传闻（媒体侧由
+#   MEDIA_EXCLUDE_RE 的传闻词兜底，这里不再当安全公告）。
+#   停用 / 弃用 是歧义词（「Meta 弃用采用率仪表盘」是管理消息），必须伴随服务或产品信号；
+#   停服 / 停止支持 / 关停 / 下线 / 废弃 本身就指着服务，不再另要信号。
+SECURITY_RISK_RE=re.compile(r'漏洞|数据泄露|信息泄露|凭证泄露|密钥泄露|安全公告|安全更新|紧急安全')
+SERVICE_RETIRE_RE=re.compile(r'停服|停止服务|停止支持|停止运营|关停|下线|下架|废弃|停用|弃用|迁移')
+SELF_RETIRE_RE=re.compile(r'停服|停止服务|停止支持|停止运营|关停|下线|下架|废弃')
+SERVICE_OBJECT_RE=re.compile(r'服务|模型|接口|API|版本|功能|客户端|插件|平台|站点|产品|应用|订阅|SDK|助手|工具'
+                             r'|Copilot|ChatGPT|Claude|Gemini|Assistant',re.I)
 OFFICIAL_MODEL_RE=re.compile(r'GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d'
                              r'|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d'
                               r'|Kimi[- ]?K\d|MiniMax[- ]?M\d|Step[- ]?\d|ERNIE[- ]?\d|Hunyuan|文心[- ]?\d|Seed(?:ream|ance|3D|-OSS)'
@@ -694,8 +704,10 @@ def news_event(title,official=False):
         return None
     if not TOPIC_RE.search(title):
         return None
-    if re.search(r'漏洞|停止服务|停服|安全更新|停止支持|泄露|弃用|废弃|下线|停用|迁移',title):
-        return 'action-required'
+    if SECURITY_RISK_RE.search(title):
+        return 'security-risk'
+    if SERVICE_RETIRE_RE.search(title) and (SELF_RETIRE_RE.search(title) or SERVICE_OBJECT_RE.search(title)):
+        return 'service-retirement'
     if re.search(r'降价|涨价|免费额度|免费层|免费开放|免费试用|限时免费|价格调整|订阅.*调价',title):
         return 'price-or-free'
     if official:
@@ -1531,6 +1543,32 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
         if exclude and item['id'] in exclude:
             item['featured']=None
     return dict(dataUpdatedAt=now,items=merged)
+
+
+def reclassify_news_items(file,report=None):
+    """One-off: re-judge stored items whose `eventType` left the enum (2026-09-24 拆分口径).
+
+    Admitted items never re-enter `collect_news`, so a rule change cannot reach them.
+    Only items carrying a value outside `EVENTS` are re-judged; items the current rules
+    cannot classify are dropped from the batch (they entered through the removed rule —
+    the two known cases are a rumour and an internal-management item, neither of which
+    this site publishes). `dataUpdatedAt` stays untouched: no collection happened.
+    """
+    items=copy.deepcopy(file['items']); kept=[]; retyped=[]; removed=[]
+    for item in items:
+        if item['eventType'] in EVENTS:
+            kept.append(item); continue
+        official=item['originalUrl'] is not None and item['originalUrl']==item['sourceUrl']
+        event=news_event(item['title'],official=official)
+        if event is None:
+            removed.append(item['id']); continue
+        item['eventType']=event; item['category']=CATEGORY_BY_EVENT[event]
+        retyped.append((item['id'],event)); kept.append(item)
+    if report is not None:
+        report.update(retyped=retyped,removed=removed)
+    if not retyped and not removed:
+        return None
+    return dict(dataUpdatedAt=file['dataUpdatedAt'],items=kept)
 
 
 def select_scope(tree,scope):

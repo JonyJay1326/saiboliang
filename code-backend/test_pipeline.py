@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip, news_featured_exclusions
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip, news_featured_exclusions, reclassify_news_items
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -76,7 +76,13 @@ class PipelineTests(unittest.TestCase):
             'DeepSeek V4.1 Flash 正式发布：全新模型架构': 'model-release',
             '大会现场，智谱发布 GLM-5.3 模型': 'model-release',
             'DeepSeek V4.1-Flash登陆WorkBuddy，开启限时免费试用': 'price-or-free',
-            'Claude API 停止支持旧版本，开发者需迁移': 'action-required',
+            'Claude API 停止支持旧版本，开发者需迁移': 'service-retirement',
+            'Claude API 被曝高危漏洞，官方发布安全公告': 'security-risk',
+            'OpenAI 修复 GPT-5.5 数据泄露问题，建议尽快升级': 'security-risk',
+            # 拆分口径（2026-09-24）：裸「泄露」不再算安全公告，模型内测泄露属传闻、不发布。
+            'Claude Opus 5.5 疑遭内测泄露：跳级直冲GPT-6，百万Token价格腰斩至 4 美元': None,
+            # 「弃用」必须伴随服务或产品信号，管理消息不算停服。
+            'AI 绩效评估从"用量"转向"产出"：Meta 弃用采用率仪表盘与 Token 指标': None,
             '消息称 OpenAI 即将攻克霍奇猜想': None,
             '小米公开MiMo-V2.6大模型RL训练过程 罗福莉发文确认将开源技术细节': None,
             'Claude Code团队讲究啊，这都往外说': None,
@@ -119,8 +125,10 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(news_event('GPT-5.5 将于 10 月发布，支持更长上下文', official=True), 'upcoming')
         self.assertEqual(news_event('Gemini 4 即将推出', official=True), 'upcoming')
         self.assertEqual(news_event('GPT-6 已正式发布，现已可用', official=True), 'model-release')
-        # 弃用/下线公告按需用户行动处理。
-        self.assertEqual(news_event('GitHub Copilot 弃用模型将在 10 月中旬到来', official=True), 'action-required')
+        # 弃用/下线公告归「停服·迁移」（2026-09-24 拆分后不再用 action-required）。
+        self.assertEqual(news_event('GitHub Copilot 弃用模型将在 10 月中旬到来', official=True), 'service-retirement')
+        self.assertEqual(news_event('关于腾讯云混元旧版本模型下线的通知', official=True), 'service-retirement')
+        self.assertEqual(news_event('某模型被曝提示注入漏洞，官方已修复', official=True), 'security-risk')
         # 仅主题命中的官方内容不发布；融资、客户案例仍然排除。
         self.assertEqual(news_event('介绍我们的 AI 安全研究方法', official=True), None)
         self.assertEqual(news_event('我们报告模型失准的框架', official=True), None)
@@ -365,7 +373,7 @@ class PipelineTests(unittest.TestCase):
         for broken in [dict(base,lang='en'),dict(base,lang='en',originalTitle='Original'),dict(base,translatedAt=NOW),
                        dict(base,featured=False)]:
             with self.assertRaises(ValueError): assemble(None,{'news':dict(dataUpdatedAt=NOW,items=[broken])},NOW)
-        events=['action-required','model-release','major-update','price-or-free','upcoming','model-review','hands-on','deep-analysis']
+        events=['security-risk','service-retirement','model-release','major-update','price-or-free','upcoming','model-review','hands-on','deep-analysis']
         def row(i, **extra):
             item_url='https://vendor.example/%d'%i
             values=dict(id=digest(item_url),source='厂商%d'%i,eventType=events[i%len(events)],
@@ -385,6 +393,35 @@ class PipelineTests(unittest.TestCase):
         validate(assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,featured=True) for i in range(8)],key=lambda i:i['id']))},NOW)[0])
         with self.assertRaises(ValueError):
             assemble(None,{'news':dict(dataUpdatedAt=NOW,items=sorted([row(i,featured=True) for i in range(9)],key=lambda i:i['id']))},NOW)
+
+    def test_reclassify_stored_news_items(self):
+        # 2026-09-24 拆分回填：存量 action-required 按新规则改判，判不出来的移出批次；
+        # 未受影响的条目原样保留，且 dataUpdatedAt 不被刷新（没有发生采集）。
+        def item(identity,title,event='action-required'):
+            return dict(id=identity,title=title,originalTitle=None,translatedAt=None,summary=None,lang='zh',
+                        source='AIBase',sourceUrl='https://www.aibase.com/zh/news/'+identity[:8],
+                        originalSource=None,originalUrl=None,originalVerifiedAt=None,
+                        url='https://www.aibase.com/zh/news/'+identity[:8],publishedAt=NOW,addedAt=NOW,
+                        category='industry',eventType=event,featured=True)
+        rows=[item('a'*64,'谷歌9月4日起停用Google Assistant，Gemini全面接棒'),
+              item('b'*64,'Claude Opus 5.5 疑遭内测泄露：跳级直冲GPT-6，百万Token价格腰斩至 4 美元'),
+              item('c'*64,'DeepSeek V4.1 Flash 正式发布：全新模型架构','model-release')]
+        file=dict(dataUpdatedAt='2026-09-10T00:00:00Z',items=rows)
+        report={}
+        data=reclassify_news_items(file,report)
+        self.assertEqual(report['retyped'],[('a'*64,'service-retirement')])
+        self.assertEqual(report['removed'],['b'*64])
+        self.assertEqual([i['id'] for i in data['items']],['a'*64,'c'*64])
+        self.assertEqual(data['items'][0]['eventType'],'service-retirement')
+        self.assertEqual(data['items'][0]['category'],'industry')
+        self.assertEqual(data['dataUpdatedAt'],'2026-09-10T00:00:00Z')
+        self.assertIsNone(reclassify_news_items(data))
+        # 官方停服公告走同一条回填路径。
+        official=dict(item('d'*64,'关于腾讯云混元旧版本模型下线的通知'),source='腾讯云 TokenHub',
+                      originalSource='腾讯云 TokenHub',originalUrl='https://cloud.tencent.com/announce/detail/2310')
+        official['sourceUrl']=official['originalUrl']; official['url']=official['originalUrl']
+        again=reclassify_news_items(dict(dataUpdatedAt=NOW,items=[official]))
+        self.assertEqual(again['items'][0]['eventType'],'service-retirement')
 
     def test_deepseek_official_news_adapter(self):
         html = ('<html><a href="/news/deepseek-v4-1-flash/"><span>动态</span>'
@@ -525,7 +562,7 @@ class PipelineTests(unittest.TestCase):
                          ['https://cloud.tencent.com/announce/detail/2442','https://cloud.tencent.com/announce/detail/2310'])
         # 北京日 00:00 → UTC 前一日 16:00
         self.assertEqual(rows[0]['publishedAt'],'2026-08-25T16:00:00Z')
-        self.assertEqual(news_event(rows[0]['title'],official=True),'action-required')
+        self.assertEqual(news_event(rows[0]['title'],official=True),'service-retirement')
         self.assertNotIn('\ufeff',rows[0]['title'])
         with self.assertRaises(ValueError): parse_tencent_announcements(b'<table></table>',source)
 

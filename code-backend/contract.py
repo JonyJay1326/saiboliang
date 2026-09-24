@@ -109,9 +109,11 @@ PLAN = dict(id=identifier, vendor=text, product=text, group=enum('domestic','ove
 RANKING = dict(modelId=identifier, score=lambda v: require(finite(v), 'invalid score'), rank=positive)
 REPO = dict(repo=lambda v: require(isinstance(v,str) and re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',v), 'invalid repo'),
             sourceRank=positive, stars=integer, periodStars=nullable(integer), language=nullable(text), description=nullable(text), url=safe_url)
-EVENTS = ['action-required','model-release','major-update','price-or-free','upcoming','model-review','hands-on','deep-analysis']
+# 2026-09-24 用户拍板拆分（契约 §4.5）：原 action-required 一分为二，读者一眼能分辨
+# 「有风险」与「要迁移」——security-risk（漏洞/数据泄露/安全公告）、service-retirement（服务/模型/接口停用）。
+EVENTS = ['security-risk','service-retirement','model-release','major-update','price-or-free','upcoming','model-review','hands-on','deep-analysis']
 CATEGORY_BY_EVENT = dict({'model-release':'model','model-review':'model','major-update':'tool','hands-on':'tool'},
-                         **{e:'industry' for e in ('action-required','price-or-free','upcoming','deep-analysis')})
+                         **{e:'industry' for e in ('security-risk','service-retirement','price-or-free','upcoming','deep-analysis')})
 NEWS = dict(id=lambda v: require(isinstance(v,str) and re.fullmatch(r'[a-f0-9]{64}',v), 'invalid news ID'), title=text,
             originalTitle=nullable(text), translatedAt=nullable(stamp), summary=nullable(summary), lang=enum('zh','en'),
             source=text, sourceUrl=safe_url, originalSource=nullable(text), originalUrl=nullable(safe_url), originalVerifiedAt=nullable(stamp),
