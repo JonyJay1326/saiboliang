@@ -1,10 +1,4 @@
 {
-  "d2871d486c61275aa18316221b2aa4fe0c0c7a730e7f24a395d9c1672c5c3fc3": {
-    "title": "V7 如何为 AI 智能体赋予机构记忆",
-    "summary": "V7 使用 GPT-5.6，将分散的公司文件转化为智能体可用的上下文，以完成复杂且可溯源的工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
   "3c53544af87c504f1065c4986d28af745b3f0bf129cd820abcab9474f2ace6cf": {
     "title": "为何大规模部署物理 AI 需要每一层的安全保障",
     "summary": null,
@@ -44,18 +38,6 @@
   "2f8d9b98fc157bb338d3eee240b684935f4eb48a8a141e592a8d2b7cadec3422": {
     "title": "OpenAI Academy 扩展新学习路径",
     "summary": "探索 OpenAI Academy 面向员工、开发者、领导者、教育者和学生的新学习路径，培养并展示实用 AI 技能。",
-    "source": "deepseek-flash",
-    "at": "2026-09-22T08:37:23Z"
-  },
-  "5580c57bea18417fa16e109bac093a9092fc25ada7bcd368757406bed949f996": {
-    "title": "全新仓库拉取请求页面正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-22T08:37:23Z"
-  },
-  "f631d543deb02b097c676cd18705b536f8d5ebdfba596d3bfe4f9a69d2597e94": {
-    "title": "GitHub Enterprise 新增凭据清单导出",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-22T08:37:23Z"
   },
@@ -148,5 +130,101 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-23T15:28:02Z"
+  },
+  "ef1b3a4772eab8370f467eb49319d91c1c1642fda763a0cf8c75d29f7c5a5328": {
+    "title": "Claude发现具有CRISPR样重复序列的新型酶系统",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "bea2af32f1da0c8a185a1ab879506cb142e44d2f1ca44ba99b0d68bb70dc85b6": {
+    "title": "Meta Ray-Ban Display新功能",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "095cd764ffcc82419290f7a0072f11761e54e65c1c059f012e65e29857176132": {
+    "title": "推出Meta VR Glasses：仅100克，集影院、场边座位与工作空间于一身",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba": {
+    "title": "推出Ray-Ban Meta Audio及更多AI眼镜款式",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2": {
+    "title": "OpenAI Academy两周年",
+    "summary": "纪念OpenAI Academy两周年，并将AI技能带给更多社区。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "347b65ce144a221e189c1995b6f8e902fff172db7617e6d8030d51c8740ce826": {
+    "title": "Sam Altman在联合国安理会的讲话",
+    "summary": "OpenAI CEO Sam Altman在联合国安理会讲话中讨论AI安全、人类控制与国际合作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "52b80abd4e046c041ffbe2a48399ded2b227e51686189386944c8dd9b0045fd6": {
+    "title": "Harvey借助GPT-6 Astra将法律语境转化为更强草稿",
+    "summary": "GPT-6 Astra生成更具结构性、更贴合语境的法律文件，让律师专注于策略。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "f2ff7f76056120414cf01f1bb6ef7b8e983d9d91ccfa0c5266573b74a0f9d93f": {
+    "title": "invideo如何借助GPT‑6 Astra将调色提升3倍",
+    "summary": "借助GPT‑6 Astra，invideo以更高精度规划剪辑，将色彩校正与调色提升三倍，并在一天内制作50个自定义效果。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "4e56c7312349a760a0edf744bd151f1352583693dfaa6156b9b09ca8e15ad634": {
+    "title": "Ringg的AI代理借助OpenAI解决高达65%的客户来电",
+    "summary": "使用GPT-5.6，Ringg为语音、聊天、WhatsApp和网页提供多语言代理，成本比GPT-4.1低90%。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "3d7b9aab56c8f4fe22c00cc0057db0cb0a00b0a30d0d99d476abe36917bfac64": {
+    "title": "推出MentalHealthBench",
+    "summary": "MentalHealthBench是一个由专家参与制定的基准，用于评估AI在真实心理健康对话中有帮助且安全的回应。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "bb71e409dd7f29f762c233b6b0e3a367ed44a43dd4b05ce6408a8edddeb7b53b": {
+    "title": "ChatGPT Ads扩展至东南亚和台湾",
+    "summary": "ChatGPT Ads正在扩展至东南亚和台湾，为符合条件的企业提供在60多个国家触达用户的新方式。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "0765deb144589280c16b6c389f4ff0fb7d519b5edcb7c4cad6d5247ca7a27572": {
+    "title": "Airbnb扩大对GPT-6 Astra和OpenAI前沿模型的访问",
+    "summary": "了解Airbnb如何扩大对GPT-6 Astra和OpenAI前沿模型的访问，帮助工程团队解决缺陷、设计系统并更快交付。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "1ccf342131e2aeec4f4fe8c75573cce60b5b683832736c876a4b4efd9246c890": {
+    "title": "Google Beam扩展至新地区、合作伙伴和客户",
+    "summary": "Google Beam宣传动画",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "68ead6b6af2b71441cd0f5e7ee92c2f76d1d2603c4161faf27e658aafd17eb6c": {
+    "title": "以安全服务器端内存推进Private AI Compute",
+    "summary": "为Private AI Compute引入私密服务器端内存，服务于个人AI。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "63a2ad410a3d1bd18d9be639792bdf1a43e0c97949ca1e920e1d54a5dfac1282": {
+    "title": "更多请求和配置Copilot代码审查的方式",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "906dd6ad8541fe086da776ac96e14fdee3a43a64b5890d6d122ec11060724808": {
+    "title": "Node 20 在 GitHub Actions 中不再可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
   }
 }

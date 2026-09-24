@@ -1,7 +1,17 @@
 {
-  "81481aa316e38773fdfe4ad811ac70acba975a0782f6864539cabab4e543f92d": {
-    "summary": "Gemini 3.8 Flash-Lite TTS与Gemini 3.8 Flash TTS是迄今最具表现力的音频模型。",
+  "63a2ad410a3d1bd18d9be639792bdf1a43e0c97949ca1e920e1d54a5dfac1282": {
+    "summary": "GitHub Copilot代码审查新增个人配置，覆盖更多Copilot计划，并提供企业级默认设置，现已全面可用。",
     "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "63e0251438a40139e79aeee04caee78a761474d1ca46b1e3556b8e8cc9b43e6b": {
+    "summary": "GitHub Copilot应用支持本地沙盒，限制文件、网络和凭据访问，可按项目为本地仓库和工作树会话配置。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
+  },
+  "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba": {
+    "summary": "Connect大会上推出Ray-Ban Meta Audio首款音频眼镜，并大幅扩展AI眼镜产品线。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
   }
 }

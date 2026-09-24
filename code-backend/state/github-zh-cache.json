@@ -173,5 +173,10 @@
     "text": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
     "source": "deepseek-flash",
     "at": "2026-09-23T15:28:02Z"
+  },
+  "LibreChat-AI/LibreChat": {
+    "text": "增强版 ChatGPT 克隆：支持 Agents、MCP、Skills、DeepSeek、Anthropic、AWS、OpenAI、Responses API、Azure、Groq、o1、GPT-5、Mistral、OpenRouter、Vertex AI、Gemini、Artifacts、AI 模型切换、消息搜索、Code Interpreter、langchain、DALL-E-3、OpenAPI Actions、Functions、安全多用户认证、预设，开源可自托管。活跃",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T03:48:13Z"
   }
 }

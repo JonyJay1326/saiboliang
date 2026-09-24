@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-09-24T03:06:18Z",
+  "dataUpdatedAt": "2026-09-24T03:48:13Z",
   "items": [
+    {
+      "title": "更多请求和配置Copilot代码审查的方式",
+      "sourceUrl": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews",
+      "publishedAt": "2026-09-23T21:25:58Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot代码审查新增个人配置，覆盖更多Copilot计划，并提供企业级默认设置，现已全面可用。",
+      "id": "63a2ad410a3d1bd18d9be639792bdf1a43e0c97949ca1e920e1d54a5dfac1282",
+      "originalTitle": "More ways to request and configure Copilot code reviews",
+      "translatedAt": "2026-09-24T03:48:13Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews",
+      "originalVerifiedAt": "2026-09-24T03:48:13Z",
+      "url": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-24T03:48:13Z",
+      "featured": true
+    },
     {
       "title": "Gemini 3.8 文本转语音说你好",
       "sourceUrl": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
@@ -18,6 +37,63 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-09-23T15:28:02Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot 应用中的本地沙盒",
+      "sourceUrl": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app",
+      "publishedAt": "2026-09-23T15:00:57Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot应用支持本地沙盒，限制文件、网络和凭据访问，可按项目为本地仓库和工作树会话配置。",
+      "id": "63e0251438a40139e79aeee04caee78a761474d1ca46b1e3556b8e8cc9b43e6b",
+      "originalTitle": "Local sandboxing in the GitHub Copilot app",
+      "translatedAt": "2026-09-24T03:48:13Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app",
+      "originalVerifiedAt": "2026-09-24T03:48:13Z",
+      "url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-24T03:48:13Z",
+      "featured": true
+    },
+    {
+      "title": "推出Ray-Ban Meta Audio及更多AI眼镜款式",
+      "sourceUrl": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "publishedAt": "2026-09-23T11:36:25Z",
+      "source": "Meta",
+      "summary": "Connect大会上推出Ray-Ban Meta Audio首款音频眼镜，并大幅扩展AI眼镜产品线。",
+      "id": "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba",
+      "originalTitle": "Introducing Ray-Ban Meta Audio and More AI Glasses Styles",
+      "translatedAt": "2026-09-24T03:48:13Z",
+      "lang": "en",
+      "originalSource": "Meta",
+      "originalUrl": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "originalVerifiedAt": "2026-09-24T03:48:13Z",
+      "url": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-24T03:48:13Z",
+      "featured": true
+    },
+    {
+      "title": "汇智智能发布Hellome：国内首个FDE直连智能体服务平台，把AI交付周期压进“周”",
+      "sourceUrl": "https://www.qbitai.com/2026/09/496493.html",
+      "publishedAt": "2026-09-23T09:50:26Z",
+      "source": "量子位",
+      "summary": "企业AI服务迎来平台化交付时代",
+      "id": "bc1af6f838513aa1615b66da36a69eea4032d6224719dbfa2644d1f6feb0aada",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/496493.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-24T03:48:13Z",
       "featured": true
     },
     {
@@ -57,6 +133,25 @@
       "eventType": "major-update",
       "addedAt": "2026-09-23T02:14:54Z",
       "featured": null
+    },
+    {
+      "title": "ChatGPT Ads扩展至东南亚和台湾",
+      "sourceUrl": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "publishedAt": "2026-09-23T02:00:00Z",
+      "source": "OpenAI",
+      "summary": "ChatGPT Ads正在扩展至东南亚和台湾，为符合条件的企业提供在60多个国家触达用户的新方式。",
+      "id": "bb71e409dd7f29f762c233b6b0e3a367ed44a43dd4b05ce6408a8edddeb7b53b",
+      "originalTitle": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "translatedAt": "2026-09-24T03:48:13Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "originalVerifiedAt": "2026-09-24T03:48:13Z",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-24T03:48:13Z",
+      "featured": true
     },
     {
       "title": "世卫组织发布重磅报告，呼吁全面升级医疗 AI 研究伦理监管",
@@ -1826,6 +1921,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-24T03:26:41Z",
-  "generatedAt": "2026-09-24T03:26:41Z"
+  "version": "2026-09-24T03:48:13Z",
+  "generatedAt": "2026-09-24T03:48:13Z"
 }

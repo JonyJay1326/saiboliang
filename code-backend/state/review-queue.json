@@ -392,17 +392,6 @@
     "createdAt": "2026-09-23T03:02:47Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "df9470ece6bb3f9c80c05f98899ee6a8114fc4158c0fe96f48a7d90122dc009d",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "5051f9938ae23f64c6752ed08561d7a6ed313b3d57385fba6bfd2aa6b30a169b",
-    "status": "pending",
-    "createdAt": "2026-09-23T08:39:49Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "cloudflare/quiche",
     "reason": "AI applicability uncertain",
@@ -427,29 +416,14 @@
     "createdAt": "2026-09-23T15:28:02Z"
   },
   {
-    "kind": "news-future",
-    "objectId": "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2",
-    "reason": "publication is in the future",
+    "kind": "news-item",
+    "objectId": "64915a7612cca4d72714dfaba25bb23a9ad335664b35d5b2f82242956b3c0138",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
     "evidence": {
-      "title": "Two years of OpenAI Academy",
-      "sourceUrl": "https://openai.com/index/two-years-of-openai-academy",
-      "publishedAt": "2026-09-23T16:00:00Z",
-      "source": "OpenAI",
-      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities."
+      "source": "AIBase"
     },
-    "id": "c84f525646cdcc949b4859a01db13f8b45e71de6270b3f7b1481db474e6e23b9",
+    "id": "d68e59af1b78f1079326c813aff3bd5339efa9d2b998700e3f9731f55981d352",
     "status": "pending",
-    "createdAt": "2026-09-23T15:28:02Z"
-  },
-  {
-    "kind": "news-original",
-    "objectId": "b72a1a48e64d3a5134a19347a0aab39b2c18827798b9ad1fbcc06d6908a67a1d",
-    "reason": "original redirected",
-    "evidence": {
-      "sourceUrl": "https://www.aibase.com/zh/news/30844"
-    },
-    "id": "87acb47e1e548106c316f8c190ac44dcefdc76e7bd97c8ab18aa9ef7cf164c36",
-    "status": "pending",
-    "createdAt": "2026-09-24T02:02:08Z"
+    "createdAt": "2026-09-24T03:48:13Z"
   }
 ]
