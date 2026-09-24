@@ -440,5 +440,16 @@
     "id": "c84f525646cdcc949b4859a01db13f8b45e71de6270b3f7b1481db474e6e23b9",
     "status": "pending",
     "createdAt": "2026-09-23T15:28:02Z"
+  },
+  {
+    "kind": "news-original",
+    "objectId": "b72a1a48e64d3a5134a19347a0aab39b2c18827798b9ad1fbcc06d6908a67a1d",
+    "reason": "original redirected",
+    "evidence": {
+      "sourceUrl": "https://www.aibase.com/zh/news/30844"
+    },
+    "id": "87acb47e1e548106c316f8c190ac44dcefdc76e7bd97c8ab18aa9ef7cf164c36",
+    "status": "pending",
+    "createdAt": "2026-09-24T02:02:08Z"
   }
 ]

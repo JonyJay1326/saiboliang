@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip, news_featured_exclusions, reclassify_news_items
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, reclassify_news_items
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -1110,6 +1110,153 @@ class PipelineTests(unittest.TestCase):
         documents[official]='<h1>Homepage</h1>'
         data=collect_news(FakeClient(documents=documents),[source],mapping, {},NOW,lambda *x:None,lambda *x:None)
         self.assertEqual(data['items'][0]['url'],article)
+
+    def test_original_mapping_verifies_without_article_citation(self):
+        """2026-09-24 改口径：映射不再要求报道引用官方链接，只要求两页证据仍在。"""
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        article='https://cn.example/1'; official='https://vendor.example/releases/7'
+        feed='<rss><channel><item><title>新模型正式发布</title><link>'+article+'</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>'
+        documents={source['url']:feed,article:'<p>发布模型七，未附官方链接</p>',official:'<h1>Model Seven Released</h1>'}
+        mapping={digest(normalize_url(article)):dict(url=official,publisher='Vendor',articleEvidence='发布模型七',originalEvidence='Model Seven Released',eventSpecific=True)}
+        data=collect_news(FakeClient(documents=documents),[source],mapping, {},NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual(data['items'][0]['url'],official)
+        self.assertEqual(data['items'][0]['originalSource'],'Vendor')
+        # 非事件页（首页）的映射一律拒绝。
+        home={digest(normalize_url(article)):dict(mapping[next(iter(mapping))],url='https://vendor.example/')}
+        data=collect_news(FakeClient(documents=documents),[source],home, {},NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual(data['items'][0]['url'],article)
+
+    def test_cited_first_party_link_verification(self):
+        """正文自带的一手链接：白名单域名 + 事件证据 + 非推广参数，三重校验后才算核实。"""
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        domains={'vendor.example':'Vendor'}
+        rows=[('https://cn.example/ok','新模型 Solaris 发布','https://vendor.example/releases/solaris','<h1>Introducing Solaris</h1>'),
+              ('https://cn.example/promo','新模型 Promo 发布','https://vendor.example/register?invitecode=1','<h1>Solaris</h1>'),
+              ('https://cn.example/root','新模型 Rooted 发布','https://vendor.example/','<h1>Solaris</h1>'),
+              ('https://cn.example/fake','新模型 Faker 发布','https://vendor.example/releases/other','<h1>Nothing here</h1>')]
+        items=''.join('<item><title>%s</title><link>%s</link><pubDate>Thu, 17 Sep 2026 09:%02d:00 +0000</pubDate></item>'%(t,u,10+i)
+                      for i,(u,t,_,_) in enumerate(rows))
+        documents={source['url']:'<rss><channel>'+items+'</channel></rss>','https://vendor.example/robots.txt':'User-agent: *'}
+        for u,_,official,page in rows:
+            documents[u]='<p>正文</p><p>官网：'+official+'</p>'
+            documents[official]=page
+        reviews=[]
+        data=collect_news(FakeClient(documents=documents),[source],{}, {},NOW,lambda *x:None,lambda *x:reviews.append(x),domains=domains)
+        by_url={item['sourceUrl']:item for item in data['items']}
+        self.assertEqual(by_url['https://cn.example/ok']['url'],'https://vendor.example/releases/solaris')
+        self.assertEqual(by_url['https://cn.example/ok']['originalSource'],'Vendor')
+        for rejected in ('https://cn.example/promo','https://cn.example/root','https://cn.example/fake'):
+            self.assertEqual(by_url[rejected]['url'],rejected)
+        self.assertFalse(reviews)
+        batch,_=assemble(None,{'news':data},NOW); validate(batch)
+
+    def test_reverify_backfills_stored_media_items(self):
+        """回填命令路径：已入库条目按新口径补一手链接，未命中者保持未核实。"""
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        article='https://cn.example/9'; official='https://vendor.example/releases/nine2'
+        feed='<rss><channel><item><title>新模型 Nine2 发布</title><link>'+article+'</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>'
+        documents={source['url']:feed,article:'<p>正文</p>',official:'<h1>Nine2</h1>','https://vendor.example/robots.txt':'User-agent: *'}
+        data=collect_news(FakeClient(documents=documents),[source],{}, {},NOW,lambda *x:None,lambda *x:None)
+        batch,_=assemble(None,{'news':data},NOW)
+        self.assertIsNone(batch['news']['items'][0]['originalUrl'])
+        documents[article]='<p>正文</p><p>官网：'+official+'</p>'
+        updated=reverify_news_items(FakeClient(documents=documents),batch['news'],{}, {'vendor.example':'Vendor'},LATER,lambda *x:None)
+        self.assertEqual(updated['items'][0]['url'],official)
+        self.assertEqual(updated['items'][0]['originalVerifiedAt'],LATER)
+        batch,_=assemble(batch,{'news':updated},LATER); validate(batch)
+        # 自动核实条目在证据不再成立时被撤销（自动授予 → 自动撤销），绝不静默保留错挂链接。
+        demoted=reverify_news_items(FakeClient(documents={article:'<p>正文</p>','https://vendor.example/robots.txt':'User-agent: *'}),updated,{}, {'vendor.example':'Vendor'},LATER,lambda *x:None)
+        self.assertIsNone(demoted['items'][0]['originalUrl'])
+        self.assertEqual(demoted['items'][0]['url'],article)
+        # 无可变更时返回 None，绝不改动公开文件。
+        self.assertIsNone(reverify_news_items(FakeClient(documents={article:'<p>正文</p>','https://vendor.example/robots.txt':'User-agent: *'}),demoted,{}, {'vendor.example':'Vendor'},LATER,lambda *x:None))
+
+    def test_original_mapping_via_official_feed_when_page_blocked(self):
+        """官方页对机器人 UA 403（如 openai.com）时，以发布方官方 feed 条目+标题作为第二证据源。"""
+        feed_source=dict(id='oa',name='OpenAI',url='https://oa.example/feed',articleHosts=['oa.example'],lang='en',official=True)
+        media='https://cn.example/7'; official='https://oa.example/index/gpt-6'
+        feed='<rss><channel><item><title>Introducing GPT-6</title><link>'+official+'</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>'
+        mapping=dict(url=official,publisher='OpenAI',articleEvidence='发布模型六',originalEvidence='Introducing GPT-6',eventSpecific=True)
+        documents={media:'<p>发布模型六</p>',official:DataError('HTTP 403'),feed_source['url']:feed}
+        article=dict(sourceUrl=media,title='新模型 GPT-6 发布')
+        reviews=[]
+        self.assertEqual(verify_original(FakeClient(documents=documents),article,mapping,NOW,lambda *x:reviews.append(x),None,[feed_source]),
+                         ('OpenAI',official,NOW))
+        self.assertFalse(reviews)
+        # feed 条目标题不含 originalEvidence 时仍回退未核实，并记复核。
+        documents[feed_source['url']]=feed.replace('Introducing GPT-6','Weekly update')
+        reviews=[]
+        self.assertEqual(verify_original(FakeClient(documents=documents),article,mapping,NOW,lambda *x:reviews.append(x),None,[feed_source]),
+                         (None,None,None))
+        self.assertTrue(reviews)
+
+    def test_official_repo_page_verifies_via_search(self):
+        """搜索候选路径：仓库/权重页组织白名单 + 事件证据；无 key 时不搜索。"""
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        article='https://cn.example/1'; repo='https://repo.example/XiaomiMiMo/CocktailASR-1'
+        feed='<rss><channel><item><title>新模型 CocktailASR-1 发布</title><link>'+article+'</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>'
+        documents={source['url']:feed,article:'<p>正文</p>',repo:'<h1>CocktailASR-1</h1>','https://repo.example/robots.txt':'User-agent: *'}
+        posts=[dict(results=[dict(url=repo),dict(url='https://media.example/story')])]
+        client=FakeClient(documents=documents,posts=posts)
+        cache={}
+        search=lambda query: search_official_candidates(client,'key',query,cache,NOW,lambda *a:None)
+        data=collect_news(client,[source],{}, {},NOW,lambda *x:None,lambda *x:None,
+                          domains={'vendor.example':'Vendor'},orgs={'repo.example':{'xiaomimimo':'小米'}},
+                          search=search,search_limit=5)
+        self.assertEqual(data['items'][0]['url'],repo)
+        self.assertEqual(data['items'][0]['originalSource'],'小米')
+        self.assertEqual(list(cache),['新模型 CocktailASR-1 发布'])
+        batch,_=assemble(None,{'news':data},NOW); validate(batch)
+        # 无 key：不调用搜索，条目保持未核实
+        data=collect_news(FakeClient(documents=documents),[source],{}, {},NOW,lambda *x:None,lambda *x:None,
+                          domains={'vendor.example':'Vendor'},orgs={'repo.example':{'xiaomimimo':'小米'}})
+        self.assertIsNone(data['items'][0]['originalUrl'])
+
+    def test_publisher_for_denies_ugc_subdomain_and_prefers_longest(self):
+        """最长匹配优先；值为 null 的编辑排除（如腾讯云开发者社区）优先于父域放行。"""
+        domains={'tencent.com':'腾讯','cloud.tencent.com':'腾讯云','developer.cloud.tencent.com':None}
+        self.assertIsNone(publisher_for('https://developer.cloud.tencent.com/article/1',domains))
+        self.assertEqual(publisher_for('https://cloud.tencent.com/document/1',domains),'腾讯云')
+        self.assertIsNone(publisher_for('https://zhuanlan.zhihu.com/p/1',domains))
+        self.assertEqual(publisher_for('https://github.com/XiaomiMiMo/CocktailASR-1',domains,{'github.com':{'xiaomimimo':'小米'}}),'小米')
+
+    def test_reverify_demotes_auto_verified_item_when_evidence_gone(self):
+        """自动核实（无映射）的条目在证据不再成立时被撤销；映射条目归编辑所有，不在此列。"""
+        source=dict(id='cn',name='中文媒体',url='https://cn.example/feed',articleHosts=['cn.example'])
+        article='https://cn.example/1'; repo='https://repo.example/org/model-1'
+        feed='<rss><channel><item><title>新模型 Model-1 发布</title><link>'+article+'</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>'
+        documents={source['url']:feed,article:'<p>正文</p>',repo:'<h1>Model-1</h1>','https://repo.example/robots.txt':'User-agent: *'}
+        data=collect_news(FakeClient(documents=documents),[source],{}, {},NOW,lambda *x:None,lambda *x:None,
+                          domains={},orgs={'repo.example':{'org':'Vendor'}},search=lambda q:[repo])
+        self.assertEqual(data['items'][0]['url'],repo)
+        batch,_=assemble(None,{'news':data},NOW)
+        documents[repo]='<h1>Homepage</h1>'
+        updated=reverify_news_items(FakeClient(documents=documents),batch['news'],{}, {},LATER,lambda *x:None,
+                                    orgs={'repo.example':{'org':'Vendor'}},search=lambda q:[repo])
+        self.assertIsNone(updated['items'][0]['originalUrl'])
+        self.assertEqual(updated['items'][0]['url'],article)
+        batch,_=assemble(batch,{'news':updated},LATER); validate(batch)
+
+    def test_robots_gate_and_official_items_untouched_by_reverify(self):
+        """搜索候选先过整站 robots 门禁；reverify 不重查官方直采条目（三链同值）。"""
+        blocked={'https://party.example/x':False,'https://ugc.example/a':False,'https://bot.example/p':False}
+        robots_docs={'https://ugc.example/robots.txt':'User-agent: *\nDisallow: /\n',
+                     'https://party.example/robots.txt':'User-agent: *\nDisallow: /admin\n',
+                     'https://bot.example/robots.txt':'User-agent: *\nDisallow: /search\nUser-agent: BadBot\nDisallow: /\n'}
+        for url,expected in [('https://ugc.example/a',True),('https://party.example/x',False),('https://bot.example/p',False)]:
+            self.assertEqual(host_blocks_crawling(FakeClient(documents=robots_docs),url,blocked),expected,
+                             expected)
+        # 官方条目：originalUrl 即 sourceUrl，reverify 必须整体跳过（2026-09-24 回归）。
+        official='https://vendor.example/news/1'
+        batch=empty_batch(NOW)
+        batch['news']=dict(dataUpdatedAt=NOW,items=[dict(id=digest(official),title='厂商发布模型一',
+            originalTitle=None,translatedAt=None,summary=None,lang='zh',source='厂商官方',sourceUrl=official,
+            originalSource='厂商官方',originalUrl=official,originalVerifiedAt=NOW,url=official,
+            publishedAt='2026-09-17T08:00:00Z',addedAt=NOW,category='model',eventType='model-release',featured=True)])
+        batch['version']=dict(version=NOW,generatedAt=NOW)
+        for name in ('tickets','models','github','news'): batch[name]['version']=NOW; batch[name]['generatedAt']=NOW
+        validate(batch)
+        self.assertIsNone(reverify_news_items(FakeClient(documents={}),batch['news'],{}, {},LATER,lambda *x:None))
 
     def test_news_tracking_parameters_stripped_from_source_url(self):
         item='<item><title>新模型正式发布</title><link>https://cn.example/story?utm_source=rss&amp;utm_medium=feed&amp;p=7</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'

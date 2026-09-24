@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, news_featured_exclusions, reclassify_news_items, select_featured, summarize_news, translate_github, translate_news
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, news_featured_exclusions, reclassify_news_items, reverify_news_items, search_official_candidates, select_featured, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -183,6 +183,86 @@ def load_config(editorial):
     return sources,overrides,zh
 
 
+def load_vendor_domains(editorial):
+    """Editorial allowlist of first-party domains for automatic source verification.
+
+    A media item can only be auto-verified through a link whose host belongs to one of
+    these publishers; the value is the publisher name stamped as `originalSource`.
+    More specific domains must be listed before their parent domains.
+    """
+    data=read_json(editorial/'vendor-domains.json',{})
+    require(isinstance(data,dict),'invalid vendor domain list')
+    for domain,name in data.items():
+        require(isinstance(domain,str) and re.fullmatch(r'[a-z0-9.-]+',domain) and '.' in domain,'invalid vendor domain')
+        # 值为 null 表示显式排除（如腾讯云开发者社区这类 UGC 子域），最长匹配优先。
+        require(name is None or (isinstance(name,str) and name.strip()),'invalid vendor publisher name')
+    return data
+
+
+def load_vendor_orgs(editorial):
+    """Editorial org map for repo/weights pages (`editorial/vendor-orgs.json`).
+
+    2026-09-24 用户拍板：官方仓库 release 与模型权重页承认作一手证据。键是域，值是
+    {组织: 发布方}；组织名按路径首段、大小写不敏感匹配。
+    """
+    data=read_json(editorial/'vendor-orgs.json',{})
+    require(isinstance(data,dict),'invalid vendor org list')
+    for domain,owners in data.items():
+        require(isinstance(domain,str) and re.fullmatch(r'[a-z0-9.-]+',domain) and '.' in domain,'invalid vendor org domain')
+        require(isinstance(owners,dict) and owners,'invalid vendor org owners')
+        for owner,name in owners.items():
+            require(isinstance(owner,str) and re.fullmatch(r'[a-z0-9._-]+',owner),'invalid vendor org name')
+            require(isinstance(name,str) and name.strip(),'invalid vendor org publisher')
+    return data
+
+
+def load_news_search(args,client,run,now,cache):
+    """Tavily 免费档搜索回调（`--env-file` 的 TAVILY_API_KEY）；无 key 时整条路径关闭。
+
+    搜索结果与主机 robots 缓存同存 `state/news-search-cache.json`（`robots` 键）；候选的
+    robots 门禁与白名单/证据校验在 `sources.resolve_original` 统一执行。
+    """
+    try:
+        key=load_key(args.env_file,('TAVILY_API_KEY','TAVILY_KEY','Tavily_key'),'TAVILY_API_KEY')
+    except DataError:
+        run.skipped.append('news-search: no TAVILY_API_KEY; cited/mapped links only')
+        return None
+    def search(query):
+        result=search_official_candidates(client,key,query,cache,now,run.review)
+        write_json(args.state/'news-search-cache.json',cache)
+        return result
+    return search
+
+
+def run_news_reverify(args):
+    """One-off: re-resolve first-party links for stored media items (2026-09-24 改口径回填)."""
+    now=utcnow(); run=Run(args.state,now)
+    old=read_batch(args.output); require(old is not None,'no public batch')
+    originals=read_json(args.editorial/'news-originals.json',{}); require(isinstance(originals,dict),'invalid news originals')
+    domains=load_vendor_domains(args.editorial); orgs=load_vendor_orgs(args.editorial)
+    sources,_,_=load_config(args.editorial)
+    feeds=[source for source in sources['news'] if source.get('official') is True]
+    before={item['id']:item['originalUrl'] for item in old['news']['items']}
+    search_cache=read_json(args.state/'news-search-cache.json',{})
+    require(isinstance(search_cache,dict),'invalid news search cache')
+    search=load_news_search(args,Client(),run,now,search_cache)
+    data=reverify_news_items(Client(),old['news'],originals,domains,now,run.review,limit=args.limit,feeds=feeds,
+                             orgs=orgs,search=search,search_limit=args.limit,
+                             robots=search_cache.setdefault('robots',{}))
+    write_json(args.state/'news-search-cache.json',search_cache)
+    if data is None:
+        print('news reverify: nothing to update',flush=True)
+    else:
+        batch,changed=assemble(old,{'news':data},now)
+        if changed:
+            save_candidate(args.candidate,batch)
+            promote(args.candidate,args.output)
+        verified=sum(1 for item in data['items'] if before.get(item['id'])!=item['originalUrl'])
+        print('news reverify: '+str(verified)+' item(s) verified or updated',flush=True)
+    run.save()
+    return 0
+
+
 def run_news_reclassify(args):
     """One-off: re-type stored news items whose eventType left the enum (2026-09-24 拆分口径回填).
 
@@ -309,6 +389,9 @@ def collect(args):
     sources,overrides,github_zh=load_config(args.editorial)
     originals=read_json(args.editorial/'news-originals.json',{})
     require(isinstance(originals,dict),'invalid news originals')
+    domains=load_vendor_domains(args.editorial); orgs=load_vendor_orgs(args.editorial)
+    search_cache=read_json(args.state/'news-search-cache.json',{})
+    require(isinstance(search_cache,dict),'invalid news search cache')
     old=read_batch(args.output); baseline=old or empty_batch(now)
     raw_cache=read_json(state/'source-cache.json',{k:body(baseline[k]) for k in MODULES})
     require(isinstance(raw_cache,dict) and set(raw_cache)==set(MODULES),'invalid source cache')
@@ -339,10 +422,14 @@ def collect(args):
                 news_translator=load_news_translator(args,client,run,now)
                 news_summarizer=load_news_summarizer(args,client,run,now)
                 news_featured=load_news_featured(args,client,run,now)
+                news_search=load_news_search(args,client,run,now,search_cache)
                 data=collect_news(client,news,originals,baseline['news'],now,run.guard,run.review,news_translator,
                                   summarize=news_summarizer,window_seconds=args.backfill_days*24*3600 or 72*3600,
                                   backfill=args.backfill_days>0,feature=news_featured,
-                                  exclude=news_featured_exclusions(overrides['news']['featuredExclude']))
+                                  exclude=news_featured_exclusions(overrides['news']['featuredExclude']),
+                                  domains=domains,verify_limit=args.limit,
+                                  orgs=orgs,search=news_search,search_limit=args.limit,
+                                  robots=search_cache.setdefault('robots',{}))
             else:
                 data=load_tickets(args.editorial,raw_cache['tickets'],now)
             raw_candidate=copy.deepcopy(data)
@@ -388,6 +475,7 @@ def collect(args):
     if changed:
         promote(args.candidate,args.output)
     write_json(state/'source-cache.json',raw_cache)
+    write_json(state/'news-search-cache.json',search_cache)
     audit=[entry for entry in overrides['records']]
     audit_path=state/'audit.jsonl'
     existing=audit_path.read_text(encoding='utf-8').splitlines() if audit_path.exists() else []
@@ -405,7 +493,7 @@ def collect(args):
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=('init','collect','reclassify','validate'))
+    parser.add_argument('command',choices=('init','collect','reverify','reclassify','validate'))
     parser.add_argument('--output',type=Path,default=ROOT/'public'/'data')
     parser.add_argument('--candidate',type=Path,default=ROOT/'.cache'/'candidate')
     parser.add_argument('--state',type=Path,default=ROOT/'state')
@@ -415,6 +503,8 @@ def main(argv=None):
     parser.add_argument('--force',action='store_true',help='repeat daily source checks explicitly')
     parser.add_argument('--backfill-days',type=int,default=0,
                         help='one-off news backfill: widen admission to N days and stamp addedAt with publishedAt')
+    parser.add_argument('--limit',type=int,default=40,
+                        help='one-off news verification budget: max items resolved per run')
     parser.add_argument('--build-cwd',type=Path,default=ROOT.parent)
     parser.add_argument('--build-command',nargs=argparse.REMAINDER)
     args=parser.parse_args(argv)
@@ -430,6 +520,8 @@ def main(argv=None):
                 promote(args.candidate,args.output)
                 print('initialized empty unverified batch')
                 return 0
+            if args.command=='reverify':
+                return run_news_reverify(args)
             if args.command=='reclassify':
                 return run_news_reclassify(args)
             return collect(args)

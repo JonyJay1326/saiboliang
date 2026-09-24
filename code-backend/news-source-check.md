@@ -251,3 +251,62 @@ AIBase 的报道链接属于中文报道；只有另行核实官方一手出处�
 
 [未定] 两条官方条目仍未被收录，原因不同：① OpenAI「GPT-6 更优的提示缓存」被判 model-release 后命中相似排除（与 GPT-6 Astra 条目共享品牌标记 `gpt6`，同型号只留最重要的一条）——按现行规则属预期；② NVIDIA「Isaac ROS 5.0」的机译标题用了「代理式」（非「智能体式」），`NEWS_TOPICS` 未命中而整条被挡，且译文已进 `state/news-zh-cache.json`（缓存命中即不再重译，条目会一直被挡）。可选修法（待用户拍板）：把 `机器人/robotics` 一类词补进主题词表，或对「已翻译但未过事件判定」的候选做缓存失效、下轮重译。
 
+### 2026-09-24 第十一批：二手条目一手核实改口径（用户拍板：改口径 + 全量自动核实）
+
+背景：`/news` 上 57 条 AIBase/量子位 条目常显「二手 · 一手未核实」。用户问能否自动核实；实测发现**旧口径（报道页必须引用官方链接）对这两源 57/57 不成立**：逐条抓原文页，对官方域名的外链为 0（只有微博/知乎/头条/备案），AIBase 内嵌数据的来源字段是空串。
+
+用户拍板改口径并全量核实。新口径为**两页证据 + 白名单域名**，映射（编辑核实）与自动提取两条路径：
+
+- `editorial/news-originals.json`：运行时改为只查「报道页含 `articleEvidence`、官方页含 `originalEvidence`、`url` 非首页、`eventSpecific=true`」，**不再要求报道页引用该链接**。
+- 新增 `editorial/vendor-domains.json`（`domain -> 发布方`）：无映射时读取报道页自身的锚点与「官网/原文/来源/出处/官方」标注文本，域名命中白名单、排除推广参数（`invitecode`/`utm_`/`/register` 等）与首页路径，且官方页含条目标题的字母数字事件签名（`Grok 4.7`、`MiMo-V2.6`、`v26`）才写入 `originalUrl`；失败保持未核实，不进复核队列。每轮预算 `--limit`（默认 40 条）。
+- 新增 `pipeline.py reverify`（一次性回填，只处理 `originalUrl` 为空的历史条目，有变更才推版本）。
+
+[实测] 逐条抓 57 条原文页统计可自动提取的一手链接：AIBase 50 条中仅 1 条正文含官方链接（Runway Solaris，正文「官网：https://runway.com/news/research/introducing-solaris」）；量子位 7 条为 0。同品牌 ±72h 库存配对覆盖率 2/57，且 token 匹配会误配同产品不同事件（RPent/Perplexity 例），故未采用纯库存匹配。
+
+[实测] 首轮回填（9 条搜索核实的映射 + 1 条正文提取）共核实 **10 条**：Grok 4.7（x.ai/news）、WeatherNext 3（blog.google，DeepMind 旧链 301 需取终址）、Qwen3.8-Omni-Flash（百炼新模型页）、GPT-5.5 下线（learn.chatgpt.com）、MiMo-V2.6（mimo.xiaomi.com）、Kimi Code Desktop（kimi.com/news）、Wan3.0（百炼模型页）、StepAudio 3（static.stepfun.com 博客）、Ling-3.0-flash-VL（Hugging Face 官方模型卡）、Runway Solaris。`pipeline.py validate` PASS；单测 73 项全过（新增：无引用映射核实、首页映射拒绝、正文提取三重校验、推广/首页/证据缺失拒绝、回填与无变更不推版本）。
+
+[实测] 阻塞项：① **openai.com 正文页对管道 UA 403**（已知，2026-09-19 记录在 `cyber-granary-architecture.md` §2.2）——已按用户 2026-09-24 拍板加第二证据源：官方页抓不动时改用发布方官方 feed（URL 命中条目 + 条目标题含 `originalEvidence`，尾斜杠容差），OpenAI 三条（GPT-6 Sol/Luna、Astra for Law、GPT-Live-1-in-API）与「全球安全倡议」条目由此核实；② AIBase 页面含「相关推荐」标题，证据抽取只能取条目标题自身的变体，否则会误用他条标题；③ qwen.ai 博客、huggingface.co 模型页、小米 MiMo 博客等 JS 渲染或拒答页取不到证据文本；④ 智谱更新页、DeepSeek 更新日志等目录页不含具体事件 token（实测 `GLM-5.3-FlashX`、`Harness 0.1.5` 均不在页内），按未核实处理，不做目录页弱证据映射；⑤ 厂商官方通道未覆盖的事件（斑马智能、虎鲸文娱、OceanBase、B站、华为、剪映、讯飞、TypeSafe、Microsoft Project Opal 等）找不到可核验的一手页，保持未核实。
+
+[实测] 最终覆盖：57 条二手条目核实 **23 条**（`editorial/news-originals.json` 22 条映射 + Runway Solaris 正文提取 1 条；其中 4 条走官方 feed 路径：GPT-6 Sol/Luna、Astra for Law、GPT-Live-1-in-API、全球安全倡议）。核实用具 `cache-tools/curate-news-originals.py`（本机、不发布）：支持多候选官方 URL 探测、官方页 403 时回退官方 feed、证据串自动挑选（含数字的事件签名优先）。
+
+[未定] 剩余 32 条未核实：全部为无官方一手页或页面不可核验的事件（见上方阻塞项 ③④⑤）。继续提升只能逐条搜索（半人工）；若要求常态覆盖，需为高频未覆盖厂商补官方通道（本文件来源准入流程），或引入搜索 API 作为管道依赖（涉及新外部依赖与费用，待用户拍板）。
+
+### 2026-09-24 第十二批：未覆盖厂商补源与搜索 API 分析（用户限定「只要免费」）
+
+先统计剩余 32 条未核实的厂商分布（按标题关键词归类，含噪声）：OpenAI 5（多为已被 OpenAI 源覆盖但事件不在 feed 的个案）、阿里/通义 3、小米 2、TypeSafe 3、腾讯/微信 2、其余为一次性长尾（斑马智能、虎鲸文娱、百曜、华为、中国化工、长三角实验室、APUS、B站、剪映、蚂蚁阿福、财跃、OceanBase、智谱、讯飞、微软 Opal、谷歌 Gemini 简报、Meta、百度、清华 RPent、DeepSeek、Qwen-Image-2.1 等）。即**没有真正的高频厂商**，是一条长尾。
+
+**方案 A：补官方通道（逐厂商准入实测）**
+
+[实测] robots.txt：**均无整站拒绝**（`User-agent: *` 组内没有 `Disallow: /`）——docs.bigmodel.cn / developer.ant-ling.com / www.oceanbase.com / www.huawei.com / www.jianying.com / www.bilibili.com 只禁 `/cdn-cgi/`、`/private/`、`/api/` 等路径；mimo.xiaomi.com、www.tencent.com、www.xfyun.cn 无 robots.txt（404）。**更正**：本节初版用子串判断把路径级 Disallow 误报为整站拒绝（2026-09-24 晚修正为最小解析，见第十三批）。
+
+[实测] 通道可用性：① `qwenlm.github.io/blog/index.xml` 是可解析 RSS，但 **feed 最新条目停在 2025-09-22**（已停更，2026 内容只在 JS 渲染的 qwen.ai/blog）→ 死源，不接；② `mimo.xiaomi.com/blog` 是无 RSS 的服务端 HTML，但内容停在 2025-12（MiMo-V2-Flash），当前 MiMo-V2.6 内容在版本化路径（`/mimo-v2-6/article`），无稳定索引 → 适配器易碎，暂不接；③ `www.zhipuai.cn/zh/news`、`developer.ant-ling.com/zh-CN/blogs`、`www.oceanbase.com/news` 是可抓的服务端 HTML 列表页（需逐家写适配器，无 RSS）；④ `www.tencent.com`、`typesafe.ai`、`www.xfyun.cn` 未找到可用更新入口（讯飞 `/news` 404、xinghuo 为 SPA 壳）；⑤ 微软 research RSS 可解析但本次 Project Opal 不在其中；⑥ `static.stepfun.com/blog/` 无索引页。
+
+结论：**方案 A 对剩余条目的边际收益≈0**（无可直接接入的 live 官方源；列表页类需逐家新适配器，按来源准入流程做），价值只在「未来某厂商高频出现时」再逐厂商评估。
+
+**方案 B：引入搜索 API（免费档）**
+
+[二手] 2026 免费档现状：① **Tavily** Researcher 免费档 = 1,000 credits/月、**免信用卡**、可长期使用（1 credit/次基础搜索）；② **Brave Search API** 2026-02 起取消 Free 档，改为各计划每月 $5 免费额度（≈1,000 次，需绑卡、可设 $0 上限）；③ **Exa** 注册 $20 + 每月 $10 额度；④ **Serper** 2,500 次一次性免费；⑤ **Google Custom Search JSON API** 100 次/天免费但**已对新产品关闭**、2027-01-01 停服；⑥ **Bing Web Search API** 已退役；⑦ SearXNG 自建需常驻主机（GitHub Actions 无此条件）。接入前须以各家官方 pricing 页复核。
+
+接入形态（若拍板）：仅对「无 originalUrl 的媒体候选」调用一次搜索 → 取前 N 条结果的 URL → 用现有 `vendor-domains` 白名单 + `evidence_tokens` 证据链核验 → 命中才写 `originalUrl`；结果缓存于 `state/`，无 key 时该路径整体关闭（不改变现有行为）。按当前量级（遗留 32 条 + 日均新增 0–5 条）月查询量约 150–400 次，Tavily 免费档足够。
+
+[未定] 待用户拍板：① 是否接入 Tavily 免费档（免卡、零成本，需新 API key 与归属声明条款复核）；② robots 阻断厂商的条目是否接受长期未核实；③ 是否承认「官方仓库 release / 模型权重页」为一手证据（可覆盖 WeMM、CocktailASR 等开源发布类，属口径变更）。
+
+### 2026-09-24 第十三批：用户拍板 — 接 Tavily（免费档）+ 承认仓库/权重页为一手
+
+用户决定：① 接入 Tavily 试试（免档 1,000 次/月、免信用卡）；② robots 阻断厂商条目接受长期未核实；③ **承认官方仓库 release / 模型权重页为一手证据**。
+
+**实现：** 新增 `editorial/vendor-orgs.json`（域 → {组织: 发布方}，覆盖 GitHub 与 Hugging Face，组织取路径首段、大小写不敏感）；`sources.py` 新增 `publisher_for`（域白名单 → 组织映射两级解析）、`search_official_candidates`（Tavily `POST /search`，`max_results=5`、`search_depth=basic`，按标题缓存于 `state/news-search-cache.json`，请求失败不写缓存）；`resolve_original` 增加第三条路径「搜索候选」（映射 → 正文自引 → 搜索），三条路径统一走白名单/组织 + 事件证据 + 非首页校验；`pipeline.py` 新增 `load_vendor_orgs`、`load_news_search`（读 `TAVILY_API_KEY`，缺 key 时路径关闭并记 `skipped`），`.env.example` 补 key 名。
+
+[实测] 仓库/权重页口径当场核实 4 条（无需搜索 key）：WeMM-Embedding ×2 → `github.com/Tencent/WeMM-Embedding`；Qwen-Image-2.1 → `huggingface.co/Qwen/Qwen-Image-2.1`；财跃星辰 Alpha-R1 → `huggingface.co/FinStep/Alpha-R1`（模型卡确认为「基座 Qwen3-8B、GRPO、Alpha101 因子」的同一事件）。累计核实 **27/57**，剩余 28 条。
+
+[实测] 单测 79 项全过（新增搜索候选路径用例：组织白名单命中 → 核实并缓存查询；无 key → 不搜索、保持未核实）；`pipeline.py validate` PASS。
+
+**接 Tavily 后暴露并修正的三件事：**
+
+1. **误核实：搜索把智谱条目挂到了腾讯云开发者社区**（`developer.cloud.tencent.com`，UGC 站）。修正：`vendor-domains.json` 支持**值为 null 的显式排除**（`publisher_for` 改为最长匹配优先）；同时给所有候选加了**最小 robots 门禁**（`host_blocks_crawling` + `robots_denies_all`），搜索与正文自引候选都先过这道门。
+2. **robots 缓存误杀 GitHub**：初版门禁用「全文出现 `Disallow: /`」判断，而 GitHub 给 GPTBot/ClaudeBot 等单独写了 `Disallow: /` → 整个 github.com 被误判。修正为最小解析：只看 `User-agent: *`（或未声明分组）组内的 `Disallow: /`；缓存已清空重算。
+3. **reverify 语义收紧 + 一次事故**：官方直采条目（`originalUrl == sourceUrl`）不重查；**无映射的自动核实条目每轮重查，证据不再成立即撤销**（自动授予 → 自动撤销）；映射条目归编辑所有。修复前的半成品逻辑曾误撤销 27 条官方条目，已用一次性脚本经 `assemble/save_candidate/promote` 同一校验路径从上一提交恢复（详见第十三批）。
+
+[实测] 修正后重跑：CocktailASR-1 重新核实（`github.com/xiaomi-research/xiaomi-cocktailasr-1`，组织映射补 `xiaomi-research`），智谱 GLM-5.3-FlashX 保持 `docs.bigmodel.cn` 的 GLM-5.3-Flash 模型页（页面含 FlashX 信息）；累计 **30/57**，剩余 25 条（robots 阻断并非原因——多数是无可用一手页或页面不可核验）。
+
+[未定] Tavily 实跑待用户提供 key（本机 `.env` 或 CI Secrets）；robots 阻断域（华为/剪映/B站/OceanBase/蚂蚁 docs/智谱 docs）的条目按决定长期保持未核实。

@@ -1,1 +1,184 @@
-{}
+{
+  "bbdd60b44b92552d08ff1c08c1f7639c668fc41b84989e33db1dba4e385b8de2": {
+    "url": "https://x.ai/news/grok-4-7",
+    "publisher": "SpaceXAI",
+    "articleEvidence": "SpaceXAI 最强模型 Grok 4.7 上线：长任务能力拉满，价格只有旗舰一半",
+    "originalEvidence": "Introducing Grok 4.7",
+    "eventSpecific": true
+  },
+  "b72a1a48e64d3a5134a19347a0aab39b2c18827798b9ad1fbcc06d6908a67a1d": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+    "publisher": "Google DeepMind",
+    "articleEvidence": "Google DeepMind发布气象大模型WeatherNext 3，实现每小时刷新与5公里高精度全球预报",
+    "originalEvidence": "Learn more about WeatherNext 3",
+    "eventSpecific": true
+  },
+  "0a7c05598e7d45aa2ffe49ed70bce7d89ad71c6936b554e6cb038cfe0f7c3366": {
+    "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-09-17&model=qwen3.8-omni-flash",
+    "publisher": "阿里云百炼",
+    "articleEvidence": "阿里发布 Qwen3.8-Omni-Flash：原生全模态、百万上下文，音频成本砍掉 98%",
+    "originalEvidence": "Qwen3.8-Omni-Flash",
+    "eventSpecific": true
+  },
+  "a22d8d3a82447d93663dab0503364f289af3e31ddaf383645a9bc6ac87121d62": {
+    "url": "https://learn.chatgpt.com/docs/enterprise/workspace-model-availability",
+    "publisher": "OpenAI",
+    "articleEvidence": "OpenAI 宣布 GPT-5.5 将于 10 月 14 日下线：ChatGPT 与 Codex 同步移除",
+    "originalEvidence": "Prepare for the GPT-5.5 retirement",
+    "eventSpecific": true
+  },
+  "8ab5e5b3cea16ee997db59bbe9e7fa36a57adf095a2398363cb75552362511a1": {
+    "url": "https://mimo.xiaomi.com/mimo-v2-6/article",
+    "publisher": "小米",
+    "articleEvidence": "小米发布并开源 MiMo-V2.6:AA 智能指数46分登顶最强开源模型",
+    "originalEvidence": "Introducing MiMo-V2.6 series",
+    "eventSpecific": true
+  },
+  "d712385ece48413c24f512dd415f5ca48bc90e94a37c1740a2e1e0bd888dc5db": {
+    "url": "https://www.kimi.com/news/kimi-code-desktop",
+    "publisher": "月之暗面",
+    "articleEvidence": "月之暗面推出Kimi Code Desktop桌面端，把AI编程Agent直接搬上macOS和Windows",
+    "originalEvidence": "从 CLI 到 Desktop，你熟悉的 Kimi Code 更加清晰可控",
+    "eventSpecific": true
+  },
+  "5ecc5f45eaf6917741c194734cd1222dc4952668bbf9891f64944ec4b1cb2320": {
+    "url": "https://help.aliyun.com/zh/model-studio/wan3-0-video",
+    "publisher": "阿里云",
+    "articleEvidence": "阿里云展示全新升级的 Wan3.0 视频大模型：单条直出 30 秒长镜头，支持多达五条视频参考",
+    "originalEvidence": "wan3.0-video",
+    "eventSpecific": true
+  },
+  "496dbc49d2e4d472ba519757f2faaa72032c6a0788c463ec1f2e5d33b8d1cee6": {
+    "url": "https://static.stepfun.com/blog/stepaudio3",
+    "publisher": "阶跃星辰",
+    "articleEvidence": "阶跃星辰王炸发布 StepAudio 3 系列语音大模型，强势斩获多项全球第一！",
+    "originalEvidence": "StepAudio 3",
+    "eventSpecific": true
+  },
+  "565fd20f97d77ea858f9d2b51f0aabdf5be17a561b01a9f4d6bbfaf86a2d867f": {
+    "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL",
+    "publisher": "蚂蚁百灵",
+    "articleEvidence": "蚂蚁开源 Ling-3.0-flash-VL：124B 参数原生多模态大模型正式登场",
+    "originalEvidence": "Ling-3.0-flash-VL",
+    "eventSpecific": true
+  },
+  "fbb6a12c19b9728fce985b7b1f554098db9f04158657251fc57f9a287efd4a77": {
+    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+    "publisher": "OpenAI",
+    "articleEvidence": "OpenAI 重磅发布 GPT-6 Sol 与 Luna 模型：API 价格腰斩，性能直逼顶级旗舰",
+    "originalEvidence": "Introducing GPT-6 Sol and Luna",
+    "eventSpecific": true
+  },
+  "9aae40e2d877690bffd02ec664d6c581e75ebcf0985fafe72f3ca22a5c291069": {
+    "url": "https://openai.com/index/astra-for-law",
+    "publisher": "OpenAI",
+    "articleEvidence": "OpenAI 推出 Astra for Law：索引 2.3 亿 URL，法律问答正确率 54% 力压通用模型 15 个百分点",
+    "originalEvidence": "Introducing Astra for Law",
+    "eventSpecific": true
+  },
+  "49a7d8c3fcf5c34d48140532ff5fc906dbb293739f5a818db62d20a123c3b445": {
+    "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+    "publisher": "OpenAI",
+    "articleEvidence": "告别卡顿与机械感：OpenAI 推出全双工语音模型 GPT-Live-1",
+    "originalEvidence": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+    "eventSpecific": true
+  },
+  "77cb5c24ca4e52674949bc942b453d2921457a655fabd4144cc48f19096fc254": {
+    "url": "https://www.anthropic.com/claude-opus-5-5",
+    "publisher": "Anthropic",
+    "articleEvidence": "Claude Opus5.5",
+    "originalEvidence": "Anthropic",
+    "eventSpecific": true
+  },
+  "8b9933678cbcc8c3b208a60f3b563b58ca43e609e2957b9bafc48471283cb519": {
+    "url": "https://www.anthropic.com/claude-opus-5-5",
+    "publisher": "Anthropic",
+    "articleEvidence": "Anthropic上线Claude Opus 5.5 ，任务成本大降 40%",
+    "originalEvidence": "Opus 5.5",
+    "eventSpecific": true
+  },
+  "7b0b91faddcd5e34a0fb8fe902ecdb2793d81946be30ab6e1e15c9cdc7979874": {
+    "url": "https://support.google.com/assistant/thread/457649886/important-update-transitioning-from-google-assistant-to-gemini-on-mobile?hl=en",
+    "publisher": "Google",
+    "articleEvidence": "谷歌9月4日起停用Google Assistant，Gemini全面接棒",
+    "originalEvidence": "Google Assistant",
+    "eventSpecific": true
+  },
+  "f67c38308227435e06574f2fa4f36bdac68f4ee8a72e50b7443c054e96aceaf3": {
+    "url": "https://www.anthropic.com/news/life-sciences-verification-program",
+    "publisher": "Anthropic",
+    "articleEvidence": "Anthropic 推出生命科学认证计划，三款主力模型纳入统一授权条款",
+    "originalEvidence": "Anthropic",
+    "eventSpecific": true
+  },
+  "8a8d5449ec3c52d015988f8e58df4042081a03b023c50cb527714b6eaeb955a5": {
+    "url": "https://static.stepfun.com/blog/stepaudio3",
+    "publisher": "阶跃星辰",
+    "articleEvidence": "阶跃发布StepAudio3系列模型:五款模型同步上线开放平台",
+    "originalEvidence": "StepAudio 3",
+    "eventSpecific": true
+  },
+  "297bbc83b797561ec3bda67aaf7d7d5240b83a0a87690ca4ef89ed29fd4d4b5c": {
+    "url": "https://suno.com/blog/introducing-v6",
+    "publisher": "Suno",
+    "articleEvidence": "Suno发布v6音乐模型：联合华纳、BMG 共创，自然语言就能改歌、混音、采样",
+    "originalEvidence": "Introducing v6",
+    "eventSpecific": true
+  },
+  "e6c446e27ca399b16928598a27edab88611cadcbc89fb50f57599991d0c47ce1": {
+    "url": "https://www.worldlabs.ai/blog/atlas",
+    "publisher": "World Labs",
+    "articleEvidence": "李飞飞团队推出世界模型 Atlas，或成通往 AGI 的核心原语",
+    "originalEvidence": "Atlas",
+    "eventSpecific": true
+  },
+  "13d4f92cd047cdcdad7a69668a0482d01f908d156ed20004826f0899f5002be9": {
+    "url": "https://www.worldlabs.ai/blog/atlas",
+    "publisher": "World Labs",
+    "articleEvidence": "World Labs推出全球首个多模态世界模型Atlas，像素级镜头控制拍出电影级“子弹时间”大片",
+    "originalEvidence": "World Labs",
+    "eventSpecific": true
+  },
+  "35f763c02388066e08cbeb8bd3af8380f8266c4a79bdea60d0c2547b46788d99": {
+    "url": "https://openai.com/index/building-standards-next-phase-ai",
+    "publisher": "OpenAI",
+    "articleEvidence": "OpenAI内部AI已能自主训练模型，奥特曼发布全球安全倡议应对RSI逼近",
+    "originalEvidence": "Building standards for the next phase of AI",
+    "eventSpecific": true
+  },
+  "0168996246e5cb54ef1ac631d9197b1ac5a89900197c111c4bb909471075e62e": {
+    "url": "https://platform.stepfun.com/docs/zh/guides/models/step-5-preview",
+    "publisher": "阶跃星辰",
+    "articleEvidence": "阶跃星辰发布Step5Preview，单任务成本仅为Claude Opus5的1/8",
+    "originalEvidence": "Step 5 Preview",
+    "eventSpecific": true
+  },
+  "3ad9d7b95b326b293c7ad8e2b3ac4ab18e5788c7c22778e3ba166420fcbf07dc": {
+    "url": "https://github.com/Tencent/WeMM-Embedding",
+    "publisher": "腾讯",
+    "articleEvidence": "每日调用量破 10 亿次！微信开源 WeMM-Embedding 多模态大模型，全面领跑国际权威榜单",
+    "originalEvidence": "WeMM-Embedding",
+    "eventSpecific": true
+  },
+  "1833079b11dfd9e49ae5c9ded830a55cfb96a9960169f54b1168569e0edd48f3": {
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+    "publisher": "通义千问",
+    "articleEvidence": "阿里 70 亿参数图像模型Qwen-Image-2. 1 开源发布，号称以瘦身之躯叫板闭源巨头",
+    "originalEvidence": "Qwen-Image-2.1",
+    "eventSpecific": true
+  },
+  "8cbd442e0f31f7baac8f817a26ceae12a1646ada2ba208b74925bfcd60881727": {
+    "url": "https://huggingface.co/FinStep/Alpha-R1",
+    "publisher": "财跃星辰",
+    "articleEvidence": "财跃星辰联合上海交大开源Alpha-R1：8B小模型如何颠覆资产配置？",
+    "originalEvidence": "Alpha-R1",
+    "eventSpecific": true
+  },
+  "f79a702b3286ed997d399fe9980f48dbccf71b499cf48e022ee9e82e4c8704e6": {
+    "url": "https://github.com/Tencent/WeMM-Embedding",
+    "publisher": "腾讯",
+    "articleEvidence": "WeMM-Embedding",
+    "originalEvidence": "WeMM-Embedding",
+    "eventSpecific": true
+  }
+}

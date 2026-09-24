@@ -1,0 +1,42 @@
+{
+  "github.com": {
+    "xiaomimimo": "小米",
+    "tencent": "腾讯",
+    "qwenlm": "通义千问",
+    "zai-org": "智谱",
+    "thudm": "智谱",
+    "inclusionai": "蚂蚁百灵",
+    "moonshotai": "月之暗面",
+    "deepseek-ai": "DeepSeek 官方",
+    "openai": "OpenAI",
+    "anthropics": "Anthropic",
+    "google-deepmind": "Google DeepMind",
+    "google-gemini": "Google",
+    "runwayml": "Runway",
+    "stepfun-ai": "阶跃星辰",
+    "iflytek": "科大讯飞",
+    "microsoft": "Microsoft",
+    "nvidia": "NVIDIA",
+    "tencentarc": "腾讯",
+    "worldlabs": "World Labs",
+    "suno-ai": "Suno",
+    "xiaomi-research": "小米"
+  },
+  "huggingface.co": {
+    "xiaomimimo": "小米",
+    "inclusionai": "蚂蚁百灵",
+    "qwen": "通义千问",
+    "zai-org": "智谱",
+    "moonshotai": "月之暗面",
+    "stepfun-ai": "阶跃星辰",
+    "tencent": "腾讯",
+    "deepseek-ai": "DeepSeek 官方",
+    "baidu": "百度",
+    "openai": "OpenAI",
+    "microsoft": "Microsoft",
+    "nvidia": "NVIDIA",
+    "google": "Google",
+    "worldlabs": "World Labs",
+    "finstep": "财跃星辰"
+  }
+}

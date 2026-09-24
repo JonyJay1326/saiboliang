@@ -767,25 +767,274 @@ def parse_deepseek_news(html,source):
     return result
 
 
-def verify_original(client,article,mapping,now,review):
+# 一手链接自动核实（2026-09-24 用户拍板改口径）：口径从「报道必须引用官方链接」改为
+# 「官方页存在事件证据」。旧口径对 AIBase/量子位 永不成立（实测 57/57 正文无官方外链），
+# 导致这两源的条目无法核实；新口径分两条路径，映射（编辑核实）优先，其次自动提取。
+PROMO_MARKERS=('invitecode','invite_code','utm_','ref=','spm=','clickid','click_id','/register','/signup')
+HTTP_URL_RE=re.compile(r'https?://[^\s"\'<>\\]+')
+LABELED_URL_RE=re.compile(r'(?:官网|原文|来源|出处|官方)\s*[:：]?\s*(https?://[^\s"\'<>\\]+)')
+EVIDENCE_STOP={'release','released','launch','launches','update','updates','model','models','news','blog',
+               'changelog','introducing','announce','announced','available','preview','version','platform',
+               'service','support','features','feature','improvement','improvements','official','site','https'}
+
+
+def evidence_tokens(title):
+    """Latin/digit signatures of an event (`solaris`, `mimo`, `v26`); Chinese-only titles yield none."""
+    tokens=set()
+    for raw in re.findall(r'[A-Za-z0-9][A-Za-z0-9._-]*',title):
+        value=re.sub(r'[^a-z0-9]','',raw.lower())
+        if len(value)<4 or value in EVIDENCE_STOP:
+            continue
+        if any(ch.isdigit() for ch in value) or len(value)>=5:
+            tokens.add(value)
+    return tokens
+
+
+def publisher_for(url,domains,orgs=None):
+    """发布方解析：先按白名单域（最长匹配优先，值为 null 表示编辑显式排除），
+    再按「官方仓库/权重页」的组织名（2026-09-24 用户拍板承认）。
+
+    `domains` 是 `editorial/vendor-domains.json`（域 -> 发布方，null 为拒绝）；
+    `orgs` 是 `editorial/vendor-orgs.json`（域 -> {组织: 发布方}），覆盖 GitHub 仓库与
+    Hugging Face 模型页——组织名大小写不敏感，路径首段即组织。
+    """
+    parts=urlsplit(url); host=(parts.hostname or '').lower()
+    matches=[(domain,name) for domain,name in domains.items() if host==domain or host.endswith('.'+domain)]
+    if matches:
+        return max(matches,key=lambda pair: len(pair[0]))[1]
+    for domain,owners in (orgs or {}).items():
+        if host==domain or host.endswith('.'+domain):
+            owner=parts.path.strip('/').split('/')[0].lower()
+            if owner in owners:
+                return owners[owner]
+    return None
+
+
+def extract_official_links(html,base,domains,orgs=None):
+    """First-party URLs a media article itself cites: anchors plus labelled text links.
+
+    Page scripts, images and analytics hosts are never candidates (only clickable
+    anchors and links labelled 官网/原文/来源/出处/官方 count), and a candidate must
+    sit on the editorial allowlist (vendor domains or admitted repo orgs) and be an
+    event page rather than a homepage.
+    """
+    text=html.replace('\\/','/')
+    tree=Tree(text).root
+    urls=[]
+    for node in tree.find(lambda n:n.tag=='a'):
+        href=node.attrs.get('href','')
+        if not href:
+            continue
+        try:
+            absolute=urljoin(base,href)
+        except ValueError:
+            continue
+        if absolute.startswith(('http://','https://')):
+            urls.append(absolute)
+    urls.extend(match.group(1) for match in LABELED_URL_RE.finditer(' '.join(tree.text().split())))
+    seen=set(); result=[]
+    for url in urls:
+        if url in seen:
+            continue
+        seen.add(url)
+        try:
+            safe_url(url)
+        except ValueError:
+            continue
+        publisher=publisher_for(url,domains,orgs)
+        if not publisher or not urlsplit(url).path.strip('/'):
+            continue
+        if any(marker in url.lower() for marker in PROMO_MARKERS):
+            continue
+        result.append((url,publisher))
+        if len(result)>=3:
+            break
+    return result
+
+
+def verify_official_page(client,url,publisher,tokens,now,deadline=None):
+    """Fetch a candidate first-party page and require event evidence in its own text."""
+    raw,final=client.get(url,deadline=deadline)
+    require(normalize_url(final)==normalize_url(url),'official page redirected')
+    text=re.sub(r'[^a-z0-9]','',decode(raw).lower())
+    require(any(token in text for token in tokens),'official page evidence missing')
+    return publisher,url,now
+
+
+def same_page(left,right):
+    """Trailing-slash-tolerant page identity for feed matching and redirect checks."""
+    return normalize_url(left).rstrip('/')==normalize_url(right).rstrip('/')
+
+
+def verify_original_via_feed(client,mapping,feeds,deadline=None):
+    """CF 拦页时的第二证据源（2026-09-24 用户拍板）：官方 feed 条目 + 条目标题证据。
+
+    openai.com 正文页对管道 UA 403，官方 feed 是发布方自己的出口：URL 命中该发布方
+    官方 feed 的条目、且条目标题含 `originalEvidence`，即证明这是发布方的公告页。
+    仅当发布方名称与已启用的官方源同名时该路径才可用；feed 不可用时按未核实处理。
+    """
+    for source in feeds:
+        if source.get('name')!=mapping['publisher']:
+            continue
+        try:
+            raw,final=client.get(source['url'],deadline=deadline)
+            require(normalize_url(final)==normalize_url(source['url']),'official feed redirected')
+            rows=parse_feed(raw,source,lambda *args: None)
+        except (ValueError,KeyError,TypeError,UnicodeError,OverflowError):
+            continue
+        for row in rows:
+            if same_page(row['sourceUrl'],mapping['url']) and mapping['originalEvidence'] in row['title']:
+                return True
+    return False
+
+
+def verify_original(client,article,mapping,now,review,deadline=None,feeds=None):
+    """Curated mapping path: article evidence plus official-page evidence, no citation required.
+
+    Curation owns publisher identity and event page choice; the run only re-confirms that
+    both pages still carry their evidence text, so a rotted or mis-curated mapping falls
+    back to unverified instead of shipping a wrong first-party link. When the official
+    page itself is not fetchable, the publisher's own official feed supplies the second
+    piece of evidence instead.
+    """
     if not mapping:
         return None,None,None
     try:
         require(set(mapping)=={'url','publisher','articleEvidence','originalEvidence','eventSpecific'},'original mapping fields')
         safe_url(mapping['url']); require(mapping['publisher'] and mapping['articleEvidence'] and mapping['originalEvidence'],'original evidence empty')
-        raw,final=client.get(article['sourceUrl'])
+        require(mapping['eventSpecific'] is True,'original mapping must be event-specific')
+        require(urlsplit(mapping['url']).path.strip('/'),'original mapping must not be a homepage')
+        raw,final=client.get(article['sourceUrl'],deadline=deadline)
         require(normalize_url(final)==normalize_url(article['sourceUrl']),'article redirected')
         tree=Tree(decode(raw)).root
-        linked=any(normalize_url(urljoin(final,n.attrs['href']))==normalize_url(mapping['url']) for n in tree.find(lambda n:n.tag=='a' and n.attrs.get('href','').startswith(('https://','http://','/'))))
-        require(linked or normalize_url(final)==normalize_url(mapping['url']),'original URL not cited by article')
         require(mapping['articleEvidence'] in ' '.join(tree.text().split()),'article event evidence changed')
-        original,final=client.get(mapping['url'])
-        require(normalize_url(final)==normalize_url(mapping['url']),'original redirected')
-        require(mapping['originalEvidence'] in plain(decode(original)),'official event evidence changed')
-        return mapping['publisher'],mapping['url'],now
     except (ValueError,UnicodeError) as exc:
         review('news-original',digest(article['sourceUrl']),str(exc),dict(sourceUrl=article['sourceUrl']))
         return None,None,None
+    try:
+        original,final=client.get(mapping['url'],deadline=deadline)
+    except (ValueError,UnicodeError) as exc:
+        if feeds and verify_original_via_feed(client,mapping,feeds,deadline):
+            return mapping['publisher'],mapping['url'],now
+        review('news-original',digest(article['sourceUrl']),str(exc),dict(sourceUrl=article['sourceUrl']))
+        return None,None,None
+    try:
+        require(normalize_url(final)==normalize_url(mapping['url']),'original redirected')
+        require(mapping['originalEvidence'] in plain(decode(original)),'official event evidence changed')
+    except (ValueError,UnicodeError) as exc:
+        review('news-original',digest(article['sourceUrl']),str(exc),dict(sourceUrl=article['sourceUrl']))
+        return None,None,None
+    return mapping['publisher'],mapping['url'],now
+
+
+TAVILY_URL='https://api.tavily.com/search'
+
+
+def robots_denies_all(text):
+    """最小 robots 解析：仅当 `User-agent: *`（或未声明分组）组里出现 `Disallow: /` 才算整站拒绝。
+
+    GitHub 等站点会给特定爬虫单独写 `Disallow: /`，不能按全文粗暴匹配。
+    """
+    group=''
+    for raw in text.splitlines():
+        line=raw.split('#',1)[0].strip()
+        if not line:
+            continue
+        key,_,value=line.partition(':')
+        key=key.strip().lower(); value=value.strip()
+        if key=='user-agent':
+            group=value.lower()
+        elif key=='disallow' and group in ('*','') and value=='/':
+            return True
+    return False
+
+
+def host_blocks_crawling(client,url,cached,deadline=None):
+    """候选页的 robots 门禁：整站拒绝即不抓（结果按主机缓存；无 robots.txt 按不阻断处理）。
+
+    用于不受来源准入约束的候选（正文自引 + 搜索候选），与来源准入的既有做法一致。
+    """
+    parts=urlsplit(url); host=(parts.hostname or '').lower()
+    if host in cached:
+        return cached[host]
+    try:
+        raw,_=client.get(parts.scheme+'://'+host+'/robots.txt',deadline=deadline)
+        blocked=robots_denies_all(decode(raw))
+    except (ValueError,UnicodeError):
+        blocked=False
+    cached[host]=blocked
+    return blocked
+
+
+def search_official_candidates(client,key,query,cached,now,review):
+    """Tavily 免费档搜索（2026-09-24 用户拍板）：只做候选发现，一手判定仍在白名单+证据链。
+
+    结果按查询缓存于 `state/news-search-cache.json`，同一标题不重复花费额度；请求失败不写缓存。
+    """
+    if query in cached:
+        return cached[query]
+    try:
+        body=dict(api_key=key.strip(),query=query,max_results=5,search_depth='basic')
+        payload=json.loads(client.post(TAVILY_URL,body))
+        require(isinstance(payload,dict),'search response malformed')
+        rows=payload.get('results')
+        require(isinstance(rows,list),'search results missing')
+        urls=[]
+        for row in rows:
+            if isinstance(row,dict) and isinstance(row.get('url'),str):
+                urls.append(row['url'])
+        cached[query]=urls
+        return urls
+    except (ValueError,KeyError,TypeError,UnicodeError) as exc:
+        review('news-search',digest(query),'web search failed: '+str(exc),{})
+        return []
+
+
+def resolve_original(client,article,originals,domains,now,review,deadline,feeds=None,orgs=None,search=None,search_budget=None,robots=None):
+    """Attach a verified first-party link to a media item; unverified stays `None`.
+
+    Path one is the curated `editorial/news-originals.json` mapping (official-page fetch
+    falls back to the publisher's own official feed when the page blocks our UA). Path two
+    reads the article page itself and verifies each allowlisted first-party link it cites
+    against the run-time evidence test. Path three (optional, editorial key) asks the web
+    search API for the event and verifies whatever allowlisted server-rendered page comes
+    back. Candidate hosts must pass the minimal robots gate; a failed candidate only means
+    this item stays unverified.
+    """
+    publisher,url,verified=verify_original(client,article,originals.get(digest(article['sourceUrl'])),now,review,deadline,feeds)
+    if url:
+        return publisher,url,verified
+    if not domains and not orgs:
+        return None,None,None
+    tokens=evidence_tokens(article['title'])
+    if not tokens:
+        return None,None,None
+    try:
+        raw,final=client.get(article['sourceUrl'],deadline=deadline)
+        require(normalize_url(final)==normalize_url(article['sourceUrl']),'article redirected')
+    except (ValueError,UnicodeError):
+        return None,None,None
+    robots=robots if robots is not None else {}
+    for url,publisher in extract_official_links(decode(raw),final,domains,orgs):
+        if host_blocks_crawling(client,url,robots,deadline):
+            continue
+        try:
+            return verify_official_page(client,url,publisher,tokens,now,deadline)
+        except (ValueError,UnicodeError):
+            continue  # 普通被拒不进复核队列：多数链接本就该失败，常态不是异常。
+    if search and search_budget and search_budget[0]>0:
+        search_budget[0]-=1
+        for candidate in search(article['title']):
+            if host_blocks_crawling(client,candidate,robots,deadline):
+                continue
+            publisher=publisher_for(candidate,domains,orgs)
+            if not publisher:
+                continue
+            try:
+                return verify_official_page(client,candidate,publisher,tokens,now,deadline)
+            except (ValueError,UnicodeError):
+                continue
+    return None,None,None
 
 
 def aibase_article(raw,url,source):
@@ -1380,7 +1629,8 @@ def fill_news_summaries(client,items,summarize,limit=40):
 
 
 def collect_news(client,sources,originals,old,now,guard,review,translate=None,summarize=None,
-                 window_seconds=72*3600,backfill=False,feature=None,exclude=None):
+                 window_seconds=72*3600,backfill=False,feature=None,exclude=None,domains=None,verify_limit=40,
+                 orgs=None,search=None,search_limit=20,robots=None):
     """Official-first news collection.
 
     Items accumulate forever in the published file: `addedAt` marks admission and the
@@ -1471,6 +1721,9 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
         if pending:
             machine=translate(pending)
     items=[]
+    verify_budget=[verify_limit]; verify_deadline=time.monotonic()+240
+    verify_feeds=[source for source in sources if source.get('official') is True]
+    search_budget=[search_limit if search else 0]
     for row,official,source in candidates:
         identity=digest(row['sourceUrl'])
         title=row['title']; originalTitle=None; translatedAt=None; summary=None; lang='zh'
@@ -1490,8 +1743,11 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             continue
         if official:
             publisher=source['name']; original=row['sourceUrl']; verified=now
+        elif verify_budget[0]>0 and time.monotonic()<verify_deadline:
+            verify_budget[0]-=1
+            publisher,original,verified=resolve_original(client,row,originals,domains,now,review,verify_deadline,verify_feeds,orgs,search,search_budget,robots)
         else:
-            publisher,original,verified=verify_original(client,row,originals.get(identity),now,review)
+            publisher,original,verified=None,None,None
         added=row['publishedAt'] if backfill else now
         items.append(dict(row,id=identity,title=title,originalTitle=originalTitle,translatedAt=translatedAt,
                           summary=summary,lang=lang,originalSource=publisher,originalUrl=original,
@@ -1543,6 +1799,44 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
         if exclude and item['id'] in exclude:
             item['featured']=None
     return dict(dataUpdatedAt=now,items=merged)
+
+
+def reverify_news_items(client,file,originals,domains,now,review,limit=40,feeds=None,orgs=None,search=None,search_limit=40,robots=None):
+    """One-off backfill for stored media items under the 2026-09-24 verification口径.
+
+    Admitted items never re-enter `collect_news`, so a later口径 change cannot reach
+    them; this pass re-resolves a first-party link for items that still carry none, plus
+    items whose curated mapping now points somewhere else, and touches `dataUpdatedAt`
+    only when at least one item changed. Items whose event has no findable first-party
+    page stay unverified.
+    """
+    items=copy.deepcopy(file['items']); changed=0; examined=0
+    deadline=time.monotonic()+max(240,limit*6)
+    search_budget=[search_limit if search else 0]
+    for item in items:
+        mapping=originals.get(item['id'])
+        # 官方直采条目（originalUrl 即本站来源）不重查；自动核实（无映射）的媒体条目每轮重查，
+        # 证据不再成立就撤销；映射条目归编辑所有，仅在映射 URL 变更时重查。
+        if item['originalUrl'] is not None:
+            if item['originalUrl']==item['sourceUrl']:
+                continue
+            if mapping and mapping.get('url')==item['originalUrl']:
+                continue
+        if examined>=limit or time.monotonic()>deadline:
+            break
+        examined+=1
+        publisher,url,verified=resolve_original(client,item,originals,domains,now,review,deadline,feeds,orgs,search,search_budget,robots)
+        if url and url!=item['originalUrl']:
+            item['originalSource']=publisher; item['originalUrl']=url
+            item['originalVerifiedAt']=verified; item['url']=url
+            changed+=1
+        elif not url and item['originalUrl'] is not None and not mapping:
+            item['originalSource']=None; item['originalUrl']=None
+            item['originalVerifiedAt']=None; item['url']=item['sourceUrl']
+            changed+=1
+    if not changed:
+        return None
+    return dict(dataUpdatedAt=now,items=items)
 
 
 def reclassify_news_items(file,report=None):
