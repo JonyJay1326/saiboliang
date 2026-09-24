@@ -7,12 +7,18 @@
    ② 强度只从 CSS 变量读（--sea-count / --sea-motion），皮肤档只改变量、不改 DOM；
    ③ prefers-reduced-motion、离屏、切后台一律不跑循环（只画一帧静止等价物）；
    ④ DPR 上限 1.5；窄屏 / 触屏按设备分档降级；
-   ⑤ 太极只绑已有交互：周 / 月切换 = 两仪互易（转半圈），不新增状态位。 */
+   ⑤ 太极只绑已有交互：周 / 月切换 = 两仪互易（转半圈），不新增状态位；
+   ⑥ 切榜爆散（2026-09-24 用户定：参考 `interactive-taiji-particle-animation` 的「先打散再聚合」）：
+      每颗粒子按自己的幅度沿径向炸开（掺一点切向旋），包络与转半圈同长（1.2s）、
+      起于 0 终于 0——散开与聚合都是确定性的，收束时精确回到太极原位。 */
 
 const TAU = Math.PI * 2;
 const HEAD_K = 0.5; /* 鱼头圆心距 = R × 0.5 */
 const EYE_K = 0.095; /* 鱼眼半径 = R × 0.095 */
 const SIZE_K = 1.6; /* 粒子尺寸（2026-09-20 定稿） */
+const SPIN_DUR = 1200; /* 两仪互易时长（ms）；爆散包络同长 */
+const BURST_SWIRL = 0.25; /* 爆散切向分量：散开时整体带一点旋（参考稿量级） */
+const SPREAD_K = 0.04; /* 静置散布：--sea-spread = 1 时每颗最远散到 0.04R（见 site.css 调参台） */
 const GOLD = '#e8b73a';
 const CYAN = '#3fd9c0';
 
@@ -119,11 +125,22 @@ class StarField {
     this.spinFrom = 0;
     this.spinTo = 0;
     this.spinT = 1;
+    this.flipDir = 1; /* 最近一次互易方向：爆散旋向跟它走 */
+    this.burstT = 1; /* 爆散包络进度（0→1），1 = 静止 */
+    this.burstEnv = 0; /* 当前包络值（0..1）；名字避开 burst() 方法，实例属性会盖住原型方法 */
+    this.burstPow = 1; /* 幅度倍率（1 = 参考稿量级） */
+    this.burstDir = 1;
     this.frame = 0;
     this.running = false;
     this.visible = false;
     this.motion = opts.motion;
     this.padY = opts.padY || 0;
+    this.sizeK = opts.size || 1; /* 粒子尺寸倍率（调参台 --sea-size，可热改） */
+    this.dead = false; /* destroy 后拒绝调参重读，免得把粒子重新摆回来 */
+    /* 调参台缺省值兜底（opts 由 mount 从 CSS 变量读出；变量缺失时与 site.css 的默认同值） */
+    if (opts.damp == null) opts.damp = 0.9;
+    if (opts.burst == null) opts.burst = 0.85;
+    if (opts.spread == null) opts.spread = 1;
 
     this.ro = new ResizeObserver(() => {
       clearTimeout(this.rt);
@@ -170,6 +187,21 @@ class StarField {
       const tipK = sp.tp == null ? 1 : sp.tp;
       const tipG = 0.58 + 0.42 * tipK;
       const r0 = (t.r[0] + Math.random() * (t.r[1] - t.r[0])) * grow * tipG;
+      /* 爆散方向 = 原位径向（参考稿）；原位在圆心上的概率极低，兜底给随机角 */
+      const d0 = Math.hypot(sp.x, sp.y);
+      let ux;
+      let uy;
+      if (d0 > 0.001) {
+        ux = sp.x / d0;
+        uy = sp.y / d0;
+      } else {
+        const a0 = Math.random() * TAU;
+        ux = Math.cos(a0);
+        uy = Math.sin(a0);
+      }
+      /* 静置散布方向（调参台 --sea-spread 的乘子；固定随机，逐帧只乘系数、不重排） */
+      const sA = Math.random() * TAU;
+      const sD = Math.pow(Math.random(), 1.5);
       parts.push({
         bx: sp.x,
         by: sp.y,
@@ -178,11 +210,20 @@ class StarField {
         vx: 0,
         vy: 0,
         lobe: sp.white ? 0 : 1,
-        r: r0 * SIZE_K,
+        r0,
+        r: r0 * SIZE_K * this.sizeK,
         a: (t.a[0] + Math.random() * (t.a[1] - t.a[0])) * (0.7 + 0.3 * tipK),
         ph: Math.random() * TAU,
         sp: 0.5 + Math.random() * 0.9,
         wob: t.w,
+        ux,
+        uy,
+        /* 爆散幅度：多数粒子小、少数飞得远，外圈再多一点（参考稿 bk） */
+        bk: 0.07 + 0.34 * Math.pow(Math.random(), 1.4) + (d0 > R * 0.9 ? 0.06 : 0),
+        sox: Math.cos(sA) * sD,
+        soy: Math.sin(sA) * sD,
+        ox: 0,
+        oy: 0,
       });
     };
 
@@ -202,21 +243,43 @@ class StarField {
 
   step(dt) {
     if (this.spinT < 1) {
-      this.spinT = Math.min(1, this.spinT + dt / 1200);
+      this.spinT = Math.min(1, this.spinT + dt / SPIN_DUR);
       this.spin = this.spinFrom + (this.spinTo - this.spinFrom) * easeInOut(this.spinT);
+    }
+    /* 爆散包络（先打散再聚合）：与转半圈同长，起止都归 0（参考稿 sin(π p^0.7)² ） */
+    if (this.burstT < 1) {
+      this.burstT = Math.min(1, this.burstT + dt / SPIN_DUR);
+      const s = Math.sin(Math.PI * Math.pow(this.burstT, 0.7));
+      this.burstEnv = s * s;
+    } else if (this.burstEnv !== 0) {
+      this.burstEnv = 0;
     }
     const cos = Math.cos(this.spin);
     const sin = Math.sin(this.spin);
     const { cx, cy, parts } = this;
     const infl = Math.max(70, this.R * this.opts.influence);
     const step = Math.max(0.25, dt / 16.7);
+    const bs = this.burstEnv * this.R * this.burstPow;
+    const swirl = BURST_SWIRL * this.burstDir;
+    const spreadPx = (this.opts.spread || 0) * this.R * SPREAD_K; /* 静置散布（热改即生效） */
 
     for (const p of parts) {
       p.ph += 0.0022 * p.sp * dt;
-      const bx = p.bx + Math.cos(p.ph) * p.wob;
-      const by = p.by + Math.sin(p.ph * 1.27) * p.wob;
+      const bx = p.bx + Math.cos(p.ph) * p.wob + p.sox * spreadPx;
+      const by = p.by + Math.sin(p.ph * 1.27) * p.wob + p.soy * spreadPx;
       const tx = cx + bx * cos - by * sin;
       const ty = cy + bx * sin + by * cos;
+      /* 爆散偏移是画位上的世界系加量（物理仍围绕原位跑，收束即精确归位） */
+      if (bs > 0) {
+        const b = bs * p.bk;
+        const lx = p.ux * b - p.uy * b * swirl;
+        const ly = p.uy * b + p.ux * b * swirl;
+        p.ox = lx * cos - ly * sin;
+        p.oy = lx * sin + ly * cos;
+      } else {
+        p.ox = 0;
+        p.oy = 0;
+      }
       if (dt === 0) {
         p.x = tx;
         p.y = ty;
@@ -236,8 +299,8 @@ class StarField {
           p.vy += (dy / d) * f;
         }
       }
-      p.vx *= 0.9;
-      p.vy *= 0.9;
+      p.vx *= this.opts.damp;
+      p.vy *= this.opts.damp;
       p.x += p.vx;
       p.y += p.vy;
     }
@@ -262,33 +325,61 @@ class StarField {
       [[], [], []],
     ];
     const heroes = [];
+    /* 顺带量一下里画布边最近的一颗：太近才上边缘软收（4 条渐隐带），远处不花这份钱 */
+    const edge = Math.max(10, this.padY * 0.7);
+    let nearEdge = Infinity;
     for (const p of this.parts) {
       buckets[p.lobe][p.a < 0.4 ? 0 : p.a < 0.65 ? 1 : 2].push(p);
       if (p.hero) heroes.push(p);
+      const x = p.x + p.ox;
+      const y = p.y + p.oy;
+      const d = Math.min(x, W - x, y, H - y);
+      if (d < nearEdge) nearEdge = d;
     }
     const cols = [GOLD, CYAN];
     const alphas = [0.26, 0.72, 0.88]; /* 中档只覆盖两圈外环，调它即调外圈整体亮度 */
+    const burstFade = 1 - 0.25 * this.burstEnv; /* 炸开时整片略淡（参考稿口径） */
     for (let lobe = 0; lobe < 2; lobe++) {
       for (let t = 0; t < 3; t++) {
         const arr = buckets[lobe][t];
         if (!arr.length) continue;
-        ctx.globalAlpha = alphas[t];
+        ctx.globalAlpha = alphas[t] * burstFade;
         ctx.fillStyle = cols[lobe];
         ctx.beginPath();
         for (const p of arr) {
-          ctx.moveTo(p.x + p.r, p.y);
-          ctx.arc(p.x, p.y, p.r, 0, TAU);
+          ctx.moveTo(p.x + p.ox + p.r, p.y + p.oy);
+          ctx.arc(p.x + p.ox, p.y + p.oy, p.r, 0, TAU);
         }
         ctx.fill();
       }
     }
     ctx.globalCompositeOperation = 'lighter';
     for (const p of heroes) {
-      ctx.globalAlpha = 0.09;
+      ctx.globalAlpha = 0.09 * burstFade;
       ctx.fillStyle = cols[p.lobe];
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r * 3.4, 0, TAU);
+      ctx.arc(p.x + p.ox, p.y + p.oy, p.r * 3.4, 0, TAU);
       ctx.fill();
+    }
+    /* 画布边缘软收（2026-09-24 用户反馈「放大最大时超出边界」）：
+       外冲到画布边的粒子在这里柔和消失，不出硬切；渐隐带 = 0.7×pad（pad 调大即离边更远）。
+       只在真有粒子贴近边时开（destination-out 擦掉四边一条渐隐带的 alpha），静止时零开销。 */
+    if (nearEdge < edge) {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.globalAlpha = 1;
+      const bands = [
+        [0, 0, W, edge, 0, 0, 0, edge],
+        [0, H - edge, W, edge, 0, H, 0, H - edge],
+        [0, 0, edge, H, 0, 0, edge, 0],
+        [W - edge, 0, edge, H, W, 0, W - edge, 0],
+      ];
+      for (const [bx, by, bw, bh, gx0, gy0, gx1, gy1] of bands) {
+        const g = ctx.createLinearGradient(gx0, gy0, gx1, gy1);
+        g.addColorStop(0, 'rgba(0,0,0,1)');
+        g.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = g;
+        ctx.fillRect(bx, by, bw, bh);
+      }
     }
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
@@ -321,8 +412,9 @@ class StarField {
   flip(direction = 1) {
     /* 两仪互易：按目标榜位定方向（2026-09-23 用户定）——周榜 = 逆时针、月榜 = 顺时针，
        与同页星历拨盘的双向转动（pos 0↔1 来回）一致。 */
+    this.flipDir = direction < 0 ? -1 : 1;
     this.spinFrom = this.spin;
-    this.spinTo = this.spin + Math.PI * (direction < 0 ? -1 : 1);
+    this.spinTo = this.spin + Math.PI * this.flipDir;
     this.spinT = 0;
     if (!this.running) {
       this.spinT = 1;
@@ -331,20 +423,54 @@ class StarField {
     }
   }
 
-  burst(power = 2) {
-    const { cx, cy, parts } = this;
-    for (const p of parts) {
-      const dx = p.x - cx;
-      const dy = p.y - cy;
-      const d = Math.hypot(dx, dy) || 1;
-      const f = (0.5 + Math.random()) * power;
-      p.vx += (dx / d) * f;
-      p.vy += (dy / d) * f;
+  /* 切榜爆散（2026-09-24）：确定性包络，散开—聚合都回到太极原位，旋向跟互易方向；
+     缺省幅度取调参台的 --sea-burst（1 = 参考稿量级）。只跑循环时演（静止单帧不演）。 */
+  burst(power) {
+    if (!this.running) return;
+    this.burstPow = power == null ? this.opts.burst : power; /* 0 = 关掉爆散（调参台 --sea-burst: 0） */
+    this.burstDir = this.flipDir;
+    this.burstT = 0;
+  }
+
+  /* 调参台重读（mount 每 0.5s 调一次；site.css 见 [data-star-sea] 那组变量）：
+     count / fit / padY 变了要重摆（走 resize，等价 resize + re-seed）；
+     spread / size / burst / damp / motion 是纯系数或开关，下一帧就生效。返回是否有变化。 */
+  applyKnobs(k, force = false) {
+    if (this.dead) return false;
+    const o = this.opts;
+    const relayout = force || k.count !== o.count || k.fit !== o.fit || k.padY !== o.padY;
+    const changed =
+      relayout ||
+      k.spread !== o.spread ||
+      k.size !== o.size ||
+      k.burst !== o.burst ||
+      k.damp !== o.damp ||
+      k.motion !== o.motion;
+    if (!changed) return false;
+    o.count = k.count;
+    o.fit = k.fit;
+    o.padY = k.padY;
+    o.spread = k.spread;
+    o.burst = k.burst;
+    o.damp = k.damp;
+    o.motion = k.motion;
+    /* 这几个在构造函数里各存了一份实例字段（seed / resize / start 读的是字段），一并跟上 */
+    this.count = k.count;
+    this.padY = k.padY;
+    this.motion = k.motion;
+    if (relayout) this.resize(); /* resize 内含 seed + paint(0) */
+    if (k.size !== this.sizeK) {
+      this.sizeK = k.size;
+      for (const p of this.parts) p.r = p.r0 * SIZE_K * k.size;
     }
-    if (!this.running) this.paint(0);
+    if (!o.motion) this.stop(); /* 皮肤档把动关掉：回到静止单帧 */
+    else if (this.visible && !this.running) this.start();
+    else if (!this.running) this.paint(0);
+    return true;
   }
 
   destroy() {
+    this.dead = true;
     this.stop();
     this.ro.disconnect();
     this.parts = [];
@@ -368,12 +494,27 @@ export function mount() {
     return { release() {} };
   }
 
-  const style = getComputedStyle(host);
-  const want = Number.parseInt(style.getPropertyValue('--sea-count'), 10);
-  const motion = style.getPropertyValue('--sea-motion').trim() !== '0';
-  /* 画布盒上下溢出的余量（与 CSS 同一支 --sea-pad）：只放宽粒子活动范围，太极尺寸不变 */
-  const padY = Number.parseFloat(style.getPropertyValue('--sea-pad')) || 0;
-  const count = Math.min(Number.isFinite(want) ? want : deviceCap(), deviceCap());
+  /* 星海调参台（site.css [data-star-sea]）：引擎只读这组变量，皮肤档只改变量、JS 不判档（§10.1 约束 #5）。
+     读一次 + 每 0.5s 重读（见下面的 tuneTimer）——devtools 里改完 ≤0.5s 见效，不用刷新。 */
+  const readKnobs = () => {
+    const style = getComputedStyle(host);
+    const num = (name, fallback) => {
+      const v = Number.parseFloat(style.getPropertyValue(name));
+      return Number.isFinite(v) ? v : fallback;
+    };
+    const want = Number.parseInt(style.getPropertyValue('--sea-count'), 10);
+    return {
+      count: Math.min(Number.isFinite(want) ? want : deviceCap(), deviceCap()),
+      fit: num('--sea-fit', 0.46),
+      spread: num('--sea-spread', 1),
+      damp: num('--sea-damp', 0.9),
+      size: num('--sea-size', 1),
+      burst: num('--sea-burst', 0.85),
+      padY: num('--sea-pad', 0), /* 上下溢出余量：只放宽粒子活动范围，太极尺寸不变 */
+      motion: style.getPropertyValue('--sea-motion').trim() !== '0',
+    };
+  };
+  const knobs = readKnobs();
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   /* 三页图腾落位统一（2026-09-22）：星海铺满页头带，但太极中心对齐右侧器物位中心。
@@ -384,10 +525,14 @@ export function mount() {
   const plateW = probe ? probe.getBoundingClientRect().width : 0;
   const cx = bandW > 0 && plateW > 0 && plateW < bandW ? 1 - plateW / (2 * bandW) : 0.71;
   const field = new StarField(canvas, host, {
-    count,
-    motion,
-    padY,
-    fit: 0.46,
+    count: knobs.count,
+    motion: knobs.motion,
+    padY: knobs.padY,
+    fit: knobs.fit,
+    spread: knobs.spread,
+    damp: knobs.damp,
+    size: knobs.size,
+    burst: knobs.burst,
     cx,
     cy: 0.5,
     push: 0.45,
@@ -418,7 +563,7 @@ export function mount() {
     if (!btn || !btn.closest('[data-toggle]')) return;
     const tabs = btn.parentElement ? [...btn.parentElement.children] : [];
     field.flip(tabs.indexOf(btn) > 0 ? 1 : -1);
-    field.burst(2.2);
+    field.burst(); /* 幅度走调参台 --sea-burst */
   };
 
   let io = null;
@@ -451,11 +596,16 @@ export function mount() {
   document.addEventListener('visibilitychange', onVisibility);
   reduced.addEventListener?.('change', onReduced);
   if (!reduced.matches && field.visible) field.start();
+  /* 调参台轮询：改 CSS 变量（devtools / site.css）≤0.5s 落到引擎；后台标签不读、无变化不重画 */
+  const tuneTimer = setInterval(() => {
+    if (!document.hidden) field.applyKnobs(readKnobs());
+  }, 500);
   /* 引擎已绘出（首帧已画）：让页面收掉图腾区的 CSS 加载态（site.css「图腾区加载态」） */
   host.dataset.totem = 'ready';
 
   return {
     release() {
+      clearInterval(tuneTimer);
       io?.disconnect();
       document.removeEventListener('click', onToggle);
       document.removeEventListener('visibilitychange', onVisibility);
@@ -468,3 +618,4 @@ export function mount() {
 }
 
 export default mount;
+
