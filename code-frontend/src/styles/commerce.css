@@ -35,7 +35,6 @@
 .preview[data-kind="plans"] .preview__panel { max-width: 68rem; }
 .preview__bar { align-items: center; gap: .7rem; padding: .7rem 1.3rem; border-bottom: 1px solid var(--line); }
 .preview__label { margin-right: auto; font-size: 12px; color: var(--gold); letter-spacing: .1em; }
-.preview__page { color: var(--dim); font-size: 12px; padding: .6rem .3rem; }
 .preview__close { min-height: 40px; box-shadow: none; }
 .preview__scroll { padding: 1.6rem 1.8rem; }
 .preview__content .plan-detail, .preview__content .ticket--detail { padding: 0; border: 0; background: none; box-shadow: none; }
@@ -59,7 +58,6 @@
 @media (max-width: 560px) {
   .preview__bar { flex-wrap: wrap; gap: .4rem; padding: max(.5rem, env(safe-area-inset-top)) .8rem .5rem; }
   .preview__label { letter-spacing: .02em; }
-  .preview__page { font-size: 12px; }
   .preview__scroll { padding: 1.2rem; }
   .preview__dock { padding-inline: 1.2rem; }
   .preview__dock .plan-detail__foot { gap: .5rem; }

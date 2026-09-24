@@ -300,6 +300,9 @@ ul.cards {
   display: grid;
   /* min(20rem, 100%)：容器窄于 20rem 时轨道不再顶破容器（320px 屏原会横向溢出，2026-09-21 实测） */
   grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+  /* 票卡墙口径（frontend-spec.md §5.1 卡片等高）：自动高度的网格里 fr 行会互相对齐，
+     1fr 因此让每一行都拉高到「整组最高的一行」——票卡内容结构一致、差幅只有一行标题（≤28px），
+     全墙同高正是想要的。**套餐卡不同**：档位数差异大，全组对齐会空掉半张卡，见 .cards--plans。 */
   grid-auto-rows: 1fr;
   gap: 1rem;
   margin: 0;
@@ -325,6 +328,16 @@ ul.cards--home {
    这里与站点段落节奏对齐取 3rem（相邻兄弟外边距合并后即 3rem），只改粮票列表页这一处。 */
 ul.cards--wall {
   margin-top: 3rem;
+}
+
+/* 粮市套餐卡：行内等高，但不再跨行齐高（2026-09-24 用户定）。
+   套餐档位数差异大（3 档 ~ 8 档），继承票卡墙的 grid-auto-rows: 1fr 会让每一行都对齐到
+   整组最高的那一行（实测第二行百度千帆 8 档 = 498px），第一行四张卡全被拉到 498px ——
+   GLM 卡内容只有 266px，卡内空掉近一半（2026-09-24 用户反馈「空了太多了」）。
+   改 auto 后行高只取本行最高卡：第一行 498→402px、第三行 498→350px，整页少滚约 244px；
+   代价是同排里档位少的卡（GLM、MiniMax）仍留一段空白——这是「同排同高」的必要代价。 */
+ul.cards--plans {
+  grid-auto-rows: auto;
 }
 
 ul.cards > li > .ticket,
@@ -3959,7 +3972,11 @@ td:first-child {
   letter-spacing: .08em;
 }
 
-.tip-form > p > [id^="err-"] {
+/* 错误位常驻一行（.tip-err 空槽）：文案显形时落在预留位里，
+   字段高度不随错误出现而变，双栏对齐与后续行都不被挤动。
+   槽高 = .stn-note 单行行高，故显形与留空同高。 */
+.tip-form > p > .tip-err {
+  min-height: 1.85em;
   color: #f08a7e;
 }
 
@@ -3980,18 +3997,27 @@ td:first-child {
 
 #ts-widget:empty { display: none; }
 
-#ts-widget { min-height: 65px; }
+/* 人机校验（与联系方式并排，网格走 align-items: end）：
+   CF 组件的 iframe 是行内级，容器会多出一截基线以下的降部空档（实测 73.39px = 65 + 8.39），
+   底对齐时被这截空档顶上去，组件看上去比联系方式输入框高一行、对不齐。
+   字号/行高归零即消掉这截空档，容器回到组件真实高度 65px —— 组件底边与输入框底边齐平。 */
+#ts-widget {
+  min-height: 65px;
+  font-size: 0;
+  line-height: 0;
+}
 
 #ts-hint { margin: 0; }
 
+/* 状态行常驻一行：空态也占位，避免「正在递送…」等提示出现时把递交键挤下去。
+   line-height 取 1.4 与 min-height 同值，故单行文案落下时行高与空位严丝合缝。 */
 .tip-form #tip-status {
   min-height: 1.4em;
   font-size: 13px;
+  line-height: 1.4;
   letter-spacing: .1em;
   color: var(--cyan);
 }
-
-.tip-form #tip-status:empty { display: none; }
 
 .tip-form > p:last-child {
   display: flex;

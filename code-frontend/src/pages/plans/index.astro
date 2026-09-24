@@ -65,7 +65,7 @@ const groups = [
       groups.map((group) => (
         <section data-toggle-panel={group.key} hidden={group.key !== DEFAULT}>
           <h2>{group.heading}</h2>
-          <ul class="cards">
+          <ul class="cards cards--plans">
             {group.items.map((plan, i) => (
               <li>
                 <PlanCard plan={plan} index={i + 1} />

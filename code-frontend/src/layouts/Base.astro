@@ -461,7 +461,6 @@ const DEFAULT_SKIN = 'cyber';
             '<div class="preview__panel" tabindex="-1">' +
             '<div class="preview__bar">' +
             '<span class="preview__label">详情预览</span>' +
-            '<a class="preview__page" data-preview-page data-astro-reload>独立详情页 ↗</a>' +
             '<button type="button" class="preview__close" data-preview-close aria-label="关闭预览">' +
             '<span class="preview__close-x" aria-hidden="true">✕</span>关闭' +
             '</button>' +
@@ -632,7 +631,6 @@ const DEFAULT_SKIN = 'cyber';
           const kind = url.startsWith('/plans/') ? 'plans' : 'tickets';
           overlay.dataset.kind = kind;
           overlay.querySelector('.preview__label').textContent = kind === 'plans' ? '粮市 / 套餐档案' : '粮票 / 票面详情';
-          overlay.querySelector('[data-preview-page]').setAttribute('href', url);
           overlay.setAttribute('aria-label', kind === 'plans' ? '套餐详情' : '粮票详情');
           overlay.setAttribute('aria-busy', 'true');
           content.innerHTML = '<div class="preview__skeleton" aria-hidden="true"><i></i><i></i><i></i></div><p class="preview__loading" role="status">正在取件…</p>';
