@@ -25,18 +25,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "anthropics/claude-plugins-community",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
-      "sourceUrl": "https://github.com/anthropics/claude-plugins-community"
-    },
-    "id": "780022c031c248b69a837d53ba2b7b52f6971651ee2b2b8be12357d2c5b93f64",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "cursor/plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -121,18 +109,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "SnailSploit/Claude-Red",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
-      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
-    },
-    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-09-19T07:47:34Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "jiji262/douyin-downloader",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -188,18 +164,6 @@
       "sourceUrl": "https://github.com/coder/coder"
     },
     "id": "dac6480061235ffc59dee88ddbb37f9fdf03c8360d1cec00d9f99adce3cd913e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "jackfrued/Python-100-Days",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Python - 100天从新手到大师",
-      "sourceUrl": "https://github.com/jackfrued/Python-100-Days"
-    },
-    "id": "20ef6185856bcb9f809cc4be61657928d5e4cfb39c8f1a685693f2e0cd08379a",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -416,25 +380,50 @@
     "createdAt": "2026-09-23T15:28:02Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "64915a7612cca4d72714dfaba25bb23a9ad335664b35d5b2f82242956b3c0138",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "kind": "github-classification",
+    "objectId": "vectorize-io/hindsight",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "source": "AIBase"
+      "description": "Hindsight: Agent Memory That Learns",
+      "sourceUrl": "https://github.com/vectorize-io/hindsight"
     },
-    "id": "d68e59af1b78f1079326c813aff3bd5339efa9d2b998700e3f9731f55981d352",
+    "id": "8b843c7c27471fea702d37d63f13c2acbe10e3d91752ecd3fa84e406f6a71cee",
     "status": "pending",
-    "createdAt": "2026-09-24T03:48:13Z"
+    "createdAt": "2026-09-24T15:50:19Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
+    "kind": "github-classification",
+    "objectId": "ZuodaoTech/everyone-can-use-english",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
+      "description": "人人都能用英语",
+      "sourceUrl": "https://github.com/ZuodaoTech/everyone-can-use-english"
     },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "id": "3f93fe8c3f35e4095cfeaa74415cedb740e75f4c0d465ab193eb455d132b9370",
     "status": "pending",
-    "createdAt": "2026-09-24T08:32:19Z"
+    "createdAt": "2026-09-24T15:50:19Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hydra-db/hydradb",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "HydraDB - fast graph database on object storage",
+      "sourceUrl": "https://github.com/hydra-db/hydradb"
+    },
+    "id": "328d2c8d826b53fc3f42b1b61e636b8bddcefe7424191355b83cf7b9a067b250",
+    "status": "pending",
+    "createdAt": "2026-09-24T15:50:19Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "7663b51ef99ebb29ab6a7e62d427edd3e392b5aae6057cc6aa7d113b337a685a",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "6af8b13be2dacbb7a78152de2faed6d8a38dd75def22457fe92eafe433a3263a",
+    "status": "pending",
+    "createdAt": "2026-09-24T15:50:19Z"
   }
 ]

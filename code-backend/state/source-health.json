@@ -1,7 +1,7 @@
 {
   "tickets": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
-    "lastAttempt": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
+    "lastAttempt": "2026-09-24T15:50:19Z",
     "error": null,
     "configHash": "55ceaba7c0227d8092fd8f9663bdda1a1869c8348f2ed2ae95e5ea94a89f506a"
   },
@@ -16,22 +16,22 @@
     "count": 674
   },
   "github": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
-    "lastAttempt": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
+    "lastAttempt": "2026-09-24T15:50:19Z",
     "error": null,
     "configHash": "55ceaba7c0227d8092fd8f9663bdda1a1869c8348f2ed2ae95e5ea94a89f506a"
   },
   "github-weekly": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
-    "count": 176
+    "lastSuccess": "2026-09-24T15:50:19Z",
+    "count": 178
   },
   "github-monthly": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
-    "count": 196
+    "lastSuccess": "2026-09-24T15:50:19Z",
+    "count": 195
   },
   "news": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
-    "lastAttempt": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
+    "lastAttempt": "2026-09-24T15:50:19Z",
     "error": null,
     "configHash": "55ceaba7c0227d8092fd8f9663bdda1a1869c8348f2ed2ae95e5ea94a89f506a"
   },
@@ -40,7 +40,7 @@
     "count": 119
   },
   "qbit": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 10
   },
   "infoq": {
@@ -60,99 +60,99 @@
     "count": 60
   },
   "deepseek": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 5
   },
   "anthropic": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 10
   },
   "ernie": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 16
   },
   "zhipu-news": {
-    "lastSuccess": "2026-09-24T03:48:13Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 15
   },
   "tencent-announce": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 12
   },
   "meta": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 10
   },
   "hf-qwen": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 20
   },
   "hf-zai": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 20
   },
   "hf-moonshot": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 19
   },
   "hf-tencent": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 20
   },
   "hf-baidu": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 20
   },
   "hf-stepfun": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 20
   },
   "openai": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 1229
   },
   "google-ai": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 20
   },
   "deepmind": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 100
   },
   "github-changelog": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 10
   },
   "github-copilot": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 10
   },
   "nvidia": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 18
   },
   "microsoft-ai": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 10
   },
   "azure": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
-    "count": 10
+    "lastSuccess": "2026-09-24T15:50:19Z",
+    "count": 9
   },
   "alibaba-bailian": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 167
   },
   "tencent-tokenhub": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 7
   },
   "baidu-qianfan": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 165
   },
   "kimi-blog": {
-    "lastSuccess": "2026-09-24T08:32:19Z",
+    "lastSuccess": "2026-09-24T15:50:19Z",
     "count": 9
   }
 }

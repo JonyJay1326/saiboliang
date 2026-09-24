@@ -11,30 +11,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-21T17:06:12Z"
   },
-  "a4ae64181a9872478003d2f953d68a65ee5c543d7999371415745cc4db199489": {
-    "title": "5 家使用 NVIDIA AI 推动清洁能源的公司",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
-  "08ffdb24bebd9aa2ffda2f849b7e7af9dba92daa36ecb3bc96d64f49fd7ead95": {
-    "title": "数学与人工智能咨询小组",
-    "summary": "OpenAI 正与独立的数学与人工智能咨询小组合作，指导新兴 AI 成果的审查与沟通。",
-    "source": "deepseek-flash",
-    "at": "2026-09-22T08:37:23Z"
-  },
-  "8fe4474fdbb9c4c46a22f878515427114b676069cfc965f6786182578d7743d9": {
-    "title": "Higgsfield AI 借助 GPT-6 Astra 一天内推出新视频功能",
-    "summary": "借助 GPT-6 Astra，Higgsfield AI 让小企业更轻松地制作视频广告，并更快将新创意工具推向市场。",
-    "source": "deepseek-flash",
-    "at": "2026-09-22T08:37:23Z"
-  },
-  "10538c022345675d1abd4a83236ec639afd16c383bf12f43a3ea4520388033d1": {
-    "title": "为 AI 下一阶段制定标准",
-    "summary": "OpenAI 提出通往全球共享 AI 标准的路径，呼吁协调评估、报告与治理以提升安全性。",
-    "source": "deepseek-flash",
-    "at": "2026-09-22T08:37:23Z"
-  },
   "3822e53281df1dc0922def79e019abc9a4028d437550f2c8462c121a6c28be60": {
     "title": "弃用通知：全平台 CodeQL bundle",
     "summary": null,
@@ -196,5 +172,23 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-24T03:48:13Z"
+  },
+  "d1e7107e863f4f8a8586693db1559bf0dc2a5fe6e86ad119a1f4a2725e9a691e": {
+    "title": "开放科学如何帮助研究人员为下一次大流行做准备",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "508df2c327e989674eebe7c7ea66eb436a0dfd9258b992864af66ea98e1b3fc8": {
+    "title": "遏制混乱：《CONTROL Resonant》登陆 GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "dd3c176ae5526b3e632ac3d95cd7ef1c00cefe869b3423c58edb25d1a13c6f5e": {
+    "title": "GPT-6 Astra、Sol 和 Luna：用于 Microsoft Foundry 中的生产代理",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
   }
 }

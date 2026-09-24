@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-24T08:32:19Z",
+  "at": "2026-09-24T15:50:19Z",
   "success": [
     "tickets",
     "github",
@@ -10,5 +10,5 @@
     "models: daily sources already checked",
     "news-search: no TAVILY_API_KEY; cited/mapped links only"
   ],
-  "retired": 0
+  "retired": 5
 }

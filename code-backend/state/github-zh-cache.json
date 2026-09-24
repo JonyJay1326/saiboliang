@@ -1,9 +1,4 @@
 {
-  "multimodal-art-projection/YuE": {
-    "text": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
-    "source": "deepseek-flash",
-    "at": "2026-09-19T08:18:50Z"
-  },
   "weave-os/router": {
     "text": "面向智能体系统的模型路由器。在 50ms 内将每个提示路由到合适的模型。仅需更改端点即可降低成本 40-70%。",
     "source": "deepseek-flash",
@@ -26,11 +21,6 @@
   },
   "cline/cline": {
     "text": "可作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "decolua/9router": {
-    "text": "无限免费 AI 编码。通过 40+ 提供商将 Claude Code、Codex、Cursor、Cline、Copilot、Antigravity 连接到免费的 Claude/GPT/Gemini。自动回退，RTK 减少 40% token，永不触及限制。",
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
@@ -61,11 +51,6 @@
   },
   "TencentCloud/Octop": {
     "text": "更智能的自托管 AI 助手——多用户、多代理。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "jamiepine/voicebox": {
-    "text": "开源 AI 语音工作室。克隆、听写、创作。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -129,11 +114,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "chaitanyagiri/munder-difflin": {
-    "text": "本地多代理工具集，兼容你现有的 Claude Code、Codex 订阅，让你运行一个代理办公室",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "akitaonrails/ai-memory": {
     "text": "面向代理编码 CLI 的长期记忆解决方案，并便于在不同代理供应商之间交接",
     "source": "deepseek-flash",
@@ -146,11 +126,6 @@
   },
   "OpenWhispr/openwhispr": {
     "text": "语音转文字听写应用，支持本地（Nvidia Parakeet/Whisper）与云端模型（BYOK）。隐私优先，跨平台可用。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "marin-community/marin": {
-    "text": "用于基础模型研究与开发的开源框架。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -178,5 +153,35 @@
     "text": "增强版 ChatGPT 克隆：支持 Agents、MCP、Skills、DeepSeek、Anthropic、AWS、OpenAI、Responses API、Azure、Groq、o1、GPT-5、Mistral、OpenRouter、Vertex AI、Gemini、Artifacts、AI 模型切换、消息搜索、Code Interpreter、langchain、DALL-E-3、OpenAPI Actions、Functions、安全多用户认证、预设，开源可自托管。活跃",
     "source": "deepseek-flash",
     "at": "2026-09-24T03:48:13Z"
+  },
+  "BuilderIO/agent-native": {
+    "text": "用于构建智能体应用的框架",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "cactus-compute/needle": {
+    "text": "面向微型设备的自动化基础模型：2 比特，8-29 MB，可在手机、可穿戴设备、智能家居、机器人、汽车和微控制器上实现工具调用、结构化提取和嵌入。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "supermemoryai/supermemory": {
+    "text": "记忆与上下文引擎及应用，速度极快、可扩展，且可完全本地运行。面向 AI 时代的 Memory API。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "strands-agents/harness-sdk": {
+    "text": "构建智能体运行框架并端到端控制。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript，兼容任意模型与云。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "upscayl/upscayl": {
+    "text": "Upscayl - 面向 Linux、MacOS 和 Windows 的第一免费开源 AI 图像放大工具。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "JetBrains/go-modern-guidelines": {
+    "text": "帮助 AI 编程智能体编写现代 Go 代码",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
   }
 }
