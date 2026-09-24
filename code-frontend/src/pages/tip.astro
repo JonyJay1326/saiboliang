@@ -39,7 +39,7 @@ import PageIntro from '../components/PageIntro.astro';
             autocomplete="off"
             aria-describedby="err-title"
           />
-          <span id="err-title" class="stn-note" hidden></span>
+          <span class="stn-note tip-err"><span id="err-title" hidden></span></span>
         </p>
 
         <p>
@@ -54,7 +54,7 @@ import PageIntro from '../components/PageIntro.astro';
             placeholder="https://"
             aria-describedby="err-url"
           />
-          <span id="err-url" class="stn-note" hidden></span>
+          <span class="stn-note tip-err"><span id="err-url" hidden></span></span>
         </p>
 
         <p>
@@ -68,7 +68,7 @@ import PageIntro from '../components/PageIntro.astro';
             placeholder="在哪看到的？额度多少、怎么领、什么时候截止…"
             aria-describedby="err-detail"
           ></textarea>
-          <span id="err-detail" class="stn-note" hidden></span>
+          <span class="stn-note tip-err"><span id="err-detail" hidden></span></span>
         </p>
 
         <p>
@@ -81,7 +81,7 @@ import PageIntro from '../components/PageIntro.astro';
             autocomplete="off"
             placeholder="邮箱 / 微信 / QQ 均可，选填"
           />
-          <span class="stn-note tip-aside">仅站长可见 · 不公开</span>
+          <span class="stn-note tip-aside">仅站长可见 · 不公开 · 不用于其他用途</span>
         </p>
 
         {/* 蜜罐：人类恒空；.hp-field 为施工单标识，visually-hidden 复用站内既有隐藏类 */}
