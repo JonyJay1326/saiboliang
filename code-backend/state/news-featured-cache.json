@@ -65,5 +65,14 @@
       "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba"
     ],
     "at": "2026-09-24T08:32:19Z"
+  },
+  "2026-09-25": {
+    "signature": "09e57ede3583c5a89a9b3aa029735cf7f13d11b5b4f4c408f6aaa073c169abb0",
+    "picks": [
+      "34692efacd3b982a5758af6c9efc6d456b1cc87fb4d06f241903d801f376c977",
+      "9111ec33ec962e74818200f53f102e1d1a15303de588283fe4b7afcbb2d357d9",
+      "443300f133d68284fc243a7ca13a2dacca547b972df20c85ac804b60f8a75b93"
+    ],
+    "at": "2026-09-25T08:54:03Z"
   }
 }

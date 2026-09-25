@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-09-24T15:50:19Z",
+  "dataUpdatedAt": "2026-09-25T08:54:03Z",
   "items": [
+    {
+      "title": "Copilot Business 和 Enterprise 的 Copilot 功能默认启用",
+      "sourceUrl": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "publishedAt": "2026-09-25T03:13:23Z",
+      "source": "GitHub",
+      "summary": "GitHub 为企业与组织 Copilot 设置引入新的全局默认策略，默认启用已正式发布的 Copilot 功能。",
+      "id": "9111ec33ec962e74818200f53f102e1d1a15303de588283fe4b7afcbb2d357d9",
+      "originalTitle": "Default Enablement of Copilot Features for Copilot Business and Enterprise",
+      "translatedAt": "2026-09-25T08:54:03Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "originalVerifiedAt": "2026-09-25T08:54:03Z",
+      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-25T08:54:03Z",
+      "featured": true
+    },
+    {
+      "title": "推出 Gemini 3.8 Live 与 Live Avatar",
+      "sourceUrl": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+      "publishedAt": "2026-09-24T16:20:39Z",
+      "source": "Google DeepMind",
+      "summary": "Gemini 3.8 Live 与 Live Avatar 为 Gemini 对话式 AI 带来近实时视觉呈现。",
+      "id": "34692efacd3b982a5758af6c9efc6d456b1cc87fb4d06f241903d801f376c977",
+      "originalTitle": "Introducing Gemini 3.8 Live with Live Avatar",
+      "translatedAt": "2026-09-25T08:54:03Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+      "originalVerifiedAt": "2026-09-25T08:54:03Z",
+      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-25T08:54:03Z",
+      "featured": true
+    },
     {
       "title": "Meta靠自研Manus翻身！股价一夜暴涨11%，登顶苹果商店，增速反超ChatGPT",
       "sourceUrl": "https://www.qbitai.com/2026/09/496647.html",
@@ -75,6 +113,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-24T03:48:13Z",
+      "featured": true
+    },
+    {
+      "title": "设计智能体优先平台：当智能体完成工作时有何变化",
+      "sourceUrl": "https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/",
+      "publishedAt": "2026-09-23T15:00:00Z",
+      "source": "Microsoft Azure",
+      "summary": "介绍如何用 Microsoft Foundry 和 Azure Container Apps Sandboxes 为智能体设计平台。",
+      "id": "443300f133d68284fc243a7ca13a2dacca547b972df20c85ac804b60f8a75b93",
+      "originalTitle": "Designing agent-first platforms: What changes when agents do the work",
+      "translatedAt": "2026-09-25T08:54:03Z",
+      "lang": "en",
+      "originalSource": "Microsoft Azure",
+      "originalUrl": "https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/",
+      "originalVerifiedAt": "2026-09-25T08:54:03Z",
+      "url": "https://azure.microsoft.com/en-us/blog/designing-agent-first-platforms-what-changes-when-agents-do-the-work/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-25T08:54:03Z",
       "featured": true
     },
     {
@@ -1940,6 +1997,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-24T15:50:19Z",
-  "generatedAt": "2026-09-24T15:50:19Z"
+  "version": "2026-09-25T08:54:03Z",
+  "generatedAt": "2026-09-25T08:54:03Z"
 }

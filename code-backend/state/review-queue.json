@@ -217,18 +217,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "luolangaga/tubatools",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "图吧工具箱 CE",
-      "sourceUrl": "https://github.com/luolangaga/tubatools"
-    },
-    "id": "42d58e98acd1c3161e23b0444c77cd8510ba4554fb00893443e8708ffbe31ef4",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "2dust/v2rayN",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -308,18 +296,6 @@
     "id": "aebe120bccb679e26687b0e4b3cac59a05ef570f1ea811c3a5d20c2ac80d69ae",
     "status": "pending",
     "createdAt": "2026-09-22T08:37:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ahmedkhaleel2004/gitdiagram",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, simple, fast interactive diagrams for any GitHub repository",
-      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
-    },
-    "id": "ec04343ef90aa61173013e5aea9df24941613657c2bb38cdd4e46a74294fbd4d",
-    "status": "pending",
-    "createdAt": "2026-09-22T15:32:21Z"
   },
   {
     "kind": "github-classification",
@@ -425,5 +401,29 @@
     "id": "6af8b13be2dacbb7a78152de2faed6d8a38dd75def22457fe92eafe433a3263a",
     "status": "pending",
     "createdAt": "2026-09-24T15:50:19Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ahmedkhaleel2004/gitdiagram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free, simple, fast interactive diagrams and explainer videos for any GitHub repository",
+      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
+    },
+    "id": "de80f920d176ea994ef7f6d6d42862af0bebe91d4ef48ecfddd20aad67df2640",
+    "status": "pending",
+    "createdAt": "2026-09-25T08:54:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "harry7557558/spirula-studio",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
+      "sourceUrl": "https://github.com/harry7557558/spirula-studio"
+    },
+    "id": "3d32b047f58906eb05048215b057304582cb31df5a3ef5bc00feb0e7651d0e45",
+    "status": "pending",
+    "createdAt": "2026-09-25T08:54:03Z"
   }
 ]

@@ -1,17 +1,17 @@
 {
-  "63a2ad410a3d1bd18d9be639792bdf1a43e0c97949ca1e920e1d54a5dfac1282": {
-    "summary": "GitHub Copilot代码审查新增个人配置，覆盖更多Copilot计划，并提供企业级默认设置，现已全面可用。",
+  "9111ec33ec962e74818200f53f102e1d1a15303de588283fe4b7afcbb2d357d9": {
+    "summary": "GitHub 为企业与组织 Copilot 设置引入新的全局默认策略，默认启用已正式发布的 Copilot 功能。",
     "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
+    "at": "2026-09-25T08:54:03Z"
   },
-  "63e0251438a40139e79aeee04caee78a761474d1ca46b1e3556b8e8cc9b43e6b": {
-    "summary": "GitHub Copilot应用支持本地沙盒，限制文件、网络和凭据访问，可按项目为本地仓库和工作树会话配置。",
+  "34692efacd3b982a5758af6c9efc6d456b1cc87fb4d06f241903d801f376c977": {
+    "summary": "Gemini 3.8 Live 与 Live Avatar 为 Gemini 对话式 AI 带来近实时视觉呈现。",
     "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
+    "at": "2026-09-25T08:54:03Z"
   },
-  "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba": {
-    "summary": "Connect大会上推出Ray-Ban Meta Audio首款音频眼镜，并大幅扩展AI眼镜产品线。",
+  "443300f133d68284fc243a7ca13a2dacca547b972df20c85ac804b60f8a75b93": {
+    "summary": "介绍如何用 Microsoft Foundry 和 Azure Container Apps Sandboxes 为智能体设计平台。",
     "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
+    "at": "2026-09-25T08:54:03Z"
   }
 }
