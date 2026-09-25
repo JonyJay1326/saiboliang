@@ -37,5 +37,13 @@
   "nvidia.com": "NVIDIA",
   "azure.microsoft.com": "Microsoft Azure",
   "blogs.microsoft.com": "Microsoft",
+  "mistral.ai": "Mistral",
+  "ollama.com": "Ollama",
+  "together.ai": "Together AI",
+  "replicate.com": "Replicate",
+  "cursor.com": "Cursor",
+  "openrouter.ai": "OpenRouter",
+  "opencode.ai": "OpenCode",
+  "commandcode.ai": "Command Code",
   "developer.cloud.tencent.com": null
 }

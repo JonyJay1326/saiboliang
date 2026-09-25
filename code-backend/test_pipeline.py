@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, reclassify_news_items
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, reclassify_news_items
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -135,6 +135,18 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(news_event('Cooley 借助 ChatGPT 加速 IPO 工作', official=True), None)
         self.assertEqual(news_event('Cooley 如何用 ChatGPT 加速 IPO 工作', official=True), None)
         self.assertEqual(news_event('Anthropic 完成新一轮融资', official=True), None)
+        # 2026-09-25 补源：Ollama 定价、Mistral 产品、Together/Replicate 主题。
+        self.assertEqual(news_event('Ollama 的透明定价', official=True), 'price-or-free')
+        self.assertEqual(news_event("Ollama's transparent pricing", official=True), 'price-or-free')
+        self.assertEqual(news_event('Claude Desktop 现已支持 Ollama', official=True), 'major-update')
+        self.assertEqual(news_event('Mistral 与 Mozilla 把 AI 带进 Firefox', official=True), 'major-update')
+        self.assertEqual(news_event('Together AI 上线金丝雀发布，生产环境升级不停机', official=True), 'major-update')
+        self.assertEqual(news_event('Replicate 推出 FLUX 3 美学模型', official=True), 'model-release')
+        self.assertEqual(news_event('Cursor 发布 Projects 共享上下文', official=True), 'major-update')
+        self.assertEqual(news_event('OpenRouter Batch API 半价推理', official=True), 'price-or-free')
+        self.assertEqual(news_event('OpenRouter Batch API: half-price inference by bundling requests', official=True), 'price-or-free')
+        self.assertEqual(news_event('OpenCode 发布 v2.0.16', official=True), 'major-update')
+        self.assertEqual(news_event('Command Code 发布 v1.64.0', official=True), 'major-update')
         # 媒体源仍排除预告。
         self.assertEqual(news_event('GPT-5.5 将于 10 月发布，支持更长上下文'), None)
         # 已删除的非 AI 主题词不再放行。
@@ -646,6 +658,67 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(news_event(rows[0]['title'],official=True),'model-release')
         self.assertIsNone(news_event(rows[1]['title'],official=True))
         with self.assertRaises(ValueError): parse_kimi_blog(b'<html></html>',source)
+
+    def test_cursor_changelog_pairs_datetime_with_h1(self):
+        html=('''<html><a href="/changelog/projects"><time dateTime="2026-09-10T00:00:00.000Z">Sep 10</time></a>'''
+              '''<h1>Cursor Projects</h1>'''
+              '''<a href="/changelog/rollouts"><time dateTime="2026-09-23T00:00:00.000Z">Sep 23</time></a>'''
+              '''<h1>Rollouts and Security Review</h1>'''
+              '''<a href="/changelog/page/2"><time dateTime="2026-01-01T00:00:00.000Z">Jan</time></a><h1>Old</h1>'''
+              '''</html>''')
+        source=dict(id='cursor',name='Cursor',url='https://cursor.com/changelog',official=True,lang='en')
+        rows=parse_cursor_changelog(html.encode(),source)
+        self.assertEqual([r['title'] for r in rows],['Cursor Projects','Cursor Rollouts and Security Review'])
+        self.assertEqual(rows[0]['sourceUrl'],'https://cursor.com/changelog/projects')
+        self.assertEqual(rows[0]['publishedAt'],'2026-09-10T00:00:00Z')
+        with self.assertRaises(ValueError): parse_cursor_changelog(b'<html></html>',source)
+
+    def test_openrouter_announcements_filter_and_opencode_commandcode(self):
+        rss=('''<rss><channel>'''
+             '''<item><title>Batch API: half-price inference</title>'''
+             '''<link>https://openrouter.ai/blog/announcements/batch-api/</link>'''
+             '''<pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate></item>'''
+             '''<item><title>How to Use Jev</title>'''
+             '''<link>https://openrouter.ai/blog/tutorials/how-to-use-jev/</link>'''
+             '''<pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate></item>'''
+             '''</channel></rss>''')
+        or_source=dict(id='openrouter',name='OpenRouter',url='https://openrouter.ai/blog/feed.xml',
+                       official=True,lang='en',articleHosts=['openrouter.ai'])
+        rows=parse_openrouter_announcements(rss.encode(),or_source)
+        self.assertEqual(len(rows),1)
+        self.assertIn('/announcements/',rows[0]['sourceUrl'])
+        self.assertTrue(rows[0]['title'].startswith('OpenRouter '))
+        self.assertEqual(news_event(rows[0]['title'],official=True),'price-or-free')
+
+        atom=('''<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">'''
+              '''<entry><title>v2.0.16</title>'''
+              '''<link href="https://github.com/anomalyco/opencode/releases/tag/v2.0.16"/>'''
+              '''<updated>2026-09-24T06:34:09Z</updated></entry>'''
+              '''<entry><title>other</title>'''
+              '''<link href="https://github.com/other/repo/releases/tag/v1.0.0"/>'''
+              '''<updated>2026-09-24T06:34:09Z</updated></entry>'''
+              '''</feed>''')
+        oc_source=dict(id='opencode',name='OpenCode',url='https://github.com/anomalyco/opencode/releases.atom',
+                       official=True,lang='zh')
+        oc_rows=parse_opencode_releases(atom.encode(),oc_source)
+        self.assertEqual(len(oc_rows),1)
+        self.assertEqual(oc_rows[0]['title'],'OpenCode 发布 v2.0.16')
+        self.assertEqual(news_event(oc_rows[0]['title'],official=True),'major-update')
+        with self.assertRaises(ValueError):
+            parse_opencode_releases(b'<feed xmlns="http://www.w3.org/2005/Atom"></feed>',oc_source)
+
+        cc_html=('''<div id="v1.64.0" class="relative"><time dateTime="2026-09-23">Sep 23</time></div>'''
+                 '''<div id="v1.64.0" class="dup"><time dateTime="2026-09-23">dup</time></div>'''
+                 '''<div id="nope"><time dateTime="2026-09-01">x</time></div>''')
+        cc_source=dict(id='commandcode',name='Command Code',url='https://commandcode.ai/changelog',
+                       official=True,lang='zh')
+        cc_rows=parse_commandcode_changelog(cc_html.encode(),cc_source)
+        self.assertEqual(len(cc_rows),1)
+        self.assertEqual(cc_rows[0]['title'],'Command Code 发布 v1.64.0')
+        self.assertEqual(cc_rows[0]['sourceUrl'],
+                         'https://commandcode.ai/changelog?date=2026-09-23&version=v1.64.0')
+        self.assertEqual(cc_rows[0]['publishedAt'],'2026-09-22T16:00:00Z')
+        self.assertEqual(news_event(cc_rows[0]['title'],official=True),'major-update')
 
     def test_plans_stale_cache_falls_back_to_pinned_record(self):
         pinned=dict(id='demo-plan',vendor='示例',product='示例套餐',group='domestic',tagline=None,

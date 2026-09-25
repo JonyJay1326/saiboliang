@@ -392,17 +392,6 @@
     "createdAt": "2026-09-23T03:02:47Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "df9470ece6bb3f9c80c05f98899ee6a8114fc4158c0fe96f48a7d90122dc009d",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "5051f9938ae23f64c6752ed08561d7a6ed313b3d57385fba6bfd2aa6b30a169b",
-    "status": "pending",
-    "createdAt": "2026-09-23T08:39:49Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "cloudflare/quiche",
     "reason": "AI applicability uncertain",
@@ -427,29 +416,223 @@
     "createdAt": "2026-09-23T15:28:02Z"
   },
   {
-    "kind": "news-future",
-    "objectId": "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2",
-    "reason": "publication is in the future",
+    "kind": "news-item",
+    "objectId": "7663b51ef99ebb29ab6a7e62d427edd3e392b5aae6057cc6aa7d113b337a685a",
+    "reason": "invalid feed item: unexpected news host",
     "evidence": {
-      "title": "Two years of OpenAI Academy",
-      "sourceUrl": "https://openai.com/index/two-years-of-openai-academy",
-      "publishedAt": "2026-09-23T16:00:00Z",
-      "source": "OpenAI",
-      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities."
+      "source": "Microsoft Azure"
     },
-    "id": "c84f525646cdcc949b4859a01db13f8b45e71de6270b3f7b1481db474e6e23b9",
+    "id": "6af8b13be2dacbb7a78152de2faed6d8a38dd75def22457fe92eafe433a3263a",
     "status": "pending",
-    "createdAt": "2026-09-23T15:28:02Z"
+    "createdAt": "2026-09-25T06:59:08Z"
   },
   {
-    "kind": "news-original",
-    "objectId": "b72a1a48e64d3a5134a19347a0aab39b2c18827798b9ad1fbcc06d6908a67a1d",
-    "reason": "original redirected",
+    "kind": "news-item",
+    "objectId": "b5f456afce24eb12fd731444abea92ed92dd15d7104b5adf63df31feba57d3ba",
+    "reason": "invalid feed item: invalid news title",
     "evidence": {
-      "sourceUrl": "https://www.aibase.com/zh/news/30844"
+      "source": "Together AI"
     },
-    "id": "87acb47e1e548106c316f8c190ac44dcefdc76e7bd97c8ab18aa9ef7cf164c36",
+    "id": "4bb2fd99a344482f9ba13abd62eae16c22a959b38250f30b47e5c5bafc451721",
     "status": "pending",
-    "createdAt": "2026-09-24T02:02:08Z"
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "4ed856e7925d24dd773b0c45c87138950fe382a137d940b84b889afe0f853a7d",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "37335b876ffdab832088a77c21b5a37fa5c6f9b7df96d2158c03891daff26a1e",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "d656bdaac72c3c1db5990b8f5288b249403a4b89f669d8828b4609ed6c3553e6",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "be2c72d0a0a8a3548dac6852b6693b3cf592aa7339f75a5963d18fe4f6a8096f",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "010aa2a729146f3ccfd8a7ff1fbb716a499abfe77c16d03cb5ef6b13450186ce",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "e6fbef7b3d8f6dafd5429edec398c288dbea626175bbc09e2d024e602771fb56",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "4f79d1d276a7df16b91d3b689436d11f05b8c8b4ab610e261aa4e4c334e7f2f2",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "67c4fda558e1ccf5b5398dc52fdfc91ec441a21b1a25f2653ae94bde2eb59b80",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "0b8d9dce8cff70c8cd2208820c8fdce8bad16c2bb8c78daf5e72c7c0debf74d4",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "df3593125b635dee3c509c1d890b584fe0ad4bbd8613fc70d228c62cc96c44ed",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "259bfaa461ceb6c5bbafab2cb4e5ca5ba879980eac4d66c851bcc4d7f63c2dbe",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "36250ab03afa13458e32603da6905f6dc3909c3f937d1e3e593356ad922a1465",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "d1e8eda0e155f35824a6578d104d0bde4bc2ee46311c4060eb8effd4ee7a9a42",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "5fef0286c7e15d9a4e73b915092f05fddb6b6a4aafb0bef6072afdaead73d3a2",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "9b12cf7ba8f1e2ecfdedb3c7707edf1f26050ac02393dc39d7732fea39e9b071",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "4cf29b668b650892cd48b4223f180110190c859f50fa28138068edf753ddde2b",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "e5d250bcdf8eb062cbf07ce72f9a0a58053f9f4e3b40e858ada550135f498a2d",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "f120521e324e711c681810b88a320016c457ddc7186e8395202b469814d651b1",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "715d3f976d1ccc3f77604f6eb0f0bbf2bd35759c3221c8746419035b901b52d5",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "fbb659805e682c8cce783a00a2fd2a20404f33497ca3b780fbf08d5fdfd5365a",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "272ac80d602e20cf1396f8051fab5d91b9424ea2c907dc2cf133832f77791b66",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "e60da6b318977ea32f7c5b347c448eb7b0e956787da93674670787ba2960de96",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "a70f3d0a05043d18817e86bfc6bb4b3a0508e7d3ad7deb24deaea2b8695ec416",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "2e394782ed77c814876634ee4ceefaeaee10aa463300cb62d1eb752846ed6f0c",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "dc86e63ec13fd1773a1f60691cae9f431bf15718c3e2c5a1e0fece77da8f25ca",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "dc88512538c17d77c1c6083f39857a6e300fa1ab855df4f890f65a0e32308c3c",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "42a9afff2abe1e182f695b9872221f126ae5a577b891051f711ced6c4adafb7a",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "46cab9dbb90a74b170fa8ef9e11a8001d7781ee1b11103824be48d8c73c82bf6",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "d297f950e31ab4273ef88d97bcea7210f5719d6f2ec96ccf67014766ebfc3948",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "485059c80706e9299940dcafaa466b4b468618bea93500353b2eaeb4f7b1f59f",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "9796f6029de66e67416627619b5648a0bb036447f3dafed996f93b5a8757c4c2",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "f18df4f45ba5c3dc4f577d52c0241a51badbdbf6a50d18c3ab5f7fb5db2b1ca2",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "62cae8ae61cee5adac6b76ec888b8a0938aa29b9259cd391558ff31e94078824",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "f838c9137f9fea5ca4b40f814efd42d961f2657bb396c50ff8d6d556d80a9af8",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "5562d4af1c32fc4324a0734d8bcd33e8fdd574a90cbefe2e3ff1d53ec61cf4ce",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "c1df8a010a4241e46745d29703366b1a52c1642511c2b7bd7d8b6219b6aa4bb4",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
   }
 ]

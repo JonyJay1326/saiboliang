@@ -59,10 +59,10 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 | AA 免费接口 | [实测] 完整分页、指数版本一致性、综合/编程两榜；**自带每百万 Token 价格**（输入+输出全量覆盖 436/652，两榜去重后 top25 为 25/25）；来源署名为 Artificial Analysis |
 | ~~OpenRouter~~ | [已下线] 一期不再采集：价格改用 AA 自带定价，`contextLength` 不需要，`editorial/model-mappings.json` 已删除 |
 | GitHub Trending | [实测] 官方周/月 HTML，保留原始位置，规则筛选 AI 应用与工具；不明确的项目进待确认清单 |
-| 官方一手资讯 | [实测] 2026-09-21 启用 29 源：OpenAI、Google AI、DeepMind、GitHub changelog、GitHub Copilot、NVIDIA、Microsoft AI、Azure、Meta（RSS/Atom）；Anthropic、智谱官网（列表页/内嵌数据适配器）；SpaceXAI、字节 Seed、MiniMax（sitemap/列表＋文章页）；DeepSeek 官网；百度文心（Hugo RSS）；腾讯云 TokenHub 公告与产品动态、阿里云百炼、百度千帆（表格行＋身份参数）；月之暗面（官网博客）；阿里/智谱/月之暗面/腾讯/百度/阶跃星辰（Hugging Face 官方模型仓，模板标题「{厂商}发布 {模型名}」）。英文标题/简介经 DeepSeek 机译；来源无简介时由 DeepSeek 据来源页面片段起草（≤80 字、正文不落盘）；每天入库≤20（每来源≤5/天、每事件类型≤5/天）、永久累加、`publishedAt` 倒序；页面只展示当日精选（`featured`，每日≤8，DeepSeek 判定、失败回落固定事件优先级）；准入与验证见 `news-source-check.md` |
-| AIBase / 量子位（二手兜底） | [实测] 2026-09-19 重启：中文二手源，补国产厂商动态与评测/上手/深度分析体裁；来源署对应媒体。2026-09-24 起一手核实按 `editorial/news-originals.json` 映射 + `editorial/vendor-domains.json` 白名单自动核验（口径与实测见 `news-source-check.md`）；核实成功才标「中文报道已核实」，否则保持「二手 · 一手未核实」。AIBase 个别专题页缺内嵌数据时单条隔离进待复核 |
+| 官方一手资讯 | [实测] 2026-09-25 起另含 Mistral / Ollama / Together / Replicate（RSS）、Cursor changelog、OpenRouter 公告 RSS、OpenCode GitHub releases、Command Code changelog；与既有 OpenAI / Google / DeepMind / GitHub / NVIDIA / Microsoft / Meta / Anthropic / 国产厂商通道等并列。英文标题/简介经 DeepSeek 机译；每天入库≤20、精选≤8；准入见 `news-source-check.md` |
+| AIBase / 量子位 / 智东西（二手兜底） | [实测] AIBase 与量子位 2026-09-19 重启；智东西 2026-09-25 重启。中文二手源，补国产厂商动态与评测/上手/深度分析体裁；来源署对应媒体。一手核实按 `editorial/news-originals.json` 映射 + `editorial/vendor-domains.json` 白名单自动核验（口径与实测见 `news-source-check.md`）；核实成功才标「中文报道已核实」，否则保持「二手 · 一手未核实」 |
 | DeepSeek 官网新闻 | [实测] 厂商一手，`deepseek-news` 适配器；只给日期的条目取北京日 00:00 折算 UTC，不伪造时刻 |
-| 中文媒体来源 | [已退役] AIBase、量子位、InfoQ、智东西、Solidot、IT之家保留 `enabled:false` 便于临时回退，不再默认采集 |
+| 中文媒体来源（停用） | [保留禁用] InfoQ、Solidot、IT之家 `enabled:false`，便于临时回退 |
 | GitHub Copilot 官方文档 | [实测] 个人月付常规价与 AI Credits 表解析，保持原单位；价格/额度正常数值变化自动更新 |
 | 智谱 Coding Plan 官方文档 | [实测] 国内套餐与双周期积分额度；文档无当前月付价，因此价格为 null |
 | 免费活动（tickets） | [人工] 不走采集：管道读取 `editorial/tickets.json` 人工文件，只做契约校验与版本戳；不请求网络 |

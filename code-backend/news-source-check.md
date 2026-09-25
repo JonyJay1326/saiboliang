@@ -310,3 +310,30 @@ AIBase 的报道链接属于中文报道；只有另行核实官方一手出处�
 [实测] 修正后重跑：CocktailASR-1 重新核实（`github.com/xiaomi-research/xiaomi-cocktailasr-1`，组织映射补 `xiaomi-research`），智谱 GLM-5.3-FlashX 保持 `docs.bigmodel.cn` 的 GLM-5.3-Flash 模型页（页面含 FlashX 信息）；累计 **30/57**，剩余 25 条（robots 阻断并非原因——多数是无可用一手页或页面不可核验）。
 
 [未定] Tavily 实跑待用户提供 key（本机 `.env` 或 CI Secrets）；robots 阻断域（华为/剪映/B站/OceanBase/蚂蚁 docs/智谱 docs）的条目按决定长期保持未核实。
+
+### 2026-09-25 第十四批：补一手缺口（Mistral / Ollama / Together / Replicate）+ 重启智东西
+
+背景：库存 96 条中 AIBase 占半、`price-or-free` 长期为 0；用户确认版权边界后拍板按推荐补源。
+
+| 源 | 入口 | 机制 | 实测 | 结论 |
+| --- | --- | --- | --- | --- |
+| Mistral | `https://mistral.ai/news/rss` | 官方 RSS | 200、条目域名 `mistral.ai`；robots 无整站拒绝 | 启用（`rss`，`official`） |
+| Ollama | `https://ollama.com/blog/rss.xml` | 官方 RSS | 200、域名 `ollama.com`；样本含 *transparent pricing*；robots.txt 404（无阻断条款） | 启用（`rss`，`official`） |
+| Together AI | `https://www.together.ai/blog/rss.xml` | 官方 RSS | 200、域名 `www.together.ai`；robots 无整站拒绝 | 启用（`rss`，`official`） |
+| Replicate | `https://replicate.com/blog/rss` | 官方 RSS | 200、域名 `replicate.com`；robots 无整站拒绝 | 启用（`rss`，`official`） |
+| 智东西 | `https://zhidx.com/rss` | 中文媒体 RSS（二手） | 200、域名 `zhidx.com`；robots 无整站拒绝；重启分担 AIBase | 启用（媒体规则） |
+
+[实测] **实现：** `editorial/sources.json` 新增 4 个官方 RSS、`zhidx.enabled=true`；`vendor-domains.json` 补 Mistral/Ollama/Together/Replicate；`NEWS_TOPICS` 增 Together/Replicate/FLUX；`PRODUCT_RE` 增 Mistral/Together/Replicate；`price-or-free` 增「定价 / pricing / free tier / free plan」（不用单独「价格」泛词，避免发布+降价标题整条挤成定价事件）。
+
+[实测] **未接本轮：** Cursor（atom 疑似停更）、OpenRouter changelog（须专用适配器）、InfoQ `?topic=ai`（会务噪声）、机器之心（仍返回 HTML）。
+
+### 2026-09-25 第十五批：Cursor / OpenRouter / OpenCode / Command Code
+
+| 源 | 入口 | 机制 | 实测 | 结论 |
+| --- | --- | --- | --- | --- |
+| Cursor | `https://cursor.com/changelog` | 列表页 `href+/time[dateTime]` + 随后 h1；缺主题词时前缀 `Cursor` | atom.xml 停于 2024；changelog HTML 最新 2026-09-23；robots 允 `/changelog` | 启用（`cursor-changelog`） |
+| OpenRouter | `https://openrouter.ai/blog/feed.xml` | RSS 只留 `/blog/announcements/`；缺主题词前缀 `OpenRouter` | 140 条中 announcements 69；教程/insights 丢弃；robots 无整站拒绝 | 启用（`openrouter-announcements`） |
+| OpenCode | `https://github.com/anomalyco/opencode/releases.atom` | Atom + 标题模板「OpenCode 发布 {tag}」 | 官网 changelog 仅 v1.18 线，Atom 含 v1.18+v2.x；以仓库发版为准；robots 允 changelog | 启用（`opencode-releases`） |
+| Command Code | `https://commandcode.ai/changelog` | 版本 `id=vX.Y.Z` + `time[dateTime]`；合成 `?date=&version=` | 片段锚点会被归一化剥离；robots 允 `/changelog` | 启用（`commandcode-changelog`） |
+
+[实测] `vendor-domains` 补 Cursor/OpenRouter/OpenCode/Command Code；`vendor-orgs` 补 `github.com/anomalyco`；主题词与产品信号补 OpenCode/OpenRouter/Command Code；`price-or-free` 增半价/half-price。

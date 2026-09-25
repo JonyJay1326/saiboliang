@@ -322,6 +322,109 @@
       "enabled": true
     },
     {
+      "id": "mistral",
+      "name": "Mistral",
+      "url": "https://mistral.ai/news/rss",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "mistral.ai",
+        "www.mistral.ai"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "url": "https://ollama.com/blog/rss.xml",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "ollama.com",
+        "www.ollama.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "url": "https://www.together.ai/blog/rss.xml",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "www.together.ai",
+        "together.ai"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "url": "https://replicate.com/blog/rss",
+      "adapter": "rss",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "replicate.com",
+        "www.replicate.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com/changelog",
+      "adapter": "cursor-changelog",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "cursor.com",
+        "www.cursor.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "url": "https://openrouter.ai/blog/feed.xml",
+      "adapter": "openrouter-announcements",
+      "official": true,
+      "lang": "en",
+      "articleHosts": [
+        "openrouter.ai",
+        "www.openrouter.ai"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "url": "https://github.com/anomalyco/opencode/releases.atom",
+      "adapter": "opencode-releases",
+      "official": true,
+      "lang": "zh",
+      "articleHosts": [
+        "github.com"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "commandcode",
+      "name": "Command Code",
+      "url": "https://commandcode.ai/changelog",
+      "adapter": "commandcode-changelog",
+      "official": true,
+      "lang": "zh",
+      "articleHosts": [
+        "commandcode.ai",
+        "www.commandcode.ai"
+      ],
+      "enabled": true
+    },
+    {
       "id": "aibase",
       "name": "AIBase",
       "url": "https://www.aibase.com/zh/news",
@@ -356,7 +459,7 @@
       "articleHosts": [
         "zhidx.com"
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "solidot",

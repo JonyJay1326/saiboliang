@@ -200,6 +200,236 @@
     "news.microsoft.com": false,
     "news.cnyes.com": false,
     "shattered.io": false,
-    "runway.com": false
-  }
+    "runway.com": false,
+    "www.csdn.net": false,
+    "m.leiphone.com": false,
+    "k.sina.com.cn": false,
+    "today.line.me": false,
+    "www.tikr.com": false,
+    "www.jiqizhixin.com": false,
+    "news.aibase.com": false,
+    "www.ithome.com": false,
+    "www.huawei.com": false,
+    "www.cnblogs.com": false,
+    "www.kimi.com": false,
+    "m.thepaper.cn": false,
+    "www.cls.cn": false,
+    "wallstreetcn.com": false,
+    "ai.zol.com.cn": false,
+    "3c.ltn.com.tw": false,
+    "www.facebook.com": true,
+    "docs.github.com": false,
+    "www.cbinsights.com": false,
+    "www.tmtpost.com": false,
+    "m.ithome.com": false,
+    "finance.sina.cn": false,
+    "www.donews.com": false,
+    "adoption.microsoft.com": false,
+    "finance.eastmoney.com": false,
+    "feng.ifeng.com": false,
+    "m.cnyes.com": false,
+    "t.me": false,
+    "music.youtube.com": false,
+    "www.aibase.com": false,
+    "x.com": true,
+    "www.vrtuoluo.cn": false,
+    "www.meta.com": false,
+    "3g.china.com": false,
+    "www.etnet.com.hk": false,
+    "www.stats.gov.cn": false,
+    "www.ndrc.gov.cn": false,
+    "www.mem.gov.cn": false,
+    "www.mee.gov.cn": false,
+    "www.reddit.com": true,
+    "www.dapingtime.com": false,
+    "slsoluck.com": false,
+    "post.smzdm.com": false,
+    "www.aitop100.cn": false,
+    "www.szhzxw.cn": false,
+    "cj.sina.com.cn": false,
+    "www.volcengine.com": false,
+    "gorse.io": false,
+    "milvus.io": false,
+    "ihower.tw": false,
+    "openrouter.ai": false,
+    "hao.cnyes.com": false,
+    "www.datacamp.com": false,
+    "finance.biggo.com.tw": false,
+    "www.guancha.cn": false
+  },
+  "GPT-6之后，具身智能走向何方？诺因发布GLOW技术报告，给出机器人“一教就会”的答案": [
+    "https://m.sohu.com/a/1080794897_120952561?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://www.csdn.net/article/2026-09-24/166592330",
+    "https://www.qbitai.com/2026/09/496816.html",
+    "https://m.leiphone.com/author/zhengjiamei349",
+    "https://www.163.com/dy/article/L7KDH3BA055040N3.html"
+  ],
+  "Meta靠自研Manus翻身！股价一夜暴涨11%，登顶苹果商店，增速反超ChatGPT": [
+    "https://k.sina.com.cn/article_5953740931_162dee083067040084.html?from=tech",
+    "https://m.36kr.com/p/3996758884503681",
+    "https://www.163.com/dy/article/L7E3VVBF0512B07B.html",
+    "https://today.line.me/tw/v3/article/LXe15Nr",
+    "https://www.tikr.com/zh/blog/meta-stock-jumped-11-monday-heres-where-shares-could-go-further-in-2026"
+  ],
+  "让AI研发下一代机器人！成立三个月登顶物理AI评测榜单，押注Physical RSI": [
+    "https://finance.sina.com.cn/roll/2026-09-24/doc-inisxhnz8164280.shtml",
+    "https://timeline.sohu.com/news/nRd5E9fr1K",
+    "https://tech.ifeng.com/c/8wcv66okGPb",
+    "https://www.163.com/dy/article/L6UCLDVF0511FQO9.html",
+    "https://www.jiqizhixin.com/industry"
+  ],
+  "​华为官宣小艺 Work 正式上线，首发 31 天限时免费畅享 1000 AI 点": [
+    "https://m.sohu.com/a/1080450015_211762?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://news.aibase.com/zh/news",
+    "https://tech.ifeng.com/c/8wg5bRlP7q4",
+    "https://www.ithome.com/tags/%E5%8D%8E%E4%B8%BA",
+    "https://www.huawei.com/cn/publications/huaweitech/202601"
+  ],
+  "高通联手 PrismML 发布 1-bit Bonsai：AI 眼镜离线识图，内存占用降到 1/4": [
+    "https://m.sohu.com/a/1080405857_122066678?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://tech.ifeng.com/c/8wgHnm4IP6U",
+    "https://developer.cloud.tencent.com/article/2710705",
+    "https://www.sohu.com/a/1077765736_114760",
+    "https://www.inside.com.tw/article/41031-prismml-bonsai-8b-1-15gb-memory-worlds-first-native-1-bit-commercial-llm"
+  ],
+  "Kimi K3.1十月或压轴登场:三档推理强度、百万超长上下文，Agent与Swarm全塞进配置": [
+    "https://m.sohu.com/a/1080470896_121850782?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://www.cnblogs.com/youring2/p/21560640",
+    "https://www.kimi.com/news/kimi-k3",
+    "https://adp.tencent.com/zh/blog/tencent-cloud-adp-kimi-k3-enterprise-knowledge-agent-solution",
+    "https://www.kimi.com/help/others/model-mode-selection"
+  ],
+  "Meta Connect 发布会：Muse 全面接入 AI 眼镜，小扎要让数十亿人用上超级智能": [
+    "https://m.thepaper.cn/newsDetail_forward_34139943",
+    "https://m.sohu.com/a/1080385124_260616?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://www.cls.cn/detail/2491973",
+    "https://news.cnyes.com/news/id/6615140",
+    "https://wallstreetcn.com/articles/3782418"
+  ],
+  "阿里达摩院发布食管癌 AI 模型 DAMO EAGLE：不插管，平扫 CT 就能查早癌": [
+    "https://m.sohu.com/a/1080339415_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://tech.ifeng.com/c/8wg0YBi3klJ",
+    "https://ai.zol.com.cn/1252/12525987.html",
+    "https://www.163.com/dy/article/L7JA4DPS0550B1DU.html",
+    "https://www.sohu.com/a/1080320323_130887?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+  ],
+  "Meta 发布 AI\"电子宠物\"Muse Charm：挂背包上的人工智能，前苹果设计师操刀": [
+    "https://m.sohu.com/a/1080355890_121850782?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://3c.ltn.com.tw/news/67701",
+    "https://www.facebook.com/technavecn/posts/meta-%E6%8E%A8%E5%87%BAai-%E7%94%B5%E5%AD%90%E5%AE%A0%E7%89%A9muse-charm-meta-%E5%9C%A8%E4%BB%8A%E6%97%A9%E7%9A%84-meta-connect-%E6%B4%BB%E5%8A%A8%E4%B8%8A%E5%85%AC%E5%B8%83%E5%85%A8%E6%96%B0-muse-charm%E8%BF%99%E6%98%AF%E4%B8%80%E6%AC%BE%E5%9B%B4%E7%BB%95-meta-ai/1523507829808181",
+    "https://www.tradingview.com/news/panews:e7aa4fa15acdf:0",
+    "https://tech.ifeng.com/c/8wfue51YNGL"
+  ],
+  "微软发布 Ink Canvas 数字画布：手写草图 + Copilot，AI 帮你把灵感变成内容": [
+    "https://m.sohu.com/a/1080265432_114760?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://docs.github.com/zh/copilot/how-tos/github-copilot-app/working-with-canvas-extensions",
+    "https://hk.finance.yahoo.com/news/谷歌云进军ai办公市场-对标微软和openai企业版产品-145448839.html",
+    "https://cn.investing.com/news/stock-market-news/article-3086662",
+    "https://www.cbinsights.com/company/spext"
+  ],
+  "微软发布Ink Canvas应用:主打以笔为先赋能Copilot，10月13日上线应用商店": [
+    "https://www.tmtpost.com/agent/ai-article?id=20542",
+    "https://m.ithome.com/html/1006565.htm",
+    "https://finance.sina.cn/stock/jdts/2026-09-24/detail-iniswvxf8211477.d.html?oid=800&vt=4&cid=76993&node_id=76993",
+    "https://www.donews.com/news/detail/8/6722491.html",
+    "https://adoption.microsoft.com/zh-cn/release-notes"
+  ],
+  "谷歌发布 Gemini 3.8 Flash TTS：支持自然语言定制声音与 30 秒声音复刻": [
+    "https://m.sohu.com/a/1080292130_121850782?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://finance.eastmoney.com/a/202609243882871641.html",
+    "https://feng.ifeng.com/c/8wfmdpuDRLg",
+    "https://m.cnyes.com/news/id/6614725",
+    "https://k.sina.com.cn/article_5953466437_162dab0450670bdfnu.html?from=tech"
+  ],
+  "AI 写作退化真相大白：Anthropic 工程师揭秘，Claude 竟被“训”成了写给 AI 看而不是给人看": [
+    "https://t.me/s/AI_News_CN?before=42652",
+    "https://m.sohu.com/a/1080291748_121850782?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://music.youtube.com/playlist?list=PLHWPlbYcDiM5mC2qNsyp5RxPTXGgwJ1Jc",
+    "https://www.aibase.com/zh/www.aibase.com/zh/news",
+    "https://x.com/search?q=%E4%BA%91%E9%BE%99%E5%B0%8F%E5%A7%90%E5%B8%A6%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%82%A3%E6%9C%89%E3%80%8A%E7%BA%A6%E5%B0%8F%E5%A6%B9%E8%96%87%E8%8A%AF%E2%86%929%CD%9F9%CD%9F7%CD%9F4%CD%9F4%CD%9F2%CD%9F7%CD%9F%E5%B0%8F%E5%A7%90%E5%A6%B9%E4%B8%8A%E9%97%A8%E6%9C%8D%E5%8A%A1%E3%80%8B%E6%80%8E%E4%B9%88%E6%89%BE%E5%B0%8F%E5%A7%90%E5%A4%A7%E4%BF%9D%E5%81%A5%E6%9C%8D%E5%8A%A1-%E6%80%8E%E4%B9%88%E7%BA%A6%E5%96%9D%E8%8C%B6%E7%BA%A6%E7%82%AE%E6%9C%8D%E5%8A%A1-%E6%80%8E%E4%B9%88%E6%89%BE%E5%B0%8F%E5%A7%90%E4%B8%80%E6%9D%A1%E9%BE%99%E6%9C%8D%E5%8A%A1-%E6%89%BE%E5%B0%8F%E5%A7%90%E5%A4%A7%E4%BF%9D%E5%81%A5%E6%8C%89%E6%91%A9%E6%9C%8D%E5%8A%A1.bfw&lang=bg"
+  ],
+  "Meta发布首款无摄像头AI眼镜及第三代Ray-Ban Meta，全系接入AI助手Muse": [
+    "https://www.163.com/dy/article/L7J359KQ05198NMR.html",
+    "https://finance.sina.com.cn/roll/2026-09-24/doc-iniswrrp0617338.shtml",
+    "https://tech.ifeng.com/c/8wfnjhtY06F",
+    "https://www.vrtuoluo.cn/543653.html",
+    "https://www.meta.com/zh-cn/blog"
+  ],
+  "腾讯 QClaw 微信远程办公 AI 助手宣布停运：12 月 24 日关停，即日起停新用户注册": [
+    "https://www.163.com/dy/article/L7J5RMQ905527PMU.html",
+    "https://3g.china.com/act/news/10000169/20260924/49763697.html",
+    "https://finance.sina.com.cn/jjxw/2026-09-24/doc-iniswvxi5029895.shtml",
+    "https://www.163.com/dy/article/L7KAUCEC05560LKB.html",
+    "https://www.etnet.com.hk/www/tc/stocks/realtime/quote_news_detail.php?section=related&newsid=20260924770&page=1&code=700"
+  ],
+  "阿里千问发布 Qwen-Audio-3.1：五款语音模型同发，ASR 价格直降 95%": [
+    "https://m.sohu.com/a/1079970276_211762?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://m.36kr.com/p/3996196939616387",
+    "https://finance.sina.com.cn/roll/2026-09-23/doc-inisvumt8458598.shtml",
+    "https://www.163.com/dy/article/L7JGRCGD0519QIKK.html",
+    "https://view.inews.qq.com/a/20260923A08O2J00"
+  ],
+  "千问发布 Qwen-Audio-3.1系列语音大模型，五款模型全线降价最高95%": [
+    "https://www.163.com/dy/article/L7HEVA6N05527PMU.html",
+    "https://tech.ifeng.com/c/8wbYxCAilw7",
+    "https://m.sohu.com/a/1079944351_114760?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://eu.36kr.com/zh/p/3996196939616387",
+    "https://finance.sina.com.cn/roll/2026-09-23/doc-inisvumt8458598.shtml"
+  ],
+  "​高通发布骁龙 8 Elite Gen 6 与 Extreme 芯片，支持本地运行 300 亿参数大模型": [
+    "https://www.stats.gov.cn/sj/fbrc",
+    "https://www.ndrc.gov.cn/xwdt/xwfb",
+    "https://www.mem.gov.cn/xw/xwfbh",
+    "https://www.mee.gov.cn/ywgz/fgbz/bz/bzfb",
+    "https://www.reddit.com/r/jobsearchhacks/comments/1jedoz0/linkedin_url_hacking_to_find_jobs_posted_less?tl=zh-hans"
+  ],
+  "医疗 AI 走向全球普惠：Anthropic 携手 OpenEvidence，将临床决策支持工具免费覆盖百国": [
+    "http://www.dapingtime.com/article/3633.html",
+    "https://www.aibase.com/zh/news/www.aibase.com/zh/news/20979",
+    "https://www.dapingtime.com/article/3305.html",
+    "https://www.tmtpost.com/7864513.html",
+    "http://slsoluck.com"
+  ],
+  "​韶音首款 AI 耳机 OpenFit 2 AI 亮相云栖大会，重磅首发“AI 实验室”四大新功能": [
+    "https://news.qq.com/rain/a/20260923A0A2N500",
+    "https://m.sohu.com/a/1079875152_211762?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://post.smzdm.com/p/aom934em",
+    "https://www.aitop100.cn/infomation",
+    "https://www.szhzxw.cn"
+  ],
+  "火山引擎Seedance2.5上线Draft模式:480P试错、1080P成片，成本最高省77%": [
+    "https://m.sohu.com/a/1079883436_122396381?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://cj.sina.com.cn/articles/view/1642634100/61e89b7404001rk0o?froms=ggmp",
+    "https://www.163.com/tech/article/L7GL8V6R00098IEO.html?clickfrom=w_tech",
+    "https://hk.finance.yahoo.com/news/%E7%81%AB%E5%B1%B1%E5%BC%95%E6%93%8E%E6%AD%A3%E5%BC%8F%E7%99%BC%E5%B8%83%E8%B1%86%E5%8C%85%E7%B7%A8%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%B6%9C%E5%90%88%E4%BD%BF%E7%94%A8%E6%88%90%E6%9C%AC%E6%AF%94%E6%A5%AD%E7%95%8C%E5%B9%B3%E5%9D%87%E9%99%8D%E4%BD%8E62-7-071318766.html",
+    "https://www.volcengine.com/docs/ark/seedance-2-5"
+  ],
+  "OpenRouter发布 2026 嵌入模型选型指南：实测 19 款、 37 个目录条目，按场景把最佳候选摆上桌": [
+    "https://gorse.io/zh/posts/embedding-benchmark-2026",
+    "https://zhuanlan.zhihu.com/p/2065443556865708114",
+    "https://milvus.io/zh/blog/choose-embedding-model-rag-2026.md",
+    "https://ihower.tw/blog/12167-embedding-models",
+    "https://openrouter.ai/blog/insights/best-embedding-models-2026"
+  ],
+  "OpenAI 推出 GPT-6 Sol 和 Luna：API 价格大降 50%，单任务成本最低不到竞品一成": [
+    "https://finance.sina.com.cn/stock/t/2026-09-23/doc-inistvut5520287.shtml",
+    "https://www.tradingview.com/news/panews:95c2b02e4acdf:0",
+    "https://hao.cnyes.com/post/269412",
+    "https://m.36kr.com/p/3995655689475714",
+    "https://www.datacamp.com/zh/blog/gpt-6-sol-and-luna"
+  ],
+  "办公桌上的 AI 新物种！阿里千问办公首款桌面机器人 QwenNote Eva 正式发布，售价 899 元": [
+    "https://finance.sina.com.cn/stock/t/2026-09-22/doc-inissyqx6821145.shtml?froms=ggmp",
+    "https://www.163.com/dy/article/L7F1R9FH05527PMU.html",
+    "https://m.sohu.com/a/1079607104_122066678?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://m.sohu.com/a/1079577655_122066679?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://tech.ifeng.com/c/8wd5N8CLLFg"
+  ],
+  "阿里千问办公发布 Agent 全家桶:从自动化脚本到\"有身份、担责任\"的数字员工": [
+    "https://m.sohu.com/a/1079552627_211762?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+    "https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisvcqc5258164.shtml",
+    "https://finance.biggo.com.tw/news/113011bf-05da-4898-972b-74e0f17389b9",
+    "https://www.guancha.cn/economy/2026_08_06_826303.shtml",
+    "https://finance.ifeng.com/c/8vJUNjDhujS"
+  ]
 }

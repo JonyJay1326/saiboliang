@@ -648,7 +648,8 @@ NEWS_TOPICS = ('AI|模型|智能体|Agent|Claude|GPT|Gemini|DeepSeek|Copilot|Cur
                 '|Codex|Grok|Kimi|混元|通义|大语言模型|多模态|推理模型|开源模型|模型微调|模型评测|RAG'
                 '|提示词|上下文工程|机器学习|深度学习|神经网络|算力|AI编程|代码生成|Vibe Coding|MCP'
                 '|工具调用|工作流自动化|AI安全|AIGC|Seedream|Seedance|Seed3D|豆包'
-                '|Mistral|Ollama|ChatGPT|千问|智谱|文心|ERNIE|星火')
+                '|Mistral|Ollama|Together|Replicate|FLUX|OpenCode|OpenRouter|Command Code'
+                '|ChatGPT|千问|智谱|文心|ERNIE|星火')
 
 
 def topic_pattern(topics):
@@ -677,7 +678,8 @@ UPCOMING_RE=re.compile(r'将(?:于|在)?[^，。；]{0,20}(?:发布|推出|上�
 RELEASED_RE=re.compile(r'已(?:经)?|正式|现已')
 LAUNCH_RE=re.compile(r'发布|推出|上线|开源|开放(?!权重)|升级|新增|更新|合并|释出|首发|登场')
 PRODUCT_RE=re.compile(r'功能|工具|浏览器|Firefox|Office|插件|客户端|应用|APP|API|工作台|保护模式|记忆'
-                      r'|Copilot|Claude Code|Cursor|Ollama|ChatGPT|智能体|Agent',re.I)
+                      r'|Copilot|Claude Code|Cursor|Ollama|Mistral|Together|Replicate'
+                      r'|OpenCode|OpenRouter|Command Code|ChatGPT|智能体|Agent',re.I)
 MODEL_SIGNAL_RE=re.compile(r'模型|GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d'
                            r'|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d')
 # 安全类与停服类（2026-09-24 用户拍板拆分，原 action-required 一分为二）：
@@ -708,7 +710,10 @@ def news_event(title,official=False):
         return 'security-risk'
     if SERVICE_RETIRE_RE.search(title) and (SELF_RETIRE_RE.search(title) or SERVICE_OBJECT_RE.search(title)):
         return 'service-retirement'
-    if re.search(r'降价|涨价|免费额度|免费层|免费开放|免费试用|限时免费|价格调整|订阅.*调价',title):
+    # 机译常见「透明定价」等；英文源偶发未译尽时保留 pricing / free tier。
+    # 不用单独的「价格」泛词，避免「发布 + 价格腰斩」类标题整条挤成定价事件。
+    if re.search(r'降价|涨价|免费额度|免费层|免费开放|免费试用|限时免费|价格调整|订阅.*调价'
+                 r'|定价|pricing|free tier|free plan|半价|half[- ]?price',title,re.I):
         return 'price-or-free'
     if official:
         # 预告优先于发布类；「已/正式/现已」加发布动词视为已发布。仅主题命中不发布。
@@ -1399,6 +1404,117 @@ def parse_kimi_blog(raw,source):
     return result
 
 
+def parse_cursor_changelog(raw,source):
+    """Cursor /changelog：列表页把 dateTime 链到条目，标题取紧随其后的 h1。
+
+    官方 atom.xml 已停更（仍停在 2024），不采用；不用第三方镜像 feed。
+    标题若无主题词（如纯功能名），前缀 Cursor 以便过主题闸门。
+    """
+    text=decode(raw)
+    result=[]; seen=set()
+    for match in re.finditer(
+            r'href="(/changelog/(?!page/)[\w.-]+)"[^>]*>\s*<time[^>]*(?:dateTime|datetime)="([^"]+)"[^>]*>.*?</time>',
+            text,re.I|re.S):
+        href,date_text=match.group(1),match.group(2)
+        url=urljoin('https://cursor.com',href)
+        if url in seen:
+            continue
+        head=re.search(r'<h1[^>]*>(.*?)</h1>',text[match.end():match.end()+3000],re.I|re.S)
+        if not head:
+            continue
+        title=' '.join(re.sub(r'<[^>]+>','',head.group(1)).split())
+        require(title,'Cursor changelog title empty')
+        if not TOPIC_RE.search(title):
+            title='Cursor '+title
+        dt=datetime.fromisoformat(date_text.replace('Z','+00:00'))
+        require(dt.tzinfo is not None,'Cursor changelog date timezone missing')
+        seen.add(url)
+        result.append(dict(title=title,sourceUrl=url,
+                           publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                           source=source['name'],summary=None))
+    require(result,'Cursor changelog missing or restructured')
+    return result
+
+
+def parse_openrouter_announcements(raw,source):
+    """OpenRouter blog RSS，只保留 /blog/announcements/（产品与定价），过滤教程/insights。
+
+    公告标题常不带品牌名，缺主题词时前缀 OpenRouter。
+    """
+    rows=parse_feed(raw,source,lambda *args: None)
+    result=[]
+    for row in rows:
+        if '/blog/announcements/' not in row['sourceUrl']:
+            continue
+        title=row['title']
+        if not TOPIC_RE.search(title):
+            title='OpenRouter '+title
+        result.append(dict(row,title=title))
+    require(result,'OpenRouter announcements missing from feed')
+    return result
+
+
+def parse_opencode_releases(raw,source):
+    """OpenCode 官方 GitHub releases Atom；标题模板带中文，免机译。
+
+    官网 changelog 只展示 v1.18 线，Atom 同时含 v2.x，以仓库发版为准。
+    """
+    root=ET.fromstring(raw)
+    require(root.tag.rsplit('}',1)[-1]=='feed','OpenCode releases feed structure changed')
+    result=[]; seen=set()
+    for node in root:
+        if node.tag.rsplit('}',1)[-1]!='entry':
+            continue
+        title=link=updated=''
+        for child in node:
+            name=child.tag.rsplit('}',1)[-1]
+            if name=='title':
+                title=' '.join((child.text or '').split())
+            elif name=='updated':
+                updated=(child.text or '').strip()
+            elif name=='link' and not link and child.attrib.get('rel') in (None,'alternate'):
+                link=(child.attrib.get('href') or '').strip()
+        if not title or not link or not updated:
+            continue
+        if not re.fullmatch(r'https://github\.com/anomalyco/opencode/releases/tag/[\w.-]+',link):
+            continue
+        if not re.fullmatch(r'v[\w.-]+',title):
+            continue
+        if link in seen:
+            continue
+        dt=datetime.fromisoformat(updated.replace('Z','+00:00'))
+        require(dt.tzinfo is not None,'OpenCode release date timezone missing')
+        seen.add(link)
+        result.append(dict(title='OpenCode 发布 '+title,sourceUrl=link,
+                           publishedAt=dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                           source=source['name'],summary=None))
+    require(result,'OpenCode releases feed empty')
+    return result
+
+
+def parse_commandcode_changelog(raw,source):
+    """Command Code /changelog：版本块 id + 日期；片段锚点会被归一化剥离，改用身份查询参数。"""
+    text=decode(raw)
+    result=[]; seen=set()
+    for match in re.finditer(r'id="(v\d+\.\d+\.\d+)"[^>]*>',text):
+        version=match.group(1)
+        if version in seen:
+            continue
+        window=text[match.start():match.start()+600]
+        date_match=re.search(r'(?:dateTime|datetime)="(20\d{2}-\d{2}-\d{2})"',window,re.I)
+        if not date_match:
+            continue
+        date=date_match.group(1)
+        year,month,day=(int(part) for part in date.split('-'))
+        url=row_url('https://commandcode.ai/changelog',date=date,version=version)
+        seen.add(version)
+        result.append(dict(title='Command Code 发布 '+version,sourceUrl=url,
+                           publishedAt=day_start_utc(year,month,day),
+                           source=source['name'],summary=None))
+    require(result,'Command Code changelog missing or restructured')
+    return result
+
+
 def sitemap_entries(raw,prefix):
     """Shared sitemap <loc>/<lastmod> reader for official news sitemaps."""
     root=ET.fromstring(raw)
@@ -1658,7 +1774,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             require(normalize_url(final)==normalize_url(source['url']),
                     'news source redirected unexpectedly: '+source['id']+' -> '+normalize_url(final))
             adapter=source.get('adapter','rss')
-            require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog'),'unknown news adapter')
+            require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog','cursor-changelog','openrouter-announcements','opencode-releases','commandcode-changelog'),'unknown news adapter')
             official=source.get('official') is True
             if adapter=='aibase':
                 rows=collect_aibase(client,raw,source,review)
@@ -1681,6 +1797,14 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
                 rows=parse_qianfan(raw,source)
             elif adapter=='kimi-blog':
                 rows=parse_kimi_blog(raw,source)
+            elif adapter=='cursor-changelog':
+                rows=parse_cursor_changelog(raw,source)
+            elif adapter=='openrouter-announcements':
+                rows=parse_openrouter_announcements(raw,source)
+            elif adapter=='opencode-releases':
+                rows=parse_opencode_releases(raw,source)
+            elif adapter=='commandcode-changelog':
+                rows=parse_commandcode_changelog(raw,source)
             elif adapter=='xai-sitemap':
                 rows=collect_xai(client,raw,source,now,window_seconds)
             elif adapter=='seed-blog':
