@@ -1,10 +1,4 @@
 {
-  "b8c778dae64917239d7b48c2d257f53d4a037f14e26286594948309f46914cae": {
-    "title": "NVIDIA Isaac ROS 5.0 推进代理式开源机器人开发",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-22T15:32:21Z"
-  },
   "f9027d80e820682e90d7e8a7deab6fe99d243c44073836087c19a4dccdea5fb4": {
     "title": "GPT-6 更优的提示缓存",
     "summary": "了解 GPT-6 如何通过更高的缓存命中率、新诊断、显式断点及控制来改进提示缓存，从而降低延迟与成本。",
@@ -14,12 +8,6 @@
   "73461b3e97af0d93277a11c940eddd760e1483f50dc51139e0bbfefde7d9b54f": {
     "title": "推出 GPT-6 Sol 和 Luna",
     "summary": "认识 GPT-6 Sol 和 Luna，这两款模型以不同的能力与成本平衡，将前沿智能带入日常工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "3fcefd9c665fb2c2484965cf43548bc94be5c40db4dc345287024e6c77f2703e": {
-    "title": "Parallel 用 GPT‑6 Astra 将研究时间和成本减半",
-    "summary": "GPT‑6 Astra 让 Parallel 的智能体以一半时间和一半成本完成劳动力市场数据的研究与综合，优于此前模型。",
     "source": "deepseek-flash",
     "at": "2026-09-23T02:15:54Z"
   },
@@ -161,18 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-25T08:54:03Z"
   },
-  "34692efacd3b982a5758af6c9efc6d456b1cc87fb4d06f241903d801f376c977": {
-    "title": "推出 Gemini 3.8 Live 与 Live Avatar",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
-  },
-  "9111ec33ec962e74818200f53f102e1d1a15303de588283fe4b7afcbb2d357d9": {
-    "title": "Copilot Business 和 Enterprise 的 Copilot 功能默认启用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
-  },
   "b0878320c6bd0cfba3b38a1d5ad22ee1f88ff6ce14a0a4aa125407f0e3159ecd": {
     "title": "对高影响操作要求存在证明",
     "summary": null,
@@ -185,10 +161,22 @@
     "source": "deepseek-flash",
     "at": "2026-09-25T08:54:03Z"
   },
-  "443300f133d68284fc243a7ca13a2dacca547b972df20c85ac804b60f8a75b93": {
-    "title": "设计智能体优先平台：当智能体完成工作时有何变化",
+  "f79e7d7a633843bfcb6cfc4479852b9c85bc14af6c5476abdd45bcd0d05ab0cf": {
+    "title": "CodeQL 2.27.1 新增 C 和 C++ 查询及 Kotlin 2.4.20 支持",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "b0dcef92ac9905685f7b7365de9694a5bca2958f6ee18fbba07874d77de9b9f4": {
+    "title": "过期的 GitHub Actions 构件不再显示于 UI 和 API",
+    "summary": "过期的构件不再显示在 GitHub Actions 运行摘要中，也不再由 REST API 返回。此前，过期构件仍会显示并带有“Expired”标签，尽管…",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7": {
+    "title": "推出全新 Copilot，包含 Home、Code 和 Autopilot",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
   }
 }

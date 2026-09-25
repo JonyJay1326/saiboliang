@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-09-25T08:54:03Z",
+  "dataUpdatedAt": "2026-09-25T15:50:41Z",
   "items": [
+    {
+      "title": "推出全新 Copilot，包含 Home、Code 和 Autopilot",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "publishedAt": "2026-09-25T12:03:50Z",
+      "source": "Microsoft AI",
+      "summary": "微软推出全新Copilot，包含Home、Code和Autopilot，连接常用工具与新一代AI能力。",
+      "id": "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7",
+      "originalTitle": "Introducing the new Copilot with Home, Code and Autopilot",
+      "translatedAt": "2026-09-25T15:50:41Z",
+      "lang": "en",
+      "originalSource": "Microsoft AI",
+      "originalUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "originalVerifiedAt": "2026-09-25T15:50:41Z",
+      "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-25T15:50:41Z",
+      "featured": true
+    },
+    {
+      "title": "亮出“中国最强AI芯片”还不够，平头哥又甩出一手开源",
+      "sourceUrl": "https://www.qbitai.com/2026/09/497108.html",
+      "publishedAt": "2026-09-25T10:00:14Z",
+      "source": "量子位",
+      "summary": "大厂造芯，正在从交付芯片，走向更广泛的开放共建阶段。",
+      "id": "fc62a8eada3f153402f432f9718705727c476e18dfdf5d1f9c6131f79451f313",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/497108.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-25T15:50:41Z",
+      "featured": true
+    },
     {
       "title": "Copilot Business 和 Enterprise 的 Copilot 功能默认启用",
       "sourceUrl": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
@@ -1997,6 +2035,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-25T08:54:03Z",
-  "generatedAt": "2026-09-25T08:54:03Z"
+  "version": "2026-09-25T15:50:41Z",
+  "generatedAt": "2026-09-25T15:50:41Z"
 }

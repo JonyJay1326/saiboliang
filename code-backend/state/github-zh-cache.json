@@ -44,11 +44,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "alphaXiv/OpenResearch": {
-    "text": "将你的编码代理转变为研究代理",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "TencentCloud/Octop": {
     "text": "更智能的自托管 AI 助手——多用户、多代理。",
     "source": "deepseek-flash",
@@ -91,11 +86,6 @@
   },
   "THU-MAIC/OpenMAIC": {
     "text": "开放多代理互动课堂——一键获得沉浸式多代理学习体验",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "FlashML-org/FreeToken": {
-    "text": "FreeToken 将数据中心级模型服务带到你的桌面。在本地快速高效运行大型模型。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -154,18 +144,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-24T03:48:13Z"
   },
-  "BuilderIO/agent-native": {
-    "text": "用于构建智能体应用的框架",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
-  },
   "cactus-compute/needle": {
     "text": "面向微型设备的自动化基础模型：2 比特，8-29 MB，可在手机、可穿戴设备、智能家居、机器人、汽车和微控制器上实现工具调用、结构化提取和嵌入。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
-  },
-  "supermemoryai/supermemory": {
-    "text": "记忆与上下文引擎及应用，速度极快、可扩展，且可完全本地运行。面向 AI 时代的 Memory API。",
     "source": "deepseek-flash",
     "at": "2026-09-24T15:50:19Z"
   },
@@ -174,14 +154,29 @@
     "source": "deepseek-flash",
     "at": "2026-09-24T15:50:19Z"
   },
-  "upscayl/upscayl": {
-    "text": "Upscayl - 面向 Linux、MacOS 和 Windows 的第一免费开源 AI 图像放大工具。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
-  },
   "JetBrains/go-modern-guidelines": {
     "text": "帮助 AI 编程智能体编写现代 Go 代码",
     "source": "deepseek-flash",
     "at": "2026-09-24T15:50:19Z"
+  },
+  "Nasiko-Labs/nasiko": {
+    "text": "面向 AI Agent 的开发者控制平面",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "pbakaus/impeccable": {
+    "text": "让 AI 工具在设计中表现更佳的设计语言。",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "bendlang/bend": {
+    "text": "Bend 2：通过证明阻止 AI 错误的快速语言。安装：curl -fsSL https://bend-lang.com/install.sh | sh",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "linshenkx/prompt-optimizer": {
+    "text": "AI 提示词优化器，用于编写更好的提示词并获得更好的 AI 结果。",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
   }
 }

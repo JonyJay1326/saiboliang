@@ -1,17 +1,7 @@
 {
-  "9111ec33ec962e74818200f53f102e1d1a15303de588283fe4b7afcbb2d357d9": {
-    "summary": "GitHub 为企业与组织 Copilot 设置引入新的全局默认策略，默认启用已正式发布的 Copilot 功能。",
+  "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7": {
+    "summary": "微软推出全新Copilot，包含Home、Code和Autopilot，连接常用工具与新一代AI能力。",
     "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
-  },
-  "34692efacd3b982a5758af6c9efc6d456b1cc87fb4d06f241903d801f376c977": {
-    "summary": "Gemini 3.8 Live 与 Live Avatar 为 Gemini 对话式 AI 带来近实时视觉呈现。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
-  },
-  "443300f133d68284fc243a7ca13a2dacca547b972df20c85ac804b60f8a75b93": {
-    "summary": "介绍如何用 Microsoft Foundry 和 Azure Container Apps Sandboxes 为智能体设计平台。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
+    "at": "2026-09-25T15:50:41Z"
   }
 }

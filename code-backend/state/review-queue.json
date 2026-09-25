@@ -13,18 +13,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "omacom/omarchy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Beautiful, Modern & Opinionated Linux",
-      "sourceUrl": "https://github.com/omacom/omarchy"
-    },
-    "id": "1639e6e8864e861dc26f1dd67c4d85194d2c0b835e559341402bdf4ad2530146",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "cursor/plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -264,18 +252,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "JustVugg/colibri",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
-      "sourceUrl": "https://github.com/JustVugg/colibri"
-    },
-    "id": "e790a89837a938b313a055389eb5a1c8b4eba08cacaf32efb9d6547a68a4ba1b",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/financial-services",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -404,18 +380,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ahmedkhaleel2004/gitdiagram",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, simple, fast interactive diagrams and explainer videos for any GitHub repository",
-      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
-    },
-    "id": "de80f920d176ea994ef7f6d6d42862af0bebe91d4ef48ecfddd20aad67df2640",
-    "status": "pending",
-    "createdAt": "2026-09-25T08:54:03Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "harry7557558/spirula-studio",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -425,5 +389,76 @@
     "id": "3d32b047f58906eb05048215b057304582cb31df5a3ef5bc00feb0e7651d0e45",
     "status": "pending",
     "createdAt": "2026-09-25T08:54:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "paperclipai/paperclip",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source app everyone uses to manage agents at work",
+      "sourceUrl": "https://github.com/paperclipai/paperclip"
+    },
+    "id": "68045d0329774c6004fc13032b0e8972fe26c1e7df1f0e81ab0160dec6db224e",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HKUDS/CLI-Anything",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "sourceUrl": "https://github.com/HKUDS/CLI-Anything"
+    },
+    "id": "e0a128b52fde854252bb47dfa6d1bef454c3e7d5c313ccbbb71d8bf5258ecd04",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ahmedkhaleel2004/gitdiagram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free, simple, fast interactive diagrams and videos for any GitHub repository",
+      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
+    },
+    "id": "f0002b0872f5b9dcd387c3a17f92ba27ac9ccc9f2e944ec815ce8fe7739dbece",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "abue-ammar/tinycast",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "sourceUrl": "https://github.com/abue-ammar/tinycast"
+    },
+    "id": "da351cf100e8048e4620a460e62ba6b196959baec6c0c32b98fe665cdf077c08",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailcat",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "sourceUrl": "https://github.com/tailscale/tailcat"
+    },
+    "id": "e7d412f54cc23340ebf88b6a7e127b7945a69d19a4225cc8fe7b071e3bf3dcec",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
   }
 ]
