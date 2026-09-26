@@ -345,18 +345,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ZuodaoTech/everyone-can-use-english",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "人人都能用英语",
-      "sourceUrl": "https://github.com/ZuodaoTech/everyone-can-use-english"
-    },
-    "id": "3f93fe8c3f35e4095cfeaa74415cedb740e75f4c0d465ab193eb455d132b9370",
-    "status": "pending",
-    "createdAt": "2026-09-24T15:50:19Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "hydra-db/hydradb",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -451,17 +439,6 @@
     "createdAt": "2026-09-25T15:50:41Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
-    "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
-    },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
-    "status": "pending",
-    "createdAt": "2026-09-25T15:50:41Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "julyx10/lap",
     "reason": "AI applicability uncertain",
@@ -472,5 +449,113 @@
     "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
     "status": "pending",
     "createdAt": "2026-09-26T08:40:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FxEmbed/FxEmbed",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+      "sourceUrl": "https://github.com/FxEmbed/FxEmbed"
+    },
+    "id": "cd20c428d8d6fb8611dddbeddf23921f00d78a7c97290c58ac67eef497262eaf",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "guohuiyuan/go-music-dl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
+      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
+    },
+    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elvisun/newsjack",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source skills that turn your agent into a full PR team.",
+      "sourceUrl": "https://github.com/elvisun/newsjack"
+    },
+    "id": "44dfc094d8bd4f03534b7045e3d7457ba594de2caee4620a76c20c291dd5ebeb",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "godotengine/godot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
+      "sourceUrl": "https://github.com/godotengine/godot"
+    },
+    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "xiaolai/the-craft-of-selfteaching",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "One has no future if one couldn't teach themself.",
+      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
+    },
+    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "trailofbits/coop",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Isolated VM environment for running Claude Code and Codex",
+      "sourceUrl": "https://github.com/trailofbits/coop"
+    },
+    "id": "46fc3ce38e8658c65a1ad9b76b13a048e5af22c4cb6fce2599cf1d6581b98840",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "crivion/laranode",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free Hosting Panel - Easily manage your VPS/dedicated machine with Laranode (a cPanel/Plesk alternative)",
+      "sourceUrl": "https://github.com/crivion/laranode"
+    },
+    "id": "be4ac6a0ce83a0eda52dc00e00e6d97def2eb9ae2e9fe62cdf536c171708226c",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MakazhanAlpamys/Soup",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "sourceUrl": "https://github.com/MakazhanAlpamys/Soup"
+    },
+    "id": "898020f0590a8a9dd355f2aef55caf775a052a048bc9ff355306c6ec586b3365",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "martin-olivier/airgorah",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A WiFi security auditing software",
+      "sourceUrl": "https://github.com/martin-olivier/airgorah"
+    },
+    "id": "0e8468a7b47cd0e4abb2363cb5347b83edc2c60570e543494385ae45dfd6b168",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
   }
 ]

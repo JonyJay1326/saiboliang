@@ -1,61 +1,13 @@
 {
-  "9328fa400dd37e6b9e773781e78a2a50934d49d24282a5ac7e2d36068da55aca": {
-    "title": "OpenAI 将网络访问权限扩展至乌克兰用于民用防御",
-    "summary": "OpenAI 正在将其 Daybreak 计划的访问权限扩展至乌克兰政府，以支持民用基础设施的网络防御。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
   "4ab32af44318036a6678d60b40b879ed1caa589e30f1788e71b006cfed634216": {
     "title": "Sakeena Fiza 助力 NVIDIA 硬件大规模成功",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-23T15:28:02Z"
   },
-  "bea2af32f1da0c8a185a1ab879506cb142e44d2f1ca44ba99b0d68bb70dc85b6": {
-    "title": "Meta Ray-Ban Display新功能",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "095cd764ffcc82419290f7a0072f11761e54e65c1c059f012e65e29857176132": {
-    "title": "推出Meta VR Glasses：仅100克，集影院、场边座位与工作空间于一身",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
   "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2": {
     "title": "OpenAI Academy两周年",
     "summary": "纪念OpenAI Academy两周年，并将AI技能带给更多社区。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "347b65ce144a221e189c1995b6f8e902fff172db7617e6d8030d51c8740ce826": {
-    "title": "Sam Altman在联合国安理会的讲话",
-    "summary": "OpenAI CEO Sam Altman在联合国安理会讲话中讨论AI安全、人类控制与国际合作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "52b80abd4e046c041ffbe2a48399ded2b227e51686189386944c8dd9b0045fd6": {
-    "title": "Harvey借助GPT-6 Astra将法律语境转化为更强草稿",
-    "summary": "GPT-6 Astra生成更具结构性、更贴合语境的法律文件，让律师专注于策略。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "f2ff7f76056120414cf01f1bb6ef7b8e983d9d91ccfa0c5266573b74a0f9d93f": {
-    "title": "invideo如何借助GPT‑6 Astra将调色提升3倍",
-    "summary": "借助GPT‑6 Astra，invideo以更高精度规划剪辑，将色彩校正与调色提升三倍，并在一天内制作50个自定义效果。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "4e56c7312349a760a0edf744bd151f1352583693dfaa6156b9b09ca8e15ad634": {
-    "title": "Ringg的AI代理借助OpenAI解决高达65%的客户来电",
-    "summary": "使用GPT-5.6，Ringg为语音、聊天、WhatsApp和网页提供多语言代理，成本比GPT-4.1低90%。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "3d7b9aab56c8f4fe22c00cc0057db0cb0a00b0a30d0d99d476abe36917bfac64": {
-    "title": "推出MentalHealthBench",
-    "summary": "MentalHealthBench是一个由专家参与制定的基准，用于评估AI在真实心理健康对话中有帮助且安全的回应。",
     "source": "deepseek-flash",
     "at": "2026-09-24T03:48:13Z"
   },
@@ -134,24 +86,6 @@
   "de36fa73b8545f5faefd5fadce8c42b0a4186d84d66d0b88c38b68fa8a9c54b9": {
     "title": "GitHub Actions API 和 UI 中查询结果的变更",
     "summary": "在 GitHub Actions API 和 UI 中查询工作流运行时，按工作流、事件、状态、分支等搜索现在会返回精度较低但更准确的记录数…",
-    "source": "deepseek-flash",
-    "at": "2026-09-26T08:40:22Z"
-  },
-  "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7": {
-    "title": "Agentic autofix 现在使用 Copilot Memory",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-26T08:40:22Z"
-  },
-  "48eaa8bbafaa8bc422c903d52001ef78b32ca86bd6e5e361262f5285ae8fcaf0": {
-    "title": "GitHub Copilot 每周发布 — 9 月 21 日",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-26T08:40:22Z"
-  },
-  "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35": {
-    "title": "GitHub Copilot for Slack 和 Microsoft Teams 更新",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-26T08:40:22Z"
   }

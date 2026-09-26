@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-09-26T08:40:22Z",
+  "dataUpdatedAt": "2026-09-26T14:59:11Z",
   "items": [
+    {
+      "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+      "sourceUrl": "https://www.qbitai.com/2026/09/498478.html",
+      "publishedAt": "2026-09-26T11:49:43Z",
+      "source": "量子位",
+      "summary": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+      "id": "3bc674396d08da50e75288e449319ff46be57739c4d64c52300aa79ea48df806",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/498478.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-09-26T14:59:11Z",
+      "featured": true
+    },
     {
       "title": "Agentic autofix 现在使用 Copilot Memory",
       "sourceUrl": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
@@ -2092,6 +2111,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-26T08:40:22Z",
-  "generatedAt": "2026-09-26T08:40:22Z"
+  "version": "2026-09-26T14:59:11Z",
+  "generatedAt": "2026-09-26T14:59:11Z"
 }
