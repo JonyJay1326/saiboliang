@@ -460,5 +460,17 @@
     "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
     "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "julyx10/lap",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An offline-first photo manager for large local libraries",
+      "sourceUrl": "https://github.com/julyx10/lap"
+    },
+    "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
+    "status": "pending",
+    "createdAt": "2026-09-26T08:40:22Z"
   }
 ]

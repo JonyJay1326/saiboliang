@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-09-25T15:50:41Z",
+  "dataUpdatedAt": "2026-09-26T08:40:22Z",
   "items": [
+    {
+      "title": "Agentic autofix 现在使用 Copilot Memory",
+      "sourceUrl": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
+      "publishedAt": "2026-09-25T17:25:50Z",
+      "source": "GitHub",
+      "summary": "Agentic autofix 现使用 Copilot Memory，为已启用客户审查记忆以解决安全警报。",
+      "id": "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7",
+      "originalTitle": "Agentic autofix now uses Copilot Memory",
+      "translatedAt": "2026-09-26T08:40:22Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
+      "originalVerifiedAt": "2026-09-26T08:40:22Z",
+      "url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-26T08:40:22Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot 每周发布 — 9 月 21 日",
+      "sourceUrl": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
+      "publishedAt": "2026-09-25T16:42:48Z",
+      "source": "GitHub",
+      "summary": "本周发布为 Copilot 添加模型、应用本地沙箱，并更新 Slack、Teams、JetBrains 和 VS Code 中的 Copilot。",
+      "id": "48eaa8bbafaa8bc422c903d52001ef78b32ca86bd6e5e361262f5285ae8fcaf0",
+      "originalTitle": "GitHub Copilot weekly releases — September 21",
+      "translatedAt": "2026-09-26T08:40:22Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
+      "originalVerifiedAt": "2026-09-26T08:40:22Z",
+      "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-26T08:40:22Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot for Slack 和 Microsoft Teams 更新",
+      "sourceUrl": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams",
+      "publishedAt": "2026-09-25T16:33:42Z",
+      "source": "GitHub",
+      "summary": "Slack 和 Microsoft Teams 中的 GitHub Copilot 提供更多上下文与控制，从对话到 GitHub 工作路径更清晰。",
+      "id": "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35",
+      "originalTitle": "Updates to GitHub Copilot for Slack and Microsoft Teams",
+      "translatedAt": "2026-09-26T08:40:22Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams",
+      "originalVerifiedAt": "2026-09-26T08:40:22Z",
+      "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-26T08:40:22Z",
+      "featured": true
+    },
     {
       "title": "推出全新 Copilot，包含 Home、Code 和 Autopilot",
       "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
@@ -2035,6 +2092,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-25T15:50:41Z",
-  "generatedAt": "2026-09-25T15:50:41Z"
+  "version": "2026-09-26T08:40:22Z",
+  "generatedAt": "2026-09-26T08:40:22Z"
 }
