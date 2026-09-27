@@ -1,5 +1,4 @@
 {
-  "dataUpdatedAt": "2026-09-27T15:22:35Z",
   "items": [
     {
       "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
@@ -142,15 +141,15 @@
       "summary": "GitHub 为企业与组织 Copilot 设置引入新的全局默认策略，默认启用已正式发布的 Copilot 功能。",
       "id": "9111ec33ec962e74818200f53f102e1d1a15303de588283fe4b7afcbb2d357d9",
       "originalTitle": "Default Enablement of Copilot Features for Copilot Business and Enterprise",
-      "translatedAt": "2026-09-25T06:59:08Z",
+      "translatedAt": "2026-09-25T08:54:03Z",
       "lang": "en",
       "originalSource": "GitHub",
       "originalUrl": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
-      "originalVerifiedAt": "2026-09-25T06:59:08Z",
+      "originalVerifiedAt": "2026-09-25T08:54:03Z",
       "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
       "category": "tool",
       "eventType": "major-update",
-      "addedAt": "2026-09-25T06:59:08Z",
+      "addedAt": "2026-09-25T08:54:03Z",
       "featured": true
     },
     {
@@ -196,18 +195,18 @@
       "sourceUrl": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
       "publishedAt": "2026-09-24T16:20:39Z",
       "source": "Google DeepMind",
-      "summary": "Gemini 3.8 Live 与 Live Avatar 为 Gemini 对话式 AI 带来近乎实时的视觉呈现。",
+      "summary": "Gemini 3.8 Live 与 Live Avatar 为 Gemini 对话式 AI 带来近实时视觉呈现。",
       "id": "34692efacd3b982a5758af6c9efc6d456b1cc87fb4d06f241903d801f376c977",
       "originalTitle": "Introducing Gemini 3.8 Live with Live Avatar",
-      "translatedAt": "2026-09-25T06:59:08Z",
+      "translatedAt": "2026-09-25T08:54:03Z",
       "lang": "en",
       "originalSource": "Google DeepMind",
       "originalUrl": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
-      "originalVerifiedAt": "2026-09-25T06:59:08Z",
+      "originalVerifiedAt": "2026-09-25T08:54:03Z",
       "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
       "category": "model",
       "eventType": "model-release",
-      "addedAt": "2026-09-25T06:59:08Z",
+      "addedAt": "2026-09-25T08:54:03Z",
       "featured": true
     },
     {
@@ -455,6 +454,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-25T06:59:08Z",
+      "featured": true
+    },
+    {
+      "title": "推出Ray-Ban Meta Audio及更多AI眼镜款式",
+      "sourceUrl": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "publishedAt": "2026-09-23T11:36:25Z",
+      "source": "Meta",
+      "summary": "Connect大会上推出Ray-Ban Meta Audio首款音频眼镜，并大幅扩展AI眼镜产品线。",
+      "id": "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba",
+      "originalTitle": "Introducing Ray-Ban Meta Audio and More AI Glasses Styles",
+      "translatedAt": "2026-09-24T03:48:13Z",
+      "lang": "en",
+      "originalSource": "Meta",
+      "originalUrl": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "originalVerifiedAt": "2026-09-24T03:48:13Z",
+      "url": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-24T03:48:13Z",
       "featured": true
     },
     {
@@ -2264,5 +2282,6 @@
     }
   ],
   "version": "2026-09-27T15:22:35Z",
-  "generatedAt": "2026-09-27T15:22:35Z"
+  "generatedAt": "2026-09-27T15:22:35Z",
+  "dataUpdatedAt": "2026-09-27T15:22:35Z"
 }

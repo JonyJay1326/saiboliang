@@ -1,4 +1,16 @@
 {
+  "d1e7107e863f4f8a8586693db1559bf0dc2a5fe6e86ad119a1f4a2725e9a691e": {
+    "title": "开放科学如何帮助研究人员为下一次大流行做准备",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "508df2c327e989674eebe7c7ea66eb436a0dfd9258b992864af66ea98e1b3fc8": {
+    "title": "遏制混乱：《CONTROL Resonant》登陆 GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
   "657604e404f67dc2bcab5de98aa1df7a5e8d99a112e36503ed9883c3a239d40c": {
     "title": "Connect 2026 最大新闻",
     "summary": null,
@@ -11,11 +23,11 @@
     "source": "deepseek-flash",
     "at": "2026-09-25T06:59:08Z"
   },
-  "8c6ccd384bd032af71f4b58144cbe18da3322a0a88a2ecfec20737e681005962": {
-    "title": "以扩展的模型选择、语音代理和持续优化更快交付代理",
+  "f79e7d7a633843bfcb6cfc4479852b9c85bc14af6c5476abdd45bcd0d05ab0cf": {
+    "title": "CodeQL 2.27.1 新增 C 和 C++ 查询及 Kotlin 2.4.20 支持",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
+    "at": "2026-09-27T15:22:35Z"
   },
   "9de028fbe46cac8b155a7c08a35dfcf47f00596edbfe763bda6c0737c9cb02fb": {
     "title": "Proaction 借助 Codex 提升销售额 60% 并节省 75+ 小时",
@@ -47,6 +59,12 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T15:22:35Z"
   },
+  "8c6ccd384bd032af71f4b58144cbe18da3322a0a88a2ecfec20737e681005962": {
+    "title": "以扩展的模型选择、语音代理和持续优化更快交付代理",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-25T06:59:08Z"
+  },
   "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7": {
     "title": "Agentic autofix 现在使用 Copilot Memory",
     "summary": null,
@@ -61,12 +79,6 @@
   },
   "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35": {
     "title": "GitHub Copilot for Slack 和 Microsoft Teams 更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "f79e7d7a633843bfcb6cfc4479852b9c85bc14af6c5476abdd45bcd0d05ab0cf": {
-    "title": "CodeQL 2.27.1 新增 C 和 C++ 查询及 Kotlin 2.4.20 支持",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-27T15:22:35Z"

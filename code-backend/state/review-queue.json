@@ -1,18 +1,6 @@
 [
   {
     "kind": "github-classification",
-    "objectId": "bilawalsidhu/gods-eye-view",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "sourceUrl": "https://github.com/bilawalsidhu/gods-eye-view"
-    },
-    "id": "827018e5a1004e58afcd8b6fb291ee8ca49f362ca3c91d7fee343f9bbf1abf4e",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "omacom/omarchy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -20,6 +8,18 @@
       "sourceUrl": "https://github.com/omacom/omarchy"
     },
     "id": "1639e6e8864e861dc26f1dd67c4d85194d2c0b835e559341402bdf4ad2530146",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "debpalash/VoiceStudio",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "sourceUrl": "https://github.com/debpalash/VoiceStudio"
+    },
+    "id": "3f4dba959b0f55b4bfdc714dac6879671768b0460f83f09450f24786cded2e36",
     "status": "pending",
     "createdAt": "2026-09-17T11:02:17Z"
   },
@@ -37,6 +37,18 @@
   },
   {
     "kind": "github-classification",
+    "objectId": "bilawalsidhu/gods-eye-view",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "sourceUrl": "https://github.com/bilawalsidhu/gods-eye-view"
+    },
+    "id": "827018e5a1004e58afcd8b6fb291ee8ca49f362ca3c91d7fee343f9bbf1abf4e",
+    "status": "pending",
+    "createdAt": "2026-09-17T11:02:17Z"
+  },
+  {
+    "kind": "github-classification",
     "objectId": "cursor/plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -44,18 +56,6 @@
       "sourceUrl": "https://github.com/cursor/plugins"
     },
     "id": "8c0abb014382d3fa049c094e4fd89a8aacc4ccc2e5149be8ee9a20040df0c231",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "debpalash/VoiceStudio",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "sourceUrl": "https://github.com/debpalash/VoiceStudio"
-    },
-    "id": "3f4dba959b0f55b4bfdc714dac6879671768b0460f83f09450f24786cded2e36",
     "status": "pending",
     "createdAt": "2026-09-17T11:02:17Z"
   },
@@ -85,18 +85,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "p-e-w/heretic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully automatic censorship removal for language models",
-      "sourceUrl": "https://github.com/p-e-w/heretic"
-    },
-    "id": "4fdd8ea1c3b1c029d49de4c28b43b58d866ea1d02b14213507dbd1f0356c57e8",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "experientiallabs/experiential",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -104,6 +92,18 @@
       "sourceUrl": "https://github.com/experientiallabs/experiential"
     },
     "id": "4a13303498df8979745b9570963eeb907e91f2f0adbc38f707c4e8446f552417",
+    "status": "pending",
+    "createdAt": "2026-09-17T16:46:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "p-e-w/heretic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully automatic censorship removal for language models",
+      "sourceUrl": "https://github.com/p-e-w/heretic"
+    },
+    "id": "4fdd8ea1c3b1c029d49de4c28b43b58d866ea1d02b14213507dbd1f0356c57e8",
     "status": "pending",
     "createdAt": "2026-09-17T16:46:49Z"
   },
@@ -169,25 +169,13 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Open-Dev-Society/OpenStock",
+    "objectId": "fmtlib/fmt",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
-      "sourceUrl": "https://github.com/Open-Dev-Society/OpenStock"
+      "description": "A modern formatting library",
+      "sourceUrl": "https://github.com/fmtlib/fmt"
     },
-    "id": "80d86b86328421d2fc3debed1c945bd8eae285299974ff2d69a055c1734dbf3e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "coder/coder",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Secure environments for developers and their agents",
-      "sourceUrl": "https://github.com/coder/coder"
-    },
-    "id": "dac6480061235ffc59dee88ddbb37f9fdf03c8360d1cec00d9f99adce3cd913e",
+    "id": "098a691b69a1b2402241f464ef02cca6ab0482e71ba6381be9290df54981ec2e",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -200,6 +188,18 @@
       "sourceUrl": "https://github.com/jackfrued/Python-100-Days"
     },
     "id": "20ef6185856bcb9f809cc4be61657928d5e4cfb39c8f1a685693f2e0cd08379a",
+    "status": "pending",
+    "createdAt": "2026-09-20T06:51:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "luolangaga/tubatools",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "图吧工具箱 CE",
+      "sourceUrl": "https://github.com/luolangaga/tubatools"
+    },
+    "id": "42d58e98acd1c3161e23b0444c77cd8510ba4554fb00893443e8708ffbe31ef4",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -229,37 +229,13 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Gitlawb/openclaude",
+    "objectId": "Open-Dev-Society/OpenStock",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "runs anywhere. uses anything",
-      "sourceUrl": "https://github.com/Gitlawb/openclaude"
+      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+      "sourceUrl": "https://github.com/Open-Dev-Society/OpenStock"
     },
-    "id": "be282e2fb84860beebb47d7b575f6b37f91767e704140313dac8a9aad82f1822",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "fmtlib/fmt",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern formatting library",
-      "sourceUrl": "https://github.com/fmtlib/fmt"
-    },
-    "id": "098a691b69a1b2402241f464ef02cca6ab0482e71ba6381be9290df54981ec2e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "luolangaga/tubatools",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "图吧工具箱 CE",
-      "sourceUrl": "https://github.com/luolangaga/tubatools"
-    },
-    "id": "42d58e98acd1c3161e23b0444c77cd8510ba4554fb00893443e8708ffbe31ef4",
+    "id": "80d86b86328421d2fc3debed1c945bd8eae285299974ff2d69a055c1734dbf3e",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -272,6 +248,30 @@
       "sourceUrl": "https://github.com/2dust/v2rayN"
     },
     "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
+    "status": "pending",
+    "createdAt": "2026-09-20T06:51:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Gitlawb/openclaude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "runs anywhere. uses anything",
+      "sourceUrl": "https://github.com/Gitlawb/openclaude"
+    },
+    "id": "be282e2fb84860beebb47d7b575f6b37f91767e704140313dac8a9aad82f1822",
+    "status": "pending",
+    "createdAt": "2026-09-20T06:51:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "coder/coder",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Secure environments for developers and their agents",
+      "sourceUrl": "https://github.com/coder/coder"
+    },
+    "id": "dac6480061235ffc59dee88ddbb37f9fdf03c8360d1cec00d9f99adce3cd913e",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -312,18 +312,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "JustVugg/colibri",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
-      "sourceUrl": "https://github.com/JustVugg/colibri"
-    },
-    "id": "e790a89837a938b313a055389eb5a1c8b4eba08cacaf32efb9d6547a68a4ba1b",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/financial-services",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -331,6 +319,18 @@
       "sourceUrl": "https://github.com/anthropics/financial-services"
     },
     "id": "ddbe2cca52106a7de3f2fc97a8623732e9e72876785f97c870c80b20c9030f02",
+    "status": "pending",
+    "createdAt": "2026-09-21T17:06:12Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "JustVugg/colibri",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "sourceUrl": "https://github.com/JustVugg/colibri"
+    },
+    "id": "e790a89837a938b313a055389eb5a1c8b4eba08cacaf32efb9d6547a68a4ba1b",
     "status": "pending",
     "createdAt": "2026-09-21T17:06:12Z"
   },
@@ -347,18 +347,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ahmedkhaleel2004/gitdiagram",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, simple, fast interactive diagrams for any GitHub repository",
-      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
-    },
-    "id": "ec04343ef90aa61173013e5aea9df24941613657c2bb38cdd4e46a74294fbd4d",
-    "status": "pending",
-    "createdAt": "2026-09-22T15:32:21Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "agent-substrate/substrate",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -366,6 +354,18 @@
       "sourceUrl": "https://github.com/agent-substrate/substrate"
     },
     "id": "3d1e8126636a1b3b3ed066e60654b7ed283f0f4d19ce1d32143c956d83a2ad8b",
+    "status": "pending",
+    "createdAt": "2026-09-22T15:32:21Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ahmedkhaleel2004/gitdiagram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free, simple, fast interactive diagrams for any GitHub repository",
+      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
+    },
+    "id": "ec04343ef90aa61173013e5aea9df24941613657c2bb38cdd4e46a74294fbd4d",
     "status": "pending",
     "createdAt": "2026-09-22T15:32:21Z"
   },
@@ -393,6 +393,18 @@
   },
   {
     "kind": "github-classification",
+    "objectId": "mvt-project/mvt",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "sourceUrl": "https://github.com/mvt-project/mvt"
+    },
+    "id": "bb8575980dec4af44620ee4d4adec207840aca32e6ebbc8a27d26343726a4881",
+    "status": "pending",
+    "createdAt": "2026-09-23T15:28:02Z"
+  },
+  {
+    "kind": "github-classification",
     "objectId": "cloudflare/quiche",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -405,90 +417,36 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "mvt-project/mvt",
+    "objectId": "hydra-db/hydradb",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
-      "sourceUrl": "https://github.com/mvt-project/mvt"
+      "description": "HydraDB - fast graph database on object storage",
+      "sourceUrl": "https://github.com/hydra-db/hydradb"
     },
-    "id": "bb8575980dec4af44620ee4d4adec207840aca32e6ebbc8a27d26343726a4881",
+    "id": "328d2c8d826b53fc3f42b1b61e636b8bddcefe7424191355b83cf7b9a067b250",
     "status": "pending",
-    "createdAt": "2026-09-23T15:28:02Z"
+    "createdAt": "2026-09-24T15:50:19Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "7663b51ef99ebb29ab6a7e62d427edd3e392b5aae6057cc6aa7d113b337a685a",
-    "reason": "invalid feed item: unexpected news host",
+    "kind": "github-classification",
+    "objectId": "vectorize-io/hindsight",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "source": "Microsoft Azure"
+      "description": "Hindsight: Agent Memory That Learns",
+      "sourceUrl": "https://github.com/vectorize-io/hindsight"
     },
-    "id": "6af8b13be2dacbb7a78152de2faed6d8a38dd75def22457fe92eafe433a3263a",
+    "id": "8b843c7c27471fea702d37d63f13c2acbe10e3d91752ecd3fa84e406f6a71cee",
     "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
+    "createdAt": "2026-09-24T15:50:19Z"
   },
   {
     "kind": "news-item",
-    "objectId": "b5f456afce24eb12fd731444abea92ed92dd15d7104b5adf63df31feba57d3ba",
+    "objectId": "a70f3d0a05043d18817e86bfc6bb4b3a0508e7d3ad7deb24deaea2b8695ec416",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
       "source": "Together AI"
     },
-    "id": "4bb2fd99a344482f9ba13abd62eae16c22a959b38250f30b47e5c5bafc451721",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "4ed856e7925d24dd773b0c45c87138950fe382a137d940b84b889afe0f853a7d",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "37335b876ffdab832088a77c21b5a37fa5c6f9b7df96d2158c03891daff26a1e",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "d656bdaac72c3c1db5990b8f5288b249403a4b89f669d8828b4609ed6c3553e6",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "be2c72d0a0a8a3548dac6852b6693b3cf592aa7339f75a5963d18fe4f6a8096f",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "010aa2a729146f3ccfd8a7ff1fbb716a499abfe77c16d03cb5ef6b13450186ce",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "e6fbef7b3d8f6dafd5429edec398c288dbea626175bbc09e2d024e602771fb56",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "4f79d1d276a7df16b91d3b689436d11f05b8c8b4ab610e261aa4e4c334e7f2f2",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "67c4fda558e1ccf5b5398dc52fdfc91ec441a21b1a25f2653ae94bde2eb59b80",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "0b8d9dce8cff70c8cd2208820c8fdce8bad16c2bb8c78daf5e72c7c0debf74d4",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "df3593125b635dee3c509c1d890b584fe0ad4bbd8613fc70d228c62cc96c44ed",
+    "id": "2e394782ed77c814876634ee4ceefaeaee10aa463300cb62d1eb752846ed6f0c",
     "status": "pending",
     "createdAt": "2026-09-25T06:59:08Z"
   },
@@ -505,78 +463,12 @@
   },
   {
     "kind": "news-item",
-    "objectId": "d1e8eda0e155f35824a6578d104d0bde4bc2ee46311c4060eb8effd4ee7a9a42",
+    "objectId": "4ed856e7925d24dd773b0c45c87138950fe382a137d940b84b889afe0f853a7d",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
       "source": "Together AI"
     },
-    "id": "5fef0286c7e15d9a4e73b915092f05fddb6b6a4aafb0bef6072afdaead73d3a2",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "9b12cf7ba8f1e2ecfdedb3c7707edf1f26050ac02393dc39d7732fea39e9b071",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "4cf29b668b650892cd48b4223f180110190c859f50fa28138068edf753ddde2b",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "e5d250bcdf8eb062cbf07ce72f9a0a58053f9f4e3b40e858ada550135f498a2d",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "f120521e324e711c681810b88a320016c457ddc7186e8395202b469814d651b1",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "715d3f976d1ccc3f77604f6eb0f0bbf2bd35759c3221c8746419035b901b52d5",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "fbb659805e682c8cce783a00a2fd2a20404f33497ca3b780fbf08d5fdfd5365a",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "272ac80d602e20cf1396f8051fab5d91b9424ea2c907dc2cf133832f77791b66",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "e60da6b318977ea32f7c5b347c448eb7b0e956787da93674670787ba2960de96",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "a70f3d0a05043d18817e86bfc6bb4b3a0508e7d3ad7deb24deaea2b8695ec416",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "2e394782ed77c814876634ee4ceefaeaee10aa463300cb62d1eb752846ed6f0c",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "dc86e63ec13fd1773a1f60691cae9f431bf15718c3e2c5a1e0fece77da8f25ca",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "dc88512538c17d77c1c6083f39857a6e300fa1ab855df4f890f65a0e32308c3c",
+    "id": "37335b876ffdab832088a77c21b5a37fa5c6f9b7df96d2158c03891daff26a1e",
     "status": "pending",
     "createdAt": "2026-09-25T06:59:08Z"
   },
@@ -604,6 +496,138 @@
   },
   {
     "kind": "news-item",
+    "objectId": "b5f456afce24eb12fd731444abea92ed92dd15d7104b5adf63df31feba57d3ba",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "4bb2fd99a344482f9ba13abd62eae16c22a959b38250f30b47e5c5bafc451721",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "9b12cf7ba8f1e2ecfdedb3c7707edf1f26050ac02393dc39d7732fea39e9b071",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "4cf29b668b650892cd48b4223f180110190c859f50fa28138068edf753ddde2b",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "d1e8eda0e155f35824a6578d104d0bde4bc2ee46311c4060eb8effd4ee7a9a42",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "5fef0286c7e15d9a4e73b915092f05fddb6b6a4aafb0bef6072afdaead73d3a2",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "4f79d1d276a7df16b91d3b689436d11f05b8c8b4ab610e261aa4e4c334e7f2f2",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "67c4fda558e1ccf5b5398dc52fdfc91ec441a21b1a25f2653ae94bde2eb59b80",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "7663b51ef99ebb29ab6a7e62d427edd3e392b5aae6057cc6aa7d113b337a685a",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "6af8b13be2dacbb7a78152de2faed6d8a38dd75def22457fe92eafe433a3263a",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "d656bdaac72c3c1db5990b8f5288b249403a4b89f669d8828b4609ed6c3553e6",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "be2c72d0a0a8a3548dac6852b6693b3cf592aa7339f75a5963d18fe4f6a8096f",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "5562d4af1c32fc4324a0734d8bcd33e8fdd574a90cbefe2e3ff1d53ec61cf4ce",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "c1df8a010a4241e46745d29703366b1a52c1642511c2b7bd7d8b6219b6aa4bb4",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "dc86e63ec13fd1773a1f60691cae9f431bf15718c3e2c5a1e0fece77da8f25ca",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "dc88512538c17d77c1c6083f39857a6e300fa1ab855df4f890f65a0e32308c3c",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "0b8d9dce8cff70c8cd2208820c8fdce8bad16c2bb8c78daf5e72c7c0debf74d4",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "df3593125b635dee3c509c1d890b584fe0ad4bbd8613fc70d228c62cc96c44ed",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "272ac80d602e20cf1396f8051fab5d91b9424ea2c907dc2cf133832f77791b66",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "e60da6b318977ea32f7c5b347c448eb7b0e956787da93674670787ba2960de96",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "010aa2a729146f3ccfd8a7ff1fbb716a499abfe77c16d03cb5ef6b13450186ce",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "e6fbef7b3d8f6dafd5429edec398c288dbea626175bbc09e2d024e602771fb56",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "e5d250bcdf8eb062cbf07ce72f9a0a58053f9f4e3b40e858ada550135f498a2d",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "Together AI"
+    },
+    "id": "f120521e324e711c681810b88a320016c457ddc7186e8395202b469814d651b1",
+    "status": "pending",
+    "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "news-item",
     "objectId": "9796f6029de66e67416627619b5648a0bb036447f3dafed996f93b5a8757c4c2",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
@@ -626,13 +650,169 @@
   },
   {
     "kind": "news-item",
-    "objectId": "5562d4af1c32fc4324a0734d8bcd33e8fdd574a90cbefe2e3ff1d53ec61cf4ce",
+    "objectId": "715d3f976d1ccc3f77604f6eb0f0bbf2bd35759c3221c8746419035b901b52d5",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
       "source": "Together AI"
     },
-    "id": "c1df8a010a4241e46745d29703366b1a52c1642511c2b7bd7d8b6219b6aa4bb4",
+    "id": "fbb659805e682c8cce783a00a2fd2a20404f33497ca3b780fbf08d5fdfd5365a",
     "status": "pending",
     "createdAt": "2026-09-25T06:59:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "harry7557558/spirula-studio",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
+      "sourceUrl": "https://github.com/harry7557558/spirula-studio"
+    },
+    "id": "3d32b047f58906eb05048215b057304582cb31df5a3ef5bc00feb0e7651d0e45",
+    "status": "pending",
+    "createdAt": "2026-09-25T08:54:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "paperclipai/paperclip",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source app everyone uses to manage agents at work",
+      "sourceUrl": "https://github.com/paperclipai/paperclip"
+    },
+    "id": "68045d0329774c6004fc13032b0e8972fe26c1e7df1f0e81ab0160dec6db224e",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "abue-ammar/tinycast",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "sourceUrl": "https://github.com/abue-ammar/tinycast"
+    },
+    "id": "da351cf100e8048e4620a460e62ba6b196959baec6c0c32b98fe665cdf077c08",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HKUDS/CLI-Anything",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "sourceUrl": "https://github.com/HKUDS/CLI-Anything"
+    },
+    "id": "e0a128b52fde854252bb47dfa6d1bef454c3e7d5c313ccbbb71d8bf5258ecd04",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailcat",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "sourceUrl": "https://github.com/tailscale/tailcat"
+    },
+    "id": "e7d412f54cc23340ebf88b6a7e127b7945a69d19a4225cc8fe7b071e3bf3dcec",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ahmedkhaleel2004/gitdiagram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free, simple, fast interactive diagrams and videos for any GitHub repository",
+      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
+    },
+    "id": "f0002b0872f5b9dcd387c3a17f92ba27ac9ccc9f2e944ec815ce8fe7739dbece",
+    "status": "pending",
+    "createdAt": "2026-09-25T15:50:41Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "julyx10/lap",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An offline-first photo manager for large local libraries",
+      "sourceUrl": "https://github.com/julyx10/lap"
+    },
+    "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
+    "status": "pending",
+    "createdAt": "2026-09-26T08:40:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "martin-olivier/airgorah",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A WiFi security auditing software",
+      "sourceUrl": "https://github.com/martin-olivier/airgorah"
+    },
+    "id": "0e8468a7b47cd0e4abb2363cb5347b83edc2c60570e543494385ae45dfd6b168",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "xiaolai/the-craft-of-selfteaching",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "One has no future if one couldn't teach themself.",
+      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
+    },
+    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "trailofbits/coop",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Isolated VM environment for running Claude Code and Codex",
+      "sourceUrl": "https://github.com/trailofbits/coop"
+    },
+    "id": "46fc3ce38e8658c65a1ad9b76b13a048e5af22c4cb6fce2599cf1d6581b98840",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MakazhanAlpamys/Soup",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "sourceUrl": "https://github.com/MakazhanAlpamys/Soup"
+    },
+    "id": "898020f0590a8a9dd355f2aef55caf775a052a048bc9ff355306c6ec586b3365",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "godotengine/godot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
+      "sourceUrl": "https://github.com/godotengine/godot"
+    },
+    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FxEmbed/FxEmbed",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+      "sourceUrl": "https://github.com/FxEmbed/FxEmbed"
+    },
+    "id": "cd20c428d8d6fb8611dddbeddf23921f00d78a7c97290c58ac67eef497262eaf",
+    "status": "pending",
+    "createdAt": "2026-09-26T14:59:11Z"
   }
 ]

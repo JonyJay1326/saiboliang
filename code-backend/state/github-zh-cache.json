@@ -1,9 +1,4 @@
 {
-  "multimodal-art-projection/YuE": {
-    "text": "YuE2：前沿音乐生成，具备符号规划、零样本翻唱与智能体音乐编辑。",
-    "source": "deepseek-flash",
-    "at": "2026-09-19T08:18:50Z"
-  },
   "weave-os/router": {
     "text": "面向智能体系统的模型路由器。在 50ms 内将每个提示路由到合适的模型。仅需更改端点即可降低成本 40-70%。",
     "source": "deepseek-flash",
@@ -11,11 +6,6 @@
   },
   "anthropics/claude-code": {
     "text": "Claude Code 是一个代理式编码工具，运行在终端中，理解你的代码库，通过自然语言命令执行日常任务、解释复杂代码并处理 git 工作流，帮助你更快编码。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "Fission-AI/OpenSpec": {
-    "text": "面向 AI 编码助手的规范驱动开发（SDD）。",
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
@@ -29,18 +19,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "decolua/9router": {
-    "text": "无限免费 AI 编码。通过 40+ 提供商将 Claude Code、Codex、Cursor、Cline、Copilot、Antigravity 连接到免费的 Claude/GPT/Gemini。自动回退，RTK 减少 40% token，永不触及限制。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "NVIDIA/SkillSpector": {
     "text": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
-  "tech-leads-club/agent-skills": {
-    "text": "面向专业 AI 编码代理的安全、经过验证的技能注册表。以绝对信心扩展 Antigravity、Claude Code、Cursor、Copilot 等。",
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
@@ -54,28 +34,13 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "alphaXiv/OpenResearch": {
-    "text": "将你的编码代理转变为研究代理",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "TencentCloud/Octop": {
     "text": "更智能的自托管 AI 助手——多用户、多代理。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "jamiepine/voicebox": {
-    "text": "开源 AI 语音工作室。克隆、听写、创作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "higgsfield-ai/higgsfield": {
     "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型设计的机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "multica-ai/multica": {
-    "text": "让人类与 AI 代理作为一个团队协作——开源且可自托管。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -109,11 +74,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "FlashML-org/FreeToken": {
-    "text": "FreeToken 将数据中心级模型服务带到你的桌面。在本地快速高效运行大型模型。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "heygen-com/hyperframes": {
     "text": "编写 HTML。渲染视频。为代理而构建。",
     "source": "deepseek-flash",
@@ -126,11 +86,6 @@
   },
   "k2-fsa/OmniVoice": {
     "text": "面向 600+ 语言的高质量语音克隆 TTS",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "chaitanyagiri/munder-difflin": {
-    "text": "本地多代理工具集，兼容你现有的 Claude Code、Codex 订阅，让你运行一个代理办公室",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -149,18 +104,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "marin-community/marin": {
-    "text": "用于基础模型研究与开发的开源框架。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "jo-inc/camofox-browser": {
     "text": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "WorldFlowAI/everything-claude-code": {
-    "text": "Claude Code 工具集——代理、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -173,5 +118,70 @@
     "text": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
     "source": "deepseek-flash",
     "at": "2026-09-23T15:28:02Z"
+  },
+  "strands-agents/harness-sdk": {
+    "text": "构建智能体运行框架并端到端控制。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript，兼容任意模型与云。",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "JetBrains/go-modern-guidelines": {
+    "text": "帮助 AI 编程智能体编写现代 Go 代码",
+    "source": "deepseek-flash",
+    "at": "2026-09-24T15:50:19Z"
+  },
+  "Nasiko-Labs/nasiko": {
+    "text": "面向 AI Agent 的开发者控制平面",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "pbakaus/impeccable": {
+    "text": "让 AI 工具在设计中表现更佳的设计语言。",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "bendlang/bend": {
+    "text": "Bend 2：通过证明阻止 AI 错误的快速语言。安装：curl -fsSL https://bend-lang.com/install.sh | sh",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "linshenkx/prompt-optimizer": {
+    "text": "AI 提示词优化器，用于编写更好的提示词并获得更好的 AI 结果。",
+    "source": "deepseek-flash",
+    "at": "2026-09-25T15:50:41Z"
+  },
+  "NVIDIA/Model-Optimizer": {
+    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，优化推理速度。",
+    "source": "deepseek-flash",
+    "at": "2026-09-26T14:59:11Z"
+  },
+  "upscayl/upscayl": {
+    "text": "Upscayl - 适用于 Linux、MacOS 和 Windows 的首选免费开源 AI 图像放大工具。",
+    "source": "deepseek-flash",
+    "at": "2026-09-26T14:59:11Z"
+  },
+  "yikart/AiToEarn": {
+    "text": "让我们用 AI 赚钱！",
+    "source": "deepseek-flash",
+    "at": "2026-09-26T14:59:11Z"
+  },
+  "androoAGI/starnet": {
+    "text": "一个活的像素艺术工作站，真实 AI 代理在此做真实工作。本地优先的桌面代理框架——自带密钥，观看你的团队实际运行。",
+    "source": "deepseek-flash",
+    "at": "2026-09-26T14:59:11Z"
+  },
+  "aipoch/open-science": {
+    "text": "面向科学研究和代理工作流的开源 AI 研究工作台。本地优先、模型无关的桌面应用，具备可扩展技能、MCP 工具与连接器、Python/R 执行和可追溯产物，支持在 macOS、Windows 和 Linux 上可复现研究。",
+    "source": "deepseek-flash",
+    "at": "2026-09-26T14:59:11Z"
+  },
+  "leejet/stable-diffusion.cpp": {
+    "text": "纯 C/C++ 实现扩散模型（SD、Flux、Wan、Qwen Image、Z-Image 等）推理",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T09:20:54Z"
+  },
+  "tech-leads-club/agent-skills": {
+    "text": "面向专业 AI 编程代理的安全、经验证的技能注册表，可为 Antigravity、Claude Code、Cursor、Copilot 等扩展。",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T09:20:54Z"
   }
 }
