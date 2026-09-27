@@ -1,28 +1,4 @@
 {
-  "4ab32af44318036a6678d60b40b879ed1caa589e30f1788e71b006cfed634216": {
-    "title": "Sakeena Fiza 助力 NVIDIA 硬件大规模成功",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
-  "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2": {
-    "title": "OpenAI Academy两周年",
-    "summary": "纪念OpenAI Academy两周年，并将AI技能带给更多社区。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "1ccf342131e2aeec4f4fe8c75573cce60b5b683832736c876a4b4efd9246c890": {
-    "title": "Google Beam扩展至新地区、合作伙伴和客户",
-    "summary": "Google Beam宣传动画",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
-  "68ead6b6af2b71441cd0f5e7ee92c2f76d1d2603c4161faf27e658aafd17eb6c": {
-    "title": "以安全服务器端内存推进Private AI Compute",
-    "summary": "为Private AI Compute引入私密服务器端内存，服务于个人AI。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T03:48:13Z"
-  },
   "d1e7107e863f4f8a8586693db1559bf0dc2a5fe6e86ad119a1f4a2725e9a691e": {
     "title": "开放科学如何帮助研究人员为下一次大流行做准备",
     "summary": null,
@@ -43,12 +19,6 @@
   },
   "b0878320c6bd0cfba3b38a1d5ad22ee1f88ff6ce14a0a4aa125407f0e3159ecd": {
     "title": "对高影响操作要求存在证明",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T08:54:03Z"
-  },
-  "cc00b97f830449443f7c8d24914e9a868ff805f69fcb1b7d2e5970ebe3f4fbf4": {
-    "title": "你的架构图不是你的韧性",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-25T08:54:03Z"
@@ -88,5 +58,11 @@
     "summary": "在 GitHub Actions API 和 UI 中查询工作流运行时，按工作流、事件、状态、分支等搜索现在会返回精度较低但更准确的记录数…",
     "source": "deepseek-flash",
     "at": "2026-09-26T08:40:22Z"
+  },
+  "8c6ccd384bd032af71f4b58144cbe18da3322a0a88a2ecfec20737e681005962": {
+    "title": "借助扩展模型选择、语音代理和持续优化，更快交付代理",
+    "summary": "最适合您业务的模型会不断变化。采用它应推动业务前进，而不是让团队回头重建架构。本文最初发表于 Microsoft Azure Blog。",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T09:20:54Z"
   }
 }

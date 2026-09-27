@@ -169,18 +169,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ankitects/anki",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Anki is a smart spaced repetition flashcard program",
-      "sourceUrl": "https://github.com/ankitects/anki"
-    },
-    "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Gitlawb/openclaude",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -464,30 +452,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "guohuiyuan/go-music-dl",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
-      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
-    },
-    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "elvisun/newsjack",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The open-source skills that turn your agent into a full PR team.",
-      "sourceUrl": "https://github.com/elvisun/newsjack"
-    },
-    "id": "44dfc094d8bd4f03534b7045e3d7457ba594de2caee4620a76c20c291dd5ebeb",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "godotengine/godot",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -519,18 +483,6 @@
       "sourceUrl": "https://github.com/trailofbits/coop"
     },
     "id": "46fc3ce38e8658c65a1ad9b76b13a048e5af22c4cb6fce2599cf1d6581b98840",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "crivion/laranode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free Hosting Panel - Easily manage your VPS/dedicated machine with Laranode (a cPanel/Plesk alternative)",
-      "sourceUrl": "https://github.com/crivion/laranode"
-    },
-    "id": "be4ac6a0ce83a0eda52dc00e00e6d97def2eb9ae2e9fe62cdf536c171708226c",
     "status": "pending",
     "createdAt": "2026-09-26T14:59:11Z"
   },
