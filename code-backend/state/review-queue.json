@@ -1,18 +1,6 @@
 [
   {
     "kind": "github-classification",
-    "objectId": "omacom/omarchy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Beautiful, Modern & Opinionated Linux",
-      "sourceUrl": "https://github.com/omacom/omarchy"
-    },
-    "id": "1639e6e8864e861dc26f1dd67c4d85194d2c0b835e559341402bdf4ad2530146",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "debpalash/VoiceStudio",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -20,18 +8,6 @@
       "sourceUrl": "https://github.com/debpalash/VoiceStudio"
     },
     "id": "3f4dba959b0f55b4bfdc714dac6879671768b0460f83f09450f24786cded2e36",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "anthropics/claude-plugins-community",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
-      "sourceUrl": "https://github.com/anthropics/claude-plugins-community"
-    },
-    "id": "780022c031c248b69a837d53ba2b7b52f6971651ee2b2b8be12357d2c5b93f64",
     "status": "pending",
     "createdAt": "2026-09-17T11:02:17Z"
   },
@@ -109,30 +85,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "k1tbyte/Wand-Enhancer",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
-      "sourceUrl": "https://github.com/k1tbyte/Wand-Enhancer"
-    },
-    "id": "e0e111499b46265bf24a30216349e8a3ed5245b1f3e06b8dbf3a79b42f795bca",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:49:41Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SnailSploit/Claude-Red",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
-      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
-    },
-    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-09-19T07:47:34Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "jiji262/douyin-downloader",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -176,18 +128,6 @@
       "sourceUrl": "https://github.com/fmtlib/fmt"
     },
     "id": "098a691b69a1b2402241f464ef02cca6ab0482e71ba6381be9290df54981ec2e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "jackfrued/Python-100-Days",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Python - 100天从新手到大师",
-      "sourceUrl": "https://github.com/jackfrued/Python-100-Days"
-    },
-    "id": "20ef6185856bcb9f809cc4be61657928d5e4cfb39c8f1a685693f2e0cd08379a",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -323,18 +263,6 @@
     "createdAt": "2026-09-21T17:06:12Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "JustVugg/colibri",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
-      "sourceUrl": "https://github.com/JustVugg/colibri"
-    },
-    "id": "e790a89837a938b313a055389eb5a1c8b4eba08cacaf32efb9d6547a68a4ba1b",
-    "status": "pending",
-    "createdAt": "2026-09-21T17:06:12Z"
-  },
-  {
     "kind": "plans",
     "objectId": "copilot-coding-plan",
     "reason": "official terms changed; retaining prior record",
@@ -354,18 +282,6 @@
       "sourceUrl": "https://github.com/agent-substrate/substrate"
     },
     "id": "3d1e8126636a1b3b3ed066e60654b7ed283f0f4d19ce1d32143c956d83a2ad8b",
-    "status": "pending",
-    "createdAt": "2026-09-22T15:32:21Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ahmedkhaleel2004/gitdiagram",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, simple, fast interactive diagrams for any GitHub repository",
-      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
-    },
-    "id": "ec04343ef90aa61173013e5aea9df24941613657c2bb38cdd4e46a74294fbd4d",
     "status": "pending",
     "createdAt": "2026-09-22T15:32:21Z"
   },
@@ -685,18 +601,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "abue-ammar/tinycast",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
-      "sourceUrl": "https://github.com/abue-ammar/tinycast"
-    },
-    "id": "da351cf100e8048e4620a460e62ba6b196959baec6c0c32b98fe665cdf077c08",
-    "status": "pending",
-    "createdAt": "2026-09-25T15:50:41Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/CLI-Anything",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -793,18 +697,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "godotengine/godot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
-      "sourceUrl": "https://github.com/godotengine/godot"
-    },
-    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "FxEmbed/FxEmbed",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -814,5 +706,197 @@
     "id": "cd20c428d8d6fb8611dddbeddf23921f00d78a7c97290c58ac67eef497262eaf",
     "status": "pending",
     "createdAt": "2026-09-26T14:59:11Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vercel/next.js",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The React Framework",
+      "sourceUrl": "https://github.com/vercel/next.js"
+    },
+    "id": "8087ac37fdea5c6a0ab0f1c1da3dee3a60c0524f93175977fe0abc6cd6e30bdf",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kubernetes/kubernetes",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Production-Grade Container Scheduling and Management",
+      "sourceUrl": "https://github.com/kubernetes/kubernetes"
+    },
+    "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "caddyserver/caddy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "sourceUrl": "https://github.com/caddyserver/caddy"
+    },
+    "id": "ff301507dc9946038e3a9d0fc71900a04b6011bbc1a4abb3bd8ff61064c8cc29",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "guohuiyuan/go-music-dl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
+      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
+    },
+    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elvisun/newsjack",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source skills that turn your agent into a full PR team.",
+      "sourceUrl": "https://github.com/elvisun/newsjack"
+    },
+    "id": "44dfc094d8bd4f03534b7045e3d7457ba594de2caee4620a76c20c291dd5ebeb",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "openbao/openbao",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "sourceUrl": "https://github.com/openbao/openbao"
+    },
+    "id": "2b3679e26dba551e67a0d96cb1d41d263f39b2f0bb1fc6f4433ca543633d1170",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pdone/lx-music-source",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "洛雪音乐源",
+      "sourceUrl": "https://github.com/pdone/lx-music-source"
+    },
+    "id": "333f067f661f80f959b717f5e8b42d98712981e245bd0c8de45fa020ee0ec318",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rust-lang/rust",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "sourceUrl": "https://github.com/rust-lang/rust"
+    },
+    "id": "1a855e1f24fca2414d72b77b48df790bfdf98ecef7ca8e0a2067f53bf4faf1cd",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "longbridge/gpui-kit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Rust GUI components for building fantastic cross-platform desktop application by using GPUI.",
+      "sourceUrl": "https://github.com/longbridge/gpui-kit"
+    },
+    "id": "6fd761aca05276d26bc1339ff83f23abb318920f936b5da65c3e21e5600979d9",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "juspay/hyperswitch",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source, composable payments platform | PCI compliant | SaaS and Self-host options | Enables connectivity to multiple payment, payout, fraud, vault and tokenization providers | Uplifts authorization with intelligent routing and revenue recovery | Reduce payment processing costs with cost observability | Reduces payment ops with reconciliation",
+      "sourceUrl": "https://github.com/juspay/hyperswitch"
+    },
+    "id": "c47ee985cabf095bbc6e3be19453740cbefb7d1a7661fdcf33dc5e0157090e36",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "run-llama/liteparse",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A fast, helpful, and open-source document parser",
+      "sourceUrl": "https://github.com/run-llama/liteparse"
+    },
+    "id": "261441ce60f1bb11df6afff5d8758570b21ba555b1ac49ace99db48148789a25",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jez500/pricebuddy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A self hostable app that tracks prices and sends you notifications when prices match your preferences",
+      "sourceUrl": "https://github.com/jez500/pricebuddy"
+    },
+    "id": "02b5b379cc2a0c6acc8ffc45e7b3319d111f03449b1bb8d71df649b05b4043e6",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ayangweb/BongoCat",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🐱跨平台互动桌宠 BongoCat，为桌面增添乐趣！",
+      "sourceUrl": "https://github.com/ayangweb/BongoCat"
+    },
+    "id": "7509fa70131bc0d39f303977da9ef521f4d8c2a59b523be47e2090af82301bc2",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "miuuyy/codex-chatgpt-web",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Use ChatGPT Web (including Pro) as a native model in Codex — with context, tools, streaming and images, without using Codex quota.",
+      "sourceUrl": "https://github.com/miuuyy/codex-chatgpt-web"
+    },
+    "id": "36e06dc692b42e1224f46f440efbacf06f30c171a39ef53d8eda0f6bc7666964",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pollen-robotics/microduck_rl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "RL training environments for Microduck (mjlab)",
+      "sourceUrl": "https://github.com/pollen-robotics/microduck_rl"
+    },
+    "id": "554399bb2f430f92e9e09f90029d3d524d6b813f3393819e596a4321282cc19a",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rlaope/oh-my-hermes",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+      "sourceUrl": "https://github.com/rlaope/oh-my-hermes"
+    },
+    "id": "93b510d20f465f9d447b8c18861df598ef4a03d7d4d3b153caf1a36e92f70076",
+    "status": "pending",
+    "createdAt": "2026-09-27T15:36:14Z"
   }
 ]

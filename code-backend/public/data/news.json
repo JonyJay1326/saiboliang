@@ -1,4 +1,5 @@
 {
+  "dataUpdatedAt": "2026-09-27T15:36:14Z",
   "items": [
     {
       "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
@@ -62,7 +63,7 @@
       "sourceUrl": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
       "publishedAt": "2026-09-25T16:42:48Z",
       "source": "GitHub",
-      "summary": null,
+      "summary": "本周发布为 Copilot 添加模型、应用本地沙箱，并更新 Slack、Teams、JetBrains 和 VS Code 中的 Copilot。",
       "id": "48eaa8bbafaa8bc422c903d52001ef78b32ca86bd6e5e361262f5285ae8fcaf0",
       "originalTitle": "GitHub Copilot weekly releases — September 21",
       "translatedAt": "2026-09-27T15:22:35Z",
@@ -2281,7 +2282,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-27T15:22:35Z",
-  "generatedAt": "2026-09-27T15:22:35Z",
-  "dataUpdatedAt": "2026-09-27T15:22:35Z"
+  "version": "2026-09-27T15:36:14Z",
+  "generatedAt": "2026-09-27T15:36:14Z"
 }

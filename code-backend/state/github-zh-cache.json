@@ -14,11 +14,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "cline/cline": {
-    "text": "可作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "NVIDIA/SkillSpector": {
     "text": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
     "source": "deepseek-flash",
@@ -84,11 +79,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "k2-fsa/OmniVoice": {
-    "text": "面向 600+ 语言的高质量语音克隆 TTS",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "akitaonrails/ai-memory": {
     "text": "面向代理编码 CLI 的长期记忆解决方案，并便于在不同代理供应商之间交接",
     "source": "deepseek-flash",
@@ -124,11 +114,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-24T15:50:19Z"
   },
-  "JetBrains/go-modern-guidelines": {
-    "text": "帮助 AI 编程智能体编写现代 Go 代码",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
-  },
   "Nasiko-Labs/nasiko": {
     "text": "面向 AI Agent 的开发者控制平面",
     "source": "deepseek-flash",
@@ -148,16 +133,6 @@
     "text": "AI 提示词优化器，用于编写更好的提示词并获得更好的 AI 结果。",
     "source": "deepseek-flash",
     "at": "2026-09-25T15:50:41Z"
-  },
-  "NVIDIA/Model-Optimizer": {
-    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，优化推理速度。",
-    "source": "deepseek-flash",
-    "at": "2026-09-26T14:59:11Z"
-  },
-  "upscayl/upscayl": {
-    "text": "Upscayl - 适用于 Linux、MacOS 和 Windows 的首选免费开源 AI 图像放大工具。",
-    "source": "deepseek-flash",
-    "at": "2026-09-26T14:59:11Z"
   },
   "yikart/AiToEarn": {
     "text": "让我们用 AI 赚钱！",
@@ -183,5 +158,30 @@
     "text": "面向专业 AI 编程代理的安全、经验证的技能注册表，可为 Antigravity、Claude Code、Cursor、Copilot 等扩展。",
     "source": "deepseek-flash",
     "at": "2026-09-27T09:20:54Z"
+  },
+  "mobile-next/mobile-mcp": {
+    "text": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:36:14Z"
+  },
+  "pytorch/pytorch": {
+    "text": "Python 中的张量与动态神经网络，具备强大的 GPU 加速",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:36:14Z"
+  },
+  "tensorflow/tensorflow": {
+    "text": "面向所有人的开源机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:36:14Z"
+  },
+  "maximhq/bifrost": {
+    "text": "最快的企业级 AI 网关（比 LiteLLM 快 50 倍），具备自适应负载均衡、集群模式、护栏、支持 1000+ 模型，5k RPS 下开销低于 100 微秒。",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:36:14Z"
+  },
+  "WorldFlowAI/everything-claude-code": {
+    "text": "Claude Code 工具包——用于高效 AI 辅助开发的代理、命令、技能、规则和钩子",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:36:14Z"
   }
 }
