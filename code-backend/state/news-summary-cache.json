@@ -1,7 +1,12 @@
 {
-  "47c91acddb7c783cbe699f23b970400b0b65d7d75ce433da22a7083bbe070d04": {
-    "summary": "开源编码代理 OpenCode 发布 v2.0.16，项目托管于 GitHub。",
+  "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7": {
+    "summary": "Agentic autofix 现使用 Copilot Memory，为已启用客户审查现有记忆以协助解决安全警报。",
     "source": "deepseek-flash",
-    "at": "2026-09-25T07:21:37Z"
+    "at": "2026-09-27T15:22:35Z"
+  },
+  "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35": {
+    "summary": "Slack 和 Microsoft Teams 中的 GitHub Copilot 提供更多上下文与控制，更清晰连接对话与 GitHub 工作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:22:35Z"
   }
 }

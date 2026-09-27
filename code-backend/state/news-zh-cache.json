@@ -1,174 +1,12 @@
 {
-  "b8c778dae64917239d7b48c2d257f53d4a037f14e26286594948309f46914cae": {
-    "title": "NVIDIA Isaac ROS 5.0 推进代理式开源机器人开发",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-22T15:32:21Z"
-  },
-  "f9027d80e820682e90d7e8a7deab6fe99d243c44073836087c19a4dccdea5fb4": {
-    "title": "GPT-6 更优的提示缓存",
-    "summary": "了解 GPT-6 如何通过更高的缓存命中率、新诊断、显式断点及控制来改进提示缓存，从而降低延迟与成本。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "73461b3e97af0d93277a11c940eddd760e1483f50dc51139e0bbfefde7d9b54f": {
-    "title": "推出 GPT-6 Sol 和 Luna",
-    "summary": "认识 GPT-6 Sol 和 Luna，这两款模型以不同的能力与成本平衡，将前沿智能带入日常工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "3fcefd9c665fb2c2484965cf43548bc94be5c40db4dc345287024e6c77f2703e": {
-    "title": "Parallel 用 GPT‑6 Astra 将研究时间和成本减半",
-    "summary": "GPT‑6 Astra 让 Parallel 的智能体以一半时间和一半成本完成劳动力市场数据的研究与综合，优于此前模型。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "566dfe7d34b559d7ec3b71f0b7df5405e8076a695d3b9e8a0e8ac2e4687944c6": {
-    "title": "通过全代码库索引实现更快的 C++ 代码智能",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "f05a574f35fedc0736fa62a19317c5985d64f14c03924c0880ee34603593df4f": {
-    "title": "OpenAI 的 GPT-6 Sol 和 GPT-6 Luna 现已可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:15:54Z"
-  },
-  "8adbfc6aa0bd150c41afab9fc16fd33234b88b837f887769c3118e5acbd61a6d": {
-    "title": "NVIDIA 与合作伙伴在新加坡 AI Day 展示东南亚 AI 进展",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T02:36:28Z"
-  },
-  "9328fa400dd37e6b9e773781e78a2a50934d49d24282a5ac7e2d36068da55aca": {
-    "title": "OpenAI 将网络访问权限扩展至乌克兰用于民用防御",
-    "summary": "OpenAI 正在将其 Daybreak 计划的访问权限扩展至乌克兰政府，以支持民用基础设施的网络防御。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
-  "5ab590850491008e2cefeb696721869fa1b9dd449fc9a908867a23da166dfb52": {
-    "title": "Grab 与 OpenAI 将实用 AI 技能带到东南亚",
-    "summary": "OpenAI 与 Grab 推出 GO Forward with AI，一项区域性计划，帮助东南亚 30,000 名合作伙伴培养实用 AI 技能。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
-  "4ab32af44318036a6678d60b40b879ed1caa589e30f1788e71b006cfed634216": {
-    "title": "Sakeena Fiza 助力 NVIDIA 硬件大规模成功",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
-  "ef1b3a4772eab8370f467eb49319d91c1c1642fda763a0cf8c75d29f7c5a5328": {
-    "title": "Claude 发现具有类 CRISPR 重复序列的新型酶系统",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
   "657604e404f67dc2bcab5de98aa1df7a5e8d99a112e36503ed9883c3a239d40c": {
     "title": "Connect 2026 最大新闻",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-25T06:59:08Z"
   },
-  "bea2af32f1da0c8a185a1ab879506cb142e44d2f1ca44ba99b0d68bb70dc85b6": {
-    "title": "Meta Ray-Ban Display 新功能",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "095cd764ffcc82419290f7a0072f11761e54e65c1c059f012e65e29857176132": {
-    "title": "推出 Meta VR Glasses：仅 100 克，集影院、场边座位与工作空间于一身",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "b8b0c7a08fbb9b3490ed4af231c31250e2f1e3bfcf1c46fe61001c5a915ddbba": {
-    "title": "推出 Ray-Ban Meta Audio 及更多 AI 眼镜款式",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "52e46e8371e1f69996c0f8fdcd7f1aabc16e63bd6bcc1139e79b18fa15fc40d2": {
-    "title": "OpenAI Academy 两周年",
-    "summary": "纪念 OpenAI Academy 两周年，并将 AI 技能带给更多社区。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "347b65ce144a221e189c1995b6f8e902fff172db7617e6d8030d51c8740ce826": {
-    "title": "Sam Altman 在联合国安理会的讲话",
-    "summary": "OpenAI CEO Sam Altman 在联合国安理会讲话中讨论 AI 安全、人类控制与国际合作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "52b80abd4e046c041ffbe2a48399ded2b227e51686189386944c8dd9b0045fd6": {
-    "title": "Harvey 借助 GPT-6 Astra 将法律上下文转化为更强草稿",
-    "summary": "GPT-6 Astra 生成更结构化、上下文感知的法律文件，让律师专注于策略。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "f2ff7f76056120414cf01f1bb6ef7b8e983d9d91ccfa0c5266573b74a0f9d93f": {
-    "title": "invideo 如何借助 GPT‑6 Astra 将调色提升 3 倍",
-    "summary": "借助 GPT‑6 Astra，invideo 更精准地规划剪辑，将色彩校正与调色提升三倍，并在一天内生成 50 个自定义效果。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "4e56c7312349a760a0edf744bd151f1352583693dfaa6156b9b09ca8e15ad634": {
-    "title": "Ringg 的 AI 代理借助 OpenAI 解决高达 65% 的客户来电",
-    "summary": "使用 GPT-5.6，Ringg 在语音、聊天、WhatsApp 和网页上驱动多语言代理，成本比 GPT-4.1 低 90%。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "3d7b9aab56c8f4fe22c00cc0057db0cb0a00b0a30d0d99d476abe36917bfac64": {
-    "title": "推出 MentalHealthBench",
-    "summary": "MentalHealthBench 是一个专家参与的基准，用于评估真实心理健康对话中有帮助且安全的 AI 回复。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "bb71e409dd7f29f762c233b6b0e3a367ed44a43dd4b05ce6408a8edddeb7b53b": {
-    "title": "ChatGPT Ads 扩展至东南亚和台湾",
-    "summary": "ChatGPT Ads 正扩展至东南亚和台湾，为符合条件的企业提供在 60 多个国家触达用户的新方式。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "0765deb144589280c16b6c389f4ff0fb7d519b5edcb7c4cad6d5247ca7a27572": {
-    "title": "Airbnb 扩大对 GPT-6 Astra 和 OpenAI 前沿模型的访问",
-    "summary": "了解 Airbnb 如何扩大对 GPT-6 Astra 和 OpenAI 前沿模型的访问，帮助工程团队解决 bug、设计系统并更快交付。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "1ccf342131e2aeec4f4fe8c75573cce60b5b683832736c876a4b4efd9246c890": {
-    "title": "Google Beam 扩展新地区、合作伙伴和客户",
-    "summary": "Google Beam 宣传动画",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "68ead6b6af2b71441cd0f5e7ee92c2f76d1d2603c4161faf27e658aafd17eb6c": {
-    "title": "以安全服务器端内存推进 Private AI Compute",
-    "summary": "为个人 AI 的 Private AI Compute 引入私有服务器端内存。",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
   "b0878320c6bd0cfba3b38a1d5ad22ee1f88ff6ce14a0a4aa125407f0e3159ecd": {
     "title": "要求高影响操作提供在场证明",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "906dd6ad8541fe086da776ac96e14fdee3a43a64b5890d6d122ec11060724808": {
-    "title": "GitHub Actions 不再提供 Node 20",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "d1e7107e863f4f8a8586693db1559bf0dc2a5fe6e86ad119a1f4a2725e9a691e": {
-    "title": "开放科学如何帮助研究人员为下一次大流行做准备",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "508df2c327e989674eebe7c7ea66eb436a0dfd9258b992864af66ea98e1b3fc8": {
-    "title": "遏制混乱：《CONTROL Resonant》登陆 GeForce NOW",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-25T06:59:08Z"
@@ -179,34 +17,64 @@
     "source": "deepseek-flash",
     "at": "2026-09-25T06:59:08Z"
   },
-  "cc00b97f830449443f7c8d24914e9a868ff805f69fcb1b7d2e5970ebe3f4fbf4": {
-    "title": "您的架构图不等于您的韧性",
-    "summary": null,
+  "9de028fbe46cac8b155a7c08a35dfcf47f00596edbfe763bda6c0737c9cb02fb": {
+    "title": "Proaction 借助 Codex 提升销售额 60% 并节省 75+ 小时",
+    "summary": "借助 Codex、GPT-Live-1 和 GPT-6 Astra，Proaction 更快地构建、运营和销售现代车队管理。",
     "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
+    "at": "2026-09-27T15:22:35Z"
   },
-  "443300f133d68284fc243a7ca13a2dacca547b972df20c85ac804b60f8a75b93": {
-    "title": "设计代理优先平台：当代理承担工作时会发生什么变化",
-    "summary": null,
+  "07dade88210664e3a861290c371bba0adb5d93701e873af5015036605dc9a77c": {
+    "title": "企业托管设置的产品内验证器",
+    "summary": "现在你可以为 GitHub Copilot 的企业托管设置使用产品内验证器。该验证器可检测格式错误的 JSON、不支持的配置、无效的团队映射以及其他可能阻止…",
     "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
+    "at": "2026-09-27T15:22:35Z"
   },
-  "dd3c176ae5526b3e632ac3d95cd7ef1c00cefe869b3423c58edb25d1a13c6f5e": {
-    "title": "GPT-6 Astra、Sol 和 Luna：用于 Microsoft Foundry 中的生产代理",
+  "0a10d0252c63a3f9d568712cdf128e521c550aa3a2b1ac578bee760cc0626626": {
+    "title": "使用指标 API 新增拉取请求审查阶段",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
+    "at": "2026-09-27T15:22:35Z"
   },
-  "e71412d1c91c0fe9f3294e3666135bc81815cc0c813b2a4081386643fbfbcb4d": {
-    "title": "如何用 17 美元训练自己的 Jev",
-    "summary": null,
+  "10030137c3a01f3444e23ded9959c095597864c1b10b3bf384a489dce7d8d131": {
+    "title": "仓库议题的私有已保存视图和“Relates to”议题关系正式可用",
+    "summary": "仓库议题的私有已保存视图 仓库议题页面现在支持私有已保存视图，让你更轻松地创建和保存个性化的议题视图。“Relates to”议题关系…",
     "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
+    "at": "2026-09-27T15:22:35Z"
   },
-  "ca092ab804c517257f7b93827583d2b6751bfeb5db2d6011eb86c8951c94ab25": {
-    "title": "Cursor 推出与安全审查",
+  "de36fa73b8545f5faefd5fadce8c42b0a4186d84d66d0b88c38b68fa8a9c54b9": {
+    "title": "GitHub Actions API 和 UI 中查询结果的变更",
+    "summary": "在 GitHub Actions API 和 UI 中查询工作流运行时，当你按工作流、事件、状态、分支等搜索时，现在会返回精度较低但更准确的记录数…",
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:22:35Z"
+  },
+  "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7": {
+    "title": "Agentic autofix 现在使用 Copilot Memory",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-25T07:18:24Z"
+    "at": "2026-09-27T15:22:35Z"
+  },
+  "48eaa8bbafaa8bc422c903d52001ef78b32ca86bd6e5e361262f5285ae8fcaf0": {
+    "title": "GitHub Copilot 每周发布 — 9 月 21 日",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:22:35Z"
+  },
+  "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35": {
+    "title": "GitHub Copilot for Slack 和 Microsoft Teams 更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:22:35Z"
+  },
+  "f79e7d7a633843bfcb6cfc4479852b9c85bc14af6c5476abdd45bcd0d05ab0cf": {
+    "title": "CodeQL 2.27.1 新增 C 和 C++ 查询及 Kotlin 2.4.20 支持",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:22:35Z"
+  },
+  "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7": {
+    "title": "推出全新 Copilot，包含 Home、Code 和 Autopilot",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-27T15:22:35Z"
   }
 }

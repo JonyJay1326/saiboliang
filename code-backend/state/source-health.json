@@ -30,8 +30,8 @@
     "count": 197
   },
   "news": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
-    "lastAttempt": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
+    "lastAttempt": "2026-09-27T15:22:35Z",
     "error": null,
     "configHash": "d1924090ce394b4221aab8a2f66304cb2b539e91a4b332270c7517a579fde6fc"
   },
@@ -40,7 +40,7 @@
     "count": 119
   },
   "qbit": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "infoq": {
@@ -48,7 +48,7 @@
     "count": 20
   },
   "zhidx": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "solidot": {
@@ -60,131 +60,131 @@
     "count": 60
   },
   "deepseek": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 5
   },
   "anthropic": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "ernie": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 16
   },
   "zhipu-news": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 15
   },
   "tencent-announce": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 12
   },
   "meta": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "hf-qwen": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "hf-zai": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "hf-moonshot": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 19
   },
   "hf-tencent": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "hf-baidu": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "hf-stepfun": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "openai": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
-    "count": 1229
+    "lastSuccess": "2026-09-27T15:22:35Z",
+    "count": 1230
   },
   "google-ai": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 20
   },
   "deepmind": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 100
   },
   "github-changelog": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "github-copilot": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "nvidia": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 18
   },
   "microsoft-ai": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "azure": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 9
   },
   "alibaba-bailian": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 167
   },
   "tencent-tokenhub": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 7
   },
   "baidu-qianfan": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 165
   },
   "kimi-blog": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 9
   },
   "mistral": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 87
   },
   "ollama": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 58
   },
   "together": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 81
   },
   "replicate": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
-    "count": 124
+    "lastSuccess": "2026-09-27T15:22:35Z",
+    "count": 121
   },
   "cursor": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 5
   },
   "openrouter": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 69
   },
   "opencode": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
+    "lastSuccess": "2026-09-27T15:22:35Z",
     "count": 10
   },
   "commandcode": {
-    "lastSuccess": "2026-09-25T07:18:24Z",
-    "count": 385
+    "lastSuccess": "2026-09-27T15:22:35Z",
+    "count": 394
   }
 }
