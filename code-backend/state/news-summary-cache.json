@@ -1,12 +1,7 @@
 {
-  "b138f7140be488dff3b14fff786a5ac613b386d0a68cf919a69568276745d6aa": {
-    "summary": "开源编码代理 OpenCode 发布 v1.18.33，项目托管于 GitHub。",
+  "469712811c22e040083a3bd4665edb70756d4ed4ef09130cfdef153d6425f70a": {
+    "summary": "Anthropic最新Sonnet模型Claude Sonnet 5.5已在GitHub Copilot全面可用，面向构建功能和修复缺陷等日常任务。",
     "source": "deepseek-flash",
-    "at": "2026-09-28T09:53:56Z"
-  },
-  "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7": {
-    "summary": "微软推出全新 Copilot，包含 Home、Code 和 Autopilot。",
-    "source": "deepseek-flash",
-    "at": "2026-09-28T09:53:56Z"
+    "at": "2026-09-28T18:37:28Z"
   }
 }

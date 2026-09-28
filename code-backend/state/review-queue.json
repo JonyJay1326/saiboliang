@@ -73,18 +73,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "p-e-w/heretic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully automatic censorship removal for language models",
-      "sourceUrl": "https://github.com/p-e-w/heretic"
-    },
-    "id": "4fdd8ea1c3b1c029d49de4c28b43b58d866ea1d02b14213507dbd1f0356c57e8",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "jiji262/douyin-downloader",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -109,42 +97,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "anthropics/knowledge-work-plugins",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "sourceUrl": "https://github.com/anthropics/knowledge-work-plugins"
-    },
-    "id": "093ff0a729620a78a81e3dad9f4f2c435b2c42cff1c1e1e8384107c785399107",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "fmtlib/fmt",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern formatting library",
-      "sourceUrl": "https://github.com/fmtlib/fmt"
-    },
-    "id": "098a691b69a1b2402241f464ef02cca6ab0482e71ba6381be9290df54981ec2e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "luolangaga/tubatools",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "图吧工具箱 CE",
-      "sourceUrl": "https://github.com/luolangaga/tubatools"
-    },
-    "id": "42d58e98acd1c3161e23b0444c77cd8510ba4554fb00893443e8708ffbe31ef4",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "rustfs/rustfs",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -157,18 +109,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ankitects/anki",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Anki is a smart spaced repetition flashcard program",
-      "sourceUrl": "https://github.com/ankitects/anki"
-    },
-    "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Open-Dev-Society/OpenStock",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -176,18 +116,6 @@
       "sourceUrl": "https://github.com/Open-Dev-Society/OpenStock"
     },
     "id": "80d86b86328421d2fc3debed1c945bd8eae285299974ff2d69a055c1734dbf3e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "2dust/v2rayN",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
-      "sourceUrl": "https://github.com/2dust/v2rayN"
-    },
-    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
     "status": "pending",
     "createdAt": "2026-09-20T06:51:22Z"
   },
@@ -649,18 +577,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "martin-olivier/airgorah",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A WiFi security auditing software",
-      "sourceUrl": "https://github.com/martin-olivier/airgorah"
-    },
-    "id": "0e8468a7b47cd0e4abb2363cb5347b83edc2c60570e543494385ae45dfd6b168",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "xiaolai/the-craft-of-selfteaching",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -865,18 +781,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "rlaope/oh-my-hermes",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
-      "sourceUrl": "https://github.com/rlaope/oh-my-hermes"
-    },
-    "id": "93b510d20f465f9d447b8c18861df598ef4a03d7d4d3b153caf1a36e92f70076",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "golang/go",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -910,5 +814,41 @@
     "id": "143c86a9e78175a562f639a3784d231f8b113c7a03649e547db1ea1bfd246ecd",
     "status": "pending",
     "createdAt": "2026-09-28T09:53:56Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "anthropics/claude-code-action",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/anthropics/claude-code-action"
+    },
+    "id": "ab2484c8a7555d20666d931cc63a798ef30cf1169edfacf671e92d984bd6968f",
+    "status": "pending",
+    "createdAt": "2026-09-28T18:37:28Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vercel-labs/scriptc",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "TypeScript-to-Native Compiler",
+      "sourceUrl": "https://github.com/vercel-labs/scriptc"
+    },
+    "id": "4c4e39ab55b03c8b204a825806bbf57d4cbae21d4cc67269f4d917e91e3033e8",
+    "status": "pending",
+    "createdAt": "2026-09-28T18:37:28Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "block/buzz",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A hive mind communication platform",
+      "sourceUrl": "https://github.com/block/buzz"
+    },
+    "id": "8f6e52f88eb92353ea9384168e1f30d6d2053e0d7bb92ec724e0a96b4c3e8d7a",
+    "status": "pending",
+    "createdAt": "2026-09-28T18:37:28Z"
   }
 ]

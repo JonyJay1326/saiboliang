@@ -9,11 +9,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "max-sixty/worktrunk": {
-    "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 代理工作流设计",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "NVIDIA/SkillSpector": {
     "text": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
     "source": "deepseek-flash",
@@ -114,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-24T15:50:19Z"
   },
-  "Nasiko-Labs/nasiko": {
-    "text": "面向 AI Agent 的开发者控制平面",
-    "source": "deepseek-flash",
-    "at": "2026-09-25T15:50:41Z"
-  },
   "pbakaus/impeccable": {
     "text": "让 AI 工具在设计中表现更佳的设计语言。",
     "source": "deepseek-flash",
@@ -183,5 +173,30 @@
     "text": "Claude Code 工具包——用于高效 AI 辅助开发的代理、命令、技能、规则和钩子",
     "source": "deepseek-flash",
     "at": "2026-09-27T15:36:14Z"
+  },
+  "google/ax": {
+    "text": "Google 的开放智能体编排运行时",
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "pacifio/atlas": {
+    "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "BuilderIO/agent-native": {
+    "text": "用于构建智能体应用的框架",
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "darkzOGx/youtube-automation-agent": {
+    "text": "🎬 用 AI 智能体全自动管理 YouTube 频道。全天候创建、优化并发布视频。支持免费的 Gemini API 或 OpenAI。无需编程！",
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "k2-fsa/OmniVoice": {
+    "text": "面向 600 多种语言的高质量语音克隆 TTS",
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
   }
 }

@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-09-28T09:53:56Z",
+  "dataUpdatedAt": "2026-09-28T18:37:28Z",
   "items": [
+    {
+      "title": "GitHub Copilot 中的 Claude Sonnet 5.5",
+      "sourceUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+      "publishedAt": "2026-09-28T18:03:57Z",
+      "source": "GitHub",
+      "summary": "Anthropic最新Sonnet模型Claude Sonnet 5.5已在GitHub Copilot全面可用，面向构建功能和修复缺陷等日常任务。",
+      "id": "469712811c22e040083a3bd4665edb70756d4ed4ef09130cfdef153d6425f70a",
+      "originalTitle": "Claude Sonnet 5.5 in GitHub Copilot",
+      "translatedAt": "2026-09-28T18:37:28Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+      "originalVerifiedAt": "2026-09-28T18:37:28Z",
+      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-28T18:37:28Z",
+      "featured": true
+    },
+    {
+      "title": "英伟达发布开放智能体安全平台，保障智能体从测试到部署全流程安全",
+      "sourceUrl": "https://zhidx.com/p/597942.html",
+      "publishedAt": "2026-09-28T15:56:50Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | ZeR0 编辑 | 漠影 智东西9月28日报道，今日，英伟达（NVIDIA）宣布推出NVIDIA开放智能体安全平台。",
+      "id": "8167a01a04931e9683f753bb553d42fea158e2c16b0bd014bf23dad4d7e69038",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/597942.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-28T18:37:28Z",
+      "featured": true
+    },
     {
       "title": "OpenCode 发布 v1.18.33",
       "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v1.18.33",
@@ -2320,6 +2358,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-28T09:53:56Z",
-  "generatedAt": "2026-09-28T09:53:56Z"
+  "version": "2026-09-28T18:37:28Z",
+  "generatedAt": "2026-09-28T18:37:28Z"
 }

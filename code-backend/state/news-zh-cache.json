@@ -1,10 +1,4 @@
 {
-  "f79e7d7a633843bfcb6cfc4479852b9c85bc14af6c5476abdd45bcd0d05ab0cf": {
-    "title": "CodeQL 2.27.1 新增 C 和 C++ 查询及 Kotlin 2.4.20 支持",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
   "9de028fbe46cac8b155a7c08a35dfcf47f00596edbfe763bda6c0737c9cb02fb": {
     "title": "Proaction 借助 Codex 提升销售额 60% 并节省 75+ 小时",
     "summary": "借助 Codex、GPT-Live-1 和 GPT-6 Astra，Proaction 更快地构建、运营和销售现代车队管理。",
@@ -29,16 +23,22 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T15:22:35Z"
   },
-  "de36fa73b8545f5faefd5fadce8c42b0a4186d84d66d0b88c38b68fa8a9c54b9": {
-    "title": "GitHub Actions API 和 UI 中查询结果的变更",
-    "summary": "在 GitHub Actions API 和 UI 中查询工作流运行时，当你按工作流、事件、状态、分支等搜索时，现在会返回精度较低但更准确的记录数…",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7": {
-    "title": "推出全新 Copilot，包含 Home、Code 和 Autopilot",
+  "deeacf9a73c457054e9489987825836f0a14d0deb14ba2387752e62472b717f3": {
+    "title": "推出 Meta Enterprise Platform",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "0adf5bb2a473897d12526e4b9a8c88391e22c0769cbbe7208af0a1f61691cd5f": {
+    "title": "Lenfest Institute 扩大标志性项目，获 OpenAI 扩展支持",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "469712811c22e040083a3bd4665edb70756d4ed4ef09130cfdef153d6425f70a": {
+    "title": "GitHub Copilot 中的 Claude Sonnet 5.5",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-28T18:37:28Z"
   }
 }
