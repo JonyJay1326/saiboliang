@@ -757,18 +757,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "elvisun/newsjack",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The open-source skills that turn your agent into a full PR team.",
-      "sourceUrl": "https://github.com/elvisun/newsjack"
-    },
-    "id": "44dfc094d8bd4f03534b7045e3d7457ba594de2caee4620a76c20c291dd5ebeb",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "openbao/openbao",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -853,18 +841,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ayangweb/BongoCat",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🐱跨平台互动桌宠 BongoCat，为桌面增添乐趣！",
-      "sourceUrl": "https://github.com/ayangweb/BongoCat"
-    },
-    "id": "7509fa70131bc0d39f303977da9ef521f4d8c2a59b523be47e2090af82301bc2",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "miuuyy/codex-chatgpt-web",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -898,5 +874,41 @@
     "id": "93b510d20f465f9d447b8c18861df598ef4a03d7d4d3b153caf1a36e92f70076",
     "status": "pending",
     "createdAt": "2026-09-27T15:36:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "golang/go",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Go programming language",
+      "sourceUrl": "https://github.com/golang/go"
+    },
+    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
+    "status": "pending",
+    "createdAt": "2026-09-28T09:53:56Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kestra-io/kestra",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
+      "sourceUrl": "https://github.com/kestra-io/kestra"
+    },
+    "id": "2ce8a952175f736f8722b2768b702e9c05f8cadfbaa755af118759895d3eba6f",
+    "status": "pending",
+    "createdAt": "2026-09-28T09:53:56Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ayangweb/BongoCat",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🐱 BongoCat — A cross-platform interactive desktop pet that brings fun to your desktop!",
+      "sourceUrl": "https://github.com/ayangweb/BongoCat"
+    },
+    "id": "143c86a9e78175a562f639a3784d231f8b113c7a03649e547db1ea1bfd246ecd",
+    "status": "pending",
+    "createdAt": "2026-09-28T09:53:56Z"
   }
 ]
