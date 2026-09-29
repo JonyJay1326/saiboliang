@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-09-29T09:55:24Z",
+  "dataUpdatedAt": "2026-09-29T16:54:35Z",
   "items": [
+    {
+      "title": "刚刚，DeepSeek Harness桌面端上线，梁文锋开送Token了",
+      "sourceUrl": "https://zhidx.com/p/598364.html",
+      "publishedAt": "2026-09-29T13:40:27Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 江宇 编辑 | 漠影 智东西9月29日报道，今日， DeepSeek正式推出DeepSeek Harness v0.2预览版 ",
+      "id": "ad99548b1de883b740742f4fe48d730068e07cf7d83a6b9b38c5ccb7adda6eb3",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/598364.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-29T16:54:35Z",
+      "featured": true
+    },
     {
       "title": "OpenAI因新模型太强叫停发布",
       "sourceUrl": "https://www.qbitai.com/2026/09/499140.html",
@@ -2434,6 +2453,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-29T09:55:24Z",
-  "generatedAt": "2026-09-29T09:55:24Z"
+  "version": "2026-09-29T16:54:35Z",
+  "generatedAt": "2026-09-29T16:54:35Z"
 }

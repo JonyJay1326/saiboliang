@@ -41,12 +41,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T09:55:24Z"
   },
-  "eb674100bb687fff764326a192483a4161fa4fa5dc17727e3c5a9e490b0e4544": {
-    "title": "Basis 使用 GPT-6 Astra 将税务工作簿完成速度提高 2 倍",
-    "summary": "GPT-6 Astra 完成 50 个标签页的税务工作簿的速度是 GPT-5.6 Sol 的两倍，其对用户意图的更强理解让 Basis 在实际使用中更有信心。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
   "db713ef86bd59ea8f7bad6b7e8b404a24482c1e0315e748a8b43d61d66df115e": {
     "title": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
     "summary": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
@@ -65,10 +59,10 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T09:55:24Z"
   },
-  "cb668c5b27e4138bd592d8b2c395c8dea01887f84259c342c4a3148690e0b924": {
-    "title": "增强 Microsoft Azure 虚拟机生命周期",
-    "summary": "我们的虚拟机生命周期策略指导我们如何管理这些过渡，为 Azure 客户提供透明度、可预测性和指导。",
+  "597c808f7f546491f0ec676490eda220dea924ba0f0620441999bc6def7590d7": {
+    "title": "你好，德国！",
+    "summary": "Mistral 在慕尼黑设立研究中心，专注 Physics AI 与 Industrial AI，并与德国工业界合作。",
     "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
+    "at": "2026-09-29T16:54:35Z"
   }
 }
