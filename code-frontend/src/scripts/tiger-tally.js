@@ -135,15 +135,18 @@ function createExhibit(canvas, options) {
     precision highp float;
     layout(location=0) in vec3 aPosition;
     layout(location=1) in vec3 aNormal;
-    layout(location=2) in vec2 aUv;
+    layout(location=2) in vec2 aSurface;
     uniform mat4 uModel,uView,uProjection;
     out vec3 vWorld,vNormal,vLocal;
-    out vec2 vUv;
-    void main(){vec4 w=uModel*vec4(aPosition,1.);vWorld=w.xyz;vLocal=aPosition;vNormal=mat3(uModel)*aNormal;vUv=aUv;gl_Position=uProjection*uView*w;}
+    out vec2 vUv,vSurface;
+    /* 贴图坐标按局部 xy 平面投影（与 surfaceTexture 的画布变换一致）；
+       第三个顶点属性改装「开敞度 / 曲率」（sculpt 里由 SDF 烘焙，小零件恒为开敞、平直） */
+    void main(){vec4 w=uModel*vec4(aPosition,1.);vWorld=w.xyz;vLocal=aPosition;vNormal=mat3(uModel)*aNormal;
+      vUv=vec2((aPosition.x+3.5)/6.5,(1.6-aPosition.y)/3.1);vSurface=aSurface;gl_Position=uProjection*uView*w;}
   `,`#version 300 es
     precision highp float;
     in vec3 vWorld,vNormal,vLocal;
-    in vec2 vUv;
+    in vec2 vUv,vSurface;
     uniform sampler2D uSurface;
     uniform vec3 uEye;
     uniform vec3 uHoverPoint;
@@ -162,29 +165,35 @@ function createExhibit(canvas, options) {
       float side=pow(max(dot(r,normalize(vec3(1.,.5,-.5))),0.),45.);
       return vec3(.16,.19,.20)*ceiling+vec3(1.45,1.18,.84)*key+vec3(.75,.91,.94)*strip+vec3(.12,.55,.48)*side;
     }
-    vec3 light(vec3 N,vec3 V,vec3 L,vec3 color,vec3 base,float rough){
+    /* 材质三件套（main 里按部位写入）：漫反射底色 / 镜面 F0 / 粗糙度。
+       铜身是金属（几乎无漫反射），锈层是非金属（有漫反射、F0≈.04），二者按锈量混合 */
+    vec3 gAlbedo;vec3 gF0;float gRough;
+    vec3 light(vec3 N,vec3 V,vec3 L,vec3 color){
       vec3 H=normalize(V+L);float ndl=max(dot(N,L),0.),ndh=max(dot(N,H),0.),ndv=max(dot(N,V),.001);
-      float a=rough*rough;float a2=a*a;float d=a2/(3.14159*pow(ndh*ndh*(a2-1.)+1.,2.));
-      float k=pow(rough+1.,2.)/8.;float g=(ndv/(ndv*(1.-k)+k))*(ndl/(ndl*(1.-k)+k));
-      vec3 f=base+(1.-base)*pow(1.-max(dot(H,V),0.),5.);
-      return (base*.2+d*g*f/max(4.*ndv*ndl,.001))*color*ndl;
+      float a=gRough*gRough;float a2=a*a;float d=a2/(3.14159*pow(ndh*ndh*(a2-1.)+1.,2.));
+      float k=pow(gRough+1.,2.)/8.;float g=(ndv/(ndv*(1.-k)+k))*(ndl/(ndl*(1.-k)+k));
+      vec3 f=gF0+(1.-gF0)*pow(1.-max(dot(H,V),0.),5.);
+      return (gAlbedo*(1.-f)*.32+d*g*f/max(4.*ndv*ndl,.001))*color*ndl;
     }
     /* 电弧 / 悬停的点光：近处放电照亮金属，走同一套 BRDF（2026-09-22 反馈十一轮，移植自试作） */
-    vec3 electricLight(vec3 position,vec3 N,vec3 V,vec3 base,float rough,float intensity){
+    vec3 electricLight(vec3 position,vec3 N,vec3 V,float intensity){
       vec3 delta=(uModel*vec4(position,1.)).xyz-vWorld;
       float distance2=dot(delta,delta);
-      return light(N,V,delta*inversesqrt(max(distance2,.0001)),vec3(.12,1.25,.92)*intensity/(1.+distance2*5.),base,rough);
+      return light(N,V,delta*inversesqrt(max(distance2,.0001)),vec3(.12,1.25,.92)*intensity/(1.+distance2*5.));
     }
     void main(){
       vec3 N=normalize(vNormal);vec3 V=normalize(uEye-vWorld);
       vec4 tex=texture(uSurface,vUv);
+      /* 铸件质感（2026-09-29 用户反馈「表面质感不满意」重做）：
+         锈跟着形体走——积在凹缝、腹下与纹槽里；凸棱被摩挲掉锈、露出亮铜；外加铸造砂眼。 */
+      float cavity=vSurface.x;
+      float bend=vSurface.y*2.-1.;
+      float convex=smoothstep(.3,.85,bend)*.7,crease=smoothstep(.04,.4,-bend);
       float grain=hash(floor(vLocal*780.));
-      float mottling=noise(vLocal*5.5)*.65+noise(vLocal*23.)*.35;
-      float patina=smoothstep(.46,.72,mottling);
+      float mottling=noise(vLocal*4.)*.55+noise(vLocal*17.)*.3+noise(vLocal*61.)*.15;
       float wear=smoothstep(.34,.69,noise(vLocal*12.+3.));
-      float rough=.46+patina*.17+grain*.025;
-      vec3 base=mix(vec3(.075,.053,.029),vec3(.030,.057,.042),patina*.62);
-      base*=.88+grain*.15+wear*.22;
+      float pits=smoothstep(.8,.95,noise(vLocal*110.))*(1.-convex);
+      float groove=0.,gold=0.;
       if(uMaterial<.5){
         float dx=texture(uSurface,vUv+vec2(.0006,0.)).r-texture(uSurface,vUv-vec2(.0006,0.)).r;
         float dy=texture(uSurface,vUv+vec2(0.,.001)).r-texture(uSurface,vUv-vec2(0.,.001)).r;
@@ -194,17 +203,49 @@ function createExhibit(canvas, options) {
         vec3 ty=cross(qy,N)*ux.y+cross(N,qx)*uy.y;
         float inv=inversesqrt(max(max(dot(tx,tx),dot(ty,ty)),.00000001));
         N=normalize(N-(tx*dx+ty*dy)*inv*.6);
-        base=mix(base*.35,base,smoothstep(.12,.45,tex.r));
-        base=mix(base,vec3(.43,.27,.10)*(.72+wear*.28),tex.b*.78);
-        rough=mix(rough,.30+patina*.12,tex.b);
-      } else if(uMaterial<1.5){base=vec3(.40,.25,.09)*(.8+wear*.2);rough=.32;}
-      else if(uMaterial<2.5){base=vec3(.018,.065,.047);rough=.26;}
-      else {base=vec3(.055,.049,.036);rough=.50;}
+        groove=1.-smoothstep(.3,.56,tex.r);
+        gold=tex.b;
+      }
+      /* 锈的两种来源（2026-09-29 按用户参考项目的铜锈样张调）：
+         ① 散布的锈斑——绿锈（孔雀石）与褐锈（氧化亚铜）成团点状，边缘略碎；
+         ② 积锈——凹缝、纹槽、腹下。凸棱被摩挲掉锈。 */
+      float blotch=noise(vLocal*8.5)*.62+noise(vLocal*27.)*.28+noise(vLocal*90.)*.1;
+      float greenSpot=smoothstep(.67,.72,blotch);
+      float rust=noise(vLocal*10.+17.3)*.62+noise(vLocal*31.+5.1)*.28+noise(vLocal*95.)*.1;
+      float brownSpot=smoothstep(.69,.74,rust)*(1.-greenSpot);
+      float crust=(1.-cavity)*1.6+crease*.8+groove*.5+max(-N.y,0.)*.25-convex*1.2+(mottling-.5)*.8;
+      float patina=clamp(max(greenSpot,smoothstep(.35,.95,crust)),0.,1.)*(1.-gold);
+      brownSpot*=1.-patina;
+      float polish=convex*(1.-patina)*(1.-brownSpot);
+      /* 老铜近乎黑的橄榄褐，缎面；棱线磨出暖铜色；细密铸砂颗粒调制明暗 */
+      float sand=hash(floor(vLocal*420.))*.5+hash(floor(vLocal*1300.))*.5;
+      vec3 bronze=mix(vec3(.055,.047,.032),vec3(.2,.14,.075),polish)*(.78+sand*.3+wear*.12);
+      vec3 verdigris=mix(vec3(.028,.07,.05),vec3(.06,.15,.105),noise(vLocal*44.))*(.8+sand*.35);
+      vec3 cuprite=mix(vec3(.08,.045,.018),vec3(.16,.1,.04),noise(vLocal*52.))*(.8+sand*.3);
+      gF0=mix(mix(bronze,vec3(.05,.04,.03),brownSpot),vec3(.04),patina);
+      gAlbedo=mix(mix(bronze*.35,cuprite,brownSpot),verdigris,patina);
+      gRough=mix(mix(mix(.5,.36,polish),.72,brownSpot),.88,patina)+sand*.06;
+      /* 砂眼与纹槽：压暗、变哑 */
+      float dull=max(pits*.55,groove*.85);
+      gF0*=1.-dull*.75;gAlbedo*=1.-dull*.7;gRough=mix(gRough,.85,dull);
+      /* 金错：与铜面齐平的嵌丝，金色饱和、偏暖；边缘有一圈暗槽（groove）收口 */
+      gF0=mix(gF0,vec3(.6,.38,.12)*(.8+wear*.2)*(.9+sand*.15),gold*.92);
+      gAlbedo=mix(gAlbedo,vec3(.06,.04,.012),gold);
+      gRough=mix(gRough,.4,gold);
+      if(uMaterial>.5&&uMaterial<1.5){gF0=vec3(.44,.29,.11)*(.8+wear*.2);gAlbedo=vec3(.04,.028,.012);gRough=.34;}
+      else if(uMaterial>1.5&&uMaterial<2.5){gF0=vec3(.018,.065,.047);gAlbedo=vec3(0.);gRough=.26;}
+      else if(uMaterial>2.5){gF0=vec3(.05,.044,.032);gAlbedo=vec3(.03,.027,.02);gRough=.55;}
       vec3 R=reflect(-V,N);
-      vec3 color=base*.16+env(R,rough)*mix(base,vec3(.65),pow(1.-max(dot(N,V),0.),4.))*.8;
-      color+=light(N,V,normalize(vec3(-3.,5.,4.)),vec3(2.2,1.97,1.65),base,rough);
-      color+=light(N,V,normalize(vec3(3.,1.5,-2.)),vec3(.24,1.05,.95),base,rough);
-      color+=light(N,V,normalize(vec3(.2,-1.,3.)),vec3(.15,.22,.2),base,rough);
+      float ndv=max(dot(N,V),0.);
+      vec3 F=gF0+(max(vec3(1.-gRough),gF0)-gF0)*pow(1.-ndv,5.);
+      /* 凹处挡住环境光与反射（开敞度烘焙自 SDF）；主光也按开敞度打折，模拟近处自投影 */
+      float specOcc=mix(.2,1.,cavity);
+      vec3 ambient=vec3(.13,.14,.13)+vec3(.05,.06,.05)*N.y;
+      vec3 color=gAlbedo*ambient*cavity+env(R,gRough)*F*specOcc*.85;
+      float shadowing=mix(.45,1.,cavity);
+      color+=light(N,V,normalize(vec3(-3.,5.,4.)),vec3(2.2,1.97,1.65))*shadowing;
+      color+=light(N,V,normalize(vec3(3.,1.5,-2.)),vec3(.24,1.05,.95))*shadowing;
+      color+=light(N,V,normalize(vec3(.2,-1.,3.)),vec3(.15,.22,.2))*shadowing;
       color*=mix(.74,1.,smoothstep(-.5,.1,vLocal.y));
       float scan=exp(-pow((vLocal.x-uScan)*3.,2.));
       float energy=uEnergy*(.62+.12*sin(uTime*2.+vLocal.x*3.))+scan*uEnergy*.5;
@@ -213,7 +254,7 @@ function createExhibit(canvas, options) {
         for(int i=0;i<4;i++){
           float x=-1.45+float(i)*.9;
           float pulse=.6+.4*pow(.5+.5*sin(uTime*7.-float(i)*1.7),4.);
-          color+=electricLight(vec3(x,.12,-.18),N,V,base,rough,(uSplit*(.6+uCharge)+uAfterglow)*pulse*5.);
+          color+=electricLight(vec3(x,.12,-.18),N,V,(uSplit*(.6+uCharge)+uAfterglow)*pulse*5.);
         }
       }
       if(uMaterial<.5) color+=tex.g*vec3(.08,.93,.72)*energy*3.2;
@@ -248,8 +289,8 @@ function createExhibit(canvas, options) {
         }
         /* 传导：命中点与扫掠带各当一盏点光，照到周围金属上（不只自发光） */
         vec3 contact=uHoverPoint+vec3(0.,.08,.24);
-        color+=electricLight(contact,N,V,base,rough,uHover*(1.3+proximity)*3.);
-        color+=electricLight(vec3(sweepX,.3,.88),N,V,base,rough,uHover*4.);
+        color+=electricLight(contact,N,V,uHover*(1.3+proximity)*3.);
+        color+=electricLight(vec3(sweepX,.3,.88),N,V,uHover*4.);
       }
       color+=vec3(.12,.7,.55)*uFlash*pow(1.-max(dot(N,V),0.),3.);
       outColor=vec4(color,1.);
@@ -350,7 +391,8 @@ function createExhibit(canvas, options) {
     }
     return {vao,count:total};
   }
-  const uv=p=>[(p[0]+3.5)/6.5,(1.6-p[1])/3.1];
+  /* 第三个顶点属性 =「开敞度 / 曲率」：小零件恒为全开敞、平直；只有虎身在 sculpt 里按 SDF 烘焙 */
+  const uv=()=>[1,.5];
   function tube(points,radius=.016,sides=6,raw=false){
     const data=[];
     for(let i=0;i<points.length-1;i++){
@@ -385,58 +427,78 @@ function createExhibit(canvas, options) {
     height.fillStyle='#999';height.fillRect(0,0,...size);
     for(const c of [energy,gold]){c.fillStyle='#000';c.fillRect(0,0,...size);}
     for(const c of [height,energy,gold]){c.setTransform(size[0]/6.5,0,0,-size[1]/3.1,3.5*size[0]/6.5,1.6*size[1]/3.1);c.lineCap='round';c.lineJoin='round';}
+    /* 金错嵌丝：高度层只刻一圈窄槽、槽内回填到与铜面齐平（#999），金丝不再凸起成管 */
     function stroke(draw,width=.015,electric=false){
-      for(const [c,w,color] of [[height,width*2.4,'#272727'],[height,width,'#b8b8b8'],[gold,width*.6,'#bbb'],[energy,width*.30,electric?'#ddd':'#030303']]){
+      for(const [c,w,color] of [[height,width*1.7,'#4a4a4a'],[height,width*.95,'#9a9a9a'],[gold,width*.9,'#bbb'],[energy,width*.30,electric?'#ddd':'#030303']]){
         c.beginPath();draw(c);c.lineWidth=w;c.strokeStyle=color;c.stroke();
       }
     }
     const line=points=>c=>{c.moveTo(...points[0]);points.slice(1).forEach(p=>c.lineTo(...p));};
     const curved=points=>c=>{c.moveTo(...points[0]);c.bezierCurveTo(...points[1],...points[2],...points[3]);};
-    // Broad hooked stripes follow the shoulder, spine and haunches.
-    const stripes=[
-      [[-1.83,.65],[-1.66,.38],[-1.24,.08],[-1.45,-.13]],
-      [[-1.41,.75],[-1.24,.46],[-.95,.32],[-1.03,.08]],
-      [[-.84,.67],[-.71,.41],[-.45,.28],[-.52,.01]],
-      [[-.25,.71],[-.13,.51],[.1,.36],[.02,.11]],
-      [[.29,.75],[.46,.48],[.67,.37],[.6,.05]],
-      [[.82,.71],[.96,.54],[.88,.31],[1.03,.08]],
-      [[-.77,-.35],[-.69,-.16],[-.42,-.03]],
-      [[-.15,-.37],[.02,-.2],[.29,-.07]],
-      [[-1.93,-.48],[-1.71,-.40],[-1.53,-.23]],
-      [[1.10,-.42],[1.3,-.46],[1.27,-.7]],
+    /* 身上纹饰（2026-09-29 按用户参考图重排）：三种母题——
+       ① 火焰虎斑：S 形、两头尖中间宽，从背脊向腹侧斜下；
+       ② 双卷云：一对反向螺旋在底部相连；③ 回纹方块：方框内一道方折回旋。
+       贴合面铭文（上背 x -.55~-.05 / y .26~.42）那块留空，第 5 道虎斑从下方起笔。 */
+    const bezierAt=(p,t)=>{const u=1-t,w=[u*u*u,3*u*u*t,3*u*t*t,t*t*t];return [0,1].map(k=>p.reduce((sum,q,j)=>sum+q[k]*w[j],0));};
+    function flame(p,width,electric=false){
+      const steps=30,left=[],right=[],spine=[];
+      for(let i=0;i<=steps;i++){
+        const t=i/steps,a=bezierAt(p,Math.max(0,t-.01)),b=bezierAt(p,Math.min(1,t+.01)),c=bezierAt(p,t);
+        const l=Math.hypot(b[0]-a[0],b[1]-a[1])||1,nx=-(b[1]-a[1])/l,ny=(b[0]-a[0])/l;
+        const half=width*.5*Math.pow(Math.sin(Math.PI*t),.75)*(1.15-.3*t);
+        left.push([c[0]+nx*half,c[1]+ny*half]);right.push([c[0]-nx*half,c[1]-ny*half]);spine.push(c);
+      }
+      const outline=c=>{c.moveTo(...left[0]);left.forEach(q=>c.lineTo(...q));[...right].reverse().forEach(q=>c.lineTo(...q));c.closePath();};
+      height.beginPath();outline(height);height.lineWidth=.014;height.strokeStyle='#4a4a4a';height.stroke();height.fillStyle='#9a9a9a';height.fill();
+      gold.beginPath();outline(gold);gold.fillStyle='#bbb';gold.fill();
+      energy.beginPath();line(spine)(energy);energy.lineWidth=width*.22;energy.strokeStyle=electric?'#ddd':'#030303';energy.stroke();
+    }
+    function spiral(cx,cy,r,dir){
+      const turns=TAU*1.6,offset=-Math.PI/2-turns,points=[];
+      for(let i=0;i<=56;i++){const a=i/56*turns,rr=r*(.12+.88*i/56);points.push([cx+Math.cos(a+offset)*rr*dir,cy+Math.sin(a+offset)*rr]);}
+      return points;
+    }
+    function cloud(x,y,r,electric=false){
+      const a=spiral(x-r*.95,y,r,1),b=spiral(x+r*.95,y,r,-1);
+      stroke(line([...a,...b.reverse()]),r*.3,electric);
+    }
+    function keyFret(x,y,s,electric=false){
+      const h=s/2;
+      stroke(line([[x-h,y-h],[x+h,y-h],[x+h,y+h],[x-h,y+h],[x-h,y-h]]),s*.11,electric);
+      const points=[[x-s*.3,y-s*.3]],dirs=[[1,0],[0,1],[-1,0],[0,-1]];
+      for(let i=0,len=s*.6;len>s*.05;i++){
+        const [dx,dy]=dirs[i%4],[px,py]=points[points.length-1];
+        points.push([px+dx*len,py+dy*len]);
+        if(i%2===1)len-=s*.12;
+      }
+      stroke(line(points),s*.1);
+    }
+    const flames=[
+      [[[-1.98,.3],[-1.74,.2],[-1.98,.04],[-1.8,-.08]],.09,false],
+      [[[-1.62,.5],[-1.38,.36],[-1.66,.18],[-1.46,.02]],.11,true],
+      [[[-1.2,.52],[-.96,.38],[-1.26,.18],[-1.04,0]],.115,false],
+      [[[-.82,.5],[-.58,.34],[-.88,.14],[-.66,-.04]],.11,true],
+      [[[-.36,.22],[-.2,.1],[-.44,-.02],[-.28,-.14]],.085,false],
+      [[[.02,.48],[.26,.32],[-.04,.14],[.16,-.04]],.115,true],
+      [[[.42,.54],[.66,.38],[.36,.2],[.56,0]],.115,false],
+      [[[.82,.66],[1.04,.48],[.76,.3],[.94,.1]],.11,true],
+      [[[1.14,.74],[1.32,.58],[1.08,.44],[1.24,.26]],.09,false],
+      [[[-1.98,-.36],[-1.72,-.44],[-1.62,-.6],[-1.36,-.66]],.07,false],
+      [[[.98,-.24],[1.14,-.42],[1.0,-.56],[1.18,-.72]],.07,false],
     ];
-    stripes.forEach((p,i)=>{
-      if(p.length===4){
-        stroke(curved(p),i<6?.036:.022,i%2===0);
-        const parallel=p.map(([x,y])=>[x+.065,y+.015]);
-        stroke(curved(parallel),.007,false);
-      } else stroke(line(p),.022,i%2===0);
-    });
-    // Cloud-scroll relief, taken as a new decorative motif rather than a historical inscription.
-    for(const [x,y,r] of [[-1.82,-.04,.24],[1.20,.42,.25],[-.3,.10,.115]]){
-      stroke(c=>{for(let i=0;i<=65;i++){const t=i/65*TAU*1.55,rr=r*(1-i/80);const a=[x+Math.cos(t)*rr,y+Math.sin(t)*rr];i?c.lineTo(...a):c.moveTo(...a);}},.018,true);
-    }
-    // Eye and forehead ornament register to the sculpted eye socket.
-    stroke(curved([[1.57,.93],[1.72,.95],[1.83,.83],[1.98,.83]]),.026,true);
-    stroke(curved([[1.66,.75],[1.72,.64],[1.91,.63],[2.04,.74]]),.02);
-    stroke(curved([[1.63,.54],[1.46,.24],[1.79,.14],[1.85,.39]]),.023,true);
-    stroke(curved([[1.67,.5],[1.60,.29],[1.77,.24],[1.79,.37]]),.006);
-    for(let i=0;i<3;i++)stroke(curved([[2.0,.53-i*.07],[2.1,.58-i*.085],[2.23,.59-i*.085],[2.33,.55-i*.08]]),.009);
-    for(let i=0;i<3;i++)stroke(line([[1.47,.91-i*.085],[1.65,.92-i*.085]]),.013);
-    stroke(line([[1.55,1.0],[1.58,.68]]),.017);
+    for(const [p,width,electric] of flames)flame(p,width,electric);
+    /* 卷云与回纹落在腰线一带（y≈-.17）：再往下是朝地的腹面，侧视时照不到 */
+    for(const [x,y,r,electric] of [[-1.28,-.17,.085,true],[.2,-.18,.085,false]])cloud(x,y,r,electric);
+    for(const [x,y,s] of [[-.72,-.2,.17],[.62,-.14,.16]])keyFret(x,y,s);
+    /* 头部纹饰（2026-09-29 头部重塑后重新对位）：眼眶描金、眉弓回钩、颊上卷云、
+       吻侧须纹、口裂唇线、颈后两道虎斑；位置跟 HEAD 的眼位走 */
+    stroke(c=>c.ellipse(HEAD.eye[0],HEAD.eye[1],.105,.046,-.1,0,TAU),.011,true);
+    stroke(curved([[HEAD.eye[0]-.2,HEAD.eye[1]+.06],[HEAD.eye[0]-.1,HEAD.eye[1]+.13],[HEAD.eye[0]+.06,HEAD.eye[1]+.12],[HEAD.eye[0]+.16,HEAD.eye[1]+.03]]),.02,true);
+    stroke(c=>{const [x,y,r]=[1.6,.43,.1];for(let i=0;i<=50;i++){const t=i/50*TAU*1.45,rr=r*(1-i/64);const a=[x+Math.cos(t)*rr,y+Math.sin(t)*rr];i?c.lineTo(...a):c.moveTo(...a);}},.014,true);
+    for(let i=0;i<3;i++)stroke(curved([[2.0,.5+i*.035],[2.07,.52+i*.04],[2.15,.53+i*.04],[2.22,.51+i*.035]]),.006);
+    stroke(curved([[1.84,.405],[1.98,.43],[2.14,.45],[2.3,.47]]),.008);
+    flame([[1.46,.82],[1.52,.72],[1.44,.64],[1.5,.55]],.035);
     for(const x of [-1.99,-1.80,-1.61,1.0,1.2,1.4])stroke(line([[x,-.93],[x+.02,-.83]]),.017);
-    // Fine repeating thunder-pattern band on the lower body.
-    for(let i=0;i<15;i++){
-      const x=-1.1+i*.13,y=-.28+Math.sin(i*.28)*.025;
-      stroke(line([[x,y],[x,y+.08],[x+.07,y+.08],[x+.07,y+.025],[x+.025,y+.025]]),.005,i%3===0);
-    }
-    // Compact panels leave broad bronze surfaces between the principal inlays.
-    for(let row=0;row<3;row++)for(let i=0;i<5;i++){
-      const x=-1.18+i*.12,y=-.11+row*.095;
-      stroke(line([[x,y],[x+.073,y],[x+.073,y+.053],[x+.029,y+.053],[x+.029,y+.023]]),.003);
-    }
-    stroke(line([[-1.24,-.16],[-.55,-.16],[-.55,.18]]),.005);
-    stroke(line([[-1.27,-.19],[-.52,-.19],[-.52,.21]]),.003);
     /* 贴合面铭文不在这里画字：走「字体图片化」（引擎不挂 webfont，AGENTS.md §6）——
        字图由 cache-tools/render-tiger-inscription.py 用喜鹊古字典体预渲染，
        运行时染色盖进高度层与金错层，见下方 INSCRIPTION 一段。 */
@@ -446,10 +508,6 @@ function createExhibit(canvas, options) {
       const x=-2.8+rand(i*4)*5.15,y=-.9+rand(i*4+1)*2.;
       height.strokeStyle='#858585';height.lineWidth=.0015+rand(i*4+2)*.002;
       height.beginPath();height.moveTo(x,y);height.lineTo(x+.006+rand(i*4+3)*.038,y+.006);height.stroke();
-    }
-    for(let i=0;i<42;i++){
-      const a=i/42*TAU,x=-1.7+Math.cos(a)*.36,y=.02+Math.sin(a)*.36;
-      stroke(line([[x,y],[x+Math.cos(a)*.035,y+Math.sin(a)*.035]]),.005,i%5===0);
     }
     const t=gl.createTexture();textures.push(t);gl.bindTexture(gl.TEXTURE_2D,t);
     gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
@@ -500,21 +558,22 @@ function createExhibit(canvas, options) {
     const k1=Math.hypot(x/(r[0]*r[0]),y/(r[1]*r[1]),z/(r[2]*r[2]));
     return k1>1e-8?k0*(k0-1)/k1:-Math.min(...r);
   }
-  function roundedBoxDistance(x,y,z,c,r,bevel){
-    const q=[Math.abs(x-c[0])-r[0],Math.abs(y-c[1])-r[1],Math.abs(z-c[2])-r[2]];
-    return Math.hypot(...q.map(v=>Math.max(v,0)))+Math.min(Math.max(...q),0)-bevel;
-  }
+  /* 头部（2026-09-29 用户反馈「头部造型不满意」重塑，方向 = 贴近秦汉虎符原件）：
+     颈胸压低、头与背线连成一势；颅顶低平、鼻梁斜下接长吻；耳小而后贴；
+     上吻与下颌之间开一道前宽后窄的口裂，露出獠牙。旧版方盒头骨已撤。 */
   const anatomy=[
     [[-.48,.03,0],[1.57,.46,.46],.14],
     [[-1.55,-.02,0],[.59,.57,.56],.13],
     [[.79,.09,0],[.54,.58,.57],.16],
-    [[1.21,.40,0],[.48,.58,.50],.15],
-    [[1.69,.41,.35],[.30,.29,.23],.065],
-    [[1.69,.41,-.35],[.30,.29,.23],.065],
-    [[1.98,.48,0],[.25,.20,.44],.045],
-    [[1.94,.27,0],[.29,.12,.36],.05],
-    [[1.29,1.01,.34],[.19,.15,.105],.025],
-    [[1.29,1.01,-.34],[.19,.15,.105],.025],
+    [[1.16,.27,0],[.44,.48,.47],.15],
+    [[1.62,.66,0],[.38,.30,.40],.12],
+    [[1.62,.46,.30],[.30,.25,.20],.07],
+    [[1.62,.46,-.30],[.30,.25,.20],.07],
+    [[1.90,.66,0],[.26,.11,.21],.07],
+    [[1.98,.52,0],[.26,.16,.27],.06],
+    [[1.92,.31,0],[.27,.10,.24],.06],
+    [[1.40,.92,.26],[.11,.10,.075],.04],
+    [[1.40,.92,-.26],[.11,.10,.075],.04],
     [[1.06,-.44,.40],[.22,.35,.235],.1],
     [[1.06,-.44,-.40],[.22,.35,.235],.1],
     [[1.32,-.76,.40],[.42,.16,.29],.06],
@@ -524,63 +583,147 @@ function createExhibit(canvas, options) {
     [[-1.42,-.75,.44],[.46,.15,.26],.06],
     [[-1.42,-.75,-.44],[.46,.15,.26],.06],
   ];
+  /* 尾巴（2026-09-29 按用户参考图重做）：出臀后先向后下方甩出，再沿身后高高扬起，
+     到顶后朝身体方向顺时针内卷一圈半；两段在 (-2.86,.9) 处切线相接（都朝正上方） */
   const tailPoints=[];
-  for(let i=0;i<=22;i++){
-    const t=i/22;
-    tailPoints.push([-1.98-.70*t,.23+.73*t+.1*Math.sin(t*Math.PI),0]);
+  const TAIL_RISE=[[-1.97,.22],[-2.35,.04],[-2.86,.34],[-2.86,.9]];
+  for(let i=0;i<=24;i++){
+    const t=i/24,u=1-t;
+    const w=[u*u*u,3*u*u*t,3*u*t*t,t*t*t];
+    tailPoints.push([0,1].map(k=>TAIL_RISE.reduce((sum,p,j)=>sum+p[k]*w[j],0)).concat(0));
   }
-  for(let i=1;i<=35;i++){
-    const a=i/35*Math.PI*1.65,r=.29*(1-i/75);
-    tailPoints.push([-2.68-r*Math.sin(a),.67+r*Math.cos(a),0]);
+  const TAIL_CURL={x:-2.52,y:.9,start:.34,end:.1,sweep:Math.PI*1.75};
+  for(let i=1;i<=40;i++){
+    const t=i/40,a=Math.PI-TAIL_CURL.sweep*t,r=mix(TAIL_CURL.start,TAIL_CURL.end,Math.pow(t,.85));
+    tailPoints.push([TAIL_CURL.x+Math.cos(a)*r,TAIL_CURL.y+Math.sin(a)*r,0]);
   }
-  function animalSdf(x,y,z){
+  /* 眉弓等「贴着表面长出来」的细部：位置要先在不含细部的实体上量出表面才能定，见下方 HEAD */
+  const headDetail=[];
+  /* 远场截断：离某块体积超过 SDF_REACH 就不算它（近表面处结果不变），
+     返回值也封顶在 SDF_REACH——仍是距离下界，射线步进不会越过表面；换来加密网格后的生成速度 */
+  const SDF_REACH=.3;
+  /* 热路径：体积表摊平成定长数组（每块 7 个数：中心 3 + 半径 3 + 融合宽度），省掉解构与临时数组 */
+  let shapeTable=new Float64Array(0);
+  function rebuildShapes(){
+    const all=[...anatomy,...headDetail];
+    shapeTable=new Float64Array(all.length*7);
+    all.forEach(([c,r,k],i)=>shapeTable.set([...c,...r,k],i*7));
+  }
+  rebuildShapes();
+  function solidSdf(x,y,z){
     let d=10;
-    for(const [c,r,k] of anatomy)d=smoothMin(d,ellipsoidDistance(x,y,z,c,r),k);
-    const skull=roundedBoxDistance(x,y,z,[1.62,.65,0],[.255,.22,.31],.175);
-    d=smoothMin(d,skull,.11);
-    for(let i=0;i<tailPoints.length-1;i+=2){
+    const table=shapeTable;
+    for(let i=0;i<table.length;i+=7){
+      const px=x-table[i],py=y-table[i+1],pz=z-table[i+2],rx=table[i+3],ry=table[i+4],rz=table[i+5];
+      if(Math.abs(px)>rx+SDF_REACH||Math.abs(py)>ry+SDF_REACH||Math.abs(pz)>rz+SDF_REACH)continue;
+      const ax=px/rx,ay=py/ry,az=pz/rz,bx=ax/rx,by=ay/ry,bz=az/rz;
+      const k0=Math.sqrt(ax*ax+ay*ay+az*az),k1=Math.sqrt(bx*bx+by*by+bz*bz);
+      const e=k1>1e-8?k0*(k0-1)/k1:-Math.min(rx,ry,rz);
+      const k=table[i+6],h=clamp(.5+.5*(e-d)/k);
+      d=e+(d-e)*h-k*h*(1-h);
+    }
+    if(x<-1.6)for(let i=0;i<tailPoints.length-1;i+=2){
       const a=tailPoints[i],b=tailPoints[Math.min(i+2,tailPoints.length-1)];
       const vx=b[0]-a[0],vy=b[1]-a[1],vz=b[2]-a[2];
       const t=clamp(((x-a[0])*vx+(y-a[1])*vy+(z-a[2])*vz)/(vx*vx+vy*vy+vz*vz));
       const radius=.098-i/tailPoints.length*.028;
       d=smoothMin(d,Math.hypot(x-a[0]-vx*t,y-a[1]-vy*t,z-a[2]-vz*t)-radius,.08);
     }
-    const mouth=Math.max(Math.abs(x-2.14)-.30,Math.abs(y-.335)-.022,Math.abs(z)-.55);
-    d=Math.max(d,-mouth);
-    for(const side of [-1,1]){
-      const socket=ellipsoidDistance(x,y,z,[1.84,.76,side*.458],[.14,.059,.077]);
-      d=Math.max(d,-socket);
-      const ear=ellipsoidDistance(x,y,z,[1.28,1.035,side*.438],[.100,.075,.042]);
-      d=Math.max(d,-ear);
-      for(const toe of [.28,.45]){
-        const groove=ellipsoidDistance(x,y,z,[1.67,-.72,side*toe],[.17,.12,.015]);
-        d=Math.max(d,-groove);
-      }
+    return Math.min(d,SDF_REACH);
+  }
+  /* 沿射线找实体表面（只用于摆放五官，启动时跑几次） */
+  function surfaceHit(origin,direction){
+    let t=0;
+    for(let step=0;step<200;step++){
+      const p=origin.map((v,i)=>v+direction[i]*t);
+      const gap=solidSdf(...p);
+      if(gap<.0005)return p;
+      t+=Math.max(.002,gap*.8);
     }
+    return origin;
+  }
+  /* 五官落位：眼在颅侧、眉弓下；鼻头在长吻最前端 */
+  const HEAD={eye:surfaceHit([1.8,.7,.9],[0,0,-1])};
+  const [eyeX,eyeY,eyeZ]=HEAD.eye;
+  headDetail.push([[eyeX-.02,eyeY+.068,eyeZ-.05],[.15,.04,.07],.035]);
+  rebuildShapes();
+  HEAD.nose=surfaceHit([2.8,.56,.001],[-1,0,0]);
+  /* 挖切用的椭球（只挖 z≥0 这一半：另一半靠镜像矩阵得到） */
+  const EYE_SOCKET=[[eyeX,eyeY,eyeZ+.035],[.11,.045,.055]];
+  const EAR_HOLLOW=[[1.42,.86,.285],[.085,.042,.03]];
+  const TOE_GROOVES=[.28,.45].map(z=>[[1.67,-.72,z],[.17,.12,.015]]);
+  function animalSdf(x,y,z){
+    let d=solidSdf(x,y,z);
+    /* 口裂：前宽后窄的楔形，从嘴角 x=1.80 向前张开 */
+    if(x>1.78){
+      const mouth=Math.max(Math.abs(y-.385)-(.004+(x-1.8)*.11),1.8-x,Math.abs(z)-.6);
+      d=Math.max(d,-mouth);
+    }
+    if(x>1.2&&y>.5)for(const [c,r] of [EYE_SOCKET,EAR_HOLLOW])d=Math.max(d,-ellipsoidDistance(x,y,z,c,r));
+    if(x>1.4&&y<-.5)for(const [c,r] of TOE_GROOVES)d=Math.max(d,-ellipsoidDistance(x,y,z,c,r));
     return Math.max(d,-z);
   }
   function sculpt(){
-    const nx=112,ny=49,nz=21,min=[-3.07,-1.03,-.012],max=[2.52,1.39,.80];
-    const coords=[],values=[];
+    /* 网格由 112×49×21 加密到 140×62×26：新头部的眉弓、眼窝、口裂需要更细的格子才立得住 */
+    const nx=140,ny=62,nz=26,min=[-3.07,-1.03,-.012],max=[2.52,1.39,.80];
+    const step=[0,1,2].map(i=>(max[i]-min[i])/[nx,ny,nz][i]);
+    const coords=[],values=new Float64Array((nx+1)*(ny+1)*(nz+1));
     const index=(x,y,z)=>(z*(ny+1)+y)*(nx+1)+x;
     for(let z=0;z<=nz;z++)for(let y=0;y<=ny;y++)for(let x=0;x<=nx;x++){
-      const p=[mix(min[0],max[0],x/nx),mix(min[1],max[1],y/ny),mix(min[2],max[2],z/nz)];
-      coords.push(p);values.push(animalSdf(...p));
-    }
+      const p=[min[0]+x*step[0],min[1]+y*step[1],min[2]+z*step[2]];
+      coords.push(p);values[index(x,y,z)]=animalSdf(p[0],p[1],p[2]);
+    }    /* 网格内三线性插值取 SDF（出界回退到解析式）：烘焙遮挡时不必再逐点求值 */
+    const sampleField=(x,y,z)=>{
+      const fx=(x-min[0])/step[0],fy=(y-min[1])/step[1],fz=(z-min[2])/step[2];
+      if(fx<0||fy<0||fz<0||fx>=nx||fy>=ny||fz>=nz)return animalSdf(x,y,z);
+      const ix=Math.floor(fx),iy=Math.floor(fy),iz=Math.floor(fz),tx=fx-ix,ty=fy-iy,tz=fz-iz;
+      const at=(a,b,c)=>values[index(ix+a,iy+b,iz+c)];
+      const plane=c=>mix(mix(at(0,0,c),at(1,0,c),tx),mix(at(0,1,c),at(1,1,c),tx),ty);
+      return mix(plane(0),plane(1),tz);
+    };
+    /* 网格节点上的拉普拉斯（六向二阶差分 ≈ 平均曲率×2）：凸处为正、凹缝为负 */
+    const laplaceAt=i=>{
+      const x=i%(nx+1),y=Math.floor(i/(nx+1))%(ny+1),z=Math.floor(i/((nx+1)*(ny+1)));
+      let sum=0;
+      for(const [c,n,s,stride] of [[x,nx,step[0],1],[y,ny,step[1],nx+1],[z,nz,step[2],(nx+1)*(ny+1)]]){
+        if(c>0&&c<n)sum+=(values[i+stride]+values[i-stride]-2*values[i])/(s*s);
+      }
+      return sum;
+    };
+    /* 顶点烘焙「开敞度 / 曲率」：沿法线外探几步量遮挡（凹处 → 暗、积锈），
+       拉普拉斯取两端节点插值（凸棱 → 磨亮）。写进顶点第三属性，着色器直接取用。 */
+    const surfaceShade=(p,n,a,b,t)=>{
+      let occlusion=0,weight=1;
+      for(const h of [.04,.09,.16,.26]){
+        occlusion+=(h-Math.max(0,sampleField(p[0]+n[0]*h,p[1]+n[1]*h,p[2]+n[2]*h)))*weight;
+        weight*=.6;
+      }
+      const laplace=mix(laplaceAt(a),laplaceAt(b),t);
+      return [clamp(1-occlusion*3.2),clamp(.5+laplace/40)];
+    };
     const vertices=[],cache=new Map();
     const edge=(a,b)=>{
-      const key=a<b?`${a}:${b}`:`${b}:${a}`;
+      const key=a<b?a*4194304+b:b*4194304+a;
       if(cache.has(key))return cache.get(key);
       const t=values[a]/(values[a]-values[b]);const p=coords[a].map((v,j)=>mix(v,coords[b][j],t));
-      const e=.0008;
-      const n=vec.norm([animalSdf(p[0]+e,p[1],p[2])-animalSdf(p[0]-e,p[1],p[2]),animalSdf(p[0],p[1]+e,p[2])-animalSdf(p[0],p[1]-e,p[2]),animalSdf(p[0],p[1],p[2]+e)-animalSdf(p[0],p[1],p[2]-e)]);
-      const v=[...p,...n,...uv(p)];cache.set(key,v);return v;
+      /* 四面体四点求梯度（比六点中心差分省三分之一求值） */
+      const e=.0008,g=[0,0,0];
+      for(const [sx,sy,sz] of [[1,-1,-1],[-1,-1,1],[-1,1,-1],[1,1,1]]){
+        const f=animalSdf(p[0]+sx*e,p[1]+sy*e,p[2]+sz*e);
+        g[0]+=sx*f;g[1]+=sy*f;g[2]+=sz*f;
+      }
+      const n=vec.norm(g);
+      const v=[...p,...n,...surfaceShade(p,n,a,b,t)];cache.set(key,v);return v;
     };
     const tri=(a,b,c)=>vertices.push(...a,...b,...c);
     const tetra=[[0,5,1,6],[0,1,2,6],[0,2,3,6],[0,3,7,6],[0,7,4,6],[0,4,5,6]];
+    const cube=new Int32Array(8);
+    const corner=[[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]].map(([a,b,c])=>index(a,b,c));
     for(let z=0;z<nz;z++)for(let y=0;y<ny;y++)for(let x=0;x<nx;x++){
-      const cube=[index(x,y,z),index(x+1,y,z),index(x+1,y+1,z),index(x,y+1,z),index(x,y,z+1),index(x+1,y,z+1),index(x+1,y+1,z+1),index(x,y+1,z+1)];
-      if(cube.every(i=>values[i]>0)||cube.every(i=>values[i]<0))continue;
+      const origin=index(x,y,z);
+      let inner=0;
+      for(let i=0;i<8;i++){cube[i]=origin+corner[i];if(values[cube[i]]<0)inner++;}
+      if(inner===0||inner===8)continue;
       for(const ids of tetra){
         const t=ids.map(i=>cube[i]),inside=t.filter(i=>values[i]<0),outside=t.filter(i=>values[i]>=0);
         if(inside.length===1)tri(...outside.map(i=>edge(inside[0],i)));
@@ -610,13 +753,15 @@ function createExhibit(canvas, options) {
     return {mesh:mesh(vertices),segments};
   }
   const seamGeometry=seamContour();
-  const eye=ellipsoid([1.848,.762,.483],[.073,.017,.024],12,6);
-  const nose=ellipsoid([2.215,.537,0],[.053,.070,.22],16,8);
+  /* 杏仁眼嵌在眼窝里（旧版眼上那根金管读起来像怒眉，已撤）；鼻头贴在长吻最前端 */
+  const eye=ellipsoid([eyeX+.005,eyeY,eyeZ-.012],[.075,.026,.025],14,7);
+  const nose=ellipsoid([HEAD.nose[0]-.012,HEAD.nose[1],0],[.05,.045,.11],16,8);
   const pin=ellipsoid([0,.05,-.025],[.065,.065,.10],12,6);
   const parts=[[body,0],[seamGeometry.mesh,2],[eye,2],[nose,3],[pin,1]];
   for(const x of [-1.05,1.68])for(const z of [.26,.43,.58])parts.push([ellipsoid([x,-.785,z],[.084,.026,.032],10,6),1]);
-  parts.push([tube([[1.64,.88,.429],[1.76,.851,.476],[1.91,.817,.450]],.029,10),1]);
-  parts.push([ellipsoid([2.075,.348,.31],[.03,.063,.025],10,6),1]);
+  /* 口裂里的獠牙：上犬齿朝下、下犬齿朝上，一侧一对 */
+  parts.push([ellipsoid([2.17,.405,.13],[.02,.042,.02],10,6),1]);
+  parts.push([ellipsoid([2.11,.35,.12],[.018,.034,.018],10,6),1]);
   // Metal collars sit in shallow channels; cyan is confined to the mating seam.
   for(const x of [-1.46,.82]){
     const ring=[];
@@ -1087,10 +1232,9 @@ raf=0;if(pageHidden||!visible||destroyed)return;
   }
   /* —— 器物本体命中测试（点模型 = 拆解 / 收合一次）——
      做法：用相机基向量直接生成屏幕射线，逐层逆变换回每一半的局部空间，
-     与解剖椭球（body anatomy + 头骨 + 尾椎小球）做精确相交。不读像素、不进 GPU，
+     与解剖椭球（body anatomy，含头部各块 + 尾椎小球）做精确相交。不读像素、不进 GPU，
      一次点击几十次交点计算；点到空处（背景）不算，不会误触。 */
   const HIT_SHAPES=anatomy.map(([c,r])=>[c,r]);
-  HIT_SHAPES.push([[1.62,.65,0],[.27,.24,.33]]);
   for(let i=0;i<tailPoints.length;i+=2)HIT_SHAPES.push([tailPoints[i],[.11,.11,.11]]);
   const invRot=(m,v)=>[m[0]*v[0]+m[1]*v[1]+m[2]*v[2],m[4]*v[0]+m[5]*v[1]+m[6]*v[2],m[8]*v[0]+m[9]*v[1]+m[10]*v[2]];
   function hitsTiger(px,py,cssW,cssH){
