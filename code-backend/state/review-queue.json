@@ -214,17 +214,6 @@
     "createdAt": "2026-09-22T15:32:21Z"
   },
   {
-    "kind": "plans",
-    "objectId": "opencode-go-plan",
-    "reason": "official terms changed; retaining prior record",
-    "evidence": {
-      "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE"
-    },
-    "id": "4bdd56839dfafa2fe251223407755f8efbacf0bd232d39985a6a2a5acb3963b7",
-    "status": "pending",
-    "createdAt": "2026-09-23T03:00:27Z"
-  },
-  {
     "kind": "news-source",
     "objectId": "aibase",
     "reason": "candidate count dropped below 60%: aibase",
@@ -781,18 +770,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "golang/go",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Go programming language",
-      "sourceUrl": "https://github.com/golang/go"
-    },
-    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
-    "status": "pending",
-    "createdAt": "2026-09-28T09:53:56Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "kestra-io/kestra",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -800,18 +777,6 @@
       "sourceUrl": "https://github.com/kestra-io/kestra"
     },
     "id": "2ce8a952175f736f8722b2768b702e9c05f8cadfbaa755af118759895d3eba6f",
-    "status": "pending",
-    "createdAt": "2026-09-28T09:53:56Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ayangweb/BongoCat",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🐱 BongoCat — A cross-platform interactive desktop pet that brings fun to your desktop!",
-      "sourceUrl": "https://github.com/ayangweb/BongoCat"
-    },
-    "id": "143c86a9e78175a562f639a3784d231f8b113c7a03649e547db1ea1bfd246ecd",
     "status": "pending",
     "createdAt": "2026-09-28T09:53:56Z"
   },
@@ -850,5 +815,40 @@
     "id": "8f6e52f88eb92353ea9384168e1f30d6d2053e0d7bb92ec724e0a96b4c3e8d7a",
     "status": "pending",
     "createdAt": "2026-09-28T18:37:28Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "opencode-go-plan",
+    "reason": "plan tier pattern not found: Go",
+    "evidence": {
+      "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE"
+    },
+    "id": "e35ff889041cbfb65e542ae3e6120a6278285c0d9078664fb607b2932427ddec",
+    "status": "pending",
+    "createdAt": "2026-09-29T09:55:24Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "timhartmann7/omnyssh",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fast, open-source SSH client and server manager for macOS, Windows and Linux. Desktop GUI and terminal TUI with a live metrics dashboard, tabbed terminal, SFTP file manager, port forwarding, one-click SSH keys and snippets. Built in Rust.",
+      "sourceUrl": "https://github.com/timhartmann7/omnyssh"
+    },
+    "id": "b820c354c385c5eace1974c9eb0a60d950b274918abfe63517ce1abdf21c3ee6",
+    "status": "pending",
+    "createdAt": "2026-09-29T09:55:24Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pollen-robotics/microduck",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Tiny biped duck robot 🦆",
+      "sourceUrl": "https://github.com/pollen-robotics/microduck"
+    },
+    "id": "16445aac3032f06f8f858781400c285e02bbac70f119213b797967e8713193ea",
+    "status": "pending",
+    "createdAt": "2026-09-29T09:55:24Z"
   }
 ]

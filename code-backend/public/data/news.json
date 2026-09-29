@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-09-28T18:37:28Z",
+  "dataUpdatedAt": "2026-09-29T09:55:24Z",
   "items": [
+    {
+      "title": "OpenAI因新模型太强叫停发布",
+      "sourceUrl": "https://www.qbitai.com/2026/09/499140.html",
+      "publishedAt": "2026-09-29T07:49:20Z",
+      "source": "量子位",
+      "summary": "AGI计划暂停。",
+      "id": "ce897ce5009ecf43fff2aa7bec0259e6fd3986bfa06cda4ecb0ce107ba166f15",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/09/499140.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-29T09:55:24Z",
+      "featured": true
+    },
+    {
+      "title": "曝OpenAI紧急叫停新模型发布！",
+      "sourceUrl": "https://zhidx.com/p/598046.html",
+      "publishedAt": "2026-09-29T03:33:46Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 程茜 编辑 | 心缘 智东西9月29日消息，刚刚，据外媒《华尔街日报》报道，因内部测试期间研究人员发现安全隐患",
+      "id": "5c507839b1c8c008fbe888092f0b65eb5e2c3f0e9df7c1ec6e25002038db2690",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/598046.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-29T09:55:24Z",
+      "featured": null
+    },
+    {
+      "title": "Claude Sonnet 5.5深夜空降！一半价格击败Opus，开发者实测账单暴涨",
+      "sourceUrl": "https://zhidx.com/p/597967.html",
+      "publishedAt": "2026-09-29T01:33:58Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 程茜 编辑 | 心缘 智东西9月29日消息，今日凌晨，Anthropic发布Claude 5.5系列第二款模型Claude Sonnet 5.",
+      "id": "23d0d12a85f6e48d41293e9f9a78b32286053050aa8feb7324444746737bf6c4",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/597967.html",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-09-29T09:55:24Z",
+      "featured": true
+    },
     {
       "title": "GitHub Copilot 中的 Claude Sonnet 5.5",
       "sourceUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
@@ -57,6 +114,25 @@
       "eventType": "major-update",
       "addedAt": "2026-09-28T09:53:56Z",
       "featured": true
+    },
+    {
+      "title": "Basis 使用 GPT-6 Astra 将税务工作簿完成速度提高 2 倍",
+      "sourceUrl": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "source": "OpenAI",
+      "summary": "GPT-6 Astra 完成 50 个标签页的税务工作簿的速度是 GPT-5.6 Sol 的两倍，其对用户意图的更强理解让 Basis 在实际使用中更有信心。",
+      "id": "eb674100bb687fff764326a192483a4161fa4fa5dc17727e3c5a9e490b0e4544",
+      "originalTitle": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+      "translatedAt": "2026-09-29T09:55:24Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "originalVerifiedAt": "2026-09-29T09:55:24Z",
+      "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-09-29T09:55:24Z",
+      "featured": null
     },
     {
       "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
@@ -2358,6 +2434,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-28T18:37:28Z",
-  "generatedAt": "2026-09-28T18:37:28Z"
+  "version": "2026-09-29T09:55:24Z",
+  "generatedAt": "2026-09-29T09:55:24Z"
 }
