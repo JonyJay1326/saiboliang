@@ -482,18 +482,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ahmedkhaleel2004/gitdiagram",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, simple, fast interactive diagrams and videos for any GitHub repository",
-      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
-    },
-    "id": "f0002b0872f5b9dcd387c3a17f92ba27ac9ccc9f2e944ec815ce8fe7739dbece",
-    "status": "pending",
-    "createdAt": "2026-09-25T15:50:41Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "julyx10/lap",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -865,18 +853,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "hashicorp/terraform",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
-      "sourceUrl": "https://github.com/hashicorp/terraform"
-    },
-    "id": "c4c261396e857dc9deb2a2b42882f275e1f935f98e991bca556bd3d71bc6135b",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "projectdiscovery/nuclei",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -973,18 +949,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "DataTalksClub/machine-learning-zoomcamp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Learn ML engineering for free in 4 months! Register here 👇🏼",
-      "sourceUrl": "https://github.com/DataTalksClub/machine-learning-zoomcamp"
-    },
-    "id": "0ce7d158c5a849f5f2caaf23dc5c937171da2acb53633c152d86742949ea0a8c",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "hugo2046/QuantsPlaybook",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1057,18 +1021,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "dbeaver/dbeaver",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free universal database tool and SQL client",
-      "sourceUrl": "https://github.com/dbeaver/dbeaver"
-    },
-    "id": "04340b3a6730acaf5072444cfd1e9cb7863b76e222b1f9079c05662c2a089b57",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "hefengxian/my-ielts",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1076,18 +1028,6 @@
       "sourceUrl": "https://github.com/hefengxian/my-ielts"
     },
     "id": "2147472fa9378bcbb313ec3b4c6705564c14cce5c641dbbffa6315fc59216572",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "geekgeekrun/geekgeekrun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "牛人快跑 - GeekGeekRun，求职找工作自动化工具，基于 Puppeteer、Electron。界面友好，简单易用！开源，免费！快速海投、自动开聊、已读不回提醒、职位信息抓取、不合适职位标记、僵尸职位清理；让你即刻变身成为一台冇得感情的求职机器🤖，找工作不内耗。宝宝不用动，妈妈全自动~祝你收获好Offer！",
-      "sourceUrl": "https://github.com/geekgeekrun/geekgeekrun"
-    },
-    "id": "6bfba03a6b314a70bffe6c7e51b074970cfa40e2bca50e652f6b4445b2575700",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
   },
@@ -1174,5 +1114,17 @@
     "id": "7921f7142f2c4202a8a8f05128897cb6e5699547f06e39c1fe3da232627ea22d",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ahmedkhaleel2004/gitdiagram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Visualize any GitHub codebase: free interactive architecture diagrams and one-minute explainer videos. Replace 'hub' with 'diagram' in any GitHub URL.",
+      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
+    },
+    "id": "f954508e529d0db480e0654c115dd8ff9e0437304ba80826f53ad908829c28c9",
+    "status": "pending",
+    "createdAt": "2026-09-30T09:47:34Z"
   }
 ]
