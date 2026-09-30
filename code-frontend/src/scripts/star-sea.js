@@ -15,7 +15,7 @@
 const TAU = Math.PI * 2;
 const HEAD_K = 0.5; /* 鱼头圆心距 = R × 0.5 */
 const EYE_K = 0.095; /* 鱼眼半径 = R × 0.095 */
-const SIZE_K = 1.6; /* 粒子尺寸（2026-09-20 定稿） */
+const SIZE_K = 1.45; /* 更细的粒径，用密度而非大光点塑形。 */
 const SPIN_DUR = 1200; /* 两仪互易时长（ms）；爆散包络同长 */
 const BURST_SWIRL = 0.25; /* 爆散切向分量：散开时整体带一点旋（参考稿量级） */
 const SPREAD_K = 0.04; /* 静置散布：--sea-spread = 1 时每颗最远散到 0.04R（见 site.css 调参台） */
@@ -23,11 +23,11 @@ const GOLD = '#e8b73a';
 const CYAN = '#3fd9c0';
 
 const ROLE = {
-  rim: { r: [0.72, 0.95], a: [0.5, 0.62], w: 0.9 },
-  rim2: { r: [0.64, 0.86], a: [0.4, 0.52], w: 0.9 },
-  seam: { r: [0.8, 1.05], a: [0.72, 0.98], w: 0.8 },
-  eye: { r: [0.8, 1.05], a: [0.7, 0.95], w: 0.6 },
-  body: { r: [0.55, 0.9], a: [0.16, 0.34], w: 1.6 },
+  rim: { r: [0.7, 1.02], a: [0.76, 0.96], w: 0.35 },
+  rim2: { r: [0.48, 0.76], a: [0.46, 0.68], w: 0.55 },
+  seam: { r: [0.58, 0.88], a: [0.64, 0.94], w: 0.5 },
+  eye: { r: [0.68, 0.96], a: [0.86, 1], w: 0.2 },
+  body: { r: [0.46, 0.82], a: [0.22, 0.52], w: 1.1 },
 };
 
 /* 点是否落在「阳」半（金区）：上鱼头黑（留白眼）、下鱼头白（留黑眼）、其余按 S 分左右 */
@@ -42,9 +42,9 @@ function inWhite(x, y, R) {
   return x >= 0;
 }
 
-/* 采样五族：外圈 34%（两层各 17%）/ S 分界 23% / 鱼眼 8% / 鱼身 35% */
-function rimPoint(R, ring) {
-  const t = Math.random() * TAU;
+/* 外圈 22% / S 分界 18% / 鱼眼 4% / 鱼身 56%；外沿分段随机落点，避免轮廓出现大缺口。 */
+function rimPoint(R, ring, index, count) {
+  const t = (index + Math.random()) / count * TAU;
   const rr = R * (ring === 2 ? 0.952 + 0.022 * Math.random() : 1 - 0.006 * Math.random());
   const x = Math.cos(t) * rr;
   return { x, y: Math.sin(t) * rr, white: x >= 0, role: ring === 2 ? 'rim2' : 'rim' };
@@ -83,7 +83,7 @@ function seamPoint(R) {
 function eyePoint(R) {
   const white = Math.random() < 0.5;
   const a = Math.random() * TAU;
-  const d = Math.sqrt(Math.random()) * R * EYE_K;
+  const d = (Math.random() < 0.45 ? 0.88 + Math.random() * 0.12 : Math.sqrt(Math.random())) * R * EYE_K;
   return {
     x: Math.cos(a) * d,
     y: (white ? 1 : -1) * R * HEAD_K + Math.sin(a) * d,
@@ -176,10 +176,11 @@ class StarField {
   seed() {
     const { R, cx, cy, count } = this;
     const parts = [];
-    const nRim = Math.round(count * 0.17);
-    const nSeam = Math.round(count * 0.23);
-    const nEye = Math.round(count * 0.08);
-    const nBody = Math.max(0, count - nRim * 2 - nSeam - nEye);
+    const nOuterRim = Math.round(count * 0.14);
+    const nInnerRim = Math.round(count * 0.08);
+    const nSeam = Math.round(count * 0.18);
+    const nEye = Math.round(count * 0.04);
+    const nBody = Math.max(0, count - nOuterRim - nInnerRim - nSeam - nEye);
 
     const push = (sp) => {
       const t = ROLE[sp.role];
@@ -201,8 +202,10 @@ class StarField {
       }
       /* 静置散布方向（调参台 --sea-spread 的乘子；固定随机，逐帧只乘系数、不重排） */
       const sA = Math.random() * TAU;
-      const sD = Math.pow(Math.random(), 1.5);
+      const spreadK = sp.role === 'eye' ? 0.15 : sp.role === 'rim' ? 0.4 : 1;
+      const sD = Math.pow(Math.random(), 1.5) * spreadK;
       parts.push({
+        role: sp.role,
         bx: sp.x,
         by: sp.y,
         x: cx + sp.x,
@@ -212,14 +215,17 @@ class StarField {
         lobe: sp.white ? 0 : 1,
         r0,
         r: r0 * SIZE_K * this.sizeK,
-        a: (t.a[0] + Math.random() * (t.a[1] - t.a[0])) * (0.7 + 0.3 * tipK),
+        a: (t.a[0] + Math.random() * (t.a[1] - t.a[0])) * (0.7 + 0.3 * tipK) *
+          (sp.role === 'body' ? Math.max(.48, 1.2 - sp.dh * .4) : 1),
         ph: Math.random() * TAU,
         sp: 0.5 + Math.random() * 0.9,
         wob: t.w,
         ux,
         uy,
         /* 爆散幅度：多数粒子小、少数飞得远，外圈再多一点（参考稿 bk） */
-        bk: 0.07 + 0.34 * Math.pow(Math.random(), 1.4) + (d0 > R * 0.9 ? 0.06 : 0),
+        bk: (0.07 + 0.34 * Math.pow(Math.random(), 1.4) + (d0 > R * 0.9 ? 0.06 : 0)) *
+          (sp.role === 'eye' || (sp.role === 'seam' && parts.length % 3 === 0) ||
+            (sp.role === 'rim' && parts.length % 3 === 0) ? .12 : 1),
         sox: Math.cos(sA) * sD,
         soy: Math.sin(sA) * sD,
         ox: 0,
@@ -227,8 +233,8 @@ class StarField {
       });
     };
 
-    for (let i = 0; i < nRim; i++) push(rimPoint(R, 1));
-    for (let i = 0; i < nRim; i++) push(rimPoint(R, 2));
+    for (let i = 0; i < nOuterRim; i++) push(rimPoint(R, 1, i, nOuterRim));
+    for (let i = 0; i < nInnerRim; i++) push(rimPoint(R, 2, i, nInnerRim));
     for (let i = 0; i < nSeam; i++) push(seamPoint(R));
     for (let i = 0; i < nEye; i++) push(eyePoint(R));
     for (let i = 0; i < nBody; i++) push(bodyPoint(R, Math.random() < 0.5));
@@ -320,16 +326,13 @@ class StarField {
     ctx.arc(cx, cy, R * 1.35, 0, TAU);
     ctx.fill();
 
-    const buckets = [
-      [[], [], []],
-      [[], [], []],
-    ];
+    const buckets = Array.from({ length: 2 }, () => Array.from({ length: 6 }, () => []));
     const heroes = [];
     /* 顺带量一下里画布边最近的一颗：太近才上边缘软收（4 条渐隐带），远处不花这份钱 */
     const edge = Math.max(10, this.padY * 0.7);
     let nearEdge = Infinity;
     for (const p of this.parts) {
-      buckets[p.lobe][p.a < 0.4 ? 0 : p.a < 0.65 ? 1 : 2].push(p);
+      buckets[p.lobe][Math.min(5, Math.floor(p.a * 6))].push(p);
       if (p.hero) heroes.push(p);
       const x = p.x + p.ox;
       const y = p.y + p.oy;
@@ -337,10 +340,10 @@ class StarField {
       if (d < nearEdge) nearEdge = d;
     }
     const cols = [GOLD, CYAN];
-    const alphas = [0.26, 0.72, 0.88]; /* 中档只覆盖两圈外环，调它即调外圈整体亮度 */
+    const alphas = [.12, .24, .39, .55, .71, .86];
     const burstFade = 1 - 0.25 * this.burstEnv; /* 炸开时整片略淡（参考稿口径） */
     for (let lobe = 0; lobe < 2; lobe++) {
-      for (let t = 0; t < 3; t++) {
+      for (let t = 0; t < 6; t++) {
         const arr = buckets[lobe][t];
         if (!arr.length) continue;
         ctx.globalAlpha = alphas[t] * burstFade;
@@ -355,10 +358,10 @@ class StarField {
     }
     ctx.globalCompositeOperation = 'lighter';
     for (const p of heroes) {
-      ctx.globalAlpha = 0.09 * burstFade;
+      ctx.globalAlpha = 0.065 * burstFade;
       ctx.fillStyle = cols[p.lobe];
       ctx.beginPath();
-      ctx.arc(p.x + p.ox, p.y + p.oy, p.r * 3.4, 0, TAU);
+      ctx.arc(p.x + p.ox, p.y + p.oy, p.r * 2.7, 0, TAU);
       ctx.fill();
     }
     /* 画布边缘软收（2026-09-24 用户反馈「放大最大时超出边界」）：
@@ -414,11 +417,13 @@ class StarField {
        与同页星历拨盘的双向转动（pos 0↔1 来回）一致。 */
     this.flipDir = direction < 0 ? -1 : 1;
     this.spinFrom = this.spin;
-    this.spinTo = this.spin + Math.PI * this.flipDir;
+    this.spinTo = direction > 0 ? Math.PI : 0;
     this.spinT = 0;
     if (!this.running) {
       this.spinT = 1;
       this.spin = this.spinTo;
+      this.burstT = 1;
+      this.burstEnv = 0;
       this.paint(0);
     }
   }
@@ -471,6 +476,7 @@ class StarField {
 
   destroy() {
     this.dead = true;
+    clearTimeout(this.rt);
     this.stop();
     this.ro.disconnect();
     this.parts = [];
@@ -556,15 +562,20 @@ export function mount() {
     if (!field.running) field.paint(0);
   };
 
-  /* 周 / 月切换 = 两仪互易（方向按目标榜位：第一个榜逆时针、后面的榜顺时针）：
-     只监听已有按钮，不加 DOM、不加状态位 */
-  const onToggle = (event) => {
-    const btn = event.target instanceof Element ? event.target.closest('[data-toggle-value]') : null;
-    if (!btn || !btn.closest('[data-toggle]')) return;
-    const tabs = btn.parentElement ? [...btn.parentElement.children] : [];
-    field.flip(tabs.indexOf(btn) > 0 ? 1 : -1);
-    field.burst(); /* 幅度走调参台 --sea-burst */
+  // 与星历盘共用榜单状态；重复点击不重播，打断时从当前角度转向明确榜位。
+  const toggleRoot = document.querySelector('[data-instrument][data-kind="sky"]')?.closest('[data-toggle]');
+  let current = toggleRoot?.dataset.toggleCurrent || 'week';
+  field.spin = field.spinFrom = field.spinTo = current === 'month' ? Math.PI : 0;
+  field.paint(0);
+  const onToggle = () => {
+    const next = toggleRoot?.dataset.toggleCurrent;
+    if (!['week', 'month'].includes(next) || next === current) return;
+    current = next;
+    field.flip(next === 'month' ? 1 : -1);
+    field.burst();
   };
+  const toggleObserver = new MutationObserver(onToggle);
+  if (toggleRoot) toggleObserver.observe(toggleRoot, { attributes: true, attributeFilter: ['data-toggle-current'] });
 
   let io = null;
   if ('IntersectionObserver' in window) {
@@ -592,7 +603,6 @@ export function mount() {
   field.reduced = reduced.matches;
   host.addEventListener('pointermove', onPointerMove);
   host.addEventListener('pointerleave', onPointerLeave);
-  document.addEventListener('click', onToggle);
   document.addEventListener('visibilitychange', onVisibility);
   reduced.addEventListener?.('change', onReduced);
   if (!reduced.matches && field.visible) field.start();
@@ -607,7 +617,7 @@ export function mount() {
     release() {
       clearInterval(tuneTimer);
       io?.disconnect();
-      document.removeEventListener('click', onToggle);
+      toggleObserver.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
       reduced.removeEventListener?.('change', onReduced);
       host.removeEventListener('pointermove', onPointerMove);
@@ -618,4 +628,3 @@ export function mount() {
 }
 
 export default mount;
-

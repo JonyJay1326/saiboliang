@@ -2,23 +2,22 @@
 // 三器切换控件（frontend-spec §7.1 切换条外观）。
 // 来源：cache-tools/design-lab/three-instruments-v3.html（2026-09-23 用户拍板移植到实际页面）：
 //   army   /models  错金兵符（分片 + 磁场牵引）
-//   market /plans   悬签（提签 / 翻面 / 回落）
+//   market /plans   横轨双市签（铜印滑移 / 落签）
 //   sky    /github  星历拨盘（双环转位 + 盘心可拨）
 // 契约不变：容器 [data-toggle]、按钮 [data-toggle-value]、面板 [data-toggle-panel]，
 // 显隐 / 键盘 / aria 仍由 Base.astro 的原生脚本处理；本组件只换外观，
 // 画布美术、切换动效与流光在 src/scripts/instrument-switch.js（独立 chunk）。
 // 画布纯装饰：aria-hidden、零数据（不映射任何榜单 / 套餐字段）。
 const { kind, label, options, current } = Astro.props;
-const numerals = ['壹', '贰'];
 // 右侧静态提示（2026-09-23 用户定：不再随切换播过程词，每页固定一条，直接构建期渲染）
-const HINTS = { army: '错金兵符', market: '翻签换市', sky: '星历拨盘 · 可拨动' };
+const HINTS = { army: '错金兵符', market: '移印换市', sky: '星历拨盘 · 可拨动' };
 ---
 <div class="instrument" data-instrument data-kind={kind}>
   <div class="instrument__widget">
     <canvas class="instrument__canvas" aria-hidden="true"></canvas>
     <div class="instrument__tabs" role="tablist" aria-label={label}>
       {
-        options.map((option, i) => (
+        options.map((option) => (
           <button
             type="button"
             role="tab"
@@ -46,10 +45,7 @@ const HINTS = { army: '错金兵符', market: '翻签换市', sky: '星历拨盘
                 </span>
               </span>
             ) : (
-              <span class="instrument__label">
-                {kind === 'army' && <small>{numerals[i]}</small>}
-                {option.label}
-              </span>
+              <span class="instrument__label">{option.label}</span>
             )}
           </button>
         ))

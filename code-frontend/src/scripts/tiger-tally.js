@@ -3,16 +3,22 @@
 // 纪律：画布纯装饰（aria-hidden、零数据、不映射榜单字段）；画布透明、不自带底色；
 // 皮肤只走 CSS 变量 --totem-motion（朴素档 = 静止单帧，交互时才短暂补帧），JS 只读变量、不判档；
 // prefers-reduced-motion 同静止单帧；窄屏由 CSS 关掉画布（无布局盒即不起引擎）。
-// 交互（2026-09-22 反馈二轮）：点器物本体 / 切综合榜 · 编程榜 = 拆解与收合一次；
+// 交互（2026-09-22 反馈二轮）：点器物本体 / 切综合校场 · 编程校场 = 拆解与收合一次；
 // 拖动旋转、双击复位。（反馈十五轮 2026-09-22：点模型卡 / 点卯簿行不再触发整段合璧流程；
 // 手动收合到位的一瞬补一击——闪光 + 后坐抖动 + 粒子爆炸 + 余辉，约 2.6s；地面光圈已撤。
-// 反馈十六轮：离合动作本身 +0.6s（速率 9 → 3.3，约 0.34s → 0.94s），视角回收同步。）
+// 反馈十六轮：离合动作本身 +0.6s（速率 9 → 3.3，约 0.34s → 0.94s），视角回收同步。
+// 2026-09-29：合璧重做——先对位、再加速吸合，到位后锁定波点亮合缝与错金纹、合缝迸电屑；冲击环已撤。）
 // 引擎是独立 chunk，由 Base.astro 的虎符加载器空闲取件。
 const VIEW = { yaw: -0.38, pitch: 0.1 };
 /* 离合动作速率（2026-09-22 反馈十六轮：动作本身 +0.6s）——到 95.5% 分离量的时间
    ≈ ln(1/.045)/速率，9 → 3.3 即约 0.34s → 0.94s；视角「收合 = 恢复」共用同一时长，
    拖动 / 双击复位仍走 9（手感不变）。 */
 const SPLIT_RATE = 3.3;
+/* 合璧（2026-09-29 用户反馈「合璧效果不满意」重做）：两半先摆正对位、再被磁力加速吸合，
+   到位即「锁」——锁定波从内部磁路向外扩散，点亮合缝、掠过错金纹，并从合缝迸出电屑。
+   JOIN_TIME = 收合全程秒数；LOCK_SPEED = 锁定波扩散速度（世界单位 / 秒，着色器与电屑共用） */
+const JOIN_TIME = 1.1;
+const LOCK_SPEED = 3.2;
 
 export function mount() {
   const host = document.querySelector('[data-tiger-tally]');
@@ -44,7 +50,7 @@ export function mount() {
   host.dataset.totem = 'ready';
 
   /* 页面联动（2026-09-22 用户定）：
-     ① 切综合榜 / 编程榜 = 拆解与收合**一次**（不带整段合符流程；顺带给了键盘可达的入口）；
+     ① 切综合校场 / 编程校场 = 拆解与收合**一次**（不带整段合符流程；顺带给了键盘可达的入口）；
      ② 点器物本体（画布内命中测试）= 拆解与收合一次（手动按钮已撤）；
      ③ 点模型卡 / 点卯簿行**不再触发任何动效**（2026-09-22 反馈十五轮，用户撤销该入口）。 */
   const onPageClick = (event) => {
@@ -151,7 +157,7 @@ function createExhibit(canvas, options) {
     uniform vec3 uEye;
     uniform vec3 uHoverPoint;
     uniform mat4 uModel;
-    uniform float uTime,uEnergy,uMaterial,uFlash,uScan,uHover,uHoverTime,uCharge,uAfterglow,uSplit,uHalf;
+    uniform float uTime,uEnergy,uMaterial,uFlash,uScan,uHover,uHoverTime,uCharge,uAfterglow,uSplit,uHalf,uLock,uPulse;
     out vec4 outColor;
     float hash(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}
     float noise(vec3 p){
@@ -254,7 +260,7 @@ function createExhibit(canvas, options) {
         for(int i=0;i<4;i++){
           float x=-1.45+float(i)*.9;
           float pulse=.6+.4*pow(.5+.5*sin(uTime*7.-float(i)*1.7),4.);
-          color+=electricLight(vec3(x,.12,-.18),N,V,(uSplit*(.6+uCharge)+uAfterglow)*pulse*5.);
+          color+=electricLight(vec3(x,.12,-.18),N,V,(uSplit*(.6+uCharge)+uAfterglow*.12)*pulse*5.);
         }
       }
       if(uMaterial<.5) color+=tex.g*vec3(.08,.93,.72)*energy*3.2;
@@ -273,6 +279,37 @@ function createExhibit(canvas, options) {
         color+=vec3(.55,1.5,1.15)*contacts*energy;
       }
       if(uMaterial>1.5&&uMaterial<2.5) color+=vec3(.15,1.3,1.05)*energy*1.7;
+      /* 合符锁定波：以内部磁路（y=.12 的触点连线）为源向外扩散——先点亮合缝与眼，再掠过错金纹；
+         uLock = 锁定后的秒数（未锁定时为大数） */
+      if(uLock<3.){
+        vec2 core=vec2(clamp(vLocal.x,-1.45,1.25),.12);
+        float reach=length(vec3(vLocal.xy-core,vLocal.z));
+        float front=exp(-pow((reach-uLock*${LOCK_SPEED.toFixed(2)})*7.,2.))*exp(-uLock*1.3);
+        float hold=exp(-uLock*2.2);
+        if(uMaterial<.5){
+          float lip=exp(-vLocal.z*vLocal.z*25000.);
+          color+=vec3(.25,1.5,1.15)*lip*(front*3.+hold*.2);
+          color+=vec3(1.5,.95,.35)*tex.b*front*2.4+vec3(.08,.93,.72)*tex.g*front*2.2;
+        } else if(uMaterial<1.5){
+          color+=vec3(1.5,.95,.35)*front*1.5;
+        } else if(uMaterial<2.5){
+          color+=vec3(.35,1.8,1.4)*(front*3.+hold*.35);
+        }
+      }
+      /* 校场切换脉冲：流光落到虎符时补一道弱化的锁定波，只掠错金纹与眼，不点合缝、不带电屑；
+         uPulse = 脉冲起算后的秒数（未触发时为大数） */
+      if(uPulse<2.){
+        vec2 core=vec2(clamp(vLocal.x,-1.45,1.25),.12);
+        float reach=length(vec3(vLocal.xy-core,vLocal.z));
+        float front=exp(-pow((reach-uPulse*${LOCK_SPEED.toFixed(2)})*6.,2.))*exp(-uPulse*1.8);
+        if(uMaterial<.5){
+          color+=vec3(1.5,.95,.35)*tex.b*front*1.3+vec3(.08,.93,.72)*tex.g*front*1.1;
+        } else if(uMaterial<1.5){
+          color+=vec3(1.5,.95,.35)*front*.7;
+        } else if(uMaterial<2.5){
+          color+=vec3(.35,1.8,1.4)*front*1.4;
+        }
+      }
       /* 悬停通电（2026-09-22 反馈十轮，移植自试作）：命中点 proximity + 沿身扫掠 + 纹路流动 + 边缘 */
       if(uHover>.001){
         float proximity=exp(-dot((vLocal-uHoverPoint)*vec3(1.,1.3,.8),(vLocal-uHoverPoint)*vec3(1.,1.3,.8))*3.2);
@@ -292,7 +329,7 @@ function createExhibit(canvas, options) {
         color+=electricLight(contact,N,V,uHover*(1.3+proximity)*3.);
         color+=electricLight(vec3(sweepX,.3,.88),N,V,uHover*4.);
       }
-      color+=vec3(.12,.7,.55)*uFlash*pow(1.-max(dot(N,V),0.),3.);
+      color+=vec3(.12,.7,.55)*uFlash*.6*pow(1.-max(dot(N,V),0.),3.);
       outColor=vec4(color,1.);
     }
   `);
@@ -753,6 +790,22 @@ function createExhibit(canvas, options) {
     return {mesh:mesh(vertices),segments};
   }
   const seamGeometry=seamContour();
+  /* 合缝电屑的发射点（半体局部坐标）：沿合缝轮廓取点，朝外 + 向两侧（±z）斜飞；
+     delay = 锁定波扩散到该点所需的秒数——电屑跟着锁定波逐段迸出，不是一次齐炸 */
+  const SEAM_SPARKS=[];
+  {
+    const rand=n=>{const v=Math.sin(n*127.1+42.7)*43758.5453;return v-Math.floor(v);};
+    const segments=seamGeometry.segments;
+    for(let i=0;i<150&&segments.length;i++){
+      const [a,b]=segments[Math.floor(rand(i)*segments.length)];
+      const t=rand(i+.5);
+      const p=[mix(a[0],b[0],t),mix(a[1],b[1],t),0];
+      const offset=[p[0]-clamp(p[0],-1.45,1.25),p[1]-.12];
+      const speed=1.1+rand(i+.75)*2.2;
+      const v=vec.norm([...vec.norm([...offset,0]).slice(0,2),(rand(i+.25)<.5?-1:1)*(.35+rand(i+.9)*.9)]).map(n=>n*speed);
+      SEAM_SPARKS.push({p,v,delay:Math.hypot(...offset)/LOCK_SPEED,life:.35+rand(i+.6)*.55});
+    }
+  }
   /* 杏仁眼嵌在眼窝里（旧版眼上那根金管读起来像怒眉，已撤）；鼻头贴在长吻最前端 */
   const eye=ellipsoid([eyeX+.005,eyeY,eyeZ-.012],[.075,.026,.025],14,7);
   const nose=ellipsoid([HEAD.nose[0]-.012,HEAD.nose[1],0],[.05,.045,.11],16,8);
@@ -805,10 +858,15 @@ function createExhibit(canvas, options) {
   let split=0,targetSplit=0,yaw=VIEW.yaw,pitch=VIEW.pitch,targetYaw=VIEW.yaw,targetPitch=VIEW.pitch;
   /* 视角「收合 = 恢复」进行中：视角缓动跟着离合时长走，拖动 / 双击复位即时打断（回 9 档） */
   let viewRestoring=false;
-  let dragging=false,pointer=null,dragDist=0,flash=0,pendingStrike=false,sequence=null,hitFrame=null;
+  let dragging=false,pointer=null,dragDist=0,flash=0,sequence=null,hitFrame=null;
+  /* 收合时平移与翻转分开走：turnSplit = 翻转错位量（先归零 = 先摆正对位），split 管平移；
+     joining = 进行中的合璧时间线 {start, from, turnFrom}，拆解或已合上时为 null */
+  let turnSplit=0,joining=null;
   /* 合璧时间线状态（2026-09-22 反馈十一轮）：蓄势 charge / 冲击后坐 recoil / 余辉 afterglow；
      impactAge = 冲击段时钟（秒；未在冲击段时为 Infinity）——粒子爆炸按它采样，不靠 flash 反推 */
   let charge=0,recoil=0,afterglow=0,impactAge=Infinity;
+  /* 切换脉冲时钟（秒；未触发为 Infinity）：由三器切换的流光落点经 canvas.__pulse 触发 */
+  let pulseAge=Infinity;
   let distance=6.5,neededDistance=6.5;
   /* 悬停通电状态（2026-09-22 反馈十轮）：hoverPoint = SDF 表面命中点（半体局部坐标） */
   let hoverPointer=null,hoverTarget=0,hoverAmount=0,hoverStarted=0,lastHoverPick=-Infinity,pickDirty=false,pointerDown=false;
@@ -833,7 +891,7 @@ function createExhibit(canvas, options) {
     gl.useProgram(meshProgram.p);uniform(meshProgram,'uModel',model);uniform(meshProgram,'uView',view);uniform(meshProgram,'uProjection',projection);
     uniform(meshProgram,'uEye',eyePos);uniform(meshProgram,'uTime',time);uniform(meshProgram,'uEnergy',energy);uniform(meshProgram,'uMaterial',material);uniform(meshProgram,'uFlash',flash);uniform(meshProgram,'uScan',scan);
     uniform(meshProgram,'uHover',hoverAmount);uniform(meshProgram,'uHoverPoint',hoverPoint);uniform(meshProgram,'uHoverTime',time-hoverStarted);
-    uniform(meshProgram,'uCharge',charge);uniform(meshProgram,'uAfterglow',afterglow);uniform(meshProgram,'uSplit',split);uniform(meshProgram,'uHalf',modelIndex===0?1:-1);
+    uniform(meshProgram,'uCharge',charge);uniform(meshProgram,'uAfterglow',afterglow);uniform(meshProgram,'uSplit',split);uniform(meshProgram,'uHalf',modelIndex===0?1:-1);uniform(meshProgram,'uLock',Math.min(impactAge,99));uniform(meshProgram,'uPulse',Math.min(pulseAge,99));
     sampler(meshProgram,'uSurface',0,surface);gl.bindVertexArray(m.vao);gl.drawArrays(gl.TRIANGLES,0,m.count);
   }
   function drawLines(vertices,color,alpha,view,projection){
@@ -890,21 +948,38 @@ function createExhibit(canvas, options) {
     }else if(!pointerDown)hoverTarget=0;
   }
   function clearHover(){hoverPointer=null;hoverTarget=0;pickDirty=false;}
-  function drawElectricBridge(models,amount,view,projection){
-    let cursor=0;
-    function strip(points,strength,seed){
-      const vertex=(i,side)=>{
-        const p=points[i],next=points[Math.min(i+1,points.length-1)],previous=points[Math.max(0,i-1)];
-        for(let j=0;j<3;j++)arcData[cursor++]=p[j];
-        for(let j=0;j<3;j++)arcData[cursor++]=next[j]-previous[j];
-        arcData[cursor++]=side;arcData[cursor++]=i/(points.length-1);
-        arcData[cursor++]=strength;arcData[cursor++]=seed;
-      };
-      for(let i=0;i<points.length-1;i++){
-        vertex(i,-1);vertex(i,1);vertex(i+1,-1);
-        vertex(i+1,-1);vertex(i,1);vertex(i+1,1);
-      }
+  /* 电弧带写入 / 提交：points 折线展成面向屏幕的带状三角形，写进共享的 arcData；
+     flushArcs 一次画完并清零游标（电弧桥与合缝电屑各自提交一次） */
+  let arcCursor=0;
+  function arcStrip(points,strength,seed){
+    if(arcCursor+(points.length-1)*60>arcData.length)return;
+    const vertex=(i,side)=>{
+      const p=points[i],next=points[Math.min(i+1,points.length-1)],previous=points[Math.max(0,i-1)];
+      for(let j=0;j<3;j++)arcData[arcCursor++]=p[j];
+      for(let j=0;j<3;j++)arcData[arcCursor++]=next[j]-previous[j];
+      arcData[arcCursor++]=side;arcData[arcCursor++]=i/(points.length-1);
+      arcData[arcCursor++]=strength;arcData[arcCursor++]=seed;
+    };
+    for(let i=0;i<points.length-1;i++){
+      vertex(i,-1);vertex(i,1);vertex(i+1,-1);
+      vertex(i+1,-1);vertex(i,1);vertex(i+1,1);
     }
+  }
+  /* 提交已写入的电弧带：opacity = 整体不透明度，chargeValue = 芯线增亮量 */
+  function flushArcs(view,projection,opacity,chargeValue){
+    if(!arcCursor)return;
+    gl.useProgram(arcProgram.p);
+    uniform(arcProgram,'uView',view);uniform(arcProgram,'uProjection',projection);
+    uniform(arcProgram,'uResolution',[width,height]);uniform(arcProgram,'uTime',time);
+    uniform(arcProgram,'uOpacity',opacity);
+    uniform(arcProgram,'uCharge',chargeValue);
+    gl.bindVertexArray(arcVao);gl.bindBuffer(gl.ARRAY_BUFFER,arcBuffer);
+    gl.bufferSubData(gl.ARRAY_BUFFER,0,arcData.subarray(0,arcCursor));
+    gl.drawArrays(gl.TRIANGLES,0,arcCursor/10);
+    arcCursor=0;
+  }
+  function drawElectricBridge(models,amount,view,projection){
+    const strip=arcStrip;
     // Four locked contact pairs match the circular terminals on the mating face.
     for(let k=0;k<4;k++){
       const anchor=[-1.45+k*.9,.12,-.012];
@@ -928,14 +1003,7 @@ function createExhibit(canvas, options) {
       }
       strip(branch,(.25+.10*Math.pow(Math.sin(time*2.3+k),2.))*(1-charge*.85),k*.271+.15);
     }
-    gl.useProgram(arcProgram.p);
-    uniform(arcProgram,'uView',view);uniform(arcProgram,'uProjection',projection);
-    uniform(arcProgram,'uResolution',[width,height]);uniform(arcProgram,'uTime',time);
-    uniform(arcProgram,'uOpacity',smooth(.025,.3,amount));
-    uniform(arcProgram,'uCharge',charge);
-    gl.bindVertexArray(arcVao);gl.bindBuffer(gl.ARRAY_BUFFER,arcBuffer);
-    gl.bufferSubData(gl.ARRAY_BUFFER,0,arcData.subarray(0,cursor));
-    gl.drawArrays(gl.TRIANGLES,0,cursor/10);
+    flushArcs(view,projection,smooth(.025,.3,amount),charge);
   }
   /* —— 取景（2026-09-22 反馈三轮：旋转不再被裁；反馈四轮：旋转时镜头零推拉）——
      规则：镜头距离与横纵移位**只跟器物位比例（+ 分符量）走，与拖动姿态无关**。
@@ -1000,10 +1068,11 @@ function createExhibit(canvas, options) {
   }
   /* 拆解动作：两半各自朝外「上下爆开」＋翻转错位（用户 2026-09-22 指定保留原样，勿改） */
   const SPLIT={ trans:[.42,.96,.78], turn:[.10,.38,.08] };
-  function splitOffset(side,amount){
+  /* 半体的平移 / 翻转偏移：amount 管平移，turnAmount 管翻转（缺省同步；合璧时翻转先归零） */
+  function splitOffset(side,amount,turnAmount=amount){
     return {
       trans:[side*amount*SPLIT.trans[0],side*amount*SPLIT.trans[1],side*(.009+amount*SPLIT.trans[2])],
-      turn:[side*amount*SPLIT.turn[0],side*amount*SPLIT.turn[1],side*amount*SPLIT.turn[2]],
+      turn:[side*turnAmount*SPLIT.turn[0],side*turnAmount*SPLIT.turn[1],side*turnAmount*SPLIT.turn[2]],
     };
   }
   /* 采样姿态下的两半模型矩阵（基础位姿只留平移与旋转，不含浮动/扫掠等瞬时量） */
@@ -1066,7 +1135,7 @@ function createExhibit(canvas, options) {
     const base=mult(translate(basePos[0],basePos[1],basePos[2]),mult(rotation(recoil*.38,0,recoil*.55),baseRot));
     const models=[],halves=[];
     for(const side of [1,-1]){
-      const {trans,turn}=splitOffset(side,split);
+      const {trans,turn}=splitOffset(side,split,turnSplit);
       const mirror=identity();mirror[10]=side;
       models.push(mult(base,mult(translate(trans[0],trans[1],trans[2]),mult(rotation(turn[0],turn[1],turn[2]),mirror))));
       halves.push({trans,turn,rotM:rotation(turn[0],turn[1],turn[2]),side});
@@ -1120,30 +1189,20 @@ function createExhibit(canvas, options) {
       drawLines(field,[.21,.42,.34],.05+split*.07,view,projection);
       drawLines(packets,[.22,1.3,.91],.1+split*.35,view,projection);
     }
-    if(flash>.015){
-      const shock=[];const radius=2+(1-flash)*3.1;
-      for(let i=0;i<160;i++){
-        const a=i/160*TAU,b=(i+1)/160*TAU;
-        shock.push(center+Math.cos(a)*radius,.1+Math.sin(a)*radius*.56,0,center+Math.cos(b)*radius,.1+Math.sin(b)*radius*.56,0);
+    /* 合缝电屑（2026-09-29 重做：旧版的地面椭圆冲击环与画面中心放射线已撤）——
+       电屑从合缝轮廓上迸出、随锁定波逐段起跳，带下坠，落到地面即灭；
+       用电弧带渲染（有芯有晕），尾迹与粗细随寿命收细。确定性发射表，暂停 / 重播同帧一致 */
+    if(impactAge<1.8){
+      for(const s of SEAM_SPARKS){
+        const t=impactAge-s.delay;
+        if(t<0||t>s.life)continue;
+        const at=k=>{const u=Math.max(0,t-k);return [s.p[0]+s.v[0]*u,s.p[1]+s.v[1]*u-2.6*u*u,s.p[2]+s.v[2]*u];};
+        const head=at(0);
+        if(head[1]<-1.25)continue;
+        const fade=1-t/s.life,tail=.12*fade+.025;
+        arcStrip([at(tail),at(tail*.5),head].map(p=>transform(models[0],p)),.1+fade*.22,s.delay);
       }
-      drawLines(shock,[.2,1.7,1.25],flash*.8,view,projection);
-    }
-    /* 冲击粒子爆炸（2026-09-22 反馈十五轮：旧版 75 条短划线跟着 flash 一闪即没（约 0.3s），
-       用户要「原版那种粒子爆炸」——改成 190 颗电屑沿黄金角炸开，半径按冲击时钟先快后慢、
-       带轻微下坠，1.2s 内渐隐；用确定性伪随机（rand）保证暂停 / 重播同帧一致 */
-    if(impactAge<1.2){
-      const t=impactAge/1.2,fade=(1-t)*(1-t);
-      const hash=n=>{const v=Math.sin(n*127.1+42.7)*43758.5453;return v-Math.floor(v);};
-      const sparks=[];
-      for(let i=0;i<190;i++){
-        const angle=i*2.39996,rnd=hash(i);
-        const r=(1-Math.pow(1-t,2.2))*(2.4+rnd*3.4);
-        const x=center+Math.cos(angle)*r,z=Math.sin(i*17.1)*r*.34;
-        const y=.14+Math.sin(angle)*r*.62-t*t*(.8+rnd*1.2);
-        const tail=.12+rnd*.2;
-        sparks.push(x,y,z,x+Math.cos(angle)*tail,y+Math.sin(angle)*tail*.62,z);
-      }
-      drawLines(sparks,[1.2,2.4,1.64],Math.max(flash*.9,fade*.9),view,projection);
+      flushArcs(view,projection,4,1);
     }
     gl.depthMask(true);gl.disable(gl.BLEND);gl.disable(gl.DEPTH_TEST);gl.bindVertexArray(null);
     gl.useProgram(blurProgram.p);
@@ -1162,7 +1221,7 @@ function createExhibit(canvas, options) {
      0~1.45s 开符 → 1.45~2.9s 蓄势（电弧绷紧增亮）→ 2.9~4.0s 牵引吸入 → 4.0s 冲击
      （闪光 + 后坐 + 粒子爆炸 + 余辉）→ 6.6s 收尾。整段由纯函数按时间采样，暂停 / 重播都不会漂。
      反馈十五轮（2026-09-22 用户定）：整段自动播放的入口已撤；**手动合璧到位的一瞬只补播冲击段**
-     （sequence 从 t=4s 起算，见 update 的 pendingStrike 分支），开符 / 蓄势 / 牵引段留给试作同步；
+     （sequence 从 t=4s 起算，见 update 的合璧分支），开符 / 蓄势 / 牵引段留给试作同步；
      冲击段时长 +0.6s（2.0s → **2.6s**，收尾窗口与余辉一并拉长），粒子爆炸由 1.2s 的burst 承担。 */
   function sampleCoupling(elapsed,initialSplit=0){
     const t=Math.max(0,elapsed);
@@ -1173,7 +1232,8 @@ function createExhibit(canvas, options) {
     const settle=1-smooth(1.9,2.6,age);
     return{stage:age<.24?'impact':age<2.6?'afterglow':'idle',split:0,charge:0,
       flash:Math.exp(-age*14)*settle,
-      recoil:settle?-.16*Math.sin(age*30)*Math.exp(-age*5.5)*settle:0,
+      /* 后坐：一记短促的「咔」——小幅、快衰减（旧版 ±.16 的长抖读起来像弹簧晃，2026-09-29 收紧） */
+      recoil:settle?-.05*Math.sin(age*26)*Math.exp(-age*9)*settle:0,
       afterglow:Math.exp(-age*1.6)*settle,
       done:age>=2.6};
   }
@@ -1181,9 +1241,10 @@ function createExhibit(canvas, options) {
 
   /* 时间线推进：整段序列与手动合璧冲击共用（手动那一次从冲击段起算）。 */
   function update(dt){
-    if(ambient||sequence||hoverTarget||hoverAmount>.001)time+=dt;
+    if(ambient||sequence||joining||hoverTarget||hoverAmount>.001)time+=dt;
     hoverAmount=mix(hoverAmount,hoverTarget,1-Math.exp(-dt*(hoverTarget?7:4)));
     flash*=Math.exp(-dt*5.5);
+    if(pulseAge<2)pulseAge+=dt;else pulseAge=Infinity;
     if(sequence){
       const elapsed=time-sequence.start;
       impactAge=elapsed>=4?elapsed-4:Infinity;
@@ -1196,38 +1257,54 @@ function createExhibit(canvas, options) {
     const k=1-Math.exp(-dt*SPLIT_RATE);
     /* 视角速率：拖动 / 双击复位照旧走 9（手感不变）；「收合 = 恢复」期间跟离合同一时长，二者同步缓动 */
     const kv=1-Math.exp(-dt*(viewRestoring?SPLIT_RATE:9));
-    split=mix(split,targetSplit,k);
+    /* 合璧：翻转在前 60% 时长内归零（先对位），平移按加速曲线收拢（越近吸得越快）；
+       电弧随之绷紧增亮（charge）。到位即锁：复用冲击段（t=4s 起算，约 2.6s 收尾）——
+       闪光 + 一记后坐 + 锁定波 + 合缝电屑 + 余辉。
+       不在这里调 start()：循环尾部的续跑条件已含 sequence，重复调会挂出两条 rAF 链 */
+    if(joining){
+      const u=clamp((time-joining.start)/JOIN_TIME);
+      turnSplit=joining.turnFrom*(1-smooth(0,.6,u));
+      split=joining.from*(1-Math.pow(u,2.3));
+      charge=smooth(.15,1,u);
+      if(u>=1){
+        joining=null;split=turnSplit=0;flash=1;
+        resetCoupling();
+        sequence={start:time-4,initialSplit:0};
+      }
+    }else{
+      split=mix(split,targetSplit,k);
+      turnSplit=mix(turnSplit,targetSplit,k);
+    }
     yaw=mix(yaw,targetYaw,kv);pitch=mix(pitch,targetPitch,kv);
     distance=mix(distance,neededDistance,1-Math.exp(-dt*6));
     if(viewRestoring&&targetSplit===0&&split<.02)viewRestoring=false;
-    /* 手动合璧到位的一瞬补一击：闪光 + 后坐抖动 + 粒子爆炸 + 余辉——
-       复用合璧时间线的冲击段（t=4s 起算），自带时钟，约 2.6s 收尾；
-       不在这里调 start()：循环尾部的续跑条件已含 sequence，重复调会挂出两条 rAF 链 */
-    if(pendingStrike&&split<.045){
-      pendingStrike=false;flash=1;
-      resetCoupling();
-      sequence={start:time-4,initialSplit:0};
-    }
   }
   function loop(now){
 raf=0;if(pageHidden||!visible||destroyed)return;
     const dt=last?Math.min(.045,(now-last)/1000):.016;last=now;
     update(dt);render();
-    if(ambient||sequence||hoverTarget||settling())raf=requestAnimationFrame(loop);
+    if(ambient||sequence||joining||hoverTarget||pulseAge<2||settling())raf=requestAnimationFrame(loop);
     else last=0;
   }
   function start(){if(!raf&&!pageHidden&&visible&&!destroyed){last=0;raf=requestAnimationFrame(loop);}}
   function stop(){if(raf)cancelAnimationFrame(raf);raf=0;last=0;}
+  /* 对外脉冲入口：三器切换的流光落到虎符时调用；减少动效时不播 */
+  canvas.__pulse=()=>{
+    if(destroyed||reduced.matches)return;
+    pulseAge=0;
+    start();
+  };
   function toggleSplit(){
-    sequence=null;resetCoupling();
+    sequence=null;joining=null;resetCoupling();
     const want=targetSplit>.5?0:1;
     targetSplit=want;
     /* 收合 = 恢复：视角一并回默认角度（拆解时不动视角）；回收期间视角与离合同步时长 */
     if(want===0){targetYaw=VIEW.yaw;targetPitch=VIEW.pitch;viewRestoring=true;}
     else viewRestoring=false;
-    pendingStrike=want===0&&split>.1;
+    /* 分开着才走合璧时间线；几乎没分开（拆到一半又点回来）就直接缓回，不补冲击 */
+    if(want===0&&split>.1)joining={start:time,from:split,turnFrom:turnSplit};
     options.onState?.(want===1);
-    if(reduced.matches){split=want;pendingStrike=false;flash=0;viewRestoring=false;render();return;}
+    if(reduced.matches){split=turnSplit=want;joining=null;flash=0;viewRestoring=false;render();return;}
     start();
   }
   /* —— 器物本体命中测试（点模型 = 拆解 / 收合一次）——
@@ -1310,7 +1387,7 @@ raf=0;if(pageHidden||!visible||destroyed)return;
   function destroy(){
     if(destroyed)return;
     stop();
-    destroyed=true;io?.disconnect();observer.disconnect();listeners.forEach(off=>off());
+    destroyed=true;delete canvas.__pulse;io?.disconnect();observer.disconnect();listeners.forEach(off=>off());
     for(const b of buffers)gl.deleteBuffer(b);for(const t of textures)gl.deleteTexture(t);for(const p of programs)gl.deleteProgram(p);for(const s of shaders)gl.deleteShader(s);for(const v of vaos)gl.deleteVertexArray(v);for(const f of framebuffers)gl.deleteFramebuffer(f);for(const r of renderbuffers)gl.deleteRenderbuffer(r);
   }
   resize();

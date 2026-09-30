@@ -9,6 +9,10 @@
 //   sky    星历拨盘 → 器物位中心（星海是「场」没有器物锚点，用兜底）。
 // 画布纯装饰：aria-hidden、零数据（不映射任何榜单 / 套餐字段）。
 const KIND_RGB = { army: '246,195,81', market: '230,190,112', sky: '161,206,226' };
+// 兵符交接时长（秒）：旧格合拢 → 电弧沿提梁跑到新格，之后新格才翻片（2026-09-29）
+const HANDOFF = .18;
+// 云雷纹单元（单位方格，u 由外缘向字、v 由上沿向中缝）：从中缝一侧起笔，向外回旋
+const SPIRAL = [[0, 1], [0, 0], [1, 0], [1, .72], [.3, .72], [.3, .32], [.7, .32], [.7, .55]];
 
 export function mount() {
   const handles = [...document.querySelectorAll('[data-instrument]')].map(mountOne);
@@ -46,11 +50,21 @@ function mountOne(widget) {
   const state = {
     index: index0,
     pos: index0,
+    from: index0,
     velocity: 0,
     time: 0,
     age: 10,
     hover: -1,
     heat: [0, 0],
+    // 悬停描亮（0~1）：未选中格从中缝向外走一遍后停住，移开收回；选中格不用它
+    gleam: values.map(() => 0),
+    // 描金进度（0~1）：选中格从中缝向两端描出错金纹，离任格快速熄灭
+    ink: values.map((_, i) => (i === index0 ? 1 : 0)),
+    // 交接：prev = 上一个选中格（无交接为 -1），lead = 本次翻片相对切换起点的延迟（秒）
+    prev: -1,
+    lead: 0,
+    // 本次流光是否已经落到虎符上（一次切换只触发一波）
+    pulsed: false,
     width: 0,
     height: 0,
     boxes: [],
@@ -114,6 +128,31 @@ function mountOne(widget) {
     }
   }
 
+  /* 确定性噪声（0~1）：电弧抖动按帧节拍取样，同一拍内形状稳定，不会每帧乱闪 */
+  function noise(n) {
+    const s = Math.sin(n * 127.1 + 311.7) * 43758.5453;
+    return s - Math.floor(s);
+  }
+
+  /* 沿折线描到总长的 t 比例，返回笔尖位置（描金 / 暗刻共用） */
+  function trace(ctx, points, t, color, width) {
+    const lengths = points.slice(1).map((p, i) => Math.hypot(p[0] - points[i][0], p[1] - points[i][1]));
+    let left = lengths.reduce((a, b) => a + b, 0) * clamp(t);
+    ctx.beginPath();
+    ctx.moveTo(...points[0]);
+    let tip = points[0];
+    for (let i = 0; i < lengths.length && left > 0; i++) {
+      const k = Math.min(1, left / lengths[i]);
+      tip = [lerp(points[i][0], points[i + 1][0], k), lerp(points[i][1], points[i + 1][1], k)];
+      ctx.lineTo(...tip);
+      left -= lengths[i];
+    }
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.stroke();
+    return tip;
+  }
+
   function animate(el, frames, options) {
     const animation = el.animate(frames, options);
     state.anims.push(animation);
@@ -138,20 +177,43 @@ function mountOne(widget) {
 
   /* 切换：按钮分片 / 悬签 / 盘心的动作 + 面板错落 + 光束 + 流光起点 + 过程文字重新起拍。 */
   function fire() {
+    const prev = Math.round(state.pos);
+    state.from = state.pos;
     state.age = 0;
     state.parts = [];
+    state.fx = null;
+    state.pulsed = false;
     state.anims.forEach((animation) => animation.cancel());
     state.anims = [];
+    state.prev = kind === 'army' && prev !== state.index ? prev : -1;
+    state.lead = state.prev >= 0 ? HANDOFF : 0;
     if (media.matches) {
       state.age = 10;
       state.pos = state.index;
       state.velocity = 0;
+      state.prev = -1;
+      state.ink = values.map((_, i) => (i === state.index ? 1 : 0));
+      paint(0);
       return;
     }
     const duration = 680;
     const button = buttons[state.index];
+    const lead = state.lead * 1000;
 
     if (kind === 'army') {
+      // 旧格先合拢：两片向中缝一收再回弹，交出令符
+      for (const [i, leaf] of [...(buttons[state.prev]?.querySelectorAll('.instrument__leaf') || [])].entries()) {
+        const sign = i ? 1 : -1;
+        animate(
+          leaf,
+          [
+            { transform: 'translateY(0) scaleY(1)' },
+            { transform: `translateY(${-sign * 1.5}px) scaleY(.9)`, offset: .45 },
+            { transform: 'translateY(0) scaleY(1)' },
+          ],
+          { duration: 240, easing: 'cubic-bezier(.3,0,.2,1)' }
+        );
+      }
       for (const [i, leaf] of [...button.querySelectorAll('.instrument__leaf')].entries()) {
         const sign = i ? 1 : -1;
         animate(
@@ -163,24 +225,21 @@ function mountOne(widget) {
             { transform: `translateY(${-sign * 1.6}px) rotateX(0)`, offset: .76 },
             { transform: 'translateY(0) rotateX(0)' },
           ],
-          { duration, easing: 'cubic-bezier(.21,.7,.3,1)' }
+          { duration, delay: lead, easing: 'cubic-bezier(.21,.7,.3,1)' }
         );
       }
-      animate(button.querySelector('.instrument__label'), [{ opacity: 1 }, { opacity: .38, offset: .25 }, { opacity: 1, offset: .75 }], { duration });
+      animate(button.querySelector('.instrument__label'), [{ opacity: 1 }, { opacity: .38, offset: .25 }, { opacity: 1, offset: .75 }], { duration, delay: lead });
     }
 
     if (kind === 'market') {
-      const direction = state.index ? 1 : -1;
       animate(
         button.querySelector('.instrument__sign'),
         [
-          { transform: `translateY(2px) rotate(${direction * 3}deg) rotateX(0deg)` },
-          { transform: `translateY(-10px) rotate(${-direction * 6}deg) rotateX(-76deg)`, offset: .26 },
-          { transform: `translateY(-7px) rotate(${direction * 4}deg) rotateX(17deg)`, offset: .55 },
-          { transform: `translateY(-3px) rotate(${-direction * 2}deg) rotateX(-5deg)`, offset: .78 },
-          { transform: 'translateY(-4px) rotate(0deg) rotateX(0deg)' },
+          { transform: 'translateY(0)' },
+          { transform: 'translateY(2px)', offset: .55 },
+          { transform: 'translateY(0)' },
         ],
-        { duration: duration * 1.25, easing: 'cubic-bezier(.18,.7,.3,1)' }
+        { duration: 420, easing: 'cubic-bezier(.18,.7,.3,1)' }
       );
     }
 
@@ -196,11 +255,11 @@ function mountOne(widget) {
         kind === 'army'
           ? 'perspective(600px) rotateX(4deg) translateY(12px)'
           : kind === 'market'
-            ? `translateX(${state.index ? 14 : -14}px)`
+            ? 'translateY(4px)'
             : 'translateY(8px)';
       animate(el, [{ opacity: .25, transform: from }, { opacity: 1, transform: 'none' }], {
-        duration: duration * .65,
-        delay: i * 45,
+        duration: kind === 'market' ? 260 : duration * .65,
+        delay: (kind === 'sky' ? 140 : 0) + i * (kind === 'market' ? 25 : 45),
         easing: 'cubic-bezier(.16,1,.3,1)',
         fill: 'backwards',
       });
@@ -216,6 +275,17 @@ function mountOne(widget) {
         );
       }
     });
+    // 点卯簿：领奖台之下的前八行自左向右错落补位，只动 transform / opacity，不影响排版
+    if (kind === 'army') {
+      [...(panel?.querySelectorAll('.roll__rows > li') || [])].slice(0, 8).forEach((el, i) => {
+        animate(el, [{ opacity: .2, transform: 'translateX(-10px)' }, { opacity: 1, transform: 'none' }], {
+          duration: 380,
+          delay: 140 + i * 28,
+          easing: 'cubic-bezier(.16,1,.3,1)',
+          fill: 'backwards',
+        });
+      });
+    }
 
     animate(
       beam,
@@ -240,8 +310,22 @@ function mountOne(widget) {
     }
 
     const box = state.boxes[state.index];
-    if (box) {
-      for (let i = 0; i < 24; i++) {
+    if (box && kind === 'army') {
+      // 兵符火花从中缝两端迸出（分片的真实开口处），等新格翻片时才起跳
+      for (let i = 0; i < 20; i++) {
+        const side = i % 2 ? 1 : -1;
+        state.parts.push({
+          x: side < 0 ? box.x + 6 : box.x + box.w - 6,
+          y: box.y + box.h / 2,
+          vx: side * (40 + Math.random() * 90),
+          vy: (Math.random() - .5) * 70,
+          life: 0,
+          max: .3 + Math.random() * .5,
+          wait: state.lead + .1,
+        });
+      }
+    } else if (box) {
+      for (let i = 0; i < (kind === 'market' ? 6 : 24); i++) {
         const a = Math.random() * tau;
         state.parts.push({
           x: box.x + box.w / 2,
@@ -263,6 +347,60 @@ function mountOne(widget) {
     line(c, points, `rgba(255,245,198,${energy})`, .8);
   }
 
+  /* 错金纹：两端各一对云雷纹（以中缝上下镜像，呼应兵符两片）+ 上下两道金丝。
+     常态为暗刻；选中格按 ink 从中缝 / 中线起笔向两端描金，笔尖带一点亮光。 */
+  function inlay(box, i) {
+    const seam = box.y + box.h / 2;
+    const cx = box.x + box.w / 2;
+    const units = [];
+    for (const sx of [-1, 1]) {
+      const edge = sx < 0 ? box.x + 9 : box.x + box.w - 9;
+      for (const sy of [-1, 1]) {
+        units.push(SPIRAL.map(([u, v]) => [edge - sx * u * 17, sy < 0 ? box.y + 7 + v * 12 : box.y + box.h - 7 - v * 12]));
+      }
+      units.push([[cx, box.y + 4.5], [edge + sx * -5, box.y + 4.5]]);
+      units.push([[cx, box.y + box.h - 4.5], [edge + sx * -5, box.y + box.h - 4.5]]);
+    }
+    // 翻片期间画布上的纹不跟 DOM 片转，先藏起、落定后再现
+    const flipping = i === state.index && state.prev >= 0 ? clamp((state.age - state.lead - .4) / .2) : 1;
+    const heat = state.heat[i];
+    c.save();
+    c.lineCap = 'square';
+    for (const points of units) {
+      trace(c, points, 1, `rgba(6,6,4,${.55 * flipping})`, 1.5);
+      trace(c, points.map(([x, y]) => [x, y + .7]), 1, `rgba(214,184,110,${.08 * flipping})`, .6);
+    }
+    const ink = state.ink[i];
+    if (ink > .001) {
+      const eased = 1 - Math.pow(1 - ink, 2);
+      c.shadowColor = `rgba(${rgb},.85)`;
+      c.shadowBlur = 4;
+      const tips = units.map((points, k) =>
+        trace(c, points, k % 4 < 2 ? clamp(eased * 1.25 - .25) : clamp(eased * 1.6), `rgba(255,218,140,${.9 * flipping})`, 1)
+      );
+      c.shadowBlur = 0;
+      if (ink < 1) for (const tip of tips) light(c, tip[0], tip[1], 7, 'rgba(255,238,190,.9)', .7 * (1 - ink) + .2);
+    }
+    // 悬停：未选中格从中缝描一笔淡金，走完停在略亮；选中格只在已有描金上再亮一档
+    const gleam = state.gleam[i];
+    if (i !== state.index && gleam > .001) {
+      const eased = 1 - Math.pow(1 - gleam, 2);
+      c.shadowColor = `rgba(${rgb},.5)`;
+      c.shadowBlur = 3;
+      units.forEach((points, k) => {
+        trace(c, points, k % 4 < 2 ? clamp(eased * 1.25 - .25) : clamp(eased * 1.6), `rgba(255,218,140,${.5 * flipping})`, .8);
+      });
+      c.shadowBlur = 0;
+    } else if (i === state.index && ink > .92 && heat > .02) {
+      c.shadowColor = `rgba(${rgb},.65)`;
+      c.shadowBlur = 3;
+      for (const points of units) trace(c, points, 1, `rgba(255,236,190,${.32 * heat * flipping})`, .7);
+      c.shadowBlur = 0;
+    }
+    c.restore();
+    return seam;
+  }
+
   function army() {
     const a = state.boxes[0];
     const b = state.boxes[1];
@@ -272,12 +410,14 @@ function mountOne(widget) {
     const bottom = a.y + a.h + 8;
     polygon(c, left, top, right - left, bottom - top, null, '#b6a46a40');
     line(c, [[left + 8, bottom + 5], [right - 8, bottom + 5]], '#d7b57229');
+    const age = state.age - state.lead;
     for (let i = 0; i < 2; i++) {
       const box = state.boxes[i];
       const active = 1 - Math.abs(state.pos - i);
       const heat = state.heat[i];
       const cx = box.x + box.w / 2;
-      const retract = state.age < .64 && i === state.index ? Math.sin(clamp(state.age / .64) * Math.PI) * 8 : 0;
+      inlay(box, i);
+      const retract = age > 0 && age < .64 && i === state.index ? Math.sin(clamp(age / .64) * Math.PI) * 8 : 0;
       for (const side of [-1, 1]) {
         const x = side < 0 ? box.x - 5 : box.x + box.w + 1;
         const y = box.y + box.h / 2;
@@ -285,74 +425,98 @@ function mountOne(widget) {
         c.fillRect(x + side * retract, y - 9, 4, 18);
         c.fillStyle = `rgba(${rgb},${.2 + active * .6})`;
         c.fillRect(x + 1 + side * retract, y - 7, 1, 14);
-        if (i === state.index && state.age < .68) {
-          const strength = Math.sin(clamp(state.age / .68) * Math.PI);
+        if (i === state.index && age > 0 && age < .68) {
+          // 夹扣放电：按 30Hz 节拍取噪声（两端钉住），偶尔向外分一枝
+          const strength = Math.sin(clamp(age / .68) * Math.PI);
+          const beat = Math.floor(state.time * 30) + side * 17;
           const points = Array.from({ length: 12 }, (_, k) => [
-            x + 2 + side * retract + Math.sin(k * 5 + state.time * 92) * 4 * strength,
+            x + 2 + side * retract + (noise(k * 7.3 + beat * 1.7) - .5) * 8 * strength * Math.sin((k / 11) * Math.PI),
             y - 12 + (k * 24) / 11,
           ]);
           electric(points, strength);
+          if (noise(beat * .37) > .55) {
+            const k = 3 + Math.floor(noise(beat * .91) * 6);
+            const [bx, by] = points[k];
+            electric([[bx, by], [bx + side * (4 + noise(beat) * 5), by + (noise(beat * 2.3) - .5) * 8]], strength * .7);
+          }
           light(c, x, y, 20, `rgba(${rgb},.7)`, strength * .4);
         }
+        // 悬停夹扣：一粒稳定的光，不放电、不跑动；翻片放电那一段让给电弧
+        const discharging = i === state.index && age > 0 && age < .68;
+        if (heat > .02 && !discharging) light(c, x + 2, y, 11, `rgba(${rgb},.8)`, heat * .5);
       }
-      const len = box.w - 24;
-      const p = (state.time * .65 + i * .5) % 1;
-      line(c, [[box.x + 12, top - 4], [box.x + box.w - 12, top - 4]], `rgba(${rgb},${.15 + heat * .25})`);
-      if (heat > .02) {
-        const x = box.x + 12 + p * len;
-        light(c, x, top - 4, 10, `rgba(${rgb},.9)`, heat * .6);
-        line(c, [[x - 12, top - 4], [x, top - 4]], `rgba(${rgb},${heat})`);
-      }
-      for (let k = 0; k < 3; k++) {
-        c.fillStyle = `rgba(${rgb},${.17 + active * .65})`;
-        c.fillRect(cx - 13 + k * 10, bottom + 8, 6, 1);
-      }
-      if (state.age > .58 && state.age < 1.05 && i === state.index) {
-        const t = (state.age - .58) / .47;
+      // 提梁静置：只留一道暗线，跑光留给交接电弧
+      line(c, [[box.x + 12, top - 4], [box.x + box.w - 12, top - 4]], `rgba(${rgb},.15)`);
+      // 选中标记：底线下一枚小菱形铆点，随 pos 渐变；未选中只留一粒暗钉
+      const my = bottom + 9;
+      const size = 1.2 + active * 2.3;
+      c.beginPath();
+      c.moveTo(cx, my - size);
+      c.lineTo(cx + size, my);
+      c.lineTo(cx, my + size);
+      c.lineTo(cx - size, my);
+      c.closePath();
+      c.fillStyle = `rgba(${rgb},${.25 + active * .7})`;
+      c.fill();
+      light(c, cx, my, 9, `rgba(${rgb},.6)`, active * .5);
+      if (age > .58 && age < 1.05 && i === state.index) {
+        const t = (age - .58) / .47;
         light(c, cx, box.y + box.h / 2, box.w * .7, `rgba(${rgb},.25)`, 1 - t);
       }
+    }
+    // 令符交接：电弧沿上方提梁从旧格跑向新格，到位后在新格上沿炸一点亮
+    const from = state.boxes[state.prev];
+    const to = state.boxes[state.index];
+    if (from && to && state.age < state.lead + .14) {
+      const y = top - 4;
+      const x0 = from.x + from.w / 2;
+      const x1 = to.x + to.w / 2;
+      const p = clamp(state.age / state.lead);
+      const eased = p * p * (3 - 2 * p);
+      const head = lerp(x0, x1, eased);
+      const tail = lerp(x0, x1, clamp(eased - .45));
+      const fade = state.age > state.lead ? 1 - (state.age - state.lead) / .14 : 1;
+      const beat = Math.floor(state.time * 30);
+      const points = Array.from({ length: 10 }, (_, k) => {
+        const x = lerp(tail, head, k / 9);
+        return [x, y + (noise(k * 3.1 + beat) - .5) * 5 * Math.sin((k / 9) * Math.PI)];
+      });
+      electric(points, fade);
+      light(c, head, y, 14, `rgba(${rgb},.8)`, fade * .7);
     }
   }
 
   function market() {
-    const a = state.boxes[0];
-    const b = state.boxes[1];
-    const y = a.y - 18;
-    const left = a.x - 10;
-    const right = b.x + b.w + 10;
-    line(c, [[left, y], [right, y]], '#d5bd7955');
-    line(c, [[left, y + 2], [right, y + 2]], '#735e3833');
-    for (let i = 0; i < 2; i++) {
-      const box = state.boxes[i];
-      const cx = box.x + box.w / 2;
-      const active = 1 - Math.abs(state.pos - i);
-      const lift = lerp(2, -4, active);
-      const pull = state.age < .85 && state.index === i ? Math.sin(clamp(state.age / .85) * Math.PI) * 4 : 0;
-      const eyeY = box.y + 6 + lift - pull;
-      c.beginPath();
-      c.ellipse(cx, y, 4, 5, 0, 0, tau);
-      c.strokeStyle = '#d8c695';
-      c.lineWidth = 1;
-      c.stroke();
-      for (const side of [-1, 1]) {
-        const xx = cx + side * (box.w / 2 - 18);
-        line(c, [[cx, y + 4], [xx, eyeY]], '#b4a270aa', 1.2);
-        line(c, [[cx + 1, y + 4], [xx + 1, eyeY]], '#f5df9d33', .6);
-      }
-      if (active > .01) light(c, cx, y, 12, '#f4d688', active * .35);
-      if (state.heat[i] > .01) {
-        const p = (state.time * .8) % 1;
-        const xx = lerp(cx, cx + box.w / 2 - 18, p);
-        const yy = lerp(y + 4, eyeY, p);
-        light(c, xx, yy, 8, '#ffdf98', state.heat[i] * .7);
-      }
-      if (i === state.index && state.age > .58 && state.age < 1.2) {
-        const t = (state.age - .58) / .62;
-        line(c, [[box.x + 10, box.y + box.h - 7], [box.x + 10 + (box.w - 20) * t, box.y + box.h - 7]], `rgba(255,232,171,${1 - t})`, 1.5);
+    const a = state.boxes[0], b = state.boxes[1];
+    const y = a.y - 13, left = a.x - 5, right = b.x + b.w + 5;
+    line(c, [[left,y+3],[right,y+3]], '#0a1317', 7);
+    line(c, [[left,y],[right,y]], '#a18a55', 1);
+    line(c, [[left,y+5],[right,y+5]], '#4d5340', 1);
+    for (const x of [left,right]) polygon(c,x-2,y-2,4,10,'#877144','#c5ad71');
+    for (let i=0;i<2;i++) {
+      const box=state.boxes[i], cx=box.x+box.w/2;
+      const active=clamp(1-Math.abs(state.pos-i));
+      line(c,[[cx,y+6],[cx,box.y+4]],'#77633e',2);
+      line(c,[[box.x+15,box.y+box.h-5],[box.x+box.w-15,box.y+box.h-5]],`rgba(104,224,190,${.08+active*.55})`,1);
+      for(const side of [-1,1]) {
+        const x=cx+side*8;
+        line(c,[[x,y-4],[x,y-1]],'#877c54',.8);
       }
     }
-    const cx = lerp(a.x + a.w / 2, b.x + b.w / 2, state.pos);
-    light(c, cx, y, 15, '#ebc883', Math.min(.5, Math.abs(state.velocity) * .3));
+    const cx=lerp(a.x+a.w/2,b.x+b.w/2,clamp(state.pos));
+    const speed=clamp(Math.abs(state.velocity)*.25);
+    const copper=c.createLinearGradient(cx-8,y-7,cx+8,y+10);
+    copper.addColorStop(0,'#ead298');copper.addColorStop(.3,'#a58a50');
+    copper.addColorStop(.55,'#3a4234');copper.addColorStop(1,'#c3a467');
+    polygon(c,cx-10,y-7,20,19,'#101b1c','#786946');
+    polygon(c,cx-8,y-8,16,17,copper,'#dfc78e');
+    line(c,[[cx-4,y-3],[cx+3,y-3],[cx+3,y+3],[cx-1,y+3],[cx-1,y]],'#132723',1.4);
+    line(c,[[cx-5,y+7],[cx+5,y+7]],'#93ead0',1);
+    light(c,cx,y+7,12,'#68d9b9',.12+speed*.4);
+    if(state.age<.65) {
+      const fade=Math.sin(clamp(state.age/.65)*Math.PI);
+      line(c,[[Math.min(cx,cx-state.velocity*9),y+3],[Math.max(cx,cx-state.velocity*9),y+3]],`rgba(116,238,204,${fade*.6})`,1);
+    }
   }
 
   function sky() {
@@ -372,13 +536,25 @@ function mountOne(widget) {
     c.shadowColor = '#000';
     c.shadowBlur = 11;
     c.shadowOffsetY = 4;
+    dot(c, cx, cy + 3, r + 3, '#172328');
     dot(c, cx, cy, r + 2, metal);
     c.restore();
+    c.beginPath();c.arc(cx,cy,r+1,Math.PI*1.08,Math.PI*1.87);
+    c.strokeStyle='#eee0b1';c.lineWidth=1.2;c.stroke();
+    c.beginPath();c.arc(cx,cy+2,r+1,0,Math.PI);
+    c.strokeStyle='#665d41';c.lineWidth=1.5;c.stroke();
     dot(c, cx, cy, r - 3, '#0f161b');
     c.beginPath();
     c.arc(cx, cy, r - 5, 0, tau);
     c.strokeStyle = '#b9a67866';
     c.stroke();
+    // 刻度坐在凹槽内；四枚铆钉固定外壳，内盘独立转位。
+    for(let i=0;i<4;i++) {
+      const p=polar(Math.PI*.25+i*Math.PI*.5,r-1);
+      dot(c,...p,2.1,'#101a1e');dot(c,p[0]-.4,p[1]-.4,1,'#cbb783');
+    }
+    c.beginPath();c.arc(cx,cy,29,0,tau);c.strokeStyle='#020a10';c.lineWidth=3;c.stroke();
+    c.beginPath();c.arc(cx,cy,28,-Math.PI*.9,-Math.PI*.1);c.strokeStyle='#8e805955';c.lineWidth=.8;c.stroke();
     for (let i = 0; i < 48; i++) {
       const angle = (i / 48) * tau + turn;
       const major = i % 6 === 0;
@@ -390,9 +566,11 @@ function mountOne(widget) {
       const angle = (i / 12) * tau + turn * .72;
       c.beginPath();
       c.arc(cx, cy, 26, angle + .03, angle + .43);
-      c.strokeStyle = i % 3 === 0 ? '#89cfd4aa' : '#617d8566';
-      c.lineWidth = 2;
+      c.strokeStyle = '#050f16';
+      c.lineWidth = 4;
       c.stroke();
+      c.strokeStyle = i % 3 === 0 ? '#92e3d0' : '#426765';
+      c.lineWidth = i % 3 === 0 ? 1.5 : .8;c.stroke();
       if (i % 3 === 0) {
         const p = polar(angle + .23, 26);
         dot(c, ...p, 1.2, '#d3e7db');
@@ -405,7 +583,7 @@ function mountOne(widget) {
     for (let i = 0; i < 6; i++) {
       const angle = (i / 6) * tau + turn * .22;
       const outer = 22;
-      const inner = 18 - beat * 12;
+      const inner = 18 - beat * 5;
       const p1 = polar(angle, outer);
       const p2 = polar(angle + .9, outer);
       const p3 = polar(angle + .55, inner);
@@ -423,7 +601,7 @@ function mountOne(widget) {
       c.stroke();
     }
     c.save();
-    c.globalAlpha = 1 - beat * .7;
+    c.globalAlpha = 1 - beat * .25;
     c.font = '20px SimSun,serif';
     c.textAlign = 'center';
     c.textBaseline = 'middle';
@@ -435,7 +613,10 @@ function mountOne(widget) {
     const angle = Math.PI + turn;
     const tip = polar(angle, r + 4);
     const tail = polar(angle, r - 10);
-    line(c, [tail, tip], '#fae4a8', 2);
+    const wingA=polar(angle-.095,r-7), wingB=polar(angle+.095,r-7);
+    c.beginPath();c.moveTo(...tip);c.lineTo(...wingA);c.lineTo(...tail);c.lineTo(...wingB);c.closePath();
+    c.fillStyle='#d9bf84';c.fill();c.strokeStyle='#f7e6b9';c.lineWidth=.7;c.stroke();
+    line(c, [tail, tip], '#c5ffe7', .9);
     dot(c, ...tip, 2, '#fff0c7');
     light(c, ...tip, 10, '#dfc48b', .5);
     for (const [index, box] of state.boxes.entries()) {
@@ -447,10 +628,10 @@ function mountOne(widget) {
       line(c, [[x2, cy - 8], [x2, cy + 8]], `rgba(${rgb},${.15 + state.heat[index] * .7})`);
     }
     line(c, [[cx, cy - r - 4], [cx - 3, cy - r - 9], [cx + 3, cy - r - 9], [cx, cy - r - 4]], '#e9d598aa');
-    if (state.age > .72 && state.age < 1.35) {
-      const t = (state.age - .72) / .63;
+    if (state.age > 1.05 && state.age < 1.5) {
+      const t = (state.age - 1.05) / .45;
       c.beginPath();
-      c.arc(cx, cy, r + 4 + t * 7, 0, tau);
+      c.arc(cx, cy, r + 4 + t * 4, angle-.32, angle+.32);
       c.strokeStyle = `rgba(${rgb},${(1 - t) * .6})`;
       c.lineWidth = 1;
       c.stroke();
@@ -473,6 +654,35 @@ function mountOne(widget) {
     };
   }
 
+  /* 悬停描亮：未选中格进入时从 0 走到 1，移开收回；选中格保持 0，避免重描一遍。 */
+  function advanceGleam(dt) {
+    for (let i = 0; i < state.gleam.length; i++) {
+      const target = state.hover === i && i !== state.index ? 1 : 0;
+      const rate = target > state.gleam[i] ? 8 : 7;
+      state.gleam[i] += (target - state.gleam[i]) * (1 - Math.exp(-dt * rate));
+    }
+  }
+
+  /* 描金进度：选中格等翻片过半再从中缝描满，离任格在合拢期间熄灭。 */
+  function advanceInk(dt) {
+    const riseStart = state.lead + 0.32;
+    for (let i = 0; i < state.ink.length; i++) {
+      const selected = i === state.index;
+      const target = selected && state.age >= riseStart ? 1 : 0;
+      const rate = selected ? 3.6 : 10;
+      state.ink[i] += (target - state.ink[i]) * (1 - Math.exp(-dt * rate));
+    }
+  }
+
+  /* 流光头到达虎符投影中心时触发一次弱化波光；入口还没挂上就留到下一帧再试。 */
+  function landPulse(arrived) {
+    if (kind !== 'army' || state.pulsed || !arrived) return;
+    const tiger = document.querySelector('[data-tiger-canvas]');
+    if (typeof tiger?.__pulse !== 'function') return;
+    state.pulsed = true;
+    tiger.__pulse();
+  }
+
   function sceneFx() {
     if (!f) return;
     f.clearRect(0, 0, innerWidth, innerHeight);
@@ -481,6 +691,7 @@ function mountOne(widget) {
     const end = totemEnd() || state.fx.end;
     const t = clamp(state.age / .78);
     state.fx.end = end;
+    landPulse(t >= 1);
     if (t < 1) {
       for (let i = 0; i < 42; i++) {
         const tt = t - i * .007;
@@ -506,6 +717,11 @@ function mountOne(widget) {
     else if (kind === 'market') market();
     else sky();
     for (const p of state.parts) {
+      // wait：兵符火花等新格翻片再迸，等待期间停在中缝端点
+      if ((p.wait || 0) > 0) {
+        p.wait -= dt;
+        continue;
+      }
       p.life += dt;
       p.x += p.vx * dt;
       p.y += p.vy * dt;
@@ -513,7 +729,7 @@ function mountOne(widget) {
       const alpha = 1 - p.life / p.max;
       if (alpha > 0) line(c, [[p.x, p.y], [p.x - p.vx * .017, p.y - p.vy * .017]], `rgba(${rgb},${alpha * .7})`);
     }
-    state.parts = state.parts.filter((p) => p.life < p.max);
+    state.parts = state.parts.filter((p) => (p.wait || 0) > 0 || p.life < p.max);
     sceneFx();
   }
 
@@ -528,14 +744,27 @@ function mountOne(widget) {
       state.age = 10;
       state.parts = [];
       state.heat = [0, 0];
+      state.gleam = values.map(() => 0);
+      state.ink = values.map((_, i) => (i === state.index ? 1 : 0));
     } else {
       state.time += dt;
       state.age += dt;
       if (!state.drag) {
-        state.velocity += ((state.index - state.pos) * 115 - state.velocity * 20) * dt;
-        state.pos += state.velocity * dt;
+        if(kind === 'sky') {
+          const p=clamp(state.age/1.2), eased=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
+          const previous=state.pos;
+          state.pos=lerp(state.from,state.index,eased);
+          state.velocity=(state.pos-previous)/dt;
+        } else {
+          state.velocity += ((state.index - state.pos) * 115 - state.velocity * 20) * dt;
+          state.pos += state.velocity * dt;
+        }
       }
       state.heat = state.heat.map((v, i) => lerp(v, state.hover === i ? 1 : 0, 1 - Math.exp(-dt * 10)));
+      if (kind === 'army') {
+        advanceInk(dt);
+        advanceGleam(dt);
+      }
     }
     paint(media.matches ? 0 : dt);
     if (!media.matches && state.visible) raf = requestAnimationFrame(tick);
@@ -596,6 +825,8 @@ function mountOne(widget) {
   buttons.forEach((button, i) => {
     on(button, 'pointerenter', () => {
       state.hover = i;
+      // 每次进入都从头描一遍，避免接着上次的进度闪一下
+      if (kind === 'army' && i !== state.index) state.gleam[i] = 0;
       wake();
     });
     on(button, 'pointerleave', () => {
@@ -603,6 +834,7 @@ function mountOne(widget) {
     });
     on(button, 'focus', () => {
       state.hover = i;
+      if (kind === 'army' && i !== state.index) state.gleam[i] = 0;
       wake();
     });
     on(button, 'blur', () => {
@@ -640,10 +872,14 @@ function mountOne(widget) {
       state.drag = null;
       const index = Math.abs(drag.dx) > 12 ? (clamp(drag.start + drag.dx / 85) > .5 ? 1 : 0) : (state.index + 1) % values.length;
       dial.releasePointerCapture(event.pointerId);
+      if(index===state.index) { state.from=state.pos;state.age=0; }
       choose(index);
     });
     const cancel = () => {
+      if(!state.drag) return;
       state.drag = null;
+      state.from = state.pos;
+      state.age = 0;
       state.velocity = 0;
       wake();
     };
@@ -675,6 +911,10 @@ function mountOne(widget) {
     state.pos = state.index;
     state.velocity = 0;
     state.fx = null;
+    state.pulsed = true;
+    state.prev = -1;
+    state.ink = values.map((_, i) => (i === state.index ? 1 : 0));
+    state.gleam = values.map(() => 0);
     paint(0);
     wake();
   });

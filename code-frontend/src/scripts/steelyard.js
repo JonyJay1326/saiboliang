@@ -1,7 +1,8 @@
-/* 粮市页头 · 杆秤图腾（无形之物：光核）
-   依据：frontend-spec.md §4.6（粮市页头带）；试作出处
-   cache-tools/design-lab/dianjiang-liangshi-totems-v1.html（本机对照，不发布）——
-   乙案「杆秤 · 称量」＋ 盘内容「光核 · 束缚」，2026-09-22 用户拍板落 /plans 页头右侧。
+import { CORE_R, drawBeam, drawPivot, drawWeight, drawVessel } from "./steelyard-form.js";
+
+/* 粮市页头 · 天衡「悬日」（2026-09-29 造型重构）
+   依据：frontend-spec.md §4.6（粮市页头带）。保留原杆秤交互与力学，
+   造型由 steelyard-form.js 绘制：错金衡梁 / 玉璧悬枢 / 悬日环笼 / 分体权印。
 
    纪律（§10.1 / §10.2 / §11.1）：
    ① canvas 只画形状、零数据，aria-hidden；砣位 / 刻度不映射任何套餐字段；
@@ -15,114 +16,17 @@
    皮肤档 × 动效（2026-09-22 用户拍板）：
    赛博档（--totem-motion: 1）= 整台器物常动 + 环上流光；
    朴素档（--totem-motion: 0）= **器物本体仍是静止单帧，只有环上的光在走**
-   （量环 / 浑仪双环的流光；帧率收一半，别为一道光常烧 60fps）。
+   （环笼上的流光；帧率收一半，别为一道光常烧 60fps）。
    做法：朴素档里只推流光相位（holoPh）不推时钟（clock）——一切 t 驱动的本体细节
    都停在原地，读 t 的只有「光」；静止等价物（reduced-motion / 停循环）则不画流光的头尾。 */
 
 var TAU = Math.PI * 2;
-var GOLD = '#e8b73a', GOLD_DEEP = '#9a6b14', CYAN = '#3fd9c0', VERM = '#c8342a', PAPER = '#f5ecd8';
+var CYAN = '#3fd9c0';
+var MARK0 = .20, MARKN = 13, MARKSTEP = .05, A_DOM = .25, A_OVS = .75;
 
 function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
 function rnd(a, b) { return a + Math.random() * (b - a); }
-function easeInOut(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
 function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-/* 两角最短角距（0..π）：流光相位是累计量、不归一，不能直接相减 */
-function angGap(a, b) {
-  var d = (a - b) % TAU;
-  if (d < -Math.PI) d += TAU; else if (d > Math.PI) d -= TAU;
-  return Math.abs(d);
-}
-
-function rrect(ctx, x, y, w, h, r) {
-  r = Math.min(r, w / 2, h / 2);
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.lineTo(x + w - r, y); ctx.arcTo(x + w, y, x + w, y + r, r);
-  ctx.lineTo(x + w, y + h - r); ctx.arcTo(x + w, y + h, x + w - r, y + h, r);
-  ctx.lineTo(x + r, y + h); ctx.arcTo(x, y + h, x, y + h - r, r);
-  ctx.lineTo(x, y + r); ctx.arcTo(x, y, x + r, y, r);
-  ctx.closePath();
-}
-
-/* Catmull-Rom 平滑：从当前点续画，不 moveTo（闭合轮廓用 seam lineTo 再接它） */
-function smooth(ctx, pts) {
-  var n = pts.length;
-  if (!n) return;
-  ctx.lineTo(pts[0][0], pts[0][1]);
-  for (var i = 0; i < n - 1; i++) {
-    var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
-    ctx.bezierCurveTo(
-      p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6,
-      p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6,
-      p2[0], p2[1]
-    );
-  }
-}
-
-function toScreen(pts, S, ox, oy) {
-  var out = [];
-  for (var i = 0; i < pts.length; i++) out.push([ox + pts[i][0] * S, oy + pts[i][1] * S]);
-  return out;
-}
-
-/* 渐变带：沿折线两侧等宽偏移，做成可填充的锥形带（尾缨 / 虎尾 / 流束都用它） */
-function ribbon(center, w0, w1) {
-  var left = [], right = [], n = center.length;
-  for (var i = 0; i < n; i++) {
-    var p = center[i], prev = center[i - 1] || p, next = center[i + 1] || p;
-    var dx = next[0] - prev[0], dy = next[1] - prev[1];
-    var len = Math.hypot(dx, dy) || 1;
-    var nx = -dy / len, ny = dx / len;
-    var t = n > 1 ? i / (n - 1) : 0;
-    var w = (w0 + (w1 - w0) * t) / 2;
-    left.push([p[0] + nx * w, p[1] + ny * w]);
-    right.push([p[0] - nx * w, p[1] - ny * w]);
-  }
-  return left.concat(right.reverse());
-}
-
-/* 环上流光：一条会散的尾巴沿椭圆环走，按「可见窗口」裁段——环走到核后的那半段
-   交给后段那一遍去画，光就自然被核挡住（遮挡即纵深，不必真做深度）。
-   相位是累计值、不归一，所以先把每段抬到窗口附近再求交。tailLen 为负 = 逆行。 */
-function ringFlow(ctx, cx, cy, a, b, rot, lo, hi, head, tailLen, segs, rgb, aMax, lwMax, k0) {
-  for (var i = 0; i < segs; i++) {
-    var q0 = i / segs, q1 = (i + 1) / segs, k = 1 - q1;
-    var s = head - tailLen * q1, e = head - tailLen * q0;
-    if (s > e) { var sw = s; s = e; e = sw; }
-    var base = Math.floor((s - lo) / TAU) * TAU;
-    s -= base; e -= base;
-    if (e <= lo || s >= hi) continue;
-    if (s < lo) s = lo;
-    if (e > hi) e = hi;
-    ctx.strokeStyle = 'rgba(' + rgb + ',' + (Math.pow(k, 1.9) * aMax * k0) + ')';
-    ctx.lineWidth = .7 + lwMax * Math.pow(k, 1.4);
-    ctx.beginPath(); ctx.ellipse(cx, cy, a, b, rot, s, e); ctx.stroke();
-  }
-}
-/* 流光头：椭圆上的一枚白热点 + 一团光晕（同样只在窗口内出现 = 走到核后就被核挡住） */
-function ringHead(ctx, cx, cy, a, b, rot, head, lo, hi, rgb, al, r, k0) {
-  var th = head - Math.floor((head - lo) / TAU) * TAU;
-  if (th < lo || th > hi) return;
-  var ct = Math.cos(th), st = Math.sin(th);
-  var x = cx + ct * a * Math.cos(rot) - st * b * Math.sin(rot);
-  var y = cy + ct * a * Math.sin(rot) + st * b * Math.cos(rot);
-  var g = ctx.createRadialGradient(x, y, 0, x, y, r * 5.5);
-  g.addColorStop(0, 'rgba(' + rgb + ',' + (.55 * al * k0) + ')');
-  g.addColorStop(1, 'rgba(' + rgb + ',0)');
-  ctx.fillStyle = g;
-  ctx.beginPath(); ctx.arc(x, y, r * 5.5, 0, TAU); ctx.fill();
-  ctx.fillStyle = 'rgba(246,255,252,' + (.85 * al * k0) + ')';
-  ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.fill();
-}
-
-/* 尘埃层已撤（2026-09-22 用户反馈「称现在的背景没有融入站点」）：
-   原有一层径向光晕（aura）+ 一版器物位内的飘尘，都是画布自己带的背景——
-   光晕在画布四边被裁成一道肉眼可见的浅边，飘尘又被框在器物位矩形里（站点已有全站星尘
-   .bg-motes 铺满整页），器物位那块因此看起来像另一张底。撤掉这两层后画布只剩器物本身的
-   光（杆 / 盘 / 砣各自的内发光）与交互屑，透过画布看到的就是站点背景，无边界可言。 */
-
-
-var MARK0 = .20, MARKN = 13, MARKSTEP = .05, A_DOM = .25, A_OVS = .75;
 
 function beamHalf(R, uu) {
   return R * (.0072 + .0165 * Math.pow(Math.max(0, 1 - Math.abs(uu) / .72), 1.35));
@@ -141,7 +45,7 @@ function Steelyard(canvas, opts) {
   this.scan = 1;                       /* 全息扫描：切市扫一道 */
   this.locked = true; this.lockOn = false; this.lockT = 0;   /* 初始即「已锁定在东市位」 */
   this.lit = new Float32Array(MARKN);
-  this.kern = []; this.sparks = [];
+  this.sparks = [];
   this.mat = 0; this.live = false; this.lightAcc = 0;
   this.coreDim = 0; this.coreFlash = 0; this.coreInit = false;
   this.coreX = 0; this.coreY = 0; this.coreVX = 0; this.coreVY = 0; this.coreSq = 1; this.coreRot = 0;
@@ -152,6 +56,7 @@ function Steelyard(canvas, opts) {
   this.dragKind = null; this.handArm = null;
   this.ptr = { x: 0, y: 0, on: false };
   this.hot = null;                                            /* 悬停在哪个可抓物件上（bob / pan） */
+  this.charge = 0;
   this.poke = 0; this.hs = -1;
   this.bobPt = null; this.panPt = null;
 }
@@ -159,27 +64,11 @@ Steelyard.prototype.name = '粮市·杆秤';
 
 Steelyard.prototype.resize = function (w, h) {
   this.W = w; this.H = h;
-  /* 生产器物位定标（lab 的 .73 是整条页头带的中心，器物位里要自己居中、按位尺寸定标）
-     —— bbox 中心 ≈ cx − .10R，取 .55w 让「盘侧悬出 + 砣侧到头」在器物位里左右相抵。
-     2026-09-22 用户反馈「称可以整体放大一点，画布内下面空了很多」：器物位是 2:1 的框，
-     本体只有 1.44R 宽（含盘侧悬出 1.77R）、0.62R 高，所以尺寸由宽度定（R = .47w，杆两头
-     各留约一成边，h*.80 兜住极扁的窗），竖向把**盘底钉在器物位下沿一成二高处**
-     （beamY = .88h − .51R，.51R = 杆轴到盘底），多出来的高度全给提绳：
-     器物不再缩在框顶、底下留一大片死白。 */
-  this.R = Math.min(w * .49, h * .80);
+  /* 画框沿用三页统一尺寸；放大本体，给环笼下缘和摆动各留一段余量。 */
+  this.R = Math.min(w * .48, h * .94);
   this.cx = w * .55;
-  this.beamY = h * .88 - this.R * .51;   /* 秤杆轴心（提绳下端）；盘底 = beamY + .51R */
-  this.seedKernels();
+  this.beamY = h * .88 - this.R * .54;
   this.coreInit = false;
-};
-Steelyard.prototype.seedKernels = function () {
-  this.kern = [];
-  for (var i = 0; i < 20; i++) {
-    this.kern.push({
-      u: -0.90 + (i / 19) * 1.80 + rnd(-.028, .028),
-      y: rnd(.002, .016), s: rnd(.62, 1.12), a: rnd(-.45, .45), hi: Math.random() < .45
-    });
-  }
 };
 Steelyard.prototype.reactLoad = function () {
   /* 换一批：笼先收拢把核压暗，再逐环张开回亮 */
@@ -201,14 +90,14 @@ Steelyard.prototype.resetHands = function () {
   this.coreInit = false;
 };
 Steelyard.prototype.stepLoad = function (d, t, pxp, pyp) {
-  var R = this.R, i;
+  var R = this.R;
   this.cagePh += d * .55;
   this.holoPh += d * (.16 + (this.ptr.on ? .44 : 0));      /* 鼠标在器物上：全息层转快一点 */
   if (this.mat > 0) this.mat = Math.max(0, this.mat - d / 1.15);
   this.coreFlash = Math.max(0, this.coreFlash - d * 1.6);
 
   { /* 光核：核的惯性 + 笼的开合（无形之物靠形变 + 惯性 + 束缚读「重」） */
-    var rcr = R * .072;
+    var rcr = R * CORE_R;
     var ktx = pxp + Math.sin(t * .83 + 1.2) * R * .0035;
     if (this.ptr.on) ktx += clamp((this.ptr.x - pxp) * .05, -R * .032, R * .032);   /* 悬停：核朝光标偏（笼跟着反倾） */
     var kty = pyp + R * .039 - rcr;
@@ -226,327 +115,16 @@ Steelyard.prototype.stepLoad = function (d, t, pxp, pyp) {
     this.cageK += this.cageV * d;
   }
 };
-Steelyard.prototype.drawCore = function (ctx, t, pxp, pyp) {
-  var R = this.R, i, a;
-  var rcr = R * .072;
-  var ccy0 = pyp + R * .039 - rcr;
-  var ccx = this.coreInit ? this.coreX : pxp;
-  var ccy = this.coreInit ? this.coreY : ccy0;
-  var dim = clamp(this.coreDim, 0, 1);
-  var lit = clamp(.22 + .78 * (1 - dim) + .07 * Math.sin(t * 1.6), 0, 1.1);
-  var sqy = clamp(this.coreSq || 1, .84, 1.12), sqx = 1 + (1 - sqy) * .55;
-  var cy0 = pyp + R * .039;
-  var ck = clamp(this.cageK == null ? 1 : this.cageK, 0, 1.15);
-  var pk = clamp(this.poke, 0, 1);                           /* 点载荷：笼绷一下 */
-  var rk = (.70 + .30 * ck) * (1 - pk * .09);                 /* 笼的开合：收拢（贴着核）→ 张开（陀螺仪） */
-  var tilt = clamp(-this.coreVX * .0018, -.28, .28);         /* 核在笼里荡，笼反向微倾（惯性稳定） */
-  var cageA = .42 + dim * .40;
-
-  /* 落座暗影（光也要压在盘上）+ 深核光晕 */
-  ctx.beginPath();
-  ctx.ellipse(ccx, cy0 + R * .004, rcr * 1.05, rcr * .30, 0, 0, TAU);
-  ctx.fillStyle = 'rgba(20,11,2,.42)'; ctx.fill();
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  var gl = ctx.createRadialGradient(ccx, ccy, rcr * .1, ccx, ccy, rcr * 3.4);
-  gl.addColorStop(0, 'rgba(255,232,168,' + (.24 * lit) + ')');
-  gl.addColorStop(.42, 'rgba(232,183,58,' + (.10 * lit) + ')');
-  gl.addColorStop(1, 'rgba(0,0,0,0)');
-  ctx.fillStyle = gl;
-  ctx.beginPath(); ctx.arc(ccx, ccy, rcr * 3.4, 0, TAU); ctx.fill();
-  /* 接触光：光在盘上摊开一小片（会摊 = 有重量；边缘三小块是流出去的光） */
-  var spg = ctx.createRadialGradient(ccx, cy0, 0, ccx, cy0, rcr * 1.9);
-  spg.addColorStop(0, 'rgba(255,236,182,' + (.20 + .22 * lit) + ')');
-  spg.addColorStop(.55, 'rgba(232,183,58,' + (.10 * lit) + ')');
-  spg.addColorStop(1, 'rgba(0,0,0,0)');
-  ctx.fillStyle = spg;
-  ctx.beginPath(); ctx.ellipse(ccx, cy0, rcr * 1.9, rcr * .54, 0, 0, TAU); ctx.fill();
-  for (i = 0; i < 3; i++) {
-    var sa = -.95 + i * .95 + Math.sin(t * .5 + i * 2.1) * .14;
-    ctx.globalAlpha = (.26 + .26 * lit) * (.55 + .45 * Math.sin(t * .8 + i * 2.3));
-    ctx.fillStyle = '#ffe6ac';
-    ctx.beginPath();
-    ctx.ellipse(ccx + Math.cos(sa) * rcr * 1.42, cy0 + rcr * .10, rcr * .34, rcr * .075, sa * .55, 0, TAU);
-    ctx.fill();
-  }
-  ctx.restore();
-  ctx.globalAlpha = 1;
-
-  /* 量环 · 流光：13 齿是静的刻度，光沿环流——头亮尾散，扫过哪枚齿哪枚齿亮起
-     （与杆上「游标过刻星点亮」同一套语言：光读刻度、不读值；齿不再自己转）。
-     主青流顺行、副金流逆行，一交一错，环才是「活的」而不只是「转的」；
-     两道流的相位都取自 holoPh —— 鼠标移入器物时全息层转快，环上的光也跟着走快
-     （沿用已有的唤醒手感，不新增状态位、不新增数据）。
-     静止单帧（朴素档的器物本体 / reduced-motion）里不画头尾：环回到一枚均匀点亮的量环，
-     免得流光冻在半路，看着像一颗定住的高光；但朴素档的**光**照走（flowOn 与 still 分开）。 */
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  ctx.translate(ccx, cy0);
-  ctx.scale(1, .42);
-  var hr = rcr * 1.90;
-  var still = !this.live || !this.motion;    /* 本体静止（t 驱动的细节都停住） */
-  var flowOn = this.live;                    /* 流光要不要画（朴素档只走光，也算 live） */
-  var flowA = this.holoPh * 3.2;             /* 主青流相位（顺行） */
-  var flowB = -this.holoPh * 1.75 + 2.2;     /* 副金流相位（逆行） */
-  var fdim = 1 - dim * .55;                  /* 换料 / 切市：光流跟着一滞 */
-  /* 轨：内外两道细线夹出刻度带，齿落在带里（一圈游标尺，不再是孤零零一个圆） */
-  ctx.strokeStyle = 'rgba(63,217,192,.13)'; ctx.lineWidth = 1;
-  ctx.beginPath(); ctx.arc(0, 0, hr, 0, TAU); ctx.stroke();
-  ctx.strokeStyle = 'rgba(63,217,192,.06)'; ctx.lineWidth = 1;
-  ctx.beginPath(); ctx.arc(0, 0, hr + R * .012, 0, TAU); ctx.stroke();
-  /* 齿：底光很淡，流头扫到时按角距提亮（青流为主、金流补一记） */
-  for (i = 0; i < 13; i++) {
-    a = (i / 13) * TAU;
-    var gT = 0;
-    if (flowOn) {
-      var gA = Math.exp(-Math.pow(angGap(a, flowA) / .32, 2));
-      var gB = Math.exp(-Math.pow(angGap(a, flowB) / .26, 2));
-      gT = gA + gB * .55;
-    }
-    var tl = still ? .30 : .15 + .11 * Math.sin(t * 1.9 + i * 1.3);
-    ctx.strokeStyle = 'rgba(63,217,192,' + clamp(tl + gT * .80 * fdim, 0, 1) + ')';
-    ctx.lineWidth = 1.15 + gT * .95;
-    ctx.beginPath();
-    ctx.moveTo(Math.cos(a) * hr, Math.sin(a) * hr);
-    ctx.lineTo(Math.cos(a) * (hr + R * .012), Math.sin(a) * (hr + R * .012));
-    ctx.stroke();
-  }
-  if (flowOn) {
-    /* 主青流：头端一枚白热点 + 一团光晕，身后拖一条约四成环长的散尾 */
-    var TAIL = TAU * .40, SEG = 22;
-    for (i = 0; i < SEG; i++) {
-      var q1 = i / SEG, q2 = (i + 1) / SEG, kk = 1 - q2;
-      ctx.strokeStyle = 'rgba(126,240,220,' + (Math.pow(kk, 2.1) * .40 * fdim) + ')';
-      ctx.lineWidth = .8 + 2.6 * Math.pow(kk, 1.5);
-      ctx.beginPath(); ctx.arc(0, 0, hr, flowA - TAIL * q2, flowA - TAIL * q1); ctx.stroke();
-    }
-    var hx1 = Math.cos(flowA) * hr, hy1 = Math.sin(flowA) * hr;
-    var gl1 = ctx.createRadialGradient(hx1, hy1, 0, hx1, hy1, rcr * .60);
-    gl1.addColorStop(0, 'rgba(238,255,250,' + (.50 * fdim) + ')');
-    gl1.addColorStop(.34, 'rgba(126,240,220,' + (.20 * fdim) + ')');
-    gl1.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = gl1;
-    ctx.beginPath(); ctx.arc(hx1, hy1, rcr * .60, 0, TAU); ctx.fill();
-    ctx.fillStyle = 'rgba(248,255,252,' + (.88 * fdim) + ')';
-    ctx.beginPath(); ctx.arc(hx1, hy1, rcr * .052, 0, TAU); ctx.fill();
-    /* 副金流：短、细、逆着走（尾落在 + 角侧），只在两流交错处亮一下 */
-    var TAIL2 = TAU * .16, SEG2 = 10;
-    for (i = 0; i < SEG2; i++) {
-      var r1 = i / SEG2, r2 = (i + 1) / SEG2, k2 = 1 - r2;
-      ctx.strokeStyle = 'rgba(255,214,124,' + (Math.pow(k2, 2.4) * .20 * fdim) + ')';
-      ctx.lineWidth = .7 + 1.4 * k2;
-      ctx.beginPath(); ctx.arc(0, 0, hr, flowB + TAIL2 * r1, flowB + TAIL2 * r2); ctx.stroke();
-    }
-    var hx2 = Math.cos(flowB) * hr, hy2 = Math.sin(flowB) * hr;
-    ctx.fillStyle = 'rgba(255,232,168,' + (.46 * fdim) + ')';
-    ctx.beginPath(); ctx.arc(hx2, hy2, rcr * .034, 0, TAU); ctx.fill();
-  }
-  ctx.restore();
-
-  /* 核外柔光（大气层）＋ 大 bloom＋ 浑仪三环笼的后半（被核遮住 = 核在笼内） */
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  var gl = ctx.createRadialGradient(ccx, ccy, rcr * .1, ccx, ccy, rcr * 3.6);
-  gl.addColorStop(0, 'rgba(255,236,186,' + (.28 * lit) + ')');
-  gl.addColorStop(.34, 'rgba(232,183,58,' + (.12 * lit) + ')');
-  gl.addColorStop(1, 'rgba(0,0,0,0)');
-  ctx.fillStyle = gl;
-  ctx.beginPath(); ctx.arc(ccx, ccy, rcr * 3.6, 0, TAU); ctx.fill();
-  /* 笼的两道环（后段）+ 环上流光（后段这一遍也把「光走到核后」那半段接过去画） */
-  var rotH = tilt + this.cagePh * .18, rotV = -.18 + this.cagePh * .20 + tilt * .5;
-  var aH = rcr * 1.95 * rk, bH = rcr * 1.05 * rk, aV = rcr * 1.05 * rk, bV = rcr * 1.85 * rk;
-  var headH = this.holoPh * 2.0 + .6;        /* 两道环各走各的光 */
-  var headV = -this.holoPh * 1.7 + 2.4;
-  ctx.strokeStyle = 'rgba(126,240,220,' + (cageA * .74) + ')'; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, aH, bH, rotH, Math.PI, TAU); ctx.stroke();
-  ctx.strokeStyle = 'rgba(63,217,192,' + (cageA * .82) + ')'; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, aV, bV, rotV, Math.PI * 1.06, TAU + .28); ctx.stroke();
-  if (flowOn) {
-    ringFlow(ctx, ccx, ccy, aH, bH, rotH, Math.PI, TAU, headH, .40, 10, '126,240,220', .52, 2.1, fdim);
-    ringFlow(ctx, ccx, ccy, aV, bV, rotV, Math.PI * 1.06, TAU + .28, headV, -.30, 10, '158,248,230', .46, 1.9, fdim);
-    ringHead(ctx, ccx, ccy, aH, bH, rotH, headH, Math.PI, TAU, '186,252,236', 1, 1.5, fdim);
-    ringHead(ctx, ccx, ccy, aV, bV, rotV, headV, Math.PI * 1.06, TAU + .28, '200,255,244', 1, 1.3, fdim);
-  }
-  ctx.restore();
-
-  /* 核体：一团被笼住的光（轮廓微起伏 = 不是硬球）＋ 白热芯 ＋ 内部对流 ＋ 核面刻度带 */
-  ctx.save();
-  ctx.translate(ccx, ccy);
-  ctx.scale(sqx, sqy);
-  var corePath = function () {
-    ctx.beginPath();
-    for (var q = 0; q <= 40; q++) {
-      var th = (q / 40) * TAU;
-      var rr = rcr * (1 + .026 * Math.sin(3 * th + t * .7) + .014 * Math.sin(5 * th - t * .5));
-      var px = Math.cos(th) * rr, py = Math.sin(th) * rr;
-      if (q === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
-    }
-    ctx.closePath();
-  };
-  corePath();
-  /* 壳：半透的琥珀光壳（不是实心球 —— 内里看得见在转，才不像一颗珠子） */
-  var bgr = ctx.createRadialGradient(-rcr * .22, -rcr * .26, rcr * .04, 0, 0, rcr * 1.08);
-  bgr.addColorStop(0, 'rgba(255,254,246,' + clamp(.44 + .42 * lit, 0, .94) + ')');
-  bgr.addColorStop(.30, 'rgba(255,214,124,' + clamp(.40 + .34 * lit, 0, .88) + ')');
-  bgr.addColorStop(.72, 'rgba(196,116,24,' + clamp(.44 + .28 * lit, 0, .82) + ')');
-  bgr.addColorStop(1, 'rgba(56,26,4,' + clamp(.60 + .20 * lit, 0, .86) + ')');
-  ctx.fillStyle = bgr; ctx.fill();
-  ctx.save();
-  ctx.clip();
-  ctx.globalCompositeOperation = 'lighter';
-  ctx.rotate(this.coreRot);
-  for (i = 0; i < 2; i++) {
-    var ex = Math.sin(t * (.42 + i * .17) + i * 2.3) * rcr * .40;
-    var ey = Math.cos(t * (.33 + i * .13) + i * 1.1) * rcr * .34;
-    var eg = ctx.createRadialGradient(ex, ey, 0, ex, ey, rcr * .64);
-    eg.addColorStop(0, 'rgba(255,248,220,' + (.20 * lit) + ')');
-    eg.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = eg;
-    ctx.beginPath(); ctx.arc(ex, ey, rcr * .64, 0, TAU); ctx.fill();
-  }
-  /* 内里漩涡：两道盘旋的光（核心在转 —— 这是「光」，不是球） */
-  for (i = 0; i < 2; i++) {
-    var ph2 = t * (.55 + i * .26) + i * 2.1;
-    ctx.beginPath();
-    for (var q2 = 0; q2 <= 20; q2++) {
-      var u2 = q2 / 20, ang = ph2 + u2 * 3.6, rr2 = rcr * (.20 + .78 * u2);
-      var vx2 = Math.cos(ang) * rr2, vy2 = Math.sin(ang) * rr2 * .58;
-      if (q2 === 0) ctx.moveTo(vx2, vy2); else ctx.lineTo(vx2, vy2);
-    }
-    ctx.strokeStyle = 'rgba(255,242,204,' + (.07 + .09 * lit + .05 * i) + ')';
-    ctx.lineWidth = 1.4 - i * .3;
-    ctx.stroke();
-  }
-  /* 芯：白热的一小点 */
-  var hg2 = ctx.createRadialGradient(0, 0, 0, 0, 0, rcr * .46);
-  hg2.addColorStop(0, 'rgba(255,255,252,' + (.55 + .40 * lit) + ')');
-  hg2.addColorStop(1, 'rgba(255,246,214,0)');
-  ctx.fillStyle = hg2;
-  ctx.beginPath(); ctx.arc(0, 0, rcr * .46, 0, TAU); ctx.fill();
-  /* 核面刻度带：带上一枚游标光点在走（与杆上游标爪同构——杆上读刻度、核上读刻度） */
-  var ba = -.34 + this.coreRot * .6;
-  ctx.save();
-  ctx.rotate(ba);
-  ctx.strokeStyle = 'rgba(255,240,196,.20)'; ctx.lineWidth = 1;
-  ctx.beginPath(); ctx.ellipse(0, 0, rcr * .92, rcr * .32, 0, 0, TAU); ctx.stroke();
-  for (i = 0; i < 6; i++) {
-    var ta = (i / 6) * TAU;
-    ctx.strokeStyle = 'rgba(255,246,214,.26)'; ctx.lineWidth = .9;
-    ctx.beginPath();
-    ctx.moveTo(Math.cos(ta) * rcr * .84, Math.sin(ta) * rcr * .29);
-    ctx.lineTo(Math.cos(ta) * rcr * 1.0, Math.sin(ta) * rcr * .35);
-    ctx.stroke();
-  }
-  var ra = t * .55;
-  ctx.fillStyle = 'rgba(255,236,180,.20)';
-  ctx.beginPath(); ctx.arc(Math.cos(ra) * rcr * .92, Math.sin(ra) * rcr * .32, 4.2, 0, TAU); ctx.fill();
-  ctx.fillStyle = 'rgba(255,250,232,.85)';
-  ctx.beginPath(); ctx.arc(Math.cos(ra) * rcr * .92, Math.sin(ra) * rcr * .32, 1.5, 0, TAU); ctx.fill();
-  ctx.restore();
-  /* 高光点：密光才有镜面 */
-  ctx.fillStyle = 'rgba(255,255,252,' + (.16 + .14 * lit) + ')';
-  ctx.beginPath(); ctx.ellipse(-rcr * .32, -rcr * .38, rcr * .19, rcr * .12, -.5, 0, TAU); ctx.fill();
-  ctx.restore();
-  /* 菲涅尔边：白热芯外那一圈最亮的边 */
-  corePath();
-  ctx.strokeStyle = 'rgba(255,250,232,' + (.40 + .32 * lit) + ')'; ctx.lineWidth = 1.1;
-  ctx.stroke();
-  ctx.restore();
-
-  /* 赤道逃逸光丝：笼的赤道最松，光从两侧漏出去、正好被环截断（束缚的叙事；笼越紧丝越短越亮） */
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  var ra2 = aH, rb2 = bH;                                      /* 环的极径随方向变：丝只到环为止 */
-  for (i = 0; i < 4; i++) {
-    var fa = (i < 2 ? 1 : -1) * (.10 + (i % 2) * .17) + (i < 2 ? 0 : Math.PI);
-    var cf = Math.cos(fa), sf = Math.sin(fa);
-    var rr3 = ra2 * rb2 / Math.sqrt(Math.pow(rb2 * cf, 2) + Math.pow(ra2 * sf, 2));
-    var fl = .30 + .70 * Math.max(0, Math.sin(t * 1.7 + (i < 2 ? 0 : Math.PI)));
-    var l3 = Math.max(rcr * .92, rr3 * (.62 + .38 * fl));
-    var bx = cf * rcr * .86, by = sf * rcr * .86;
-    var tx2 = cf * l3, ty2 = sf * l3;
-    var mx2 = cf * (rcr * .86 + l3) * .5, my2 = sf * (rcr * .86 + l3) * .5;
-    var nxs = -sf, nys = cf;
-    ctx.globalAlpha = (.22 + .42 * fl) * (1 - .30 * ck) * (1 + pk * .9);
-    ctx.fillStyle = '#fff3d2';
-    ctx.beginPath();
-    ctx.moveTo(bx * sqx, by * sqy);
-    ctx.quadraticCurveTo((mx2 + nxs * rcr * .12) * sqx, (my2 + nys * rcr * .12) * sqy, tx2 * sqx, ty2 * sqy);
-    ctx.quadraticCurveTo((mx2 - nxs * rcr * .12) * sqx, (my2 - nys * rcr * .12) * sqy, bx * sqx, by * sqy);
-    ctx.closePath(); ctx.fill();
-    ctx.globalAlpha = (.30 + .50 * fl) * (1 - .30 * ck) * (1 + pk * .9);
-    ctx.fillStyle = '#fff8e6';
-    ctx.beginPath(); ctx.arc(tx2 * sqx, ty2 * sqy, rcr * .04, 0, TAU); ctx.fill();
-  }
-  ctx.restore(); ctx.globalAlpha = 1;
-
-  /* 浑仪三环笼的前半（压过核体，给一层纵深）＋ 左右冷边一线青 */
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  /* 环（前段）：一遍宽软光 + 一遍亮芯线（1x 下也看得见笼） */
-  ctx.strokeStyle = 'rgba(63,217,192,' + (cageA * .20) + ')'; ctx.lineWidth = 3.8;
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, aH, bH, rotH, 0, Math.PI); ctx.stroke();
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, aV, bV, rotV, .28, Math.PI * 1.06); ctx.stroke();
-  ctx.strokeStyle = 'rgba(158,248,230,' + Math.min(1, cageA * 1.06) + ')'; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, aH, bH, rotH, 0, Math.PI); ctx.stroke();
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, aV, bV, rotV, .28, Math.PI * 1.06); ctx.stroke();
-  /* 环上流光（前段）：与后段同一相位 —— 是同一道光，只是换了一侧画（前段更亮一档） */
-  if (flowOn) {
-    ringFlow(ctx, ccx, ccy, aH, bH, rotH, 0, Math.PI, headH, .40, 10, '126,240,220', .62, 2.2, fdim);
-    ringFlow(ctx, ccx, ccy, aV, bV, rotV, .28, Math.PI * 1.06, headV, -.30, 10, '158,248,230', .55, 2.0, fdim);
-    ringHead(ctx, ccx, ccy, aH, bH, rotH, headH, 0, Math.PI, '186,252,236', 1, 1.6, fdim);
-    ringHead(ctx, ccx, ccy, aV, bV, rotV, headV, .28, Math.PI * 1.06, '200,255,244', 1, 1.4, fdim);
-  }
-  /* 环的交点：两环真的「交」在一处，结构才立得住（数值找最近点对，20×20 采样） */
-  var eH = [], eV = [];
-  for (i = 0; i < 20; i++) {
-    var th3 = (i / 20) * TAU, c3 = Math.cos(th3), s3 = Math.sin(th3);
-    eH.push([ccx + c3 * aH * Math.cos(rotH) - s3 * bH * Math.sin(rotH), ccy + c3 * aH * Math.sin(rotH) + s3 * bH * Math.cos(rotH)]);
-    eV.push([ccx + c3 * aV * Math.cos(rotV) - s3 * bV * Math.sin(rotV), ccy + c3 * aV * Math.sin(rotV) + s3 * bV * Math.cos(rotV)]);
-  }
-  var nodes = [];
-  for (i = 0; i < eH.length && nodes.length < 4; i++) {
-    for (var j = 0; j < eV.length; j++) {
-      var dd = Math.hypot(eH[i][0] - eV[j][0], eH[i][1] - eV[j][1]);
-      if (dd > 3.2) continue;
-      var nx0 = (eH[i][0] + eV[j][0]) / 2, ny0 = (eH[i][1] + eV[j][1]) / 2, seen = false;
-      for (var k2 = 0; k2 < nodes.length; k2++) if (Math.hypot(nodes[k2][0] - nx0, nodes[k2][1] - ny0) < 8) seen = true;
-      if (!seen) { nodes.push([nx0, ny0]); break; }
-    }
-  }
-  for (i = 0; i < nodes.length; i++) {
-    ctx.fillStyle = 'rgba(150,246,226,' + (.55 + .30 * lit) + ')';
-    ctx.beginPath(); ctx.arc(nodes[i][0], nodes[i][1], rcr * .075, 0, TAU); ctx.fill();
-    ctx.fillStyle = 'rgba(126,240,220,.16)';
-    ctx.beginPath(); ctx.arc(nodes[i][0], nodes[i][1], rcr * .20, 0, TAU); ctx.fill();
-  }
-  ctx.strokeStyle = 'rgba(63,217,192,' + (.20 + .18 * lit) + ')'; ctx.lineWidth = 1.2;
-  ctx.beginPath(); ctx.ellipse(ccx, ccy, rcr * sqx, rcr * sqy, 0, Math.PI * .96, Math.PI * 1.48); ctx.stroke();
-  ctx.restore();
-
-  /* 重凝：环形扩散一次 */
-  if (this.mat > 0 || this.coreFlash > .02) {
-    var fa = Math.max(this.mat * .30, this.coreFlash * .40);
-    var fr = rcr * (1.5 + (1 - Math.max(this.mat, this.coreFlash)) * 2.2);
-    ctx.save();
-    ctx.globalCompositeOperation = 'lighter';
-    ctx.globalAlpha = fa;
-    ctx.strokeStyle = CYAN; ctx.lineWidth = 1.2;
-    ctx.beginPath(); ctx.ellipse(ccx, ccy, fr, fr * .62, 0, 0, TAU); ctx.stroke();
-    ctx.restore();
-    ctx.globalAlpha = 1;
-  }
-};
 Steelyard.prototype.paint = function (dt, t) {
   var ctx = this.ctx, w = this.W, h = this.H;
   if (!ctx || !w) return;
-  var R = this.R, cx = this.cx, d = dt / 1000, i, q;
+  var R = this.R, cx = this.cx, d = dt / 1000, i;
   /* 本帧「活着」吗：循环在跑且不是 reduced-motion。朴素档（!motion）也 live ——
      器物本体照样是静止单帧（dt = 0），但环上的流光要画、要走。 */
   this.live = this.running && !this.reduced;
+  var chargeTarget = this.hot || this.dragKind ? 1 : 0;
+  this.charge = dt > 0 ? this.charge + (chargeTarget - this.charge) * (1 - Math.exp(-d * 6)) : chargeTarget;
   ctx.clearRect(0, 0, w, h);
-
-  if (!this.kern.length) this.seedKernels();
 
   /* ---------- 载荷与目标位：本市的基准位 + 拖秤盘偏移（拖盘 = 加压，砣自己去追新的平衡位） ---------- */
   this.load = this.baseArm + this.panK;
@@ -632,89 +210,13 @@ Steelyard.prototype.paint = function (dt, t) {
   this.beam = { fx: fx, fy: fy, ca: ca, sa: sa, armR: armR, armL: armL };   /* 给鼠标：把手投影回杆轴（不要叫 frame：Stage 的帧句柄在用） */
   var ux = sa, uy = -ca;                                    /* 杆的上法向 */
   var lx = fx - armL * ca, ly = fy - armL * sa;             /* 盘侧杆端 */
-  var rx = fx + armR * ca, ry = fy + armR * sa;             /* 砣侧杆端 */
   var wx = fx + armR * ca * this.arm, wy = fy + armR * sa * this.arm;
-  var hbF = beamHalf(R, 0), loopR = Math.max(hbF * 2.2, R * .030);
+  var hbF = beamHalf(R, 0);
   var hbW = beamHalf(R, this.arm * armR / beamLen);
   var cxp = wx - ux * hbW, cyp = wy - uy * hbW;             /* 砣绳挂点（杆下沿） */
 
-  /* ---------- 提绳：双股，从页头带上沿垂下 ---------- */
-  var ny = fy - loopR * 1.27;
-  ctx.save();
-  ctx.lineCap = 'round';
-  ctx.strokeStyle = 'rgba(232,183,58,.18)'; ctx.lineWidth = 3.4;
-  ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(fx, ny); ctx.stroke();
-  ctx.strokeStyle = 'rgba(240,205,120,.60)'; ctx.lineWidth = 1.4;
-  ctx.beginPath(); ctx.moveTo(ax + .9, ay); ctx.lineTo(fx + .9, ny); ctx.stroke();
-  ctx.strokeStyle = 'rgba(148,96,26,.55)'; ctx.lineWidth = .9;
-  ctx.beginPath(); ctx.moveTo(ax - .9, ay); ctx.lineTo(fx - .9, ny); ctx.stroke();
-  ctx.restore();
-
-  /* ---------- 秤杆：锥形木杆（提纽处最粗，两端收细） ---------- */
-  var NL = 11, topP = [], botP = [];
-  for (i = 0; i < NL; i++) {
-    var f = i / (NL - 1);
-    var ecx = lx + (rx - lx) * f, ecy = ly + (ry - ly) * f;
-    var hh = beamHalf(R, f - .38);
-    topP.push([ecx + ux * hh, ecy + uy * hh]);
-    botP.push([ecx - ux * hh, ecy - uy * hh]);
-  }
-  ctx.beginPath(); ctx.arc(lx, ly, beamHalf(R, -.38), 0, TAU);
-  ctx.fillStyle = 'rgba(156,104,36,.95)'; ctx.fill();
-  ctx.beginPath(); ctx.arc(rx, ry, beamHalf(R, .62), 0, TAU);
-  ctx.fillStyle = 'rgba(150,100,34,.95)'; ctx.fill();
-  var wg = ctx.createLinearGradient(fx + ux * R * .05, fy + uy * R * .05, fx - ux * R * .05, fy - uy * R * .05);
-  wg.addColorStop(0, 'rgba(255,236,182,.80)');
-  wg.addColorStop(.26, 'rgba(228,178,88,.96)');
-  wg.addColorStop(.60, 'rgba(158,106,34,.96)');
-  wg.addColorStop(1, 'rgba(70,42,12,.94)');
-  ctx.save();
-  ctx.shadowColor = 'rgba(232,183,58,.42)'; ctx.shadowBlur = 9;
-  ctx.beginPath();
-  ctx.moveTo(topP[0][0], topP[0][1]);
-  for (i = 1; i < NL; i++) ctx.lineTo(topP[i][0], topP[i][1]);
-  for (i = NL - 1; i >= 0; i--) ctx.lineTo(botP[i][0], botP[i][1]);
-  ctx.closePath();
-  ctx.fillStyle = wg; ctx.fill();
-  ctx.restore();
-  /* 上下沿 + 木纹（跟着锥度收） */
-  ctx.strokeStyle = 'rgba(255,240,200,.45)'; ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(topP[0][0], topP[0][1]);
-  for (i = 1; i < NL; i++) ctx.lineTo(topP[i][0], topP[i][1]);
-  ctx.stroke();
-  ctx.strokeStyle = 'rgba(38,22,6,.55)'; ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(botP[0][0], botP[0][1]);
-  for (i = 1; i < NL; i++) ctx.lineTo(botP[i][0], botP[i][1]);
-  ctx.stroke();
-  ctx.strokeStyle = 'rgba(92,56,14,.30)'; ctx.lineWidth = .8;
-  for (var gr = 0; gr < 2; gr++) {
-    var gt = gr ? .70 : .38;
-    ctx.beginPath();
-    for (i = 0; i < NL; i++) {
-      var gx = topP[i][0] + (botP[i][0] - topP[i][0]) * gt;
-      var gy = topP[i][1] + (botP[i][1] - topP[i][1]) * gt;
-      if (i === 0) ctx.moveTo(gx, gy); else ctx.lineTo(gx, gy);
-    }
-    ctx.stroke();
-  }
-
-  /* ---------- 提纽：绳环绕杆 + 绳结（绳压过杆面） ---------- */
-  ctx.save();
-  ctx.lineCap = 'round';
-  ctx.strokeStyle = 'rgba(26,14,4,.38)'; ctx.lineWidth = 3;
-  ctx.beginPath();
-  ctx.moveTo(fx - loopR * .92, fy + R * .003); ctx.lineTo(fx + loopR * .92, fy + R * .003);
-  ctx.stroke();
-  ctx.strokeStyle = 'rgba(238,198,112,.85)'; ctx.lineWidth = 1.5;
-  ctx.beginPath();
-  ctx.moveTo(fx - loopR, fy + R * .010);
-  ctx.bezierCurveTo(fx - loopR * 1.18, fy - loopR * 1.7, fx + loopR * 1.18, fy - loopR * 1.7, fx + loopR, fy + R * .010);
-  ctx.stroke();
-  ctx.beginPath(); ctx.arc(fx, ny + 1, R * .0095, 0, TAU);
-  ctx.fillStyle = 'rgba(242,208,126,.9)'; ctx.fill();
-  ctx.restore();
+  drawBeam(this, ctx, this.beam);
+  drawPivot(this, ctx, this.beam);
 
   /* ---------- 刻星：未亮是墨星（真秤的星记），点亮成暖光星心 ---------- */
   for (i = 0; i < MARKN; i++) {
@@ -748,7 +250,7 @@ Steelyard.prototype.paint = function (dt, t) {
   }
 
   /* ---------- 赛博测量层：全息游标尺（轨 + 投影刻度 + 游标爪 + 数据包 + 锁定 + 扫描） ----------
-     木杆墨星是古器本体，青色全息层是「量」的那一半：只读、不写回、无数字。 */
+     衡梁刻星是古器本体，青色全息层是「量」的那一半：只读、不写回、无数字。 */
   var RAIL = R * .086;
   var rlx = fx + ux * RAIL, rly = fy + uy * RAIL;                       /* 轨起点（提纽正上方） */
   var rwx = wx + ux * RAIL, rwy = wy + uy * RAIL;                       /* 游标爪（随砣走） */
@@ -763,7 +265,7 @@ Steelyard.prototype.paint = function (dt, t) {
   ctx.strokeStyle = 'rgba(63,217,192,.26)'; ctx.lineWidth = 1;
   ctx.beginPath(); ctx.moveTo(rlx, rly); ctx.lineTo(rEx, rEy); ctx.stroke();
   ctx.setLineDash([]);
-  /* 投影刻度：与木杆墨星一一对应，随砣点亮；扫描经过时额外一闪 */
+  /* 投影刻度：与衡梁刻星一一对应，随砣点亮；扫描经过时额外一闪 */
   for (i = 0; i < MARKN; i++) {
     var pt = MARK0 + i * MARKSTEP;
     var qx = fx + armR * ca * pt + ux * RAIL, qy = fy + armR * sa * pt + uy * RAIL;
@@ -846,7 +348,6 @@ Steelyard.prototype.paint = function (dt, t) {
   ctx.restore();
 
   /* ---------- 游砣 · 尾迹（沿杆拖，跟手速） ---------- */
-  var ps = this.ps, pcs = Math.sin(ps), pcc = Math.cos(ps);
   if (this.trail > R * .012) {
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
@@ -864,193 +365,16 @@ Steelyard.prototype.paint = function (dt, t) {
     ctx.restore();
   }
 
-  /* ---------- 游砣：砣绳 + 提梁 + 钟形砣体（肩台 / 弦纹 / 分面 / 铸记 / 底沿） ---------- */
-  var cordL = R * .055;
-  var rgx = cxp + pcs * cordL, rgy = cyp + pcc * cordL;
-  ctx.strokeStyle = 'rgba(240,205,120,.55)'; ctx.lineWidth = 1.1;
-  ctx.beginPath(); ctx.moveTo(cxp + .8, cyp); ctx.lineTo(rgx + .8, rgy); ctx.stroke();
-  ctx.strokeStyle = 'rgba(150,98,26,.60)'; ctx.lineWidth = .9;
-  ctx.beginPath(); ctx.moveTo(cxp - .8, cyp); ctx.lineTo(rgx - .8, rgy); ctx.stroke();
+  drawWeight(this, ctx, { cxp: cxp, cyp: cyp, wx: wx, wy: wy });
 
-  var bw = R * .056, bh = R * .116, by = R * .034;
-  /* 鼠标命中区：砣体是一颗挂在绳下的「钟」，命中要落在看得见的那块上（另给挂点一个小圈） */
-  this.bobPt = { x: rgx, y: rgy + by + bh * .52, rx: bw * 2.1, ry: bh * .78, hx: wx, hy: wy, hr: R * .10 };
-
-  ctx.save();
-  ctx.translate(rgx, rgy);
-  ctx.rotate(ps);
-
-  /* 提梁：两条立柱 + 顶上弧（拱形提手，两端落在肩台上） */
-  ctx.strokeStyle = 'rgba(255,238,190,.82)'; ctx.lineWidth = 1.25;
-  ctx.beginPath();
-  ctx.moveTo(-bw * .30, by + R * .004);
-  ctx.lineTo(-bw * .30, by - R * .020);
-  ctx.quadraticCurveTo(0, by - R * .046, bw * .30, by - R * .020);
-  ctx.lineTo(bw * .30, by + R * .004);
-  ctx.stroke();
-  /* 肩台：提梁落在肩上那一道短横 */
-  ctx.strokeStyle = 'rgba(255,228,156,.50)'; ctx.lineWidth = 1.7;
-  ctx.beginPath(); ctx.moveTo(-bw * .44, by + R * .002); ctx.lineTo(bw * .44, by + R * .002); ctx.stroke();
-
-  /* 砣顶面：一枚扁椭圆（顶面受光 → 砣才是个立体的钟，不是剪影） */
-  ctx.beginPath();
-  ctx.ellipse(0, by, bw * .46, bw * .15, 0, 0, TAU);
-  var tg = ctx.createLinearGradient(0, by - bw * .15, 0, by + bw * .15);
-  tg.addColorStop(0, 'rgba(255,238,190,.55)');
-  tg.addColorStop(.5, 'rgba(196,138,50,.75)');
-  tg.addColorStop(1, 'rgba(96,54,14,.85)');
-  ctx.fillStyle = tg; ctx.fill();
-  ctx.strokeStyle = 'rgba(255,240,196,.50)'; ctx.lineWidth = .9; ctx.stroke();
-
-  /* 砣体：钟形（坐得住），金属柱面左受光 */
-  ctx.beginPath();
-  ctx.moveTo(-bw * .44, by);
-  ctx.bezierCurveTo(-bw * 1.02, by + bh * .20, -bw * 1.12, by + bh * .62, -bw * .98, by + bh * .94);
-  ctx.quadraticCurveTo(0, by + bh * 1.10, bw * .98, by + bh * .94);
-  ctx.bezierCurveTo(bw * 1.12, by + bh * .62, bw * 1.02, by + bh * .20, bw * .44, by);
-  ctx.quadraticCurveTo(0, by - bh * .10, -bw * .44, by);
-  ctx.closePath();
-  var bg = ctx.createLinearGradient(-bw * 1.06, 0, bw * 1.06, 0);
-  bg.addColorStop(0, 'rgba(56,30,8,.96)');
-  bg.addColorStop(.20, 'rgba(142,86,24,.96)');
-  bg.addColorStop(.38, 'rgba(226,176,84,.97)');
-  bg.addColorStop(.52, 'rgba(252,226,158,.97)');
-  bg.addColorStop(.70, 'rgba(184,122,38,.96)');
-  bg.addColorStop(.88, 'rgba(90,50,12,.95)');
-  bg.addColorStop(1, 'rgba(40,20,6,.96)');
-  ctx.save();
-  ctx.shadowColor = 'rgba(232,183,58,.45)'; ctx.shadowBlur = 8;
-  ctx.fillStyle = bg; ctx.fill();
-  ctx.restore();
-  ctx.strokeStyle = 'rgba(255,238,190,.72)'; ctx.lineWidth = 1.05; ctx.stroke();
-
-  /* 砣体里的细节（裁在体里画） */
-  ctx.save();
-  ctx.clip();
-  /* 铸记：肩下一枚方形回纹小印（不写字，只表「铸过」） */
-  rrect(ctx, -bw * .17, by + bh * .26, bw * .34, bh * .20, 1);
-  ctx.strokeStyle = 'rgba(52,28,6,.44)'; ctx.lineWidth = 1; ctx.stroke();
-  rrect(ctx, -bw * .17 + .7, by + bh * .26 + .7, bw * .34, bh * .20, 1);
-  ctx.strokeStyle = 'rgba(255,242,204,.24)'; ctx.stroke();
-  /* 两道弦纹（箍）：亮暗配对、弧短一点（免得读成一张脸） */
-  var hoops = [[.50, .54], [.70, .78]];
-  for (i = 0; i < hoops.length; i++) {
-    var hy2 = by + bh * hoops[i][0], hw2 = bw * hoops[i][1];
-    ctx.strokeStyle = 'rgba(48,26,6,.40)'; ctx.lineWidth = .9;
-    ctx.beginPath(); ctx.ellipse(0, hy2, hw2, hw2 * .16, 0, Math.PI * .14, Math.PI * .86); ctx.stroke();
-    ctx.strokeStyle = 'rgba(255,242,200,.20)'; ctx.lineWidth = .85;
-    ctx.beginPath(); ctx.ellipse(0, hy2 + .8, hw2 * .96, hw2 * .15, 0, Math.PI * .18, Math.PI * .82); ctx.stroke();
-  }
-  /* 底沿：宽座 + 底面一线光（砣能「坐」得住） */
-  ctx.strokeStyle = 'rgba(44,22,6,.50)'; ctx.lineWidth = 2.2;
-  ctx.beginPath(); ctx.moveTo(-bw * .88, by + bh * .86); ctx.quadraticCurveTo(0, by + bh * 1.03, bw * .88, by + bh * .86); ctx.stroke();
-  ctx.strokeStyle = 'rgba(255,236,182,.32)'; ctx.lineWidth = 1.1;
-  ctx.beginPath(); ctx.moveTo(-bw * .72, by + bh * 1.02); ctx.quadraticCurveTo(0, by + bh * 1.12, bw * .72, by + bh * 1.02); ctx.stroke();
-  /* 高光：左上一枚镜面 + 右侧一道环境反光带 */
-  ctx.beginPath();
-  ctx.ellipse(-bw * .34, by + bh * .30, bw * .14, bh * .18, -.12, 0, TAU);
-  ctx.fillStyle = 'rgba(255,250,228,.30)'; ctx.fill();
-  ctx.strokeStyle = 'rgba(255,248,220,.16)'; ctx.lineWidth = 1.6;
-  ctx.beginPath();
-  ctx.moveTo(bw * .72, by + bh * .26); ctx.quadraticCurveTo(bw * .86, by + bh * .56, bw * .66, by + bh * .84);
-  ctx.stroke();
-  ctx.restore();
-
-  /* 冷边光：左上一线青（与铜盘 / 光核同一套打光） */
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  ctx.strokeStyle = 'rgba(63,217,192,.30)'; ctx.lineWidth = 1.2;
-  ctx.beginPath();
-  ctx.moveTo(-bw * .46, by + bh * .02);
-  ctx.bezierCurveTo(-bw * 1.02, by + bh * .20, -bw * 1.12, by + bh * .62, -bw * .98, by + bh * .90);
-  ctx.stroke();
-  ctx.restore();
-
-  /* 悬停：整颗砣亮一圈（告诉用户「这颗能拖」） */
-  if (this.hot === 'bob') {
-    ctx.save();
-    ctx.globalCompositeOperation = 'lighter';
-    ctx.strokeStyle = 'rgba(255,238,190,.55)'; ctx.lineWidth = 1.6;
-    ctx.beginPath();
-    ctx.moveTo(-bw * .44, by);
-    ctx.bezierCurveTo(-bw * 1.02, by + bh * .20, -bw * 1.12, by + bh * .62, -bw * .98, by + bh * .94);
-    ctx.quadraticCurveTo(0, by + bh * 1.10, bw * .98, by + bh * .94);
-    ctx.bezierCurveTo(bw * 1.12, by + bh * .62, bw * 1.02, by + bh * .20, bw * .44, by);
-    ctx.quadraticCurveTo(0, by - bh * .10, -bw * .44, by);
-    ctx.stroke();
-    var hg3 = ctx.createRadialGradient(0, by + bh * .5, bw * .2, 0, by + bh * .5, bw * 3.4);
-    hg3.addColorStop(0, 'rgba(255,232,168,.16)');
-    hg3.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = hg3;
-    ctx.beginPath(); ctx.arc(0, by + bh * .5, bw * 3.4, 0, TAU); ctx.fill();
-    ctx.restore();
-  }
-  ctx.restore();
-
-  /* ---------- 秤盘：盘钩 + 三股绳 + 铜盘 + 盘中谷堆 ---------- */
+  /* 悬日：环笼本身承重，三股悬丝直接挂到环上。 */
   var po = this.pan;
   var pxp = lx + Math.sin(po) * R * .42, pyp = ly + Math.cos(po) * R * .42;
-  this.panPt = { x: pxp, y: pyp, rx: R * .28, ry: R * .12 };   /* 鼠标命中区：拖秤盘 / 点载荷 */
   var hky = ly + hbF * 1.5 + R * .020;
   ctx.strokeStyle = 'rgba(240,205,120,.85)'; ctx.lineWidth = 1.3;
   ctx.beginPath(); ctx.arc(lx, ly + hbF * 1.5, R * .020, 0, TAU); ctx.stroke();
-  /* 后两股绳（在盘后面） */
-  ctx.strokeStyle = 'rgba(232,183,58,.32)'; ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(lx, hky); ctx.lineTo(pxp - R * .185, pyp + R * .004);
-  ctx.moveTo(lx, hky); ctx.lineTo(pxp + R * .185, pyp + R * .004);
-  ctx.stroke();
-  /* 盘：暗底 + 铜盘面 + 前口高光 + 盘内暗底 */
-  ctx.beginPath();
-  ctx.ellipse(pxp, pyp + R * .006, R * .215, R * .066, 0, 0, TAU);
-  ctx.fillStyle = 'rgba(52,30,8,.85)'; ctx.fill();
-  ctx.save();
-  ctx.shadowColor = 'rgba(232,183,58,.35)'; ctx.shadowBlur = 8;
-  ctx.beginPath();
-  ctx.ellipse(pxp, pyp + R * .020, R * .225, R * .070, 0, 0, TAU);
-  var pg = ctx.createLinearGradient(0, pyp - R * .05, 0, pyp + R * .092);
-  pg.addColorStop(0, 'rgba(250,226,164,.74)');
-  pg.addColorStop(.42, 'rgba(198,144,54,.80)');
-  pg.addColorStop(1, 'rgba(82,48,12,.86)');
-  ctx.fillStyle = pg; ctx.fill();
-  ctx.restore();
-  ctx.strokeStyle = 'rgba(250,224,152,.85)'; ctx.lineWidth = 1.3; ctx.stroke();
-  ctx.beginPath();
-  ctx.ellipse(pxp, pyp + R * .020, R * .225, R * .070, 0, Math.PI * .12, Math.PI * .88);
-  ctx.strokeStyle = 'rgba(255,246,212,.50)'; ctx.lineWidth = 1; ctx.stroke();
-  /* 冷边光：铜盘左上一线青（暖金主光 + 冷青轮廓 = 赛博打光） */
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  ctx.beginPath();
-  ctx.ellipse(pxp, pyp + R * .020, R * .225, R * .070, 0, Math.PI * .96, Math.PI * 1.46);
-  ctx.strokeStyle = 'rgba(63,217,192,.40)'; ctx.lineWidth = 1.2; ctx.stroke();
-  ctx.strokeStyle = 'rgba(63,217,192,.07)'; ctx.lineWidth = 3.2; ctx.stroke();
-  ctx.beginPath();
-  ctx.ellipse(pxp, pyp + R * .027, R * .190, R * .056, 0, Math.PI * 1.0, Math.PI * 1.42);
-  ctx.strokeStyle = 'rgba(63,217,192,.16)'; ctx.lineWidth = 1; ctx.stroke();
-  ctx.restore();
-  /* 悬停在盘上：盘沿亮一圈（可抓：往下拽 = 加压） */
-  if (this.hot === 'pan') {
-    ctx.save();
-    ctx.globalCompositeOperation = 'lighter';
-    ctx.strokeStyle = 'rgba(255,238,190,.40)'; ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.ellipse(pxp, pyp + R * .020, R * .233, R * .074, 0, 0, TAU);
-    ctx.stroke();
-    ctx.restore();
-  }
-  ctx.beginPath();
-  ctx.ellipse(pxp, pyp + R * .027, R * .196, R * .056, 0, 0, TAU);
-  var ig = ctx.createRadialGradient(pxp, pyp + R * .010, R * .02, pxp, pyp + R * .032, R * .20);
-  ig.addColorStop(0, 'rgba(104,64,18,.52)');
-  ig.addColorStop(1, 'rgba(22,12,4,.55)');
-  ctx.fillStyle = ig; ctx.fill();
-  /* 前股绳（压过盘口，做出前后层次） */
-  ctx.strokeStyle = 'rgba(240,205,120,.62)'; ctx.lineWidth = 1.1;
-  ctx.beginPath(); ctx.moveTo(lx, hky); ctx.lineTo(pxp, pyp - R * .030); ctx.stroke();
-  /* 盘内载荷 · 光核（无形之物靠形变 + 惯性 + 束缚读「重」） */
   if (dt > 0) this.stepLoad(d, t, pxp, pyp);
-  this.drawCore(ctx, t, pxp, pyp);
+  drawVessel(this, ctx, t, pxp, pyp, { x: lx, y: hky });
 
   /* ---------- 屑：摩擦 / 急摆 / 盘晃时起 ---------- */
   if (dt > 0) {
@@ -1133,6 +457,7 @@ Steelyard.prototype.sanitize = function () {
   this.ps = fin(this.ps, 0); this.psV = fin(this.psV, 0);
   this.sway = fin(this.sway, 0); this.swayV = fin(this.swayV, 0);
   this.trail = fin(this.trail, 0);
+  this.charge = fin(this.charge, 0);
   this.panK = fin(this.panK, 0);
   this.bobPull = fin(this.bobPull, 0);
   this.handArm = this.handArm == null ? null : fin(this.handArm, null);
@@ -1290,7 +615,7 @@ function attachPointer(engine, canvas) {
     start.x = p.x; start.y = p.y;
     engine.dragKind = k;
     if (k === 'bob') engine.handArm = engine.arm;
-    try { canvas.setPointerCapture(pid); } catch (err) { /* 忽略 */ }
+    try { canvas.setPointerCapture(pid); } catch (err) { console.warn('杆秤指针捕获失败，使用窗口松手兜底：', err); }
     canvas.style.cursor = 'grabbing';
     e.preventDefault();
   };

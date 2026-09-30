@@ -1949,7 +1949,7 @@ main > h1 + p {
    器物下半身继续画在页头带之外、压在切换条之下（.page-head 自成层叠上下文，见 §10.3）。 */
 .page-head {
   position: relative;
-  margin: 0 0 -1.8rem;
+  margin: 0 0 -3.8rem;
   isolation: isolate;
 }
 
@@ -2250,8 +2250,6 @@ main > h1 + p {
 @keyframes totemCore {
   0%, 100% { opacity: .5; transform: scale(.7); }
   50% { opacity: 1; transform: scale(1.05); }
-}
-
 }
 
 /* 粮市：杆秤只有秤砣 / 秤盘可抓，光标由 steelyard.js 按命中区动态给（grab / grabbing） */
@@ -4649,12 +4647,6 @@ td:first-child {
   transition: color .2s;
 }
 
-.instrument__label small {
-  font-size: 11px;
-  letter-spacing: 0;
-  color: rgba(var(--a), .65);
-}
-
 .instrument__tab[aria-selected="true"] .instrument__label {
   color: var(--paper);
 }
@@ -5027,10 +5019,6 @@ td:first-child {
 
   .instrument__label {
     font-size: 14px;
-  }
-
-  .instrument__label small {
-    display: none;
   }
 
   .instrument__tabs {
