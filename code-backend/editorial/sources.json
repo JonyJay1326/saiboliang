@@ -491,14 +491,14 @@
           "id": "main-content"
         }
       },
-      "evidenceHash": "49ef250f2fae8ba8aa6e3fd529f0fe3b5481ae7e1373e5da4fab6182dc501279",
+      "evidenceHash": "9164798243db85eab1c9597f5fc6072cb18730a01e16e5e05262cf7c7ea15888",
       "evidenceText": [
         "All plans include Copilot CLI and Copilot app.",
         "GitHub AI Credits allowance by plan"
       ],
       "record": {
         "id": "copilot-coding-plan",
-        "rank": 5,
+        "rank": 6,
         "rankBasis": "付费量第一、学生免费，口碑在下滑",
         "vendor": "GitHub",
         "product": "GitHub Copilot",
@@ -605,7 +605,7 @@
           "id": "content-area"
         }
       },
-      "evidenceHash": "9ea47c1828dece1f574a52baf814700f8b6f56433c5c5dac196b66add908686d",
+      "evidenceHash": "a230804dd381cefca14bb9e625eca99a0e2badc6d4f6d313107bac2aa5574f57",
       "evidenceText": [
         "套餐同时设有每 5 小时和每周额度上限",
         "Claude Code、Kilo Code、OpenClaw、OpenCode、TRAE、CodeBuddy"
@@ -750,7 +750,7 @@
       ],
       "record": {
         "id": "supergrok-plan",
-        "rank": 6,
+        "rank": 7,
         "rankBasis": "捆绑 X Premium+ 分发广，编程能力中游",
         "vendor": "xAI",
         "product": "SuperGrok",
@@ -1100,7 +1100,7 @@
       ],
       "record": {
         "id": "xfyun-astron-plan",
-        "rank": 8,
+        "rank": 11,
         "rankBasis": "9 万次/月量大，模型版本滞后半代",
         "vendor": "讯飞星辰",
         "product": "Astron Coding Plan",

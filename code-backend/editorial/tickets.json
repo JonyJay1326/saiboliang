@@ -739,5 +739,81 @@
     "affiliate": false,
     "publishedAt": "2026-09-18",
     "updatedAt": "2026-09-18"
+  },
+  {
+    "id": "zcode-flash-100m-daily-202609",
+    "title": "ZCode 补偿每日领 1 亿 Token",
+    "vendor": "智谱",
+    "category": "token",
+    "score": 90,
+    "tags": {
+      "duration": "limited",
+      "region": "cn"
+    },
+    "expired": false,
+    "expiryDate": "2026-10-07T23:59:59+08:00",
+    "summary": "争议补偿，全体用户每日领 1 亿 Token",
+    "content": "ZCode 就代码上传争议公布补偿方案，9 月 28 日 10:30 起生效，连续 10 天面向全体用户发放 Token。\n\n- 额度：**每日 1 亿 Token，共 10 万份/天**，先到先得\n- 时间：9 月 28 日至 10 月 7 日，连发 10 天\n- 适用：GLM-5.3-Flash（以客户端活动卡为准），仅限客户端内使用\n- 付费用户：另赠 4 张周额度 + 4 张 5 小时额度重置卡\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载并升级客户端至 3.14.3\n2. 登录后进「灵感与活动」领取当日 Token\n3. 模型选择器选 GLM-5.3-Flash 使用\n\n**注意**：活动源于 9/18 代码上传争议，官方已移除上传链路、删除云端数据并开源（Apache-2.0）；「不发起不上云」承诺与每日份额领取细则以官方公告为准。",
+    "link": "https://zcode.z.ai/cn",
+    "affiliate": false,
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28"
+  },
+  {
+    "id": "zhipu-qingyan-shuangjie-202609",
+    "title": "清言双节每日领 2000 积分",
+    "vendor": "智谱清言",
+    "category": "credits",
+    "score": 78,
+    "tags": {
+      "duration": "limited",
+      "region": "cn"
+    },
+    "expired": false,
+    "expiryDate": "2026-10-07T23:59:59+08:00",
+    "summary": "双节每日登录积分 ×10，消耗 100% 返还，上限 15 万",
+    "content": "智谱清言「双节送好礼」官方活动，9 月 25 日至 10 月 7 日三重积分福利。\n\n- 每日登录：普通用户 **2000 积分/天**，24 小时内有效\n- VIP / SVIP：每日 4000 / 8000 积分\n- 消耗返还：活动期间消耗积分节后 **100% 返还**，上限 15 万\n- 返还领取：10 月 8 日至 31 日登录自动到账，积分有效期 1 个月\n- 晒路书：提交 AI 路书送 **10,000 积分**，10 篇优质加赠 VIP 季卡\n\n领取步骤：\n\n1. 打开 [活动页](https://agentmore.chatglm.cn/shareFile/6ab4ac5845a6d6277b20f54c)或登录清言\n2. 每日登录自动发放 ×10 积分，当天用完\n3. 节后 10 月 31 日前登录，领取消耗返还\n\n**注意**：赠送积分 24 小时过期，当天记得用完；返还逾期未登录不再补发；VIP 季卡名单 10 月 12 日官方公布；细则以活动页为准。",
+    "link": "https://agentmore.chatglm.cn/shareFile/6ab4ac5845a6d6277b20f54c",
+    "affiliate": false,
+    "publishedAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "qoder-daily-credits-202609",
+    "title": "Qoder 每日领 100 Credits",
+    "vendor": "阿里云 Qoder",
+    "category": "credits",
+    "score": 76,
+    "tags": {
+      "duration": "longterm",
+      "region": "cn"
+    },
+    "expired": false,
+    "expiryDate": null,
+    "summary": "每日登录领 100 通用 Credits，可累积",
+    "content": "Qoder「每日登录有礼」长期奖励，官方公告暂无结束时间，每天可领一份通用额度。\n\n- 额度：**每日登录领 100 通用 Credits**\n- 时效：自领取起 30 天有效，未用完可累积\n- 领取：每天 10:00 开放新一轮，每账号一轮一次\n- 到账：计入 Add-on Credits，不改变订阅档位\n- 范围：国际版与 CN 版新老个人用户，含免费用户\n- 可用端：Qoder、IDE、JetBrains 插件、CLI 等\n\n领取步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/)下载桌面端登录\n2. 左下角用量面板 → 礼物图标领当日奖励\n3. 每天 10:00 后记得回来再领，漏领不补\n\n**注意**：未到期的额度可以累积，今天没用完也能留到后面用；细则以[官方公告](https://mp.weixin.qq.com/s/8hl-9hfkyLmnBuQOKGE5zQ)为准。",
+    "link": "https://qoder.cn/activities",
+    "affiliate": false,
+    "publishedAt": "2026-09-18",
+    "updatedAt": "2026-09-18"
+  },
+  {
+    "id": "minimax-code-checkin-202609",
+    "title": "MiniMax Code 签到双倍积分",
+    "vendor": "MiniMax",
+    "category": "credits",
+    "score": 74,
+    "tags": {
+      "duration": "limited",
+      "region": "cn"
+    },
+    "expired": false,
+    "expiryDate": "2026-10-07T23:59:59+08:00",
+    "summary": "每日签到领双倍免费积分，至 10/7",
+    "content": "MiniMax Code 官方限时活动，随新模型 M3.1-Flash-Preview 上线开启，9 月 28 日至 10 月 7 日签到积分翻倍。\n\n- 额度：**每日签到领双倍免费积分**\n- 范围：新老用户同享，无需订阅\n- 适用：全模型通用，含 M3.1-Flash-Preview、H3\n- 重置：活动期 Token Plan 另有额度重置，时点以站内信为准\n\n领取步骤：\n\n1. 打开 [MiniMax Code 官网](https://agent.minimax.cn/)下载桌面端并登录\n2. 客户端内完成每日签到，积分到账\n3. 选 M3.1-Flash-Preview 或 H3 系模型使用\n\n**注意**：双倍积分仅 9/28–10/7 有效，每天记得签到；报料称 9/28–9/30 每日 11:00、16:00 额外重置 Token Plan 额度，以客户端站内信为准。",
+    "link": "https://agent.minimax.cn/",
+    "affiliate": false,
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28"
   }
 ]

@@ -80,16 +80,6 @@
     ],
     "at": "2026-09-25T06:59:08Z"
   },
-  "2026-09-26": {
-    "signature": "75d8791ed592a7fe276e94c602067ad5b150047d3124c65e138c282c6fef94c5",
-    "picks": [
-      "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7",
-      "48eaa8bbafaa8bc422c903d52001ef78b32ca86bd6e5e361262f5285ae8fcaf0",
-      "3bc674396d08da50e75288e449319ff46be57739c4d64c52300aa79ea48df806",
-      "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35"
-    ],
-    "at": "2026-09-26T14:59:11Z"
-  },
   "2026-09-27": {
     "signature": "f22d47fa52a3e37f0e8f9e9818ab6a7964c3e1b70777418b56067efefb4c0bc6",
     "picks": [
@@ -99,5 +89,23 @@
       "3bc674396d08da50e75288e449319ff46be57739c4d64c52300aa79ea48df806"
     ],
     "at": "2026-09-27T15:22:35Z"
+  },
+  "2026-09-28": {
+    "signature": "fa9d3b8a727b8d4d233a9e573e15a0db89a572e0bea07826d22030bca19443b8",
+    "picks": [
+      "eb674100bb687fff764326a192483a4161fa4fa5dc17727e3c5a9e490b0e4544",
+      "8167a01a04931e9683f753bb553d42fea158e2c16b0bd014bf23dad4d7e69038",
+      "b138f7140be488dff3b14fff786a5ac613b386d0a68cf919a69568276745d6aa"
+    ],
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "2026-09-29": {
+    "signature": "3a897abf3b1b8b6e91f9ef3ee66b2f52cbc35c84500ccbee9d82912f7dde8d97",
+    "picks": [
+      "23d0d12a85f6e48d41293e9f9a78b32286053050aa8feb7324444746737bf6c4",
+      "ad99548b1de883b740742f4fe48d730068e07cf7d83a6b9b38c5ccb7adda6eb3",
+      "ce897ce5009ecf43fff2aa7bec0259e6fd3986bfa06cda4ecb0ce107ba166f15"
+    ],
+    "at": "2026-09-29T13:40:37Z"
   }
 }

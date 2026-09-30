@@ -1,10 +1,10 @@
 {
-  "dataUpdatedAt": "2026-09-27T09:20:54Z",
+  "dataUpdatedAt": "2026-09-29T15:17:25Z",
   "rankings": {
     "source": "artificial-analysis",
     "sourceUrl": "https://artificialanalysis.ai/",
     "indexVersion": "4.3",
-    "updatedAt": "2026-09-27T09:20:54Z",
+    "updatedAt": "2026-09-29T15:17:25Z",
     "intelligence": [
       {
         "modelId": "claude-opus-5-5",
@@ -12,148 +12,148 @@
         "rank": 1
       },
       {
+        "modelId": "claude-sonnet-5-5",
+        "score": 56,
+        "rank": 2
+      },
+      {
         "modelId": "claude-fable-5-1",
         "score": 53.4,
-        "rank": 2
+        "rank": 3
       },
       {
         "modelId": "gpt-6-astra",
         "score": 52.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "modelId": "claude-opus-5",
         "score": 50.8,
-        "rank": 4
+        "rank": 5
       },
       {
         "modelId": "claude-fable-5",
         "score": 49.6,
-        "rank": 5
+        "rank": 6
       },
       {
         "modelId": "muse-spark-1-3",
         "score": 48.1,
-        "rank": 6
+        "rank": 7
       },
       {
         "modelId": "gpt-6-sol",
         "score": 47.5,
-        "rank": 7
+        "rank": 8
       },
       {
         "modelId": "gpt-5-6-sol",
         "score": 47,
-        "rank": 8
+        "rank": 9
       },
       {
         "modelId": "grok-4-7",
         "score": 46.4,
-        "rank": 9
+        "rank": 10
       },
       {
         "modelId": "mimo-v2-6-pro",
         "score": 46.3,
-        "rank": 10
+        "rank": 11
       },
       {
         "modelId": "qwen3-8-max",
         "score": 45.4,
-        "rank": 11
+        "rank": 12
       },
       {
         "modelId": "glm-5-3",
         "score": 44.8,
-        "rank": 12
+        "rank": 13
       },
       {
         "modelId": "grok-4-6",
         "score": 44.3,
-        "rank": 13
+        "rank": 14
       },
       {
         "modelId": "step-5",
         "score": 43.7,
-        "rank": 14
+        "rank": 15
       },
       {
         "modelId": "kimi-k3",
         "score": 43.6,
-        "rank": 15
+        "rank": 16
       },
       {
         "modelId": "gpt-5-6-terra",
         "score": 42.1,
-        "rank": 16
+        "rank": 17
       },
       {
         "modelId": "claude-opus-4-8",
         "score": 41.8,
-        "rank": 17
+        "rank": 18
       },
       {
         "modelId": "glm-5-3-flash",
         "score": 41.8,
-        "rank": 18
+        "rank": 19
       },
       {
         "modelId": "gemini-3-8-flash",
         "score": 40.9,
-        "rank": 19
+        "rank": 20
       },
       {
         "modelId": "claude-opus-4-7",
         "score": 40.7,
-        "rank": 20
+        "rank": 21
       },
       {
         "modelId": "qwen3-8-max-0803",
         "score": 40.2,
-        "rank": 21
+        "rank": 22
       },
       {
         "modelId": "qwen3-8-2-4t-a95b",
         "score": 39.9,
-        "rank": 22
+        "rank": 23
       },
       {
         "modelId": "qwen3-8-flash-next",
         "score": 39.8,
-        "rank": 23
+        "rank": 24
       },
       {
         "modelId": "gemini-3-7-flash-medium",
         "score": 39.6,
-        "rank": 24
+        "rank": 25
       },
       {
         "modelId": "muse-spark-1-2",
         "score": 39.6,
-        "rank": 25
+        "rank": 26
       },
       {
         "modelId": "deepseek-v4-1-flash",
         "score": 39.5,
-        "rank": 26
+        "rank": 27
       },
       {
         "modelId": "gpt-5-4",
         "score": 39,
-        "rank": 27
+        "rank": 28
       },
       {
         "modelId": "grok-4-5",
         "score": 38.8,
-        "rank": 28
+        "rank": 29
       },
       {
         "modelId": "gpt-5-5",
         "score": 38.4,
-        "rank": 29
-      },
-      {
-        "modelId": "claude-sonnet-5",
-        "score": 38.2,
         "rank": 30
       }
     ],
@@ -321,7 +321,7 @@
       "outputCost": 50.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "claude-fable-5-1",
@@ -333,7 +333,7 @@
       "outputCost": 50.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "claude-opus-4-7",
@@ -345,7 +345,7 @@
       "outputCost": 25.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-7",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "claude-opus-4-8",
@@ -357,7 +357,7 @@
       "outputCost": 25.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-8",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "claude-opus-5",
@@ -369,7 +369,7 @@
       "outputCost": 25.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "claude-opus-5-5",
@@ -381,7 +381,7 @@
       "outputCost": 20.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "claude-sonnet-5",
@@ -393,7 +393,19 @@
       "outputCost": 10.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "aaId": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+      "releasedAt": "2026-09-28",
+      "inputCost": 2.0,
+      "outputCost": 10.0,
+      "priceSource": "artificial-analysis",
+      "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "deepseek-v4-1-flash",
@@ -405,7 +417,7 @@
       "outputCost": 1.2,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "deepseek-v4-flash",
@@ -417,7 +429,7 @@
       "outputCost": 1.32,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "deepseek-v4-pro",
@@ -429,7 +441,7 @@
       "outputCost": 3.96,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-pro",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gemini-3-1-pro-preview",
@@ -441,7 +453,7 @@
       "outputCost": 12.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gemini-3-6-flash",
@@ -453,7 +465,7 @@
       "outputCost": 3.75,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-6-flash",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gemini-3-7-flash-medium",
@@ -465,7 +477,7 @@
       "outputCost": 3.75,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-7-flash-medium",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gemini-3-8-flash",
@@ -477,7 +489,7 @@
       "outputCost": 3.75,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "glm-5-3",
@@ -489,7 +501,7 @@
       "outputCost": 4.4,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "glm-5-3-flash",
@@ -501,7 +513,7 @@
       "outputCost": 0.5,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3-flash",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-5-4",
@@ -513,7 +525,7 @@
       "outputCost": 15.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-4",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-5-5",
@@ -525,7 +537,7 @@
       "outputCost": 30.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-5-6-luna",
@@ -537,7 +549,7 @@
       "outputCost": 1.2,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-luna",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-5-6-sol",
@@ -549,7 +561,7 @@
       "outputCost": 20.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-5-6-terra",
@@ -561,7 +573,7 @@
       "outputCost": 12.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-terra",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-6-astra",
@@ -573,7 +585,7 @@
       "outputCost": 50.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-astra",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "gpt-6-sol",
@@ -585,7 +597,7 @@
       "outputCost": 10.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-sol",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "grok-4-5",
@@ -597,7 +609,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "grok-4-6",
@@ -609,7 +621,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-6",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "grok-4-7",
@@ -621,7 +633,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-7",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "kimi-k3",
@@ -633,7 +645,7 @@
       "outputCost": 15.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "mimo-v2-6-pro",
@@ -645,7 +657,7 @@
       "outputCost": 0.87,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "muse-spark-1-1",
@@ -657,7 +669,7 @@
       "outputCost": 4.25,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-1",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "muse-spark-1-2",
@@ -669,7 +681,7 @@
       "outputCost": 4.25,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-2",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "muse-spark-1-3",
@@ -681,7 +693,7 @@
       "outputCost": 4.25,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "qwen3-8-2-4t-a95b",
@@ -693,7 +705,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "qwen3-8-flash-next",
@@ -705,7 +717,7 @@
       "outputCost": 0.47,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "qwen3-8-max",
@@ -717,7 +729,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "qwen3-8-max-0803",
@@ -729,7 +741,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     },
     {
       "id": "step-5",
@@ -741,13 +753,13 @@
       "outputCost": 2.7,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/step-5",
-      "priceUpdatedAt": "2026-09-27T09:20:54Z"
+      "priceUpdatedAt": "2026-09-29T15:17:25Z"
     }
   ],
   "plans": [
     {
       "id": "aliyun-bailian-plan",
-      "rank": 5,
+      "rank": 8,
       "rankBasis": "模型最全、工具最广，政策与门槛有波动",
       "vendor": "阿里云百炼",
       "product": "Token Plan 个人版",
@@ -864,7 +876,7 @@
     },
     {
       "id": "baidu-qianfan-token-plan",
-      "rank": 6,
+      "rank": 9,
       "rankBasis": "百度云背书，¥9.9 起步四档，Token / 积分双轨计量",
       "vendor": "百度千帆",
       "product": "Token Plan 个人版",
@@ -1292,7 +1304,7 @@
       "status": "available",
       "source": "official",
       "sourceUrl": "https://claude.com/pricing",
-      "updatedAt": "2026-09-27",
+      "updatedAt": "2026-09-29",
       "checkMethod": "auto"
     },
     {
@@ -1434,7 +1446,7 @@
     },
     {
       "id": "copilot-coding-plan",
-      "rank": 5,
+      "rank": 6,
       "rankBasis": "付费量第一、学生免费，口碑在下滑",
       "vendor": "GitHub",
       "product": "GitHub Copilot",
@@ -1527,12 +1539,139 @@
       "status": "available",
       "source": "official",
       "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans",
-      "updatedAt": "2026-09-21",
+      "updatedAt": "2026-09-29",
       "checkMethod": "auto"
     },
     {
+      "id": "cursor-plans",
+      "rank": 5,
+      "rankBasis": "海外 AI IDE 第一梯队，Agent 生态与模型接入最全",
+      "vendor": "Cursor",
+      "product": "Cursor",
+      "group": "overseas",
+      "tagline": "Composer 与 Agent 为核心的 AI IDE，个人三档 + 团队两档",
+      "highlights": [
+        "Hobby 免费，Pro / Pro+ / Ultra 三档个人",
+        "Teams Standard / Premium 按席位",
+        "含 Agent、Cloud agents、Bugbot",
+        "前沿模型 + on-demand 按量"
+      ],
+      "quotaBasis": "各档含固定模型用量，超出转 on-demand 按量计费",
+      "supportedTools": [
+        "Cursor 编辑器",
+        "Cursor CLI",
+        "Cursor SDK",
+        "Cursor iOS App"
+      ],
+      "tiers": [
+        {
+          "name": "Hobby",
+          "price": 0.0,
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "有限 Agent 请求",
+            "Composer 访问",
+            "Tab 补全（Auto 模型）"
+          ],
+          "conditions": "价格取自 Cursor 官方定价页与文档（cursor.com，2026-09-29 官方页核验）；美元计价、不含税，超出内置用量按 on-demand 计费。"
+        },
+        {
+          "name": "Pro",
+          "price": 20.0,
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "扩展 Agent 用量",
+            "前沿模型访问",
+            "MCP / Skills / Hooks",
+            "Cloud agents",
+            "Grok Bot"
+          ],
+          "conditions": "价格取自 Cursor 官方定价页与文档（cursor.com，2026-09-29 官方页核验）；美元计价、不含税，超出内置用量按 on-demand 计费。"
+        },
+        {
+          "name": "Pro+",
+          "price": 60.0,
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "更高 Agent 用量（3× Pro）",
+            "含 Pro 全部功能"
+          ],
+          "conditions": "价格取自 Cursor 官方定价页与文档（cursor.com，2026-09-29 官方页核验）；美元计价、不含税，超出内置用量按 on-demand 计费。"
+        },
+        {
+          "name": "Ultra",
+          "price": 200.0,
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": null,
+          "features": [
+            "最高 Agent 用量（10× Pro）",
+            "含 Pro+ 全部功能"
+          ],
+          "conditions": "价格取自 Cursor 官方定价页与文档（cursor.com，2026-09-29 官方页核验）；美元计价、不含税，超出内置用量按 on-demand 计费。"
+        },
+        {
+          "name": "Teams Standard",
+          "price": 40.0,
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": "按席位计费",
+          "features": [
+            "集中账单与团队管理",
+            "团队级隐私模式",
+            "SAML/OIDC SSO"
+          ],
+          "conditions": "价格取自 Cursor 官方定价页与文档（cursor.com，2026-09-29 官方页核验）；美元计价、不含税，超出内置用量按 on-demand 计费。"
+        },
+        {
+          "name": "Teams Premium",
+          "price": 120.0,
+          "currency": "USD",
+          "period": "month",
+          "offerType": "standard",
+          "note": "按席位计费",
+          "features": [
+            "含 Standard 全部功能",
+            "更高用量与合规管理"
+          ],
+          "conditions": "价格取自 Cursor 官方定价页与文档（cursor.com，2026-09-29 官方页核验）；美元计价、不含税，超出内置用量按 on-demand 计费。"
+        }
+      ],
+      "models": [
+        "Composer 2.5",
+        "Grok 4.7",
+        "Grok 4.6",
+        "Grok 4.5",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Claude Fable 5.1",
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Luna",
+        "Gemini 3.1 Pro",
+        "Gemini 3.8 Flash",
+        "Muse Spark 1.3"
+      ],
+      "status": "available",
+      "source": "official",
+      "sourceUrl": "https://cursor.com/pricing",
+      "updatedAt": "2026-09-29",
+      "checkMethod": "manual"
+    },
+    {
       "id": "google-ai-plans",
-      "rank": 7,
+      "rank": 8,
       "rankBasis": "$4.99 低门槛 + Gemini 生态，编程热度低",
       "vendor": "Google",
       "product": "Google AI 会员",
@@ -1732,7 +1871,7 @@
     },
     {
       "id": "meta-muse-code-plan",
-      "rank": 8,
+      "rank": 9,
       "rankBasis": "Meta 新品，额度小、评测少",
       "vendor": "Meta",
       "product": "Muse Code",
@@ -1804,7 +1943,7 @@
     },
     {
       "id": "minimax-token-plan",
-      "rank": 9,
+      "rank": 10,
       "rankBasis": "token 全模态，海外声量低且价高于中国站",
       "vendor": "MiniMax",
       "product": "MiniMax Token Plan（国际站）",
@@ -1878,7 +2017,7 @@
     },
     {
       "id": "minimax-token-plan-cn",
-      "rank": 4,
+      "rank": 7,
       "rankBasis": "token 计费不焦虑、全模态共享额度",
       "vendor": "MiniMax",
       "product": "MiniMax Token Plan（中国站）",
@@ -2010,8 +2149,100 @@
       "rankBasis": "$10 换 $60 等值额度、18 款开源模型可自带 key"
     },
     {
+      "id": "qoder-coding-plan",
+      "rank": 3,
+      "rankBasis": "阿里旗舰 AI IDE，Credits 跨全家桶共享，¥59 起",
+      "vendor": "阿里云 Qoder",
+      "product": "Qoder CN（原灵码）",
+      "group": "domestic",
+      "tagline": "原通义灵码，一套订阅跨 IDE / CLI / 插件多端共享 Credits",
+      "highlights": [
+        "Credits 在 Qoder CN 全系产品间共享",
+        "Quest / Repo Wiki / 专家团模式",
+        "个人四档 ¥0–¥559/月",
+        "团队版 ¥99/席位·月起"
+      ],
+      "quotaBasis": "2,000 / 6,000 / 20,000 Credits 每月（Pro / Pro+ / Ultra）",
+      "supportedTools": [
+        "Qoder CN IDE",
+        "JetBrains 插件",
+        "Qoder CN CLI",
+        "QoderWork CN",
+        "Qoder CN Mobile"
+      ],
+      "tiers": [
+        {
+          "name": "体验版",
+          "price": 0.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "含 2 周 Pro 试用与 300 Credits",
+          "features": [
+            "有限体验额度",
+            "2 周 Pro 试用与 300 Credits",
+            "有限次数补全"
+          ],
+          "conditions": "价格与额度取自 Qoder CN 官方计费说明（docs.qoder.cn，2026-09-29 官方页核验）；国内站以人民币计价，Credits 跨产品共享、到期清零。"
+        },
+        {
+          "name": "Pro",
+          "price": 59.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "年付 ¥637.20（原价 ¥708）",
+          "features": [
+            "2,000 Credits/月",
+            "Quest / Repo Wiki / 专家团",
+            "更多对话与智能体请求",
+            "写作·幻灯片·设计工作台"
+          ],
+          "conditions": "价格与额度取自 Qoder CN 官方计费说明（docs.qoder.cn，2026-09-29 官方页核验）；国内站以人民币计价，Credits 跨产品共享、到期清零。"
+        },
+        {
+          "name": "Pro+",
+          "price": 169.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "年付 ¥1,825.20（原价 ¥2,028）",
+          "features": [
+            "6,000 Credits/月",
+            "含专业版全部功能"
+          ],
+          "conditions": "价格与额度取自 Qoder CN 官方计费说明（docs.qoder.cn，2026-09-29 官方页核验）；国内站以人民币计价，Credits 跨产品共享、到期清零。"
+        },
+        {
+          "name": "Ultra",
+          "price": 559.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "年付 ¥6,037.20（原价 ¥6,708）",
+          "features": [
+            "20,000 Credits/月",
+            "含高级版全部功能",
+            "新功能优先体验"
+          ],
+          "conditions": "价格与额度取自 Qoder CN 官方计费说明（docs.qoder.cn，2026-09-29 官方页核验）；国内站以人民币计价，Credits 跨产品共享、到期清零。"
+        }
+      ],
+      "models": [
+        "Qwen3.8-Max",
+        "Qwen3.8-Flash",
+        "GLM-5.1",
+        "DeepSeek-V4"
+      ],
+      "status": "available",
+      "source": "official",
+      "sourceUrl": "https://docs.qoder.cn/product-overview/billing-description",
+      "updatedAt": "2026-09-29",
+      "checkMethod": "manual"
+    },
+    {
       "id": "supergrok-plan",
-      "rank": 6,
+      "rank": 7,
       "rankBasis": "捆绑 X Premium+ 分发广，编程能力中游",
       "vendor": "xAI",
       "product": "SuperGrok",
@@ -2081,12 +2312,231 @@
       "status": "available",
       "source": "official",
       "sourceUrl": "https://x.ai/pricing",
-      "updatedAt": "2026-09-27",
+      "updatedAt": "2026-09-29",
       "checkMethod": "auto"
     },
     {
+      "id": "tencent-codebuddy-plan",
+      "rank": 6,
+      "rankBasis": "腾讯大厂出品，与 WorkBuddy 积分共享，办公向偏重",
+      "vendor": "腾讯云 CodeBuddy",
+      "product": "CodeBuddy 个人版",
+      "group": "domestic",
+      "tagline": "AI 代码编辑器订阅，与 WorkBuddy 同账号积分共享",
+      "highlights": [
+        "标准 / 高级 / 旗舰三档",
+        "积分与 WorkBuddy 同账号共享",
+        "代码补全不限次",
+        "全模型可选"
+      ],
+      "quotaBasis": "基础积分 2,000 / 4,000 / 20,000 每月；含限时加赠后实得 4,000 / 9,000 / 50,000",
+      "supportedTools": [
+        "CodeBuddy IDE",
+        "CodeBuddy CLI",
+        "CodeBuddy 插件",
+        "WorkBuddy"
+      ],
+      "tiers": [
+        {
+          "name": "体验版",
+          "price": 0.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "补全 5,000 次/月（限免无限次）",
+          "features": [
+            "500 积分/月",
+            "3 个自动任务",
+            "Auto 模型调度"
+          ],
+          "conditions": "价格与额度取自腾讯云 CodeBuddy 官方定价页（codebuddy.cn，2026-09-29 官方页核验）；国内站以人民币计价，与 WorkBuddy 同账号积分共享。"
+        },
+        {
+          "name": "标准版",
+          "price": 99.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥70/月；年付 ¥840",
+          "features": [
+            "2,000 基础 + 2,000 加赠（限时）/月",
+            "无限次代码补全",
+            "15 个自动任务",
+            "全模型可选"
+          ],
+          "conditions": "价格与额度取自腾讯云 CodeBuddy 官方定价页（codebuddy.cn，2026-09-29 官方页核验）；国内站以人民币计价，与 WorkBuddy 同账号积分共享。"
+        },
+        {
+          "name": "高级版",
+          "price": 199.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥140/月；年付 ¥1,680",
+          "features": [
+            "4,000 基础 + 5,000 加赠（限时）/月",
+            "30 个自动任务",
+            "全模型可选"
+          ],
+          "conditions": "价格与额度取自腾讯云 CodeBuddy 官方定价页（codebuddy.cn，2026-09-29 官方页核验）；国内站以人民币计价，与 WorkBuddy 同账号积分共享。"
+        },
+        {
+          "name": "旗舰版",
+          "price": 999.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥700/月；年付 ¥8,400",
+          "features": [
+            "20,000 基础 + 30,000 加赠（限时）/月",
+            "99 个自动任务",
+            "全模型可选",
+            "新功能优先体验"
+          ],
+          "conditions": "价格与额度取自腾讯云 CodeBuddy 官方定价页（codebuddy.cn，2026-09-29 官方页核验）；国内站以人民币计价，与 WorkBuddy 同账号积分共享。"
+        }
+      ],
+      "models": [
+        "混元 Hunyuan",
+        "DeepSeek",
+        "智谱 GLM",
+        "Kimi-K2-Thinking",
+        "Kimi-K2.5"
+      ],
+      "status": "available",
+      "source": "official",
+      "sourceUrl": "https://www.codebuddy.cn/docs/ide/Account/pricing",
+      "updatedAt": "2026-09-29",
+      "checkMethod": "manual"
+    },
+    {
+      "id": "trae-coding-plan",
+      "rank": 5,
+      "rankBasis": "字节 AI IDE，五档 ¥49 起，Seed 模型 2.5 折",
+      "vendor": "字节跳动 Trae",
+      "product": "TraeCode 会员",
+      "group": "domestic",
+      "tagline": "以积分为核心计费，免费 + Lite–Ultra 四档会员",
+      "highlights": [
+        "Free / Lite / Pro / Pro+ / Ultra 五档",
+        "积分 2,000–40,000/月",
+        "Seed-2.1-Turbo 与 Seed-Code 计费 2.5 折",
+        "云端任务并发 2–20 个"
+      ],
+      "quotaBasis": "2,000 / 4,000 / 12,000 / 40,000 积分每月（Lite / Pro / Pro+ / Ultra）",
+      "supportedTools": [
+        "TraeCode",
+        "TraeCode CLI",
+        "TraeCode Plugin",
+        "TraeWork"
+      ],
+      "tiers": [
+        {
+          "name": "免费",
+          "price": 0.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "每月登录赠 500 积分；新用户一次性 4,000",
+          "features": [
+            "500 积分/月",
+            "2 个云端任务并发",
+            "Seed 模型 2.5 折"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        },
+        {
+          "name": "会员 Lite",
+          "price": 49.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥45/月",
+          "features": [
+            "2,000 积分/月",
+            "2 个云端任务并发"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        },
+        {
+          "name": "会员 Pro",
+          "price": 99.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥89/月",
+          "features": [
+            "4,000 积分/月",
+            "10 个云端任务并发"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        },
+        {
+          "name": "会员 Pro+",
+          "price": 239.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥219/月",
+          "features": [
+            "12,000 积分/月",
+            "10 个云端任务并发"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        },
+        {
+          "name": "会员 Ultra",
+          "price": 699.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "standard",
+          "note": "连续包月 ¥629/月",
+          "features": [
+            "40,000 积分/月",
+            "20 个云端任务并发",
+            "新模型优先体验"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        },
+        {
+          "name": "会员 Lite 首月",
+          "price": 29.9,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "new-user",
+          "note": "首月优惠，第 2 月起 ¥45，仅限付费新用户",
+          "features": [
+            "同会员 Lite 额度"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        },
+        {
+          "name": "会员 Pro 首月",
+          "price": 69.0,
+          "currency": "CNY",
+          "period": "month",
+          "offerType": "new-user",
+          "note": "首月优惠，第 2 月起 ¥89，仅限付费新用户",
+          "features": [
+            "同会员 Pro 额度"
+          ],
+          "conditions": "价格与额度取自 TRAE 官方文档（docs.trae.cn，2026-09-29 官方页核验）；国内站以人民币计价，连续包月与首月优惠为活动价。"
+        }
+      ],
+      "models": [
+        "GLM-5.2",
+        "Seed-2.1-Turbo",
+        "Seed-Code"
+      ],
+      "status": "available",
+      "source": "official",
+      "sourceUrl": "https://docs.trae.cn/ide_plans-and-billing",
+      "updatedAt": "2026-09-29",
+      "checkMethod": "manual"
+    },
+    {
       "id": "volcengine-agent-plan",
-      "rank": 7,
+      "rank": 10,
       "rankBasis": "Agent 形态含 Kimi K3 / GLM-5.3，¥40 起",
       "vendor": "火山引擎方舟",
       "product": "方舟 Agent Plan",
@@ -2186,7 +2636,7 @@
     },
     {
       "id": "volcengine-coding-plan",
-      "rank": 3,
+      "rank": 4,
       "rankBasis": "多模型 + Auto + Anthropic 原生协议，首购 ¥9.9",
       "vendor": "火山引擎方舟",
       "product": "方舟 Coding Plan",
@@ -2280,7 +2730,7 @@
     },
     {
       "id": "xfyun-astron-plan",
-      "rank": 8,
+      "rank": 11,
       "rankBasis": "9 万次/月量大，模型版本滞后半代",
       "vendor": "讯飞星辰",
       "product": "Astron Coding Plan",
@@ -2347,12 +2797,12 @@
       "status": "available",
       "source": "official",
       "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
-      "updatedAt": "2026-09-27",
+      "updatedAt": "2026-09-29",
       "checkMethod": "auto"
     },
     {
       "id": "xiaomi-mimo-plan",
-      "rank": 9,
+      "rank": 12,
       "rankBasis": "Credits 量巨大，实测口碑一般",
       "vendor": "小米",
       "product": "MiMo Token Plan",
@@ -2442,6 +2892,6 @@
       "checkMethod": "manual"
     }
   ],
-  "version": "2026-09-27T15:22:35Z",
-  "generatedAt": "2026-09-27T15:22:35Z"
+  "version": "2026-09-29T15:17:25Z",
+  "generatedAt": "2026-09-29T15:17:25Z"
 }

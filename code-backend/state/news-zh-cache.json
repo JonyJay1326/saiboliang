@@ -1,34 +1,4 @@
 {
-  "d1e7107e863f4f8a8586693db1559bf0dc2a5fe6e86ad119a1f4a2725e9a691e": {
-    "title": "开放科学如何帮助研究人员为下一次大流行做准备",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
-  },
-  "508df2c327e989674eebe7c7ea66eb436a0dfd9258b992864af66ea98e1b3fc8": {
-    "title": "遏制混乱：《CONTROL Resonant》登陆 GeForce NOW",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
-  },
-  "657604e404f67dc2bcab5de98aa1df7a5e8d99a112e36503ed9883c3a239d40c": {
-    "title": "Connect 2026 最大新闻",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "b0878320c6bd0cfba3b38a1d5ad22ee1f88ff6ce14a0a4aa125407f0e3159ecd": {
-    "title": "要求高影响操作提供在场证明",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
-  },
-  "f79e7d7a633843bfcb6cfc4479852b9c85bc14af6c5476abdd45bcd0d05ab0cf": {
-    "title": "CodeQL 2.27.1 新增 C 和 C++ 查询及 Kotlin 2.4.20 支持",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
   "9de028fbe46cac8b155a7c08a35dfcf47f00596edbfe763bda6c0737c9cb02fb": {
     "title": "Proaction 借助 Codex 提升销售额 60% 并节省 75+ 小时",
     "summary": "借助 Codex、GPT-Live-1 和 GPT-6 Astra，Proaction 更快地构建、运营和销售现代车队管理。",
@@ -59,34 +29,70 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T15:22:35Z"
   },
-  "8c6ccd384bd032af71f4b58144cbe18da3322a0a88a2ecfec20737e681005962": {
-    "title": "以扩展的模型选择、语音代理和持续优化更快交付代理",
-    "summary": null,
+  "52b14ec01b86fb13f0c928f5890e5106437712c293a735afe82a6ebc22bb4eba": {
+    "title": "Team Bots：向团队学习的 AI 同事",
+    "summary": "为 Grok Bot 提供所需的文件、应用和专业知识，然后分享它，让整个团队基于相同上下文协作。",
     "source": "deepseek-flash",
-    "at": "2026-09-25T06:59:08Z"
+    "at": "2026-09-29T13:40:37Z"
   },
-  "2653f5794fb9985f870ebc6ba121dd4ba2c9f5f7797bd132fd31dcaed51d77b7": {
-    "title": "Agentic autofix 现在使用 Copilot Memory",
-    "summary": null,
+  "3044f63155f8b6ed683de58550e1f8123e3e315254ea7eb5763eef6da373c893": {
+    "title": "未来属于每个人：面向小企业的 Muse",
+    "summary": "我们推出 Muse for Small Business，一款在后台工作的个人 AI 代理，帮助小企业实现目标。",
     "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
+    "at": "2026-09-29T13:40:37Z"
   },
-  "48eaa8bbafaa8bc422c903d52001ef78b32ca86bd6e5e361262f5285ae8fcaf0": {
-    "title": "GitHub Copilot 每周发布 — 9 月 21 日",
+  "deeacf9a73c457054e9489987825836f0a14d0deb14ba2387752e62472b717f3": {
+    "title": "推出 Meta Enterprise Platform",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
+    "at": "2026-09-29T13:40:37Z"
   },
-  "c1d4e08f8273da72d80ce3ab8a4f5eca8749ea339bb571e574a8ea09d3ad6b35": {
-    "title": "GitHub Copilot for Slack 和 Microsoft Teams 更新",
-    "summary": null,
+  "50d71cd52400f551c336b9ad5bff210544c56459b813f45adc29b8abfb63cfa4": {
+    "title": "我们将如何为澳大利亚做得更好",
+    "summary": "OpenAI 就涉及澳大利亚政府网站的事件道歉，并概述更强保障和支持以加强澳大利亚网络防御。",
     "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
+    "at": "2026-09-29T13:40:37Z"
   },
-  "f524e9886f009cfdc36f91d8c0cccaaf8a37289bdd16695440bc1c85582445a7": {
-    "title": "推出全新 Copilot，包含 Home、Code 和 Autopilot",
+  "2fc54b690d7b20a2e14328388fc3694e3eecf9d62246b7618620635188f7c454": {
+    "title": "迈向前沿 AI 训练的安全案例",
+    "summary": "我们关于前沿 AI 训练安全案例的早期指南涵盖技术保障、操作实践和调查失准事件。",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "0adf5bb2a473897d12526e4b9a8c88391e22c0769cbbe7208af0a1f61691cd5f": {
+    "title": "Lenfest Institute 扩大标志性项目，获 OpenAI 扩展支持",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "833e9419a34f8836dc9d75020b228e7e76dd99c1c482fbba6af088c9a08dec28": {
+    "title": "你是 Codex Original 吗？",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "db713ef86bd59ea8f7bad6b7e8b404a24482c1e0315e748a8b43d61d66df115e": {
+    "title": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
+    "summary": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "1d09516522abfde5d3cf8f8aebc3dd40645917feb89f23baef210c4da41a9cf1": {
+    "title": "自托管运行器版本强制执行日期已更改",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "4607b4c4468386f7d703fdc6e8f2d94f991fa6a6a1a594ce5a83f94754cdf8dc": {
+    "title": "Microsoft 新数据创新释放只有你的企业才知道的价值",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-29T13:40:37Z"
+  },
+  "597c808f7f546491f0ec676490eda220dea924ba0f0620441999bc6def7590d7": {
+    "title": "你好，德国！",
+    "summary": "Mistral 在慕尼黑设立研究中心，专注 Physics AI 与 Industrial AI，并与德国工业界合作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T13:52:39Z"
   }
 }
