@@ -64,5 +64,47 @@
     "summary": "Mistral 在慕尼黑设立研究中心，专注 Physics AI 与 Industrial AI，并与德国工业界合作。",
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
+  },
+  "d6b9f5e651b1891e950e0096b862ca9527c5eacf458b2804fa20b6d4b208ad61": {
+    "title": "推出 GPT-6.1 Sol",
+    "summary": "认识 GPT-6.1 Sol：接近 Astra 的智能，适用于编程、计算机使用和专业工作，API 输入输出 token 价格仅为 Astra 标准价的五分之一。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
+  },
+  "6071f63e21f6425413eb63722b1604896ffdb702f04f5beb8c9ad701e7ae765e": {
+    "title": "DevDay 2026 回顾",
+    "summary": "探索 OpenAI DevDay 2026 的 20 多项发布，涵盖 GPT-6 Astra、ChatGPT、Codex、API、安全及面向开发者的新工具。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
+  },
+  "dec620cb7225d2434a9b02e6e0197b1952a6412dcad780af2099d9910f2c9ee8": {
+    "title": "推出 dots",
+    "summary": "OpenAI 的 dots 是主动式助手，可在复杂项目和日常任务中持续工作。了解 dots 如何助你保持掌控，同时推进工作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
+  },
+  "20d614df3f96df84d10bb3f1354b7d28b9bc872cfee2fdcb6d9f95c3784db801": {
+    "title": "Dependabot 的仓库自定义运行器设置",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
+  },
+  "d259a5a11ae20b4989eb2723a0b23a3de77e515ea3ab2fd10c87edec4ca92663": {
+    "title": "通过外部自定义属性引入业务上下文",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
+  },
+  "27fa41ed5cc26a14950e98a4b32cd54a9da1d63e9a36b4be5dd67bc65cbe085c": {
+    "title": "GitHub Copilot 中的 GPT-6.1 Sol",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
+  },
+  "bbefdaefb76473f7b44babc5a65f6dd5645469af4168239c5331fe7af32f110f": {
+    "title": "Ollama 现已支持 Jev 风格决策模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
   }
 }

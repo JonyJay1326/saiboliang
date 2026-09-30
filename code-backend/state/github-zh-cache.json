@@ -174,11 +174,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "umlx5h/LLPlayer": {
-    "text": "面向语言学习的媒体播放器，支持双语字幕、AI 生成字幕、实时翻译等！",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
   "OpenHands/OpenHands": {
     "text": "🙌 OpenHands：AI 驱动的开发",
     "source": "deepseek-flash",
@@ -203,5 +198,10 @@
     "text": "开源 AI 交易智能体，可在 1000 多个市场自主运行——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，在你睡觉时管理风险。用于机器对机器支付的智能体商务协议。自托管。基于 Claude 构建。",
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
+  },
+  "Asymptote-Labs/agent-beacon": {
+    "text": "面向 AI agents 的跨 harness、可自我改进的记忆层。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T09:47:34Z"
   }
 }
