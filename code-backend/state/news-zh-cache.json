@@ -106,5 +106,17 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
+  },
+  "36138c270920188f9af74a1fbc8a95649774fc2c948077d26f8ecf3ff152168d": {
+    "title": "FabCon 与 SQLCon 2026 巴塞罗那：为 Microsoft Copilot 和代理构建数据基础",
+    "summary": "在 FabCon 与 SQLCon 巴塞罗那 2026 上宣布的 Microsoft Fabric 和 SQL 创新帮助组织为 AI 构建可信数据基础。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "cb668c5b27e4138bd592d8b2c395c8dea01887f84259c342c4a3148690e0b924": {
+    "title": "增强 Microsoft Azure 虚拟机生命周期",
+    "summary": "我们的虚拟机生命周期策略指导我们如何管理这些转换，为 Azure 客户提供透明度、可预测性和指导。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
   }
 }

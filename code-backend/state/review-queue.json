@@ -61,18 +61,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "experientiallabs/experiential",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Experiential is the open source, zero markup gateway for BYOK, self-hosted and 1000+ marketplace models. It learns from your traffic to cut costs, recommend better models, and train a specialized model you own.",
-      "sourceUrl": "https://github.com/experientiallabs/experiential"
-    },
-    "id": "4a13303498df8979745b9570963eeb907e91f2f0adbc38f707c4e8446f552417",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "rustfs/rustfs",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -174,18 +162,6 @@
       "sourceUrl": "https://github.com/mvt-project/mvt"
     },
     "id": "bb8575980dec4af44620ee4d4adec207840aca32e6ebbc8a27d26343726a4881",
-    "status": "pending",
-    "createdAt": "2026-09-23T15:28:02Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "cloudflare/quiche",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
-      "sourceUrl": "https://github.com/cloudflare/quiche"
-    },
-    "id": "ebd9b0f4bf4a8c0a20951116dde9f288c231f8ea526612913191d4a4383d07d8",
     "status": "pending",
     "createdAt": "2026-09-23T15:28:02Z"
   },
@@ -543,18 +519,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "guohuiyuan/go-music-dl",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
-      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
-    },
-    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "openbao/openbao",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -622,18 +586,6 @@
       "sourceUrl": "https://github.com/run-llama/liteparse"
     },
     "id": "261441ce60f1bb11df6afff5d8758570b21ba555b1ac49ace99db48148789a25",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "jez500/pricebuddy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A self hostable app that tracks prices and sends you notifications when prices match your preferences",
-      "sourceUrl": "https://github.com/jez500/pricebuddy"
-    },
-    "id": "02b5b379cc2a0c6acc8ffc45e7b3319d111f03449b1bb8d71df649b05b4043e6",
     "status": "pending",
     "createdAt": "2026-09-27T15:36:14Z"
   },
@@ -734,18 +686,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "PrismML-Eng/Bonsai-demo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Bonsai Demo",
-      "sourceUrl": "https://github.com/PrismML-Eng/Bonsai-demo"
-    },
-    "id": "140a631c11e1215b2baffec1e48eac044cc3f1bef7978346f80d7fa567e5855f",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "elastic/elasticsearch",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -753,18 +693,6 @@
       "sourceUrl": "https://github.com/elastic/elasticsearch"
     },
     "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "browserbase/stagehand",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The SDK to extract data and interact with any site on the web. Get started with Claude Code, Codex, Eve, Mastra, and more.",
-      "sourceUrl": "https://github.com/browserbase/stagehand"
-    },
-    "id": "6025ffd08cc543f47d2aa4cc151263c77e5340e6eb5780341b23d0fb76f298af",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
   },
@@ -842,18 +770,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "projectdiscovery/nuclei",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet. It helps you find vulnerabilities in your applications, APIs, networks, DNS, and cloud configurations.",
-      "sourceUrl": "https://github.com/projectdiscovery/nuclei"
-    },
-    "id": "93832332feb7ac7ff95a4df6b54238bc28360750ef195d2e9e20b923ca4af10c",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Atmosphere-NX/Atmosphere",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -902,18 +818,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ocornut/imgui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
-      "sourceUrl": "https://github.com/ocornut/imgui"
-    },
-    "id": "bf67c9b6dd402f4dd5e36be900acb4e13f6fd3b99300c8f679b76f1519cb91a6",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ClickHouse/ClickHouse",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -921,18 +825,6 @@
       "sourceUrl": "https://github.com/ClickHouse/ClickHouse"
     },
     "id": "f96c7aec21888dd7261732e4c1e9dc81ce1854f946e3ebfc17b79d1c67876921",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "keepassxreboot/keepassxc",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "KeePassXC is a cross-platform community-driven port of the Windows application “KeePass Password Safe”.",
-      "sourceUrl": "https://github.com/keepassxreboot/keepassxc"
-    },
-    "id": "8b7a1c61d8eaf851e0f2c6464ba28a9c83e710919654411de0fa775a61157509",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
   },
@@ -1115,5 +1007,137 @@
     "id": "f954508e529d0db480e0654c115dd8ff9e0437304ba80826f53ad908829c28c9",
     "status": "pending",
     "createdAt": "2026-09-30T09:47:34Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vega-org/vega-app",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A media streaming app for android.",
+      "sourceUrl": "https://github.com/vega-org/vega-app"
+    },
+    "id": "e2b3aab03f789933f55f475b8c82ed60a508b922b774411e50c19977630e0adb",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "derv82/wifit3",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Wifite but USB-only & cross-platform.",
+      "sourceUrl": "https://github.com/derv82/wifit3"
+    },
+    "id": "0730a4ba6a82db3a9c8bd7649c55693d53c941ed744bfbfc3ada383d2967a9b9",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rakyll/hey",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "HTTP load generator, ApacheBench (ab) replacement",
+      "sourceUrl": "https://github.com/rakyll/hey"
+    },
+    "id": "edd896b9e7b4a865ae70de411e0568d0ce09567265f53a209578f25d2cfb7b9f",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "docker/compose",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Define and run multi-container applications with Docker",
+      "sourceUrl": "https://github.com/docker/compose"
+    },
+    "id": "76a0dc1e1d796534131c55d84cfb340dd95cf71bdbf741540b72e0f99e81da7f",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hashicorp/terraform",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+      "sourceUrl": "https://github.com/hashicorp/terraform"
+    },
+    "id": "c4c261396e857dc9deb2a2b42882f275e1f935f98e991bca556bd3d71bc6135b",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "AI4Finance-Foundation/FinRL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "FinRL®: Financial Reinforcement Learning. 🔥",
+      "sourceUrl": "https://github.com/AI4Finance-Foundation/FinRL"
+    },
+    "id": "dfdb1192aff861251021969502f591b4c004152ce131d778424c66bcc407c680",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "openai/openai-cookbook",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Examples and guides for using the OpenAI API",
+      "sourceUrl": "https://github.com/openai/openai-cookbook"
+    },
+    "id": "5b88966468540323efd3417bebf60ea6fc6f9e964eededdef0ab5c090f5f9801",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Pumpkin-MC/Pumpkin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering everyone to host fast and efficient Minecraft servers",
+      "sourceUrl": "https://github.com/Pumpkin-MC/Pumpkin"
+    },
+    "id": "2ffc284b0c1432646e136019c61897861a4c2db0af8c92ea3587ecabee20202d",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "geekgeekrun/geekgeekrun",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "牛人快跑 - GeekGeekRun，求职找工作自动化工具，基于 Puppeteer、Electron。界面友好，简单易用！开源，免费！快速海投、自动开聊、已读不回提醒、职位信息抓取、不合适职位标记、僵尸职位清理；让你即刻变身成为一台冇得感情的求职机器🤖，找工作不内耗。宝宝不用动，妈妈全自动~祝你收获好Offer！",
+      "sourceUrl": "https://github.com/geekgeekrun/geekgeekrun"
+    },
+    "id": "6bfba03a6b314a70bffe6c7e51b074970cfa40e2bca50e652f6b4445b2575700",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/markitdown",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "sourceUrl": "https://github.com/microsoft/markitdown"
+    },
+    "id": "3f51d3da8280a860f9e5e93cc0e57c0e345186587bd319362c7c46692620e7e7",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "react/react",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The library for web and native user interfaces.",
+      "sourceUrl": "https://github.com/react/react"
+    },
+    "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
+    "status": "pending",
+    "createdAt": "2026-09-30T11:42:49Z"
   }
 ]

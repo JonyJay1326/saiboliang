@@ -24,16 +24,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "Crosstalk-Solutions/project-nomad": {
-    "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在你拥有的硬件上，无需联网。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "krillinai/OpenCreator": {
-    "text": "前身为 KrillinAI。面向创作者的开源 AI 工作区，由 Codex 驱动。在同一个地方用代理创建视频、图像、语音、虚拟形象、视频翻译与剪辑。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "dream-num/univer": {
     "text": "面向 AI 代理的 Office 工具集——电子表格、文档、幻灯片、画布、关系表与 PDF 集于一个运行时。",
     "source": "deepseek-flash",
@@ -51,11 +41,6 @@
   },
   "heygen-com/hyperframes": {
     "text": "编写 HTML。渲染视频。为代理而构建。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
-  "google-research/timesfm": {
-    "text": "TimesFM（时间序列基础模型）是 Google Research 开发的用于时间序列预测的预训练时间序列基础模型。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
@@ -78,11 +63,6 @@
     "text": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
-  },
-  "FareedKhan-dev/train-llm-from-scratch": {
-    "text": "从下载数据到生成文本，训练你的LLM的简明方法。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
   },
   "superdesigndev/treg": {
     "text": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
@@ -129,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T15:36:14Z"
   },
-  "maximhq/bifrost": {
-    "text": "最快的企业级 AI 网关（比 LiteLLM 快 50 倍），具备自适应负载均衡、集群模式、护栏、支持 1000+ 模型，5k RPS 下开销低于 100 微秒。",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:36:14Z"
-  },
   "google/ax": {
     "text": "Google 的开放智能体编排运行时",
     "source": "deepseek-flash",
@@ -141,11 +116,6 @@
   },
   "pacifio/atlas": {
     "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
-  },
-  "BuilderIO/agent-native": {
-    "text": "用于构建智能体应用的框架",
     "source": "deepseek-flash",
     "at": "2026-09-28T18:37:28Z"
   },
@@ -203,5 +173,50 @@
     "text": "面向 AI agents 的跨 harness、可自我改进的记忆层。",
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
+  },
+  "NVIDIA/Model-Optimizer": {
+    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "alirezarezvani/claude-skills": {
+    "text": "380 个 Claude Code 技能、agent 技能与插件（30+ Agents、70+ 自定义命令、380+ 技能、可定制参考与脚本），适用于 Claude Code、Codex、Gemini CLI、Cursor 等 11 种编码 agent，覆盖工程、营销、产品、合规、高管咨询、研究、业务运营、商业与金融及日常生产力技能。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "moeru-ai/airi": {
+    "text": "💖🧸 自托管、你拥有的 Grok Companion，一个 waifu 与 cyber livings 的灵魂容器，将它们带入我们的世界，期望达到 Neuro-sama 的高度。支持实时语音聊天、Minecraft、Factorio 游玩。支持 Web / macOS / Windows。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "aayushch/laya": {
+    "text": "Laya 是一个开源、本地优先的 AI 通知指挥中心，通过 Ollama 和 LM Studio 使用本地 LLM 聚合 Slack、Gmail、GitHub、Jira、Notion、Outlook、Calendar 等通知。支持通过 BYOK 使用云端模型。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "JayWebtech/autoshorts": {
+    "text": "AutoShorts 是一个本地优先的桌面应用，可将长视频或音频录制转换为高影响力的竖屏短视频候选片段（9:16 竖屏），并借助 AI 对病毒式传播时刻进行排序。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "chiphuyen/aie-book": {
+    "text": "[WIP] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "netdata/netdata": {
+    "text": "通往 AI 驱动的全栈可观测性的最快路径，即使对精简团队也是如此。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "umlx5h/LLPlayer": {
+    "text": "用于语言学习的媒体播放器，支持双语字幕、AI 生成字幕、实时翻译等！",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
+  },
+  "docling-project/docling": {
+    "text": "让你的文档为生成式 AI 做好准备。",
+    "source": "deepseek-flash",
+    "at": "2026-09-30T11:42:49Z"
   }
 }
