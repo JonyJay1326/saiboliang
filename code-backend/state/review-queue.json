@@ -120,17 +120,6 @@
     "createdAt": "2026-09-20T13:56:24Z"
   },
   {
-    "kind": "plans",
-    "objectId": "bigmodel-coding-plan",
-    "reason": "official terms changed; retaining prior record",
-    "evidence": {
-      "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview"
-    },
-    "id": "a4f8d3a3f0210ff3b8517bccd93fa12e7cc498d1e00520147f5605507a79fef3",
-    "status": "pending",
-    "createdAt": "2026-09-21T01:02:06Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "anthropics/financial-services",
     "reason": "AI applicability uncertain",
