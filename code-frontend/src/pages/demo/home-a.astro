@@ -1,0 +1,453 @@
+---
+// 【临时 demo，非正式页】首页方案 A：今日开仓（跨模块 hub）。
+// 目标：首屏先交代「五门」而不是只堆粮票；票卡压到 3 张；补一个跨模块「本期开仓」流水。
+// 数据全部来自现有四个契约文件，计数均为前端只读派生（不入库、不改契约）。
+// 看完要删：直接删掉 src/pages/demo/ 整个目录即可，不影响任何正式页。
+import Base from '../../layouts/Base.astro';
+import TicketCard from '../../components/TicketCard.vue';
+import { github, models, news, tickets } from '../../lib/data.js';
+import {
+  addedThisWeek,
+  addedWithinDays,
+  freshness,
+  listedTickets,
+  planRankValue,
+  startingPriceLabel,
+  thous,
+  ticketDefaultOrder,
+} from '../../lib/format.js';
+
+const tk = tickets();
+const md = models();
+const gh = github();
+const nw = news();
+
+const listed = listedTickets([...tk.tickets]).sort(ticketDefaultOrder);
+const topTickets = listed.slice(0, 3);
+const weekAdd = addedThisWeek(listed).length;
+
+const intel = md.rankings.intelligence ?? [];
+const coding = md.rankings.coding ?? [];
+const modelById = new Map(md.models.map((m) => [m.id, m]));
+const modelName = (row) => modelById.get(row.modelId)?.name ?? row.modelId;
+
+const featured = [...nw.items]
+  .filter((item) => item.featured === true)
+  .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : a.id < b.id ? -1 : 1));
+const news7 = addedWithinDays(nw.items, 7, nw.dataUpdatedAt);
+
+const focusPlans = [...md.plans].sort((a, b) => planRankValue(a) - planRankValue(b)).slice(0, 2);
+
+const oldest = [tk.dataUpdatedAt, md.dataUpdatedAt, gh.dataUpdatedAt, nw.dataUpdatedAt].filter(Boolean).sort()[0];
+const fresh = freshness(oldest);
+
+const gates = [
+  {
+    href: '/tickets/',
+    name: '粮票',
+    img: '/font-images/sec-liangpiao.png',
+    w: 153,
+    verb: '领',
+    desc: '厂商开仓放粮，逐张验过才挂',
+    stat: `${listed.length} 张在架`,
+    delta: weekAdd ? `本周 +${weekAdd}` : '',
+  },
+  {
+    href: '/github/',
+    name: '观星台',
+    img: '/font-images/sec-guanxing.png',
+    w: 228,
+    verb: '望',
+    desc: 'GitHub AI 热门项目榜',
+    stat: `周榜 ${gh.week.items.length} 项`,
+    delta: `月榜 ${gh.month.items.length} 项`,
+  },
+  {
+    href: '/models/',
+    name: '点将台',
+    img: '/font-images/sec-jiang.png',
+    w: 226,
+    verb: '比',
+    desc: 'Artificial Analysis 模型榜',
+    stat: `综合 ${intel.length} 名`,
+    delta: `编程 ${coding.length} 名`,
+  },
+  {
+    href: '/plans/',
+    name: '粮市',
+    img: '/font-images/sec-shi.png',
+    w: 157,
+    verb: '买',
+    desc: '国内外 AI 编程订阅比价',
+    stat: `${md.plans.length} 个套餐`,
+    delta: '',
+  },
+  {
+    href: '/news/',
+    name: '邸报',
+    img: '/font-images/sec-dibao.png',
+    w: 161,
+    verb: '看',
+    desc: 'AI 中文资讯精选',
+    stat: `本期 ${featured.length} 条`,
+    delta: news7 ? `近七日 +${news7}` : '',
+  },
+];
+
+const newRows = [
+  ...topTickets.map((t) => ({
+    href: `/tickets/${t.id}/`,
+    tag: '粮票',
+    title: t.title,
+    meta: `${t.vendor} · 收录 ${t.publishedAt.slice(5)}`,
+  })),
+  ...focusPlans.map((p) => ({
+    href: `/plans/${p.id}/`,
+    tag: '粮市',
+    title: `${p.vendor} ${p.product}`,
+    meta: startingPriceLabel(p),
+  })),
+];
+
+const leadStar = gh.week.items[0];
+const leadStarMonth = gh.month.items[0];
+const starRow = (item, period) =>
+  item && {
+    href: item.url,
+    tag: '观星台',
+    title: item.repo,
+    meta: `${period} ${item.periodStars === null || item.periodStars === undefined ? '来源未提供' : `+${thous(item.periodStars)} ★`}`,
+  };
+const topRows = [
+  starRow(leadStar, '本周'),
+  starRow(leadStarMonth, '本月'),
+  intel[0] && { href: '/models/', tag: '点将台', title: modelName(intel[0]), meta: `综合 ${intel[0].score} 分` },
+  coding[0] && { href: '/models/', tag: '点将台', title: modelName(coding[0]), meta: `编程 ${coding[0].score} 分` },
+].filter(Boolean);
+
+const newsRows = featured.slice(0, 3).map((item) => ({
+  href: item.url,
+  tag: '邸报',
+  title: item.title,
+  meta: item.source,
+}));
+---
+<Base title="今日开仓" description="AI 白嫖机会、模型榜单、订阅比价与资讯的每日聚合。" dataUpdatedAt={oldest}>
+  <section class="gate-hero">
+    <img class="hero__slogan" src="/font-images/slogan.png" width="685" height="80" alt="大厂开仓 · 凭票领饭" />
+    <p class="hero__tagline">AI 白嫖机会 · 模型比价 · 榜单聚合</p>
+    <p class="gate-hero__status">
+      <span class="dot" aria-hidden="true"></span>数据核验 {fresh.text} · 五门皆开
+    </p>
+  </section>
+
+  <section aria-labelledby="gates-h">
+    <h2 id="gates-h">
+      今日开仓<small>五门总览</small>
+    </h2>
+    <ul class="gates">
+      {
+        gates.map((gate) => (
+          <li>
+            <a class="gate" href={gate.href}>
+              <span class="gate__top">
+                <img class="gate__name" src={gate.img} width={gate.w} height="80" alt={gate.name} />
+                <span class="gate__verb">{gate.verb}</span>
+              </span>
+              <span class="gate__desc">{gate.desc}</span>
+              <span class="gate__stat">
+                <b>{gate.stat}</b>
+                {gate.delta && <em>{gate.delta}</em>}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section aria-labelledby="kaicang-h">
+    <h2 id="kaicang-h">
+      本期开仓<small>跨模块新入库</small>
+    </h2>
+    <div class="digest">
+      <div class="digest__col">
+        <h3>新入库</h3>
+        <ul class="digest__list">
+          {
+            newRows.map((row) => (
+              <li class="row">
+                <a href={row.href}>
+                  <span class="row__tag">{row.tag}</span>
+                  <span class="row__title">{row.title}</span>
+                  <span class="row__meta">{row.meta}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="digest__col">
+        <h3>榜首</h3>
+        <ul class="digest__list">
+          {
+            topRows.map((row) => (
+              <li class="row">
+                <a href={row.href}>
+                  <span class="row__tag">{row.tag}</span>
+                  <span class="row__title">{row.title}</span>
+                  <span class="row__meta">{row.meta}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="digest__col">
+        <h3>邸报头条</h3>
+        <ul class="digest__list">
+          {
+            newsRows.map((row) => (
+              <li class="row">
+                <a href={row.href}>
+                  <span class="row__tag">{row.tag}</span>
+                  <span class="row__title">{row.title}</span>
+                  <span class="row__meta">{row.meta}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="home-tickets">
+    <h2 id="home-tickets">
+      今日份口粮<small>推荐分前 3</small>
+    </h2>
+    <ul class="r4-stubs tickets-hub">
+      {topTickets.map((t) => <li><TicketCard ticket={t} /></li>)}
+    </ul>
+    <p class="more"><a href="/tickets/">全部粮票 →</a></p>
+  </section>
+</Base>
+
+<style>
+  .gate-hero {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .gate-hero__status {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin: .85rem 0 0;
+    padding: .3rem .8rem;
+    font-family: var(--code);
+    font-size: 12px;
+    letter-spacing: .12em;
+    color: var(--faint);
+    border: 1px solid var(--line-dim);
+    border-radius: 999px;
+  }
+
+  .gate-hero__status .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 8px var(--cyan);
+  }
+
+  h2 small {
+    margin-left: .7rem;
+    font-family: var(--code);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .12em;
+    color: var(--faint);
+  }
+
+  .gates {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 40rem) {
+    .gates {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 60rem) {
+    .gates {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  .gates > li {
+    display: flex;
+  }
+
+  .gate {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+    width: 100%;
+    padding: 1rem 1.05rem 1.05rem;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid var(--line-dim);
+    border-radius: var(--radius);
+    background: linear-gradient(160deg, rgba(232, 183, 58, .07), rgba(11, 9, 22, .55));
+    transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  }
+
+  .gate::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18%;
+    bottom: 18%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+    opacity: .5;
+  }
+
+  .gate:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px -16px rgba(232, 183, 58, .7);
+  }
+
+  .gate:hover::before {
+    opacity: 1;
+  }
+
+  .gate__top {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    min-height: 30px;
+  }
+
+  .gate__name {
+    height: 28px;
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(232, 183, 58, .3));
+  }
+
+  .gate__verb {
+    margin-left: auto;
+    font-size: 12px;
+    letter-spacing: .24em;
+    color: var(--gold);
+  }
+
+  .gate__desc {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--dim);
+  }
+
+  .gate__stat {
+    display: flex;
+    align-items: baseline;
+    gap: .55rem;
+    margin-top: .15rem;
+    font-family: var(--code);
+  }
+
+  .gate__stat b {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffe9c0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .gate__stat em {
+    font-style: normal;
+    font-size: 12px;
+    color: var(--cyan);
+  }
+
+  .digest {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+    gap: 1rem;
+  }
+
+  .digest__col {
+    padding: 1rem 1.05rem 1.1rem;
+    border: 1px solid var(--line-dim);
+    border-radius: var(--radius);
+    background: rgba(11, 9, 22, .42);
+  }
+
+  .digest__col > h3 {
+    margin: 0 0 .8rem;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .24em;
+    color: var(--gold);
+  }
+
+  .digest__list {
+    display: grid;
+    gap: .7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .row a {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: .1rem .55rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .row__tag {
+    grid-row: 1 / span 2;
+    align-self: start;
+    padding: 1px 6px;
+    font-size: 12px;
+    letter-spacing: .06em;
+    color: var(--cyan);
+    border: 1px solid rgba(63, 217, 192, .4);
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  .row__title {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--text);
+    transition: color .15s ease;
+  }
+
+  .row a:hover .row__title {
+    color: #fff;
+  }
+
+  .row__meta {
+    font-family: var(--code);
+    font-size: 12px;
+    color: var(--faint);
+  }
+
+  @media (min-width: 62rem) {
+    .tickets-hub {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>
