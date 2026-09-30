@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-09-30T11:42:49Z",
+  "dataUpdatedAt": "2026-09-30T16:50:43Z",
   "items": [
+    {
+      "title": "从训练到生产，NVIDIA 与 CoreWeave 闭环智能体 AI",
+      "sourceUrl": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+      "publishedAt": "2026-09-30T15:00:00Z",
+      "source": "NVIDIA",
+      "summary": "NVIDIA Vera Rubin NVL72与Vera CPU在CoreWeave上加速Cognition等公司的智能体AI。",
+      "id": "532f254b17e03693cf5407bf66cd555c818a96f71ad0db349a99524d9698e16e",
+      "originalTitle": "From Training to Production, NVIDIA and CoreWeave Close the Loop on Agentic AI",
+      "translatedAt": "2026-09-30T16:50:43Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+      "originalVerifiedAt": "2026-09-30T16:50:43Z",
+      "url": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-30T16:50:43Z",
+      "featured": true
+    },
+    {
+      "title": "帮助小企业将 AI 投入实际应用",
+      "sourceUrl": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+      "publishedAt": "2026-09-30T10:00:00Z",
+      "source": "OpenAI",
+      "summary": "OpenAI 与美国 SBDC 合作，扩大小企业的 AI 实操培训与本地支持，并发布新报告介绍小团队如何使用 AI。",
+      "id": "061338e668ed697490e5190ccd3e1fba28ac269698517daa2fcec5875990601f",
+      "originalTitle": "Helping small businesses put AI to work",
+      "translatedAt": "2026-09-30T16:50:43Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+      "originalVerifiedAt": "2026-09-30T16:50:43Z",
+      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-30T16:50:43Z",
+      "featured": true
+    },
     {
       "title": "DeepSeek官方开源昇腾基础组件，与昇腾共建高效易用的AI芯片软件生态",
       "sourceUrl": "https://www.qbitai.com/2026/09/499263.html",
@@ -75,6 +113,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T11:42:49Z",
+      "featured": true
+    },
+    {
+      "title": "Command Code 发布 v0.1.44",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-09-30&version=v0.1.44",
+      "publishedAt": "2026-09-29T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "9fc9614bbba943b96164c1e5d89f6c5ea7853090a4ed9a1f775d4f3c3b9f6603",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-09-30&version=v0.1.44",
+      "originalVerifiedAt": "2026-09-30T16:50:43Z",
+      "url": "https://commandcode.ai/changelog?date=2026-09-30&version=v0.1.44",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-30T16:50:43Z",
       "featured": true
     },
     {
@@ -173,6 +230,25 @@
       "featured": true
     },
     {
+      "title": "Ollama 现已支持 Jev 风格决策模型",
+      "sourceUrl": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "source": "Ollama",
+      "summary": "Ollama支持基于TypeSafe Jev API的决策模型，可低成本低延迟回答是非、选择与评分。",
+      "id": "bbefdaefb76473f7b44babc5a65f6dd5645469af4168239c5331fe7af32f110f",
+      "originalTitle": "Ollama now supports Jev-style decision models",
+      "translatedAt": "2026-09-30T16:50:43Z",
+      "lang": "en",
+      "originalSource": "Ollama",
+      "originalUrl": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models",
+      "originalVerifiedAt": "2026-09-30T16:50:43Z",
+      "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-30T16:50:43Z",
+      "featured": true
+    },
+    {
       "title": "GitHub Copilot 中的 Claude Sonnet 5.5",
       "sourceUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "publishedAt": "2026-09-28T18:03:57Z",
@@ -189,6 +265,25 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-09-28T18:37:28Z",
+      "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.70.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-09-29&version=v1.70.0",
+      "publishedAt": "2026-09-28T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "4a9a89b11c1b48b0226d6f5621f190736caa149cc45c747ba9a85f6ac4967e47",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-09-29&version=v1.70.0",
+      "originalVerifiedAt": "2026-09-30T16:50:43Z",
+      "url": "https://commandcode.ai/changelog?date=2026-09-29&version=v1.70.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-09-30T16:50:43Z",
       "featured": true
     },
     {
@@ -2548,6 +2643,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-30T11:42:49Z",
-  "generatedAt": "2026-09-30T11:42:49Z"
+  "version": "2026-09-30T16:50:43Z",
+  "generatedAt": "2026-09-30T16:50:43Z"
 }

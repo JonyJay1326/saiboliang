@@ -107,16 +107,22 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
   },
-  "36138c270920188f9af74a1fbc8a95649774fc2c948077d26f8ecf3ff152168d": {
-    "title": "FabCon 与 SQLCon 2026 巴塞罗那：为 Microsoft Copilot 和代理构建数据基础",
-    "summary": "在 FabCon 与 SQLCon 巴塞罗那 2026 上宣布的 Microsoft Fabric 和 SQL 创新帮助组织为 AI 构建可信数据基础。",
+  "061338e668ed697490e5190ccd3e1fba28ac269698517daa2fcec5875990601f": {
+    "title": "帮助小企业将 AI 投入实际应用",
+    "summary": "OpenAI 与美国 SBDC 合作，扩大小企业的 AI 实操培训与本地支持，并发布新报告介绍小团队如何使用 AI。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
+    "at": "2026-09-30T16:50:43Z"
   },
-  "cb668c5b27e4138bd592d8b2c395c8dea01887f84259c342c4a3148690e0b924": {
-    "title": "增强 Microsoft Azure 虚拟机生命周期",
-    "summary": "我们的虚拟机生命周期策略指导我们如何管理这些转换，为 Azure 客户提供透明度、可预测性和指导。",
+  "c696e8b1f34224735a5b522fd51b1d052e2103bd5d040aaee48f4dde058d1cd6": {
+    "title": "推出 SynthID Bio",
+    "summary": "为 AI 生成的蛋白质添加水印并保持生物功能的概念验证。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
+    "at": "2026-09-30T16:50:43Z"
+  },
+  "532f254b17e03693cf5407bf66cd555c818a96f71ad0db349a99524d9698e16e": {
+    "title": "从训练到生产，NVIDIA 与 CoreWeave 闭环智能体 AI",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-09-30T16:50:43Z"
   }
 }

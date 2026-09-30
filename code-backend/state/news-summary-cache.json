@@ -1,12 +1,12 @@
 {
-  "283d83a418353d287e6072b7fe2e9d4652dc35a18e5c544bfcaf664bf25c0351": {
-    "summary": "DeepSeek开源昇腾基础设施组件，含TileLang编译工具、高性能计算库与分布式通信库。",
+  "532f254b17e03693cf5407bf66cd555c818a96f71ad0db349a99524d9698e16e": {
+    "summary": "NVIDIA Vera Rubin NVL72与Vera CPU在CoreWeave上加速Cognition等公司的智能体AI。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
+    "at": "2026-09-30T16:50:43Z"
   },
-  "10e57f85eab0508dfd34ca85da2ed39299f3913f1e06a76ba58b8c0c98f7c43d": {
-    "summary": "开源编码代理OpenCode发布v2.0.20版本。",
+  "bbefdaefb76473f7b44babc5a65f6dd5645469af4168239c5331fe7af32f110f": {
+    "summary": "Ollama支持基于TypeSafe Jev API的决策模型，可低成本低延迟回答是非、选择与评分。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
+    "at": "2026-09-30T16:50:43Z"
   }
 }
