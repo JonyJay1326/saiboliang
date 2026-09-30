@@ -45,7 +45,14 @@ const HINTS = { army: '错金兵符', market: '移印换市', sky: '星历拨盘
                 </span>
               </span>
             ) : (
-              <span class="instrument__label">{option.label}</span>
+              <>
+                {kind === 'sky' && (
+                  <svg class="instrument__sky-focus" viewBox="0 0 90 47" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                    <polygon points="8,2 82,2 88,8 88,39 82,45 8,45 2,39 2,8" vector-effect="non-scaling-stroke" />
+                  </svg>
+                )}
+                <span class="instrument__label">{option.label}</span>
+              </>
             )}
           </button>
         ))

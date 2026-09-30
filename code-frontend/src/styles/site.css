@@ -4889,10 +4889,23 @@ td:first-child {
   background: #f3d99c;
 }
 
-/* —— 星历拨盘（sky）：中央盘心画在画布上，两侧文字 + 底刻线 —— */
+/* —— 星历拨盘（sky）：铜制端座、错金槽与固定盘壳 —— */
+.observatory-boards {
+  /* 换榜及行入场不参与滚动锚定，避免浏览器追着新榜单向上补偿。 */
+  overflow-anchor: none;
+}
+
 .instrument[data-kind="sky"] {
   --a: 161, 206, 226;
   min-height: 90px;
+}
+
+.instrument[data-kind="sky"]:after {
+  background: linear-gradient(90deg, #b9ac7b30, #b9ac7b0c 55%, transparent);
+}
+
+.instrument[data-kind="sky"] .instrument__beam {
+  display: none;
 }
 
 .instrument[data-kind="sky"] .instrument__widget {
@@ -4911,43 +4924,44 @@ td:first-child {
 .instrument[data-kind="sky"] .instrument__tab {
   width: 90px;
   flex: 0 0 90px;
+  z-index: 3;
 }
 
 .instrument[data-kind="sky"] .instrument__label {
   font-size: 16px;
-  letter-spacing: 5px;
-  color: #acaeb6;
-  transition: color .25s;
+  letter-spacing: 3px;
+  padding-left: 3px;
+  color: #98a08d;
+  transition: color .2s, text-shadow .2s;
 }
 
 .instrument[data-kind="sky"] .instrument__tab[aria-selected="true"] .instrument__label {
-  color: #f4dfae;
-  text-shadow: 0 0 12px #e9c97966;
+  color: #f7e3b8;
+  text-shadow: 0 1px 1px #020806, 0 -1px #f8edcb18, 0 0 7px #e9c97935;
 }
 
-.instrument[data-kind="sky"] .instrument__tab:before {
-  content: "";
+.instrument__sky-focus {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse, #0b0916 0 45%, #0b091600 75%);
+  inset: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  z-index: 4;
   pointer-events: none;
+  opacity: 0;
+  stroke: #f3dda7;
+  stroke-width: 1.3;
 }
 
-.instrument[data-kind="sky"] .instrument__tab:after {
-  content: "";
-  position: absolute;
-  left: 26px;
-  right: 26px;
-  bottom: 5px;
-  height: 1px;
-  background: #d3b47033;
-  transition: background .25s, transform .25s;
+.instrument[data-kind="sky"] .instrument__tab:focus-visible {
+  outline: none;
 }
 
-.instrument[data-kind="sky"] .instrument__tab[aria-selected="true"]:after {
-  background: #dfc797;
-  transform: scaleX(1.3);
-  box-shadow: 0 0 8px #d3b47055;
+.instrument[data-kind="sky"] .instrument__tab:focus-visible .instrument__sky-focus {
+  opacity: 1;
+}
+
+.instrument[data-kind="sky"] .instrument__tab:active .instrument__label {
+  transform: translateY(1px);
 }
 
 .instrument__dial {
@@ -4972,6 +4986,19 @@ td:first-child {
 
 .instrument__dial:hover {
   background: radial-gradient(circle, #e8ddb50a, transparent 75%);
+}
+
+.instrument__dial:active {
+  background: radial-gradient(circle, #bdded414, transparent 70%);
+}
+
+@media (forced-colors: active) {
+  .instrument[data-kind="sky"] .instrument__tab {
+    border: 1px solid ButtonText;
+  }
+  .instrument[data-kind="sky"] .instrument__tab:focus-visible {
+    outline: 2px solid Highlight;
+  }
 }
 
 .instrument[data-kind="sky"] .instrument__hint {
