@@ -15,10 +15,33 @@ const active = (href: string) => href === '/' ? path === '/' : path.startsWith(h
 
 <a class="station-skip" href="#station-main">跳到正文</a>
 <header class="station-header" data-station-header transition:persist="station-header">
+  <svg class="station-header__end station-header__end--left" viewBox="0 0 86 60" fill="none" aria-hidden="true">
+    <path class="station-header__end-shadow" d="M82 5H14L5 14V46L14 55H82M62 12H20L12 20V40L20 48H62M48 19H26V28H37V35H21V21M48 41H31" />
+    <path d="M82 4H14L5 13V45L14 54H82M62 11H20L12 19V39L20 47H62M48 18H26V27H37V34H21V20M48 40H31" />
+    <circle cx="14" cy="13" r="1.5" /><circle cx="14" cy="45" r="1.5" />
+  </svg>
+  <svg class="station-header__end station-header__end--right" viewBox="0 0 86 60" fill="none" aria-hidden="true">
+    <path class="station-header__end-shadow" d="M82 5H14L5 14V46L14 55H82M62 12H20L12 20V40L20 48H62M48 19H26V28H37V35H21V21M48 41H31" />
+    <path d="M82 4H14L5 13V45L14 54H82M62 11H20L12 19V39L20 47H62M48 18H26V27H37V34H21V20M48 40H31" />
+    <circle cx="14" cy="13" r="1.5" /><circle cx="14" cy="45" r="1.5" />
+  </svg>
   <div class="station-header__body">
     <a class="station-brand" href="/" aria-label="赛博粮站 · 回首页">
-      <img class="station-brand__word" src="/font-images/brand.png" width="753" height="184" alt="赛博粮站" decoding="sync" />
-      <img class="station-brand__mark" src="/icon-192.png" width="192" height="192" alt="" decoding="sync" />
+      <span class="station-brand__lettering">
+        <img class="station-brand__word" src="/font-images/brand.png" width="753" height="184" alt="赛博粮站" decoding="sync" />
+      </span>
+      <span class="station-brand__seat">
+        <span class="station-brand__halo" aria-hidden="true"></span>
+        <img class="station-brand__mark" src="/icon-192.png" width="192" height="192" alt="" decoding="sync" />
+      </span>
+      <svg class="station-brand__inlay" viewBox="0 0 204 54" fill="none" aria-hidden="true">
+        <path d="M6 17V8H35V4H88M116 4H170V8H198V17M6 37V46H35V50H88M116 50H170V46H198V37M16 13H30M174 13H188M16 41H30M174 41H188" />
+        <path d="M95 4H109M95 50H109" />
+        <g class="station-brand__flow">
+          <path pathLength="100" d="M6 17V8H35V4H102" />
+          <path pathLength="100" d="M198 17V8H170V4H102" />
+        </g>
+      </svg>
     </a>
     <span class="station-divider" aria-hidden="true"></span>
     <nav class="station-nav" aria-label="主导航">
@@ -27,6 +50,20 @@ const active = (href: string) => href === '/' ? path === '/' : path.startsWith(h
         {stations.map((station) => (
           <li>
             <a class="station-link" href={station.href} aria-current={active(station.href) ? 'page' : undefined}>
+              <svg class="station-link__circuit" viewBox="0 0 120 48" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                <path class="station-link__trace" d="M1 39H12L18 44H46L50 40H70L74 44H102L108 39H119" />
+                <path class="station-link__trace station-link__trace--upper" d="M20 8H30V4H46M74 4H90V8H100" />
+                <g class="station-link__flow station-link__flow--halo">
+                  <path pathLength="100" d="M1 39H12L18 44H46L50 40H60" />
+                  <path pathLength="100" d="M119 39H108L102 44H74L70 40H60" />
+                </g>
+                <g class="station-link__flow">
+                  <path pathLength="100" d="M1 39H12L18 44H46L50 40H60" />
+                  <path pathLength="100" d="M119 39H108L102 44H74L70 40H60" />
+                </g>
+                <circle class="station-link__junction" cx="60" cy="40" r="1.5" />
+                <path class="station-link__focus" d="M4 12V4H12M108 4H116V12M116 36V44H108M12 44H4V36" />
+              </svg>
               <span class="station-link__name">{station.name}</span>
               <span class="station-link__dot" aria-hidden="true">·</span>
               <span class="station-link__verb">{station.verb}</span>
