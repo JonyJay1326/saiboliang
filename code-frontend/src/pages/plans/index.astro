@@ -5,6 +5,7 @@
 // 默认东市（国内组）。
 // 东西两市（2026-09-20 用户确认）：东市 = 国内组、西市 = 海外组；
 // 契约 group 值（domestic / overseas）不变，这里只换界面话术（frontend-spec §4.6）。
+import { marketDomain } from '../../lib/stubs.js';
 import Base from '../../layouts/Base.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import PlanCard from '../../components/PlanCard.astro';
@@ -65,10 +66,10 @@ const groups = [
       groups.map((group) => (
         <section data-toggle-panel={group.key} hidden={group.key !== DEFAULT}>
           <h2>{group.heading}</h2>
-          <ul class="cards cards--plans">
+          <ul class="r4-stubs r4-stubs--plan">
             {group.items.map((plan, i) => (
               <li>
-                <PlanCard plan={plan} index={i + 1} />
+                <PlanCard plan={plan} index={i + 1} domain={marketDomain(group.items)} />
               </li>
             ))}
           </ul>

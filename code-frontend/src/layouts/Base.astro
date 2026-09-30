@@ -9,6 +9,7 @@ import SkinToggle from '../components/SkinToggle.astro';
 import '../styles/tokens.css';
 import '../styles/site.css';
 import '../styles/commerce.css';
+import '../styles/stubs.css';
 
 const {
   title = null,
@@ -451,21 +452,23 @@ const DEFAULT_SKIN = 'cyber';
         const build = () => {
           if (overlay && overlay.isConnected) return;
           overlay = document.createElement('div');
-          overlay.className = 'preview';
+          overlay.className = 'preview r4-sheet';
+          overlay.dataset.tier = '甲';
           overlay.setAttribute('role', 'dialog');
           overlay.setAttribute('aria-modal', 'true');
           overlay.setAttribute('aria-label', '详情预览');
           overlay.hidden = true;
           overlay.innerHTML =
             '<div class="preview__backdrop" data-preview-close></div>' +
-            '<div class="preview__panel" tabindex="-1">' +
-            '<div class="preview__bar">' +
+            '<div class="preview__panel r4-sheet__panel" tabindex="-1">' +
+            '<span class="r4-sheet__scanline" aria-hidden="true"></span>' +
+            '<div class="preview__bar r4-sheet__bar">' +
             '<span class="preview__label">详情预览</span>' +
-            '<button type="button" class="preview__close" data-preview-close aria-label="关闭预览">' +
-            '<span class="preview__close-x" aria-hidden="true">✕</span>关闭' +
+            '<button type="button" class="preview__close r4-sheet__close" data-preview-close aria-label="关闭预览">' +
+            '关闭 <kbd>Esc</kbd>' +
             '</button>' +
             '</div>' +
-            '<div class="preview__scroll">' +
+            '<div class="preview__scroll r4-sheet__scroll">' +
             '<div class="preview__content" data-preview-content></div>' +
             '</div>' +
             '<div class="preview__dock" hidden></div>' +
@@ -560,6 +563,10 @@ const DEFAULT_SKIN = 'cyber';
         const swapContent = (html) => {
           swapToken += 1;
           content.innerHTML = html;
+          overlay.classList.remove('r4-is-in');
+          void overlay.offsetWidth;
+          overlay.classList.add('r4-is-in');
+          document.dispatchEvent(new Event('cg:sheet-ready'));
           if (reduced.matches || typeof content.animate !== 'function') return;
           content.animate(
             [{ opacity: .3, transform: 'translateY(4px)' }, { opacity: 1, transform: 'none' }],
@@ -604,6 +611,14 @@ const DEFAULT_SKIN = 'cyber';
 
         const open = async (url, options = {}) => {
           build();
+          const origin = options.trigger?.getBoundingClientRect();
+          if (origin) {
+            overlay.style.setProperty('--dx', `${Math.max(-64, Math.min(64, (origin.left + origin.width / 2 - innerWidth / 2) * .2))}px`);
+            overlay.style.setProperty('--dy', `${Math.max(-44, Math.min(44, (origin.top + origin.height / 2 - innerHeight / 2) * .16))}px`);
+          } else {
+            overlay.style.removeProperty('--dx');
+            overlay.style.removeProperty('--dy');
+          }
           const fresh = overlay.hidden;   // 全新打开（false = 换对象或退场途中重开）
           closing = false;
           settleIn();
@@ -629,7 +644,9 @@ const DEFAULT_SKIN = 'cyber';
           background.forEach((el) => { el.inert = true; });
           lockScroll();
           const kind = url.startsWith('/plans/') ? 'plans' : 'tickets';
-          overlay.dataset.kind = kind;
+          overlay.dataset.kind = kind === 'plans' ? 'plan' : 'ticket';
+          overlay.dataset.tier = '甲';
+          overlay.removeAttribute('data-urgent');
           overlay.querySelector('.preview__label').textContent = kind === 'plans' ? '粮市 / 套餐档案' : '粮票 / 票面详情';
           overlay.setAttribute('aria-label', kind === 'plans' ? '套餐详情' : '粮票详情');
           overlay.setAttribute('aria-busy', 'true');
@@ -646,22 +663,17 @@ const DEFAULT_SKIN = 'cyber';
             if (request !== controller || overlay.hidden) return;
             const main = doc.querySelector('main');
             if (!main) throw new Error('no main');
-            // 弹框是「先看一眼」的入口：首页/列表里去掉核实信息与相关票两块，
-            // 保持轻量；它们仍在独立详情页 /tickets/[id]/ 完整提供（frontend-spec §4.3）。
-            main
-              .querySelectorAll('script, [aria-labelledby="verify"], [aria-labelledby="related"]')
-              .forEach((el) => el.remove());
-            // 详情页顶部的「← 返回粮票 / 返回套餐榜」在弹框里是噪音——关闭即回到打开前地址，
-            // 同样只在弹框内去掉（独立详情页保留）。
-            main.querySelectorAll('p').forEach((p) => {
-              const a = p.querySelector('a');
-              if (a && a.textContent.trim() === p.textContent.trim() && /^\/(tickets|plans)\/$/.test(a.getAttribute('href') || '')) {
-                p.remove();
-              }
-            });
-            const actions = main.querySelector('.plan-detail__foot, .ticket__actions');
-            if (actions) actions.remove();
-            swapContent(main.innerHTML);
+            main.querySelectorAll('script').forEach((el) => el.remove());
+            const sheet = main.querySelector('[data-sheet]');
+            if (!sheet) throw new Error('no sheet');
+            overlay.dataset.tier = sheet.dataset.tier;
+            overlay.toggleAttribute('data-urgent', sheet.hasAttribute('data-urgent'));
+            const bar = sheet.querySelector('.r4-sheet__bar');
+            const label = overlay.querySelector('.preview__label');
+            label.replaceChildren(...[...bar.children].filter((el) => !el.hasAttribute('data-sheet-back')));
+            const body = sheet.querySelector('.r4-sheet__scroll');
+            const actions = sheet.querySelector('.r4-sheet__dock');
+            swapContent(body.innerHTML);
             const heading = content.querySelector('h1');
             if (heading) overlay.setAttribute('aria-label', heading.textContent.trim());
             if (actions) {
@@ -693,13 +705,18 @@ const DEFAULT_SKIN = 'cyber';
             // 捕获阶段：阻止事件继续冒泡到 ClientRouter 的 click 监听
             event.preventDefault();
             event.stopPropagation();
-            open(link.getAttribute('href'));
+            open(link.getAttribute('href'), { trigger: link.closest('.r4-stub, .r4-mini') || link });
           },
           true
         );
 
+        let pressedBackdrop = false;
+        document.addEventListener('pointerdown', (event) => {
+          pressedBackdrop = event.target === backdrop;
+        });
         document.addEventListener('click', (event) => {
           const target = event.target instanceof Element ? event.target : null;
+          if (target === backdrop && !pressedBackdrop) return;
           if (target?.closest('[data-preview-close]')) close();
         });
 
@@ -771,6 +788,9 @@ const DEFAULT_SKIN = 'cyber';
           lastFocus = null;
         });
       }
+    </script>
+    <script>
+      import '../scripts/stubs.js';
     </script>
   </head>
 

@@ -35,7 +35,7 @@ const oldest = times.sort()[0] ?? null;
 
   <section aria-labelledby="home-tickets">
     <h2 id="home-tickets">今日份口粮</h2>
-    <ul class="cards cards--home">
+    <ul class="r4-stubs">
       {topTickets.map((t) => <li><TicketCard ticket={t} /></li>)}
     </ul>
     <p class="more"><a href="/tickets/">全部粮票 →</a></p>
