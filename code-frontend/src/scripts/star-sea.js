@@ -42,7 +42,7 @@ function inWhite(x, y, R) {
   return x >= 0;
 }
 
-/* 外圈 22% / S 分界 18% / 鱼眼 4% / 鱼身 56%；外沿分段随机落点，避免轮廓出现大缺口。 */
+/* 外圈 22% / S 分界 18% / 鱼眼 5% / 鱼身 55%；外沿分段随机落点，避免轮廓出现大缺口。 */
 function rimPoint(R, ring, index, count) {
   const t = (index + Math.random()) / count * TAU;
   const rr = R * (ring === 2 ? 0.952 + 0.022 * Math.random() : 1 - 0.006 * Math.random());
@@ -80,10 +80,17 @@ function seamPoint(R) {
   };
 }
 
-function eyePoint(R) {
-  const white = Math.random() < 0.5;
-  const a = Math.random() * TAU;
-  const d = (Math.random() < 0.45 ? 0.88 + Math.random() * 0.12 : Math.sqrt(Math.random())) * R * EYE_K;
+function eyePoint(R, white, index, count) {
+  // 两眼各自定额，眼缘每个角度区间都有光点；内部按螺旋铺开，保留少量随机扰动。
+  const rimCount = Math.ceil(count * 0.65);
+  const onRim = index < rimCount;
+  const interiorIndex = index - rimCount;
+  const a = onRim
+    ? (index + 0.25 + Math.random() * 0.5) / rimCount * TAU
+    : interiorIndex * Math.PI * (3 - Math.sqrt(5)) + Math.random() * 0.15;
+  const d = (onRim
+    ? 0.96 + Math.random() * 0.04
+    : Math.sqrt((interiorIndex + 0.5) / (count - rimCount)) * 0.88) * R * EYE_K;
   return {
     x: Math.cos(a) * d,
     y: (white ? 1 : -1) * R * HEAD_K + Math.sin(a) * d,
@@ -179,7 +186,9 @@ class StarField {
     const nOuterRim = Math.round(count * 0.14);
     const nInnerRim = Math.round(count * 0.08);
     const nSeam = Math.round(count * 0.18);
-    const nEye = Math.round(count * 0.04);
+    const nEye = Math.round(count * 0.05);
+    const nGoldEye = Math.floor(nEye / 2);
+    const nCyanEye = nEye - nGoldEye;
     const nBody = Math.max(0, count - nOuterRim - nInnerRim - nSeam - nEye);
 
     const push = (sp) => {
@@ -236,7 +245,8 @@ class StarField {
     for (let i = 0; i < nOuterRim; i++) push(rimPoint(R, 1, i, nOuterRim));
     for (let i = 0; i < nInnerRim; i++) push(rimPoint(R, 2, i, nInnerRim));
     for (let i = 0; i < nSeam; i++) push(seamPoint(R));
-    for (let i = 0; i < nEye; i++) push(eyePoint(R));
+    for (let i = 0; i < nGoldEye; i++) push(eyePoint(R, true, i, nGoldEye));
+    for (let i = 0; i < nCyanEye; i++) push(eyePoint(R, false, i, nCyanEye));
     for (let i = 0; i < nBody; i++) push(bodyPoint(R, Math.random() < 0.5));
 
     /* 轮廓族挑 1/12 做辉光（`lighter`），鱼身不发光——形状才读得出来 */
