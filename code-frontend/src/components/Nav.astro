@@ -20,18 +20,29 @@ const secondary = [
 
 const path = Astro.url.pathname;
 const isActive = (href) => (href === '/' ? path === '/' : path.startsWith(href));
+// 票面拆字（2026-09-29 菜单条重做）：板块名与动作词分两段上色；
+// 中间的「 · 」保留为文本节点，链接可读名仍是完整的「粮票 · 领」
+const splitLabel = (label) => {
+  const [name, verb] = label.split(' · ');
+  return { name, verb };
+};
 ---
 
 <nav aria-label="主导航">
   <ul>
     {
-      primary.map((item) => (
-        <li>
-          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
-            {item.label}
-          </a>
-        </li>
-      ))
+      primary.map((item) => {
+        const { name, verb } = splitLabel(item.label);
+        return (
+          <li>
+            <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+              <span class="nav__name">{name}</span>
+              <span class="nav__dot">{' · '}</span>
+              <span class="nav__verb">{verb}</span>
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
 </nav>

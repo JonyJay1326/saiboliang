@@ -1,0 +1,45 @@
+---
+import '../styles/station-header.css';
+
+const stations = [
+  { href: '/', name: '太仓', verb: '首' },
+  { href: '/tickets/', name: '粮票', verb: '领' },
+  { href: '/github/', name: '观星台', verb: '望' },
+  { href: '/models/', name: '点将台', verb: '比' },
+  { href: '/plans/', name: '粮市', verb: '买' },
+  { href: '/news/', name: '邸报', verb: '看' },
+];
+const path = Astro.url.pathname;
+const active = (href: string) => href === '/' ? path === '/' : path.startsWith(href);
+---
+
+<a class="station-skip" href="#station-main">跳到正文</a>
+<header class="station-header" data-station-header transition:persist="station-header">
+  <div class="station-header__body">
+    <a class="station-brand" href="/" aria-label="赛博粮站 · 回首页">
+      <img class="station-brand__word" src="/font-images/brand.png" width="753" height="184" alt="赛博粮站" decoding="sync" />
+      <img class="station-brand__mark" src="/icon-192.png" width="192" height="192" alt="" decoding="sync" />
+    </a>
+    <span class="station-divider" aria-hidden="true"></span>
+    <nav class="station-nav" aria-label="主导航">
+      <span class="station-nav__light" aria-hidden="true"></span>
+      <ul>
+        {stations.map((station) => (
+          <li>
+            <a class="station-link" href={station.href} aria-current={active(station.href) ? 'page' : undefined}>
+              <span class="station-link__name">{station.name}</span>
+              <span class="station-link__dot" aria-hidden="true">·</span>
+              <span class="station-link__verb">{station.verb}</span>
+              <span class="station-link__anchor" aria-hidden="true"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a class="station-about" href="/about/" aria-current={active('/about/') ? 'page' : undefined}><span>关于</span><span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+
+<script>
+  import '../scripts/station-header.js';
+</script>
