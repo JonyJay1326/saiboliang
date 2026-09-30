@@ -1,98 +1,68 @@
 {
-  "9de028fbe46cac8b155a7c08a35dfcf47f00596edbfe763bda6c0737c9cb02fb": {
-    "title": "Proaction 借助 Codex 提升销售额 60% 并节省 75+ 小时",
-    "summary": "借助 Codex、GPT-Live-1 和 GPT-6 Astra，Proaction 更快地构建、运营和销售现代车队管理。",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "07dade88210664e3a861290c371bba0adb5d93701e873af5015036605dc9a77c": {
-    "title": "企业托管设置的产品内验证器",
-    "summary": "现在你可以为 GitHub Copilot 的企业托管设置使用产品内验证器。该验证器可检测格式错误的 JSON、不支持的配置、无效的团队映射以及其他可能阻止…",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "0a10d0252c63a3f9d568712cdf128e521c550aa3a2b1ac578bee760cc0626626": {
-    "title": "使用指标 API 新增拉取请求审查阶段",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "10030137c3a01f3444e23ded9959c095597864c1b10b3bf384a489dce7d8d131": {
-    "title": "仓库议题的私有已保存视图和“Relates to”议题关系正式可用",
-    "summary": "仓库议题的私有已保存视图 仓库议题页面现在支持私有已保存视图，让你更轻松地创建和保存个性化的议题视图。“Relates to”议题关系…",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "de36fa73b8545f5faefd5fadce8c42b0a4186d84d66d0b88c38b68fa8a9c54b9": {
-    "title": "GitHub Actions API 和 UI 中查询结果的变更",
-    "summary": "在 GitHub Actions API 和 UI 中查询工作流运行时，当你按工作流、事件、状态、分支等搜索时，现在会返回精度较低但更准确的记录数…",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:22:35Z"
-  },
-  "52b14ec01b86fb13f0c928f5890e5106437712c293a735afe82a6ebc22bb4eba": {
-    "title": "Team Bots：向团队学习的 AI 同事",
-    "summary": "为 Grok Bot 提供所需的文件、应用和专业知识，然后分享它，让整个团队基于相同上下文协作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
-  },
-  "3044f63155f8b6ed683de58550e1f8123e3e315254ea7eb5763eef6da373c893": {
-    "title": "未来属于每个人：面向小企业的 Muse",
-    "summary": "我们推出 Muse for Small Business，一款在后台工作的个人 AI 代理，帮助小企业实现目标。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
-  },
   "deeacf9a73c457054e9489987825836f0a14d0deb14ba2387752e62472b717f3": {
     "title": "推出 Meta Enterprise Platform",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
-  },
-  "50d71cd52400f551c336b9ad5bff210544c56459b813f45adc29b8abfb63cfa4": {
-    "title": "我们将如何为澳大利亚做得更好",
-    "summary": "OpenAI 就涉及澳大利亚政府网站的事件道歉，并概述更强保障和支持以加强澳大利亚网络防御。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
-  },
-  "2fc54b690d7b20a2e14328388fc3694e3eecf9d62246b7618620635188f7c454": {
-    "title": "迈向前沿 AI 训练的安全案例",
-    "summary": "我们关于前沿 AI 训练安全案例的早期指南涵盖技术保障、操作实践和调查失准事件。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
+    "at": "2026-09-28T18:37:28Z"
   },
   "0adf5bb2a473897d12526e4b9a8c88391e22c0769cbbe7208af0a1f61691cd5f": {
     "title": "Lenfest Institute 扩大标志性项目，获 OpenAI 扩展支持",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
+    "at": "2026-09-28T18:37:28Z"
+  },
+  "52b14ec01b86fb13f0c928f5890e5106437712c293a735afe82a6ebc22bb4eba": {
+    "title": "Team Bots：从团队中学习的 AI 同事",
+    "summary": "为 Grok Bot 提供所需的文件、应用和专业知识，然后分享它，让整个团队基于相同上下文工作。",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T09:55:24Z"
+  },
+  "3044f63155f8b6ed683de58550e1f8123e3e315254ea7eb5763eef6da373c893": {
+    "title": "未来属于每个人：面向小企业的 Muse",
+    "summary": "我们推出 Muse for Small Business，一个在后台工作的个人 AI 代理，帮助您的小企业实现目标。",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T09:55:24Z"
+  },
+  "50d71cd52400f551c336b9ad5bff210544c56459b813f45adc29b8abfb63cfa4": {
+    "title": "我们将如何为澳大利亚做得更好",
+    "summary": "OpenAI 就涉及澳大利亚政府网站的事件道歉，并概述更强保障和支持以加强澳大利亚网络防御。",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T09:55:24Z"
+  },
+  "2fc54b690d7b20a2e14328388fc3694e3eecf9d62246b7618620635188f7c454": {
+    "title": "迈向前沿 AI 训练的安全案例",
+    "summary": "我们关于前沿 AI 训练安全案例的早期指南涵盖技术保障、操作实践和调查失准事件",
+    "source": "deepseek-flash",
+    "at": "2026-09-29T09:55:24Z"
   },
   "833e9419a34f8836dc9d75020b228e7e76dd99c1c482fbba6af088c9a08dec28": {
     "title": "你是 Codex Original 吗？",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
+    "at": "2026-09-29T09:55:24Z"
   },
   "db713ef86bd59ea8f7bad6b7e8b404a24482c1e0315e748a8b43d61d66df115e": {
     "title": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
     "summary": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
+    "at": "2026-09-29T09:55:24Z"
   },
   "1d09516522abfde5d3cf8f8aebc3dd40645917feb89f23baef210c4da41a9cf1": {
     "title": "自托管运行器版本强制执行日期已更改",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
+    "at": "2026-09-29T09:55:24Z"
   },
   "4607b4c4468386f7d703fdc6e8f2d94f991fa6a6a1a594ce5a83f94754cdf8dc": {
-    "title": "Microsoft 新数据创新释放只有你的企业才知道的价值",
+    "title": "新的 Microsoft 数据创新解锁只有你的企业知道的东西",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:40:37Z"
+    "at": "2026-09-29T09:55:24Z"
   },
   "597c808f7f546491f0ec676490eda220dea924ba0f0620441999bc6def7590d7": {
     "title": "你好，德国！",
     "summary": "Mistral 在慕尼黑设立研究中心，专注 Physics AI 与 Industrial AI，并与德国工业界合作。",
     "source": "deepseek-flash",
-    "at": "2026-09-29T13:52:39Z"
+    "at": "2026-09-29T16:54:35Z"
   }
 }
