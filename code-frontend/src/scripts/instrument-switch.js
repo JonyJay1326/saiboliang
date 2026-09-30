@@ -13,6 +13,7 @@ import { SKY_TIMING } from './sky-switch-timing.js';
 const KIND_RGB = { army: '246,195,81', market: '230,190,112', sky: '161,206,226' };
 // 兵符交接时长（秒）：旧格合拢 → 电弧沿提梁跑到新格，之后新格才翻片（2026-09-29）
 const HANDOFF = .18;
+const MARKET_TIMING = { move: .27, lock: .1, inkStart: .35, finish: .58 };
 // 云雷纹单元（单位方格，u 由外缘向字、v 由上沿向中缝）：从中缝一侧起笔，向外回旋
 const SPIRAL = [[0, 1], [0, 0], [1, 0], [1, .72], [.3, .72], [.3, .32], [.7, .32], [.7, .55]];
 
@@ -38,6 +39,10 @@ function mountOne(widget) {
   const beam = widget.querySelector('.instrument__beam');
   const dial = widget.querySelector('.instrument__dial');
   const buttons = [...widget.querySelectorAll('.instrument__tab')];
+  const marketRig = kind === 'market' ? buttons.map(button => ({
+    sign: button.querySelector('.instrument__sign'),
+    hangers: [...button.querySelectorAll('.instrument__hanger')],
+  })) : [];
   const values = buttons.map((button) => button.dataset.toggleValue);
   if (!values.length) return { release() {} };
 
@@ -180,6 +185,9 @@ function mountOne(widget) {
 
   /* 切换：按钮分片 / 悬签 / 盘心的动作 + 面板错落 + 光束 + 流光起点 + 过程文字重新起拍。 */
   function fire() {
+    const marketPoses = kind === 'market'
+      ? marketRig.map(({ sign }) => getComputedStyle(sign).transform)
+      : null;
     const prev = Math.round(state.pos);
     state.from = state.pos;
     state.age = 0;
@@ -237,15 +245,27 @@ function mountOne(widget) {
     }
 
     if (kind === 'market') {
-      animate(
-        button.querySelector('.instrument__sign'),
-        [
-          { transform: 'translateY(0)' },
-          { transform: 'translateY(2px)', offset: .55 },
-          { transform: 'translateY(0)' },
-        ],
-        { duration: 420, easing: 'cubic-bezier(.18,.7,.3,1)' }
-      );
+      marketRig.forEach((rig, i) => {
+        const selected = i === state.index;
+        const rest = `translateY(1.5px) rotate(${i ? 1.4 : -1.4}deg)`;
+        animate(rig.sign, selected ? [
+          { transform: marketPoses[i], easing: 'cubic-bezier(.22,.75,.3,1)' },
+          { transform: 'translateY(0) rotate(0deg)', offset: MARKET_TIMING.move / MARKET_TIMING.finish, easing: 'cubic-bezier(.4,0,.6,1)' },
+          { transform: 'translateY(1.4px) rotate(0deg)', offset: .32 / MARKET_TIMING.finish, easing: 'cubic-bezier(.18,.7,.3,1)' },
+          { transform: 'translateY(-.35px) rotate(0deg)', offset: .42 / MARKET_TIMING.finish, easing: 'ease-out' },
+          { transform: 'translateY(0) rotate(0deg)' },
+        ] : [{ transform: marketPoses[i] }, { transform: rest }], {
+          duration: selected ? MARKET_TIMING.finish * 1000 : 180,
+          easing: selected ? 'linear' : 'cubic-bezier(.2,.7,.3,1)',
+        });
+      });
+      for (const eyelet of button.querySelectorAll('.instrument__eyelet')) {
+        animate(eyelet, [
+          { boxShadow: 'inset 0 1px 2px #010704,0 1px #ead39a52' },
+          { boxShadow: 'inset 0 1px 2px #010704,0 0 7px #efd29aa6', offset: .35 },
+          { boxShadow: 'inset 0 1px 2px #010704,0 1px #ead39a52' },
+        ], { duration: 230, delay: MARKET_TIMING.inkStart * 1000, easing: 'ease-out' });
+      }
     }
 
     const panel = root.querySelector(`[data-toggle-panel="${values[state.index]}"]`);
@@ -253,7 +273,7 @@ function mountOne(widget) {
       kind === 'army'
         ? panel?.querySelectorAll('.podium__card')
         : kind === 'market'
-          ? panel?.querySelectorAll('.cards > li')
+          ? panel?.querySelectorAll('.r4-stubs--plan > li, .cards > li')
           : panel?.querySelectorAll('.ledger li');
     [...(targets || [])].slice(0, kind === 'sky' ? 6 : 3).forEach((el, i) => {
       const from =
@@ -262,9 +282,9 @@ function mountOne(widget) {
           : kind === 'market'
             ? 'translateY(4px)'
             : 'translateY(4px)';
-      animate(el, [{ opacity: kind === 'sky' ? .65 : .25, transform: from }, { opacity: 1, transform: 'none' }], {
+      animate(el, [{ opacity: kind === 'sky' ? .65 : kind === 'market' ? .8 : .25, transform: from }, { opacity: 1, transform: 'none' }], {
         duration: kind === 'sky' ? 280 : kind === 'market' ? 260 : duration * .65,
-        delay: i * (kind === 'sky' ? 25 : kind === 'market' ? 25 : 45),
+        delay: (kind === 'market' ? 150 : 0) + i * (kind === 'sky' ? 25 : kind === 'market' ? 35 : 45),
         easing: 'cubic-bezier(.16,1,.3,1)',
         fill: 'backwards',
       });
@@ -300,7 +320,7 @@ function mountOne(widget) {
         { transform: 'scaleX(1)', opacity: .3, offset: .8 },
         { transform: 'scaleX(1)', opacity: 0 },
       ],
-      { duration: duration * 1.35, easing: 'cubic-bezier(.25,.7,.3,1)' }
+      { duration: duration * 1.35, delay: (kind === 'sky' ? SKY_TIMING.finish : kind === 'market' ? MARKET_TIMING.finish : 0) * 1000, easing: 'cubic-bezier(.25,.7,.3,1)' }
     );
 
     const start = button.getBoundingClientRect();
@@ -333,13 +353,13 @@ function mountOne(widget) {
       for (let i = 0; i < 6; i++) {
         const a = Math.random() * tau;
         state.parts.push({
-          x: box.x + box.w / 2,
-          y: box.y + box.h / 2,
+          x: kind === 'market' ? box.x + (i % 2 ? box.w - 20 : 20) : box.x + box.w / 2,
+          y: kind === 'market' ? box.y + 8 : box.y + box.h / 2,
           vx: Math.cos(a) * (25 + Math.random() * 75),
           vy: Math.sin(a) * 45,
           life: 0,
           max: .3 + Math.random() * .65,
-          wait: kind === 'sky' ? SKY_TIMING.inkStart + .1 : 0,
+          wait: kind === 'market' ? MARKET_TIMING.inkStart : SKY_TIMING.inkStart + .1,
         });
       }
     }
@@ -494,34 +514,69 @@ function mountOne(widget) {
 
   function market() {
     const a = state.boxes[0], b = state.boxes[1];
-    const y = a.y - 13, left = a.x - 5, right = b.x + b.w + 5;
-    line(c, [[left,y+3],[right,y+3]], '#0a1317', 7);
-    line(c, [[left,y],[right,y]], '#a18a55', 1);
-    line(c, [[left,y+5],[right,y+5]], '#4d5340', 1);
-    for (const x of [left,right]) polygon(c,x-2,y-2,4,10,'#877144','#c5ad71');
-    for (let i=0;i<2;i++) {
-      const box=state.boxes[i], cx=box.x+box.w/2;
-      const active=clamp(1-Math.abs(state.pos-i));
-      line(c,[[cx,y+6],[cx,box.y+4]],'#77633e',2);
-      line(c,[[box.x+15,box.y+box.h-5],[box.x+box.w-15,box.y+box.h-5]],`rgba(104,224,190,${.08+active*.55})`,1);
-      for(const side of [-1,1]) {
-        const x=cx+side*8;
-        line(c,[[x,y-4],[x,y-1]],'#877c54',.8);
-      }
+    const y = a.y - 12, left = a.x - 5, right = b.x + b.w + 5;
+    const rail = c.createLinearGradient(0, y - 2, 0, y + 5);
+    rail.addColorStop(0, '#d8bf86'); rail.addColorStop(.2, '#8a774d');
+    rail.addColorStop(.45, '#2c3528'); rail.addColorStop(.8, '#665a38'); rail.addColorStop(1, '#a08954');
+    polygon(c, left, y - 2, right - left, 7, rail, '#ad945c55');
+    line(c, [[left + 7,y + 2],[right - 7,y + 2]], '#08120a', 2);
+    line(c, [[left + 7,y + 1],[right - 7,y + 1]], '#c2a67355', .8);
+    for (const x of [left,right]) {
+      polygon(c,x - 3,y - 3,6,10,'#52492f','#ceb278');
+      dot(c,x,y + 1,1.5,'#101a10');
+      dot(c,x - .4,y + .5,.7,'#d3bb80');
     }
-    const cx=lerp(a.x+a.w/2,b.x+b.w/2,clamp(state.pos));
-    const speed=clamp(Math.abs(state.velocity)*.25);
-    const copper=c.createLinearGradient(cx-8,y-7,cx+8,y+10);
-    copper.addColorStop(0,'#ead298');copper.addColorStop(.3,'#a58a50');
-    copper.addColorStop(.55,'#3a4234');copper.addColorStop(1,'#c3a467');
-    polygon(c,cx-10,y-7,20,19,'#101b1c','#786946');
-    polygon(c,cx-8,y-8,16,17,copper,'#dfc78e');
-    line(c,[[cx-4,y-3],[cx+3,y-3],[cx+3,y+3],[cx-1,y+3],[cx-1,y]],'#132723',1.4);
-    line(c,[[cx-5,y+7],[cx+5,y+7]],'#93ead0',1);
-    light(c,cx,y+7,12,'#68d9b9',.12+speed*.4);
-    if(state.age<.65) {
-      const fade=Math.sin(clamp(state.age/.65)*Math.PI);
-      line(c,[[Math.min(cx,cx-state.velocity*9),y+3],[Math.max(cx,cx-state.velocity*9),y+3]],`rgba(116,238,204,${fade*.6})`,1);
+    for (let i = 0; i < 2; i++) {
+      const box = state.boxes[i], bx = box.x + box.w / 2;
+      const rig = marketRig[i];
+      const transform = getComputedStyle(rig.sign).transform;
+      const pose = transform === 'none' ? new DOMMatrixReadOnly() : new DOMMatrixReadOnly(transform);
+      // 挂环上端留在横轨，下面跟随牌孔；按牌面实际姿态计算，连续切换也不会脱节。
+      rig.hangers.forEach((hanger, side) => {
+        const anchorX = side ? box.w - 16.5 : 16.5;
+        const armX = anchorX - box.w / 2;
+        const dx = (pose.a - 1) * armX + pose.c * 18 + pose.e;
+        const dy = 19 + pose.b * armX + (pose.d - 1) * 18 + pose.f;
+        const linkPose = `rotate(${Math.atan2(-dx, dy).toFixed(4)}rad) scaleY(${(Math.hypot(dx, dy) / 19).toFixed(4)})`;
+        if (hanger.style.transform !== linkPose) hanger.style.transform = linkPose;
+      });
+      const ink = state.ink[i];
+      const inkValue = ink.toFixed(3);
+      if (buttons[i].style.getPropertyValue('--market-ink') !== inkValue) {
+        buttons[i].style.setProperty('--market-ink', inkValue);
+      }
+      const markY = box.y + box.h + 7;
+      line(c,[[bx - 10,markY],[bx + 10,markY]],`rgba(${rgb},${.05 + ink * .3})`,.7);
+      line(c,[[bx,markY - 2],[bx + 2,markY],[bx,markY + 2],[bx - 2,markY],[bx,markY - 2]],`rgba(${rgb},${.1 + ink * .55})`,.8);
+      light(c,bx,markY,5,`rgba(${rgb},.35)`,ink * .08);
+    }
+    const cx = lerp(a.x + a.w / 2,b.x + b.w / 2,clamp(state.pos));
+    const lockProgress = clamp((state.age - MARKET_TIMING.move) / MARKET_TIMING.lock);
+    const press = Math.sin(lockProgress * Math.PI) * 1.5;
+    const sy = y + press;
+    c.save();
+    c.translate(cx, sy);
+    c.scale(.75, .75);
+    c.translate(-cx, -sy);
+    const copper = c.createLinearGradient(cx - 12,sy - 13,cx + 12,sy + 15);
+    copper.addColorStop(0,'#eddbac'); copper.addColorStop(.23,'#bb995b');
+    copper.addColorStop(.57,'#434934'); copper.addColorStop(.82,'#ac8c50'); copper.addColorStop(1,'#e0be7e');
+    polygon(c,cx - 14,sy - 9,28,26,'#0a140c','#5c5837');
+    polygon(c,cx - 12,sy - 12,24,24,copper,'#e1c58c');
+    polygon(c,cx - 8,sy - 8,16,16,'#303c2a','#d2b47399');
+    line(c,[[cx - 5,sy - 4],[cx + 4,sy - 4],[cx + 4,sy + 3],[cx - 2,sy + 3],[cx - 2,sy]],'#debd7e',1.1);
+    line(c,[[cx - 9,sy + 13],[cx + 9,sy + 13]],'#c8b582',1.5);
+    const knob = c.createLinearGradient(cx - 4,sy - 15,cx + 4,sy - 9);
+    knob.addColorStop(0,'#e5cd96'); knob.addColorStop(1,'#68633d');
+    polygon(c,cx - 5,sy - 16,10,6,knob,'#c3ab70');
+    c.restore();
+    if (state.age > 0 && state.age < MARKET_TIMING.move) {
+      const tail = lerp(a.x + a.w / 2,b.x + b.w / 2,clamp(state.pos - Math.sign(state.index - state.from) * .2));
+      line(c,[[tail,y + 2],[cx,y + 2]],'#93e5be77',1.1);
+      light(c,cx,y + 2,12,'#a6e2ba',.25);
+    }
+    if (state.age > MARKET_TIMING.move && state.age < MARKET_TIMING.inkStart + .1) {
+      light(c,cx,sy + 10,10,'#e4c78a',Math.sin(clamp((state.age - MARKET_TIMING.move) / .18) * Math.PI) * .4);
     }
   }
 
@@ -754,9 +809,9 @@ function mountOne(widget) {
   function sceneFx() {
     if (!f) return;
     f.clearRect(0, 0, innerWidth, innerHeight);
-    const fxAge = state.age - (kind === 'sky' ? SKY_TIMING.finish : 0);
-    const flight = kind === 'sky' ? SKY_TIMING.flight : .78;
-    const afterglow = .57;
+    const fxAge = state.age - (kind === 'sky' ? SKY_TIMING.finish : kind === 'market' ? MARKET_TIMING.finish : 0);
+    const flight = kind === 'sky' ? SKY_TIMING.flight : kind === 'market' ? .55 : .78;
+    const afterglow = kind === 'market' ? .4 : .57;
     if (!state.fx || media.matches || fxAge < 0 || fxAge > flight + afterglow) return;
     const start = state.fx.start;
     const end = totemEnd() || state.fx.end;
@@ -832,6 +887,12 @@ function mountOne(widget) {
           state.pos = lerp(state.from, state.index, eased) + recoil;
           state.velocity = (state.pos - previous) / dt;
           if (state.age >= SKY_TIMING.turnEnd) state.glyph = state.index;
+        } else if (kind === 'market') {
+          const p = clamp(state.age / MARKET_TIMING.move);
+          const eased = 1 - Math.pow(1 - p, 3);
+          const previous = state.pos;
+          state.pos = lerp(state.from, state.index, eased);
+          state.velocity = (state.pos - previous) / dt;
         } else {
           state.velocity += ((state.index - state.pos) * 115 - state.velocity * 20) * dt;
           state.pos += state.velocity * dt;
@@ -841,6 +902,10 @@ function mountOne(widget) {
       if (kind === 'army') {
         advanceInk(dt);
         advanceGleam(dt);
+      } else if (kind === 'market') {
+        state.ink = state.ink.map((ink, i) => i === state.index
+          ? clamp((state.age - MARKET_TIMING.inkStart) / (MARKET_TIMING.finish - MARKET_TIMING.inkStart))
+          : ink * Math.exp(-dt * 14));
       } else if (kind === 'sky') {
         advanceGleam(dt);
         state.ink = state.ink.map((ink, i) => i === state.index
@@ -849,10 +914,10 @@ function mountOne(widget) {
       }
     }
     paint(media.matches ? 0 : dt);
-    const settling = state.age < 1.8 || state.drag ||
+    const settling = state.age < (kind === 'sky' ? 1.8 : 1.6) || state.drag ||
       state.heat.some((heat, i) => Math.abs(heat - (state.hover === i ? 1 : 0)) > .001) ||
       (kind === 'sky' && state.gleam.some((gleam, i) => Math.abs(gleam - (state.hover === i && i !== state.index ? 1 : 0)) > .001));
-    if (!media.matches && state.visible && (kind !== 'sky' || settling)) raf = requestAnimationFrame(tick);
+    if (!media.matches && state.visible && (kind === 'army' || settling)) raf = requestAnimationFrame(tick);
   }
 
   function wake() {
@@ -916,7 +981,7 @@ function mountOne(widget) {
     });
     on(button, 'pointerleave', () => {
       state.hover = -1;
-      if (kind === 'sky') wake();
+      if (kind !== 'army') wake();
     });
     on(button, 'focus', () => {
       state.hover = i;
@@ -925,7 +990,7 @@ function mountOne(widget) {
     });
     on(button, 'blur', () => {
       state.hover = -1;
-      if (kind === 'sky') wake();
+      if (kind !== 'army') wake();
     });
     on(button, 'pointermove', (event) => {
       if (media.matches || event.pointerType === 'touch') return;
@@ -1027,6 +1092,10 @@ function mountOne(widget) {
       ro.disconnect();
       io?.disconnect();
       abort.abort();
+      if (kind === 'market') {
+        buttons.forEach(button => button.style.removeProperty('--market-ink'));
+        marketRig.forEach(({ hangers }) => hangers.forEach(hanger => hanger.style.removeProperty('transform')));
+      }
       field.remove();
     },
   };
