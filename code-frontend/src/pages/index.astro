@@ -6,7 +6,7 @@
 // 点将台摘要 = 点卯簿六列行 + 列名表头（§5.3，综合校场前 5）；页面级表头 / 脚注不搬。
 // 点将台摘要不带报价来源标注（2026-09-23 用户定「不需要」，标注只在 /models 页头一次）。
 import Base from '../layouts/Base.astro';
-import TicketCard from '../components/TicketCard.vue';
+import TicketCard from '../components/TicketCard.astro';
 import GithubLedgerRow from '../components/GithubLedgerRow.astro';
 import ModelRollRow from '../components/ModelRollRow.astro';
 import { github, models, tickets } from '../lib/data.js';

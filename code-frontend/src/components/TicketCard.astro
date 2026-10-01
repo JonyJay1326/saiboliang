@@ -1,0 +1,10 @@
+---
+// 票卡（构建期渲染成静态 HTML，无 JS 可读、SEO 可抓）。
+// 2026-10-01 由 TicketCard.vue 转换而来：全站无 client:* 指令，Vue 仅为构建期求值而引入，
+// 却让 73KB Vue 运行时被打进产物且无人加载。改用 Astro + set:html 后可移除 @astrojs/vue。
+// 与 PlanCard.astro 同一套写法。
+import { renderTicketCard } from '../lib/stubs.js';
+const { ticket, index = 0 } = Astro.props;
+const html = renderTicketCard(ticket, index);
+---
+<Fragment set:html={html} />

@@ -1,12 +1,10 @@
 import { defineConfig } from 'astro/config';
-import vue from '@astrojs/vue';
 
 // 站点：GitHub Pages 源站 + Cloudflare 代理自定义域名，故 base 为根。
 // 路由纪律：真实路径、目录形式输出（/github/ → /github/index.html），禁用 hash 路由。
 export default defineConfig({
   site: 'https://saiboliang.top',
   output: 'static',
-  integrations: [vue()],
   build: {
     format: 'directory',
   },

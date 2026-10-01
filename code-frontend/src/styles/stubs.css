@@ -1,5 +1,4 @@
 /* 用户确认的 R4 票根与详情定稿；仅作用于 r4- 组件。 */
-.r4-card { height: 100%; min-width: 0; }
 .r4-stubs > li { min-width: 0; }
 .r4-stubs--wall { margin-top: 3rem !important; }
 :is(.r4-stub, .r4-sheet) { font-family: var(--song); overflow-wrap: anywhere; }
@@ -24,7 +23,6 @@
   .r4-flag { padding: 0 6px; font-size: var(--fs-micro); letter-spacing: .08em; border-radius: 2px; white-space: nowrap; }
   .r4-flag--ad { color: var(--cyan); border: 1px solid rgba(63,217,192,.5); }
   .r4-flag--src { color: var(--faint); border: 1px dashed var(--line-dim); }
-  .r4-flag--off { color: var(--alarm); border: 1px solid rgba(255,107,87,.6); }
   .r4-chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: 0; padding: 0; list-style: none; }
   .r4-chips li { padding: 0 7px; font-family: var(--code); font-size: var(--fs-micro); line-height: 1.8; color: var(--dim); border: 1px solid var(--line-dim); border-radius: 2px; white-space: nowrap; }
 
@@ -40,10 +38,6 @@
   .r4-stub--plan { grid-template-columns: minmax(0, 1fr) 9.5rem; }
   .r4-stub.r4-is-live { transition-duration: .08s; }
   .r4-stub.r4-is-in { animation: r4-boot .8s var(--ease-out) calc(var(--i) * 60ms) both; }
-  
-  .r4-stub[data-tier="乙"].r4-is-in:not(:hover):not(:focus-within) {
-    filter: var(--glow-card) drop-shadow(0 0 10px rgba(63,217,192,.22));
-  }
   .r4-stub:is(:hover, :focus-within) { --lift: -2px; filter: var(--glow-lift) drop-shadow(0 0 22px var(--tier-soft)); }
   .r4-stub:active { --lift: 1px; }
   :where(.r4-stub, .r4-sheet, .r4-tip) { --ease-out: cubic-bezier(.16, 1, .3, 1); }
@@ -178,19 +172,13 @@
   .r4-stub__notch { position: absolute; left: -9px; z-index: 4; width: 16px; height: 8px; box-sizing: border-box; background: var(--ink); border: 1px solid var(--edge); pointer-events: none; }
   .r4-stub__notch--t { top: -1px; border-top: none; border-radius: 0 0 8px 8px; }
   .r4-stub__notch--b { bottom: -1px; border-bottom: none; border-radius: 8px 8px 0 0; }
-  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__side {
-    transform: translateX(7px) rotate(1.6deg);
-    box-shadow: -6px 4px 18px -6px rgba(0,0,0,.55), 0 0 28px -8px var(--tier-soft);
-  }
   
   .r4-stub__holo { position: absolute; inset: 0; z-index: 0; pointer-events: none; border-radius: inherit; background: linear-gradient(115deg, transparent 24%, rgba(255,90,200,.20) 40%, rgba(80,230,255,.24) 50%, rgba(255,230,120,.20) 60%, transparent 76%) 0 0 / 200% 100%; background-position: 46% 0; mix-blend-mode: screen; opacity: 0; transition: opacity .2s ease; }
-  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__holo { opacity: 1; animation: r4-holo 1.4s linear 2; }
   span.r4-stub__seal { display: grid; place-items: center; font-family: var(--song); font-size: 26px; font-weight: 700; color: color-mix(in srgb, var(--ver) 74%, #ff9a80); letter-spacing: 0; }
   
   .r4-stub__badge { position: relative; z-index: 1; display: grid; place-items: center; }
   .r4-stub__seal { width: 46px; height: 46px; transform: rotate(-6deg); filter: drop-shadow(0 0 10px rgba(200,52,42,.55)); transition: transform .3s cubic-bezier(.3,1.6,.5,1), filter .3s ease; }
   .r4-stub.r4-is-in .r4-stub__seal { animation: r4-neon .7s ease-out calc(min(var(--i), 6) * 55ms + .3s) both; }
-  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__seal { transform: rotate(-1deg) scale(1.08); filter: drop-shadow(0 0 16px rgba(255,70,50,.85)); }
 
   
   .r4-stub__left { position: relative; z-index: 1; font-size: var(--fs-body); letter-spacing: .08em; color: var(--tier-ink); }
@@ -216,12 +204,9 @@
   
   .r4-cta { position: relative; z-index: 2; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: .3rem; width: 100%; padding: .5rem 0; font: inherit; font-size: var(--fs-body); font-weight: 700; letter-spacing: .18em; text-indent: .18em; color: #0b0916; border: 1px solid color-mix(in srgb, var(--tier) 58%, #fff); border-radius: 2px; background: linear-gradient(100deg, var(--tier), var(--tier-deep)); box-shadow: 0 0 12px var(--tier-soft), inset 0 1px 0 rgba(255,255,255,.4); cursor: pointer; transition: box-shadow .2s ease, transform .1s ease, filter .2s ease; }
   .r4-cta::before { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.65), transparent); transform: skewX(-20deg); }
-  .r4-cta:hover { box-shadow: 0 0 22px var(--tier), inset 0 1px 0 rgba(255,255,255,.5); filter: brightness(1.06); }
-  .r4-cta:hover::before { animation: r4-sweep .6s ease-out 1; }
   .r4-cta:active { transform: scale(.96); }
   .r4-cta:focus-visible { outline: 2px solid var(--tier-ink); outline-offset: 2px; }
   .r4-cta span { display: inline-block; letter-spacing: 0; text-indent: 0; transition: transform .25s ease; }
-  .r4-cta:hover span { transform: translateX(3px); }
   .r4-barcode { width: 100%; height: 12px; color: var(--tier); opacity: .5; transition: opacity .2s ease, filter .2s ease; }
   .r4-stub:is(:hover, :focus-within) .r4-barcode { opacity: .85; filter: drop-shadow(0 0 4px var(--tier-soft)); }
   .r4-stub__serial { font-family: var(--code); font-size: var(--fs-micro); letter-spacing: .06em; color: var(--tier); opacity: .9; }
@@ -232,10 +217,7 @@
   .r4-beam__span { position: absolute; top: 50%; height: 3px; transform: translateY(-50%); background: var(--tier); opacity: .55; box-shadow: 0 0 8px var(--tier); }
   .r4-beam__tick, .r4-beam__deal { position: absolute; top: 50%; z-index: 2; width: 10px; height: 10px; margin: -5px 0 0 -5px; cursor: help; transition: transform .15s ease, box-shadow .15s ease; }
   .r4-beam__tick { background: var(--tier); transform: rotate(45deg); box-shadow: 0 0 6px var(--tier); }
-  .r4-beam__tick:hover { transform: rotate(45deg) scale(1.6); box-shadow: 0 0 12px var(--tier); }
   .r4-beam__deal { border: 2px solid var(--deal); border-radius: 50%; background: #0b0916; }
-  .r4-beam__deal:hover { transform: scale(1.5); box-shadow: 0 0 12px var(--deal); }
-  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-beam__tick, .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-beam__deal { animation: r4-blip .5s ease-out calc(var(--k) * 70ms) 1; }
   .r4-beam__link { position: absolute; top: 50%; border-top: 1px dashed var(--deal); opacity: .8; }
   .r4-beam__free { position: absolute; left: 0; top: 50%; z-index: 2; transform: translateY(-50%); padding: 0 5px; font-size: var(--fs-micro); line-height: 1.5; color: #0b0916; background: var(--cyan); border-radius: 2px; cursor: help; }
   
@@ -298,7 +280,6 @@
   .r4-sheet__bar { display: flex; align-items: center; gap: .8rem; padding: .55rem .6rem .55rem 1.1rem; font-family: var(--code); font-size: var(--fs-micro); letter-spacing: .1em; color: var(--tier); border-bottom: 1px solid var(--tier-faint); background: rgba(0,0,0,.35); }
   .r4-sheet__bar span:nth-child(2) { color: var(--faint); }
   .r4-sheet__close { margin-left: auto; display: flex; align-items: center; gap: .4rem; padding: .3rem .8rem; font: inherit; font-family: var(--song); font-size: var(--fs-body); letter-spacing: .12em; color: var(--dim); background: none; border: 1px solid var(--line-dim); border-radius: 2px; cursor: pointer; }
-  .r4-sheet__close:hover { color: var(--tier-ink); border-color: var(--tier); }
   .r4-sheet__close kbd { font-family: var(--code); font-size: var(--fs-micro); color: var(--faint); }
   
   .r4-sheet__scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: clip; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--tier-faint) transparent; }
@@ -349,7 +330,6 @@
   .r4-sheet__sec > h3 small { font-family: var(--code); font-size: var(--fs-micro); font-weight: 400; letter-spacing: .12em; color: var(--faint); }
   .r4-sheet__sec > p:not([class]) { margin: 0 0 .5rem; font-size: var(--fs-body); line-height: 1.85; color: var(--dim); }
   .r4-sheet__sec a:not(.r4-cta) { color: var(--cyan); border-bottom: 1px dashed rgba(63,217,192,.5); }
-  .r4-sheet__sec a:not(.r4-cta):hover { border-bottom-style: solid; }
   .r4-sheet__sec strong { color: var(--tier-ink); font-weight: 700; }
 
   
@@ -382,7 +362,6 @@
   
   .r4-minis { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .6rem; margin: 0; padding: 0; list-style: none; }
   .r4-mini { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .6rem; width: 100%; padding: .55rem .7rem; font: inherit; text-align: left; color: var(--text); border: 1px solid var(--tier-faint); border-right-style: dashed; border-radius: 2px; background: linear-gradient(120deg, var(--tier-bg1), transparent); cursor: pointer; transition: border-color .15s ease, transform .15s ease; }
-  .r4-mini:hover { border-color: var(--tier); transform: translateX(3px); }
   .r4-mini b { display: block; font-size: var(--fs-body); font-weight: 600; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .r4-mini small { font-size: var(--fs-micro); color: var(--faint); }
   .r4-mini span { font-family: var(--code); font-size: var(--fs-micro); color: var(--tier); }
@@ -395,13 +374,10 @@
   .r4-scale__lab.r4-is-up { top: 0; }
   .r4-scale__lab.r4-is-down { top: 58px; }
   .r4-scale__lab.r4-is-deal b { color: var(--deal); }
-  .r4-scale__axis { position: absolute; left: 0; right: 0; bottom: -6px; height: 14px; }
-  .r4-scale__axis span { position: absolute; transform: translateX(-50%); font-family: var(--code); font-size: var(--fs-micro); color: var(--faint); opacity: .7; }
 
   
   .r4-tiers { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(10.5rem, 1fr); gap: .7rem; overflow-x: auto; padding-bottom: .4rem; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--tier-faint) transparent; }
   .r4-tier { position: relative; display: flex; flex-direction: column; gap: .4rem; padding: .85rem .9rem .9rem; scroll-snap-align: start; border: 1px solid var(--tier-faint); border-radius: 2px; background: rgba(255,255,255,.015); transition: border-color .15s ease, background .15s ease; }
-  .r4-tier:hover { border-color: var(--tier); background: var(--tier-bg1); }
   .r4-tier[data-start] { border-color: var(--tier); box-shadow: 0 0 18px -8px var(--tier-soft); }
   .r4-tier[data-start]::before { content: "起步档"; position: absolute; top: -1px; right: -1px; padding: 0 6px; font-size: var(--fs-micro); letter-spacing: .1em; color: #0b0916; background: var(--tier); }
   .r4-tier h4 { margin: 0; font-size: var(--fs-body); font-weight: 600; color: var(--text); }
@@ -433,7 +409,6 @@
   .r4-sheet__dock { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; padding: .7rem 1.1rem; border-top: 1px solid var(--tier-faint); background: rgba(0,0,0,.45); }
   .r4-sheet__dock .r4-cta { width: auto; min-width: 11rem; margin-left: auto; padding: .6rem 1.4rem; font-size: var(--fs-body); }
   .r4-sheet__dock > a:not(.r4-cta) { font-size: var(--fs-micro); color: var(--faint); border-bottom: 1px dashed var(--line-dim); }
-  .r4-sheet__dock > a:not(.r4-cta):hover { color: var(--alarm); border-bottom-color: var(--alarm); }
   .r4-sheet__dock .r4-barcode { width: 7rem; height: 18px; }
 
   @media (max-width: 640px) {
@@ -532,3 +507,46 @@
 }
 
 .r4-stub__title a { color: inherit; }
+
+/* 乙档非悬停态：:not(:hover) 表示「未悬停」而非「悬停」，故留在 hover 媒体查询之外 */
+.r4-stub[data-tier="乙"].r4-is-in:not(:hover):not(:focus-within) {
+  filter: var(--glow-card) drop-shadow(0 0 10px rgba(63,217,192,.22));
+}
+
+/* ===== hover 专用（2026-10-01 移动端适配）：触摸端无真实 hover，
+   把这些规则收进 hover 媒体查询，避免点按后视觉态粘住。
+   含 :focus-within / :focus-visible 的组合选择器不在此列（键盘路径须保留）。===== */
+@media (hover: hover) and (pointer: fine) {
+
+  
+.r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__side {
+    transform: translateX(7px) rotate(1.6deg);
+    box-shadow: -6px 4px 18px -6px rgba(0,0,0,.55), 0 0 28px -8px var(--tier-soft);
+  }
+
+  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__holo { opacity: 1; animation: r4-holo 1.4s linear 2; }
+
+  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__seal { transform: rotate(-1deg) scale(1.08); filter: drop-shadow(0 0 16px rgba(255,70,50,.85)); }
+
+  .r4-cta:hover { box-shadow: 0 0 22px var(--tier), inset 0 1px 0 rgba(255,255,255,.5); filter: brightness(1.06); }
+
+  .r4-cta:hover::before { animation: r4-sweep .6s ease-out 1; }
+
+  .r4-cta:hover span { transform: translateX(3px); }
+
+  .r4-beam__tick:hover { transform: rotate(45deg) scale(1.6); box-shadow: 0 0 12px var(--tier); }
+
+  .r4-beam__deal:hover { transform: scale(1.5); box-shadow: 0 0 12px var(--deal); }
+
+  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-beam__tick, .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-beam__deal { animation: r4-blip .5s ease-out calc(var(--k) * 70ms) 1; }
+
+  .r4-sheet__close:hover { color: var(--tier-ink); border-color: var(--tier); }
+
+  .r4-sheet__sec a:not(.r4-cta):hover { border-bottom-style: solid; }
+
+  .r4-mini:hover { border-color: var(--tier); transform: translateX(3px); }
+
+  .r4-tier:hover { border-color: var(--tier); background: var(--tier-bg1); }
+
+  .r4-sheet__dock > a:not(.r4-cta):hover { color: var(--alarm); border-bottom-color: var(--alarm); }
+}
