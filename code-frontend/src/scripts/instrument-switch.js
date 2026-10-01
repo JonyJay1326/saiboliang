@@ -78,6 +78,7 @@ function mountOne(widget) {
   let raf = 0;
   let last = 0;
   let disposed = false;
+  let fxLast = false; /* 上一帧是否真在 field 上画过流光；用于 fx 结束时补清一次 */
 
   function line(ctx, points, color, width = 1) {
     ctx.beginPath();
@@ -684,9 +685,18 @@ function mountOne(widget) {
   }
 
   function sceneFx() {
-    if (!f) return;
+    if (!f || !field.width) return;
+    /* 流光只在切换后的 1.35s 内存在，且 fire() 仅在 innerWidth > 760 时才建 fx。
+       此前静止时（fx 为 null）仍每帧无条件 clearRect 一块全屏离屏画布；窄屏上该画布
+       display:none 却照样按 innerWidth×dpr 分配（390×844×2 ≈ 263 万像素），纯浪费。
+       改为：先判本帧是否真要画，不要就直接返回（fxLast 记录上帧画过，结束时补清一次残留）。 */
+    const live = Boolean(state.fx) && !media.matches && state.age <= 1.35;
+    if (!live) {
+      if (fxLast) { f.clearRect(0, 0, innerWidth, innerHeight); fxLast = false; }
+      return;
+    }
     f.clearRect(0, 0, innerWidth, innerHeight);
-    if (!state.fx || media.matches || state.age > 1.35) return;
+    fxLast = true;
     const start = state.fx.start;
     const end = totemEnd() || state.fx.end;
     const t = clamp(state.age / .78);
@@ -790,8 +800,16 @@ function mountOne(widget) {
       const b = button.getBoundingClientRect();
       return { x: b.x - rect.x, y: b.y - rect.y, w: b.width, h: b.height };
     });
-    field.width = Math.round(innerWidth * dpr);
-    field.height = Math.round(innerHeight * dpr);
+    /* 窄屏（≤760px）流光不画：fire() 同样只在 innerWidth > 760 时建 fx，且 CSS 已把
+       .instrument__field 设为 display:none。此时置 0×0 —— 既不分配内存，也让 sceneFx 首行
+       的 !field.width 早退，两处浪费一起消掉。桌面端行为不变。 */
+    if (innerWidth > 760) {
+      field.width = Math.round(innerWidth * dpr);
+      field.height = Math.round(innerHeight * dpr);
+    } else {
+      field.width = 0;
+      field.height = 0;
+    }
     if (f) f.setTransform(dpr, 0, 0, dpr, 0, 0);
     state.fx = null;
     paint(0);
@@ -823,13 +841,17 @@ function mountOne(widget) {
   }
 
   buttons.forEach((button, i) => {
-    on(button, 'pointerenter', () => {
+    /* 悬停描亮只认鼠标：触摸端 pointerenter 紧随 pointerdown，会置 hover 并 wake()，
+       让 advanceGleam 每帧对所有按钮做无意义的 lerp。与同文件 pointermove 的处理一致。 */
+    on(button, 'pointerenter', (event) => {
+      if (event.pointerType === 'touch') return;
       state.hover = i;
       // 每次进入都从头描一遍，避免接着上次的进度闪一下
       if (kind === 'army' && i !== state.index) state.gleam[i] = 0;
       wake();
     });
-    on(button, 'pointerleave', () => {
+    on(button, 'pointerleave', (event) => {
+      if (event.pointerType === 'touch') return;
       state.hover = -1;
     });
     on(button, 'focus', () => {

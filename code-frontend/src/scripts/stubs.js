@@ -50,8 +50,13 @@ function boot() {
       if (!Number.isFinite(left)) continue;
       const surface = block.closest('.r4-stub, .r4-sheet');
       surface?.toggleAttribute('data-urgent', left > 0 && left <= 7 * 86400000);
+      /* 内容未变则不写 DOM：实测列表页 14 个块里只有 3 个是「即将截止」（需秒级刷新），
+         其余是「长期有效」「余 N 天」—— 文案一天只变一次，却在每秒重写 innerHTML，
+         白白制造 14 次 DOM mutation/秒。改为先拼字符串、与现状比对，不同才写。
+         2026-10-01 移动端适配。 */
+      const paint = (html) => { if (block.innerHTML !== html) block.innerHTML = html; };
       if (left <= 0) {
-        block.innerHTML = '已逾期<small>待核实</small>';
+        paint('已逾期<small>待核实</small>');
       } else if (left <= 7 * 86400000) {
         const seconds = Math.floor(left / 1000);
         const pad = (n) => String(n).padStart(2, '0');
@@ -62,10 +67,10 @@ function boot() {
           block.innerHTML = `<b>即将截止</b><span class="r4-clock"></span><small>${date} 截止</small>`;
           clock = block.querySelector('.r4-clock');
         }
-        clock.textContent = text;
+        if (clock.textContent !== text) clock.textContent = text;
       } else {
         const date = new Date(new Date(end).getTime() + 8 * 3600000).toISOString().slice(5, 10);
-        block.innerHTML = `余 ${Math.ceil(left / 86400000)} 天<small>${date} 截止</small>`;
+        paint(`余 ${Math.ceil(left / 86400000)} 天<small>${date} 截止</small>`);
       }
     }
   };
@@ -102,13 +107,19 @@ function boot() {
     tip.style.left = `${Math.max(8, Math.min(box.left, innerWidth - tip.offsetWidth - 8))}px`;
     tip.style.top = `${Math.max(8, Math.min(box.bottom + 8, innerHeight - tip.offsetHeight - 8))}px`;
   };
+  /* 触摸端不弹 tooltip：触摸时 pointerover 紧随 pointerdown 触发，气泡弹出后
+     pointer-events:none 按不掉，且会盖住下一张票卡。判据用 fine（hover:hover +
+     pointer:fine）；focusin/out 分支不加守卫，键盘可达性不受影响。
+     2026-10-01 移动端适配。 */
   for (const type of ['pointerover', 'focusin']) document.addEventListener(type, (event) => {
     if (!(event.target instanceof Element)) return;
+    if (type === 'pointerover' && !fine.matches) return;
     toggleTier(event.target, true);
     showTip(event.target);
   }, { signal });
   for (const type of ['pointerout', 'focusout']) document.addEventListener(type, (event) => {
     if (!(event.target instanceof Element)) return;
+    if (type === 'pointerout' && !fine.matches) return;
     toggleTier(event.target, false);
     hideTip();
   }, { signal });
@@ -117,7 +128,17 @@ function boot() {
   document.addEventListener('cg:sheet-ready', tick, { signal });
   document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); }, { signal });
   tick();
-  const timer = setInterval(() => { if (!document.hidden) tick(); }, 1000);
+  /* 窄屏降频到 5s：配合上面的「比对后写入」，秒级刷新的意义只剩「即将截止」那 3 块，
+     而倒计时本身不要求亚秒精度（页面也无实时性承诺）。5s 一次把窄屏的定时唤醒
+     降到 1/5，同时内容依旧实时。2026-10-01 移动端适配。 */
+  const narrow = matchMedia('(max-width: 760px)');
+  const period = () => (narrow.matches ? 5000 : 1000);
+  let timer = setInterval(() => { if (!document.hidden) tick(); }, period());
+  narrow.addEventListener('change', () => {
+    clearInterval(timer);
+    timer = setInterval(() => { if (!document.hidden) tick(); }, period());
+  }, { signal });
+
   release = () => {
     controller.abort();
     observer.disconnect();

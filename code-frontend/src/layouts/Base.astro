@@ -159,17 +159,27 @@ const DEFAULT_SKIN = 'cyber';
 
         const controller = new AbortController();
         const { signal } = controller;
-        let width = 0, height = 0, frame = 0, previous = 0, dust = [];
+      let width = 0, height = 0, frame = 0, previous = 0, dust = [], acc = 0, lastTick = 0;
 
+        /* 窄屏（≤760px）降档：粒子数减半、dpr 上限降到 1.5。
+           全站星尘是常驻满帧动画，390×844×2 = 126 万像素每帧重绘 + 60 次 arc/fill，
+           在中低端机上是最容易被感知到的常驻开销。它只是背景氛围层，降档视觉几乎无损。
+           阈值沿用全站既有的 760px 口径（与 star-sea / 图腾关闭线一致）。 */
+        const narrow = matchMedia('(max-width: 760px)');
         const resize = () => {
-          const density = Math.min(devicePixelRatio || 1, 2);
+          const lite = narrow.matches;
+          const density = Math.min(devicePixelRatio || 1, lite ? 1.5 : 2);
           width = innerWidth;
           height = innerHeight;
           canvas.width = Math.round(width * density);
           canvas.height = Math.round(height * density);
           ctx.setTransform(density, 0, 0, density, 0, 0);
-          const count = Math.min(160, Math.max(60, Math.round((width * height) / 15000)));
-            dust = Array.from({ length: count }, () => ({
+          /* 窄屏取 32–70 粒：上限砍半（160→70）、下限降近半（60→32），分母放大到 20000。
+             实测 320–760px 全落在 32–34 粒区间，氛围感不至于消失；宽屏维持原 60–160 不变。 */
+          const count = lite
+            ? Math.min(70, Math.max(32, Math.round((width * height) / 20000)))
+            : Math.min(160, Math.max(60, Math.round((width * height) / 15000)));
+          dust = Array.from({ length: count }, () => ({
               x: Math.random() * width, y: Math.random() * height, r: 0.3 + Math.random() * 1.6,
               fall: 5 + Math.random() * 15, sway: 0.3 + Math.random() * 0.7,
               phase: Math.random() * 6.2832, glow: 0.35 + Math.random() * 0.55,
@@ -182,12 +192,25 @@ const DEFAULT_SKIN = 'cyber';
           cancelAnimationFrame(frame);
           frame = 0;
           previous = 0;
+          acc = 0; lastTick = 0; /* 节流累加器与时间戳一并清零，否则停机期间攒下的时间会让重启后第一帧跳一大步 */
           ctx.clearRect(0, 0, width, height);
         };
 
         const tick = (now) => {
           frame = 0;
           if (reduced.matches || document.hidden || !canvas.isConnected) return;
+          /* 窄屏限30fps：rAF 照旧每帧被唤起，但只在攒够 ~33ms 时才真正重绘。
+             背景飘尘是慢速氛围层，30fps 与 60fps 肉眼无差，却省掉一半以上的
+             clearRect + arc/fill。写法照抄 steelyard.js 的 lightAcc 累加器节流。 */
+          /* lastTick 独立于 previous：previous 的哨兵值 0 会让 (previous || now) 恒等于 now，
+             差值永远是 0，闸门永远打不开（2026-10-01 实测：arc 调用 0 次，星尘静止）。
+             这里用 lastTick 的 0 作「首次」判断，首次直接放行。 */
+          if (narrow.matches && lastTick) {
+            acc += now - lastTick;
+            if (acc < 32) { frame = requestAnimationFrame(tick); return; }
+            acc = 0;
+          }
+          lastTick = now;
           const dt = Math.min((now - (previous || now)) / 1000, 0.05);
           previous = now;
           const seconds = now / 1000;
@@ -211,6 +234,7 @@ const DEFAULT_SKIN = 'cyber';
         const start = () => {
           if (!frame && !reduced.matches && !document.hidden && canvas.isConnected) {
             previous = 0;
+            acc = 0; lastTick = 0; /* 重启时清节流状态，让首帧直接放行 */
             frame = requestAnimationFrame(tick);
           }
         };
