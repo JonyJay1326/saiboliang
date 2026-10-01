@@ -459,18 +459,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "xiaolai/the-craft-of-selfteaching",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "One has no future if one couldn't teach themself.",
-      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
-    },
-    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "trailofbits/coop",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -753,18 +741,6 @@
       "sourceUrl": "https://github.com/golang/go"
     },
     "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "flexprice/flexprice",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Usage-based pricing and billing for developers 🔓 Cloud or self-hosted ⚙️ No-code UI 💰 Realtime usage metering 🎟 Credits & top-ups 🔑 Control feature access",
-      "sourceUrl": "https://github.com/flexprice/flexprice"
-    },
-    "id": "2ea01e4a8c639d21f5ab615f7c9d4f48702eb1b8755eda2f522d7d6e3e484c3e",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
   },
@@ -1139,5 +1115,28 @@
     "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
     "status": "pending",
     "createdAt": "2026-09-30T11:42:49Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "frappe/crm",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully featured, open source CRM",
+      "sourceUrl": "https://github.com/frappe/crm"
+    },
+    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
+    "status": "pending",
+    "createdAt": "2026-10-01T10:14:21Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-01T10:14:21Z"
   }
 ]

@@ -89,11 +89,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T09:20:54Z"
   },
-  "tech-leads-club/agent-skills": {
-    "text": "面向专业 AI 编程代理的安全、经验证的技能注册表，可为 Antigravity、Claude Code、Cursor、Copilot 等扩展。",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T09:20:54Z"
-  },
   "mobile-next/mobile-mcp": {
     "text": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
     "source": "deepseek-flash",
@@ -218,5 +213,10 @@
     "text": "让你的文档为生成式 AI 做好准备。",
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
+  },
+  "genspark-ai/genoffice": {
+    "text": "免费开源 AI Office 套件：Docs、Sheets、Slides、PDF、Markdown 和 HTML 编辑器，内置 AI agent，并提供 genoffice CLI 与 agent skill，让 Claude Code、Codex 和 Cursor 在本地创建和编辑真实的 .docx/.xlsx/.pptx 文件。自带密钥。支持 macOS、Windows 和 Linux。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T10:14:21Z"
   }
 }

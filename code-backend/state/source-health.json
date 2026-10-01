@@ -1,37 +1,37 @@
 {
   "tickets": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "lastAttempt": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "lastAttempt": "2026-10-01T10:14:21Z",
     "error": null,
     "configHash": "eb4bf35abfd6f007e06d0b35fa06b615ef037098663196965fc79cbfa8e25272"
   },
   "models": {
-    "lastSuccess": "2026-09-30T09:16:05Z",
-    "lastAttempt": "2026-09-30T09:16:05Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "lastAttempt": "2026-10-01T10:14:21Z",
     "error": null,
     "configHash": "eb4bf35abfd6f007e06d0b35fa06b615ef037098663196965fc79cbfa8e25272"
   },
   "aa": {
-    "lastSuccess": "2026-09-30T09:16:05Z",
-    "count": 686
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "count": 688
   },
   "github": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "lastAttempt": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "lastAttempt": "2026-10-01T10:14:21Z",
     "error": null,
     "configHash": "eb4bf35abfd6f007e06d0b35fa06b615ef037098663196965fc79cbfa8e25272"
   },
   "github-weekly": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "count": 159
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "count": 158
   },
   "github-monthly": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "count": 178
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "count": 179
   },
   "news": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "lastAttempt": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "lastAttempt": "2026-10-01T10:14:21Z",
     "error": null,
     "configHash": "eb4bf35abfd6f007e06d0b35fa06b615ef037098663196965fc79cbfa8e25272"
   },
@@ -40,7 +40,7 @@
     "count": 119
   },
   "qbit": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "infoq": {
@@ -48,7 +48,7 @@
     "count": 20
   },
   "zhidx": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "solidot": {
@@ -60,15 +60,15 @@
     "count": 60
   },
   "deepseek": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 5
   },
   "anthropic": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "ernie": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 16
   },
   "zhipu-news": {
@@ -76,115 +76,115 @@
     "count": 15
   },
   "tencent-announce": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 12
   },
   "meta": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "hf-qwen": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "hf-zai": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "hf-moonshot": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 19
   },
   "hf-tencent": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "hf-baidu": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "hf-stepfun": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "openai": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "count": 1239
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "count": 1240
   },
   "google-ai": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 20
   },
   "deepmind": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 100
   },
   "github-changelog": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "github-copilot": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "nvidia": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 18
   },
   "microsoft-ai": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "azure": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 9
   },
   "alibaba-bailian": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 167
   },
   "tencent-tokenhub": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 7
   },
   "baidu-qianfan": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 165
   },
   "kimi-blog": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 9
   },
   "mistral": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 88
   },
   "ollama": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 59
   },
   "together": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 81
   },
   "replicate": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 121
   },
   "cursor": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 5
   },
   "openrouter": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 69
   },
   "opencode": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
+    "lastSuccess": "2026-10-01T10:14:21Z",
     "count": 10
   },
   "commandcode": {
-    "lastSuccess": "2026-09-30T16:50:43Z",
-    "count": 407
+    "lastSuccess": "2026-10-01T10:14:21Z",
+    "count": 408
   }
 }

@@ -1,12 +1,7 @@
 {
-  "532f254b17e03693cf5407bf66cd555c818a96f71ad0db349a99524d9698e16e": {
-    "summary": "NVIDIA Vera Rubin NVL72与Vera CPU在CoreWeave上加速Cognition等公司的智能体AI。",
+  "ce56aa83d0064ef1be25967db1553bdc8e45096edaa34de2aa87655b81b09ce8": {
+    "summary": "Gemini 4 Argon发布，面向现实编码、企业知识工作与网络防御，即将推出。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T16:50:43Z"
-  },
-  "bbefdaefb76473f7b44babc5a65f6dd5645469af4168239c5331fe7af32f110f": {
-    "summary": "Ollama支持基于TypeSafe Jev API的决策模型，可低成本低延迟回答是非、选择与评分。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T16:50:43Z"
+    "at": "2026-10-01T10:14:21Z"
   }
 }

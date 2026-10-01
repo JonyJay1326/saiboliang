@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-09-30T16:50:43Z",
+  "dataUpdatedAt": "2026-10-01T10:14:21Z",
   "items": [
+    {
+      "title": "Gemini 4 Argon：我们前沿智能的新时代",
+      "sourceUrl": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "publishedAt": "2026-09-30T20:01:45Z",
+      "source": "Google DeepMind",
+      "summary": "Gemini 4 Argon发布，面向现实编码、企业知识工作与网络防御，即将推出。",
+      "id": "ce56aa83d0064ef1be25967db1553bdc8e45096edaa34de2aa87655b81b09ce8",
+      "originalTitle": "Gemini 4 Argon: our next era of frontier intelligence",
+      "translatedAt": "2026-10-01T10:14:21Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "originalVerifiedAt": "2026-10-01T10:14:21Z",
+      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-01T10:14:21Z",
+      "featured": true
+    },
     {
       "title": "从训练到生产，NVIDIA 与 CoreWeave 闭环智能体 AI",
       "sourceUrl": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
@@ -132,7 +151,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T16:50:43Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Command Code 发布 v1.71.0",
@@ -284,7 +303,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T16:50:43Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "英伟达发布开放智能体安全平台，保障智能体从测试到部署全流程安全",
@@ -2643,6 +2662,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-30T16:50:43Z",
-  "generatedAt": "2026-09-30T16:50:43Z"
+  "version": "2026-10-01T10:14:21Z",
+  "generatedAt": "2026-10-01T10:14:21Z"
 }
