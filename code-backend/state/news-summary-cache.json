@@ -1,7 +1,22 @@
 {
-  "ce56aa83d0064ef1be25967db1553bdc8e45096edaa34de2aa87655b81b09ce8": {
-    "summary": "Gemini 4 Argon发布，面向现实编码、企业知识工作与网络防御，即将推出。",
+  "c08402b8f22a4b159df3858cefc3416269ca944c9595105093b01c30fd1a8c02": {
+    "summary": "巴克莱扩大与Anthropic合作，在全球业务中整合企业级AI系统。",
     "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "cad13c49eff0df4a6694b1ab98b5d2fd21fb83a1013f6407371fe2156b638a7e": {
+    "summary": "HydraFusion研究预览版登陆VS Code和GitHub Copilot应用，出现在模型选择器中。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "36138c270920188f9af74a1fbc8a95649774fc2c948077d26f8ecf3ff152168d": {
+    "summary": "微软在巴塞罗那FabCon和SQLCon 2026发布Fabric与SQL创新，助建AI可信数据基础。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "72f44fe89284c5f892c68e71edcd0b90c422c7c5539aefe36ae16cb2d02ef459": {
+    "summary": "开源编码代理OpenCode发布v2.0.19版本。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
   }
 }

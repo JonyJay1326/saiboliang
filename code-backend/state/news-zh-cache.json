@@ -1,10 +1,4 @@
 {
-  "deeacf9a73c457054e9489987825836f0a14d0deb14ba2387752e62472b717f3": {
-    "title": "推出 Meta Enterprise Platform",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
-  },
   "3044f63155f8b6ed683de58550e1f8123e3e315254ea7eb5763eef6da373c893": {
     "title": "未来属于每个人：面向小企业的 Muse",
     "summary": "我们推出 Muse for Small Business，一个在后台工作的个人 AI 代理，帮助您的小企业实现目标。",
@@ -29,23 +23,11 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T09:55:24Z"
   },
-  "1d09516522abfde5d3cf8f8aebc3dd40645917feb89f23baef210c4da41a9cf1": {
-    "title": "自托管运行器版本强制执行日期已更改",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
   "4607b4c4468386f7d703fdc6e8f2d94f991fa6a6a1a594ce5a83f94754cdf8dc": {
     "title": "新的 Microsoft 数据创新解锁只有你的企业知道的东西",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-29T09:55:24Z"
-  },
-  "597c808f7f546491f0ec676490eda220dea924ba0f0620441999bc6def7590d7": {
-    "title": "你好，德国！",
-    "summary": "Mistral 在慕尼黑设立研究中心，专注 Physics AI 与 Industrial AI，并与德国工业界合作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
   },
   "d6b9f5e651b1891e950e0096b862ca9527c5eacf458b2804fa20b6d4b208ad61": {
     "title": "推出 GPT-6.1 Sol",
@@ -71,12 +53,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
   },
-  "d259a5a11ae20b4989eb2723a0b23a3de77e515ea3ab2fd10c87edec4ca92663": {
-    "title": "通过外部自定义属性引入业务上下文",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
   "27fa41ed5cc26a14950e98a4b32cd54a9da1d63e9a36b4be5dd67bc65cbe085c": {
     "title": "GitHub Copilot 中的 GPT-6.1 Sol",
     "summary": null,
@@ -98,12 +74,6 @@
   "90249c2a3882c6d31b88e7cea8a85045e4eeb6a0a24ec30e6774300a2c2f9921": {
     "title": "瓦解一场有组织的模型蒸馏行动",
     "summary": "了解 OpenAI 如何瓦解一场提取受保护模型推理过程的行动，并正在加强对对抗性蒸馏的防御。",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
-  "ce56aa83d0064ef1be25967db1553bdc8e45096edaa34de2aa87655b81b09ce8": {
-    "title": "Gemini 4 Argon：我们前沿智能的新时代",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-01T10:14:21Z"
   },
@@ -137,10 +107,70 @@
     "source": "deepseek-flash",
     "at": "2026-10-01T10:14:21Z"
   },
-  "cb668c5b27e4138bd592d8b2c395c8dea01887f84259c342c4a3148690e0b924": {
-    "title": "增强 Microsoft Azure 虚拟机生命周期",
+  "b8087b88cb63ae7fc829eff8f3b1641fe52f1b99617f195c5f0644b836600735": {
+    "title": "永恒的补充",
+    "summary": "先进 AI 对突破性想法背后的日常工作可能最为重要。探索为何执行力可能塑造下一轮经济与进步节奏。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "637d3dfa247fa816a4c4160f323cf7816f7979e28cc1acd637f643ec28fcb5fc": {
+    "title": "Albertsons Companies 如何由内而外重塑零售",
+    "summary": "Albertsons Cos. 正使用 ChatGPT Enterprise 和 OpenAI API 帮助团队更快工作，并让数百万顾客的购物更轻松。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "1b08c1a560be6fc559cd434553b0ec2dddfb8fe1ccbe2ff50c0ffbecc6adf221": {
+    "title": "计划代码扫描跳过不活跃仓库",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "8fe4537a2c819686bd258982c897be449ecc68d41778e01fe08f1e07cf2cc8a5": {
+    "title": "代码覆盖率上传不再使新分支 CI 失败",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "1b1903c96c873dca5e4db30dfce3c7230ca9cfb7caf86243579aae7739f00743": {
+    "title": "新仪表板体验现已成为默认",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "e77dbfb3ff372c8397520da194489e12fb93e7a16877211abe1f95a68732c5c0": {
+    "title": "GitHub 异步合并 API 正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "a343b310e28c339784b31ba4628a92a04b4d44f068f4df2e38f88ce69dfee313": {
+    "title": "Actions Runner Controller 发布 0.15.0",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "162f06b35f5ef3d05b04cbcc6ec80108cd4297d75b0071d01d9eda9ba5053f01": {
+    "title": "今秋十月 GeForce NOW 迎来 25 款新游戏",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "c2600e87db69552d07dcac92cc65037da5f96cddc24c4f2392c259c7ad05ba1a": {
+    "title": "高效、耐用、可替代：NVIDIA AI 工厂如何最大化投资回报",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "9e3738afcbdf2597f912c14173b3c0dac8067ee79f5118aec887778587e5dadb": {
+    "title": "超大规模负责任基础设施：管理 Azure 硬件全生命周期",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "36138c270920188f9af74a1fbc8a95649774fc2c948077d26f8ecf3ff152168d": {
+    "title": "巴塞罗那 FabCon 和 SQLCon 2026：为 Microsoft Copilot 和代理构建数据基础",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
   }
 }
