@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-01T17:24:30Z",
+  "dataUpdatedAt": "2026-10-02T07:20:15Z",
   "items": [
     {
       "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
@@ -474,7 +474,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-28T09:53:56Z",
-      "featured": null
+      "featured": true
     },
     {
       "title": "Basis 使用 GPT-6 Astra 将税务工作簿完成速度提高 2 倍",
@@ -2795,6 +2795,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-02T06:33:23Z",
-  "generatedAt": "2026-10-02T06:33:23Z"
+  "version": "2026-10-02T07:50:54Z",
+  "generatedAt": "2026-10-02T07:50:54Z"
 }
