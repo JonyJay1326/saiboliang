@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-02T08:46:10Z",
+  "dataUpdatedAt": "2026-10-02T09:51:46Z",
   "items": [
+    {
+      "title": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗",
+      "sourceUrl": "https://www.qbitai.com/2026/10/500098.html",
+      "publishedAt": "2026-10-02T07:34:15Z",
+      "source": "量子位",
+      "summary": "让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择",
+      "id": "35ff85a10c1faefe0c3d820b90f3bf3d063819349c909e751904b7228508ecd0",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/500098.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-02T09:51:46Z",
+      "featured": true
+    },
     {
       "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
       "sourceUrl": "https://www.qbitai.com/2026/10/499663.html",
@@ -56,7 +75,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-01T17:24:30Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Barclays 扩展 Claude 以升级运营并改善客户体验",
@@ -75,7 +94,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-01T17:24:30Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "从训练到生产，NVIDIA 与 CoreWeave 闭环智能体 AI",
@@ -322,7 +341,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-01T17:24:30Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "OpenCode 发布 v2.0.19",
@@ -2795,6 +2814,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-02T08:46:10Z",
-  "generatedAt": "2026-10-02T08:46:10Z"
+  "version": "2026-10-02T09:51:46Z",
+  "generatedAt": "2026-10-02T09:51:46Z"
 }

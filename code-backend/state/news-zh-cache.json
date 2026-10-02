@@ -1,10 +1,4 @@
 {
-  "3044f63155f8b6ed683de58550e1f8123e3e315254ea7eb5763eef6da373c893": {
-    "title": "未来属于每个人：面向小企业的 Muse",
-    "summary": "我们推出 Muse for Small Business，一个在后台工作的个人 AI 代理，帮助您的小企业实现目标。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
   "d6b9f5e651b1891e950e0096b862ca9527c5eacf458b2804fa20b6d4b208ad61": {
     "title": "推出 GPT-6.1 Sol",
     "summary": "认识 GPT-6.1 Sol：接近 Astra 的智能，适用于编程、计算机使用和专业工作，API 输入输出 token 价格仅为 Astra 标准价的五分之一。",
@@ -136,5 +130,11 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
+  },
+  "9e3738afcbdf2597f912c14173b3c0dac8067ee79f5118aec887778587e5dadb": {
+    "title": "超大规模负责任的基础设施：管理 Azure 硬件的全生命周期",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T09:51:46Z"
   }
 }
