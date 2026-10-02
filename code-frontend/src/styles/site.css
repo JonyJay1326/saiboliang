@@ -55,11 +55,15 @@ a:hover {
 /* 文字链的最小点击目标（2026-09-21）：WCAG 2.2 AA 2.5.8 要求 ≥24×24 CSS px。
    行内元素的 padding-block 只撑大命中区、**不改变行盒高度**，所以正文行距与整页版式
    完全不动。实测低于下限的几处：邸报来路链 / 关于表内链 / 「xx →」入口 / 相关票（19px），
-   观星台 repo 链（22px），星历表头来源芯片（20px）。 */
+   观星台 repo 链（22px），星历表头来源芯片（20px）。
+   2026-10-02 补两处漏网的：邸报标题链（20px，一屏 42 个）与页脚披露链（14px）——
+   移动端实测这两个是全站仅剩的 padding 为 0 的可点链。 */
 .more a,
 .ledger .repo,
 .ledger__head .sp,
 .dibao__link,
+.dibao__title a,
+body > footer .disclosure a,
 section[aria-labelledby="related"] a,
 section[aria-labelledby^="about"] a,
 table a {
@@ -3709,6 +3713,17 @@ td:first-child {
   .instrument {
     margin-top: 5px;
     gap: 0;
+  }
+
+  /* P1（2026-10-02）：窄屏取消页头带的负下边距。
+     .page-head 的 margin-bottom:-3.8rem 是给桌面端图腾预留的——图腾画框比页头带更高，
+     负边距把切换条提上来与图腾下半身重叠（见 §10.3 层叠上下文）。
+     窄屏下图腾已随 .page-head__canvas 一起 display:none，这段负边距失去依据却仍在生效，
+     结果是切换条直接压在导语末行上：实测 page-head 底 372、切换条顶 316 → 重叠 56px，
+     「共 22 个套餐…」那行被秤盘美术盖住。
+     窄屏无图腾可预留，负边距归零即可。 */
+  .page-head {
+    margin-bottom: 0;
   }
 
   .instrument__widget {
