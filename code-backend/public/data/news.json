@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-02T09:51:46Z",
+  "dataUpdatedAt": "2026-10-02T16:34:26Z",
   "items": [
+    {
+      "title": "我们在 2026 年 9 月发布的最新 AI 新闻",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "publishedAt": "2026-10-02T15:00:00Z",
+      "source": "Google AI",
+      "summary": "一段展示 9 月 AI 更新的视频",
+      "id": "6a7bb4e3e69d69f535f566eafa3b62131828c2105dc24f5461290dfde815374b",
+      "originalTitle": "The latest AI news we announced in September 2026",
+      "translatedAt": "2026-10-02T16:34:26Z",
+      "lang": "en",
+      "originalSource": "Google AI",
+      "originalUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "originalVerifiedAt": "2026-10-02T16:34:26Z",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-02T16:34:26Z",
+      "featured": null
+    },
     {
       "title": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗",
       "sourceUrl": "https://www.qbitai.com/2026/10/500098.html",
@@ -19,6 +38,82 @@
       "eventType": "model-review",
       "addedAt": "2026-10-02T09:51:46Z",
       "featured": true
+    },
+    {
+      "title": "GitHub Copilot 现可通过 computer use 与桌面应用交互",
+      "sourceUrl": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
+      "publishedAt": "2026-10-01T19:11:26Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot CLI 与 macOS、Windows 版 Copilot 应用公开预览 computer use，可代用户与桌面应用交互。",
+      "id": "e11a5d7f0be16c7ae710cb40fcd3e360fe54705b38e97bec68265383fd6a4b19",
+      "originalTitle": "GitHub Copilot can now interact with desktop apps with computer use",
+      "translatedAt": "2026-10-02T16:34:26Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
+      "originalVerifiedAt": "2026-10-02T16:34:26Z",
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-02T16:34:26Z",
+      "featured": true
+    },
+    {
+      "title": "VS Code 中的 GitHub Copilot，2026 年 9 月版本",
+      "sourceUrl": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases",
+      "publishedAt": "2026-10-01T19:09:10Z",
+      "source": "GitHub",
+      "summary": "VS Code v1.136 至 v1.140 于 2026 年 9 月发布，优化从实现到合并 PR 的智能体开发流程。",
+      "id": "d8efb6ae3f1c14fd22be9554b790c3552220acaabf95f4f6a3247a98ad84b954",
+      "originalTitle": "GitHub Copilot in VS Code, September 2026 releases",
+      "translatedAt": "2026-10-02T16:34:26Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases",
+      "originalVerifiedAt": "2026-10-02T16:34:26Z",
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-02T16:34:26Z",
+      "featured": true
+    },
+    {
+      "title": "Copilot CLI 和 Copilot 应用中的动态工作流",
+      "sourceUrl": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app",
+      "publishedAt": "2026-10-01T16:30:10Z",
+      "source": "GitHub Copilot",
+      "summary": "Copilot CLI、GitHub Copilot 应用和 SDK 新增动态工作流，可用代码定义编排。",
+      "id": "20f94898ac7397b2decb7e67ad5363981edbdbf5de95038cc5fc6bbf329af8e7",
+      "originalTitle": "Dynamic workflows in Copilot CLI and the Copilot app",
+      "translatedAt": "2026-10-02T16:34:26Z",
+      "lang": "en",
+      "originalSource": "GitHub Copilot",
+      "originalUrl": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app",
+      "originalVerifiedAt": "2026-10-02T16:34:26Z",
+      "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-02T16:34:26Z",
+      "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.74.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-02&version=v1.74.0",
+      "publishedAt": "2026-10-01T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "e85497d8ccfff019172521c91bfbc109479a544f84d1b5b1bcf01b2ab7efebf2",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-02&version=v1.74.0",
+      "originalVerifiedAt": "2026-10-02T16:34:26Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-02&version=v1.74.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-02T16:34:26Z",
+      "featured": null
     },
     {
       "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
@@ -2814,6 +2909,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-02T09:51:46Z",
-  "generatedAt": "2026-10-02T09:51:46Z"
+  "version": "2026-10-02T16:34:26Z",
+  "generatedAt": "2026-10-02T16:34:26Z"
 }

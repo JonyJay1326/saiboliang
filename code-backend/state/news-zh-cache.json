@@ -1,16 +1,4 @@
 {
-  "d6b9f5e651b1891e950e0096b862ca9527c5eacf458b2804fa20b6d4b208ad61": {
-    "title": "推出 GPT-6.1 Sol",
-    "summary": "认识 GPT-6.1 Sol：接近 Astra 的智能，适用于编程、计算机使用和专业工作，API 输入输出 token 价格仅为 Astra 标准价的五分之一。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "6071f63e21f6425413eb63722b1604896ffdb702f04f5beb8c9ad701e7ae765e": {
-    "title": "DevDay 2026 回顾",
-    "summary": "探索 OpenAI DevDay 2026 的 20 多项发布，涵盖 GPT-6 Astra、ChatGPT、Codex、API、安全及面向开发者的新工具。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
   "27fa41ed5cc26a14950e98a4b32cd54a9da1d63e9a36b4be5dd67bc65cbe085c": {
     "title": "GitHub Copilot 中的 GPT-6.1 Sol",
     "summary": null,
@@ -44,18 +32,6 @@
   "637d3dfa247fa816a4c4160f323cf7816f7979e28cc1acd637f643ec28fcb5fc": {
     "title": "Albertsons Companies 如何由内而外重塑零售",
     "summary": "Albertsons Cos. 正使用 ChatGPT Enterprise 和 OpenAI API 帮助团队更快工作，并让数百万顾客的购物更轻松。",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
-  "1b08c1a560be6fc559cd434553b0ec2dddfb8fe1ccbe2ff50c0ffbecc6adf221": {
-    "title": "计划代码扫描跳过不活跃仓库",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
-  "8fe4537a2c819686bd258982c897be449ecc68d41778e01fe08f1e07cf2cc8a5": {
-    "title": "代码覆盖率上传不再使新分支 CI 失败",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-01T17:24:30Z"
   },
@@ -131,10 +107,40 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
   },
-  "9e3738afcbdf2597f912c14173b3c0dac8067ee79f5118aec887778587e5dadb": {
-    "title": "超大规模负责任的基础设施：管理 Azure 硬件的全生命周期",
+  "c38af6e5cae43e23a64c1d509c6a587da67c166f4c093fc7e47ef57f26c07a7c": {
+    "title": "GPT-6 系列模型指南",
+    "summary": "了解初创公司如何选择 GPT-6 模型、调整推理强度、改进提示与技能、协调工具，并为生产环境准备工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T16:34:26Z"
+  },
+  "6a7bb4e3e69d69f535f566eafa3b62131828c2105dc24f5461290dfde815374b": {
+    "title": "我们在 2026 年 9 月发布的最新 AI 新闻",
+    "summary": "一段展示 9 月 AI 更新的视频",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T16:34:26Z"
+  },
+  "532f5738d0696fe383323bc07b59ce1077a83c29eccbe59611f12348c1636961": {
+    "title": "SecurityAdvisory GraphQL API 新增字段",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-02T09:51:46Z"
+    "at": "2026-10-02T16:34:26Z"
+  },
+  "59fc4a70abc335f98eb4944f5803a413f19e7c642ef6e23d6668866b2cb96b44": {
+    "title": "仓库安全公告的机密评论",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T16:34:26Z"
+  },
+  "8430be4786d88a5d85b2a4e21a7a37fa9fd2891d6850bbdedd962fc6170f75e2": {
+    "title": "仓库安全公告评论 API 进入公开预览",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T16:34:26Z"
+  },
+  "cecaa627e24bd9730bc27d132c8dc87f0de8d9da152ab459aceca7becf304132": {
+    "title": "NVIDIA DGX Spark 64GB 为开发者提供更多构建和扩展本地 AI 的方式",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T16:34:26Z"
   }
 }
