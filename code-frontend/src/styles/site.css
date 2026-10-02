@@ -4758,28 +4758,86 @@ td:first-child {
   right: 7px;
 }
 
-/* —— 悬签（market）：市签挂绳 + 双孔 + 市别小字 ——
-   2026-09-23 用户口径：签太大 → 收一档（器物位 280×90 → 240×78，签面 96×58 → 78×48）；
-   随后「国内 / 海外 不换行」→ 小字与市名并排一行，签面改横向（96×46），
-   器物位随之放宽到 264×74，字 19/11 → 15/12（小字回到全站 12px 下限）。 */
+/* 青铜市牌：双环承重、铜印落锁；市别小字保持同行。 */
 .instrument[data-kind="market"] {
   --a: 230, 190, 112;
-  min-height: 74px;
+  min-height: 92px;
+}
+
+.instrument[data-kind="market"]:after {
+  right: auto;
+  width: min(100%, 360px);
+  background: linear-gradient(90deg, rgba(var(--a), .22), rgba(var(--a), .06) 60%, transparent);
+}
+
+.instrument[data-kind="market"] .instrument__beam {
+  right: auto;
+  width: min(100%, 360px);
+  background: linear-gradient(90deg, transparent, rgba(var(--a), .3) 55%, rgba(var(--a), .15) 75%, transparent);
+  box-shadow: 0 0 3px rgba(var(--a), .2);
 }
 
 .instrument[data-kind="market"] .instrument__widget {
-  width: 264px;
-  height: 74px;
+  width: 284px;
+  height: 92px;
 }
 
 .instrument[data-kind="market"] .instrument__tabs {
-  inset: 20px 20px 8px;
-  gap: 32px;
+  inset: 24px 16px auto;
+  height: 44px;
+  grid-template-columns: repeat(2, minmax(0, 94px));
+  justify-content: space-between;
+  gap: 0;
   perspective: 550px;
 }
 
 .instrument[data-kind="market"] .instrument__tab {
   perspective: 400px;
+  --market-rest: translateY(1.5px) rotate(-1.4deg);
+  --market-ink: 0;
+}
+
+.instrument[data-kind="market"] .instrument__tab:focus-visible {
+  outline: none;
+}
+
+.instrument__market-focus {
+  position: absolute;
+  inset: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  stroke: #efd9a0;
+  stroke-width: 1.5;
+  opacity: 0;
+  transition: opacity .12s;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.instrument[data-kind="market"] .instrument__tab:focus-visible .instrument__market-focus {
+  opacity: 1;
+}
+
+.instrument[data-kind="market"] .instrument__hint {
+  align-self: flex-start;
+  margin-top: 36px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  color: rgba(var(--a), .52);
+}
+
+.instrument[data-kind="market"] .instrument__hint:before {
+  width: 8px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, rgba(var(--a), .38) 0 1px, transparent 1px 5px);
+  transform: skewX(-12deg);
+}
+
+@media (forced-colors: active) {
+  .instrument__market-focus {
+    stroke: Highlight;
+    forced-color-adjust: none;
+  }
 }
 
 .instrument__sign {
@@ -4787,90 +4845,106 @@ td:first-child {
   position: absolute;
   inset: 0;
   transform-origin: 50% -11px;
-  transform: translateY(2px) rotate(-3deg);
-  transition: transform .55s cubic-bezier(.18, .85, .3, 1.2);
+  transform: var(--market-rest);
+  transition: transform .28s cubic-bezier(.2,.8,.25,1);
   pointer-events: none;
-  filter: drop-shadow(3px 7px 5px #0008);
+  filter: drop-shadow(1px 3px 2px #060c08b3) drop-shadow(0 1px #030704);
 }
 
-.instrument__tab:nth-child(2) .instrument__sign {
-  transform: translateY(2px) rotate(3deg);
+.instrument[data-kind="market"] .instrument__tab:nth-child(2) {
+  --market-rest: translateY(1.5px) rotate(1.4deg);
 }
 
 .instrument__tag {
   position: absolute;
   inset: 0;
-  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 12px);
-  background: linear-gradient(110deg, #b3a375, #5a5640 60%, #b3a375);
-  padding: 1px;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 6px);
+  background: linear-gradient(140deg,#ad9662,#6c603e 23%,#333c2e 58%,#8e784b 86%,#4f452d);
 }
 
 .instrument__tag:before {
   content: "";
   position: absolute;
-  inset: 1px;
+  inset: 1px 1px 2px;
   clip-path: inherit;
   background:
-    repeating-linear-gradient(2deg, #ecd5a007 0 1px, transparent 1px 4px),
-    radial-gradient(ellipse at 20% 0, #aaa07022, transparent 80%),
-    #242820;
+    radial-gradient(ellipse at var(--px,28%) var(--py,12%),#dac29316,transparent 72%),
+    radial-gradient(ellipse at 95% 100%,#477b5745,transparent 55%),
+    repeating-linear-gradient(110deg,#d2be8907 0 1px,transparent 1px 5px),
+    linear-gradient(145deg,#2c3328,#20291f 56%,#293225);
+  box-shadow: inset 0 1px #d3bd841c,inset 0 -1px #040c0866;
 }
 
 .instrument__tag:after {
   content: "";
   position: absolute;
-  inset: 5px;
-  border: 1px solid #c5ab6866;
+  inset: 5px 5px 6px;
+  border: 1px solid #8b7c4f33;
   clip-path: inherit;
+  background: linear-gradient(180deg,#020b0740,transparent 32%,transparent 80%,#d9c1890a);
+  box-shadow: inset 0 2px 3px #03090670;
 }
 
-.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__sign {
-  transform: translateY(-4px) rotate(0deg);
+.instrument[data-kind="market"] .instrument__tab[aria-selected="true"] {
+  --market-rest: translateY(0) rotate(0deg);
+  --market-ink: 1;
 }
 
 .instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__tag {
-  background: #e4ca8b;
+  background: linear-gradient(140deg,#d5b97e,#827049 26%,#3b4331 58%,#b89c62 86%,#5f5133);
 }
 
 .instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__tag:before {
   background:
-    repeating-linear-gradient(2deg, #634c1512 0 1px, transparent 1px 4px),
-    linear-gradient(115deg, #ead6a1, #c4a669 60%, #debd78);
+    radial-gradient(ellipse at var(--px,28%) var(--py,12%),#e8c68118,transparent 72%),
+    radial-gradient(ellipse at 95% 100%,#477b5733,transparent 55%),
+    repeating-linear-gradient(110deg,#d2be8908 0 1px,transparent 1px 5px),
+    linear-gradient(145deg,#323828,#232d20 56%,#2d3525);
 }
 
 .instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__tag:after {
-  border-color: #56472366;
+  border-color: #b8a06055;
 }
+
+.instrument__market-inlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; stroke-width: .85; }
+.instrument__market-cut { stroke: #060f08; stroke-width: 1.8; filter: drop-shadow(0 1px #cfb97e25); }
+.instrument__market-gold { stroke: #e2c58c; stroke-dasharray: 100; stroke-dashoffset: calc(100 * (1 - clamp(0, calc(var(--market-ink) / .75), 1))); opacity: calc(.08 + var(--market-ink) * .86); }
+.instrument__market-meet { stroke-dashoffset: calc(100 * (1 - clamp(0, calc((var(--market-ink) - .75) / .25), 1))); }
+.instrument__hanger { position: absolute; top: -12px; left: 14px; width: 5px; height: 19px; transform-origin: 50% 0; border: 1px solid #bda46c; border-radius: 4px; background: linear-gradient(90deg,#060e0890,#9b85553b,#060e0890); box-shadow: -1px 0 #ead59b29,1px 1px #050b08; z-index: 2; pointer-events: none; }
+.instrument__hanger--second { left: auto; right: 14px; }
+.instrument__hanger::after { content: ''; position: absolute; top: 6px; left: -2px; right: -2px; height: 5px; border-block: 1px solid #7f704a; background: #292e22; }
 
 .instrument__eyelet {
   position: absolute;
   top: 4px;
-  left: 16px;
-  width: 5px;
-  height: 5px;
-  border: 1px solid #aaa074;
+  left: 13px;
+  width: 8px;
+  height: 6px;
+  border: 1px solid #a99360;
   border-radius: 50%;
-  background: #13170f;
-  box-shadow: 0 1px #ffefbc55;
+  background: #0b140c;
+  box-shadow: inset 0 1px 2px #010704,0 1px #ead39a52;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .instrument__eyelet--second {
   left: auto;
-  right: 16px;
+  right: 13px;
 }
 
 .instrument[data-kind="market"] .instrument__label {
   font-size: 15px;
-  letter-spacing: 3px;
-  padding: 2px 0 0 3px;
-  text-shadow: none;
+  letter-spacing: 1px;
+  padding: 1px 0 0 2px;
+  text-shadow: 0 1px #040b06,-.5px -.5px #dfc9981a;
   flex-direction: row;
   gap: 5px;
-  color: #d7d2bd;
+  color: #b6af92;
 }
 
 .instrument[data-kind="market"] .instrument__tab[aria-selected="true"] .instrument__label {
-  color: #302612;
+  color: #f0d39a;
 }
 
 .instrument__label .instrument__sub {
@@ -4882,17 +4956,30 @@ td:first-child {
 }
 
 .instrument[data-kind="market"] .instrument__tab:not([aria-selected="true"]):hover .instrument__sign {
-  transform: translateY(-1px) rotate(0deg);
+  transform: translateY(1px) rotate(0deg);
 }
 
 .instrument[data-kind="market"] .instrument__tab:hover .instrument__tag {
-  background: #f3d99c;
+  filter: brightness(1.07);
 }
 
-/* —— 星历拨盘（sky）：中央盘心画在画布上，两侧文字 + 底刻线 —— */
+/* —— 星历拨盘（sky）：铜制端座、错金槽与固定盘壳 —— */
+.observatory-boards {
+  /* 换榜及行入场不参与滚动锚定，避免浏览器追着新榜单向上补偿。 */
+  overflow-anchor: none;
+}
+
 .instrument[data-kind="sky"] {
   --a: 161, 206, 226;
   min-height: 90px;
+}
+
+.instrument[data-kind="sky"]:after {
+  background: linear-gradient(90deg, #b9ac7b30, #b9ac7b0c 55%, transparent);
+}
+
+.instrument[data-kind="sky"] .instrument__beam {
+  display: none;
 }
 
 .instrument[data-kind="sky"] .instrument__widget {
@@ -4911,43 +4998,44 @@ td:first-child {
 .instrument[data-kind="sky"] .instrument__tab {
   width: 90px;
   flex: 0 0 90px;
+  z-index: 3;
 }
 
 .instrument[data-kind="sky"] .instrument__label {
   font-size: 16px;
-  letter-spacing: 5px;
-  color: #acaeb6;
-  transition: color .25s;
+  letter-spacing: 3px;
+  padding-left: 3px;
+  color: #98a08d;
+  transition: color .2s, text-shadow .2s;
 }
 
 .instrument[data-kind="sky"] .instrument__tab[aria-selected="true"] .instrument__label {
-  color: #f4dfae;
-  text-shadow: 0 0 12px #e9c97966;
+  color: #f7e3b8;
+  text-shadow: 0 1px 1px #020806, 0 -1px #f8edcb18, 0 0 7px #e9c97935;
 }
 
-.instrument[data-kind="sky"] .instrument__tab:before {
-  content: "";
+.instrument__sky-focus {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse, #0b0916 0 45%, #0b091600 75%);
+  inset: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  z-index: 4;
   pointer-events: none;
+  opacity: 0;
+  stroke: #f3dda7;
+  stroke-width: 1.3;
 }
 
-.instrument[data-kind="sky"] .instrument__tab:after {
-  content: "";
-  position: absolute;
-  left: 26px;
-  right: 26px;
-  bottom: 5px;
-  height: 1px;
-  background: #d3b47033;
-  transition: background .25s, transform .25s;
+.instrument[data-kind="sky"] .instrument__tab:focus-visible {
+  outline: none;
 }
 
-.instrument[data-kind="sky"] .instrument__tab[aria-selected="true"]:after {
-  background: #dfc797;
-  transform: scaleX(1.3);
-  box-shadow: 0 0 8px #d3b47055;
+.instrument[data-kind="sky"] .instrument__tab:focus-visible .instrument__sky-focus {
+  opacity: 1;
+}
+
+.instrument[data-kind="sky"] .instrument__tab:active .instrument__label {
+  transform: translateY(1px);
 }
 
 .instrument__dial {
@@ -4972,6 +5060,19 @@ td:first-child {
 
 .instrument__dial:hover {
   background: radial-gradient(circle, #e8ddb50a, transparent 75%);
+}
+
+.instrument__dial:active {
+  background: radial-gradient(circle, #bdded414, transparent 70%);
+}
+
+@media (forced-colors: active) {
+  .instrument[data-kind="sky"] .instrument__tab {
+    border: 1px solid ButtonText;
+  }
+  .instrument[data-kind="sky"] .instrument__tab:focus-visible {
+    outline: 2px solid Highlight;
+  }
 }
 
 .instrument[data-kind="sky"] .instrument__hint {

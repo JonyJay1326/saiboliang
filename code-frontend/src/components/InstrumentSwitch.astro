@@ -35,17 +35,40 @@ const HINTS = { army: '错金兵符', market: '移印换市', sky: '星历拨盘
               </>
             )}
             {kind === 'market' ? (
-              <span class="instrument__sign">
-                <span class="instrument__tag" />
-                <i class="instrument__eyelet" />
-                <i class="instrument__eyelet instrument__eyelet--second" />
-                <span class="instrument__label">
-                  {option.label}
-                  <small class="instrument__sub">{option.sub}</small>
+              <>
+                <i class="instrument__hanger" aria-hidden="true" />
+                <i class="instrument__hanger instrument__hanger--second" aria-hidden="true" />
+                <span class="instrument__sign">
+                  <span class="instrument__tag" aria-hidden="true" />
+                  <i class="instrument__eyelet" aria-hidden="true" />
+                  <i class="instrument__eyelet instrument__eyelet--second" aria-hidden="true" />
+                  <svg class="instrument__market-inlay" viewBox="0 0 120 60" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                    <path class="instrument__market-cut" d="M22 10V15H8V23H15V18H22V21H8V49H24V43H16V46H24V51H32M98 10V15H112V23H105V18H98V21H112V49H96V43H104V46H96V51H88M32 51H50L54 47H60M88 51H70L66 47H60" />
+                    <g class="instrument__market-gold">
+                      <path pathLength="100" d="M22 10V15H8V23H15V18H22V21H8V49H24V43H16V46H24V51H32" />
+                      <path pathLength="100" d="M98 10V15H112V23H105V18H98V21H112V49H96V43H104V46H96V51H88" />
+                      <path class="instrument__market-meet" pathLength="100" d="M32 51H50L54 47H60" />
+                      <path class="instrument__market-meet" pathLength="100" d="M88 51H70L66 47H60" />
+                    </g>
+                  </svg>
+                  <svg class="instrument__market-focus" viewBox="0 0 100 50" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                    <polygon points="9,1 91,1 99,9 99,43 93,49 7,49 1,43 1,9" vector-effect="non-scaling-stroke" />
+                  </svg>
+                  <span class="instrument__label">
+                    {option.label}
+                    <small class="instrument__sub">{option.sub}</small>
+                  </span>
                 </span>
-              </span>
+              </>
             ) : (
-              <span class="instrument__label">{option.label}</span>
+              <>
+                {kind === 'sky' && (
+                  <svg class="instrument__sky-focus" viewBox="0 0 90 47" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                    <polygon points="8,2 82,2 88,8 88,39 82,45 8,45 2,39 2,8" vector-effect="non-scaling-stroke" />
+                  </svg>
+                )}
+                <span class="instrument__label">{option.label}</span>
+              </>
             )}
           </button>
         ))

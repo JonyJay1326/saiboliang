@@ -1,73 +1,137 @@
 ---
-// / 太仓（首页）—— frontend-spec §4.1
-// 五块：Hero / 票卡列表 / 观星台摘要 / 点将台摘要 / 页脚声明。
-// Hero 不含开仓摘要（2026-09-18 用户拍板移除）；一期不放「邸报摘要」块（资讯延期，见 §4.7）。
-// 两块摘要复用专页列表样式（2026-09-23 用户定）：观星台摘要 = 星历表行（§5.2，周榜前 10），
-// 点将台摘要 = 点卯簿六列行 + 列名表头（§5.3，综合校场前 5）；页面级表头 / 脚注不搬。
-// 点将台摘要不带报价来源标注（2026-09-23 用户定「不需要」，标注只在 /models 页头一次）。
+// 太仓：真实口粮建立焦点，探索预告引向专页；结构见 frontend-spec.md §4.1。
 import Base from '../layouts/Base.astro';
 import TicketCard from '../components/TicketCard.vue';
 import GithubLedgerRow from '../components/GithubLedgerRow.astro';
 import ModelRollRow from '../components/ModelRollRow.astro';
 import { github, models, tickets } from '../lib/data.js';
-import { listedTickets, ticketDefaultOrder } from '../lib/format.js';
+import { freshness, hasFreeTier, modelPriceLabel, planStatusLabel, thous } from '../lib/format.js';
+import { homeContent, homePlanPrice } from '../lib/home.js';
+import { modelIcon } from '../lib/vendors.js';
+import '../styles/home.css';
 
-const allTickets = tickets().tickets;
-const gh = github();
-const md = models();
-
-// 首页只摆一行票卡（桌面 4 列铺满一行；2026-09-18 用户定）。
-const topTickets = listedTickets([...allTickets]).sort(ticketDefaultOrder).slice(0, 4);
-const ghTop = gh.week.items.slice(0, 10);
-const modelTop = md.rankings.intelligence.slice(0, 5);
-const modelById = new Map(md.models.map((m) => [m.id, m]));
-
-// 首页消费四个业务文件，页脚核验时间取其中最早的一个（最保守口径）。
-const times = [tickets().dataUpdatedAt, md.dataUpdatedAt, gh.dataUpdatedAt].filter(Boolean);
-const oldest = times.sort()[0] ?? null;
+const { listed, headTicket, restTickets, markets, marketTop, ghTop, modelTop, modelById, oldest } = homeContent(tickets(), models(), github());
+const leadRow = modelTop[0] ?? null;
+const leadModel = leadRow ? modelById.get(leadRow.modelId) ?? null : null;
+const leadIcon = leadModel ? modelIcon(leadModel.vendor) : null;
+const leadRepo = ghTop[0] ?? null;
+const state = freshness(oldest);
 ---
-<Base description="AI 白嫖机会、模型能力榜与编程套餐的每日聚合。" dataUpdatedAt={oldest}>
-  <section class="hero">
-    <h1 class="visually-hidden">赛博粮站 · 开仓</h1>
-    <img class="hero__slogan" src="/font-images/slogan.png" width="685" height="80" alt="大厂开仓 · 凭票领饭" />
-    <p class="hero__tagline">AI 白嫖机会 · 模型比价 · 榜单聚合</p>
-  </section>
 
-  <section aria-labelledby="home-tickets">
-    <h2 id="home-tickets">今日份口粮</h2>
-    <ul class="r4-stubs">
-      {topTickets.map((t) => <li><TicketCard ticket={t} /></li>)}
-    </ul>
-    <p class="more"><a href="/tickets/">全部粮票 →</a></p>
-  </section>
-
-  <section aria-labelledby="home-github">
-    <h2 id="home-github">观星台摘要</h2>
-    <div class="ledger">
-      <ol>
-        {ghTop.map((item, i) => <GithubLedgerRow item={item} index={i + 1} />)}
-      </ol>
-    </div>
-    <p class="more"><a href="/github/">观星台 →</a></p>
-  </section>
-
-  <section aria-labelledby="home-models">
-    <h2 id="home-models">点将台摘要</h2>
-    <div class="roll">
-      <div class="roll__head" aria-hidden="true">
-        <span>座次<em>排名</em></span>
-        <span>名将<em>模型</em></span>
-        <span>入营<em>上线</em></span>
-        <span>俸禄<em>输入 / 输出</em></span>
-        <span class="roll__num">战力<em>AA 分</em></span>
-        <span class="roll__num">距榜首<em>分差</em></span>
+<Base description="找 AI 免费额度，看模型能力，比较编程套餐；期限、地区与价格口径如实展示。" dataUpdatedAt={oldest}>
+  <div class="home">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero__copy">
+        <p class="home-hero__place">太仓 <span>全站总览</span></p>
+        <h1 id="home-title" class="home-slogan">
+          <span class="visually-hidden">赛博粮站 · 大厂开仓，凭票领饭</span>
+          <span class="home-slogan__line" aria-hidden="true"><img src="/font-images/slogan.png" width="685" height="80" alt="" fetchpriority="high" /></span>
+          <span class="home-slogan__line home-slogan__line--last" aria-hidden="true"><img src="/font-images/slogan.png" width="685" height="80" alt="" /></span>
+        </h1>
+        <p class="home-hero__lede">找 AI 免费额度，看模型能力，<br />比较编程套餐。</p>
+        <a class="home-hero__link" href="/tickets/">粮票 · 领 <span aria-hidden="true">↗</span></a>
+        <p class="home-hero__hint">额度、期限、领取条件，一票看清。</p>
       </div>
-      <ol class="roll__rows">
-        {modelTop.map((row) => (
-          <ModelRollRow row={row} model={modelById.get(row.modelId) ?? null} topScore={modelTop[0].score} />
-        ))}
-      </ol>
-    </div>
-    <p class="more"><a href="/models/">点将台 →</a></p>
-  </section>
+      <div class="home-machine">
+        <span class="home-machine__rail" aria-hidden="true"></span>
+        <div class="home-machine__heading"><h2>本期口粮</h2><span>甲乙等非推广 · 按日轮换</span></div>
+        <div class="home-machine__seat">
+          <span class="home-machine__corner home-machine__corner--top" aria-hidden="true"></span>
+          <span class="home-machine__corner home-machine__corner--bottom" aria-hidden="true"></span>
+          {headTicket ? (
+            <div class="home-ticket home-ticket--lead">
+              <TicketCard ticket={headTicket} />
+              {headTicket.affiliate && <p class="home-ticket__disclosure">含推广 · 领取链接含推荐关系</p>}
+            </div>
+          ) : (
+            <div class="home-empty home-empty--lead"><strong>{listed.length ? '暂无符合推荐条件的主票' : '本期空仓'}</strong><p>{listed.length ? '其他在架粮票可在下方查看，含推广的票会明确标注。' : '当前没有符合上架条件的粮票。模型榜与套餐比价仍可查看。'}</p><a href="/tickets/">粮票 · 领 →</a></div>
+          )}
+        </div>
+        <p class="home-machine__note">从本站评分 ≥80 的非推广票前五张中轮换，活动条件以官方页为准。</p>
+      </div>
+    </section>
+
+    <section class="home-explore" aria-labelledby="home-explore-title">
+      <div class="home-explore__intro">
+        <h2 id="home-explore-title">领完，再逛逛。</h2>
+        <p>能力、花费、开源新作，<br />各有一处可看。</p>
+        {state.level !== 'ok' && <a class="home-snapshot" href="/about/">{oldest ? `存粮 · ${state.text}` : '数据尚未核验'} <span aria-hidden="true">↗</span></a>}
+      </div>
+      <a class="home-door home-door--models" href="/models/">
+        <span class="home-door__label">模型能力与报价 <span aria-hidden="true">↗</span></span>
+        <span class="home-door__name">点将台 · 比</span>
+        {leadRow ? (
+          <span class="home-door__model">
+            {leadIcon && <img src={leadIcon.url} width="32" height="32" alt="" />}
+            <span><strong>{leadModel?.name ?? leadRow.modelId}</strong><small>综合榜首 · AA {leadRow.score} 分</small></span>
+          </span>
+        ) : <span class="home-door__fact">综合榜暂未提供</span>}
+        <span class="home-door__detail">{leadRow ? modelPriceLabel(leadModel) : '查看综合榜与编程榜'}{leadRow && <small>输入 / 输出 · USD / 百万 Token</small>}</span>
+      </a>
+      <a class="home-door home-door--market" href="/plans/">
+        <span class="home-door__label">编程套餐与额度 <span aria-hidden="true">↗</span></span>
+        <span class="home-door__name">粮市 · 买</span>
+        <span class="home-door__markets">
+          {markets.map((market) => <span><small>{market.group === 'domestic' ? '东市 · 国内' : '西市 · 海外'}</small><strong>{market.items[0] ? homePlanPrice(market.items[0]) : '暂无套餐'}</strong><span>{market.items[0]?.product ?? '等待收录'}</span>{market.items[0]?.source === 'aggregator' && <small>第三方整理价</small>}{market.items[0] && market.items[0].status !== 'available' && <small>{planStatusLabel(market.items[0].status)}</small>}</span>)}
+        </span>
+        <span class="home-door__detail">各市推荐序首项 · 常规起步价</span>
+      </a>
+      <a class="home-door home-door--github" href="/github/">
+        <span class="home-door__label">热门开源与用途 <span aria-hidden="true">↗</span></span>
+        <span class="home-door__name">观星台 · 望</span>
+        <span class="home-door__repo"><strong>{leadRepo?.repo ?? '周榜暂未提供'}</strong><span>{leadRepo?.periodStars == null ? '周新增未提供' : `+${thous(leadRepo.periodStars)} ★ / 周`}</span></span>
+        <span class="home-door__detail">{leadRepo?.description ?? '看看 AI 开发者正在关注什么。'}</span>
+      </a>
+    </section>
+
+    {restTickets.length > 0 && (
+      <section class="home-rations" aria-labelledby="home-tickets">
+        <div class="home-section-heading">
+          <div><h2 id="home-tickets">还有这些口粮</h2><p>同批在架，按默认推荐序继续排开。</p></div>
+          <a href="/tickets/">全部 {listed.length} 张粮票 <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="r4-stubs home-rations__list">
+          {restTickets.map((ticket, index) => <li class="home-ticket"><TicketCard ticket={ticket} index={index + 1} />{ticket.affiliate && <p class="home-ticket__disclosure">含推广 · 领取链接含推荐关系</p>}</li>)}
+        </ul>
+      </section>
+    )}
+
+    <section class="home-data" aria-labelledby="home-data-title">
+      <div class="home-section-heading home-section-heading--data">
+        <div><h2 id="home-data-title">把数据，摊开看。</h2><p>先看能力，再看价格；发现好工具，也是一种省。</p></div>
+        <a href="/about/">数据来源与口径 <span aria-hidden="true">↗</span></a>
+      </div>
+      <section class="home-models" aria-labelledby="home-models">
+        <div class="home-subheading"><h3 id="home-models">点将台 <span>模型综合榜 · 前五</span></h3><a href="/models/">点将台 · 比 <span aria-hidden="true">↗</span></a></div>
+        {modelTop.length > 0 ? (
+          <div class="roll">
+            <div class="roll__head" aria-hidden="true"><span>座次<em>排名</em></span><span>名将<em>模型</em></span><span>入营<em>上线</em></span><span>俸禄<em>输入 / 输出</em></span><span class="roll__num">战力<em>AA 分</em></span><span class="roll__num">距榜首<em>分差</em></span></div>
+            <ol class="roll__rows">{modelTop.map((row) => <ModelRollRow row={row} model={modelById.get(row.modelId) ?? null} topScore={modelTop[0].score} />)}</ol>
+          </div>
+        ) : <p class="home-empty">综合榜暂未提供，待来源恢复后更新。</p>}
+        <p class="home-data__note">报价按输入 / 输出排列，单位为 USD / 百万 Token。</p>
+      </section>
+      <section class="home-market" aria-labelledby="home-market">
+        <div class="home-subheading"><h3 id="home-market">粮市 <span>东西两市 · 五项预览</span></h3><a href="/plans/">粮市 · 买 <span aria-hidden="true">↗</span></a></div>
+        {marketTop.length > 0 ? (
+          <ol class="home-market__list">
+            {marketTop.map((plan, index) => (
+              <li class="home-market__row" data-market={plan.group}>
+                <span class="home-market__rank" aria-label={`首页展示序号 ${index + 1}`}>{String(index + 1).padStart(2, '0')}</span>
+                <span class="home-market__badge">{plan.group === 'domestic' ? '东市' : '西市'}</span>
+                <div class="home-market__identity"><a href={`/plans/${plan.id}/`}>{plan.vendor} · {plan.product}</a><span class="home-market__models">{plan.models?.length ? plan.models.join(' / ') : '模型清单未提供'}</span></div>
+                <div class="home-market__price"><strong>{homePlanPrice(plan)}</strong><small>{hasFreeTier(plan) ? '含免费档 · 付费常规价' : '付费常规档'}{plan.source === 'aggregator' && ' · 第三方整理价'}{plan.status !== 'available' && ` · ${planStatusLabel(plan.status)}`}</small></div>
+                <a class="home-market__open" href={`/plans/${plan.id}/`} aria-label={`查看套餐详情：${plan.product}`}>兑 <span aria-hidden="true">↗</span></a>
+              </li>
+            ))}
+          </ol>
+        ) : <p class="home-empty">本期没有套餐数据，等待收录。</p>}
+        <p class="home-data__note">各市按编辑推荐序交错展示；币种与付款周期保留原值，不跨市换算。</p>
+      </section>
+      <section class="home-github" aria-labelledby="home-github">
+        <div class="home-subheading"><h3 id="home-github">观星台 <span>AI 开源周榜 · 前十</span></h3><a href="/github/">观星台 · 望 <span aria-hidden="true">↗</span></a></div>
+        {ghTop.length > 0 ? <div class="ledger"><ol>{ghTop.map((item, index) => <GithubLedgerRow item={item} index={index + 1} />)}</ol></div> : <p class="home-empty">开源周榜暂未提供，待来源恢复后更新。</p>}
+      </section>
+    </section>
+  </div>
 </Base>

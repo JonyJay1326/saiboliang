@@ -135,7 +135,7 @@ const DEFAULT_SKIN = 'cyber';
           event.preventDefault();
           root.dataset.toggleCurrent = buttons[index].dataset.toggleValue;
           apply(root);
-          buttons[index].focus();
+          buttons[index].focus({ preventScroll: root.classList.contains('observatory-boards') });
         });
       }
     </script>
