@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-10-02T16:15:49Z",
+  "overdue": [],
+  "durationBinding": [],
+  "closing": [
+    {
+      "id": "zhipu-codingplan-flash-zcode-202609",
+      "expiryDate": "2026-10-07T23:59:59+08:00"
+    },
+    {
+      "id": "zcode-flash-100m-daily-202609",
+      "expiryDate": "2026-10-07T23:59:59+08:00"
+    },
+    {
+      "id": "zhipu-qingyan-shuangjie-202609",
+      "expiryDate": "2026-10-07T23:59:59+08:00"
+    },
+    {
+      "id": "minimax-code-checkin-202609",
+      "expiryDate": "2026-10-07T23:59:59+08:00"
+    }
+  ]
+}

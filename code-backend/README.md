@@ -97,4 +97,16 @@ python code-backend/pipeline.py collect --build-cwd code-frontend --build-comman
 - `news`：`featuredExclude` 是规范化 `sourceUrl` 列表（`utm_*` 等跟踪参数由管道剥离后比对）。命中条目即使被 DeepSeek 或回落规则选中也不进「当日精选」，条目仍永久累加；编辑排除优先，跨轮次稳定生效。
 - `records`：整条人工纠正，包含 `module`（仅 `plans`）、`record`、`reason`、`evidenceUrl`、`at`。record 必须保留人工核验日期，`checkMethod` 为 manual；覆盖优先于自动采集，并写入审计。**`tiers[].conditions` 可空且只写一句**：取官方口径第一句（来源 / 核验声明，如「价格与额度取自…（…人工核验）」，或该档最关键的实质限制），不追加后续分句、不写税费与结算兜底句；没有可写内容填 `null`（`doc-data/cyber-granary-data-contract.md` §4.3）。
 
+### 票证期限巡检（`audit-tickets`，2026-10-03 用户拍板）
+
+`python pipeline.py audit-tickets` 只读扫描 `editorial/tickets.json`，报告三类情况：`OVERDUE`（`expiryDate` 已过但 `expired` 仍为 false）、`BOUND`（`tags.duration` 与 `expiryDate` 违反契约 §3 强绑定）、`CLOSING`（7 天内到期，提前提醒）。报告落`state/ticket-audit.json`。
+
+**不自动改 `expired`**：契约 §3 明确 `expiryDate` 自然到期不构成「官方已确认结束」，且不在构建期对「当天」判断（否则活动自然到期会让昨天的合法批次突然校验失败）。所以本命令只列清单，改不改由编辑拿官方证据决定。同样不进Actions workflow。
+
+### 票证发现层（`discover-tickets`，2026-10-02 用户拍板）
+
+`python pipeline.py discover-tickets` 从 `editorial/ticket-discovery.json` 登记的聚合站拉候选票，**只读不写**：不碰 `editorial/tickets.json`、不碰 `public/data/`，候选只落到 `state/ticket-candidates.json` 与终端输出。当前登记 `freeegg`（`https://freeegg.top/data/eggs.json`，其 robots.txt 明写「全站允许抓取」）。
+
+聚合站只做**发现**，不做事实来源，理由三条：`score` 是对方的编辑值（候选里叫 `sourceScore`，人工必须重拍）；对方正文（`content`）不进候选，入库前须编辑基于官方页自己写；`link` 带邀请码/推广参数一律标 `promoLink` 并进复核队列，按契约 §5.1 不得直接入库。当前源 `startsAt`/`preview`/`images` 三个非契约字段剥除；候选还要过 `duration`/`expiryDate` 强绑定（契约 §3）与 `TICKET_CANDIDATE` 全字段校验，不过则记 `ticket-candidate` 待确认，**不静默丢弃**。子命令不进 Actions workflow，需人工手动跑。
+
 不要手改 `public/data/`（`tickets.json` 也不例外，它的源在 `editorial/tickets.json`）。不支持在公共记录中增加临时字段，新增公共字段必须先确认契约变更。

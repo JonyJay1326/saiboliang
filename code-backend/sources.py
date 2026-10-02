@@ -7,9 +7,9 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
-from urllib.parse import quote, urlencode, urljoin, urlsplit
+from urllib.parse import parse_qsl, quote, urlencode, urljoin, urlsplit
 from common import DataError, digest, finite, normalize_url, require, safe_url
-from contract import CATEGORY_BY_EVENT, EVENTS, MODEL, PLAN, day, news_order, obj, text, unique
+from contract import CATEGORY_BY_EVENT, EVENTS, MODEL, PLAN, TICKET, TICKET_CANDIDATE, day, news_order, obj, text, unique
 
 
 class Node:
@@ -2309,3 +2309,76 @@ def parse_plan(scope,record,adapter,config=None):
     else:
         raise DataError('unknown plan adapter')
     return record,fingerprint
+
+
+def link_has_promo(url):
+    """True when a link carries referral/tracking parameters (contract 5.1 red line)."""
+    if any(marker in url.lower() for marker in PROMO_MARKERS):
+        return True
+    # Invite/fission paths carry the referral even when the query string looks clean
+    # (e.g. /misc/autoclaw-invite?activity_id=...). Contract 5.1 still forbids them.
+    if any(marker in urlsplit(url).path.lower() for marker in ('invite', 'fission', 'referral', '/ref/')):
+        return True
+    return any(key.lower().startswith('utm_') or key.lower() in ('ref', 'invite', 'invitecode', 'via')
+               for key, _ in parse_qsl(urlsplit(url).query, keep_blank_values=True))
+
+
+def ticket_candidate(record):
+    """Map one aggregator record onto TICKET_CANDIDATE, dropping non-contract fields."""
+    require(isinstance(record, dict), 'ticket record must be object')
+    # startsAt / preview / images are the aggregator's own fields; the contract has none.
+    # content is dropped on purpose: it is the other site's editorial prose, and a candidate
+    # must be rewritten from the official page before it can ever become a ticket.
+    values = {k: v for k, v in record.items()
+              if k not in ('startsAt', 'preview', 'images', 'content')}
+    require('affiliate' not in values, 'aggregator must not assert affiliate')
+    # `score` is theirs, renamed to sourceScore: it is their editorial judgement, not ours.
+    expected = (set(TICKET) - {'content', 'affiliate'}) | {'score'}
+    require(set(values) == expected, 'aggregator record fields mismatch: '
+            + ','.join(sorted(set(values) ^ expected)))
+    candidate = dict(
+        id=values['id'], title=values['title'], vendor=values['vendor'],
+        category=values['category'], sourceScore=values['score'], tags=values['tags'],
+        expired=values['expired'], expiryDate=values['expiryDate'], summary=values['summary'],
+        link=values['link'], promoLink=link_has_promo(values['link']),
+        publishedAt=values['publishedAt'], updatedAt=values['updatedAt'])
+    obj(candidate, TICKET_CANDIDATE)
+    require((candidate['expiryDate'] is not None) == (candidate['tags']['duration'] == 'limited'),
+            'ticket candidate duration/expiry mismatch')
+    return candidate
+
+
+def collect_ticket_candidates(client, configs, review):
+    """Discovery layer for tickets (2026-10-02 用户拍板接 FreeEgg).
+
+    FreeEgg is a same-position aggregator whose robots.txt explicitly allows crawling.
+    Its records are almost isomorphic with our contract (three extra non-contract fields,
+    dropped here). This function only discovers: it strips fields, flags promotional
+    links and validates against TICKET_CANDIDATE. It never writes editorial/tickets.json,
+    and never carries the other site's editorial content into a candidate.
+    """
+    results = []
+    for config in configs:
+        source = config['id']
+        try:
+            raw, final = client.get(config['url'])
+            require(normalize_url(final) == normalize_url(config['url']), 'ticket source redirected')
+            document = json.loads(decode(raw))
+            eggs = document['eggs'] if isinstance(document, dict) else document
+            require(isinstance(eggs, list) and eggs, 'ticket source payload invalid')
+        except (ValueError, KeyError, TypeError, UnicodeError) as exc:
+            review('ticket-source', source, 'discovery failed: ' + type(exc).__name__, config['url'])
+            continue
+        kept = 0
+        for record in eggs:
+            require(isinstance(record, dict), 'ticket record must be object')
+            try:
+                candidate = ticket_candidate(record)
+            except (ValueError, TypeError) as exc:
+                review('ticket-candidate', str(record.get('id', 'unknown'))[:120],
+                       'rejected: ' + str(exc)[:120], config['url'])
+                continue
+            results.append(dict(candidate, source=source))
+            kept += 1
+        review('ticket-source', source, 'discovered ' + str(kept) + ' candidate(s)', config['url'])
+    return results

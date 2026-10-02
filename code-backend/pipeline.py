@@ -11,9 +11,9 @@ from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
-from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, demote_trivial_version_featured, model_data, news_featured_exclusions, reclassify_news_items, reverify_news_items, search_official_candidates, select_featured, summarize_news, translate_github, translate_news
+from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, safe_url, utcnow, write_json
+from contract import TICKET, TICKET_CANDIDATE, empty_batch, obj, validate
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, collect_ticket_candidates, demote_trivial_version_featured, model_data, news_featured_exclusions, reclassify_news_items, reverify_news_items, search_official_candidates, select_featured, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -104,10 +104,135 @@ def promote(candidate,output):
         backup.rmdir()
 
 
+def load_ticket_sources(editorial):
+    """Aggregators that may feed the ticket discovery layer (2026-10-02 用户拍板接 FreeEgg).
+
+    Kept out of editorial/sources.json on purpose: that file drives the public news/plans
+    pipeline, and this is a separate, manual discovery step. Adding an aggregator must be a
+    deliberate edit here, not a side effect of editing an existing source list.
+    """
+    file = read_json(editorial / 'ticket-discovery.json', {})
+    require(isinstance(file, dict), 'invalid ticket discovery config')
+    sources = file.get('sources', [])
+    require(isinstance(sources, list) and sources, 'no ticket discovery source configured')
+    for source in sources:
+        require(set(source) == {'id', 'url'}, 'ticket source fields mismatch')
+        require(isinstance(source['id'], str) and source['id'].strip(), 'invalid ticket source id')
+        safe_url(source['url'])
+    require(len({s['id'] for s in sources}) == len(sources), 'duplicate ticket source id')
+    return sources
+
+
+def run_ticket_discover(args):
+    """票证发现层（2026-10-02 用户拍板）：从聚合站捞候选票，交人工拍板。
+
+    只读不写：不碰 editorial/tickets.json、不碰 public/data/。候选只落到
+    state/ticket-candidates.json 与终端输出。score 是对方的编辑值（候选里的
+    sourceScore），不是本站人工推荐分；带推广参数的 link 一律标 promoLink。
+    """
+    now = utcnow(); run = Run(args.state, now)
+    configs = load_ticket_sources(args.editorial)
+    stored = read_json(args.editorial / 'tickets.json', [])
+    require(isinstance(stored, list), 'invalid editorial tickets')
+    known = {t['id'] for t in stored}
+    candidates = collect_ticket_candidates(Client(), configs, run.review)
+    fresh = []
+    for candidate in candidates:
+        if candidate['id'] in known:
+            continue
+        if candidate['promoLink']:
+            run.review('ticket-candidate', candidate['id'],
+                       'link carries promo parameters; rewrite before use', candidate['link'])
+        fresh.append(candidate)
+    fresh.sort(key=lambda c: (-c['sourceScore'], c['id']))
+    write_json(args.state / 'ticket-candidates.json',
+               dict(generatedAt=now, candidates=fresh))
+    # Persist only the review queue. run.save() would also rewrite run.json and
+    # source-health.json from this empty Run, wiping the record of the last real
+    # collection; a manual discovery step must not clobber it. No retire() either:
+    # ticket-* items are unowned by design (see REVIEW_OWNER).
+    write_json(args.state / 'review-queue.json', run.queue)
+    print('ticket discovery: ' + str(len(candidates)) + ' candidate(s) from ' + str(len(configs))
+          + ' source(s); ' + str(len(fresh)) + ' not in editorial/tickets.json', flush=True)
+    for candidate in fresh:
+        flags = []
+        if candidate['promoLink']:
+            flags.append('PROMO-LINK')
+        if candidate['expired']:
+            flags.append('EXPIRED')
+        # expiryDate carries a Beijing offset while `now` is UTC: compare instants,
+        # not strings, or a same-day cutoff reads as still alive after it passed.
+        if candidate['expiryDate'] and datetime.fromisoformat(candidate['expiryDate']) <= datetime.fromisoformat(now):
+            flags.append('PAST-DUE')
+        print('  [' + str(candidate['sourceScore']) + '] ' + candidate['id']
+              + ('  <' + ','.join(flags) + '>' if flags else '')
+              + '  ' + candidate['title'], flush=True)
+    return 0
+
+
+def audit_ticket_expiry(records, now):
+    """Read-only expiry audit for tickets (contract §3).
+
+    Reports three conditions without writing anything:
+      overdue   - expiryDate has passed but expired is still false;
+      bound     - tags.duration and expiryDate violate the strong binding rule;
+      closing   - still alive but expiring within the given window, for a heads-up.
+
+    Contract §3 is explicit that expiryDate passing does NOT make yesterday's batch
+    invalid, and that expiry alone is not official evidence of ending. So this command
+    never flips `expired`: it only tells the editor which records deserve a look.
+    """
+    moment = datetime.fromisoformat(now)
+    overdue, bound, closing = [], [], []
+    for ticket in records:
+        expiry = ticket['expiryDate']
+        limited = ticket['tags']['duration'] == 'limited'
+        if (expiry is not None) != limited:
+            bound.append(ticket['id'])
+            continue
+        if expiry is None:
+            continue
+        deadline = datetime.fromisoformat(expiry)
+        if deadline < moment:
+            if not ticket['expired']:
+                overdue.append(ticket['id'])
+        elif (deadline - moment).total_seconds() <= 7 * 86400:
+            closing.append((ticket['id'], expiry))
+    return overdue, bound, closing
+
+def run_ticket_audit(args):
+    """票证期限巡检（只读）：报告逾期未标 / 期限绑定违规 / 即将到期，不改数据。
+
+    契约 §3 明确 `expiryDate` 自然到期不构成「官方已确认结束」，也不在构建期判
+    「当天」——放进构建校验会让昨天的合法批次突然失败。因此本命令只读不写：
+    不翻 `expired`、不碰 `editorial/tickets.json` 与 `public/data/`，只列清单。
+    """
+    now = utcnow()
+    records = read_json(args.editorial / 'tickets.json', [])
+    require(isinstance(records, list), 'invalid editorial tickets')
+    by_id = {t['id']: t for t in records}
+    overdue, bound, closing = audit_ticket_expiry(records, now)
+    write_json(args.state / 'ticket-audit.json',
+               dict(generatedAt=now, overdue=overdue, durationBinding=bound,
+                    closing=[dict(id=i, expiryDate=e) for i, e in closing]))
+    print('ticket audit: ' + str(len(records)) + ' record(s); ' + str(len(overdue)) + ' overdue, '
+          + str(len(bound)) + ' duration-binding violation(s), ' + str(len(closing)) + ' closing within 7d',
+          flush=True)
+    for identity in overdue:
+        print('  OVERDUE   ' + identity + '  ' + by_id[identity]['title'], flush=True)
+    for identity in bound:
+        print('  BOUND     ' + identity + '  ' + by_id[identity]['title'], flush=True)
+    for identity, expiry in closing:
+        print('  CLOSING   ' + identity + '  ' + expiry + '  ' + by_id[identity]['title'], flush=True)
+    print('no records were modified; flip expired only with official evidence (contract §3)', flush=True)
+    return 0
+
 REVIEW_OWNER={'github-page':'github','github-classification':'github','github-translate':'github',
               'models':'models','model-mapping':'models','model-price':'models','plans':'models',
               'news-item':'news','news-original':'news','news-future':'news','news-translate':'news',
               'news-summary':'news','news-source':'news'}
+# 票证发现层的待确认项刻意不归属任何模块：tickets 每轮 collect 都成功，映射到它会被
+# retire() 静默清掉（2026-10-02 实测发现）。这些是人工任务，只由编辑处理 review-queue.json。
 
 
 class Run:
@@ -523,7 +648,7 @@ def collect(args):
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=('init','collect','reverify','reclassify','version-gate','validate'))
+    parser.add_argument('command',choices=('init','collect','discover-tickets','audit-tickets','reverify','reclassify','version-gate','validate'))
     parser.add_argument('--output',type=Path,default=ROOT/'public'/'data')
     parser.add_argument('--candidate',type=Path,default=ROOT/'.cache'/'candidate')
     parser.add_argument('--state',type=Path,default=ROOT/'state')
@@ -556,6 +681,10 @@ def main(argv=None):
                 return run_news_reclassify(args)
             if args.command=='version-gate':
                 return run_news_version_gate(args)
+            if args.command=='discover-tickets':
+                return run_ticket_discover(args)
+            if args.command=='audit-tickets':
+                return run_ticket_audit(args)
             return collect(args)
     except (ValueError,OSError) as exc:
         # Network errors are sanitized in Client; never print raw request headers.
