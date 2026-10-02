@@ -9,9 +9,9 @@ from pathlib import Path
 from unittest.mock import patch
 
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
-from contract import empty_batch, validate
-from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, thin_summary, reclassify_news_items, version_release, version_is_minor_bump, demote_trivial_version_featured
+from contract import TICKET_CANDIDATE, empty_batch, validate
+from pipeline import REVIEW_OWNER, Run, assemble, audit_ticket_expiry, load_ticket_sources, load_tickets, lock, main, promote, read_batch, save_candidate
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, collect_ticket_candidates, fill_news_summaries, link_has_promo, select_featured, summarize_news, ticket_candidate, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, thin_summary, reclassify_news_items, version_release, version_is_minor_bump, demote_trivial_version_featured
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -1620,6 +1620,150 @@ class PipelineTests(unittest.TestCase):
                 self.assertEqual(main(argv),1)
             self.assertEqual(read_batch(output),empty_batch(NOW))
             self.assertEqual(read_json_for_test(state/'source-health.json'),{})
+
+
+    def test_ticket_candidate_drops_non_contract_fields_and_editorial_content(self):
+        candidate=ticket_candidate(egg(startsAt='2026-10-01T00:00:00+08:00',preview=True,images=['a.png']))
+        self.assertEqual(set(candidate),set(TICKET_CANDIDATE))
+        self.assertNotIn('content',candidate)
+        self.assertNotIn('startsAt',candidate)
+        self.assertNotIn('preview',candidate)
+        self.assertNotIn('images',candidate)
+        self.assertEqual(candidate['sourceScore'],80)
+        self.assertFalse(candidate['promoLink'])
+
+    def test_ticket_candidate_flags_promo_links_in_query_and_path(self):
+        self.assertTrue(link_has_promo('https://example.com/a?invite_code=abc'))
+        self.assertTrue(link_has_promo('https://example.com/a?utm_source=x'))
+        self.assertTrue(link_has_promo('https://example.com/misc/autoclaw-invite?activity_id=1'))
+        self.assertTrue(link_has_promo('https://example.com/register'))
+        self.assertFalse(link_has_promo('https://example.com/pricing'))
+        self.assertFalse(link_has_promo('https://example.com/docs?page=2'))
+
+    def test_ticket_candidate_rejects_unbound_duration_and_missing_fields(self):
+        with self.assertRaises(ValueError):
+            ticket_candidate(egg(duration='limited',expiry=None))
+        with self.assertRaises(ValueError):
+            ticket_candidate(egg(duration='longterm'))
+        broken=egg()
+        broken.pop('vendor')
+        with self.assertRaises(ValueError):
+            ticket_candidate(broken)
+
+    def test_collect_ticket_candidates_isolates_failing_source_and_reviews_rejects(self):
+        payload=dict(version='1',eggs=[egg(),egg(identity='other-egg-202610',duration='limited',expiry=None)])
+        class Client:
+            def __init__(self):
+                self.calls=[]
+            def get(self,url,*args,**kwargs):
+                self.calls.append(url)
+                if 'bad' in url:
+                    raise DataError('HTTP 500')
+                return json.dumps(payload).encode(),url
+        reviews=[]
+        client=Client()
+        found=collect_ticket_candidates(client,[dict(id='good',url='https://good.example/data/eggs.json'),
+                                                   dict(id='bad',url='https://bad.example/data/eggs.json')],
+                                      lambda kind,identity,reason,evidence: reviews.append((kind,identity,reason)))
+        self.assertEqual([c['id'] for c in found],['demo-egg-202610'])
+        self.assertEqual(found[0]['source'],'good')
+        self.assertIn(('ticket-source','bad','discovery failed: DataError'),reviews)
+        self.assertIn('other-egg-202610',[r[1] for r in reviews if r[0]=='ticket-candidate'])
+
+    def test_discover_tickets_never_writes_editorial_or_public_batch(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); output=root/'data'; state=root/'state'; editorial=root/'editorial'; candidate=root/'candidate'
+            save_candidate(output,empty_batch(NOW))
+            write_json(editorial/'ticket-discovery.json',dict(sources=[dict(id='freeegg',url='https://freeegg.top/data/eggs.json')]))
+            known=dict(id='known-egg-202610',title='Known',vendor='Demo',category='token',score=90,
+                       tags=dict(duration='longterm',region='cn'),expired=False,expiryDate=None,summary='s',
+                       content='c',link='https://example.com/k',affiliate=False,publishedAt='2026-10-01',updatedAt='2026-10-01')
+            write_json(editorial/'tickets.json',[known])
+            argv=['discover-tickets','--output',str(output),'--state',str(state),'--editorial',str(editorial),'--candidate',str(candidate)]
+            with patch('pipeline.collect_ticket_candidates',return_value=[dict(ticket_candidate(egg()),source='freeegg'),
+                                                                             dict(ticket_candidate(egg(identity='promo-egg-202610',link='https://example.com/x?invite_code=z')),source='freeegg')]),patch('pipeline.utcnow',return_value=LATER):
+                self.assertEqual(main(argv),0)
+            stored=read_json_for_test(editorial/'tickets.json')
+            self.assertEqual([t['id'] for t in stored],['known-egg-202610'])
+            self.assertEqual(read_batch(output),empty_batch(NOW))
+            result=read_json_for_test(state/'ticket-candidates.json')
+            self.assertEqual([c['id'] for c in result['candidates']],['demo-egg-202610','promo-egg-202610'])
+            self.assertEqual([c['promoLink'] for c in result['candidates']],[False,True])
+            queue=read_json_for_test(state/'review-queue.json')
+            self.assertIn('promo-egg-202610',[i['objectId'] for i in queue])
+
+    def test_load_ticket_sources_requires_explicit_id_and_url(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            editorial=Path(tmp)
+            with self.assertRaises(ValueError):
+                load_ticket_sources(editorial)
+            write_json(editorial/'ticket-discovery.json',dict(sources=[dict(id='a',url='https://a.example/x.json'),dict(id='a',url='https://b.example/x.json')]))
+            with self.assertRaises(ValueError):
+                load_ticket_sources(editorial)
+            write_json(editorial/'ticket-discovery.json',dict(sources=[dict(id='a',url='https://a.example/x.json')]))
+            self.assertEqual(load_ticket_sources(editorial)[0]['id'],'a')
+
+    def test_ticket_review_items_survive_a_successful_collect(self):
+        # Regression (2026-10-02): REVIEW_OWNER once mapped ticket-* to 'tickets', and every
+        # successful collect appends 'tickets' to run.success, so retire() silently dropped
+        # every discovery item on the next scheduled run before an editor saw it.
+        self.assertNotIn('ticket-candidate', REVIEW_OWNER)
+        self.assertNotIn('ticket-source', REVIEW_OWNER)
+        with tempfile.TemporaryDirectory() as tmp:
+            state=Path(tmp)
+            run=Run(state,LATER)
+            run.review('ticket-candidate','keep-me','link carries promo parameters','https://example.com')
+            run.review('ticket-source','freeegg','discovered 3 candidate(s)','https://freeegg.top/data/eggs.json')
+            run.success.append('tickets')
+            run.success.append('news')
+            run.save()
+            kept={i['objectId'] for i in read_json_for_test(state/'review-queue.json')}
+            self.assertIn('keep-me',kept)
+            self.assertIn('freeegg',kept)
+
+    def test_ticket_expiry_audit_reports_overdue_binding_and_closing(self):
+        now='2026-10-03T00:00:00Z'
+        def ticket(identity,expiry,expired,duration):
+            return dict(id=identity,title=identity,vendor='V',category='token',score=80,
+                        tags=dict(duration=duration,region='cn'),expired=expired,expiryDate=expiry,
+                        summary='s',content='c',link='https://example.com/'+identity,affiliate=False,
+                        publishedAt='2026-09-01',updatedAt='2026-09-01')
+        records=[
+            ticket('alive-longterm',None,False,'longterm'),
+            ticket('closing-soon','2026-10-07T23:59:59+08:00',False,'limited'),
+            ticket('far-off','2026-11-30T23:59:59+08:00',False,'limited'),
+            ticket('already-expired','2026-10-01T23:59:59+08:00',True,'limited'),
+            ticket('overdue-unflagged','2026-10-01T23:59:59+08:00',False,'limited'),
+            ticket('binding-violation','2026-10-01T23:59:59+08:00',False,'longterm'),
+        ]
+        overdue,bound,closing=audit_ticket_expiry(records,now)
+        self.assertEqual(overdue,['overdue-unflagged'])
+        self.assertEqual(bound,['binding-violation'])
+        self.assertEqual([i for i,_ in closing],['closing-soon'])
+
+    def test_audit_tickets_command_never_modifies_records(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); output=root/'data'; state=root/'state'; editorial=root/'editorial'; candidate=root/'candidate'
+            save_candidate(output,empty_batch(NOW))
+            stale=dict(id='overdue-unflagged',title='Stale',vendor='V',category='token',score=80,
+                       tags=dict(duration='limited',region='cn'),expired=False,
+                       expiryDate='2026-09-01T23:59:59+08:00',summary='s',content='c',
+                       link='https://example.com/s',affiliate=False,publishedAt='2026-08-01',updatedAt='2026-08-01')
+            write_json(editorial/'tickets.json',[stale])
+            argv=['audit-tickets','--output',str(output),'--state',str(state),'--editorial',str(editorial),'--candidate',str(candidate)]
+            self.assertEqual(main(argv),0)
+            self.assertEqual(read_json_for_test(editorial/'tickets.json'),[stale])
+            self.assertEqual(read_batch(output),empty_batch(NOW))
+            report=read_json_for_test(state/'ticket-audit.json')
+            self.assertEqual(report['overdue'],['overdue-unflagged'])
+
+def egg(identity='demo-egg-202610',score=80,link='https://example.com/offer',duration='limited',expiry='2026-10-07T23:59:59+08:00',**extra):
+    record=dict(id=identity,title='Demo offer',vendor='Demo',category='token',score=score,
+               tags=dict(duration=duration,region='cn'),expired=False,expiryDate=expiry,
+               summary='demo summary',content='editorial prose that must not leak into a candidate',
+               link=link,publishedAt='2026-10-01',updatedAt='2026-10-01')
+    record.update(extra)
+    return record
 
 
 def read_json_for_test(path):

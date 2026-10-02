@@ -96,6 +96,15 @@ TICKET = dict(id=identifier, title=text, vendor=text, category=enum('api-quota',
               tags=lambda v: obj(v, dict(duration=enum('limited','longterm','unknown'), region=enum('cn','global','overseas-only','unknown'))),
               expired=boolean, expiryDate=nullable(beijing_stamp), summary=summary, content=content_text,
               link=safe_url, affiliate=boolean, publishedAt=day, updatedAt=day)
+# 票证候选（发现层内部结构，2026-10-02 用户拍板接 FreeEgg）：不是公共契约的一部分，
+# 只在 state/review-queue.json 里给编辑看，因此不含 content——正文是对方的编辑稿，
+# 入库前须由编辑基于官方页自己写（避免直接转载他人正文）。sourceScore 是对方的编辑值，
+# 人工必须重拍；promoLink 为 True 表示 link 带推广参数，按契约 §5.1 一律不得直接入库。
+TICKET_CANDIDATE = dict(id=identifier, title=text, vendor=text, category=enum('api-quota','token','credits'),
+                        sourceScore=score_value,
+                        tags=lambda v: obj(v, dict(duration=enum('limited','longterm','unknown'), region=enum('cn','global','overseas-only','unknown'))),
+                        expired=boolean, expiryDate=nullable(beijing_stamp), summary=summary,
+                        link=safe_url, promoLink=boolean, publishedAt=day, updatedAt=day)
 MODEL = dict(id=identifier, name=text, vendor=text, aaId=nullable(text), releasedAt=nullable(day),
              inputCost=nullable(number), outputCost=nullable(number), priceSource=nullable(enum('artificial-analysis')),
              priceSourceUrl=nullable(safe_url), priceUpdatedAt=nullable(stamp))
