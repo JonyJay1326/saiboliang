@@ -5,30 +5,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T09:55:24Z"
   },
-  "50d71cd52400f551c336b9ad5bff210544c56459b813f45adc29b8abfb63cfa4": {
-    "title": "我们将如何为澳大利亚做得更好",
-    "summary": "OpenAI 就涉及澳大利亚政府网站的事件道歉，并概述更强保障和支持以加强澳大利亚网络防御。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "2fc54b690d7b20a2e14328388fc3694e3eecf9d62246b7618620635188f7c454": {
-    "title": "迈向前沿 AI 训练的安全案例",
-    "summary": "我们关于前沿 AI 训练安全案例的早期指南涵盖技术保障、操作实践和调查失准事件",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "db713ef86bd59ea8f7bad6b7e8b404a24482c1e0315e748a8b43d61d66df115e": {
-    "title": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
-    "summary": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "4607b4c4468386f7d703fdc6e8f2d94f991fa6a6a1a594ce5a83f94754cdf8dc": {
-    "title": "新的 Microsoft 数据创新解锁只有你的企业知道的东西",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
   "d6b9f5e651b1891e950e0096b862ca9527c5eacf458b2804fa20b6d4b208ad61": {
     "title": "推出 GPT-6.1 Sol",
     "summary": "认识 GPT-6.1 Sol：接近 Astra 的智能，适用于编程、计算机使用和专业工作，API 输入输出 token 价格仅为 Astra 标准价的五分之一。",
@@ -38,18 +14,6 @@
   "6071f63e21f6425413eb63722b1604896ffdb702f04f5beb8c9ad701e7ae765e": {
     "title": "DevDay 2026 回顾",
     "summary": "探索 OpenAI DevDay 2026 的 20 多项发布，涵盖 GPT-6 Astra、ChatGPT、Codex、API、安全及面向开发者的新工具。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "dec620cb7225d2434a9b02e6e0197b1952a6412dcad780af2099d9910f2c9ee8": {
-    "title": "推出 dots",
-    "summary": "OpenAI 的 dots 是主动式助手，可在复杂项目和日常任务中持续工作。了解 dots 如何助你保持掌控，同时推进工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "20d614df3f96df84d10bb3f1354b7d28b9bc872cfee2fdcb6d9f95c3784db801": {
-    "title": "Dependabot 的仓库自定义运行器设置",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
   },
@@ -65,39 +29,9 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T16:50:43Z"
   },
-  "c08402b8f22a4b159df3858cefc3416269ca944c9595105093b01c30fd1a8c02": {
-    "title": "Barclays 扩展 Claude 以升级运营并改善客户体验",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
   "90249c2a3882c6d31b88e7cea8a85045e4eeb6a0a24ec30e6774300a2c2f9921": {
     "title": "瓦解一场有组织的模型蒸馏行动",
     "summary": "了解 OpenAI 如何瓦解一场提取受保护模型推理过程的行动，并正在加强对对抗性蒸馏的防御。",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
-  "8f738e218bb88ed3b1aa81c480649ec885ad25b9773835dff26f492f5f0acc1c": {
-    "title": "npm 可信发布的可选 dist-tag 权限",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
-  "83c42770fe17223cd9044dc544eaab0c34b206894b5639ea7e68ea5c0aa93048": {
-    "title": "GitHub Team 的 GitHub Advanced Security 试用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
-  "cad13c49eff0df4a6694b1ab98b5d2fd21fb83a1013f6407371fe2156b638a7e": {
-    "title": "VS Code 和 GitHub Copilot 应用中的 HydraFusion",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
-  "7ecb75d17d50c9e8eb8978a397c817d6801d4f92d300772d35848af90bb72d95": {
-    "title": "GHE.com 的仅 X25519 TLS 将于 10 月 7 日终止",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-01T10:14:21Z"
   },
@@ -131,24 +65,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-01T17:24:30Z"
   },
-  "1b1903c96c873dca5e4db30dfce3c7230ca9cfb7caf86243579aae7739f00743": {
-    "title": "新仪表板体验现已成为默认",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
-  "e77dbfb3ff372c8397520da194489e12fb93e7a16877211abe1f95a68732c5c0": {
-    "title": "GitHub 异步合并 API 正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
-  "a343b310e28c339784b31ba4628a92a04b4d44f068f4df2e38f88ce69dfee313": {
-    "title": "Actions Runner Controller 发布 0.15.0",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
   "162f06b35f5ef3d05b04cbcc6ec80108cd4297d75b0071d01d9eda9ba5053f01": {
     "title": "今秋十月 GeForce NOW 迎来 25 款新游戏",
     "summary": null,
@@ -161,16 +77,64 @@
     "source": "deepseek-flash",
     "at": "2026-10-01T17:24:30Z"
   },
-  "9e3738afcbdf2597f912c14173b3c0dac8067ee79f5118aec887778587e5dadb": {
-    "title": "超大规模负责任基础设施：管理 Azure 硬件全生命周期",
-    "summary": null,
+  "2167384f51e2a4466793a69c16672f4e00ce182695dce33954cb527247ddf545": {
+    "title": "The Den 每周省出 10-15 小时，用 ChatGPT Work 实现增长",
+    "summary": "在开设新门店之际，这家社交俱乐部用 2 小时而非 3 天准备拨款申请，用 3 小时而非 4 天准备酒牌材料。",
     "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
+    "at": "2026-10-02T07:20:15Z"
   },
-  "36138c270920188f9af74a1fbc8a95649774fc2c948077d26f8ecf3ff152168d": {
-    "title": "巴塞罗那 FabCon 和 SQLCon 2026：为 Microsoft Copilot 和代理构建数据基础",
+  "b3abbf9a49122235f36a1b34544a143600776366be1fc2709dc7767f9c1559b9": {
+    "title": "私有漏洞报告的速率限制",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "771239a6e9a1d874244729a5ba15c9f494b07b0976e45387d8cae171c0926600": {
+    "title": "私有漏洞报告的结构化表单",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "e11a5d7f0be16c7ae710cb40fcd3e360fe54705b38e97bec68265383fd6a4b19": {
+    "title": "GitHub Copilot 现可通过 computer use 与桌面应用交互",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "038fee3588d7f55541e39725adbf9c084d25d95098c66fd8e8acc5b15d964a9a": {
+    "title": "GitHub Actions：macOS 14 runner 镜像即将退役",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "d8efb6ae3f1c14fd22be9554b790c3552220acaabf95f4f6a3247a98ad84b954": {
+    "title": "VS Code 中的 GitHub Copilot，2026 年 9 月版本",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "00ef16fda49de0e157dc87840ee1ee219bcd554005198cedaa3433ba52cda3e2": {
+    "title": "无障碍声明在仓库概览中突出显示",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "753db708944fe737e729b7912411397f9d9d7d2c46f10d182264c191cbc27be9": {
+    "title": "Actions 保留策略现涵盖 checks、runs 和 statuses",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "20f94898ac7397b2decb7e67ad5363981edbdbf5de95038cc5fc6bbf329af8e7": {
+    "title": "Copilot CLI 和 Copilot 应用中的动态工作流",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "5395303ce74d411ba3f87f735e72e71f937fc889b3f24256ef69ae4d86789a37": {
+    "title": "NVIDIA GPU 如何帮助加速 OpenAI 的 GPT-6 Astra Ultrafast",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
   }
 }

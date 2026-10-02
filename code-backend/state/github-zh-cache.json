@@ -89,11 +89,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T15:36:14Z"
   },
-  "google/ax": {
-    "text": "Google 的开放智能体编排运行时",
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
-  },
   "pacifio/atlas": {
     "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
     "source": "deepseek-flash",
@@ -106,16 +101,6 @@
   },
   "NVIDIA/OpenShell": {
     "text": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "openai/symphony": {
-    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "Armur-Ai/Pentest-Swarm-AI": {
-    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用和报告专家，支持漏洞赏金、持续监控和 CTF 模式。使用 Go 构建，集成 7 种以上原生安全工具。",
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
@@ -134,16 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "Asymptote-Labs/agent-beacon": {
-    "text": "面向 AI agents 的跨 harness、可自我改进的记忆层。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "NVIDIA/Model-Optimizer": {
-    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "alirezarezvani/claude-skills": {
     "text": "380 个 Claude Code 技能、agent 技能与插件（30+ Agents、70+ 自定义命令、380+ 技能、可定制参考与脚本），适用于 Claude Code、Codex、Gemini CLI、Cursor 等 11 种编码 agent，覆盖工程、营销、产品、合规、高管咨询、研究、业务运营、商业与金融及日常生产力技能。",
     "source": "deepseek-flash",
@@ -154,23 +129,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
   },
-  "aayushch/laya": {
-    "text": "Laya 是一个开源、本地优先的 AI 通知指挥中心，通过 Ollama 和 LM Studio 使用本地 LLM 聚合 Slack、Gmail、GitHub、Jira、Notion、Outlook、Calendar 等通知。支持通过 BYOK 使用云端模型。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "JayWebtech/autoshorts": {
     "text": "AutoShorts 是一个本地优先的桌面应用，可将长视频或音频录制转换为高影响力的竖屏短视频候选片段（9:16 竖屏），并借助 AI 对病毒式传播时刻进行排序。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
-  "chiphuyen/aie-book": {
-    "text": "[WIP] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
-  "netdata/netdata": {
-    "text": "通往 AI 驱动的全栈可观测性的最快路径，即使对精简团队也是如此。",
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
   },
@@ -189,11 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-01T17:24:30Z"
   },
-  "github/gh-aw": {
-    "text": "GitHub 智能体工作流",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
   "l0ng-ai/tty7": {
     "text": "比窗口更持久的终端。退出应用后 shell 仍存活，智能体可驱动其他智能体，远程机器用法一致。纯 Rust，GPU 渲染。",
     "source": "deepseek-flash",
@@ -203,5 +158,45 @@
     "text": "用单个文件分发并运行 LLM。",
     "source": "deepseek-flash",
     "at": "2026-10-01T17:24:30Z"
+  },
+  "deepseek-ai/FlashMLA": {
+    "text": "FlashMLA：高效多头潜在注意力内核",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "dotnet/skills": {
+    "text": "用于协助 AI 编码代理处理 .NET 和 C# 的技能仓库",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "microsoft/semantic-kernel": {
+    "text": "将前沿 LLM 技术快速轻松地集成到你的应用中",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "metadist/synaplan": {
+    "text": "我们的 AI 控制平面，用于快速部署。可与多种模型对话、让代理使用 MCP、获得支持聊天组件及更多工具。使用智能 DAG 路由节省 token！我们接受 Go、Rust、Python、NodeJS 等语言的插件。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "freescout-help-desk/freescout": {
+    "text": "FreeScout — 免费自托管全渠道 AI 驱动的帮助台与共享邮箱",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "laravel/ai": {
+    "text": "Laravel AI SDK 提供统一、表达力强的 API，用于与 OpenAI、Anthropic、Gemini 等 AI 提供商交互。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "WordPress/ai": {
+    "text": "WordPress 的 AI 功能与实验。用于测试 AI 能力的模块化框架。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "cline/cline": {
+    "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
   }
 }
