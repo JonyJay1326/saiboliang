@@ -1,6 +1,82 @@
 {
-  "dataUpdatedAt": "2026-09-30T16:50:43Z",
+  "dataUpdatedAt": "2026-10-02T07:52:02Z",
   "items": [
+    {
+      "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+      "sourceUrl": "https://www.qbitai.com/2026/10/499663.html",
+      "publishedAt": "2026-10-01T15:02:14Z",
+      "source": "量子位",
+      "summary": "价格只有Astra一半",
+      "id": "a06a06361cf6d07641632eb174b600613bd53b7da910a017aff6f3d0e687638e",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/499663.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-01T17:24:30Z",
+      "featured": true
+    },
+    {
+      "title": "Gemini 4 Argon：我们前沿智能的新时代",
+      "sourceUrl": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "publishedAt": "2026-09-30T20:01:45Z",
+      "source": "Google DeepMind",
+      "summary": "Gemini 4 Argon发布，面向现实编码、企业知识工作与网络防御，即将推出。",
+      "id": "ce56aa83d0064ef1be25967db1553bdc8e45096edaa34de2aa87655b81b09ce8",
+      "originalTitle": "Gemini 4 Argon: our next era of frontier intelligence",
+      "translatedAt": "2026-10-01T10:14:21Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "originalVerifiedAt": "2026-10-01T10:14:21Z",
+      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-01T10:14:21Z",
+      "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.73.3",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-01&version=v1.73.3",
+      "publishedAt": "2026-09-30T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "5f142f5cab37925d126bd533d8293a79760d5fb235478f8e69a05d10586b6a4e",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-01&version=v1.73.3",
+      "originalVerifiedAt": "2026-10-01T17:24:30Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-01&version=v1.73.3",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-01T17:24:30Z",
+      "featured": true
+    },
+    {
+      "title": "Barclays 扩展 Claude 以升级运营并改善客户体验",
+      "sourceUrl": "https://www.anthropic.com/news/barclays-scales-claude",
+      "publishedAt": "2026-09-30T16:00:00Z",
+      "source": "Anthropic",
+      "summary": "巴克莱扩大与Anthropic合作，在全球业务中整合企业级AI系统。",
+      "id": "c08402b8f22a4b159df3858cefc3416269ca944c9595105093b01c30fd1a8c02",
+      "originalTitle": "Barclays scales Claude to upgrade operations and improve client experience",
+      "translatedAt": "2026-10-01T17:24:30Z",
+      "lang": "en",
+      "originalSource": "Anthropic",
+      "originalUrl": "https://www.anthropic.com/news/barclays-scales-claude",
+      "originalVerifiedAt": "2026-10-01T17:24:30Z",
+      "url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-01T17:24:30Z",
+      "featured": true
+    },
     {
       "title": "从训练到生产，NVIDIA 与 CoreWeave 闭环智能体 AI",
       "sourceUrl": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
@@ -18,6 +94,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T16:50:43Z",
+      "featured": true
+    },
+    {
+      "title": "VS Code 和 GitHub Copilot 应用中的 HydraFusion",
+      "sourceUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "publishedAt": "2026-09-30T14:31:19Z",
+      "source": "GitHub",
+      "summary": "HydraFusion研究预览版登陆VS Code和GitHub Copilot应用，出现在模型选择器中。",
+      "id": "cad13c49eff0df4a6694b1ab98b5d2fd21fb83a1013f6407371fe2156b638a7e",
+      "originalTitle": "HydraFusion in VS Code and the GitHub Copilot app",
+      "translatedAt": "2026-10-01T17:24:30Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "originalVerifiedAt": "2026-10-01T17:24:30Z",
+      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-01T17:24:30Z",
       "featured": true
     },
     {
@@ -113,7 +208,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T11:42:49Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Command Code 发布 v0.1.44",
@@ -132,7 +227,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T16:50:43Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Command Code 发布 v1.71.0",
@@ -173,6 +268,25 @@
       "featured": true
     },
     {
+      "title": "美团万亿模型悄悄上线，我用它复刻了Muse前端",
+      "sourceUrl": "https://zhidx.com/p/598348.html",
+      "publishedAt": "2026-09-29T12:24:57Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 江宇 编辑 | 心缘 智东西9月30日报道，9月25日，美团LongCat团队上线了新一代 预览版模型LongCat-2.5-Preview ",
+      "id": "537d17a623b606c8cced2fe0b97d72e0a3cc91ec45c39df16026b67489845a53",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/598348.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-01T17:24:30Z",
+      "featured": true
+    },
+    {
       "title": "OpenAI因新模型太强叫停发布",
       "sourceUrl": "https://www.qbitai.com/2026/09/499140.html",
       "publishedAt": "2026-09-29T07:49:20Z",
@@ -190,6 +304,44 @@
       "eventType": "model-release",
       "addedAt": "2026-09-29T09:55:24Z",
       "featured": true
+    },
+    {
+      "title": "巴塞罗那 FabCon 和 SQLCon 2026：为 Microsoft Copilot 和代理构建数据基础",
+      "sourceUrl": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/",
+      "publishedAt": "2026-09-29T06:30:00Z",
+      "source": "Microsoft Azure",
+      "summary": "微软在巴塞罗那FabCon和SQLCon 2026发布Fabric与SQL创新，助建AI可信数据基础。",
+      "id": "36138c270920188f9af74a1fbc8a95649774fc2c948077d26f8ecf3ff152168d",
+      "originalTitle": "FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents",
+      "translatedAt": "2026-10-01T17:24:30Z",
+      "lang": "en",
+      "originalSource": "Microsoft Azure",
+      "originalUrl": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/",
+      "originalVerifiedAt": "2026-10-01T17:24:30Z",
+      "url": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-01T17:24:30Z",
+      "featured": true
+    },
+    {
+      "title": "OpenCode 发布 v2.0.19",
+      "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.0.19",
+      "publishedAt": "2026-09-29T04:30:55Z",
+      "source": "OpenCode",
+      "summary": "开源编码代理OpenCode发布v2.0.19版本。",
+      "id": "72f44fe89284c5f892c68e71edcd0b90c422c7c5539aefe36ae16cb2d02ef459",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "OpenCode",
+      "originalUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.0.19",
+      "originalVerifiedAt": "2026-10-01T17:24:30Z",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.0.19",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-01T17:24:30Z",
+      "featured": null
     },
     {
       "title": "曝OpenAI紧急叫停新模型发布！",
@@ -284,7 +436,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-30T16:50:43Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "英伟达发布开放智能体安全平台，保障智能体从测试到部署全流程安全",
@@ -493,7 +645,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-28T09:53:56Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Copilot Business 和 Enterprise 的 Copilot 功能默认启用",
@@ -626,7 +778,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-24T06:34:09Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "让AI研发下一代机器人！成立三个月登顶物理AI评测榜单，押注Physical RSI",
@@ -1557,7 +1709,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-20T01:31:22Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "GitHub Copilot 部分模型将于十月中旬弃用",
@@ -1975,7 +2127,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-09-14T03:47:26Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "OpenAI 关停史上最快模型 GPT-5.3-Codex-Spark：从发布到下线只活了 7 个月",
@@ -2643,6 +2795,6 @@
       "featured": true
     }
   ],
-  "version": "2026-09-30T16:50:43Z",
-  "generatedAt": "2026-09-30T16:50:43Z"
+  "version": "2026-10-02T07:52:02Z",
+  "generatedAt": "2026-10-02T07:52:02Z"
 }

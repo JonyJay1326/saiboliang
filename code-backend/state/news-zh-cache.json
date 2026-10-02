@@ -1,69 +1,9 @@
 {
-  "deeacf9a73c457054e9489987825836f0a14d0deb14ba2387752e62472b717f3": {
-    "title": "推出 Meta Enterprise Platform",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
-  },
-  "0adf5bb2a473897d12526e4b9a8c88391e22c0769cbbe7208af0a1f61691cd5f": {
-    "title": "Lenfest Institute 扩大标志性项目，获 OpenAI 扩展支持",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
-  },
-  "52b14ec01b86fb13f0c928f5890e5106437712c293a735afe82a6ebc22bb4eba": {
-    "title": "Team Bots：从团队中学习的 AI 同事",
-    "summary": "为 Grok Bot 提供所需的文件、应用和专业知识，然后分享它，让整个团队基于相同上下文工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
   "3044f63155f8b6ed683de58550e1f8123e3e315254ea7eb5763eef6da373c893": {
     "title": "未来属于每个人：面向小企业的 Muse",
     "summary": "我们推出 Muse for Small Business，一个在后台工作的个人 AI 代理，帮助您的小企业实现目标。",
     "source": "deepseek-flash",
     "at": "2026-09-29T09:55:24Z"
-  },
-  "50d71cd52400f551c336b9ad5bff210544c56459b813f45adc29b8abfb63cfa4": {
-    "title": "我们将如何为澳大利亚做得更好",
-    "summary": "OpenAI 就涉及澳大利亚政府网站的事件道歉，并概述更强保障和支持以加强澳大利亚网络防御。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "2fc54b690d7b20a2e14328388fc3694e3eecf9d62246b7618620635188f7c454": {
-    "title": "迈向前沿 AI 训练的安全案例",
-    "summary": "我们关于前沿 AI 训练安全案例的早期指南涵盖技术保障、操作实践和调查失准事件",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "833e9419a34f8836dc9d75020b228e7e76dd99c1c482fbba6af088c9a08dec28": {
-    "title": "你是 Codex Original 吗？",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "db713ef86bd59ea8f7bad6b7e8b404a24482c1e0315e748a8b43d61d66df115e": {
-    "title": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
-    "summary": "观看 Future Vision XPRIZE 获奖预告片《The Gifted》。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "1d09516522abfde5d3cf8f8aebc3dd40645917feb89f23baef210c4da41a9cf1": {
-    "title": "自托管运行器版本强制执行日期已更改",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "4607b4c4468386f7d703fdc6e8f2d94f991fa6a6a1a594ce5a83f94754cdf8dc": {
-    "title": "新的 Microsoft 数据创新解锁只有你的企业知道的东西",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-29T09:55:24Z"
-  },
-  "597c808f7f546491f0ec676490eda220dea924ba0f0620441999bc6def7590d7": {
-    "title": "你好，德国！",
-    "summary": "Mistral 在慕尼黑设立研究中心，专注 Physics AI 与 Industrial AI，并与德国工业界合作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
   },
   "d6b9f5e651b1891e950e0096b862ca9527c5eacf458b2804fa20b6d4b208ad61": {
     "title": "推出 GPT-6.1 Sol",
@@ -77,41 +17,11 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
   },
-  "dec620cb7225d2434a9b02e6e0197b1952a6412dcad780af2099d9910f2c9ee8": {
-    "title": "推出 dots",
-    "summary": "OpenAI 的 dots 是主动式助手，可在复杂项目和日常任务中持续工作。了解 dots 如何助你保持掌控，同时推进工作。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "20d614df3f96df84d10bb3f1354b7d28b9bc872cfee2fdcb6d9f95c3784db801": {
-    "title": "Dependabot 的仓库自定义运行器设置",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "d259a5a11ae20b4989eb2723a0b23a3de77e515ea3ab2fd10c87edec4ca92663": {
-    "title": "通过外部自定义属性引入业务上下文",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
   "27fa41ed5cc26a14950e98a4b32cd54a9da1d63e9a36b4be5dd67bc65cbe085c": {
     "title": "GitHub Copilot 中的 GPT-6.1 Sol",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-09-30T09:47:34Z"
-  },
-  "bbefdaefb76473f7b44babc5a65f6dd5645469af4168239c5331fe7af32f110f": {
-    "title": "Ollama 现已支持 Jev 风格决策模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "061338e668ed697490e5190ccd3e1fba28ac269698517daa2fcec5875990601f": {
-    "title": "帮助小企业将 AI 投入实际应用",
-    "summary": "OpenAI 与美国 SBDC 合作，扩大小企业的 AI 实操培训与本地支持，并发布新报告介绍小团队如何使用 AI。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T16:50:43Z"
   },
   "c696e8b1f34224735a5b522fd51b1d052e2103bd5d040aaee48f4dde058d1cd6": {
     "title": "推出 SynthID Bio",
@@ -119,10 +29,112 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T16:50:43Z"
   },
-  "532f254b17e03693cf5407bf66cd555c818a96f71ad0db349a99524d9698e16e": {
-    "title": "从训练到生产，NVIDIA 与 CoreWeave 闭环智能体 AI",
+  "90249c2a3882c6d31b88e7cea8a85045e4eeb6a0a24ec30e6774300a2c2f9921": {
+    "title": "瓦解一场有组织的模型蒸馏行动",
+    "summary": "了解 OpenAI 如何瓦解一场提取受保护模型推理过程的行动，并正在加强对对抗性蒸馏的防御。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T10:14:21Z"
+  },
+  "0b5e363622340260d6f653eab68d5c524b787e4762dd251c70875694918b8cae": {
+    "title": "NVIDIA 开放 2027–2028 研究生奖学金申请，奖金最高 60,000 美元",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-09-30T16:50:43Z"
+    "at": "2026-10-01T10:14:21Z"
+  },
+  "b8087b88cb63ae7fc829eff8f3b1641fe52f1b99617f195c5f0644b836600735": {
+    "title": "永恒的补充",
+    "summary": "先进 AI 对突破性想法背后的日常工作可能最为重要。探索为何执行力可能塑造下一轮经济与进步节奏。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "637d3dfa247fa816a4c4160f323cf7816f7979e28cc1acd637f643ec28fcb5fc": {
+    "title": "Albertsons Companies 如何由内而外重塑零售",
+    "summary": "Albertsons Cos. 正使用 ChatGPT Enterprise 和 OpenAI API 帮助团队更快工作，并让数百万顾客的购物更轻松。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "1b08c1a560be6fc559cd434553b0ec2dddfb8fe1ccbe2ff50c0ffbecc6adf221": {
+    "title": "计划代码扫描跳过不活跃仓库",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "8fe4537a2c819686bd258982c897be449ecc68d41778e01fe08f1e07cf2cc8a5": {
+    "title": "代码覆盖率上传不再使新分支 CI 失败",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "162f06b35f5ef3d05b04cbcc6ec80108cd4297d75b0071d01d9eda9ba5053f01": {
+    "title": "今秋十月 GeForce NOW 迎来 25 款新游戏",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "c2600e87db69552d07dcac92cc65037da5f96cddc24c4f2392c259c7ad05ba1a": {
+    "title": "高效、耐用、可替代：NVIDIA AI 工厂如何最大化投资回报",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "2167384f51e2a4466793a69c16672f4e00ce182695dce33954cb527247ddf545": {
+    "title": "The Den 每周省出 10-15 小时，用 ChatGPT Work 实现增长",
+    "summary": "在开设新门店之际，这家社交俱乐部用 2 小时而非 3 天准备拨款申请，用 3 小时而非 4 天准备酒牌材料。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "b3abbf9a49122235f36a1b34544a143600776366be1fc2709dc7767f9c1559b9": {
+    "title": "私有漏洞报告的速率限制",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "771239a6e9a1d874244729a5ba15c9f494b07b0976e45387d8cae171c0926600": {
+    "title": "私有漏洞报告的结构化表单",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "e11a5d7f0be16c7ae710cb40fcd3e360fe54705b38e97bec68265383fd6a4b19": {
+    "title": "GitHub Copilot 现可通过 computer use 与桌面应用交互",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "038fee3588d7f55541e39725adbf9c084d25d95098c66fd8e8acc5b15d964a9a": {
+    "title": "GitHub Actions：macOS 14 runner 镜像即将退役",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "d8efb6ae3f1c14fd22be9554b790c3552220acaabf95f4f6a3247a98ad84b954": {
+    "title": "VS Code 中的 GitHub Copilot，2026 年 9 月版本",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "00ef16fda49de0e157dc87840ee1ee219bcd554005198cedaa3433ba52cda3e2": {
+    "title": "无障碍声明在仓库概览中突出显示",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "753db708944fe737e729b7912411397f9d9d7d2c46f10d182264c191cbc27be9": {
+    "title": "Actions 保留策略现涵盖 checks、runs 和 statuses",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "20f94898ac7397b2decb7e67ad5363981edbdbf5de95038cc5fc6bbf329af8e7": {
+    "title": "Copilot CLI 和 Copilot 应用中的动态工作流",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "5395303ce74d411ba3f87f735e72e71f937fc889b3f24256ef69ae4d86789a37": {
+    "title": "NVIDIA GPU 如何帮助加速 OpenAI 的 GPT-6 Astra Ultrafast",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
   }
 }

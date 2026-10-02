@@ -138,7 +138,10 @@ def is_ai(repo, overrides):
         return decision=='allow'
     text=(repo['repo']+' '+(repo['description'] or '')).lower()
     if re.search(r'\b(awesome|tutorials?|course|curriculum|lessons?|for beginners|zero to hero|handbook'
-                 r'|papers|collection of|list of|series of)\b|教程|课程|入门|资源合集|提示词合集',text):
+                 r'|papers|collection of|list of|series of)\b'
+                 r'|教程|课程|入门|资源合集|提示词合集'
+                 # 中文导航/索引/清单类聚合站：只做收录，不产出 AI 能力本身。
+                 r'|导航站|导航页|索引站|清单汇总|工具清单|资源导航|导航汇总|大全聚合',text):
         return False
     if re.search(r'\b(llm|large language models?|mcp|rag|ai'
                  r'|agent skills?|(?:ai|coding|multi|autonomous)[- ]?agents?|agentic|for agents?'
@@ -330,6 +333,9 @@ EVENT_PRIORITY={event:index for index,event in enumerate(EVENTS)}
 NEWS_FEATURED_INSTRUCTIONS=('你是中文科技媒体的值班编辑，为站点「今日精选」挑选条目。从候选列表里按重要性最多选 8 条，'
                             '优先重大模型发布、影响开发者日常的产品或接口变更、价格与免费额度变化、必须行动的迁移或弃用；'
                             '同一型号或同一题材只留最重要的一条，企业合作、客户案例、活动、观点与教程靠后。'
+                            '纯版本号发版（标题形如「某工具发布 v1.2.3」且无实质变更说明）不进精选，'
+                            '只有大版本（主版本或次版本推进）才值得占位。'
+                            '简介只是把标题重述一遍、没有给出新信息的条目也不进精选。'
                             '只从候选里挑，不补充候选之外的信息；候选不足 8 条时按实际数量选，可以少选。'
                             '只输出 JSON 对象 {"picks": [序号, ...]}，序号按重要性从高到低，不要输出其他内容。')
 
@@ -673,6 +679,35 @@ MEDIA_EXCLUDE_RE=re.compile(r'招聘|教程|培训|融资|专访|访谈|传闻|�
                             r'|部分网友|网友.{0,4}称|据传|爆料|未官宣|疑似|内测中')
 OFFICIAL_EXCLUDE_RE=re.compile(r'招聘|教程|培训|融资|营销|赞助|广告|专访|访谈|业绩|财报|年报'
                                 r'|客户案例|案例研究|客户故事|成功故事|白皮书|借助|如何用|如何使用')
+# 滚动周更汇总（2026-10-02 用户拍板）：GitHub Copilot weekly releases 是固定周报，
+# 内容每期都是上一周小版本迭代的堆叠，与单条功能公告重复且无长期价值。
+ROLLING_DIGEST_RE=re.compile(r'weekly\s+releases?|weekly\s+roundup|每周发布|每周汇总|周报汇总',re.I)
+
+# 「无实质变更说明」兜底（2026-10-02 用户拍板）：`major-update` 里有一类条目简介只是
+# 把标题重述一遍（如「阿里发布 Qwen-Image-2.1」→「阿里发布 Qwen-Image-2.1。」），
+# 读者拿不到任何标题之外的信息。判据用「简介贡献的新实词字符数」而非相似度：
+# 短标题配长简介时 bigram/Dice 几乎不重叠，用相似度会把有实质说明的条目误杀。
+THIN_SUMMARY_STOP=set('的了和与在是为对于将把被从到并且以及中新推出发布上线正式宣布今日记者编辑报道消息作者月日')
+
+
+def thin_summary(title,summary):
+    """True when a `major-update` summary only restates the title.
+
+    A newly tracked product legitimately has no baseline for its version line, so the
+    first release of a product is exempt from the version gate; here the same reasoning
+    does not apply — this judges only whether the summary adds information.
+
+    A **missing** summary is never thin: `fill_news_summaries` only runs with a
+    `DEEPSEEK_API_KEY`, so treating empty as thin would empty the featured set wholesale
+    whenever the key is absent or drafting fails. Only a summary that exists and still
+    says nothing new counts.
+    """
+    text=summary or ''
+    if not text.strip():
+        return False
+    keep=lambda value:{char for char in value
+                      if re.match(r'[\u4e00-\u9fffA-Za-z0-9]',char) and char not in THIN_SUMMARY_STOP}
+    return len(keep(text)-keep(title))<=2
 UPCOMING_RE=re.compile(r'将(?:于|在)?[^，。；]{0,20}(?:发布|推出|上线|开源|开放|升级|登场|释出)'
                        r'|即将|预告|预览|抢先看|coming soon|waitlist',re.I)
 RELEASED_RE=re.compile(r'已(?:经)?|正式|现已')
@@ -695,8 +730,68 @@ SERVICE_OBJECT_RE=re.compile(r'服务|模型|接口|API|版本|功能|客户端|
 OFFICIAL_MODEL_RE=re.compile(r'GPT[- ]?\d|Gemini\s*\d|DeepSeek[- ]?V\d|Qwen[- ]?\d|GLM[- ]?\d'
                              r'|Claude\s*(?:Opus|Sonnet|Haiku|Fable)\s*\d'
                               r'|Kimi[- ]?K\d|MiniMax[- ]?M\d|Step[- ]?\d|ERNIE[- ]?\d|Hunyuan|文心[- ]?\d|Seed(?:ream|ance|3D|-OSS)'
-                             r'|(?:发布|推出|上线|开源|升级|更新)[^，。；]{0,10}(?:模型|大模型)'
-                             r'|(?:模型|大模型)[^，。；]{0,10}(?:发布|推出|上线|开源)')
+                              r'|(?:发布|推出|上线|开源|升级|更新)[^，。；]{0,10}(?:模型|大模型)'
+                              r'|(?:模型|大模型)[^，。；]{0,10}(?:发布|推出|上线|开源)')
+
+
+# 版本号型发版闸门（2026-10-02 用户拍板）：agent / IDE 类工具逐版本发版，只收大版本。
+# 口径：minor 位推进（v1->v2、v2.0->v2.1）算大版本；patch 变动（v1.72.0->v1.72.1）不入库。
+VERSION_TITLE_RE=re.compile(r'(?P<name>[A-Za-z][A-Za-z0-9 ._-]{1,30}?)\s*发布\s*[vV]?(?P<major>\d+)\.(?P<minor>\d+)(?:\.(?P<patch>\d+))?\s*[。.!！]?\s*$')
+# 品牌名允许空格与连字符（Command Code、GitHub Copilot 一类都是多词产品名）。
+VERSION_PRODUCT_RE=re.compile(r'[A-Za-z][A-Za-z0-9 -]*[A-Za-z0-9]|[A-Za-z]')
+
+
+def version_release(title):
+    """Return ``(product, major, minor, patch)`` for a version-only release title, else None.
+
+    Only the fixed「{产品}发布 vX.Y.Z」template counts, so a minor bump mentioned inside a
+    feature sentence is never mistaken for a changelog entry.
+    """
+    match=VERSION_TITLE_RE.search(title)
+    if not match:
+        return None
+    name=match.group('name').strip()
+    # 产品名必须是可识别品牌（ASCII 词），排除「模型发布 v2」这类泛称。
+    if not VERSION_PRODUCT_RE.fullmatch(name):
+        return None
+    return name,int(match.group('major')),int(match.group('minor')),int(match.group('patch') or 0)
+
+
+def version_is_minor_bump(previous,current):
+    """A release is a major version when the minor line advances past what we have seen.
+
+    `previous` is the newest ``(major, minor, patch)`` already recorded for the product's
+    **same major line**; a first sighting has no baseline and is admitted, so a newly tracked
+    product is never silenced. Patch is deliberately ignored: v2.0.16 -> v2.0.19 is not a
+    major version.
+
+    Comparing only within one major line matters because a product can ship parallel lines
+    (Command Code carries both 0.x and 1.x). A single global baseline would treat the older
+    line's patches as a version rollback and drop them forever.
+    """
+    if previous is None:
+        return True
+    if current[0]!=previous[0]:
+        return True
+    return current[1]>previous[1]
+
+
+VERSION_BARE_RE=re.compile(r'(?<![A-Za-z0-9])[vV]?(?P<major>\d+)\.(?P<minor>\d+)(?:\.(?P<patch>\d+))?(?![0-9])')
+
+
+def version_hint(title,source_name=None):
+    """Version number anywhere in a raw (pre-translation) title.
+
+    Returns ``(product, (major, minor, patch))``; `product` falls back to `source_name` for
+    bare forms such as「v2.0.20」, which is how the English feeds publish releases.
+    """
+    match=VERSION_TITLE_RE.search(title)
+    if match:
+        return match.group('name').strip(),(int(match.group('major')),int(match.group('minor')),int(match.group('patch') or 0))
+    match=VERSION_BARE_RE.search(title)
+    if match:
+        return source_name,(int(match.group('major')),int(match.group('minor')),int(match.group('patch') or 0))
+    return None
 
 
 def news_event(title,official=False):
@@ -1764,6 +1859,11 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     candidates=[]; now_dt=datetime.fromisoformat(now)
     known={item['id'] for item in old.get('items',[])}
     seen=set()
+    # 每源每日上限：默认 5，源可用 `dailyCap` 调低（2026-10-02 用户拍板用于逐版本发版的工具源）。
+    # 已知既有限制：配额按 `source` 名称统计，而腾讯云有两个不同 URL 的源同名
+    # （tencent-announce / tencent-tokenhub），二者共用一份每日配额。此处沿用名称口径，
+    # 避免改动公开字段 `source` 的既有语义；同名源要独立配额需先改契约。
+    source_caps={source['name']:source.get('dailyCap',5) for source in sources}
     # 逐源隔离（2026-09-20 用户拍板）：单源失败只跳过该源并记待确认，其余源照常入库；
     # 全部源失败才算模块失败（届时按契约保留整份旧文件与旧时间）。
     collected=0; failures=[]
@@ -1848,7 +1948,42 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     verify_budget=[verify_limit]; verify_deadline=time.monotonic()+240
     verify_feeds=[source for source in sources if source.get('official') is True]
     search_budget=[search_limit if search else 0]
-    for row,official,source in candidates:
+    # 版本闸门基线：已入库条目的最高版本，**按 major 分线**存（同产品可能并行 0.x / 1.x）。
+    # 存量只作基线，不回溯改写。
+    seen_versions={}
+    for item in old.get('items',[]):
+        release=version_release(item['title'])
+        if release is None:
+            continue
+        product,current=release[0],release[1:]
+        line=seen_versions.setdefault(product,{})
+        if current[0] not in line or current>line[current[0]]:
+            line[current[0]]=current
+    # 版本号型发版闸门（2026-10-02 用户拍板）：逐版本发版的 agent / IDE 工具只收大版本。
+    # 先按产品取本轮最高版本，再与「已入库最高版本」比 minor：patch 变动不入库，
+    # 同 minor 只留最高一条（源按时间倒序给，首条不一定是最高版本）。
+    plain=[]; versioned=[]
+    for index,(row,official,source) in enumerate(candidates):
+        (versioned if official and version_release(row['title']) else plain).append((index,row,official,source))
+    if versioned:
+        best={}
+        for index,row,official,source in versioned:
+            hint=version_hint(row['title'],source['name'])
+            if hint is None:
+                continue
+            product,current=hint
+            if product is None:
+                continue
+            if product not in best or current>best[product][0]:
+                best[product]=(current,index)
+        keep=set()
+        for product,(current,index) in best.items():
+            if version_is_minor_bump((seen_versions.get(product) or {}).get(current[0]),current):
+                keep.add(index)
+        candidates=plain+[entry for entry in versioned if entry[0] in keep]
+    else:
+        candidates=plain
+    for _,row,official,source in candidates:
         identity=digest(row['sourceUrl'])
         title=row['title']; originalTitle=None; translatedAt=None; summary=None; lang='zh'
         if not re.search(r'[\u3400-\u9fff]',title):
@@ -1864,6 +1999,9 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
                 summary=abstract(source_summary,80) or None
         event=news_event(title,official=official)
         if event is None:
+            continue
+        # 滚动周更汇总不入库；原文与机译标题都认，避免英文源漏网。
+        if ROLLING_DIGEST_RE.search(title) or ROLLING_DIGEST_RE.search(originalTitle or ''):
             continue
         if official:
             publisher=source['name']; original=row['sourceUrl']; verified=now
@@ -1899,7 +2037,8 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             continue
         if any(similar_event(item,known) for known in recent):
             continue
-        if current['source'].get(item['source'],0)>=5 or current['event'].get(item['eventType'],0)>=5:
+        if current['source'].get(item['source'],0)>=source_caps.get(item['source'],5) \
+                or current['event'].get(item['eventType'],0)>=5:
             continue
         chosen.append(item)
         recent.append(item)
@@ -1921,6 +2060,10 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
     for item in merged:
         # Editorial exclusion wins over any judgement, including cached picks.
         if exclude and item['id'] in exclude:
+            item['featured']=None
+        # 无实质变更说明兜底：条目照常入库，只是不占精选位。
+        elif item['featured'] is True and item['eventType']=='major-update' \
+                and thin_summary(item['title'],item.get('summary')):
             item['featured']=None
     return dict(dataUpdatedAt=now,items=merged)
 
@@ -1987,6 +2130,52 @@ def reclassify_news_items(file,report=None):
     if not retyped and not removed:
         return None
     return dict(dataUpdatedAt=file['dataUpdatedAt'],items=kept)
+
+
+def demote_trivial_version_featured(file,report=None):
+    """One-off: drop low-signal items out of the featured set (2026-10-02 拍板).
+
+    Items admitted before the version gate stay in the file — the contract forbids deleting
+    records — but a release whose minor line never advanced, or a rolling weekly digest that
+    only stacks the previous week's patches, carries no lasting value, so it is set to
+    `featured: null` and the front end stops showing it. `dataUpdatedAt` stays untouched:
+    no collection happened.
+    """
+    items=copy.deepcopy(file['items'])
+    digest_demoted=[]; thin_demoted=[]
+    for item in items:
+        if item.get('featured') is not True:
+            continue
+        if ROLLING_DIGEST_RE.search(item['title']) or ROLLING_DIGEST_RE.search(item.get('originalTitle') or ''):
+            item['featured']=None
+            digest_demoted.append(item['id'])
+        elif item['eventType']=='major-update' and thin_summary(item['title'],item.get('summary')):
+            item['featured']=None
+            thin_demoted.append(item['id'])
+    highest={}
+    for item in items:
+        release=version_release(item['title'])
+        if release is None:
+            continue
+        product,current=release[0],release[1:]
+        line=highest.setdefault(product,{})
+        if current[0] not in line or current>line[current[0]]:
+            line[current[0]]=current
+    demoted=[]
+    for item in items:
+        release=version_release(item['title'])
+        if release is None or item.get('featured') is not True:
+            continue
+        product,current=release[0],release[1:]
+        # 同 major 线的最高 minor 视为大版本首条，保留；同 minor 的后续 patch 一律退库。
+        if current<(highest.get(product) or {}).get(current[0],current):
+            item['featured']=None
+            demoted.append(item['id'])
+    if report is not None:
+        report.update(demoted=demoted,digest_demoted=digest_demoted,thin_demoted=thin_demoted)
+    if not demoted and not digest_demoted and not thin_demoted:
+        return None
+    return dict(dataUpdatedAt=file['dataUpdatedAt'],items=items)
 
 
 def select_scope(tree,scope):

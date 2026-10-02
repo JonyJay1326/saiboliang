@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import empty_batch, validate
 from pipeline import Run, assemble, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, reclassify_news_items
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, fill_news_summaries, select_featured, summarize_news, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, thin_summary, reclassify_news_items, version_release, version_is_minor_bump, demote_trivial_version_featured
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -1330,6 +1330,174 @@ class PipelineTests(unittest.TestCase):
         for name in ('tickets','models','github','news'): batch[name]['version']=NOW; batch[name]['generatedAt']=NOW
         validate(batch)
         self.assertIsNone(reverify_news_items(FakeClient(documents={}),batch['news'],{}, {},LATER,lambda *x:None))
+
+    def test_version_release_parses_only_version_only_titles(self):
+        self.assertEqual(version_release('Command Code 发布 v1.73.3'),('Command Code',1,73,3))
+        self.assertEqual(version_release('OpenCode 发布 v2.0.20'),('OpenCode',2,0,20))
+        self.assertEqual(version_release('Cursor 发布 v1.0'),('Cursor',1,0,0))
+        self.assertIsNone(version_release('Command Code 发布 v1.73.3 支持新语法'))
+        self.assertIsNone(version_release('OpenAI 发布 GPT-6 Sol'))
+        self.assertIsNone(version_release('Grok 4.7 上线'))
+        self.assertIsNone(version_release('模型发布 v2'))
+
+    def test_version_gate_keeps_minor_bump_and_drops_patch(self):
+        self.assertTrue(version_is_minor_bump(None,(2,1)))
+        self.assertTrue(version_is_minor_bump((2,0),(2,1)))
+        self.assertTrue(version_is_minor_bump((1,99),(2,0)))
+        self.assertFalse(version_is_minor_bump((2,1),(2,1)))
+        self.assertFalse(version_is_minor_bump((2,1),(2,0)))
+        # 同一产品并行多条 major 线（Command Code 同时有 0.x 与 1.x）：
+        # 旧线的补丁不得被新线基线当成「版本回退」而永久丢弃。
+        self.assertTrue(version_is_minor_bump((1,73,3),(0,1,45)))
+        self.assertFalse(version_is_minor_bump((0,1,44),(0,1,45)))
+        self.assertTrue(version_is_minor_bump((0,1,44),(0,2,0)))
+
+    def test_collect_news_drops_patch_only_releases(self):
+        rows=''.join('<item><title>OpenCode 发布 v2.0.%d</title><link>https://github.com/x/y/releases/tag/v2.0.%d</link>'
+                     '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'%(n,n)
+                     for n in (16,17,18))
+        source=dict(id='opencode',name='OpenCode',url='https://github.com/anomalyco/opencode/releases.atom',
+                    adapter='rss',official=True,lang='zh',articleHosts=['github.com'],enabled=True)
+        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+rows+'</channel></rss>'}),
+                          [source],{},{},NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual([i['title'] for i in data['items']],['OpenCode 发布 v2.0.18'])
+
+    def test_collect_news_admits_minor_bump_and_respects_stored_baseline(self):
+        def make(identity,title):
+            url='https://github.com/x/y/releases/tag/'+identity
+            return dict(id=identity,title=title,source='OpenCode',sourceUrl=url,originalTitle=None,translatedAt=None,
+                        summary=None,lang='zh',originalSource='OpenCode',originalUrl=url,originalVerifiedAt=NOW,
+                        url=url,publishedAt=NOW,addedAt=NOW,category='tool',eventType='major-update',featured=None)
+        source=dict(id='opencode',name='OpenCode',url='https://github.com/anomalyco/opencode/releases.atom',
+                    adapter='rss',official=True,lang='zh',articleHosts=['github.com'],enabled=True)
+        def collect(title,version,stored):
+            row=('<item><title>%s</title><link>https://github.com/x/y/releases/tag/%s</link>'
+                 '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'%(title,version))
+            return collect_news(FakeClient(documents={source['url']:'<rss><channel>'+row+'</channel></rss>'}),
+                                [source],{},dict(items=stored),NOW,lambda *x:None,lambda *x:None)
+        # 无存量基线时首个版本入库。
+        data=collect('OpenCode 发布 v2.1.0','v2.1.0',[])
+        self.assertEqual([i['title'] for i in data['items']],['OpenCode 发布 v2.1.0'])
+        # 存量基线已在 v2.1，同 minor 的 patch 不再入库。
+        data=collect('OpenCode 发布 v2.1.3','v2.1.3',[make('a'*64,'OpenCode 发布 v2.1.0')])
+        self.assertEqual([i['title'] for i in data['items']],['OpenCode 发布 v2.1.0'])
+        # minor 推进则入库。
+        data=collect('OpenCode 发布 v2.2.0','v2.2.0',[make('a'*64,'OpenCode 发布 v2.1.0')])
+        self.assertEqual(len(data['items']),2)
+
+    def test_source_daily_cap_limits_single_source(self):
+        # 非版本号型条目：每源每日上限才是约束条件。
+        titles=['Cursor 推出 Agent 模式','Cursor 支持 MCP 服务器',
+                'Cursor 支持本地模型推理','Cursor 加入代码审查']
+        rows=''.join('<item><title>%s</title>'
+                     '<link>https://commandcode.ai/changelog?f=%d</link>'
+                     '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'%(title,n)
+                     for n,title in enumerate(titles))
+        source=dict(id='commandcode',name='Command Code',url='https://commandcode.ai/changelog',
+                    adapter='rss',official=True,lang='zh',dailyCap=2,
+                    articleHosts=['commandcode.ai'],enabled=True)
+        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+rows+'</channel></rss>'}),
+                          [source],{},{},NOW,lambda *x:None,lambda *x:None)
+        self.assertEqual(len(data['items']),2)
+
+    def test_demote_trivial_version_featured_keeps_newest_major(self):
+        def make(identity,title):
+            url='https://github.com/x/y/releases/tag/'+identity
+            return dict(id=identity,title=title,source='OpenCode',sourceUrl=url,originalTitle=None,translatedAt=None,
+                        summary=None,lang='zh',originalSource='OpenCode',originalUrl=url,originalVerifiedAt=NOW,
+                        url=url,publishedAt=NOW,addedAt=NOW,category='tool',eventType='major-update',featured=True)
+        file=dict(dataUpdatedAt=NOW,items=[make('a'*64,'OpenCode 发布 v2.0.20'),
+                                          make('b'*64,'OpenCode 发布 v2.0.19'),
+                                          make('c'*64,'OpenCode 发布 v2.0.16')])
+        report={}
+        data=demote_trivial_version_featured(file,report)
+        self.assertEqual(len(report['demoted']),2)
+        kept={i['title']:i['featured'] for i in data['items']}
+        self.assertIs(kept['OpenCode 发布 v2.0.20'],True)
+        self.assertIsNone(kept['OpenCode 发布 v2.0.19'])
+        self.assertIsNone(kept['OpenCode 发布 v2.0.16'])
+        self.assertEqual(data['dataUpdatedAt'],NOW)
+
+    def test_demote_trivial_version_featured_noop_without_change(self):
+        item=dict(id='a'*64,title='Grok 4.7 上线',source='SpaceXAI',sourceUrl='https://x.ai/news',originalTitle=None,
+                  translatedAt=None,summary=None,lang='zh',originalSource='SpaceXAI',originalUrl='https://x.ai/news',
+                  originalVerifiedAt=NOW,url='https://x.ai/news',publishedAt=NOW,addedAt=NOW,
+                  category='industry',eventType='major-update',featured=True)
+        self.assertIsNone(demote_trivial_version_featured(dict(dataUpdatedAt=NOW,items=[item]),{}))
+    def test_rolling_digest_is_excluded_from_collection(self):
+        row=('<item><title>GitHub Copilot weekly releases — September 21</title>'
+             '<link>https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21</link>'
+             '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>')
+        source=dict(id='github-copilot',name='GitHub Copilot',url='https://github.blog/changelog/label/copilot/feed/',
+                    adapter='rss',official=True,lang='en',articleHosts=['github.blog'],enabled=True)
+        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+row+'</channel></rss>'}),
+                          [source],{},{},NOW,lambda *x:None,lambda *x:None,
+                          translate=lambda items:{i['id']:dict(title='GitHub Copilot 每周发布 — 9 月 21 日',summary=None)
+                                                    for i in items})
+        # 周更汇总不入库，即使机译标题也不会被放行。
+        self.assertEqual(data['items'],[])
+
+    def test_rolling_digest_keeps_real_copilot_announcement(self):
+        row=('<item><title>GitHub Copilot code review improvements</title>'
+             '<link>https://github.blog/changelog/2026-09-18-copilot-code-review</link>'
+             '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>')
+        source=dict(id='github-copilot',name='GitHub Copilot',url='https://github.blog/changelog/label/copilot/feed/',
+                    adapter='rss',official=True,lang='en',articleHosts=['github.blog'],enabled=True)
+        data=collect_news(FakeClient(documents={source['url']:'<rss><channel>'+row+'</channel></rss>'}),
+                          [source],{},{},NOW,lambda *x:None,lambda *x:None,
+                          translate=lambda items:{i['id']:dict(title='Copilot 代码审查：改进的审查体验',summary=None)
+                                                    for i in items})
+        self.assertEqual(len(data['items']),1)
+
+    def test_thin_summary_detects_title_restatement(self):
+        # 纯重述与无简介。
+        self.assertTrue(thin_summary('阿里发布 Qwen-Image-2.1','阿里发布 Qwen-Image-2.1。'))
+        # 缺简介不算薄：无 key 时不能把精选整片清空。
+        self.assertFalse(thin_summary('Command Code 发布 v1.73.3',None))
+        self.assertFalse(thin_summary('Command Code 发布 v1.73.3','   '))
+        self.assertTrue(thin_summary('推出全新 Copilot，包含 Home、Code 和 Autopilot',
+                                    '微软推出全新 Copilot，包含 Home、Code 和 Autopilot。'))
+        # 简介带了标题之外的新信息就不算薄。
+        self.assertFalse(thin_summary('阿里发布 qwen3.8-omni-flash',
+                                     'Qwen3.8-Omni-Flash 支持文本、图片、音频和视频输入，支持思考与非思考模式。'))
+        self.assertFalse(thin_summary('推出 Grok 4.7','SpaceXAI 面向编程与知识工作的最强模型，速度是同类模型的两倍。'))
+
+    def test_thin_summary_never_applies_to_other_event_types(self):
+        def make(identity,title,summary,event):
+            url='https://example.com/'+identity
+            return dict(id=identity,title=title,source='X',sourceUrl=url,originalTitle=None,translatedAt=None,
+                        summary=summary,lang='zh',originalSource='X',originalUrl=url,originalVerifiedAt=NOW,
+                        url=url,publishedAt=NOW,addedAt=NOW,category='tool',eventType=event,featured=True)
+        # 模型发布等其他类型不得被薄简介兜底影响。
+        item=make('a'*64,'阿里发布 Qwen-Image-2.1','阿里发布 Qwen-Image-2.1。','model-release')
+        report={}
+        self.assertIsNone(demote_trivial_version_featured(dict(dataUpdatedAt=NOW,items=[item]),report))
+        self.assertEqual(report.get('thin_demoted',[]),[])
+
+    def test_demote_thin_summary_major_update(self):
+        def make(identity,title,summary):
+            url='https://example.com/'+identity
+            return dict(id=identity,title=title,source='X',sourceUrl=url,originalTitle=None,translatedAt=None,
+                        summary=summary,lang='zh',originalSource='X',originalUrl=url,originalVerifiedAt=NOW,
+                        url=url,publishedAt=NOW,addedAt=NOW,category='tool',eventType='major-update',featured=True)
+        file=dict(dataUpdatedAt=NOW,items=[make('a'*64,'阿里发布 Qwen-Image-2.1','阿里发布 Qwen-Image-2.1。'),
+                                          make('b'*64,'推出 Grok 4.7','速度是同类模型的两倍，价格仅为其一半。')])
+        report={}
+        data=demote_trivial_version_featured(file,report)
+        self.assertEqual(len(report['thin_demoted']),1)
+        kept={i['title']:i['featured'] for i in data['items']}
+        self.assertIsNone(kept['阿里发布 Qwen-Image-2.1'])
+        self.assertIs(kept['推出 Grok 4.7'],True)
+        self.assertEqual(data['dataUpdatedAt'],NOW)
+
+    def test_is_ai_excludes_chinese_navigation_hubs(self):
+        # 中文导航/索引/清单类聚合站只做收录，不产出 AI 能力本身。
+        for description in ('AI 导航站汇总','AI 索引站','AI 资源导航',
+                           'AI 工具清单汇总','AI 大全聚合'):
+            self.assertIs(is_ai({'repo':'u/x','description':description},{}),False,description)
+        # 真实 AI 项目不得被误杀。
+        self.assertIs(is_ai({'repo':'u/y','description':'开源 LLM 知识平台，RAG 与自主推理 Agent'},{}),True)
+        self.assertIs(is_ai({'repo':'u/z','description':'面向智能体的源代码管理'},{}),True)
 
     def test_news_tracking_parameters_stripped_from_source_url(self):
         item='<item><title>新模型正式发布</title><link>https://cn.example/story?utm_source=rss&amp;utm_medium=feed&amp;p=7</link><pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item>'

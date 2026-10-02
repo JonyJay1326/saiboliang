@@ -12,6 +12,8 @@
       每颗粒子按自己的幅度沿径向炸开（掺一点切向旋），包络与转半圈同长（1.2s）、
       起于 0 终于 0——散开与聚合都是确定性的，收束时精确回到太极原位。 */
 
+import { SKY_TIMING } from './sky-switch-timing.js';
+
 const TAU = Math.PI * 2;
 const HEAD_K = 0.5; /* 鱼头圆心距 = R × 0.5 */
 const EYE_K = 0.095; /* 鱼眼半径 = R × 0.095 */
@@ -132,6 +134,8 @@ class StarField {
     this.spinFrom = 0;
     this.spinTo = 0;
     this.spinT = 1;
+    this.landT = 1;
+    this.chargeStartedAt = null;
     this.flipDir = 1; /* 最近一次互易方向：爆散旋向跟它走 */
     this.burstT = 1; /* 爆散包络进度（0→1），1 = 静止 */
     this.burstEnv = 0; /* 当前包络值（0..1）；名字避开 burst() 方法，实例属性会盖住原型方法 */
@@ -261,7 +265,9 @@ class StarField {
     if (this.spinT < 1) {
       this.spinT = Math.min(1, this.spinT + dt / SPIN_DUR);
       this.spin = this.spinFrom + (this.spinTo - this.spinFrom) * easeInOut(this.spinT);
+      if (this.spinT === 1) this.landT = 0;
     }
+    this.landT = Math.min(1, this.landT + dt / 360);
     /* 爆散包络（先打散再聚合）：与转半圈同长，起止都归 0（参考稿 sin(π p^0.7)² ） */
     if (this.burstT < 1) {
       this.burstT = Math.min(1, this.burstT + dt / SPIN_DUR);
@@ -327,9 +333,15 @@ class StarField {
     const { ctx, W, H, R, cx, cy } = this;
     ctx.clearRect(0, 0, W, H);
 
+    const chargeAge = this.chargeStartedAt == null ? -1 : (performance.now() - this.chargeStartedAt) / 1000;
+    const charge = chargeAge < SKY_TIMING.seaCharge ? 0 : chargeAge <= SKY_TIMING.seaStart
+      ? Math.min(1, (chargeAge - SKY_TIMING.seaCharge) / (SKY_TIMING.seaStart - SKY_TIMING.seaCharge))
+      : Math.max(0, 1 - (chargeAge - SKY_TIMING.seaStart) / .18);
+    if (chargeAge >= SKY_TIMING.seaStart + .18) this.chargeStartedAt = null;
+
     const glow = ctx.createRadialGradient(cx, cy, R * 0.15, cx, cy, R * 1.35);
-    glow.addColorStop(0, 'rgba(232,183,58,.055)');
-    glow.addColorStop(0.5, 'rgba(63,217,192,.03)');
+    glow.addColorStop(0, `rgba(232,183,58,${.055 + charge * .016})`);
+    glow.addColorStop(0.5, `rgba(63,217,192,${.03 + charge * .012})`);
     glow.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.fillStyle = glow;
     ctx.beginPath();
@@ -367,8 +379,24 @@ class StarField {
       }
     }
     ctx.globalCompositeOperation = 'lighter';
+    const seal = Math.sin(this.landT * Math.PI);
+    const contourLight = Math.max(this.landT < 1 ? seal : 0, charge * .42);
+    if (contourLight > 0) {
+      for (let lobe = 0; lobe < 2; lobe++) {
+        ctx.globalAlpha = contourLight * .24;
+        ctx.fillStyle = cols[lobe];
+        ctx.beginPath();
+        for (const p of this.parts) {
+          if (p.lobe !== lobe || (p.role !== 'rim' && p.role !== 'eye')) continue;
+          const radius = p.r * (p.role === 'eye' ? 1.15 + seal * .3 : 1.04 + seal * .16);
+          ctx.moveTo(p.x + p.ox + radius, p.y + p.oy);
+          ctx.arc(p.x + p.ox, p.y + p.oy, radius, 0, TAU);
+        }
+        ctx.fill();
+      }
+    }
     for (const p of heroes) {
-      ctx.globalAlpha = 0.065 * burstFade;
+      ctx.globalAlpha = (0.065 + charge * .045) * burstFade;
       ctx.fillStyle = cols[p.lobe];
       ctx.beginPath();
       ctx.arc(p.x + p.ox, p.y + p.oy, p.r * 2.7, 0, TAU);
@@ -429,7 +457,9 @@ class StarField {
     this.spinFrom = this.spin;
     this.spinTo = direction > 0 ? Math.PI : 0;
     this.spinT = 0;
+    this.landT = 1;
     if (!this.running) {
+      this.chargeStartedAt = null;
       this.spinT = 1;
       this.spin = this.spinTo;
       this.burstT = 1;
@@ -558,6 +588,7 @@ export function mount() {
     host,
     mobile: { fit: 0.3, cx: 0.5, cy: 0.66 },
   });
+  canvas.__seaAnchor = () => ({ x: field.cx, y: field.cy });
 
   const onPointerMove = (event) => {
     if (event.pointerType === 'touch' || !field.motion) return;
@@ -577,12 +608,34 @@ export function mount() {
   let current = toggleRoot?.dataset.toggleCurrent || 'week';
   field.spin = field.spinFrom = field.spinTo = current === 'month' ? Math.PI : 0;
   field.paint(0);
+  let handoffTimer = 0;
+  const clearHandoff = () => {
+    clearTimeout(handoffTimer);
+    handoffTimer = 0;
+    field.chargeStartedAt = null;
+  };
+  const settleCurrent = () => {
+    clearHandoff();
+    field.flip(current === 'month' ? 1 : -1);
+  };
   const onToggle = () => {
     const next = toggleRoot?.dataset.toggleCurrent;
     if (!['week', 'month'].includes(next) || next === current) return;
     current = next;
-    field.flip(next === 'month' ? 1 : -1);
-    field.burst();
+    clearHandoff();
+    if (!field.running || reduced.matches) {
+      settleCurrent();
+      return;
+    }
+    // 连点先冻结旧转位；只保留最新榜位的交接，等待端座流光抵达。
+    field.spinT = 1;
+    field.landT = 1;
+    field.chargeStartedAt = performance.now();
+    handoffTimer = setTimeout(() => {
+      handoffTimer = 0;
+      field.flip(current === 'month' ? 1 : -1);
+      field.burst();
+    }, SKY_TIMING.seaStart * 1000);
   };
   const toggleObserver = new MutationObserver(onToggle);
   if (toggleRoot) toggleObserver.observe(toggleRoot, { attributes: true, attributeFilter: ['data-toggle-current'] });
@@ -593,7 +646,7 @@ export function mount() {
       (entries) => {
         field.visible = entries[0].isIntersecting;
         if (field.visible) field.start();
-        else field.stop();
+        else { field.stop(); settleCurrent(); }
       },
       { threshold: 0.02 }
     );
@@ -603,11 +656,14 @@ export function mount() {
     field.start();
   }
 
-  const onVisibility = () => (document.hidden ? field.stop() : field.visible && field.start());
+  const onVisibility = () => {
+    if (document.hidden) { field.stop(); settleCurrent(); }
+    else if (field.visible) field.start();
+  };
   const onReduced = () => {
     field.reduced = reduced.matches;
-    if (reduced.matches) field.stop();
-    else field.start();
+    if (reduced.matches) { field.stop(); settleCurrent(); }
+    else if (field.visible && !document.hidden) field.start();
   };
 
   field.reduced = reduced.matches;
@@ -625,6 +681,7 @@ export function mount() {
 
   return {
     release() {
+      clearHandoff();
       clearInterval(tuneTimer);
       io?.disconnect();
       toggleObserver.disconnect();
@@ -632,6 +689,7 @@ export function mount() {
       reduced.removeEventListener?.('change', onReduced);
       host.removeEventListener('pointermove', onPointerMove);
       host.removeEventListener('pointerleave', onPointerLeave);
+      delete canvas.__seaAnchor;
       field.destroy();
     },
   };

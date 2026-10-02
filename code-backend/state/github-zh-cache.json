@@ -59,20 +59,10 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "jo-inc/camofox-browser": {
-    "text": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "superdesigndev/treg": {
     "text": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
     "source": "deepseek-flash",
     "at": "2026-09-23T15:28:02Z"
-  },
-  "strands-agents/harness-sdk": {
-    "text": "构建智能体运行框架并端到端控制。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript，兼容任意模型与云。",
-    "source": "deepseek-flash",
-    "at": "2026-09-24T15:50:19Z"
   },
   "pbakaus/impeccable": {
     "text": "让 AI 工具在设计中表现更佳的设计语言。",
@@ -89,18 +79,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-27T09:20:54Z"
   },
-  "tech-leads-club/agent-skills": {
-    "text": "面向专业 AI 编程代理的安全、经验证的技能注册表，可为 Antigravity、Claude Code、Cursor、Copilot 等扩展。",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T09:20:54Z"
-  },
   "mobile-next/mobile-mcp": {
     "text": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:36:14Z"
-  },
-  "pytorch/pytorch": {
-    "text": "Python 中的张量与动态神经网络，具备强大的 GPU 加速",
     "source": "deepseek-flash",
     "at": "2026-09-27T15:36:14Z"
   },
@@ -108,11 +88,6 @@
     "text": "面向所有人的开源机器学习框架",
     "source": "deepseek-flash",
     "at": "2026-09-27T15:36:14Z"
-  },
-  "google/ax": {
-    "text": "Google 的开放智能体编排运行时",
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
   },
   "pacifio/atlas": {
     "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
@@ -124,23 +99,8 @@
     "source": "deepseek-flash",
     "at": "2026-09-28T18:37:28Z"
   },
-  "Nasiko-Labs/nasiko": {
-    "text": "面向 AI 智能体的开发者控制平面",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
   "NVIDIA/OpenShell": {
     "text": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "openai/symphony": {
-    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "Armur-Ai/Pentest-Swarm-AI": {
-    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用和报告专家，支持漏洞赏金、持续监控和 CTF 模式。使用 Go 构建，集成 7 种以上原生安全工具。",
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
@@ -159,26 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "cline/cline": {
-    "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "alsk1992/CloddsBot": {
-    "text": "开源 AI 交易智能体，可在 1000 多个市场自主运行——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，在你睡觉时管理风险。用于机器对机器支付的智能体商务协议。自托管。基于 Claude 构建。",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "Asymptote-Labs/agent-beacon": {
-    "text": "面向 AI agents 的跨 harness、可自我改进的记忆层。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T09:47:34Z"
-  },
-  "NVIDIA/Model-Optimizer": {
-    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "alirezarezvani/claude-skills": {
     "text": "380 个 Claude Code 技能、agent 技能与插件（30+ Agents、70+ 自定义命令、380+ 技能、可定制参考与脚本），适用于 Claude Code、Codex、Gemini CLI、Cursor 等 11 种编码 agent，覆盖工程、营销、产品、合规、高管咨询、研究、业务运营、商业与金融及日常生产力技能。",
     "source": "deepseek-flash",
@@ -189,34 +129,84 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
   },
-  "aayushch/laya": {
-    "text": "Laya 是一个开源、本地优先的 AI 通知指挥中心，通过 Ollama 和 LM Studio 使用本地 LLM 聚合 Slack、Gmail、GitHub、Jira、Notion、Outlook、Calendar 等通知。支持通过 BYOK 使用云端模型。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "JayWebtech/autoshorts": {
     "text": "AutoShorts 是一个本地优先的桌面应用，可将长视频或音频录制转换为高影响力的竖屏短视频候选片段（9:16 竖屏），并借助 AI 对病毒式传播时刻进行排序。",
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
   },
-  "chiphuyen/aie-book": {
-    "text": "[WIP] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料。",
+  "genspark-ai/genoffice": {
+    "text": "免费开源 AI Office 套件：Docs、Sheets、Slides、PDF、Markdown 和 HTML 编辑器，内置 AI agent，并提供 genoffice CLI 与 agent skill，让 Claude Code、Codex 和 Cursor 在本地创建和编辑真实的 .docx/.xlsx/.pptx 文件。自带密钥。支持 macOS、Windows 和 Linux。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
+    "at": "2026-10-01T10:14:21Z"
+  },
+  "tile-ai/tilelang": {
+    "text": "用于简化高性能 GPU/CPU/加速器内核开发的领域特定语言",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "synthetic-sciences/openscience": {
+    "text": "面向科学研究的开源 AI 工作台",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "l0ng-ai/tty7": {
+    "text": "比窗口更持久的终端。退出应用后 shell 仍存活，智能体可驱动其他智能体，远程机器用法一致。纯 Rust，GPU 渲染。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "mozilla-ai/llamafile": {
+    "text": "用单个文件分发并运行 LLM。",
+    "source": "deepseek-flash",
+    "at": "2026-10-01T17:24:30Z"
+  },
+  "cline/cline": {
+    "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:20:15Z"
+  },
+  "google/ax": {
+    "text": "Google 的开放智能体编排运行时",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "NVIDIA/Model-Optimizer": {
+    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "Asymptote-Labs/agent-beacon": {
+    "text": "面向 AI 智能体的跨框架、自我改进记忆层。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "aayushch/laya": {
+    "text": "Laya 是开源、本地优先的 AI 通知指挥中心，通过 Ollama 和 LM Studio 使用本地 LLM 聚合 Slack、Gmail、GitHub、Jira、Notion、Outlook、日历等通知。支持通过 BYOK 使用云端模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "chiphuyen/aie-book": {
+    "text": "[进行中] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "github/gh-aw": {
+    "text": "GitHub 智能体工作流",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
   },
   "netdata/netdata": {
-    "text": "通往 AI 驱动的全栈可观测性的最快路径，即使对精简团队也是如此。",
+    "text": "通往 AI 驱动的全栈可观测性最快路径，精简团队也能用。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
+    "at": "2026-10-02T07:52:02Z"
   },
-  "umlx5h/LLPlayer": {
-    "text": "用于语言学习的媒体播放器，支持双语字幕、AI 生成字幕、实时翻译等！",
+  "openai/symphony": {
+    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
+    "at": "2026-10-02T07:52:02Z"
   },
-  "docling-project/docling": {
-    "text": "让你的文档为生成式 AI 做好准备。",
+  "Armur-Ai/Pentest-Swarm-AI": {
+    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用和报告专家——支持漏洞赏金、持续监控和 CTF 模式。使用 Go 和 7 种以上原生安全工具构建。",
     "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
+    "at": "2026-10-02T07:52:02Z"
   }
 }
