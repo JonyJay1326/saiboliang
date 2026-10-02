@@ -406,6 +406,7 @@
       "adapter": "opencode-releases",
       "official": true,
       "lang": "zh",
+      "dailyCap": 2,
       "articleHosts": [
         "github.com"
       ],
@@ -418,6 +419,7 @@
       "adapter": "commandcode-changelog",
       "official": true,
       "lang": "zh",
+      "dailyCap": 2,
       "articleHosts": [
         "commandcode.ai",
         "www.commandcode.ai"

@@ -13,7 +13,7 @@ from pathlib import Path
 
 from common import Client, DataError, digest, load_aa_key, load_key, read_json, require, utcnow, write_json
 from contract import TICKET, empty_batch, obj, validate
-from sources import collect_aa, collect_evidence_records, collect_github, collect_news, model_data, news_featured_exclusions, reclassify_news_items, reverify_news_items, search_official_candidates, select_featured, summarize_news, translate_github, translate_news
+from sources import collect_aa, collect_evidence_records, collect_github, collect_news, demote_trivial_version_featured, model_data, news_featured_exclusions, reclassify_news_items, reverify_news_items, search_official_candidates, select_featured, summarize_news, translate_github, translate_news
 
 ROOT=Path(__file__).resolve().parent
 MODULES=('tickets','models','github','news')
@@ -164,6 +164,12 @@ def load_config(editorial):
     require(isinstance(sources,dict) and set(sources)=={'github','news','plans'},'invalid source configuration')
     for section in sources.values():
         require(isinstance(section,list),'source list required')
+    # `dailyCap` 是 news 段的每日入库上限；bool 是 int 子类，须显式排除。
+    for source in sources['news']:
+        if isinstance(source,dict) and 'dailyCap' in source:
+            cap=source['dailyCap']
+            require(isinstance(cap,int) and not isinstance(cap,bool) and 1<=cap<=5,
+                    'invalid news dailyCap')
     require(sources['github'] and all(isinstance(s,str) and re.fullmatch(r'[a-z0-9+#.-]+',s) for s in sources['github']),'invalid github language pages')
     require(len(set(sources['github']))==len(sources['github']),'duplicate github language page')
     overrides=read_json(editorial/'overrides.json')
@@ -259,6 +265,30 @@ def run_news_reverify(args):
             promote(args.candidate,args.output)
         verified=sum(1 for item in data['items'] if before.get(item['id'])!=item['originalUrl'])
         print('news reverify: '+str(verified)+' item(s) verified or updated',flush=True)
+    run.save()
+    return 0
+
+
+def run_news_version_gate(args):
+    """One-off: 退库不展示——把纯 patch 发版移出精选（2026-10-02 用户拍板）。
+
+    条目本身保留在数据文件里（契约不允许删记录），只把 `featured` 置空，前台按
+    `featured === true` 过滤即不再展示。没有发生采集，`dataUpdatedAt` 不刷新。
+    """
+    now=utcnow(); run=Run(args.state,now)
+    old=read_batch(args.output); require(old is not None,'no public batch')
+    report={}
+    data=demote_trivial_version_featured(old['news'],report)
+    if data is None:
+        print('news version-gate: nothing to update',flush=True)
+    else:
+        batch,changed=assemble(old,{'news':data},now)
+        if changed:
+            save_candidate(args.candidate,batch)
+            promote(args.candidate,args.output)
+        print('news version-gate: '+str(len(report['demoted']))+' patch release(s) and '
+              +str(len(report.get('digest_demoted',[])))+' rolling digest(s) and '
+              +str(len(report.get('thin_demoted',[])))+' thin-summary item(s) demoted from featured',flush=True)
     run.save()
     return 0
 
@@ -493,7 +523,7 @@ def collect(args):
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command',choices=('init','collect','reverify','reclassify','validate'))
+    parser.add_argument('command',choices=('init','collect','reverify','reclassify','version-gate','validate'))
     parser.add_argument('--output',type=Path,default=ROOT/'public'/'data')
     parser.add_argument('--candidate',type=Path,default=ROOT/'.cache'/'candidate')
     parser.add_argument('--state',type=Path,default=ROOT/'state')
@@ -524,6 +554,8 @@ def main(argv=None):
                 return run_news_reverify(args)
             if args.command=='reclassify':
                 return run_news_reclassify(args)
+            if args.command=='version-gate':
+                return run_news_version_gate(args)
             return collect(args)
     except (ValueError,OSError) as exc:
         # Network errors are sanitized in Client; never print raw request headers.
