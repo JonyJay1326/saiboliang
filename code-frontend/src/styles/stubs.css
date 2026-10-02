@@ -32,8 +32,13 @@
   .r4-tip b { font-family: var(--code); color: var(--cyan); }
 
   
-  .r4-stubs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(34rem, 100%), 1fr)); gap: 1.4rem 1.2rem; margin: 0; padding: 0; list-style: none; }
-  .r4-stubs--plan { grid-template-columns: repeat(auto-fill, minmax(min(29rem, 100%), 1fr)); }
+  /* 2026-10-02 P1：原来票卡列宽下限 34rem，导致 700–1150px 一直是单列、卡片宽到 1095px
+     （行长超 1000px，阅读行长过大），且到 1180px 突然从 1095px 跳到 553px 双列。
+     统一降到 28rem：auto-fill 下 2 列在网格 ≥2×448+19.2≈915px（约 955px 视口）时出现，
+     单列卡片最大约 896px；票卡与套餐卡用同一档，跨页切换节奏一致。
+     28rem 下卡内仍留 minmax(0,1fr) 约 285px 主内容（.r4-stub 侧栏固定 9rem），不挤压。 */
+  .r4-stubs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(28rem, 100%), 1fr)); gap: 1.4rem 1.2rem; margin: 0; padding: 0; list-style: none; }
+  .r4-stubs--plan { grid-template-columns: repeat(auto-fill, minmax(min(28rem, 100%), 1fr)); }
   .r4-stub { --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 50%; --lift: 0px; --edge: var(--tier); position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) 9rem; height: 100%; transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--lift)); filter: var(--glow-card); transition: transform .35s cubic-bezier(.2,.8,.2,1), filter .35s ease; opacity: 1; }
   .r4-stub--plan { grid-template-columns: minmax(0, 1fr) 9.5rem; }
   .r4-stub.r4-is-live { transition-duration: .08s; }

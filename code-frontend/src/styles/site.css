@@ -63,11 +63,12 @@ a:hover {
 .ledger__head .sp,
 .dibao__link,
 .dibao__title a,
+.r4-stub__title a,
 body > footer .disclosure a,
 section[aria-labelledby="related"] a,
 section[aria-labelledby^="about"] a,
 table a {
-  padding-block: 3px;
+  padding-block: 5px;
 }
 
 :focus-visible {
@@ -2510,7 +2511,7 @@ td:first-child {
   }
 
   .page-intro__lede {
-    font-size: 14px;
+    font-size: 15px;
   }
 
 

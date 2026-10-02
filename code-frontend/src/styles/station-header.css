@@ -162,10 +162,21 @@
   .station-nav li { flex: none; }
 
   /* 触控热区：窄屏无 hover 与指针，点按反馈与热区都要给足 */
-  .station-link { height: 44px; padding: 0 12px; gap: 5px; }
+  /* 2026-10-02 P0：6 个导航项原本 492px 宽，390px 视口只有 366px 可用——「邸报」整项看不到，
+     且 scrollbar-width:none 把滚动条藏了、无任何可滚提示。窄屏改为只保留站名
+     （中间的 · 与尾字「首/领/望/比/买/看」是装饰性单字），内边距收到 6px：
+     6 ×（最宽站名「点将台」42px + 12px 内边距）≈ 324px，≥362px 视口可整排显示、无需横滚。 */
+  .station-link__dot,
+  .station-link__verb { display: none; }
+  .station-link { height: 44px; padding: 0 6px; gap: 0; }
   .station-link__name { font-size: 14px; letter-spacing: 0; }
-  .station-link__verb { font-size: 12px; }
   .station-link::before { top: 12px; bottom: 12px; }
+}
+
+/* ≤360px 仍放不下（6 项约 324px > 可用 296px），给右缘渐隐提示「还能往右滑」，
+   避免像上次那样末项被静默裁掉。360px 以上不加遮罩，免得最后一站无故发虚。 */
+@media (max-width: 360px) {
+  .station-nav { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
 }
 
 /* ===== hover 专用（2026-10-01 移动端适配）：触摸端无真实 hover，
