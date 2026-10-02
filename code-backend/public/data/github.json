@@ -1,10 +1,10 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-10-02T16:34:26Z",
+  "dataUpdatedAt": "2026-10-02T16:40:17Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-10-02T16:34:26Z",
+    "fetchedAt": "2026-10-02T16:40:17Z",
     "items": [
       {
         "repo": "dream-num/univer",
@@ -27,7 +27,7 @@
       {
         "repo": "t8y2/dbx",
         "sourceRank": 1,
-        "stars": 23866,
+        "stars": 23867,
         "periodStars": 3067,
         "language": "Rust",
         "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
@@ -36,7 +36,7 @@
       {
         "repo": "google/ax",
         "sourceRank": 1,
-        "stars": 12856,
+        "stars": 12857,
         "periodStars": 2919,
         "language": "Go",
         "description": "Google 的开放智能体编排运行时",
@@ -45,7 +45,7 @@
       {
         "repo": "pbakaus/impeccable",
         "sourceRank": 1,
-        "stars": 74089,
+        "stars": 74091,
         "periodStars": 2704,
         "language": "JavaScript",
         "description": "让 AI 工具在设计中表现更佳的设计语言。",
@@ -54,7 +54,7 @@
       {
         "repo": "heygen-com/hyperframes",
         "sourceRank": 2,
-        "stars": 55717,
+        "stars": 55719,
         "periodStars": 2667,
         "language": "TypeScript",
         "description": "编写 HTML。渲染视频。为代理而构建。",
@@ -63,7 +63,7 @@
       {
         "repo": "harry0703/MoneyPrinterTurbo",
         "sourceRank": 9,
-        "stars": 128039,
+        "stars": 128040,
         "periodStars": 2548,
         "language": "Python",
         "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
@@ -81,7 +81,7 @@
       {
         "repo": "mobile-next/mobile-mcp",
         "sourceRank": 6,
-        "stars": 8557,
+        "stars": 8558,
         "periodStars": 1685,
         "language": "TypeScript",
         "description": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
@@ -90,7 +90,7 @@
       {
         "repo": "TencentCloud/Octop",
         "sourceRank": 5,
-        "stars": 6342,
+        "stars": 6344,
         "periodStars": 1360,
         "language": "Python",
         "description": "更智能的自托管 AI 助手——多用户、多代理。",
@@ -117,7 +117,7 @@
       {
         "repo": "alirezarezvani/claude-skills",
         "sourceRank": 4,
-        "stars": 27261,
+        "stars": 27262,
         "periodStars": 743,
         "language": "Python",
         "description": "380 个 Claude Code 技能、agent 技能与插件（30+ Agents、70+ 自定义命令、380+ 技能、可定制参考与脚本），适用于 Claude Code、Codex、Gemini CLI、Cursor 等 11 种编码 agent，覆盖工程、营销、产品、合规、高管咨询、研究、业务运营、商业与金融及日常生产力技能。",
@@ -281,12 +281,12 @@
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-10-02T16:34:26Z",
+    "fetchedAt": "2026-10-02T16:40:17Z",
     "items": [
       {
         "repo": "tt-a1i/archify",
         "sourceRank": 3,
-        "stars": 76154,
+        "stars": 76156,
         "periodStars": 35068,
         "language": "JavaScript",
         "description": "用于生成美观、可验证的架构、工作流、时序、数据流与生命周期图的代理技能——自包含 HTML，带动效与清晰导出。",
@@ -295,7 +295,7 @@
       {
         "repo": "ayghri/i-have-adhd",
         "sourceRank": 1,
-        "stars": 52864,
+        "stars": 52865,
         "periodStars": 26584,
         "language": "Python",
         "description": "让编程 Agent 不再把答案埋在长文里，输出更适合注意力涣散的人快速抓重点。",
@@ -322,7 +322,7 @@
       {
         "repo": "heygen-com/hyperframes",
         "sourceRank": 3,
-        "stars": 55717,
+        "stars": 55719,
         "periodStars": 11734,
         "language": "TypeScript",
         "description": "编写 HTML。渲染视频。为代理而构建。",
@@ -340,7 +340,7 @@
       {
         "repo": "Tencent/WeKnora",
         "sourceRank": 2,
-        "stars": 31743,
+        "stars": 31744,
         "periodStars": 10740,
         "language": "Go",
         "description": "开源 LLM 知识平台：把原始文档变成可查询的 RAG、自主推理 Agent 与自我维护的 Wiki。",
@@ -349,7 +349,7 @@
       {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 10,
-        "stars": 100435,
+        "stars": 100437,
         "periodStars": 9561,
         "language": "JavaScript",
         "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -367,7 +367,7 @@
       {
         "repo": "tashfeenahmed/freellmapi",
         "sourceRank": 6,
-        "stars": 30107,
+        "stars": 30108,
         "periodStars": 6611,
         "language": "TypeScript",
         "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -394,7 +394,7 @@
       {
         "repo": "jingyaogong/minimind",
         "sourceRank": 8,
-        "stars": 63082,
+        "stars": 63083,
         "periodStars": 6436,
         "language": "Python",
         "description": "从零训练一个 6400 万参数的小型 LLM，只需约 2 小时。",
@@ -421,7 +421,7 @@
       {
         "repo": "TencentCloud/Octop",
         "sourceRank": 5,
-        "stars": 6342,
+        "stars": 6345,
         "periodStars": 4888,
         "language": "Python",
         "description": "更智能的自托管 AI 助手——多用户、多代理。",
@@ -448,7 +448,7 @@
       {
         "repo": "ggml-org/llama.cpp",
         "sourceRank": 1,
-        "stars": 130141,
+        "stars": 130143,
         "periodStars": 3852,
         "language": "C++",
         "description": "用 C/C++ 实现的大模型推理引擎。",
@@ -466,7 +466,7 @@
       {
         "repo": "NVIDIA/SkillSpector",
         "sourceRank": 7,
-        "stars": 19061,
+        "stars": 19062,
         "periodStars": 3423,
         "language": "Python",
         "description": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
@@ -475,7 +475,7 @@
       {
         "repo": "akitaonrails/ai-memory",
         "sourceRank": 4,
-        "stars": 8750,
+        "stars": 8751,
         "periodStars": 3350,
         "language": "Rust",
         "description": "面向代理编码 CLI 的长期记忆解决方案，并便于在不同代理供应商之间交接",
@@ -511,7 +511,7 @@
       {
         "repo": "LibreChat-AI/LibreChat",
         "sourceRank": 8,
-        "stars": 45198,
+        "stars": 45199,
         "periodStars": 2873,
         "language": "TypeScript",
         "description": "增强版 ChatGPT 克隆：具备 Agents、MCP、Skills、DeepSeek、Anthropic、AWS、OpenAI、Responses API、Azure、Groq、o1、GPT-5、Mistral、OpenRouter、Vertex AI、Gemini、Artifacts、AI 模型切换、消息搜索、Code Interpreter、langchain、DALL-E-3、OpenAPI Actions、Functions、安全多用户认证、预设，开源可自托管。活跃",
@@ -538,7 +538,7 @@
       {
         "repo": "docling-project/docling",
         "sourceRank": 16,
-        "stars": 68302,
+        "stars": 68303,
         "periodStars": 2512,
         "language": "Python",
         "description": "让你的文档为生成式 AI 做好准备",
@@ -547,7 +547,7 @@
       {
         "repo": "jo-inc/camofox-browser",
         "sourceRank": 11,
-        "stars": 11319,
+        "stars": 11322,
         "periodStars": 2340,
         "language": "JavaScript",
         "description": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
@@ -555,6 +555,6 @@
       }
     ]
   },
-  "version": "2026-10-02T16:34:26Z",
-  "generatedAt": "2026-10-02T16:34:26Z"
+  "version": "2026-10-02T16:40:17Z",
+  "generatedAt": "2026-10-02T16:40:17Z"
 }

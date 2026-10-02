@@ -65,20 +65,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
   },
-  "e11a5d7f0be16c7ae710cb40fcd3e360fe54705b38e97bec68265383fd6a4b19": {
-    "title": "GitHub Copilot 现可通过 computer use 与桌面应用交互",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
   "038fee3588d7f55541e39725adbf9c084d25d95098c66fd8e8acc5b15d964a9a": {
     "title": "GitHub Actions：macOS 14 runner 镜像即将退役",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "d8efb6ae3f1c14fd22be9554b790c3552220acaabf95f4f6a3247a98ad84b954": {
-    "title": "VS Code 中的 GitHub Copilot，2026 年 9 月版本",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
@@ -95,12 +83,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
   },
-  "20f94898ac7397b2decb7e67ad5363981edbdbf5de95038cc5fc6bbf329af8e7": {
-    "title": "Copilot CLI 和 Copilot 应用中的动态工作流",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
   "5395303ce74d411ba3f87f735e72e71f937fc889b3f24256ef69ae4d86789a37": {
     "title": "NVIDIA GPU 如何帮助加速 OpenAI 的 GPT-6 Astra Ultrafast",
     "summary": null,
@@ -110,12 +92,6 @@
   "c38af6e5cae43e23a64c1d509c6a587da67c166f4c093fc7e47ef57f26c07a7c": {
     "title": "GPT-6 系列模型指南",
     "summary": "了解初创公司如何选择 GPT-6 模型、调整推理强度、改进提示与技能、协调工具，并为生产环境准备工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "6a7bb4e3e69d69f535f566eafa3b62131828c2105dc24f5461290dfde815374b": {
-    "title": "我们在 2026 年 9 月发布的最新 AI 新闻",
-    "summary": "一段展示 9 月 AI 更新的视频",
     "source": "deepseek-flash",
     "at": "2026-10-02T16:34:26Z"
   },
