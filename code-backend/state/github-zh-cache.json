@@ -159,44 +159,54 @@
     "source": "deepseek-flash",
     "at": "2026-10-01T17:24:30Z"
   },
-  "deepseek-ai/FlashMLA": {
-    "text": "FlashMLA：高效多头潜在注意力内核",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "dotnet/skills": {
-    "text": "用于协助 AI 编码代理处理 .NET 和 C# 的技能仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "microsoft/semantic-kernel": {
-    "text": "将前沿 LLM 技术快速轻松地集成到你的应用中",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "metadist/synaplan": {
-    "text": "我们的 AI 控制平面，用于快速部署。可与多种模型对话、让代理使用 MCP、获得支持聊天组件及更多工具。使用智能 DAG 路由节省 token！我们接受 Go、Rust、Python、NodeJS 等语言的插件。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "freescout-help-desk/freescout": {
-    "text": "FreeScout — 免费自托管全渠道 AI 驱动的帮助台与共享邮箱",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "laravel/ai": {
-    "text": "Laravel AI SDK 提供统一、表达力强的 API，用于与 OpenAI、Anthropic、Gemini 等 AI 提供商交互。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "WordPress/ai": {
-    "text": "WordPress 的 AI 功能与实验。用于测试 AI 能力的模块化框架。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
   "cline/cline": {
     "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
+  },
+  "google/ax": {
+    "text": "Google 的开放智能体编排运行时",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "NVIDIA/Model-Optimizer": {
+    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "Asymptote-Labs/agent-beacon": {
+    "text": "面向 AI 智能体的跨框架、自我改进记忆层。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "aayushch/laya": {
+    "text": "Laya 是开源、本地优先的 AI 通知指挥中心，通过 Ollama 和 LM Studio 使用本地 LLM 聚合 Slack、Gmail、GitHub、Jira、Notion、Outlook、日历等通知。支持通过 BYOK 使用云端模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "chiphuyen/aie-book": {
+    "text": "[进行中] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "github/gh-aw": {
+    "text": "GitHub 智能体工作流",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "netdata/netdata": {
+    "text": "通往 AI 驱动的全栈可观测性最快路径，精简团队也能用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "openai/symphony": {
+    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
+  },
+  "Armur-Ai/Pentest-Swarm-AI": {
+    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用和报告专家——支持漏洞赏金、持续监控和 CTF 模式。使用 Go 和 7 种以上原生安全工具构建。",
+    "source": "deepseek-flash",
+    "at": "2026-10-02T07:52:02Z"
   }
 }

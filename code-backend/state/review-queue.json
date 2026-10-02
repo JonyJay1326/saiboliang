@@ -638,18 +638,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "shadps4-emu/shadPS4",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
-    },
-    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "mg-chao/snow-apps",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -693,18 +681,6 @@
       "sourceUrl": "https://github.com/2dust/v2rayN"
     },
     "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hefengxian/my-ielts",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "雅思词汇真经、雅思语法、听力 179、阅读 538 同义替换等。Everything during preparing for my IELTS exam.",
-      "sourceUrl": "https://github.com/hefengxian/my-ielts"
-    },
-    "id": "2147472fa9378bcbb313ec3b4c6705564c14cce5c641dbbffa6315fc59216572",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
   },
@@ -865,62 +841,6 @@
     "createdAt": "2026-10-01T17:24:30Z"
   },
   {
-    "kind": "github-page",
-    "objectId": "python",
-    "reason": "HTTP 504",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/python?since=weekly"
-    },
-    "id": "2af5ede9c5b602ecb515f278c10e1ac02d98adf5f249034c1fcff4ad8e6465c2",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-page",
-    "objectId": "go",
-    "reason": "HTTP 504",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/go?since=weekly"
-    },
-    "id": "ea01804a5745d48daf8fd239bcceb93c0afc6763bbfac86a51eafb2d612ab93f",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-page",
-    "objectId": "jupyter-notebook",
-    "reason": "HTTP 504",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/jupyter-notebook?since=weekly"
-    },
-    "id": "abe0949903364f02612c41d835c595bc926f58ed4be3a2caecdca2c26efce158",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-page",
-    "objectId": "elixir",
-    "reason": "network error: TimeoutError",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/elixir?since=weekly"
-    },
-    "id": "6e7248d30910dd1f1a37ea4897ac69be64e44e892c02dd6f6d00fa0e7a616952",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "vega-org/vega-app",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A app to Play, Stream or Cast Media for andorid.",
-      "sourceUrl": "https://github.com/vega-org/vega-app"
-    },
-    "id": "884fcbfc77bc0985e91f561e6089ed006ae2648e3184d64cd762128c777cc1b6",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "adewaskar/jarvis",
     "reason": "AI applicability uncertain",
@@ -929,18 +849,6 @@
       "sourceUrl": "https://github.com/adewaskar/jarvis"
     },
     "id": "c0e8e0bc2d8dd982074799dae6e83829d0d7e6afd10caceae52f6e12d50c4293",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "esphome/esphome",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ESPHome is a system to control your ESP32, ESP8266, BK72xx, RP2040 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
-      "sourceUrl": "https://github.com/esphome/esphome"
-    },
-    "id": "4c7a3f38824ffed6c531e2b0303473b3fc8c0c6fb9dfec4ac7fc0b86eccbf243",
     "status": "pending",
     "createdAt": "2026-10-02T07:20:15Z"
   },
@@ -958,528 +866,158 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "google/flatbuffers",
+    "objectId": "derv82/wifit3",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "FlatBuffers: Memory Efficient Serialization Library",
-      "sourceUrl": "https://github.com/google/flatbuffers"
+      "description": "Wifite but USB-only & cross-platform.",
+      "sourceUrl": "https://github.com/derv82/wifit3"
     },
-    "id": "32cd8d3f6e08e9f3b49236e07743402dcad6553541495d674821b0de8bef1ed2",
+    "id": "0730a4ba6a82db3a9c8bd7649c55693d53c941ed744bfbfc3ada383d2967a9b9",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "gta-reversed/gta-reversed",
+    "objectId": "HunxByts/GhostTrack",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Reimplementation of GTA:SA 1.0 US",
-      "sourceUrl": "https://github.com/gta-reversed/gta-reversed"
+      "description": "Useful tool to track location or mobile number",
+      "sourceUrl": "https://github.com/HunxByts/GhostTrack"
     },
-    "id": "4914983b20e79f7382f2f56e98e6f62a3caac82eaefb7a0c9fc2d1dc944ce79f",
+    "id": "4ede85173444dbe8dd8f0e250cf023081dd51dcb5fe2782d672b176dba9f1df0",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "bitcoin/bitcoin",
+    "objectId": "openbao/openbao",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Bitcoin Core integration/staging tree",
-      "sourceUrl": "https://github.com/bitcoin/bitcoin"
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "sourceUrl": "https://github.com/openbao/openbao"
     },
-    "id": "b6edcbae08309ae5ebb50f840e2874ef865d15b7f271cf7caa2cefd623b70828",
+    "id": "2b3679e26dba551e67a0d96cb1d41d263f39b2f0bb1fc6f4433ca543633d1170",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "OpenRA/OpenRA",
+    "objectId": "kubernetes/kubernetes",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL. Runs on Windows, Linux, *BSD and Mac OS X.",
-      "sourceUrl": "https://github.com/OpenRA/OpenRA"
+      "description": "Production-Grade Container Scheduling and Management",
+      "sourceUrl": "https://github.com/kubernetes/kubernetes"
     },
-    "id": "e4d42b0e4b2b485e38c3431d514c31d019b867fabf682957571f0bc0d85838d9",
+    "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "SirDiabo/GithubLauncher",
+    "objectId": "prometheus/prometheus",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "A Launcher that Downloads and Updates Applications from Github Releases",
-      "sourceUrl": "https://github.com/SirDiabo/GithubLauncher"
+      "description": "The Prometheus monitoring system and time series database.",
+      "sourceUrl": "https://github.com/prometheus/prometheus"
     },
-    "id": "35045c763abaaa15ce71fee464cd4d548a44457227d2caa3a6fc94738c7f3e8c",
+    "id": "d47507789a321616560ff981e8fb84ea9f4cc37ee064fc0f3ee0e43be9989e58",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "RayWangQvQ/BiliBiliToolPro",
+    "objectId": "git-bug/git-bug",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。全面拥抱AI。敏感肌也能用。",
-      "sourceUrl": "https://github.com/RayWangQvQ/BiliBiliToolPro"
+      "description": "Distributed, offline-first bug tracker integrated in git",
+      "sourceUrl": "https://github.com/git-bug/git-bug"
     },
-    "id": "98a651736144873c21d18683fc71781468c01850802aa9a4d7a3bbfaec0bd3d2",
+    "id": "3f40abb0460d8fe37d17cb2dc537b5365bf36e87c5c0d0c416c5b7134441eacf",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "dotnet/roslyn",
+    "objectId": "golang/go",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "The Roslyn .NET compiler provides C# and Visual Basic languages with rich code analysis APIs.",
-      "sourceUrl": "https://github.com/dotnet/roslyn"
+      "description": "The Go programming language",
+      "sourceUrl": "https://github.com/golang/go"
     },
-    "id": "9592f52b6a95e9bc190df8d229b6596c4df513de9ed5f3571143e683801285a0",
+    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "dotnet/eShop",
+    "objectId": "putyy/res-downloader",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "A reference .NET application implementing an eCommerce site",
-      "sourceUrl": "https://github.com/dotnet/eShop"
+      "description": "视频号、小程序、抖音、快手、小红书、直播流、m3u8、酷狗、QQ音乐等常见网络资源下载!",
+      "sourceUrl": "https://github.com/putyy/res-downloader"
     },
-    "id": "c7bcdc3ed73ab64f5ce122a6e2a13f919823fec8a499ba9998568d65a560ffa6",
+    "id": "c69dd2c0dd985426182d43560cc3f9007877793e4768a2e345f99c34d8cc54d5",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "Jackett/Jackett",
+    "objectId": "Billionmail/BillionMail",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "API Support for your favorite torrent trackers",
-      "sourceUrl": "https://github.com/Jackett/Jackett"
+      "description": "BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr",
+      "sourceUrl": "https://github.com/Billionmail/BillionMail"
     },
-    "id": "85db5d21ffd06505efb8a47a97e239d497400b7683eb3cce09930c340fd75830",
+    "id": "9181146f88eb4122b1d5c1ff2cdcfbb29b25c0e3d2ca3cd3355c71d3aa8baf7b",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "AssetRipper/AssetRipper",
+    "objectId": "AI4Finance-Foundation/FinRL",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "GUI application to analyze game files",
-      "sourceUrl": "https://github.com/AssetRipper/AssetRipper"
+      "description": "FinRL®: Financial Reinforcement Learning. 🔥",
+      "sourceUrl": "https://github.com/AI4Finance-Foundation/FinRL"
     },
-    "id": "594b7fe803c70913a2d7808a5aa4a8e939145512e25911cf23942baa725b9e06",
+    "id": "dfdb1192aff861251021969502f591b4c004152ce131d778424c66bcc407c680",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "vectordotdev/vector",
+    "objectId": "hugo2046/QuantsPlaybook",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "A high-performance observability data pipeline.",
-      "sourceUrl": "https://github.com/vectordotdev/vector"
+      "description": "量化研究-券商金工研报复现",
+      "sourceUrl": "https://github.com/hugo2046/QuantsPlaybook"
     },
-    "id": "de171d393d94b30b735cea33a652c99613141b240978270ee53339eed6a405b5",
+    "id": "e5a0925e8c14649b24b0e6047fd4992435f60d0b25a34b60df86512e7378a8c9",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "questdb/questdb",
+    "objectId": "Tianyu199509/DeskBox",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "QuestDB is a high performance, open-source, time-series database",
-      "sourceUrl": "https://github.com/questdb/questdb"
+      "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
+      "sourceUrl": "https://github.com/Tianyu199509/DeskBox"
     },
-    "id": "9371870b6996422cd49b364afac18b639bb0fd1a44ce0927dce03920828d4f97",
+    "id": "8401b834e8d8ae5bba31d0980e591e3be0e1e591ec8d71f460296342bb67ede7",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "logisim-evolution/logisim-evolution",
+    "objectId": "NationalSecurityAgency/ghidra",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Digital logic design tool and simulator",
-      "sourceUrl": "https://github.com/logisim-evolution/logisim-evolution"
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "sourceUrl": "https://github.com/NationalSecurityAgency/ghidra"
     },
-    "id": "3f8021120e0925e490f0076b93907d4c7de5a9cdbe3fa77d55b8b3cce767114d",
+    "id": "039c4fecb9a0f83ac60d8cb8f382d79bf76ff7089583e93d2246316d038e2cf5",
     "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "MCRcortex/voxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An LoD rendering mod for minecraft",
-      "sourceUrl": "https://github.com/MCRcortex/voxy"
-    },
-    "id": "163ede3d3f8f7661551faf50dadf408d6e777bd06cd4e23072c588344c722609",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "antlr/antlr4",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.",
-      "sourceUrl": "https://github.com/antlr/antlr4"
-    },
-    "id": "0026b77de80765b8e9ccaa6aa846a310c3a0ea522562a228b42ea90fb33d02dc",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "quarkusio/quarkus",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Quarkus: Supersonic Subatomic Java.",
-      "sourceUrl": "https://github.com/quarkusio/quarkus"
-    },
-    "id": "edaf9075d9a6fe02014c86e87fca03588e7a076af0d38d177d0eef2f519ab4d6",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FCL-Team/FoldCraftLauncher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fold Craft Launcher, an Android Minecraft : Java Edition launcher.",
-      "sourceUrl": "https://github.com/FCL-Team/FoldCraftLauncher"
-    },
-    "id": "920690bcba7baa1ea3ce18a1554dfdf3050460884cbc0ee792506ba60c7242de",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "TGX-Android/Telegram-X",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The main repository of Telegram X — official alternative Telegram client for Android.",
-      "sourceUrl": "https://github.com/TGX-Android/Telegram-X"
-    },
-    "id": "eebf5983fd5e801cd7baeaf96d15be9a5546df987bda85c5b9795c399150b55c",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PojavLauncherTeam/PojavLauncher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Minecraft: Java Edition Launcher for Android and iOS based on Boardwalk. Succeeded by https://github.com/AngelAuraMC/Amethyst-Android",
-      "sourceUrl": "https://github.com/PojavLauncherTeam/PojavLauncher"
-    },
-    "id": "4740af48f834587626d5e01a1802923961daf2b6630a36f268e74c88975a7fcf",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "laravel/framework",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Laravel is a web application framework with expressive, elegant syntax.",
-      "sourceUrl": "https://github.com/laravel/framework"
-    },
-    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "invoiceninja/invoiceninja",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A source-available invoice, quote, project and time-tracking app built with Laravel",
-      "sourceUrl": "https://github.com/invoiceninja/invoiceninja"
-    },
-    "id": "688a80592918f7d4cacc4d0a473645091f14469d1cbfa28e937bd808353ab3cc",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "matomo-org/matomo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Empowering People Ethically 🚀 — Matomo is hiring! Join us → https://matomo.org/jobs Matomo is the leading open-source alternative to Google Analytics, giving you complete control and built-in privacy. Easily collect, visualise, and analyse data from websites & apps. Star us on GitHub ⭐️ – Pull Requests welcome!",
-      "sourceUrl": "https://github.com/matomo-org/matomo"
-    },
-    "id": "5b1aaa6ea14540dee17ac9372b2057777006c340ca92befb75fb5254f78cc6bd",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pixelfed/pixelfed",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Photo Sharing. For Everyone.",
-      "sourceUrl": "https://github.com/pixelfed/pixelfed"
-    },
-    "id": "87b4013e59cc15264e6d7af73f5acf5f1733b073308b5544392d48c6805321f5",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "espocrm/espocrm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "EspoCRM – Open Source CRM Application",
-      "sourceUrl": "https://github.com/espocrm/espocrm"
-    },
-    "id": "a5b5344ecd42a84579834efc7cdb2fe96510d4ca507b599fdbbc75aac19ce391",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "kimai/kimai",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Kimai is the #1 open-source time-tracking application. From freelancers to companies and organisations - everyone can manage timesheets, generate reports, create invoices and so much more... Web-based multi-user application, available as On-Premise or SaaS version: https://www.kimai.org",
-      "sourceUrl": "https://github.com/kimai/kimai"
-    },
-    "id": "40181e32513a87d6a2adb2785622d20bda07638c57c9440497a46dd674f5dd88",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "koel/koel",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Music streaming solution that works.",
-      "sourceUrl": "https://github.com/koel/koel"
-    },
-    "id": "60e1f2dd096f73ed650962232f61c4f404670c2d2c20812be56f5f453fe1c312",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "monicahq/monica",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
-      "sourceUrl": "https://github.com/monicahq/monica"
-    },
-    "id": "51379bf0c6aff3bff2ebdf9c5b572b19540e4ccbac6ce95f35a08e110d5c1052",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ChurchCRM/CRM",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, open-source church management software for people, families, groups, events, attendance, giving, volunteers, and more. No subscription. Your data is yours.",
-      "sourceUrl": "https://github.com/ChurchCRM/CRM"
-    },
-    "id": "5da47b86cec98afd06dc1370b313fab30150de92e2a074117d06091a2a1f3748",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "own-pay/OwnPay",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Self-hosted, open-source payment gateway. Manage brands, gateways, and transactions on your own infrastructure.",
-      "sourceUrl": "https://github.com/own-pay/OwnPay"
-    },
-    "id": "472277bef39e3e1c24bb9c0cc48e7ec1c06f942ddada424cc3298911faf2c22b",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "frappe/crm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully featured, open source CRM",
-      "sourceUrl": "https://github.com/frappe/crm"
-    },
-    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "geekgeekrun/geekgeekrun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "牛人快跑 - GeekGeekRun，求职找工作自动化工具，基于 Puppeteer、Electron。界面友好，简单易用！开源，免费！快速海投、自动开聊、已读不回提醒、职位信息抓取、不合适职位标记、僵尸职位清理；让你即刻变身成为一台冇得感情的求职机器🤖，找工作不内耗。宝宝不用动，妈妈全自动~祝你收获好Offer！",
-      "sourceUrl": "https://github.com/geekgeekrun/geekgeekrun"
-    },
-    "id": "6bfba03a6b314a70bffe6c7e51b074970cfa40e2bca50e652f6b4445b2575700",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "keleus/BewlyCat",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "BewlyCat——基于BewlyBewly开发的Bilibili拓展",
-      "sourceUrl": "https://github.com/keleus/BewlyCat"
-    },
-    "id": "a194e24677d0af18123fa478091a80b12504329f2b9555b8ae4a33d36ec4e2e7",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "yuhonas/free-exercise-db",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
-      "sourceUrl": "https://github.com/yuhonas/free-exercise-db"
-    },
-    "id": "6e037d384e7c497e259b8b883032f755a28048ff31ac0307fe48e98b8b5c39ad",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "unovue/reka-ui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An open-source UI component library for building high-quality, accessible design systems and web apps for Vue. Previously Radix Vue",
-      "sourceUrl": "https://github.com/unovue/reka-ui"
-    },
-    "id": "e0937eeb4e87de2b7c9046d24b7186771fcaf9f14e2c0fc0a3a83b849273ddd8",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "cfw-guide/ios.cfw.guide",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A complete iOS modding guide, from stock to jailbroken.",
-      "sourceUrl": "https://github.com/cfw-guide/ios.cfw.guide"
-    },
-    "id": "a9855ae593602d919ce95636d0ef83f3285be165cbb722ce006a55116815caae",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "HuLaSpark/HuLa",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🍀 A cross-platform instant messaging desktop application with exceptional performance built on Rust + Vue3, compatible with Windows, macOS, Linux, Android, and iOS（一款基于Rust+Vue3极致性能的跨平台即时通讯桌面应用，兼容Windows、MacOS、Linux、Android、IOS）",
-      "sourceUrl": "https://github.com/HuLaSpark/HuLa"
-    },
-    "id": "53b5fa3ca359eef85df3a48ee2f6622123af4ff568f97beaa16f3800fb35063a",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "unovue/inspira-ui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Build beautiful website using Vue & Nuxt.",
-      "sourceUrl": "https://github.com/unovue/inspira-ui"
-    },
-    "id": "6868a0f49b923776768e34f39e5e4891e21da75fae416d84de4bbcdd085bb65c",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Virtual-Browser/VirtualBrowser",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free anti fingerprint browser, 指纹浏览器, 隐私浏览器, 防识别浏览器, 反识别浏览器, 防关联浏览器, 免费的web3空投专用指纹浏览器 https://virtualbrowser.cc/?src=github",
-      "sourceUrl": "https://github.com/Virtual-Browser/VirtualBrowser"
-    },
-    "id": "26ff8e61d326698b8dc030a62e1a3f552119dd5b82d6f42fbd7cc61684d474c9",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "frappe/helpdesk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Modern, Streamlined, Free and Open Source Customer Service Software",
-      "sourceUrl": "https://github.com/frappe/helpdesk"
-    },
-    "id": "4335f66ab40a3d05359d9f83bb5417dcdac5b63b7077a3f5339a69a131f6ed71",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Daymychen/art-design-pro",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Vue 3 admin dashboard template using Vite + TypeScript + Element Plus | vue3 admin | vue-admin — focused on user experience and visual design.",
-      "sourceUrl": "https://github.com/Daymychen/art-design-pro"
-    },
-    "id": "9d706d3eb90da0f50935311c33d1247fa02eb0f9d874ae33fc6ef056ff6e423a",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ElemeFE/element",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Vue.js 2.0 UI Toolkit for Web",
-      "sourceUrl": "https://github.com/ElemeFE/element"
-    },
-    "id": "7092fa757cbc0607bbb201d370373aa653d7f1fd1a17ea98f66148daa04efa5e",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-page",
-    "objectId": "c#",
-    "reason": "HTTP 504",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/c%23?since=monthly"
-    },
-    "id": "ff687459c256c49cc0589727d3f6d3f96578ae995b8a8f74fbdeb4f5988c0bb8",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-page",
-    "objectId": "java",
-    "reason": "HTTP 504",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/java?since=monthly"
-    },
-    "id": "4ca5297404e393d81c91c5634ef93ed1460479fec6a1ff6802587e987e9c2fd1",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
+    "createdAt": "2026-10-02T07:52:02Z"
   }
 ]
