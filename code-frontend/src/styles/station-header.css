@@ -58,8 +58,6 @@
 .station-brand__flow { stroke: #ecd5a2; stroke-width: 1; stroke-dasharray: 18 140; stroke-dashoffset: 18; opacity: 0; }
 .station-brand__mark { display: block; width: 38px; height: 38px; object-fit: contain; transform: translateY(-1px); filter: saturate(.78) brightness(.94) drop-shadow(1px 3px 2px #020704) drop-shadow(-.5px -.5px #e5d3a226); transition: filter .3s; }
 .station-brand__inlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; stroke: #c4a77480; stroke-width: .7; filter: drop-shadow(0 1px #050c08); }
-.station-brand:hover .station-brand__lettering { filter: drop-shadow(0 1px 1px #070d07) drop-shadow(0 0 5px #e8c4822b); }
-.station-brand:hover .station-brand__mark { filter: saturate(.88) brightness(1) drop-shadow(1px 3px 2px #020704) drop-shadow(0 0 4px #76d9b92b); }
 .station-divider { position: absolute; left: 254px; top: 19px; height: 32px; width: 1px; background: linear-gradient(transparent,#b9a5774d,transparent); box-shadow: -1px 0 #07120b7d; pointer-events: none; }
 .station-nav { position: relative; min-width: 0; isolation: isolate; }
 .station-nav ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) repeat(2,minmax(0,1.16fr)) repeat(2,minmax(0,1fr)); gap: 5px; padding: 0; margin: 0; list-style: none; }
@@ -98,7 +96,6 @@
 .station-about { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 40px; padding-left: 12px; border-left: 1px solid #bba16b33; font-size: 12px; letter-spacing: .08em; color: #b9b09a; text-shadow: 0 1px #050d07; }
 .station-about > span:last-child { color: #a2926f; transition: transform .2s; }
 .station-about:is(:hover,[aria-current='page']) { color: #eacf97; }
-.station-about:hover > span:last-child { transform: translate(2px,-2px); }
 .station-header a:focus-visible { outline: 2px solid #a0ead0; outline-offset: 2px; border-radius: 2px; }
 .station-header .station-link:focus-visible { outline-color: transparent; }
 .station-skip { position: fixed; top: 8px; left: 12px; transform: translateY(-180%); z-index: 70; padding: 10px 18px; background: #f1dba5; color: #292016; }
@@ -135,3 +132,61 @@
 }
 @media (prefers-reduced-motion: reduce) { .station-header * { animation: none !important; transition: none !important; } }
 @media (forced-colors: active) { .station-header .station-link:focus-visible { outline-color: Highlight; }.station-link__focus { display: none; } }
+
+/* 窄屏（≤700px）：品牌与 6 个导航项挤在一行会把导航压到 12-51px 宽、文字重叠成一片
+   （2026-10-01 实测：390px 下网格 182px + 100px + 52px，导航 scrollWidth 120 > clientWidth 100；561-640px 区间链接被压到 39-51px）。
+   对策：改两行—— 第一行「品牌 + 关于」，第二行导航横向滚动。
+   试过「单行 + 品牌缩窄 + 导航横滚」，但 nav 的 max-content 会把 minmax(0,1fr) 那列挤成 0 宽，
+   品牌 logo 消失、导航溢出视口，故改为两行。页头高度同步放开（72px → auto）。 */
+@media (max-width: 700px) {
+  .station-header { height: auto; }
+  .station-header__body {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "brand about" "nav nav";
+    gap: 6px 10px;
+    padding: 6px 12px;
+    height: auto;
+  }
+  .station-brand { grid-area: brand; width: auto; gap: 6px; height: 34px; }
+  .station-brand__word { height: 22px; }
+  .station-brand__seat { width: 30px; height: 30px; }
+  .station-brand__mark { width: 26px; height: 26px; }
+  .station-brand__inlay { display: none; }
+  .station-divider { display: none; }
+  .station-about { grid-area: about; padding-left: 8px; }
+
+  /* 导航独占第二行：单行横向滚动，scrollbar 隐藏但滚动仍可用 */
+  .station-nav { grid-area: nav; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .station-nav::-webkit-scrollbar { display: none; }
+  .station-nav ul { display: flex; grid-template-columns: none; gap: 2px; width: max-content; padding-inline: 2px; }
+  .station-nav li { flex: none; }
+
+  /* 触控热区：窄屏无 hover 与指针，点按反馈与热区都要给足 */
+  /* 2026-10-02 P0：6 个导航项原本 492px 宽，390px 视口只有 366px 可用——「邸报」整项看不到，
+     且 scrollbar-width:none 把滚动条藏了、无任何可滚提示。窄屏改为只保留站名
+     （中间的 · 与尾字「首/领/望/比/买/看」是装饰性单字），内边距收到 6px：
+     6 ×（最宽站名「点将台」42px + 12px 内边距）≈ 324px，≥362px 视口可整排显示、无需横滚。 */
+  .station-link__dot,
+  .station-link__verb { display: none; }
+  .station-link { height: 44px; padding: 0 6px; gap: 0; }
+  .station-link__name { font-size: 14px; letter-spacing: 0; }
+  .station-link::before { top: 12px; bottom: 12px; }
+}
+
+/* ≤360px 仍放不下（6 项约 324px > 可用 296px），给右缘渐隐提示「还能往右滑」，
+   避免像上次那样末项被静默裁掉。360px 以上不加遮罩，免得最后一站无故发虚。 */
+@media (max-width: 360px) {
+  .station-nav { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+}
+
+/* ===== hover 专用（2026-10-01 移动端适配）：触摸端无真实 hover，
+   把这些规则收进 hover 媒体查询，避免点按后视觉态粘住。
+   含 :focus-within / :focus-visible 的组合选择器不在此列（键盘路径须保留）。===== */
+@media (hover: hover) and (pointer: fine) {
+
+.station-brand:hover .station-brand__lettering { filter: drop-shadow(0 1px 1px #070d07) drop-shadow(0 0 5px #e8c4822b); }
+
+.station-brand:hover .station-brand__mark { filter: saturate(.88) brightness(1) drop-shadow(1px 3px 2px #020704) drop-shadow(0 0 4px #76d9b92b); }
+
+.station-about:hover > span:last-child { transform: translate(2px,-2px); }
+}

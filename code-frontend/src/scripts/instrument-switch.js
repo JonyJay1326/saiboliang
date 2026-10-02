@@ -86,6 +86,7 @@ function mountOne(widget) {
   let raf = 0;
   let last = 0;
   let disposed = false;
+  let fxLast = false; /* 上一帧是否真在 field 上画过流光；用于 fx 结束时补清一次 */
 
   function line(ctx, points, color, width = 1) {
     ctx.beginPath();
@@ -806,13 +807,25 @@ function mountOne(widget) {
     tiger.__pulse();
   }
 
+  /* 三器切换的流光时序（合并 2026-10-02 上游的 fxAge 分档 + 本分支的静止期早退）：
+     - fxAge = state.age - 起点（起点按 kind：army 0 / market MARKET_TIMING.finish / sky SKY_TIMING.finish）
+     - 窗口 = flight + afterglow，实测 sky 最长到 age 1.59s、market 1.53s，
+       故外层判定按 fxAge 逐帧算，而非旧版写死的 state.age <= 1.35 —— 否则会把 market/sky 的余辉截断。
+     - 静止期（无 fx / reduced-motion / 出窗口）直接返回，不再每帧无条件 clearRect：
+       窄屏该画布 display:none 却仍按 innerWidth×dpr 分配 263 万像素，纯浪费。
+     - fxLast 记录上帧是否画过，窗口结束时补清一次残留，避免留下残影。 */
   function sceneFx() {
-    if (!f) return;
-    f.clearRect(0, 0, innerWidth, innerHeight);
+    if (!f || !field.width || media.matches || !state.fx) return;
     const fxAge = state.age - (kind === 'sky' ? SKY_TIMING.finish : kind === 'market' ? MARKET_TIMING.finish : 0);
     const flight = kind === 'sky' ? SKY_TIMING.flight : kind === 'market' ? .55 : .78;
     const afterglow = kind === 'market' ? .4 : .57;
-    if (!state.fx || media.matches || fxAge < 0 || fxAge > flight + afterglow) return;
+    const live = fxAge >= 0 && fxAge <= flight + afterglow;
+    if (!live) {
+      if (fxLast) { f.clearRect(0, 0, innerWidth, innerHeight); fxLast = false; }
+      return;
+    }
+    f.clearRect(0, 0, innerWidth, innerHeight);
+    fxLast = true;
     const start = state.fx.start;
     const end = totemEnd() || state.fx.end;
     const t = clamp(fxAge / flight);
@@ -940,8 +953,16 @@ function mountOne(widget) {
       const b = button.getBoundingClientRect();
       return { x: b.x - rect.x, y: b.y - rect.y, w: b.width, h: b.height };
     });
-    field.width = Math.round(innerWidth * dpr);
-    field.height = Math.round(innerHeight * dpr);
+    /* 窄屏（≤760px）流光不画：fire() 同样只在 innerWidth > 760 时建 fx，且 CSS 已把
+       .instrument__field 设为 display:none。此时置 0×0 —— 既不分配内存，也让 sceneFx 首行
+       的 !field.width 早退，两处浪费一起消掉。桌面端行为不变。 */
+    if (innerWidth > 760) {
+      field.width = Math.round(innerWidth * dpr);
+      field.height = Math.round(innerHeight * dpr);
+    } else {
+      field.width = 0;
+      field.height = 0;
+    }
     if (f) f.setTransform(dpr, 0, 0, dpr, 0, 0);
     state.fx = null;
     paint(0);
@@ -973,13 +994,17 @@ function mountOne(widget) {
   }
 
   buttons.forEach((button, i) => {
-    on(button, 'pointerenter', () => {
+    /* 悬停描亮只认鼠标：触摸端 pointerenter 紧随 pointerdown，会置 hover 并 wake()，
+       让 advanceGleam 每帧对所有按钮做无意义的 lerp。与同文件 pointermove 的处理一致。 */
+    on(button, 'pointerenter', (event) => {
+      if (event.pointerType === 'touch') return;
       state.hover = i;
       // 每次进入都从头描一遍，避免接着上次的进度闪一下
       if ((kind === 'army' || kind === 'sky') && i !== state.index) state.gleam[i] = 0;
       wake();
     });
-    on(button, 'pointerleave', () => {
+    on(button, 'pointerleave', (event) => {
+      if (event.pointerType === 'touch') return;
       state.hover = -1;
       if (kind !== 'army') wake();
     });
