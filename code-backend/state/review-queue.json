@@ -1019,5 +1019,16 @@
     "id": "039c4fecb9a0f83ac60d8cb8f382d79bf76ff7089583e93d2246316d038e2cf5",
     "status": "pending",
     "createdAt": "2026-10-02T07:52:02Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "b207d93ee246121ad178af0aae186c66c8f452f0ad17f32d8b2d2779ccebec30",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "ae4edfe9ed7f711af83a8ea5bfa14419c240aaf4714ce52f413427a27169d747",
+    "status": "pending",
+    "createdAt": "2026-10-02T08:46:10Z"
   }
 ]
