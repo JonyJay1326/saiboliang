@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-02T16:40:17Z",
+  "dataUpdatedAt": "2026-10-03T09:14:12Z",
   "items": [
+    {
+      "title": "GitHub Copilot 中部分模型已弃用",
+      "sourceUrl": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "publishedAt": "2026-10-02T18:24:19Z",
+      "source": "GitHub",
+      "summary": "2026年10月2日起，GitHub Copilot 在聊天、内联编辑、问答、代理模式及代码补全中弃用部分模型。",
+      "id": "705956e4f1fcd62c79bb3c1f80c8d7f1fd1d77475cb3e771287767f96726f95c",
+      "originalTitle": "Selected models in GitHub Copilot deprecated",
+      "translatedAt": "2026-10-03T09:14:12Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "originalVerifiedAt": "2026-10-03T09:14:12Z",
+      "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "category": "industry",
+      "eventType": "service-retirement",
+      "addedAt": "2026-10-03T09:14:12Z",
+      "featured": true
+    },
     {
       "title": "我们在 2026 年 9 月发布的最新 AI 新闻",
       "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
@@ -2909,6 +2928,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-02T16:40:17Z",
-  "generatedAt": "2026-10-02T16:40:17Z"
+  "version": "2026-10-03T09:14:12Z",
+  "generatedAt": "2026-10-03T09:14:12Z"
 }

@@ -1,17 +1,7 @@
 {
-  "e11a5d7f0be16c7ae710cb40fcd3e360fe54705b38e97bec68265383fd6a4b19": {
-    "summary": "GitHub Copilot CLI 与 macOS、Windows 版 Copilot 应用公开预览 computer use，可代用户与桌面应用交互。",
+  "705956e4f1fcd62c79bb3c1f80c8d7f1fd1d77475cb3e771287767f96726f95c": {
+    "summary": "2026年10月2日起，GitHub Copilot 在聊天、内联编辑、问答、代理模式及代码补全中弃用部分模型。",
     "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "d8efb6ae3f1c14fd22be9554b790c3552220acaabf95f4f6a3247a98ad84b954": {
-    "summary": "VS Code v1.136 至 v1.140 于 2026 年 9 月发布，优化从实现到合并 PR 的智能体开发流程。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "20f94898ac7397b2decb7e67ad5363981edbdbf5de95038cc5fc6bbf329af8e7": {
-    "summary": "Copilot CLI、GitHub Copilot 应用和 SDK 新增动态工作流，可用代码定义编排。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
+    "at": "2026-10-03T09:14:12Z"
   }
 }

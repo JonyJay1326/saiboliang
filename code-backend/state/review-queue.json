@@ -1010,18 +1010,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "michael-denyer/pstack-claude",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Claude Code, Codex, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
-    },
-    "id": "821bc9fbb88d55d9d43cd592b492370b8c56b9e509116752cf803de34a060e85",
-    "status": "pending",
-    "createdAt": "2026-10-02T16:34:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "oven-sh/bun",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1067,5 +1055,16 @@
     "id": "7921f7142f2c4202a8a8f05128897cb6e5699547f06e39c1fe3da232627ea22d",
     "status": "pending",
     "createdAt": "2026-10-02T16:34:26Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "b207d93ee246121ad178af0aae186c66c8f452f0ad17f32d8b2d2779ccebec30",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "ae4edfe9ed7f711af83a8ea5bfa14419c240aaf4714ce52f413427a27169d747",
+    "status": "pending",
+    "createdAt": "2026-10-03T09:14:12Z"
   }
 ]
