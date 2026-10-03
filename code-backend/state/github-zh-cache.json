@@ -59,11 +59,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "superdesigndev/treg": {
-    "text": "面向智能体工具的OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T15:28:02Z"
-  },
   "pbakaus/impeccable": {
     "text": "让 AI 工具在设计中表现更佳的设计语言。",
     "source": "deepseek-flash",
@@ -73,11 +68,6 @@
     "text": "一个活的像素艺术工作站，真实 AI 代理在此做真实工作。本地优先的桌面代理框架——自带密钥，观看你的团队实际运行。",
     "source": "deepseek-flash",
     "at": "2026-09-26T14:59:11Z"
-  },
-  "leejet/stable-diffusion.cpp": {
-    "text": "纯 C/C++ 实现扩散模型（SD、Flux、Wan、Qwen Image、Z-Image 等）推理",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T09:20:54Z"
   },
   "mobile-next/mobile-mcp": {
     "text": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
@@ -91,11 +81,6 @@
   },
   "pacifio/atlas": {
     "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
-  },
-  "darkzOGx/youtube-automation-agent": {
-    "text": "🎬 用 AI 智能体全自动管理 YouTube 频道。全天候创建、优化并发布视频。支持免费的 Gemini API 或 OpenAI。无需编程！",
     "source": "deepseek-flash",
     "at": "2026-09-28T18:37:28Z"
   },
@@ -139,16 +124,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
   },
-  "google/ax": {
-    "text": "Google 的开放智能体编排运行时",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:52:02Z"
-  },
-  "NVIDIA/Model-Optimizer": {
-    "text": "统一的 SOTA 模型优化技术库，涵盖量化、蒸馏、剪枝、神经架构搜索、推测解码等。为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:52:02Z"
-  },
   "chiphuyen/aie-book": {
     "text": "[进行中] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
     "source": "deepseek-flash",
@@ -184,24 +159,34 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T16:34:26Z"
   },
-  "charmbracelet/crush": {
-    "text": "面向所有人的魅力代理式编码 💘",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "HandsOnLLM/Hands-On-Large-Language-Models": {
-    "text": "O'Reilly 图书《Hands-On Large Language Models》官方代码仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "docling-project/docling": {
-    "text": "让你的文档为生成式 AI 做好准备",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
   "jo-inc/camofox-browser": {
     "text": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
     "source": "deepseek-flash",
     "at": "2026-10-02T16:34:26Z"
+  },
+  "yikart/AiToEarn": {
+    "text": "用 AI 赚钱！",
+    "source": "deepseek-flash",
+    "at": "2026-10-03T15:09:23Z"
+  },
+  "mozilla-ai/llamafile": {
+    "text": "用单个文件分发和运行 LLM。",
+    "source": "deepseek-flash",
+    "at": "2026-10-03T15:09:23Z"
+  },
+  "deepseek-ai/FlashMLA": {
+    "text": "FlashMLA：高效多头潜在注意力内核",
+    "source": "deepseek-flash",
+    "at": "2026-10-03T15:09:23Z"
+  },
+  "dotnet/skills": {
+    "text": "用于辅助 AI 编码代理处理 .NET 和 C# 的技能仓库",
+    "source": "deepseek-flash",
+    "at": "2026-10-03T15:09:23Z"
+  },
+  "alsk1992/CloddsBot": {
+    "text": "开源 AI 交易代理，可在 1000 多个市场自主运行——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，在你睡觉时管理风险。用于机器对机器支付的代理商务协议。自托管。基于 Claude 构建。",
+    "source": "deepseek-flash",
+    "at": "2026-10-03T15:09:23Z"
   }
 }

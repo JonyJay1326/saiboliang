@@ -37,18 +37,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "every-app/open-seo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open source alternative to Semrush and Ahrefs",
-      "sourceUrl": "https://github.com/every-app/open-seo"
-    },
-    "id": "05cc0e824177ff632ff22ba0bc7fc8034e56ab7dfae5e53563d2d00f8a474f7d",
-    "status": "pending",
-    "createdAt": "2026-09-17T16:46:49Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "rustfs/rustfs",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -399,30 +387,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "trailofbits/coop",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Isolated VM environment for running Claude Code and Codex",
-      "sourceUrl": "https://github.com/trailofbits/coop"
-    },
-    "id": "46fc3ce38e8658c65a1ad9b76b13a048e5af22c4cb6fce2599cf1d6581b98840",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FxEmbed/FxEmbed",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
-      "sourceUrl": "https://github.com/FxEmbed/FxEmbed"
-    },
-    "id": "cd20c428d8d6fb8611dddbeddf23921f00d78a7c97290c58ac67eef497262eaf",
-    "status": "pending",
-    "createdAt": "2026-09-26T14:59:11Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "vercel/next.js",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -430,18 +394,6 @@
       "sourceUrl": "https://github.com/vercel/next.js"
     },
     "id": "8087ac37fdea5c6a0ab0f1c1da3dee3a60c0524f93175977fe0abc6cd6e30bdf",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pdone/lx-music-source",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "洛雪音乐源",
-      "sourceUrl": "https://github.com/pdone/lx-music-source"
-    },
-    "id": "333f067f661f80f959b717f5e8b42d98712981e245bd0c8de45fa020ee0ec318",
     "status": "pending",
     "createdAt": "2026-09-27T15:36:14Z"
   },
@@ -526,18 +478,6 @@
       "sourceUrl": "https://github.com/vercel-labs/scriptc"
     },
     "id": "4c4e39ab55b03c8b204a825806bbf57d4cbae21d4cc67269f4d917e91e3033e8",
-    "status": "pending",
-    "createdAt": "2026-09-28T18:37:28Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "block/buzz",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A hive mind communication platform",
-      "sourceUrl": "https://github.com/block/buzz"
-    },
-    "id": "8f6e52f88eb92353ea9384168e1f30d6d2053e0d7bb92ec724e0a96b4c3e8d7a",
     "status": "pending",
     "createdAt": "2026-09-28T18:37:28Z"
   },
@@ -650,18 +590,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "2dust/v2rayN",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
-      "sourceUrl": "https://github.com/2dust/v2rayN"
-    },
-    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "humanlayer/skills",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -683,30 +611,6 @@
     "id": "7005d9b86a12698db8ab7a559d5cd2296d3880cfc197db3d1eb0fabe515cd2c9",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SnailSploit/Claude-Red",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
-      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
-    },
-    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ahmedkhaleel2004/gitdiagram",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Visualize any GitHub codebase: free interactive architecture diagrams and one-minute explainer videos. Replace 'hub' with 'diagram' in any GitHub URL.",
-      "sourceUrl": "https://github.com/ahmedkhaleel2004/gitdiagram"
-    },
-    "id": "f954508e529d0db480e0654c115dd8ff9e0437304ba80826f53ad908829c28c9",
-    "status": "pending",
-    "createdAt": "2026-09-30T09:47:34Z"
   },
   {
     "kind": "github-classification",
@@ -758,30 +662,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ocornut/imgui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
-      "sourceUrl": "https://github.com/ocornut/imgui"
-    },
-    "id": "bf67c9b6dd402f4dd5e36be900acb4e13f6fd3b99300c8f679b76f1519cb91a6",
-    "status": "pending",
-    "createdAt": "2026-10-01T17:24:30Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "qbittorrent/qBittorrent",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "qBittorrent BitTorrent client",
-      "sourceUrl": "https://github.com/qbittorrent/qBittorrent"
-    },
-    "id": "c99cc9a760ee99bca3a477e2d1fde53b192f2602abd7c641fe10b7dbd03801ff",
-    "status": "pending",
-    "createdAt": "2026-10-01T17:24:30Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Neet-Nestor/Telegram-Media-Downloader",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -815,18 +695,6 @@
     "id": "8d9b9f0ffaeae5e079181f347985ec750faf70657f109eb298ae89ff526d2934",
     "status": "pending",
     "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "derv82/wifit3",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Wifite but USB-only & cross-platform.",
-      "sourceUrl": "https://github.com/derv82/wifit3"
-    },
-    "id": "0730a4ba6a82db3a9c8bd7649c55693d53c941ed744bfbfc3ada383d2967a9b9",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:52:02Z"
   },
   {
     "kind": "github-classification",
@@ -950,30 +818,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "cloudflare/vinext",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Vite plugin that reimplements the Next.js API surface — deploy anywhere",
-      "sourceUrl": "https://github.com/cloudflare/vinext"
-    },
-    "id": "5b31b97204680ea3a88c582346036681b38b6410e0c013d0bbb4a4bc6a62e164",
-    "status": "pending",
-    "createdAt": "2026-10-02T16:34:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "qbittorrent/search-plugins",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Search plugins for qBittorrent search feature",
-      "sourceUrl": "https://github.com/qbittorrent/search-plugins"
-    },
-    "id": "7816481872abeab3763f36ee0ab0ce1016cfd87c94a0aa3ba52ccb8766deadce",
-    "status": "pending",
-    "createdAt": "2026-10-02T16:34:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "trufflesecurity/trufflehog",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1005,18 +849,6 @@
       "sourceUrl": "https://github.com/microsoft/WSL"
     },
     "id": "007775127776e484106e5548c3659ef76bf2d1a392e722ef8426851fd9826add",
-    "status": "pending",
-    "createdAt": "2026-10-02T16:34:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "oven-sh/bun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
-      "sourceUrl": "https://github.com/oven-sh/bun"
-    },
-    "id": "20c58dd10cf02a9a7fb36479256c4fe8291d97720189d1ee9099771661d3af0d",
     "status": "pending",
     "createdAt": "2026-10-02T16:34:26Z"
   },
@@ -1066,5 +898,305 @@
     "id": "ae4edfe9ed7f711af83a8ea5bfa14419c240aaf4714ce52f413427a27169d747",
     "status": "pending",
     "createdAt": "2026-10-03T09:14:12Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Effect-TS/effect",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build production-ready applications in TypeScript",
+      "sourceUrl": "https://github.com/Effect-TS/effect"
+    },
+    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pingdotgg/t3code",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/pingdotgg/t3code"
+    },
+    "id": "1df2d6358fb4f561941cab2b0003326d036144e81955f271f3e2ba8f2aede0fd",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Comfy-Org/workflow_templates",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ComfyUI template workflows",
+      "sourceUrl": "https://github.com/Comfy-Org/workflow_templates"
+    },
+    "id": "61117d004c396932f03d5db010d0b22987bbd74c133255c51c0030f197914318",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "LuxAlgo/Vela",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fast, extensible financial charts for the web. The open-source core of Vela by LuxAlgo.",
+      "sourceUrl": "https://github.com/LuxAlgo/Vela"
+    },
+    "id": "767dd81cbb9d5b9d1903228feed79f29060037e4ebcf4922c0c404dd402396cd",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rakyll/hey",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "HTTP load generator, ApacheBench (ab) replacement",
+      "sourceUrl": "https://github.com/rakyll/hey"
+    },
+    "id": "edd896b9e7b4a865ae70de411e0568d0ce09567265f53a209578f25d2cfb7b9f",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "guohuiyuan/go-music-dl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
+      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
+    },
+    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nats-io/nats-server",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "High-Performance server for NATS.io, the cloud and edge native messaging system.",
+      "sourceUrl": "https://github.com/nats-io/nats-server"
+    },
+    "id": "b73b2e2e1e9bd029c59a51eb7749f59fa7e19cdcaf7ad1ef2ed0294fd9d3420f",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "git-bug/git-bug",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Distributed, offline-first bug tracker integrated in git",
+      "sourceUrl": "https://github.com/git-bug/git-bug"
+    },
+    "id": "3f40abb0460d8fe37d17cb2dc537b5365bf36e87c5c0d0c416c5b7134441eacf",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gitleaks/gitleaks",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find secrets with Gitleaks 🔑",
+      "sourceUrl": "https://github.com/gitleaks/gitleaks"
+    },
+    "id": "9ce077a47a6d978fb237d14f48b62047b6b0bc91427b25f06c4190f24fb85371",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "XTLS/Xray-core",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
+      "sourceUrl": "https://github.com/XTLS/Xray-core"
+    },
+    "id": "85e86ff6c092e61895dfabb839f2d473c618b15a46d2882c79df7fa267641855",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "simdjson/simdjson",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Parsing gigabytes of JSON per second : used by Facebook/Meta Velox, the Node.js runtime, ClickHouse, WatermelonDB, Apache Doris, Milvus, StarRocks",
+      "sourceUrl": "https://github.com/simdjson/simdjson"
+    },
+    "id": "e66a0c443fabfaf82f8bdb575b14722ebbc99d671d115c08e5db81d2aea502fc",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "The412Banner/winlator-contents",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Component catalog index for BannerHub / Winlator clients. Hosts contents.json (mirror of nightlies_components.json). Component binaries live on The412Banner/Nightlies releases.",
+      "sourceUrl": "https://github.com/The412Banner/winlator-contents"
+    },
+    "id": "6599909d2498866a753230f6c6be6eb4c9334bab48c2c6d30645ea9f620f97ea",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aydencharles/onionHEN",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Yet another HEN enabler for jailbroken PS5",
+      "sourceUrl": "https://github.com/aydencharles/onionHEN"
+    },
+    "id": "fc8f0f2e58a1818b1ca3405c44687511528e79690d7ce44cb47342c53ca0bf62",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "xiaolai/the-craft-of-selfteaching",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "One has no future if one couldn't teach themself.",
+      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
+    },
+    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "RayWangQvQ/BiliBiliToolPro",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。全面拥抱AI。敏感肌也能用。",
+      "sourceUrl": "https://github.com/RayWangQvQ/BiliBiliToolPro"
+    },
+    "id": "98a651736144873c21d18683fc71781468c01850802aa9a4d7a3bbfaec0bd3d2",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ruvnet/RuView",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "sourceUrl": "https://github.com/ruvnet/RuView"
+    },
+    "id": "0fadb702a3fe7d042012de26c1ca81c9ee6e15f68a8194797b735c27304da6e6",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "helix-editor/helix",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A post-modern modal text editor.",
+      "sourceUrl": "https://github.com/helix-editor/helix"
+    },
+    "id": "75b9cd47a079f5968cc5c73419f8168cc3637909f87b1e0d5ab6a2aa7c6f0895",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "denoland/deno",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A modern runtime for JavaScript and TypeScript.",
+      "sourceUrl": "https://github.com/denoland/deno"
+    },
+    "id": "61068d2a8f8df7ab581b7ca656681a540af564e1dbaeb96477ea90926be20604",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "DrKLO/Telegram",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Telegram for Android source",
+      "sourceUrl": "https://github.com/DrKLO/Telegram"
+    },
+    "id": "a89b4a48bc8ca1d943c5823a4f9937e41cff20bafc6004a9cc7054df2178a2a8",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "invoiceninja/invoiceninja",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A source-available invoice, quote, project and time-tracking app built with Laravel",
+      "sourceUrl": "https://github.com/invoiceninja/invoiceninja"
+    },
+    "id": "688a80592918f7d4cacc4d0a473645091f14469d1cbfa28e937bd808353ab3cc",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "daimiaopeng/coolapk-desktop",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "酷安跨平台桌面版",
+      "sourceUrl": "https://github.com/daimiaopeng/coolapk-desktop"
+    },
+    "id": "3cc77a1da31b5493db0a67f196e8a9fc8d535f6d756901d4cd58c988ba5bb185",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "frappe/crm",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully featured, open source CRM",
+      "sourceUrl": "https://github.com/frappe/crm"
+    },
+    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algerkong/AlgerMusicPlayer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
+    },
+    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hefengxian/my-ielts",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "雅思词汇真经、雅思语法、听力 179、阅读 538 同义替换等。Everything during preparing for my IELTS exam.",
+      "sourceUrl": "https://github.com/hefengxian/my-ielts"
+    },
+    "id": "2147472fa9378bcbb313ec3b4c6705564c14cce5c641dbbffa6315fc59216572",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "anthropics/knowledge-work-plugins",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "sourceUrl": "https://github.com/anthropics/knowledge-work-plugins"
+    },
+    "id": "093ff0a729620a78a81e3dad9f4f2c435b2c42cff1c1e1e8384107c785399107",
+    "status": "pending",
+    "createdAt": "2026-10-03T15:09:23Z"
   }
 ]

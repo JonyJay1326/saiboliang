@@ -1,16 +1,4 @@
 {
-  "c696e8b1f34224735a5b522fd51b1d052e2103bd5d040aaee48f4dde058d1cd6": {
-    "title": "推出 SynthID Bio",
-    "summary": "为 AI 生成的蛋白质添加水印并保持生物功能的概念验证。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T16:50:43Z"
-  },
-  "90249c2a3882c6d31b88e7cea8a85045e4eeb6a0a24ec30e6774300a2c2f9921": {
-    "title": "瓦解一场有组织的模型蒸馏行动",
-    "summary": "了解 OpenAI 如何瓦解一场提取受保护模型推理过程的行动，并正在加强对对抗性蒸馏的防御。",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T10:14:21Z"
-  },
   "0b5e363622340260d6f653eab68d5c524b787e4762dd251c70875694918b8cae": {
     "title": "NVIDIA 开放 2027–2028 研究生奖学金申请，奖金最高 60,000 美元",
     "summary": null,
@@ -121,12 +109,6 @@
   },
   "be3b1d34107991259e7d370e12ed725a8e8a7079558e52210eb20ccbf6e7f4af": {
     "title": "Copilot 代码审查：API 支持与新的默认审查力度",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-03T09:14:12Z"
-  },
-  "705956e4f1fcd62c79bb3c1f80c8d7f1fd1d77475cb3e771287767f96726f95c": {
-    "title": "GitHub Copilot 中部分模型已弃用",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-03T09:14:12Z"
