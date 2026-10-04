@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-03T15:09:23Z",
+  "dataUpdatedAt": "2026-10-04T09:53:08Z",
   "items": [
+    {
+      "title": "Copilot 代码审查：API 支持与新的默认审查力度",
+      "sourceUrl": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+      "publishedAt": "2026-10-02T19:13:50Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot代码审查现可通过REST和GraphQL API请求，并可为每次请求设置审查力度，Balanced成为默认值。",
+      "id": "be3b1d34107991259e7d370e12ed725a8e8a7079558e52210eb20ccbf6e7f4af",
+      "originalTitle": "Copilot code review: API support and new default effort level",
+      "translatedAt": "2026-10-04T09:53:08Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+      "originalVerifiedAt": "2026-10-04T09:53:08Z",
+      "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-04T09:53:08Z",
+      "featured": true
+    },
     {
       "title": "GitHub Copilot 中部分模型已弃用",
       "sourceUrl": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
@@ -59,6 +78,25 @@
       "featured": true
     },
     {
+      "title": "OpenRouter 模型路由器基准测试",
+      "sourceUrl": "https://openrouter.ai/blog/announcements/model-router-benchmarks/",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "source": "OpenRouter",
+      "summary": "我们现在跨六个套件对模型路由器进行并排基准测试。我们的 Router Index 综合考量质量、速度和成本，帮助你判断是否需要路由器，并挑选最适合需求的一款。",
+      "id": "1f93accf2c88e15abe590222c528b7fd5febf445e56a621c6f546fdd59f5a586",
+      "originalTitle": "OpenRouter Model Router Benchmarks",
+      "translatedAt": "2026-10-04T09:53:08Z",
+      "lang": "en",
+      "originalSource": "OpenRouter",
+      "originalUrl": "https://openrouter.ai/blog/announcements/model-router-benchmarks/",
+      "originalVerifiedAt": "2026-10-04T09:53:08Z",
+      "url": "https://openrouter.ai/blog/announcements/model-router-benchmarks/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-04T09:53:08Z",
+      "featured": true
+    },
+    {
       "title": "GitHub Copilot 现可通过 computer use 与桌面应用交互",
       "sourceUrl": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
       "publishedAt": "2026-10-01T19:11:26Z",
@@ -113,6 +151,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-02T16:34:26Z",
+      "featured": true
+    },
+    {
+      "title": "阿里发布 qwen-image-2.1-pro",
+      "sourceUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-02&model=qwen-image-2.1-pro",
+      "publishedAt": "2026-10-01T16:00:00Z",
+      "source": "阿里云百炼",
+      "summary": "Qwen-Image-2.1-Pro 是通义千问（Qwen）系列中一个统一的文本到图像生成与图像编辑模型。",
+      "id": "a0756aa5bf3f73a145e46f43fa2248a985c0a00bf7d533487696e56804ca9e49",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "阿里云百炼",
+      "originalUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-02&model=qwen-image-2.1-pro",
+      "originalVerifiedAt": "2026-10-04T09:53:08Z",
+      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-02&model=qwen-image-2.1-pro",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-04T09:53:08Z",
       "featured": true
     },
     {
@@ -2928,6 +2985,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-03T15:09:23Z",
-  "generatedAt": "2026-10-03T15:09:23Z"
+  "version": "2026-10-04T09:53:08Z",
+  "generatedAt": "2026-10-04T09:53:08Z"
 }

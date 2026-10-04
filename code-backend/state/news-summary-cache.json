@@ -1,7 +1,7 @@
 {
-  "705956e4f1fcd62c79bb3c1f80c8d7f1fd1d77475cb3e771287767f96726f95c": {
-    "summary": "2026年10月2日起，GitHub Copilot 在聊天、内联编辑、问答、代理模式及代码补全中弃用部分模型。",
+  "be3b1d34107991259e7d370e12ed725a8e8a7079558e52210eb20ccbf6e7f4af": {
+    "summary": "GitHub Copilot代码审查现可通过REST和GraphQL API请求，并可为每次请求设置审查力度，Balanced成为默认值。",
     "source": "deepseek-flash",
-    "at": "2026-10-03T09:14:12Z"
+    "at": "2026-10-04T09:53:08Z"
   }
 }

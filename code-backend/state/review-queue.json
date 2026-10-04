@@ -1198,5 +1198,52 @@
     "id": "093ff0a729620a78a81e3dad9f4f2c435b2c42cff1c1e1e8384107c785399107",
     "status": "pending",
     "createdAt": "2026-10-03T15:09:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "boykopovar/AnyPS5",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "sourceUrl": "https://github.com/boykopovar/AnyPS5"
+    },
+    "id": "809a5c0f0e3a01b109ea0d40baeca459b6e530761313d91e5974277d40cb7c86",
+    "status": "pending",
+    "createdAt": "2026-10-04T09:53:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "michael-denyer/pstack-claude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+    },
+    "id": "9b58d9577100753b02084aea9c5f8adfd167c78a07afc90655d454c0b8e9e702",
+    "status": "pending",
+    "createdAt": "2026-10-04T09:53:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "questdb/questdb",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "QuestDB is a high performance, open-source, time-series database",
+      "sourceUrl": "https://github.com/questdb/questdb"
+    },
+    "id": "9371870b6996422cd49b364afac18b639bb0fd1a44ce0927dce03920828d4f97",
+    "status": "pending",
+    "createdAt": "2026-10-04T09:53:08Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-04T09:53:08Z"
   }
 ]
