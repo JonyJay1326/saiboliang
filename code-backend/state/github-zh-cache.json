@@ -139,28 +139,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:52:02Z"
   },
-  "openai/symphony": {
-    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:52:02Z"
-  },
-  "pytorch/pytorch": {
-    "text": "使用 Python 的张量与动态神经网络，具备强大的 GPU 加速",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
   "TecharoHQ/anubis": {
     "text": "衡量传入 HTTP 请求的灵魂，以阻止 AI 爬虫",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "gastownhall/beads": {
-    "text": "Beads——为你的编码代理提供记忆升级",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "jo-inc/camofox-browser": {
-    "text": "面向 AI 代理的隐蔽无头浏览器——绕过 Cloudflare、机器人检测与反爬。可直接替代 Puppeteer/Playwright。",
     "source": "deepseek-flash",
     "at": "2026-10-02T16:34:26Z"
   },
@@ -184,9 +164,34 @@
     "source": "deepseek-flash",
     "at": "2026-10-03T15:09:23Z"
   },
-  "alsk1992/CloddsBot": {
-    "text": "开源 AI 交易代理，可在 1000 多个市场自主运行——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，在你睡觉时管理风险。用于机器对机器支付的代理商务协议。自托管。基于 Claude 构建。",
+  "ifixai-ai/iFixAi": {
+    "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi，可在 120 秒内得到答案。",
     "source": "deepseek-flash",
-    "at": "2026-10-03T15:09:23Z"
+    "at": "2026-10-04T15:49:24Z"
+  },
+  "NVIDIA/cosmos": {
+    "text": "NVIDIA Cosmos 是一个由世界模型、数据集和工具组成的开放平台，使开发者能够为机器人、自动驾驶汽车、智能基础设施等构建物理 AI。",
+    "source": "deepseek-flash",
+    "at": "2026-10-04T15:49:24Z"
+  },
+  "AI4Finance-Foundation/FinGPT": {
+    "text": "FinGPT：开源金融大语言模型！带来变革 🔥 我们在 HuggingFace 上发布训练好的模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-04T15:49:24Z"
+  },
+  "microsoft/semantic-kernel": {
+    "text": "将前沿 LLM 技术快速轻松地集成到你的应用中",
+    "source": "deepseek-flash",
+    "at": "2026-10-04T15:49:24Z"
+  },
+  "superdesigndev/treg": {
+    "text": "面向智能体工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
+    "source": "deepseek-flash",
+    "at": "2026-10-04T15:49:24Z"
+  },
+  "docling-project/docling": {
+    "text": "让你的文档为生成式 AI 做好准备",
+    "source": "deepseek-flash",
+    "at": "2026-10-04T15:49:24Z"
   }
 }
