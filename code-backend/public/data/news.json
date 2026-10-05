@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-05T10:34:12Z",
+  "dataUpdatedAt": "2026-10-05T19:38:42Z",
   "items": [
+    {
+      "title": "Together Link：在你已使用的工具中运行开放模型。今天一条命令即可开始。",
+      "sourceUrl": "https://www.together.ai/blog/together-link-frontier-quality-open-models-in-the-harness-you-already-use",
+      "publishedAt": "2026-10-05T00:00:00Z",
+      "source": "Together AI",
+      "summary": "Together Link 将 GLM 5.3 和 Kimi K3 等前沿开放模型引入你团队已在使用的编码智能体，模型支出降低超过 50%。",
+      "id": "9cf448ffb95a0ea67b98fe9230cb3a9f4e09a991be976346d2dc46b9afce4d53",
+      "originalTitle": "Together Link: open models in the harness you already use. Start with one command today.",
+      "translatedAt": "2026-10-05T19:38:42Z",
+      "lang": "en",
+      "originalSource": "Together AI",
+      "originalUrl": "https://www.together.ai/blog/together-link-frontier-quality-open-models-in-the-harness-you-already-use",
+      "originalVerifiedAt": "2026-10-05T19:38:42Z",
+      "url": "https://www.together.ai/blog/together-link-frontier-quality-open-models-in-the-harness-you-already-use",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-05T19:38:42Z",
+      "featured": true
+    },
     {
       "title": "Copilot 代码审查：API 支持与新的默认审查力度",
       "sourceUrl": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
@@ -2985,6 +3004,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-05T10:34:12Z",
-  "generatedAt": "2026-10-05T10:34:12Z"
+  "version": "2026-10-05T19:38:42Z",
+  "generatedAt": "2026-10-05T19:38:42Z"
 }

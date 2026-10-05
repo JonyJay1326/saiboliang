@@ -1,34 +1,4 @@
 {
-  "c38af6e5cae43e23a64c1d509c6a587da67c166f4c093fc7e47ef57f26c07a7c": {
-    "title": "GPT-6 系列模型指南",
-    "summary": "了解初创公司如何选择 GPT-6 模型、调整推理强度、改进提示与技能、协调工具，并为生产环境准备工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "532f5738d0696fe383323bc07b59ce1077a83c29eccbe59611f12348c1636961": {
-    "title": "SecurityAdvisory GraphQL API 新增字段",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "59fc4a70abc335f98eb4944f5803a413f19e7c642ef6e23d6668866b2cb96b44": {
-    "title": "仓库安全公告的机密评论",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "8430be4786d88a5d85b2a4e21a7a37fa9fd2891d6850bbdedd962fc6170f75e2": {
-    "title": "仓库安全公告评论 API 进入公开预览",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
-  "cecaa627e24bd9730bc27d132c8dc87f0de8d9da152ab459aceca7becf304132": {
-    "title": "NVIDIA DGX Spark 64GB 为开发者提供更多构建和扩展本地 AI 的方式",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
-  },
   "4ce371788dc0c71f881482b57a542813fd484d4bf0fc862eff988e107bb0deee": {
     "title": "无状态 GitHub App 安装令牌正式推出",
     "summary": null,
@@ -40,5 +10,23 @@
     "summary": "OpenAI 在 ChatGPT 中推出全新视觉广告格式，并为广告主扩展衡量工具、归因合作与品牌适用性。",
     "source": "deepseek-flash",
     "at": "2026-10-05T10:34:12Z"
+  },
+  "d2b5b29b4c815525619915dcf133df4d932068a91ccef332cbfb8777febef4ef": {
+    "title": "我们在欧盟文本溯源规则上的做法",
+    "summary": "OpenAI 如何在欧盟规则下推进文本水印。了解水印适用范围、检测方式，以及为何访问从研究人员开始。",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "56541a536ae3f25f9fd132a680cbcfdb6cefbce1328a500307e3c0cad4381c70": {
+    "title": "从扫描到治疗方案，AI 助力弥合乳腺癌最致命的差距",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "9cf448ffb95a0ea67b98fe9230cb3a9f4e09a991be976346d2dc46b9afce4d53": {
+    "title": "Together Link：在你已使用的工具中运行开放模型。今天一条命令即可开始。",
+    "summary": "Together Link 将 GLM 5.3 和 Kimi K3 等前沿开放模型引入你团队已在使用的编码智能体，模型支出降低超过 50%。",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
   }
 }

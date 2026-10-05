@@ -54,11 +54,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "OpenWhispr/openwhispr": {
-    "text": "语音转文字听写应用，支持本地（Nvidia Parakeet/Whisper）与云端模型（BYOK）。隐私优先，跨平台可用。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "pbakaus/impeccable": {
     "text": "让 AI 工具在设计中表现更佳的设计语言。",
     "source": "deepseek-flash",
@@ -71,11 +66,6 @@
   },
   "mobile-next/mobile-mcp": {
     "text": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:36:14Z"
-  },
-  "tensorflow/tensorflow": {
-    "text": "面向所有人的开源机器学习框架",
     "source": "deepseek-flash",
     "at": "2026-09-27T15:36:14Z"
   },
@@ -104,11 +94,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
   },
-  "moeru-ai/airi": {
-    "text": "💖🧸 自托管、你拥有的 Grok Companion，一个 waifu 与 cyber livings 的灵魂容器，将它们带入我们的世界，期望达到 Neuro-sama 的高度。支持实时语音聊天、Minecraft、Factorio 游玩。支持 Web / macOS / Windows。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "JayWebtech/autoshorts": {
     "text": "AutoShorts 是一个本地优先的桌面应用，可将长视频或音频录制转换为高影响力的竖屏短视频候选片段（9:16 竖屏），并借助 AI 对病毒式传播时刻进行排序。",
     "source": "deepseek-flash",
@@ -128,21 +113,6 @@
     "text": "[进行中] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
     "source": "deepseek-flash",
     "at": "2026-10-02T07:52:02Z"
-  },
-  "github/gh-aw": {
-    "text": "GitHub 智能体工作流",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:52:02Z"
-  },
-  "netdata/netdata": {
-    "text": "通往 AI 驱动的全栈可观测性最快路径，精简团队也能用。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:52:02Z"
-  },
-  "TecharoHQ/anubis": {
-    "text": "衡量传入 HTTP 请求的灵魂，以阻止 AI 爬虫",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T16:34:26Z"
   },
   "yikart/AiToEarn": {
     "text": "用 AI 赚钱！",
@@ -169,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-04T15:49:24Z"
   },
-  "NVIDIA/cosmos": {
-    "text": "NVIDIA Cosmos 是一个由世界模型、数据集和工具组成的开放平台，使开发者能够为机器人、自动驾驶汽车、智能基础设施等构建物理 AI。",
-    "source": "deepseek-flash",
-    "at": "2026-10-04T15:49:24Z"
-  },
   "AI4Finance-Foundation/FinGPT": {
     "text": "FinGPT：开源金融大语言模型！带来变革 🔥 我们在 HuggingFace 上发布训练好的模型。",
     "source": "deepseek-flash",
@@ -193,5 +158,40 @@
     "text": "让你的文档为生成式 AI 做好准备",
     "source": "deepseek-flash",
     "at": "2026-10-04T15:49:24Z"
+  },
+  "Gaurav-Gosain/tuios": {
+    "text": "终端窗口管理器，可感知你的代理在做什么。平铺窗格、工作区、重启后仍保留的会话，以及为每个编码代理提供的统一收件箱。",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "ashhart/TensorFold": {
+    "text": "在 Apple Silicon（MLX）上通过兼容 OpenAI 的端点实现快速、精确的 LLM 解码",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "lharries/whatsapp-mcp": {
+    "text": "WhatsApp MCP 服务器",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "MITDeepLearning/introtodeeplearning": {
+    "text": "MIT 6.S191：深度学习导论的实验材料",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "evidentlyai/evidently": {
+    "text": "Evidently 是一个开源 ML 和 LLM 可观测性框架。评估、测试并监控任何 AI 驱动的系统或数据管道。从表格数据到生成式 AI。100 多个指标。",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "WordPress/mcp-adapter": {
+    "text": "一个 MCP 适配器，将 Abilities API 桥接到模型上下文协议，使 MCP 客户端能够以编程方式发现并调用 WordPress 插件、主题和核心能力。",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
+  },
+  "freescout-help-desk/freescout": {
+    "text": "FreeScout — 免费自托管的 AI 驱动全渠道帮助台与共享邮箱",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T19:38:42Z"
   }
 }
