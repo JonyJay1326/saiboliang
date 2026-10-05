@@ -1105,18 +1105,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "urfave/cli",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A declarative, simple, fast, and fun package for building command line tools in Go",
-      "sourceUrl": "https://github.com/urfave/cli"
-    },
-    "id": "f32532e4f16f0bdef35fb978a070dd8c00143aea9e62c8d1c1630ad3802cb9fb",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "daeuniverse/dae",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1225,30 +1213,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "dotnet/eShop",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A reference .NET application implementing an eCommerce site",
-      "sourceUrl": "https://github.com/dotnet/eShop"
-    },
-    "id": "c7bcdc3ed73ab64f5ce122a6e2a13f919823fec8a499ba9998568d65a560ffa6",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dotnet/runtime",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": ".NET is a cross-platform runtime for cloud, mobile, desktop, and IoT apps.",
-      "sourceUrl": "https://github.com/dotnet/runtime"
-    },
-    "id": "5023748c28c3d3e8ccbdfaa4e651516becd325284d42e4c72262ef2f25c3a18c",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "2dust/v2rayN",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1321,18 +1285,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "TGX-Android/Telegram-X",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The main repository of Telegram X — official alternative Telegram client for Android.",
-      "sourceUrl": "https://github.com/TGX-Android/Telegram-X"
-    },
-    "id": "eebf5983fd5e801cd7baeaf96d15be9a5546df987bda85c5b9795c399150b55c",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "spring-projects/spring-boot",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1352,30 +1304,6 @@
       "sourceUrl": "https://github.com/grokability/snipe-it"
     },
     "id": "112f1afba99d6cf125a19da6be2d0c7bbc733d5aeb46a998ce26919cba580a7b",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "glpi-project/glpi",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.",
-      "sourceUrl": "https://github.com/glpi-project/glpi"
-    },
-    "id": "a421c98e770fd4a2ac11f254701d6f9f0caed07442e760cc40c0963d2b90c219",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "librenms/librenms",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Community-based GPL-licensed network monitoring system",
-      "sourceUrl": "https://github.com/librenms/librenms"
-    },
-    "id": "413c4345269a752d80bb23e0117eb5ddf6fb2840282036b58e5b03d4ea420244",
     "status": "pending",
     "createdAt": "2026-10-04T15:49:24Z"
   },
@@ -1450,5 +1378,40 @@
     "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
     "status": "pending",
     "createdAt": "2026-10-04T15:49:24Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "michael-denyer/pstack-claude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+    },
+    "id": "9b58d9577100753b02084aea9c5f8adfd167c78a07afc90655d454c0b8e9e702",
+    "status": "pending",
+    "createdAt": "2026-10-05T10:34:12Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "agent-substrate/substrate",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Agent Substrate: the core system",
+      "sourceUrl": "https://github.com/agent-substrate/substrate"
+    },
+    "id": "3d1e8126636a1b3b3ed066e60654b7ed283f0f4d19ce1d32143c956d83a2ad8b",
+    "status": "pending",
+    "createdAt": "2026-10-05T10:34:12Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-05T10:34:12Z"
   }
 ]

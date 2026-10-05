@@ -1,40 +1,4 @@
 {
-  "b8087b88cb63ae7fc829eff8f3b1641fe52f1b99617f195c5f0644b836600735": {
-    "title": "永恒的补充",
-    "summary": "先进 AI 对突破性想法背后的日常工作可能最为重要。探索为何执行力可能塑造下一轮经济与进步节奏。",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
-  "637d3dfa247fa816a4c4160f323cf7816f7979e28cc1acd637f643ec28fcb5fc": {
-    "title": "Albertsons Companies 如何由内而外重塑零售",
-    "summary": "Albertsons Cos. 正使用 ChatGPT Enterprise 和 OpenAI API 帮助团队更快工作，并让数百万顾客的购物更轻松。",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
-  },
-  "b3abbf9a49122235f36a1b34544a143600776366be1fc2709dc7767f9c1559b9": {
-    "title": "私有漏洞报告的速率限制",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "771239a6e9a1d874244729a5ba15c9f494b07b0976e45387d8cae171c0926600": {
-    "title": "私有漏洞报告的结构化表单",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "038fee3588d7f55541e39725adbf9c084d25d95098c66fd8e8acc5b15d964a9a": {
-    "title": "GitHub Actions：macOS 14 runner 镜像即将退役",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
-  "5395303ce74d411ba3f87f735e72e71f937fc889b3f24256ef69ae4d86789a37": {
-    "title": "NVIDIA GPU 如何帮助加速 OpenAI 的 GPT-6 Astra Ultrafast",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
   "c38af6e5cae43e23a64c1d509c6a587da67c166f4c093fc7e47ef57f26c07a7c": {
     "title": "GPT-6 系列模型指南",
     "summary": "了解初创公司如何选择 GPT-6 模型、调整推理强度、改进提示与技能、协调工具，并为生产环境准备工作流。",
@@ -65,22 +29,16 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T16:34:26Z"
   },
-  "bfc4355d370530a85bd883140fdc928f1c1047dc3775c054fb182f528bdce99d": {
-    "title": "Anthropic 投资 1 亿美元培训 1 万名工程师，应对企业 AI 人才缺口",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-03T09:14:12Z"
-  },
-  "882596cbc7639eb42bf210ab4eea91363285a86aec67b5711dcb8d9b7dff3b7d": {
-    "title": "Chatham 借助 OpenAI 扩展资本市场专业能力",
-    "summary": "Chatham Financial 使用 Codex 和 GPT-5.6 构建技术并重新设计工作流程，将交易验证时间从 30 分钟缩短至 4 分钟以内。",
-    "source": "deepseek-flash",
-    "at": "2026-10-03T09:14:12Z"
-  },
   "4ce371788dc0c71f881482b57a542813fd484d4bf0fc862eff988e107bb0deee": {
     "title": "无状态 GitHub App 安装令牌正式推出",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-03T09:14:12Z"
+  },
+  "2d8e70fb45cef7470a5baf361c95df26b5ff7249933c340d169f562e1258ded9": {
+    "title": "为人们使用 AI 的方式构建广告",
+    "summary": "OpenAI 在 ChatGPT 中推出全新视觉广告格式，并为广告主扩展衡量工具、归因合作与品牌适用性。",
+    "source": "deepseek-flash",
+    "at": "2026-10-05T10:34:12Z"
   }
 }
