@@ -339,18 +339,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "harry7557558/spirula-studio",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
-      "sourceUrl": "https://github.com/harry7557558/spirula-studio"
-    },
-    "id": "3d32b047f58906eb05048215b057304582cb31df5a3ef5bc00feb0e7651d0e45",
-    "status": "pending",
-    "createdAt": "2026-09-25T08:54:03Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "paperclipai/paperclip",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -494,18 +482,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "mg-chao/snow-apps",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
-      "sourceUrl": "https://github.com/mg-chao/snow-apps"
-    },
-    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "qist/tvbox",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -525,18 +501,6 @@
       "sourceUrl": "https://github.com/tgeorgiadis/quiver-launcher"
     },
     "id": "fc4ecb4ee1570a1fe4614bdefa88c5a7d6558ee8e7f092a5ac12db25a0afae0f",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "humanlayer/skills",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/humanlayer/skills"
-    },
-    "id": "b3cc61023d0d1200eccf63cb07d6fd3a623d799d2333be0da1f1c9bf81251311",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
   },
@@ -1525,18 +1489,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "laravel/framework",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Laravel is a web application framework with expressive, elegant syntax.",
-      "sourceUrl": "https://github.com/laravel/framework"
-    },
-    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "glpi-project/glpi",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1568,18 +1520,6 @@
       "sourceUrl": "https://github.com/FreshRSS/FreshRSS"
     },
     "id": "a5a6fb9d6f00407f83cfa5a130b95548694d4519575ed91b8d8968e9c11f11cb",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "unovue/reka-ui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An open-source UI component library for building high-quality, accessible design systems and web apps for Vue. Previously Radix Vue",
-      "sourceUrl": "https://github.com/unovue/reka-ui"
-    },
-    "id": "e0937eeb4e87de2b7c9046d24b7186771fcaf9f14e2c0fc0a3a83b849273ddd8",
     "status": "pending",
     "createdAt": "2026-10-05T19:38:42Z"
   },
@@ -1654,5 +1594,28 @@
     "id": "ba111659352a4c71c45fa26313ab35e15099136b91d661606a77c234f45100f7",
     "status": "pending",
     "createdAt": "2026-10-05T19:38:42Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "基本稳定可用 A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "d2ff62f0c2301c6fed7b7329a9d9e1655a1a6b17ae603cbc88594a432dfe468f",
+    "status": "pending",
+    "createdAt": "2026-10-06T10:26:13Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-06T10:26:13Z"
   }
 ]

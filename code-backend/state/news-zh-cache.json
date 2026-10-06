@@ -1,10 +1,4 @@
 {
-  "4ce371788dc0c71f881482b57a542813fd484d4bf0fc862eff988e107bb0deee": {
-    "title": "无状态 GitHub App 安装令牌正式推出",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-03T09:14:12Z"
-  },
   "2d8e70fb45cef7470a5baf361c95df26b5ff7249933c340d169f562e1258ded9": {
     "title": "为人们使用 AI 的方式构建广告",
     "summary": "OpenAI 在 ChatGPT 中推出全新视觉广告格式，并为广告主扩展衡量工具、归因合作与品牌适用性。",
@@ -23,10 +17,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
   },
-  "9cf448ffb95a0ea67b98fe9230cb3a9f4e09a991be976346d2dc46b9afce4d53": {
-    "title": "Together Link：在你已使用的工具中运行开放模型。今天一条命令即可开始。",
-    "summary": "Together Link 将 GLM 5.3 和 Kimi K3 等前沿开放模型引入你团队已在使用的编码智能体，模型支出降低超过 50%。",
+  "517fdc831c7b1edb72c4ef547c1447daf74fba8f8aacd96b33360a8a2be8da48": {
+    "title": "Secret scanning 新增对 Lovable、Supabase 等的检测器",
+    "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
+    "at": "2026-10-06T10:26:13Z"
   }
 }
