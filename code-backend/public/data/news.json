@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-10-06T10:26:13Z",
+  "dataUpdatedAt": "2026-10-06T17:15:08Z",
   "items": [
+    {
+      "title": "电信运营商为何基于开放模型构建其 AI 战略",
+      "sourceUrl": "https://blogs.nvidia.com/blog/telecom-operators-open-models/",
+      "publishedAt": "2026-10-06T13:00:19Z",
+      "source": "NVIDIA",
+      "summary": "电信运营商正基于开放模型构建AI战略，原因不止于成本。",
+      "id": "ffaa7d5210e63e20b90a6a5e291fca4bb8483192ef205e93dc7d2a351a9c4792",
+      "originalTitle": "Why Telecom Operators Are Building Their AI Strategy on Open Models",
+      "translatedAt": "2026-10-06T17:15:08Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/telecom-operators-open-models/",
+      "originalVerifiedAt": "2026-10-06T17:15:08Z",
+      "url": "https://blogs.nvidia.com/blog/telecom-operators-open-models/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-06T17:15:08Z",
+      "featured": null
+    },
+    {
+      "title": "推出 Mistral Large 4",
+      "sourceUrl": "https://mistral.ai/news/mistral-large-4/",
+      "publishedAt": "2026-10-06T12:00:27Z",
+      "source": "Mistral",
+      "summary": "推出Mistral Large 4，面向企业的最强AI平台，可用开放模型定制、微调并部署AI助手、自主智能体与多模态AI。",
+      "id": "1ef243007176e85cc8c61f991c732cb67f59da2c4bf9bd4e693a0d6d5af2a173",
+      "originalTitle": "Introducing Mistral Large 4",
+      "translatedAt": "2026-10-06T17:15:08Z",
+      "lang": "en",
+      "originalSource": "Mistral",
+      "originalUrl": "https://mistral.ai/news/mistral-large-4/",
+      "originalVerifiedAt": "2026-10-06T17:15:08Z",
+      "url": "https://mistral.ai/news/mistral-large-4/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-06T17:15:08Z",
+      "featured": true
+    },
     {
       "title": "Together Link：在你已使用的工具中运行开放模型。今天一条命令即可开始。",
       "sourceUrl": "https://www.together.ai/blog/together-link-frontier-quality-open-models-in-the-harness-you-already-use",
@@ -3004,6 +3042,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-06T10:26:13Z",
-  "generatedAt": "2026-10-06T10:26:13Z"
+  "version": "2026-10-06T17:15:08Z",
+  "generatedAt": "2026-10-06T17:15:08Z"
 }

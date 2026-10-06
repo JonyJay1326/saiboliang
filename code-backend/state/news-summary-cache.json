@@ -1,7 +1,12 @@
 {
-  "be3b1d34107991259e7d370e12ed725a8e8a7079558e52210eb20ccbf6e7f4af": {
-    "summary": "GitHub Copilot代码审查现可通过REST和GraphQL API请求，并可为每次请求设置审查力度，Balanced成为默认值。",
+  "ffaa7d5210e63e20b90a6a5e291fca4bb8483192ef205e93dc7d2a351a9c4792": {
+    "summary": "电信运营商正基于开放模型构建AI战略，原因不止于成本。",
     "source": "deepseek-flash",
-    "at": "2026-10-04T09:53:08Z"
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "1ef243007176e85cc8c61f991c732cb67f59da2c4bf9bd4e693a0d6d5af2a173": {
+    "summary": "推出Mistral Large 4，面向企业的最强AI平台，可用开放模型定制、微调并部署AI助手、自主智能体与多模态AI。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
   }
 }

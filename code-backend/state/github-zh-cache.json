@@ -34,11 +34,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "THU-MAIC/OpenMAIC": {
-    "text": "开放多代理互动课堂——一键获得沉浸式多代理学习体验",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "heygen-com/hyperframes": {
     "text": "编写 HTML。渲染视频。为代理而构建。",
     "source": "deepseek-flash",
@@ -64,11 +59,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-26T14:59:11Z"
   },
-  "mobile-next/mobile-mcp": {
-    "text": "用于移动自动化与抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
-    "source": "deepseek-flash",
-    "at": "2026-09-27T15:36:14Z"
-  },
   "pacifio/atlas": {
     "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
     "source": "deepseek-flash",
@@ -89,20 +79,10 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "alirezarezvani/claude-skills": {
-    "text": "380 个 Claude Code 技能、agent 技能与插件（30+ Agents、70+ 自定义命令、380+ 技能、可定制参考与脚本），适用于 Claude Code、Codex、Gemini CLI、Cursor 等 11 种编码 agent，覆盖工程、营销、产品、合规、高管咨询、研究、业务运营、商业与金融及日常生产力技能。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "JayWebtech/autoshorts": {
     "text": "AutoShorts 是一个本地优先的桌面应用，可将长视频或音频录制转换为高影响力的竖屏短视频候选片段（9:16 竖屏），并借助 AI 对病毒式传播时刻进行排序。",
     "source": "deepseek-flash",
     "at": "2026-09-30T11:42:49Z"
-  },
-  "tile-ai/tilelang": {
-    "text": "用于简化高性能 GPU/CPU/加速器内核开发的领域特定语言",
-    "source": "deepseek-flash",
-    "at": "2026-10-01T17:24:30Z"
   },
   "cline/cline": {
     "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
@@ -129,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-03T15:09:23Z"
   },
-  "dotnet/skills": {
-    "text": "用于辅助 AI 编码代理处理 .NET 和 C# 的技能仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-03T15:09:23Z"
-  },
   "ifixai-ai/iFixAi": {
     "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi，可在 120 秒内得到答案。",
     "source": "deepseek-flash",
@@ -141,21 +116,6 @@
   },
   "AI4Finance-Foundation/FinGPT": {
     "text": "FinGPT：开源金融大语言模型！带来变革 🔥 我们在 HuggingFace 上发布训练好的模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-04T15:49:24Z"
-  },
-  "microsoft/semantic-kernel": {
-    "text": "将前沿 LLM 技术快速轻松地集成到你的应用中",
-    "source": "deepseek-flash",
-    "at": "2026-10-04T15:49:24Z"
-  },
-  "superdesigndev/treg": {
-    "text": "面向智能体工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
-    "source": "deepseek-flash",
-    "at": "2026-10-04T15:49:24Z"
-  },
-  "docling-project/docling": {
-    "text": "让你的文档为生成式 AI 做好准备",
     "source": "deepseek-flash",
     "at": "2026-10-04T15:49:24Z"
   },
@@ -174,16 +134,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
   },
-  "MITDeepLearning/introtodeeplearning": {
-    "text": "MIT 6.S191：深度学习导论的实验材料",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
-  "evidentlyai/evidently": {
-    "text": "Evidently 是一个开源 ML 和 LLM 可观测性框架。评估、测试并监控任何 AI 驱动的系统或数据管道。从表格数据到生成式 AI。100 多个指标。",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
   "WordPress/mcp-adapter": {
     "text": "一个 MCP 适配器，将 Abilities API 桥接到模型上下文协议，使 MCP 客户端能够以编程方式发现并调用 WordPress 插件、主题和核心能力。",
     "source": "deepseek-flash",
@@ -193,5 +143,60 @@
     "text": "FreeScout — 免费自托管的 AI 驱动全渠道帮助台与共享邮箱",
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
+  },
+  "FalkorDB/FalkorDB": {
+    "text": "超高速图数据库，底层使用 GraphBLAS 实现稀疏邻接矩阵图表示。目标是为 LLM 提供最佳知识图谱（GraphRAG）。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "TecharoHQ/anubis": {
+    "text": "衡量传入 HTTP 请求的灵魂，以阻止 AI 爬虫",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "LaurieWired/GhidraMCP": {
+    "text": "Ghidra 的 MCP 服务器",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "github/gh-aw": {
+    "text": "GitHub 智能体工作流",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "Tracer-Cloud/opensre": {
+    "text": "构建你自己的 AI SRE 智能体。面向 AI 时代的开源工具包。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "netdata/netdata": {
+    "text": "通往 AI 驱动的全栈可观测性的最快路径，即使对精简团队也是如此。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "openai/symphony": {
+    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "redhat-et/ripwire": {
+    "text": "AI 上下文的 ripgrep：零依赖 C++23 CLI + 面向编码智能体的 MCP 服务器。无需通读仓库即可找到所需内容，然后检查你是否构建了本意——影响范围、需运行的测试、质量差异。签名比正文少 74.7% 字节；每个猜测都有标注，每个损失都公开。带着地图划出去。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "tensorflow/tensorflow": {
+    "text": "面向所有人的开源机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "max-sixty/worktrunk": {
+    "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 智能体工作流设计",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
+  },
+  "alsk1992/CloddsBot": {
+    "text": "开源 AI 交易智能体，可在 1000+ 市场自主运行——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，在你睡觉时管理风险。用于机器对机器支付的智能体商务协议。自托管。基于 Claude 构建。",
+    "source": "deepseek-flash",
+    "at": "2026-10-06T17:15:08Z"
   }
 }
