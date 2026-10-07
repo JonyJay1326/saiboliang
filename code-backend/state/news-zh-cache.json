@@ -71,10 +71,28 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T08:24:26Z"
   },
-  "f447ab3c07770462892a1c58f0e0ccf17e4e6cc470830d03331b5b5cdcb8af06": {
-    "title": "Microsoft 在 2026 Gartner® Magic Quadrant™ 全球工业 AIoT 平台中被评为领导者",
+  "661f64ddb5f472a2675ed75a0fb09828b0ce7323472abe119ea9528dee004ac6": {
+    "title": "帮助青少年学习、规划并塑造 AI 的未来",
+    "summary": "College Planner 即将登陆 ChatGPT for Teens，帮助学生管理大学申请，同时推出新的闪卡、测验和青少年 AI 委员会。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "4e324623ab7ca6fee0e142410ae1fff634372bb9b83078fd1d25f73483da7134": {
+    "title": "Radisson Hotel Group 将酒店探索带入 ChatGPT",
+    "summary": "Radisson 与 Accenture 合作，利用 OpenAI 技术构建 ChatGPT 插件，帮助旅行者在规划行程时查找、比较和预订酒店。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "b6aec8c05cfc3e2f0fe397569c3768accb2ebf5d964b90334e1f4957e361ffb2": {
+    "title": "推出 Playground：创建并游玩自定义游戏",
+    "summary": "Playground 概览",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "abcbf4e65ab2140e02478e458a0ed2e90a4c5383890b6c57c04dc2ee5784b184": {
+    "title": "ElevenLabs 现已登陆 OpenRouter",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-07T10:21:30Z"
+    "at": "2026-10-07T17:50:43Z"
   }
 }

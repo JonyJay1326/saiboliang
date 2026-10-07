@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-07T10:21:30Z",
+  "dataUpdatedAt": "2026-10-07T17:50:43Z",
   "items": [
+    {
+      "title": "Radisson Hotel Group 将酒店探索带入 ChatGPT",
+      "sourceUrl": "https://openai.com/index/radisson",
+      "publishedAt": "2026-10-07T07:00:00Z",
+      "source": "OpenAI",
+      "summary": "Radisson 与 Accenture 合作，利用 OpenAI 技术构建 ChatGPT 插件，帮助旅行者在规划行程时查找、比较和预订酒店。",
+      "id": "4e324623ab7ca6fee0e142410ae1fff634372bb9b83078fd1d25f73483da7134",
+      "originalTitle": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+      "translatedAt": "2026-10-07T17:50:43Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/radisson",
+      "originalVerifiedAt": "2026-10-07T17:50:43Z",
+      "url": "https://openai.com/index/radisson",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-07T17:50:43Z",
+      "featured": null
+    },
     {
       "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
       "sourceUrl": "https://www.qbitai.com/2026/10/501791.html",
@@ -19,6 +38,25 @@
       "eventType": "model-review",
       "addedAt": "2026-10-07T08:24:26Z",
       "featured": null
+    },
+    {
+      "title": "ElevenLabs 现已登陆 OpenRouter",
+      "sourceUrl": "https://openrouter.ai/blog/announcements/elevenlabs-on-openrouter/",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "source": "OpenRouter",
+      "summary": "ElevenLabs登陆OpenRouter，提供9个文本转语音和2个语音转文本模型，可用于旁白、语音代理及会议笔记。",
+      "id": "abcbf4e65ab2140e02478e458a0ed2e90a4c5383890b6c57c04dc2ee5784b184",
+      "originalTitle": "ElevenLabs is now on OpenRouter",
+      "translatedAt": "2026-10-07T17:50:43Z",
+      "lang": "en",
+      "originalSource": "OpenRouter",
+      "originalUrl": "https://openrouter.ai/blog/announcements/elevenlabs-on-openrouter/",
+      "originalVerifiedAt": "2026-10-07T17:50:43Z",
+      "url": "https://openrouter.ai/blog/announcements/elevenlabs-on-openrouter/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-07T17:50:43Z",
+      "featured": true
     },
     {
       "title": "更新 IDE 以恢复 Copilot 使用指标中的智能体活动",
@@ -57,6 +95,25 @@
       "eventType": "major-update",
       "addedAt": "2026-10-07T08:24:26Z",
       "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.77.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-07&version=v1.77.0",
+      "publishedAt": "2026-10-06T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "a33a7b53b8d5f3a17de81f4ea71bea541db7b37a5b7a57191362a7bb157a2160",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-07&version=v1.77.0",
+      "originalVerifiedAt": "2026-10-07T17:50:43Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-07&version=v1.77.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-07T17:50:43Z",
+      "featured": null
     },
     {
       "title": "电信运营商为何基于开放模型构建其 AI 战略",
@@ -3118,6 +3175,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-07T10:21:30Z",
-  "generatedAt": "2026-10-07T10:21:30Z"
+  "version": "2026-10-07T17:50:43Z",
+  "generatedAt": "2026-10-07T17:50:43Z"
 }

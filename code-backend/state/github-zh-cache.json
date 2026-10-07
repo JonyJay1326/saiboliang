@@ -9,11 +9,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "magnitudedev/magnitude": {
-    "text": "面向消费级硬件优化的开源推理引擎。分析你的机器，推荐最适合的模型，然后下载、调优并运行。支持 Apple Silicon、NVIDIA、AMD 或仅 CPU。",
-    "source": "deepseek-flash",
-    "at": "2026-09-21T17:06:12Z"
-  },
   "cloudflare/security-audit-skill": {
     "text": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
     "source": "deepseek-flash",
@@ -69,11 +64,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "OpenHands/OpenHands": {
-    "text": "🙌 OpenHands：AI 驱动的开发",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
   "LibreChat-AI/LibreChat": {
     "text": "增强版 ChatGPT 克隆：具备 Agents、MCP、Skills、DeepSeek、Anthropic、AWS、OpenAI、Responses API、Azure、Groq、o1、GPT-5、Mistral、OpenRouter、Vertex AI、Gemini、Artifacts、AI 模型切换、消息搜索、Code Interpreter、langchain、DALL-E-3、OpenAPI Actions、Functions、安全多用户认证、预设，开源可自托管。活跃",
     "source": "deepseek-flash",
@@ -89,18 +79,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
   },
-  "chiphuyen/aie-book": {
-    "text": "[进行中] AI 工程师资源。也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:52:02Z"
-  },
   "yikart/AiToEarn": {
     "text": "用 AI 赚钱！",
-    "source": "deepseek-flash",
-    "at": "2026-10-03T15:09:23Z"
-  },
-  "mozilla-ai/llamafile": {
-    "text": "用单个文件分发和运行 LLM。",
     "source": "deepseek-flash",
     "at": "2026-10-03T15:09:23Z"
   },
@@ -139,28 +119,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
   },
-  "FalkorDB/FalkorDB": {
-    "text": "超高速图数据库，底层使用 GraphBLAS 实现稀疏邻接矩阵图表示。目标是为 LLM 提供最佳知识图谱（GraphRAG）。",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "TecharoHQ/anubis": {
-    "text": "衡量传入 HTTP 请求的灵魂，以阻止 AI 爬虫",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
   "LaurieWired/GhidraMCP": {
     "text": "Ghidra 的 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "github/gh-aw": {
-    "text": "GitHub 智能体工作流",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "Tracer-Cloud/opensre": {
-    "text": "构建你自己的 AI SRE 智能体。面向 AI 时代的开源工具包。",
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
@@ -174,11 +134,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
-  "redhat-et/ripwire": {
-    "text": "AI 上下文的 ripgrep：零依赖 C++23 CLI + 面向编码智能体的 MCP 服务器。无需通读仓库即可找到所需内容，然后检查你是否构建了本意——影响范围、需运行的测试、质量差异。签名比正文少 74.7% 字节；每个猜测都有标注，每个损失都公开。带着地图划出去。",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
   "tensorflow/tensorflow": {
     "text": "面向所有人的开源机器学习框架",
     "source": "deepseek-flash",
@@ -188,5 +143,40 @@
     "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 智能体工作流设计",
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
+  },
+  "tile-ai/tilelang": {
+    "text": "领域特定语言，旨在简化高性能 GPU/CPU/加速器内核的开发",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "AtomicBot-ai/atomic-agent": {
+    "text": "Atomic Agent 是本地优先的 AI 智能体。通过 llama.cpp 在自有机器上运行开放权重模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "NVIDIA/cosmos": {
+    "text": "NVIDIA Cosmos 是开放的世界模型、数据集与工具平台，让开发者能为机器人、自动驾驶、智能基础设施等构建物理 AI。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "udlbook/udlbook": {
+    "text": "理解深度学习 - Simon J.D. Prince",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "rasbt/machine-learning-book": {
+    "text": "《Machine Learning with PyTorch and Scikit-Learn》代码仓库",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "superdesigndev/treg": {
+    "text": "面向智能体工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
+  },
+  "alsk1992/CloddsBot": {
+    "text": "开源 AI 交易智能体，自主运行于 1000+ 市场——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，睡眠时管理风险。面向机器间支付的智能体商业协议。自托管。基于 Claude 构建。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T17:50:43Z"
   }
 }

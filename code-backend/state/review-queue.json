@@ -351,30 +351,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "julyx10/lap",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An offline-first photo manager for large local libraries",
-      "sourceUrl": "https://github.com/julyx10/lap"
-    },
-    "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
-    "status": "pending",
-    "createdAt": "2026-09-26T08:40:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "vercel/next.js",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The React Framework",
-      "sourceUrl": "https://github.com/vercel/next.js"
-    },
-    "id": "8087ac37fdea5c6a0ab0f1c1da3dee3a60c0524f93175977fe0abc6cd6e30bdf",
-    "status": "pending",
-    "createdAt": "2026-09-27T15:36:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "rust-lang/rust",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -431,18 +407,6 @@
     "id": "e35ff889041cbfb65e542ae3e6120a6278285c0d9078664fb607b2932427ddec",
     "status": "pending",
     "createdAt": "2026-09-29T09:55:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "oblien/openship",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Self-hosted deployment platform",
-      "sourceUrl": "https://github.com/oblien/openship"
-    },
-    "id": "e8d1bd28008ab1e7f47af9208fa28c636ff1d1813f6e8e4e9265f8b287c4f3ee",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
   },
   {
     "kind": "github-classification",
@@ -518,18 +482,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "firebase/firebase-ios-sdk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Firebase SDK for Apple App Development",
-      "sourceUrl": "https://github.com/firebase/firebase-ios-sdk"
-    },
-    "id": "8d9b9f0ffaeae5e079181f347985ec750faf70657f109eb298ae89ff526d2934",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:20:15Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HunxByts/GhostTrack",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -549,18 +501,6 @@
       "sourceUrl": "https://github.com/kubernetes/kubernetes"
     },
     "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:52:02Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Billionmail/BillionMail",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr",
-      "sourceUrl": "https://github.com/Billionmail/BillionMail"
-    },
-    "id": "9181146f88eb4122b1d5c1ff2cdcfbb29b25c0e3d2ca3cd3355c71d3aa8baf7b",
     "status": "pending",
     "createdAt": "2026-10-02T07:52:02Z"
   },
@@ -685,18 +625,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "nats-io/nats-server",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "High-Performance server for NATS.io, the cloud and edge native messaging system.",
-      "sourceUrl": "https://github.com/nats-io/nats-server"
-    },
-    "id": "b73b2e2e1e9bd029c59a51eb7749f59fa7e19cdcaf7ad1ef2ed0294fd9d3420f",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "simdjson/simdjson",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -728,18 +656,6 @@
       "sourceUrl": "https://github.com/RayWangQvQ/BiliBiliToolPro"
     },
     "id": "98a651736144873c21d18683fc71781468c01850802aa9a4d7a3bbfaec0bd3d2",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ruvnet/RuView",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
-      "sourceUrl": "https://github.com/ruvnet/RuView"
-    },
-    "id": "0fadb702a3fe7d042012de26c1ca81c9ee6e15f68a8194797b735c27304da6e6",
     "status": "pending",
     "createdAt": "2026-10-03T15:09:23Z"
   },
@@ -853,18 +769,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "qbittorrent/qBittorrent",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "qBittorrent BitTorrent client",
-      "sourceUrl": "https://github.com/qbittorrent/qBittorrent"
-    },
-    "id": "c99cc9a760ee99bca3a477e2d1fde53b192f2602abd7c641fe10b7dbd03801ff",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "shadps4-emu/shadPS4",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -973,18 +877,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "grokability/snipe-it",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1069,18 +961,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "charmbracelet/bubbletea",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A powerful little TUI framework 🏗",
-      "sourceUrl": "https://github.com/charmbracelet/bubbletea"
-    },
-    "id": "c508ecf7d123408be11c149ef6511ac0dc73aa6a22326c36d0fc51190e019f67",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Vita3K/Vita3K",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1112,18 +992,6 @@
       "sourceUrl": "https://github.com/dyang886/Game-Cheats-Manager"
     },
     "id": "a3f3d864c381e1ece657d8e63e62c69dea22569eef09e41f7b570968f605a822",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "kanoqwq/UFI-TOOLS",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A functional tools for z*e devices (F50 | U30 Air)",
-      "sourceUrl": "https://github.com/kanoqwq/UFI-TOOLS"
-    },
-    "id": "8c8750003ece8f71ab332524a399800879b363e64f8178e500eef53e611e2ae9",
     "status": "pending",
     "createdAt": "2026-10-05T19:38:42Z"
   },
@@ -1249,18 +1117,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "基本稳定可用 A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "d2ff62f0c2301c6fed7b7329a9d9e1655a1a6b17ae603cbc88594a432dfe468f",
-    "status": "pending",
-    "createdAt": "2026-10-06T10:26:13Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "mrifqidaffaaditya/WA-AKG",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1273,42 +1129,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Comfy-Org/workflow_templates",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ComfyUI template workflows",
-      "sourceUrl": "https://github.com/Comfy-Org/workflow_templates"
-    },
-    "id": "61117d004c396932f03d5db010d0b22987bbd74c133255c51c0030f197914318",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hicccc77/WeFlow",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "WeFlow - 一个本地的微信聊天记录导出和年度报告应用",
-      "sourceUrl": "https://github.com/hicccc77/WeFlow"
-    },
-    "id": "eca43e3c65f0e3a191e1c10a94ee92a1698761bbf892497c00180000db8e7247",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "qbittorrent/search-plugins",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Search plugins for qBittorrent search feature",
-      "sourceUrl": "https://github.com/qbittorrent/search-plugins"
-    },
-    "id": "7816481872abeab3763f36ee0ab0ce1016cfd87c94a0aa3ba52ccb8766deadce",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "google/gvisor",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1316,18 +1136,6 @@
       "sourceUrl": "https://github.com/google/gvisor"
     },
     "id": "9cbf9edb96b9a09be5d38c0b289d0b2af38cfd939258cc47535dc839f0d0a5c4",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/terminal",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
-      "sourceUrl": "https://github.com/microsoft/terminal"
-    },
-    "id": "d9936f0213ee2add3d40a66aa93c7fff89a43992289b3765e6d6e7fddbdd9646",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
   },
@@ -1369,18 +1177,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "JosefNemec/Playnite",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Video game library manager with support for wide range of 3rd party libraries and game emulation support, providing one unified interface for your games.",
-      "sourceUrl": "https://github.com/JosefNemec/Playnite"
-    },
-    "id": "b60d1f390e35d82d9603e3c41fd7c2e470598c2b6009c008db6a64028057d353",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "SubtitleEdit/subtitleedit",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1388,18 +1184,6 @@
       "sourceUrl": "https://github.com/SubtitleEdit/subtitleedit"
     },
     "id": "878d8d5606ba4103740e3a799e1a7e1f8b49a2751d8f56a39d6176b2a5fab0a3",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "NickvisionApps/Parabolic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Download web video and audio",
-      "sourceUrl": "https://github.com/NickvisionApps/Parabolic"
-    },
-    "id": "6eaef829132b14d61aa0acb07d86971c8dcab874bfd9ea1ee5911e21d038d6b4",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
   },
@@ -1501,18 +1285,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "mg-chao/snow-apps",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
-      "sourceUrl": "https://github.com/mg-chao/snow-apps"
-    },
-    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
-    "status": "pending",
-    "createdAt": "2026-10-07T08:24:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "eolix/photosuite",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1522,5 +1294,593 @@
     "id": "c4c4cd5d651fdf8138e68029df84205aa443fdeb650ed037711261f3d185cc3f",
     "status": "pending",
     "createdAt": "2026-10-07T08:24:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "稳定可用 A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "bfbc4478583108988c2c9443a96ecc62d4c3f166616c020abe0a0ce1081d7f85",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "earthtojake/text-to-cad",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Give your agent CAD superpowers.",
+      "sourceUrl": "https://github.com/earthtojake/text-to-cad"
+    },
+    "id": "5e240026e9bd5e198f54a337f9965865cffa468d5dec207bed8ef4b4e5a9d777",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "p-e-w/heretic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully automatic censorship removal for language models",
+      "sourceUrl": "https://github.com/p-e-w/heretic"
+    },
+    "id": "4fdd8ea1c3b1c029d49de4c28b43b58d866ea1d02b14213507dbd1f0356c57e8",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aquasecurity/trivy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+      "sourceUrl": "https://github.com/aquasecurity/trivy"
+    },
+    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yorukot/superfile",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Pretty fancy and modern terminal file manager",
+      "sourceUrl": "https://github.com/yorukot/superfile"
+    },
+    "id": "6022e3ede5bc4aaabcdceb7bb4c7c4cb5bd3313810f2b747d429f82dbb2da307",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "prometheus/prometheus",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Prometheus monitoring system and time series database.",
+      "sourceUrl": "https://github.com/prometheus/prometheus"
+    },
+    "id": "d47507789a321616560ff981e8fb84ea9f4cc37ee064fc0f3ee0e43be9989e58",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "k3s-io/k3s",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Lightweight Kubernetes",
+      "sourceUrl": "https://github.com/k3s-io/k3s"
+    },
+    "id": "dcb97ddd461a02151ffe525d54ed78866d3439446eadfc22a4e007695be885e2",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "oauth2-proxy/oauth2-proxy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.",
+      "sourceUrl": "https://github.com/oauth2-proxy/oauth2-proxy"
+    },
+    "id": "89cf70f16fa29bbbaa854292287ce130c3c6de5a3551e69c51247522b463b064",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "emscripten-core/emscripten",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Emscripten: An LLVM-to-WebAssembly Compiler",
+      "sourceUrl": "https://github.com/emscripten-core/emscripten"
+    },
+    "id": "5997f99218f8bea2e65557729c1e9ef5a2dd91f5a95f69aa1cffa72dd5696695",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gta-reversed/gta-reversed",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Reimplementation of GTA:SA 1.0 US",
+      "sourceUrl": "https://github.com/gta-reversed/gta-reversed"
+    },
+    "id": "4914983b20e79f7382f2f56e98e6f62a3caac82eaefb7a0c9fc2d1dc944ce79f",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "digitalinnovationone/dio-lab-open-source",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Repositório do lab \"Contribuindo em um Projeto Open Source no GitHub\" da Digital Innovation One.",
+      "sourceUrl": "https://github.com/digitalinnovationone/dio-lab-open-source"
+    },
+    "id": "123c9abd137c63ee14f72034d8c651e3347437a7101d9d9e74ec35bc60455fb2",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hughhowey/neo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A novel-writing tool created by a novelist.",
+      "sourceUrl": "https://github.com/hughhowey/neo"
+    },
+    "id": "99c60d455e141c56f446771fa4fca7db518f52cb4851a9d15d596a11af4a51f0",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "withmarbleapp/os-taxonomy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
+    },
+    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "libnoname/noname",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/libnoname/noname"
+    },
+    "id": "824c4417ccbf1262db7ecfb875976fbe0c5d1d6803e85c449057e1f6343e2310",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "icsharpcode/ILSpy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": ".NET Decompiler with support for PDB generation, ReadyToRun, Metadata (&more) - cross-platform!",
+      "sourceUrl": "https://github.com/icsharpcode/ILSpy"
+    },
+    "id": "232558e96a99d8857227107f0c08637f4420420cd00989b54b75e556835a77b3",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dotnet/roslyn",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Roslyn .NET compiler provides C# and Visual Basic languages with rich code analysis APIs.",
+      "sourceUrl": "https://github.com/dotnet/roslyn"
+    },
+    "id": "9592f52b6a95e9bc190df8d229b6596c4df513de9ed5f3571143e683801285a0",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dotnet/aspnetcore",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+      "sourceUrl": "https://github.com/dotnet/aspnetcore"
+    },
+    "id": "0f01724e1c4496d82adbaa955436f98b456eceb6bd488e1c249d7367cf1b7dd6",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "BeyondDimension/SteamTools",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
+      "sourceUrl": "https://github.com/BeyondDimension/SteamTools"
+    },
+    "id": "845dbfba092c7ea257dd5ae83ab7fcef50e405dee1861284bc86101fc97917de",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dotnet/runtime",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": ".NET is a cross-platform runtime for cloud, mobile, desktop, and IoT apps.",
+      "sourceUrl": "https://github.com/dotnet/runtime"
+    },
+    "id": "5023748c28c3d3e8ccbdfaa4e651516becd325284d42e4c72262ef2f25c3a18c",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "NethermindEth/nethermind",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A robust, high-performance execution client for Ethereum node operators.",
+      "sourceUrl": "https://github.com/NethermindEth/nethermind"
+    },
+    "id": "0e26f9b0e2f43159d0e9f429423efe491beb472240c708190ab9aedc24b0b2fd",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cyanfish/naps2",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Scan documents to PDF and more, as simply as possible.",
+      "sourceUrl": "https://github.com/cyanfish/naps2"
+    },
+    "id": "deb406e66bd1841f4fa3754cba8ac63ef2fc368d27e878baace0ff6110869ad9",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MCRcortex/voxy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An LoD rendering mod for minecraft",
+      "sourceUrl": "https://github.com/MCRcortex/voxy"
+    },
+    "id": "163ede3d3f8f7661551faf50dadf408d6e777bd06cd4e23072c588344c722609",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "AndreyPavlenko/Fermata",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/AndreyPavlenko/Fermata"
+    },
+    "id": "21b5de24cd35d330e09c5432d5221c4c906f89d1f5f93a114f67818c9ae9bc80",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MeteorDevelopment/meteor-client",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Based Minecraft utility mod.",
+      "sourceUrl": "https://github.com/MeteorDevelopment/meteor-client"
+    },
+    "id": "5582b0869ffb1fc42cb7f8804d3a2159f08e25a148ee391ca3f0918a6a3c6f25",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "apache/camel",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Apache Camel is an open source integration framework with 350+ connectors. Write routes in Java, YAML, or XML. Run on Spring Boot, Quarkus, or standalone. Apache License 2.0.",
+      "sourceUrl": "https://github.com/apache/camel"
+    },
+    "id": "b1445fa3f8c01345cd3ccb0918d26a12866e828056839f008d97630081e7d994",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HMCL-dev/HMCL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular",
+      "sourceUrl": "https://github.com/HMCL-dev/HMCL"
+    },
+    "id": "b2c349b20f895a33d56c53f485798b1e818664ee798742631e54a0199003dcf1",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Card-Forge/forge",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An unofficial rules engine for the world's greatest card game.",
+      "sourceUrl": "https://github.com/Card-Forge/forge"
+    },
+    "id": "6a0297375a795d90f8606363c8ec2ad20745693af9b556a97c615c4e933ea73b",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "librenms/librenms",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Community-based GPL-licensed network monitoring system",
+      "sourceUrl": "https://github.com/librenms/librenms"
+    },
+    "id": "413c4345269a752d80bb23e0117eb5ddf6fb2840282036b58e5b03d4ea420244",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "laravel/framework",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Laravel is a web application framework with expressive, elegant syntax.",
+      "sourceUrl": "https://github.com/laravel/framework"
+    },
+    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "opencart/opencart",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free shopping cart system. OpenCart is an open source PHP-based online e-commerce solution.",
+      "sourceUrl": "https://github.com/opencart/opencart"
+    },
+    "id": "2401df0ed1ec5a8cb628d57ce5c14b16efd12a88f301f76d7dd8c4a986b3b5d2",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "glpi-project/glpi",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.",
+      "sourceUrl": "https://github.com/glpi-project/glpi"
+    },
+    "id": "a421c98e770fd4a2ac11f254701d6f9f0caed07442e760cc40c0963d2b90c219",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PrestaShop/PrestaShop",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PrestaShop is the universal open-source software platform to build your e-commerce solution.",
+      "sourceUrl": "https://github.com/PrestaShop/PrestaShop"
+    },
+    "id": "185efc553c195dd903dab4cae1926b6546b17a982c8153a065f5b9b01cca2430",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "woocommerce/woocommerce",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A customizable, open-source ecommerce platform built on WordPress. Build any commerce solution you can imagine.",
+      "sourceUrl": "https://github.com/woocommerce/woocommerce"
+    },
+    "id": "437660ce675380110abcd3a113ec5711395b0ec6f12d68890a22663f365cd437",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "filamentphp/filament",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A powerful open-source UI framework for Laravel • Build and ship apps & admin panels fast with Livewire",
+      "sourceUrl": "https://github.com/filamentphp/filament"
+    },
+    "id": "695dae8895cc93a668db7d4c141af3294d7e1154b88cbc129ad51d7340d318e8",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "matomo-org/matomo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering People Ethically 🚀 — Matomo is hiring! Join us → https://matomo.org/jobs Matomo is the leading open-source alternative to Google Analytics, giving you complete control and built-in privacy. Easily collect, visualise, and analyse data from websites & apps. Star us on GitHub ⭐️ – Pull Requests welcome!",
+      "sourceUrl": "https://github.com/matomo-org/matomo"
+    },
+    "id": "5b1aaa6ea14540dee17ac9372b2057777006c340ca92befb75fb5254f78cc6bd",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "phpmyadmin/phpmyadmin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A web interface for MySQL and MariaDB",
+      "sourceUrl": "https://github.com/phpmyadmin/phpmyadmin"
+    },
+    "id": "8a6a9fb5e6852cc83a6c9236d98394a93302656c66052346b7b61ba9a7314942",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "symfony/symfony",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Symfony PHP framework",
+      "sourceUrl": "https://github.com/symfony/symfony"
+    },
+    "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bagisto/bagisto",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open Source eCommerce & Multi-Vendor Marketplace Platform Built with Laravel for Enterprise-Scale Commerce, Supporting 10M+ SKUs",
+      "sourceUrl": "https://github.com/bagisto/bagisto"
+    },
+    "id": "841875745f3011679b2555930fbf197e1b67e1aaa72768b86287e67989f45329",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "frappe/helpdesk",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Modern, Streamlined, Free and Open Source Customer Service Software",
+      "sourceUrl": "https://github.com/frappe/helpdesk"
+    },
+    "id": "4335f66ab40a3d05359d9f83bb5417dcdac5b63b7077a3f5339a69a131f6ed71",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "timeshiftsauce/CeruMusic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Ceru Music 是基于 Electron 和 Vue 开发的跨平台桌面音乐播放器工具，借鉴洛雪音乐插件思想，提供插件运行框架与播放功能，不直接存储、提供任何音乐源文件。用户需通过自行选择、安装合规插件获取音乐相关数据，项目旨在为开发者提供桌面应用技术实践与学习案例，为用户提供合规的音乐播放工具框架。",
+      "sourceUrl": "https://github.com/timeshiftsauce/CeruMusic"
+    },
+    "id": "2518654e2afc0f76568f4cf31f4cc84f59560d0ca9bce61e3f35b54fa86aa2d6",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algerkong/AlgerMusicPlayer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
+    },
+    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "RikkaApps/websites",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Websites for Rikka apps.",
+      "sourceUrl": "https://github.com/RikkaApps/websites"
+    },
+    "id": "eb17f6aac2fb04e50c91631d82ec0fd046118650771544c1138870d5098d0709",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "wrapper-offline/wrapper-offline",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A project with the purpose of providing a way to use the Legacy Video Maker from GoAnimate / Vyond.",
+      "sourceUrl": "https://github.com/wrapper-offline/wrapper-offline"
+    },
+    "id": "d7945490c76fba755cd781e3eb0865009ff420f05b63bf56fa6e57783862fa9a",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kodadot/nft-gallery",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Generative Art Marketplace",
+      "sourceUrl": "https://github.com/kodadot/nft-gallery"
+    },
+    "id": "b74f8e190b3e1ae9819ca5e6c753570c48da6bcdc7d9a83edf032b1381ca1f30",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aniyomiorg/aniyomi-website",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "website for aniyomi",
+      "sourceUrl": "https://github.com/aniyomiorg/aniyomi-website"
+    },
+    "id": "506b37062254dc7d00ec3ed8a1ebf8f96eee51b4e8e478e2663234e869192ee0",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "RLS-Modding/rls_career_overhaul",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Career Overhaul mod for BeamNG.drive! Enhances various aspects of the game, including freeroam events, police interactions, the economy, deliveries, insurance, garage space, and dealerships. Dive into a more immersive and challenging career mode enriched with new features and improvements.",
+      "sourceUrl": "https://github.com/RLS-Modding/rls_career_overhaul"
+    },
+    "id": "1edbf8f030abbd3737ab0f854084ab6ee48d74a48de6ca3458c5b192e1ff8dbb",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elixir-lang/elixir",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Simple from zero to scale",
+      "sourceUrl": "https://github.com/elixir-lang/elixir"
+    },
+    "id": "8e79c8f2112342f1bb2ebe30304e84ecfdb1818b0c37465dd899383089b4d8cc",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ash-project/ash",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A declarative, extensible framework for building Elixir applications.",
+      "sourceUrl": "https://github.com/ash-project/ash"
+    },
+    "id": "cf1dc7ceae4f1a0cab37e98ce687e0a3611488a3f821ec17f8679ed97578a82d",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "phoenixframework/phoenix",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Peace of mind from prototype to production",
+      "sourceUrl": "https://github.com/phoenixframework/phoenix"
+    },
+    "id": "eef577cf65a2839e8ba614e0faea63e3859e94d7033f15913d8a9456676a9529",
+    "status": "pending",
+    "createdAt": "2026-10-07T17:50:43Z"
   }
 ]

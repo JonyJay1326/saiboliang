@@ -1,17 +1,7 @@
 {
-  "f833eccb65deeb7db0bf568ae25e756452dcce15d5436c2ff8cef6b6e1a9b1b3": {
-    "summary": "Copilot 使用指标中智能体活动下降的原因已找到，修复正在推出。",
+  "abcbf4e65ab2140e02478e458a0ed2e90a4c5383890b6c57c04dc2ee5784b184": {
+    "summary": "ElevenLabs登陆OpenRouter，提供9个文本转语音和2个语音转文本模型，可用于旁白、语音代理及会议笔记。",
     "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
-  "c11a83f73b42d75639443284618af1576a5293ebbd1f2119958661a090262494": {
-    "summary": "EmbeddingGemma 2 是面向隐私优先场景的开放轻量多模态嵌入模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
-  "320c088cf61127c85623fc8770d00cdf09b7899b2291236ad6074001f7a1c557": {
-    "summary": "通过 Cursor iOS 应用查看并回复电脑上运行的本地智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
+    "at": "2026-10-07T17:50:43Z"
   }
 }
