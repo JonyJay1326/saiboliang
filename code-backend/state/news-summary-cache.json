@@ -1,12 +1,17 @@
 {
-  "ffaa7d5210e63e20b90a6a5e291fca4bb8483192ef205e93dc7d2a351a9c4792": {
-    "summary": "电信运营商正基于开放模型构建AI战略，原因不止于成本。",
+  "f833eccb65deeb7db0bf568ae25e756452dcce15d5436c2ff8cef6b6e1a9b1b3": {
+    "summary": "Copilot 使用指标中智能体活动下降的原因已找到，修复正在推出。",
     "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
+    "at": "2026-10-07T08:24:26Z"
   },
-  "1ef243007176e85cc8c61f991c732cb67f59da2c4bf9bd4e693a0d6d5af2a173": {
-    "summary": "推出Mistral Large 4，面向企业的最强AI平台，可用开放模型定制、微调并部署AI助手、自主智能体与多模态AI。",
+  "c11a83f73b42d75639443284618af1576a5293ebbd1f2119958661a090262494": {
+    "summary": "EmbeddingGemma 2 是面向隐私优先场景的开放轻量多模态嵌入模型。",
     "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "320c088cf61127c85623fc8770d00cdf09b7899b2291236ad6074001f7a1c557": {
+    "summary": "通过 Cursor iOS 应用查看并回复电脑上运行的本地智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
   }
 }

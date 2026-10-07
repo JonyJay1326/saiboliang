@@ -139,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
   },
-  "freescout-help-desk/freescout": {
-    "text": "FreeScout — 免费自托管的 AI 驱动全渠道帮助台与共享邮箱",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
   "FalkorDB/FalkorDB": {
     "text": "超高速图数据库，底层使用 GraphBLAS 实现稀疏邻接矩阵图表示。目标是为 LLM 提供最佳知识图谱（GraphRAG）。",
     "source": "deepseek-flash",
@@ -191,11 +186,6 @@
   },
   "max-sixty/worktrunk": {
     "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 智能体工作流设计",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "alsk1992/CloddsBot": {
-    "text": "开源 AI 交易智能体，可在 1000+ 市场自主运行——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，在你睡觉时管理风险。用于机器对机器支付的智能体商务协议。自托管。基于 Claude 构建。",
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   }

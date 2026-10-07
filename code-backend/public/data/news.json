@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-06T17:15:08Z",
+  "dataUpdatedAt": "2026-10-07T08:24:26Z",
   "items": [
+    {
+      "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
+      "sourceUrl": "https://www.qbitai.com/2026/10/501791.html",
+      "publishedAt": "2026-10-07T06:39:36Z",
+      "source": "量子位",
+      "summary": "在 a16z 首份消费级 AI 应用月收入榜单中，Meshy 位列第 31 名，与 OpenAI、Anthropic、Canva、Superhuman",
+      "id": "40108184811ae535d9a21bc30997e09b8b53661bbee24ed797de311e6d9f1253",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/501791.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-07T08:24:26Z",
+      "featured": null
+    },
+    {
+      "title": "更新 IDE 以恢复 Copilot 使用指标中的智能体活动",
+      "sourceUrl": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics",
+      "publishedAt": "2026-10-06T23:43:00Z",
+      "source": "GitHub",
+      "summary": "Copilot 使用指标中智能体活动下降的原因已找到，修复正在推出。",
+      "id": "f833eccb65deeb7db0bf568ae25e756452dcce15d5436c2ff8cef6b6e1a9b1b3",
+      "originalTitle": "Update your IDE to restore agent activity in Copilot usage metrics",
+      "translatedAt": "2026-10-07T08:24:26Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics",
+      "originalVerifiedAt": "2026-10-07T08:24:26Z",
+      "url": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-07T08:24:26Z",
+      "featured": true
+    },
+    {
+      "title": "EmbeddingGemma 2：开放轻量多模态嵌入模型",
+      "sourceUrl": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "publishedAt": "2026-10-06T19:57:04Z",
+      "source": "Google DeepMind",
+      "summary": "EmbeddingGemma 2 是面向隐私优先场景的开放轻量多模态嵌入模型。",
+      "id": "c11a83f73b42d75639443284618af1576a5293ebbd1f2119958661a090262494",
+      "originalTitle": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "translatedAt": "2026-10-07T08:24:26Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "originalVerifiedAt": "2026-10-07T08:24:26Z",
+      "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-07T08:24:26Z",
+      "featured": true
+    },
     {
       "title": "电信运营商为何基于开放模型构建其 AI 战略",
       "sourceUrl": "https://blogs.nvidia.com/blog/telecom-operators-open-models/",
@@ -37,6 +94,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-06T17:15:08Z",
+      "featured": true
+    },
+    {
+      "title": "Cursor Remote 控制本地智能体",
+      "sourceUrl": "https://cursor.com/changelog/remote-control-local-agents",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "source": "Cursor",
+      "summary": "通过 Cursor iOS 应用查看并回复电脑上运行的本地智能体。",
+      "id": "320c088cf61127c85623fc8770d00cdf09b7899b2291236ad6074001f7a1c557",
+      "originalTitle": "Cursor Remote control for local agents",
+      "translatedAt": "2026-10-07T08:24:26Z",
+      "lang": "en",
+      "originalSource": "Cursor",
+      "originalUrl": "https://cursor.com/changelog/remote-control-local-agents",
+      "originalVerifiedAt": "2026-10-07T08:24:26Z",
+      "url": "https://cursor.com/changelog/remote-control-local-agents",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-07T08:24:26Z",
       "featured": true
     },
     {
@@ -3042,6 +3118,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-07T08:22:57Z",
-  "generatedAt": "2026-10-07T08:22:57Z"
+  "version": "2026-10-07T08:24:26Z",
+  "generatedAt": "2026-10-07T08:24:26Z"
 }

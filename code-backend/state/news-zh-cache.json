@@ -35,16 +35,58 @@
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
-  "ffaa7d5210e63e20b90a6a5e291fca4bb8483192ef205e93dc7d2a351a9c4792": {
-    "title": "电信运营商为何基于开放模型构建其 AI 战略",
+  "2bd8707fdab8226a9f675f85f9755994f2b63d5ba4355bb897dec2473e579ae5": {
+    "title": "扩展网络验证计划",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
+    "at": "2026-10-07T08:24:26Z"
   },
-  "1ef243007176e85cc8c61f991c732cb67f59da2c4bf9bd4e693a0d6d5af2a173": {
-    "title": "推出 Mistral Large 4",
+  "ebb413cc5359756bf9234b81256f87104efa96c0b88df88826702769f053f0a0": {
+    "title": "Jump Trading 如何用 ChatGPT 扩展量化研究",
+    "summary": "Jump Trading 使用 OpenAI 扩展量化研究。了解更长时间的 AI 工作流如何将多个数据源与人工审核相结合。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "00427e47df5ef3064509e152a77372922244883355c7072ea1ab24de41848a25": {
+    "title": "分享数学领域的 AI 进展",
+    "summary": "OpenAI 发布内部前沿模型对数学开放问题的新结果，并在 GitHub 上分享 Lean 证明形式化与研究细节。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "f57eff9c23a4454b476bbb268bd95c2d23fd7e230b5d7db7db7e5bb00c25353b": {
+    "title": "与 Ironclad 推进计算机使用",
+    "summary": "了解 OpenAI 与 Ironclad 如何在复杂合同工作流上训练和评估 AI 智能体，以推进专业工作的计算机使用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "c11a83f73b42d75639443284618af1576a5293ebbd1f2119958661a090262494": {
+    "title": "EmbeddingGemma 2：开放轻量多模态嵌入模型",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "f833eccb65deeb7db0bf568ae25e756452dcce15d5436c2ff8cef6b6e1a9b1b3": {
+    "title": "更新 IDE 以恢复 Copilot 使用指标中的智能体活动",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "789d3f2f135ddb5fc679634f346fa6d48d50e387f6eb06f05fe528c2655fd540": {
+    "title": "堆叠拉取请求正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "c5695ee051ae48420758a56da15137d36d706df92d450e17107a8101c380c183": {
+    "title": "借助 IBM Cloud 和 NVIDIA 扩展企业推理容量",
+    "summary": "企业现在可以在由 Together AI、IBM Cloud 和 NVIDIA 构建的专用 B300 推理集群上以生产规模运行开放模型",
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
+  },
+  "320c088cf61127c85623fc8770d00cdf09b7899b2291236ad6074001f7a1c557": {
+    "title": "Cursor Remote 控制本地智能体",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-07T08:24:26Z"
   }
 }

@@ -1153,30 +1153,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "dotnet/runtime",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": ".NET is a cross-platform runtime for cloud, mobile, desktop, and IoT apps.",
-      "sourceUrl": "https://github.com/dotnet/runtime"
-    },
-    "id": "5023748c28c3d3e8ccbdfaa4e651516becd325284d42e4c72262ef2f25c3a18c",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dotnet/roslyn",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Roslyn .NET compiler provides C# and Visual Basic languages with rich code analysis APIs.",
-      "sourceUrl": "https://github.com/dotnet/roslyn"
-    },
-    "id": "9592f52b6a95e9bc190df8d229b6596c4df513de9ed5f3571143e683801285a0",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "luolangaga/tubatools",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1196,18 +1172,6 @@
       "sourceUrl": "https://github.com/a2x/cs2-dumper"
     },
     "id": "4115813b797fc1e78941de1b2f82259b78e4f2e7cea2043d8c5988fa05d17e34",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "MCRcortex/voxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An LoD rendering mod for minecraft",
-      "sourceUrl": "https://github.com/MCRcortex/voxy"
-    },
-    "id": "163ede3d3f8f7661551faf50dadf408d6e777bd06cd4e23072c588344c722609",
     "status": "pending",
     "createdAt": "2026-10-05T19:38:42Z"
   },
@@ -1244,66 +1208,6 @@
       "sourceUrl": "https://github.com/woheller69/FreeDroidWarn"
     },
     "id": "9a5b167efa61854df2770c120acf36b7e44a1b48dd57ed059233c5c674c1485e",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "quarkusio/quarkus",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Quarkus: Supersonic Subatomic Java.",
-      "sourceUrl": "https://github.com/quarkusio/quarkus"
-    },
-    "id": "edaf9075d9a6fe02014c86e87fca03588e7a076af0d38d177d0eef2f519ab4d6",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google/guava",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Google core libraries for Java",
-      "sourceUrl": "https://github.com/google/guava"
-    },
-    "id": "1ad848f63b86fe9a35c8a48b2d4fdc6dfaf56d8e69c4f0bfcc62675638f54926",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "glpi-project/glpi",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.",
-      "sourceUrl": "https://github.com/glpi-project/glpi"
-    },
-    "id": "a421c98e770fd4a2ac11f254701d6f9f0caed07442e760cc40c0963d2b90c219",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "librenms/librenms",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Community-based GPL-licensed network monitoring system",
-      "sourceUrl": "https://github.com/librenms/librenms"
-    },
-    "id": "413c4345269a752d80bb23e0117eb5ddf6fb2840282036b58e5b03d4ea420244",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "frappe/helpdesk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Modern, Streamlined, Free and Open Source Customer Service Software",
-      "sourceUrl": "https://github.com/frappe/helpdesk"
-    },
-    "id": "4335f66ab40a3d05359d9f83bb5417dcdac5b63b7077a3f5339a69a131f6ed71",
     "status": "pending",
     "createdAt": "2026-10-05T19:38:42Z"
   },
@@ -1513,18 +1417,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "AndreyPavlenko/Fermata",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/AndreyPavlenko/Fermata"
-    },
-    "id": "21b5de24cd35d330e09c5432d5221c4c906f89d1f5f93a114f67818c9ae9bc80",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "zed-0xff/ZombieBuddy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1537,18 +1429,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "matomo-org/matomo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Empowering People Ethically 🚀 — Matomo is hiring! Join us → https://matomo.org/jobs Matomo is the leading open-source alternative to Google Analytics, giving you complete control and built-in privacy. Easily collect, visualise, and analyse data from websites & apps. Star us on GitHub ⭐️ – Pull Requests welcome!",
-      "sourceUrl": "https://github.com/matomo-org/matomo"
-    },
-    "id": "5b1aaa6ea14540dee17ac9372b2057777006c340ca92befb75fb5254f78cc6bd",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "requarks/wiki",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1556,18 +1436,6 @@
       "sourceUrl": "https://github.com/requarks/wiki"
     },
     "id": "ef5f6621c5ced8a51737290cd0a65449559aadcad75e7bac57aebe9dc05d295c",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "timeshiftsauce/CeruMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Ceru Music 是基于 Electron 和 Vue 开发的跨平台桌面音乐播放器工具，借鉴洛雪音乐插件思想，提供插件运行框架与播放功能，不直接存储、提供任何音乐源文件。用户需通过自行选择、安装合规插件获取音乐相关数据，项目旨在为开发者提供桌面应用技术实践与学习案例，为用户提供合规的音乐播放工具框架。",
-      "sourceUrl": "https://github.com/timeshiftsauce/CeruMusic"
-    },
-    "id": "2518654e2afc0f76568f4cf31f4cc84f59560d0ca9bce61e3f35b54fa86aa2d6",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
   },
@@ -1621,18 +1489,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "sergebulaev/linkedin-skills",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Claude skills for LinkedIn. 11 Claude Code and Codex skills that write human-sounding LinkedIn posts, craft comments that get noticed, analyze your feed, and build a publishing cadence, all from your terminal. Content engineering by Creative Content Crafts. MIT.",
-      "sourceUrl": "https://github.com/sergebulaev/linkedin-skills"
-    },
-    "id": "a36c1489add4e10ddb8e58846a98fc2272290ee7963a11dae6df2876b5e62f94",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "golang/go",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1642,5 +1498,29 @@
     "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "mg-chao/snow-apps",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
+      "sourceUrl": "https://github.com/mg-chao/snow-apps"
+    },
+    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
+    "status": "pending",
+    "createdAt": "2026-10-07T08:24:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "eolix/photosuite",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A desktop image editor, faithful to classic Adobe Photoshop, with native PSD/PSB compatibility",
+      "sourceUrl": "https://github.com/eolix/photosuite"
+    },
+    "id": "c4c4cd5d651fdf8138e68029df84205aa443fdeb650ed037711261f3d185cc3f",
+    "status": "pending",
+    "createdAt": "2026-10-07T08:24:26Z"
   }
 ]
