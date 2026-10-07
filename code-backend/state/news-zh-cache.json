@@ -59,18 +59,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T08:24:26Z"
   },
-  "c11a83f73b42d75639443284618af1576a5293ebbd1f2119958661a090262494": {
-    "title": "EmbeddingGemma 2：开放轻量多模态嵌入模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
-  "f833eccb65deeb7db0bf568ae25e756452dcce15d5436c2ff8cef6b6e1a9b1b3": {
-    "title": "更新 IDE 以恢复 Copilot 使用指标中的智能体活动",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
   "789d3f2f135ddb5fc679634f346fa6d48d50e387f6eb06f05fe528c2655fd540": {
     "title": "堆叠拉取请求正式可用",
     "summary": null,
@@ -83,10 +71,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T08:24:26Z"
   },
-  "320c088cf61127c85623fc8770d00cdf09b7899b2291236ad6074001f7a1c557": {
-    "title": "Cursor Remote 控制本地智能体",
+  "f447ab3c07770462892a1c58f0e0ccf17e4e6cc470830d03331b5b5cdcb8af06": {
+    "title": "Microsoft 在 2026 Gartner® Magic Quadrant™ 全球工业 AIoT 平台中被评为领导者",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
+    "at": "2026-10-07T10:21:30Z"
   }
 }
