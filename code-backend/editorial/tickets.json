@@ -1,5 +1,43 @@
 [
   {
+    "id": "fiimeopc-register-token-202610",
+    "title": "FiimeOPC 注册送 1 亿 Token",
+    "vendor": "FiimeOPC",
+    "category": "token",
+    "score": 77,
+    "tags": {
+      "duration": "limited",
+      "region": "cn"
+    },
+    "expired": false,
+    "expiryDate": "2026-12-08T23:59:59+08:00",
+    "summary": "注册激活送 1 亿 Token，每日任务最多再领 5000 万，按模型倍率扣减",
+    "content": "FiimeOPC 是面向「一人公司」创业者的社区平台，内置模型服务与 API 中转，活动期注册赠送 Token，调用按模型倍率扣减。\n\n- 注册礼：**1 亿 Token**，每账号一次，活动至 **12 月 8 日**\n- 每日任务：发帖、发项目、发 AI 创意，合计最多 **5000 万 Token/天**\n- Token 榜：每累计使用 **10 亿 Token**再送 **1 亿**，每周一次\n- 注册方式：邮箱 / QQ / GitHub，需完成邮箱激活\n\n领取步骤：\n\n1. 打开 [FiimeOPC 注册页（含推广）](https://opc.fiime.cn/register?invite=PLMGKTKA)\n2. 使用邮箱或 QQ / GitHub 注册，查收激活邮件完成激活\n3. 查看额度到账情况，在工作台创建 API Key，按平台说明调用\n\n**注意**：模型服务为社区自营中转；底层供应商不公开的说法尚待核实。调用按模型倍率扣减 Token，名义额度不等于实际模型用量，以模型页面倍率为准。平台规模较小，勿存重要数据，额度用完即止。\n\n**核验说明（2026-10-07）**：额度、任务和截止日期依据用户提供的活动信息录入；公开页面暂未取得完整活动细则，未实测注册或到账 `[未定]`。此处假设「12/08」为 2026 年 12 月 8 日北京时间当天结束，仅作活动领取截止时间，到账额度的使用有效期以平台实际展示为准。",
+    "link": "https://opc.fiime.cn/register?invite=PLMGKTKA",
+    "affiliate": true,
+    "publishedAt": "2026-10-07",
+    "updatedAt": "2026-10-07"
+  },
+  {
+    "id": "deepseek-harness-desktop-bonus-202610",
+    "title": "DeepSeek Harness 桌面版登录领 6 元赠金",
+    "vendor": "DeepSeek",
+    "category": "credits",
+    "score": 88,
+    "tags": {
+      "duration": "unknown",
+      "region": "cn"
+    },
+    "expired": false,
+    "expiryDate": null,
+    "summary": "符合条件登录领 6 元，到账后 7 天有效；是否仍可领以客户端为准",
+    "content": "DeepSeek Harness 桌面端首发体验赠金，符合条件的账号可通过桌面端登录领取。\n\n- 额度：**6 元体验赠金**，无需先充值，限量发放、赠完即止\n- 有效期：**到账后 7 天**；这是个人赠金的使用期限，不是活动统一截止日\n- 资格：活动开始前已注册的 DeepSeek 用户；或活动开始后使用中国大陆手机号（+86，不含虚拟号段）注册的用户\n- 客户端：官网下载 Windows（64 位）或 macOS（Apple 芯片）版本 `[官方]`\n\n领取步骤：\n\n1. 打开 [DeepSeek Harness 官网](https://www.deepseek.com/harness/)下载并安装桌面端\n2. 使用符合条件的 DeepSeek 账号登录；活动前已登录过的用户需退出后重新登录\n3. 查看赠金到账提示和账号余额，按客户端显示的到期时间使用\n\n**核验说明（2026-10-07）**：赠金规则依据[团队公告原文](https://mp.weixin.qq.com/s/ZlHz-GhO2uAywjw0M5rdew)的[公开转载](https://www.aixq.cc/71544.html)交叉核对；原文访问受限，未实测领取。转载公告未给出统一活动截止日期；当前是否仍可领取 `[未定]`，以客户端实际展示为准。",
+    "link": "https://mp.weixin.qq.com/s/ZlHz-GhO2uAywjw0M5rdew",
+    "affiliate": false,
+    "publishedAt": "2026-10-07",
+    "updatedAt": "2026-10-07"
+  },
+  {
     "id": "cloudflare-workersai-free-202609",
     "title": "Cloudflare Workers AI 免费额度",
     "vendor": "Cloudflare",
