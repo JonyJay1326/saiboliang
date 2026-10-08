@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-08T10:41:22Z",
+  "dataUpdatedAt": "2026-10-08T17:54:23Z",
   "items": [
     {
       "title": "Claude最强迷你模型登场，价格暴降90%，直逼DeepSeek？",
@@ -209,6 +209,25 @@
       "eventType": "major-update",
       "addedAt": "2026-10-07T08:24:26Z",
       "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.79.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-07&version=v1.79.0",
+      "publishedAt": "2026-10-06T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "18251e4e8dd21b119e912cb092a55a93b90403c702bd224f7339666772e4e9b9",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-07&version=v1.79.0",
+      "originalVerifiedAt": "2026-10-08T17:54:23Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-07&version=v1.79.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-08T17:54:23Z",
+      "featured": null
     },
     {
       "title": "Command Code 发布 v1.77.0",
@@ -3289,6 +3308,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-08T10:41:22Z",
-  "generatedAt": "2026-10-08T10:41:22Z"
+  "version": "2026-10-08T17:54:23Z",
+  "generatedAt": "2026-10-08T17:54:23Z"
 }

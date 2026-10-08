@@ -1,16 +1,4 @@
 {
-  "d2b5b29b4c815525619915dcf133df4d932068a91ccef332cbfb8777febef4ef": {
-    "title": "我们在欧盟文本溯源规则上的做法",
-    "summary": "OpenAI 如何在欧盟规则下推进文本水印。了解水印适用范围、检测方式，以及为何访问从研究人员开始。",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
-  "56541a536ae3f25f9fd132a680cbcfdb6cefbce1328a500307e3c0cad4381c70": {
-    "title": "从扫描到治疗方案，AI 助力弥合乳腺癌最致命的差距",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
   "517fdc831c7b1edb72c4ef547c1447daf74fba8f8aacd96b33360a8a2be8da48": {
     "title": "Secret scanning 新增对 Lovable、Supabase 等的检测器",
     "summary": null,
@@ -28,12 +16,6 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
-  },
-  "2bd8707fdab8226a9f675f85f9755994f2b63d5ba4355bb897dec2473e579ae5": {
-    "title": "扩展网络验证计划",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
   },
   "ebb413cc5359756bf9234b81256f87104efa96c0b88df88826702769f053f0a0": {
     "title": "Jump Trading 如何用 ChatGPT 扩展量化研究",
@@ -83,32 +65,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-08T10:41:22Z"
   },
-  "a097ef0d441a7216b7cd0e2333e660cab42270878853c22c33f188284ed638d5": {
-    "title": "GPT-6 与面向所有人的智能 UI",
-    "summary": "GPT-6 正通过 ChatGPT 在全球推出，搭载智能 UI，提供更快的响应、可视化内容以及可直接探索和使用的交互体验。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "d309be13e53a281a3c73dd58e27e00cbf78eb50e32432e18accc6f9f989b356d": {
-    "title": "GitHub Copilot 中的 Claude Haiku 5.5",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
   "d6b735286b3739eabb6bfc47e44a44ab371511f3cb6c5b2e613faa6a581c06e2": {
     "title": "专为检测泄露密钥打造的模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "1e174328109aea325ae34ff322a31cc3621bb9b87f6938c22c9564afc8e22897": {
-    "title": "GitHub Copilot 本地沙盒现已正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "8241d56116d90ff33b6b9c9b3cb32698d23365c7a990e8b7727a792002320854": {
-    "title": "在 GitHub Copilot CLI 中发现本地模型",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-08T10:41:22Z"
@@ -118,5 +76,71 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-08T10:41:22Z"
+  },
+  "4e66a7e453a3193bb5cb6a8f8081827e5a6357c436d5caa87cc204d983c3cfdb": {
+    "title": "2026 年使用政策更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "6c062b861d6d205bc313e939a094b3dab87b6b0c40df64dfabe563ffb4db5445": {
+    "title": "延续我们对美国科学发现的承诺",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "2f17b90a739a50a0c9c9cf2c5108388542db100c20ac488ebe79a6ba3c4d2bf3": {
+    "title": "揭穿最大的数据中心迷思",
+    "summary": "开发者兼内容创作者 Tom Shaw 拆解了关于数据中心的三大迷思。文章《揭穿最大的数据中心迷思》首发于 Meta Newsroom。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "db7b9e6fe248e3146f87743abb423de6e3dc46759771b422f1331a63b0725822": {
+    "title": "Oracle 如何用 ChatGPT 和 Codex 将数天工作缩短至几分钟",
+    "summary": "在招聘、工程和运营领域，Oracle 借助 ChatGPT Work 和 Codex 将专业知识转化为快速、可重复的工作流程。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "855092fba1df7e8a668bec1b409ac85f8b110a1f64384b826a3381f6d67156e4": {
+    "title": "Pollo AI 携手 OpenAI 将创意转化为营销活动",
+    "summary": "借助 GPT-5.6、GPT-6 Astra 和 GPT‑Image‑2.5，Pollo AI 帮助创作者将大胆创意转化为精细图像和电影级视频广告。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "d9e485b409fe8517ac6e3a5ba39a5770caf1a72ddba21f80f7ddf66c5e1760f2": {
+    "title": "打击 AI 驱动的“虚假前台”行动",
+    "summary": "OpenAI 打击了两起 AI 驱动的影响力行动，这些行动利用虚假前台记者和一家智库传播地缘政治信息。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "18d441cbd3f99a19e751ebcc360a7a09bff038cd1a6f860842b15f44aa847fb3": {
+    "title": "屏幕阅读器可将时间线作为列表导航",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "3683122ea1883bb615a0c01195659846b137fce107ceca6c81ff35c415c78d0f": {
+    "title": "草稿拉取请求计入拉取请求限制",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "285fd20aaab2f056379830ec8b1004324c899cd801be7db0d2a8be888d7d538a": {
+    "title": "集结出发：《Gears of War: E-Day》登陆 GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "68aea5f02d37dc36523279357cbeccb31a2658f9b4a25db54259e744ab6c93ec": {
+    "title": "贯穿基础设施生命周期的 AI 转型：从供应链到车队运营",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
+  },
+  "f447ab3c07770462892a1c58f0e0ccf17e4e6cc470830d03331b5b5cdcb8af06": {
+    "title": "Microsoft 在 2026 年 Gartner® 全球工业 AIoT 平台魔力象限中被评为领导者",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T17:54:23Z"
   }
 }
