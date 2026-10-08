@@ -985,18 +985,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "dyang886/Game-Cheats-Manager",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Easily download and manage single-player game cheats for your convenience",
-      "sourceUrl": "https://github.com/dyang886/Game-Cheats-Manager"
-    },
-    "id": "a3f3d864c381e1ece657d8e63e62c69dea22569eef09e41f7b570968f605a822",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "tabler/tabler-icons",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1268,18 +1256,6 @@
       "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
     },
     "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "golang/go",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Go programming language",
-      "sourceUrl": "https://github.com/golang/go"
-    },
-    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
   },
@@ -1882,5 +1858,76 @@
     "id": "eef577cf65a2839e8ba614e0faea63e3859e94d7033f15913d8a9456676a9529",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "sambanks/octabam",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A remixer for the Elektron Octatrack's OS: modules (custom DSP56300 effects, ColdFire mods, ports of community mods) composed into one firmware image built from your own 1.40C. No firmware distributed.",
+      "sourceUrl": "https://github.com/sambanks/octabam"
+    },
+    "id": "7de73d0e89c4e32e26d50a3a756b6af8c79cf857617b094349e716afc374fa9d",
+    "status": "pending",
+    "createdAt": "2026-10-08T10:41:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "openai/plugins",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenAI Plugins",
+      "sourceUrl": "https://github.com/openai/plugins"
+    },
+    "id": "2e53828fcb2898d142667d3ab8654c2ffb2568234e1a1a70dd872da7865ff106",
+    "status": "pending",
+    "createdAt": "2026-10-08T10:41:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vercel/next.js",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The React Framework",
+      "sourceUrl": "https://github.com/vercel/next.js"
+    },
+    "id": "8087ac37fdea5c6a0ab0f1c1da3dee3a60c0524f93175977fe0abc6cd6e30bdf",
+    "status": "pending",
+    "createdAt": "2026-10-08T10:41:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "deeplethe/utopia",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "World's first open-source enterprise world model.",
+      "sourceUrl": "https://github.com/deeplethe/utopia"
+    },
+    "id": "ab4c0b2d1bb0963e00f5790bad82aad6c2f1dc5231e0a654ecf55d8f1649f94f",
+    "status": "pending",
+    "createdAt": "2026-10-08T10:41:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/tgrep",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Trigram-indexed grep with a client/server architecture for fast regex search in large codebases locally",
+      "sourceUrl": "https://github.com/microsoft/tgrep"
+    },
+    "id": "c75a22c836dfbe050b8f6ad76c567ad140f4022407078a14bf5bd9a7f7bbd011",
+    "status": "pending",
+    "createdAt": "2026-10-08T10:41:22Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "6c0a8c3991fa3dac5f0c0e70e7e8ca50327010faf20679efe8f7491c00bb241b",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "04c0b164f2eab9287a327c528d5456ea8d448bfe566ccd9f2f778e736b0aa438",
+    "status": "pending",
+    "createdAt": "2026-10-08T10:41:22Z"
   }
 ]

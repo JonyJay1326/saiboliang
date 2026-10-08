@@ -1,10 +1,4 @@
 {
-  "2d8e70fb45cef7470a5baf361c95df26b5ff7249933c340d169f562e1258ded9": {
-    "title": "为人们使用 AI 的方式构建广告",
-    "summary": "OpenAI 在 ChatGPT 中推出全新视觉广告格式，并为广告主扩展衡量工具、归因合作与品牌适用性。",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T10:34:12Z"
-  },
   "d2b5b29b4c815525619915dcf133df4d932068a91ccef332cbfb8777febef4ef": {
     "title": "我们在欧盟文本溯源规则上的做法",
     "summary": "OpenAI 如何在欧盟规则下推进文本水印。了解水印适用范围、检测方式，以及为何访问从研究人员开始。",
@@ -77,22 +71,52 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
   },
-  "4e324623ab7ca6fee0e142410ae1fff634372bb9b83078fd1d25f73483da7134": {
-    "title": "Radisson Hotel Group 将酒店探索带入 ChatGPT",
-    "summary": "Radisson 与 Accenture 合作，利用 OpenAI 技术构建 ChatGPT 插件，帮助旅行者在规划行程时查找、比较和预订酒店。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
-  },
   "b6aec8c05cfc3e2f0fe397569c3768accb2ebf5d964b90334e1f4957e361ffb2": {
     "title": "推出 Playground：创建并游玩自定义游戏",
     "summary": "Playground 概览",
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
   },
-  "abcbf4e65ab2140e02478e458a0ed2e90a4c5383890b6c57c04dc2ee5784b184": {
-    "title": "ElevenLabs 现已登陆 OpenRouter",
+  "68d2d671da6664ca06f053900f2296d0caf08df31852b4df6a0272c09daa5753": {
+    "title": "为什么数据中心是 Meta AI 战略的重要部分",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "a097ef0d441a7216b7cd0e2333e660cab42270878853c22c33f188284ed638d5": {
+    "title": "GPT-6 与面向所有人的智能 UI",
+    "summary": "GPT-6 正通过 ChatGPT 在全球推出，搭载智能 UI，提供更快的响应、可视化内容以及可直接探索和使用的交互体验。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "d309be13e53a281a3c73dd58e27e00cbf78eb50e32432e18accc6f9f989b356d": {
+    "title": "GitHub Copilot 中的 Claude Haiku 5.5",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "d6b735286b3739eabb6bfc47e44a44ab371511f3cb6c5b2e613faa6a581c06e2": {
+    "title": "专为检测泄露密钥打造的模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "1e174328109aea325ae34ff322a31cc3621bb9b87f6938c22c9564afc8e22897": {
+    "title": "GitHub Copilot 本地沙盒现已正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "8241d56116d90ff33b6b9c9b3cb32698d23365c7a990e8b7727a792002320854": {
+    "title": "在 GitHub Copilot CLI 中发现本地模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "e85b9e2ad448ed75ecf9983121091db973e759db06f6ab085ac9f0946fad126b": {
+    "title": "NVIDIA 与 Microsoft 以 RTX Spark 和 AI 代理开启 Windows PC 新篇章",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
   }
 }

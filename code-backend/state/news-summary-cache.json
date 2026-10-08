@@ -1,7 +1,17 @@
 {
-  "abcbf4e65ab2140e02478e458a0ed2e90a4c5383890b6c57c04dc2ee5784b184": {
-    "summary": "ElevenLabs登陆OpenRouter，提供9个文本转语音和2个语音转文本模型，可用于旁白、语音代理及会议笔记。",
+  "d309be13e53a281a3c73dd58e27e00cbf78eb50e32432e18accc6f9f989b356d": {
+    "summary": "Anthropic 最新轻量模型 Claude Haiku 5.5 已在 GitHub Copilot 正式可用，面向子代理、快速编辑和终端任务。",
     "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "1e174328109aea325ae34ff322a31cc3621bb9b87f6938c22c9564afc8e22897": {
+    "summary": "GitHub Copilot 本地沙盒在 Copilot CLI、Copilot 应用及使用 Agent Host 的 VS Code 会话中正式可用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
+  },
+  "8241d56116d90ff33b6b9c9b3cb32698d23365c7a990e8b7727a792002320854": {
+    "summary": "GitHub Copilot CLI 1.0.94-0 起可用 /model 从运行中的环境发现支持的本地模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
   }
 }

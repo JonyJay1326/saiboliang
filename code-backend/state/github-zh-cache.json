@@ -178,5 +178,10 @@
     "text": "开源 AI 交易智能体，自主运行于 1000+ 市场——Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 条 EVM 链。扫描优势，即时执行，睡眠时管理风险。面向机器间支付的智能体商业协议。自托管。基于 Claude 构建。",
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
+  },
+  "higgsfield-ai/higgsfield": {
+    "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型设计的机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-08T10:41:22Z"
   }
 }
