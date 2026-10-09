@@ -74,16 +74,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-02T07:20:15Z"
   },
-  "yikart/AiToEarn": {
-    "text": "用 AI 赚钱！",
-    "source": "deepseek-flash",
-    "at": "2026-10-03T15:09:23Z"
-  },
-  "ifixai-ai/iFixAi": {
-    "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi，可在 120 秒内得到答案。",
-    "source": "deepseek-flash",
-    "at": "2026-10-04T15:49:24Z"
-  },
   "AI4Finance-Foundation/FinGPT": {
     "text": "FinGPT：开源金融大语言模型！带来变革 🔥 我们在 HuggingFace 上发布训练好的模型。",
     "source": "deepseek-flash",
@@ -99,11 +89,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
   },
-  "WordPress/mcp-adapter": {
-    "text": "一个 MCP 适配器，将 Abilities API 桥接到模型上下文协议，使 MCP 客户端能够以编程方式发现并调用 WordPress 插件、主题和核心能力。",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
   "LaurieWired/GhidraMCP": {
     "text": "Ghidra 的 MCP 服务器",
     "source": "deepseek-flash",
@@ -114,20 +99,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
-  "tensorflow/tensorflow": {
-    "text": "面向所有人的开源机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
   "max-sixty/worktrunk": {
     "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 智能体工作流设计",
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
-  },
-  "tile-ai/tilelang": {
-    "text": "领域特定语言，旨在简化高性能 GPU/CPU/加速器内核的开发",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
   },
   "AtomicBot-ai/atomic-agent": {
     "text": "Atomic Agent 是本地优先的 AI 智能体。通过 llama.cpp 在自有机器上运行开放权重模型。",
@@ -144,16 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
   },
-  "higgsfield-ai/higgsfield": {
-    "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型设计的机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "FalkorDB/FalkorDB": {
-    "text": "超高速图数据库，底层使用 GraphBLAS 实现稀疏邻接矩阵图表示。目标是为 LLM 提供最佳知识图谱（GraphRAG）。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
   "Tracer-Cloud/opensre": {
     "text": "构建你自己的 AI SRE 智能体。面向 AI 时代的开源工具包。",
     "source": "deepseek-flash",
@@ -169,29 +134,39 @@
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
   },
-  "dotnet/skills": {
-    "text": "用于协助 AI 编码智能体处理 .NET 和 C# 的技能仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "laravel/ai": {
-    "text": "Laravel AI SDK 提供统一、表达力强的 API，用于对接 OpenAI、Anthropic、Gemini 等 AI 提供商。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
   "docling-project/docling": {
     "text": "让你的文档为生成式 AI 做好准备",
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
   },
-  "Anil-matcha/open-dots": {
-    "text": "开源、自托管的 AI 智能体工作区，可替代 OpenAI Dots、Meta Muse、Grok Bot、Instinct、Manus Cue、Claude Cowork 和 ChatGPT agent。MIT 许可；包含聊天、连接器、审批和可选的计算机使用。早期原型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T10:40:22Z"
-  },
   "akitaonrails/ai-memory": {
     "text": "为智能体编码 CLI 提供长期记忆的解决方案，并便于在不同智能体供应商之间交接。",
     "source": "deepseek-flash",
     "at": "2026-10-09T10:40:22Z"
+  },
+  "docker/docker-agent": {
+    "text": "Docker Engineering 出品的 AI Agent 构建器与运行时",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T17:27:43Z"
+  },
+  "langchain-ai/agents-from-scratch": {
+    "text": "构建带有人工介入和记忆功能的邮件助手",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T17:27:43Z"
+  },
+  "oracle-devrel/oracle-ai-developer-hub": {
+    "text": "面向 AI 开发者的技术资源，用于使用 Oracle AI Database 和 OCI 服务构建应用、Agent 与系统",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T17:27:43Z"
+  },
+  "alphaXiv/OpenResearch": {
+    "text": "将你的编码 Agent 转变为研究 Agent",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T17:27:43Z"
+  },
+  "multimodal-art-projection/YuE": {
+    "text": "YuE2：前沿音乐生成，支持符号规划、零样本翻唱与 Agent 化音乐编辑。",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T17:27:43Z"
   }
 }

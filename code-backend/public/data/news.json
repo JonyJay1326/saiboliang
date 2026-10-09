@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-09T10:40:22Z",
+  "dataUpdatedAt": "2026-10-09T17:27:43Z",
   "items": [
     {
       "title": "亚马逊云科技Amazon Bedrock AgentCore在中国区域上线：打包六大能力，贯穿Agent开发全流程",
@@ -21,6 +21,25 @@
       "featured": true
     },
     {
+      "title": "一个月扫出近5000漏洞，Anthropic发布OSS Scanner，最强模型免费做“安全卫士”",
+      "sourceUrl": "https://zhidx.com/p/599466.html",
+      "publishedAt": "2026-10-09T06:27:20Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 张情 编辑 | 云鹏 智东西10月9日消息，AI找漏洞，正在从“帮倒忙”变成“真帮手”。",
+      "id": "2e5f9ea16f3538ac5c8299b5edfc316ed6619bf33ff2a305f25b00ddf7c034a0",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/599466.html",
+      "category": "industry",
+      "eventType": "security-risk",
+      "addedAt": "2026-10-09T17:27:43Z",
+      "featured": true
+    },
+    {
       "title": "GPT-6.1 Sol极速版快8倍，但依然口碑秒崩？“变相涨价”被网友怒喷",
       "sourceUrl": "https://zhidx.com/p/599323.html",
       "publishedAt": "2026-10-09T04:52:10Z",
@@ -38,6 +57,25 @@
       "eventType": "price-or-free",
       "addedAt": "2026-10-09T10:40:22Z",
       "featured": true
+    },
+    {
+      "title": "阿里发布 Qwen-Image-2.1-Turbo",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+      "publishedAt": "2026-10-09T04:50:01Z",
+      "source": "阿里（Hugging Face）",
+      "summary": "阿里发布Qwen-Image-2.1-Turbo。",
+      "id": "167c7efa09e6db3667747012415fa57199c584cce53c21ac2d2728ac2a68a16c",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "阿里（Hugging Face）",
+      "originalUrl": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+      "originalVerifiedAt": "2026-10-09T17:27:43Z",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-09T17:27:43Z",
+      "featured": null
     },
     {
       "title": "openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业",
@@ -3365,6 +3403,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-09T10:40:22Z",
-  "generatedAt": "2026-10-09T10:40:22Z"
+  "version": "2026-10-09T17:27:43Z",
+  "generatedAt": "2026-10-09T17:27:43Z"
 }
