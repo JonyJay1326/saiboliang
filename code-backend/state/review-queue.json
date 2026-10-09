@@ -1046,18 +1046,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "tinyhumansai/openhuman",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenHuman is the fastest, cheapest, most efficient open-source agent harness. Written in Rust",
-      "sourceUrl": "https://github.com/tinyhumansai/openhuman"
-    },
-    "id": "80382602dd78110b4a6b82a415484d2a1091cdba911e55ed22dd8755bb9e7267",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "zed-0xff/ZombieBuddy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1645,17 +1633,6 @@
     "createdAt": "2026-10-08T10:41:22Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "6c0a8c3991fa3dac5f0c0e70e7e8ca50327010faf20679efe8f7491c00bb241b",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "04c0b164f2eab9287a327c528d5456ea8d448bfe566ccd9f2f778e736b0aa438",
-    "status": "pending",
-    "createdAt": "2026-10-08T10:41:22Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "EpicGames/raddebugger",
     "reason": "AI applicability uncertain",
@@ -1676,18 +1653,6 @@
       "sourceUrl": "https://github.com/chthollyphile/folia-major"
     },
     "id": "cc9de1b01f7dfa9dc73f2f6cb38285ce3b4ec0dbe09fe10ef1e9fae7d2c3f9d4",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Friedrich-M/UniMate",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "[SIGGRAPH Asia 2026] UniMate: One Unified Model to Animate Diverse Skeletons",
-      "sourceUrl": "https://github.com/Friedrich-M/UniMate"
-    },
-    "id": "52f350d2eea5adb2bf31165926b6d547beb96be02b28ceed5f61c5e6b3f3a048",
     "status": "pending",
     "createdAt": "2026-10-08T17:54:23Z"
   },
@@ -1921,18 +1886,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "golang/go",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Go programming language",
-      "sourceUrl": "https://github.com/golang/go"
-    },
-    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "p1neappleXpress/OpenFlux",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1944,27 +1897,49 @@
     "createdAt": "2026-10-08T17:54:23Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "godotengine/godot",
-    "reason": "AI applicability uncertain",
+    "kind": "plans",
+    "objectId": "bigmodel-coding-plan",
+    "reason": "official terms changed; retaining prior record",
     "evidence": {
-      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
-      "sourceUrl": "https://github.com/godotengine/godot"
+      "sourceUrl": "https://docs.bigmodel.cn/cn/coding-plan/overview"
     },
-    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
+    "id": "a4f8d3a3f0210ff3b8517bccd93fa12e7cc498d1e00520147f5605507a79fef3",
     "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
+    "createdAt": "2026-10-09T10:40:22Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "claude-plans",
+    "reason": "official terms changed; retaining prior record",
+    "evidence": {
+      "sourceUrl": "https://claude.com/pricing"
+    },
+    "id": "b1d8ef7f9e820137b1aa04bb71c6c9cd8ea388f8b18873ab00b2262a04549bee",
+    "status": "pending",
+    "createdAt": "2026-10-09T10:40:22Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "ankitects/anki",
+    "objectId": "tinyhumansai/openhuman",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Anki is a smart spaced repetition flashcard program",
-      "sourceUrl": "https://github.com/ankitects/anki"
+      "description": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
+      "sourceUrl": "https://github.com/tinyhumansai/openhuman"
     },
-    "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
+    "id": "368a65cf710671e6e062d1f1a9c143d2adc5fa4f1528d90ed63617f992bb10c2",
     "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
+    "createdAt": "2026-10-09T10:40:22Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Tools-cx-app/meta-magic_mount-rs",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An implementation of a metamodule using Magic Mount, Based on MKSU, Template is from meta-overlay.",
+      "sourceUrl": "https://github.com/Tools-cx-app/meta-magic_mount-rs"
+    },
+    "id": "14fba517dd7ffc66d785a7e8baea2e6ffcf85bc6209706f0c9a3f832e28001bd",
+    "status": "pending",
+    "createdAt": "2026-10-09T10:40:22Z"
   }
 ]

@@ -184,9 +184,14 @@
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
   },
-  "WorldFlowAI/everything-claude-code": {
-    "text": "Claude Code 工具包——智能体、命令、技能、规则和钩子，助力高效的 AI 辅助开发",
+  "Anil-matcha/open-dots": {
+    "text": "开源、自托管的 AI 智能体工作区，可替代 OpenAI Dots、Meta Muse、Grok Bot、Instinct、Manus Cue、Claude Cowork 和 ChatGPT agent。MIT 许可；包含聊天、连接器、审批和可选的计算机使用。早期原型。",
     "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
+    "at": "2026-10-09T10:40:22Z"
+  },
+  "akitaonrails/ai-memory": {
+    "text": "为智能体编码 CLI 提供长期记忆的解决方案，并便于在不同智能体供应商之间交接。",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T10:40:22Z"
   }
 }

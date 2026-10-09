@@ -1,19 +1,7 @@
 {
-  "517fdc831c7b1edb72c4ef547c1447daf74fba8f8aacd96b33360a8a2be8da48": {
-    "title": "Secret scanning 新增对 Lovable、Supabase 等的检测器",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-06T10:26:13Z"
-  },
   "2896758265cec81d95898858cf3558ac9cdd51e4e22038c8fc6ca0aa5193f521": {
     "title": "Atlassian 与 OpenAI 扩大合作，将企业知识转化为行动",
     "summary": "Atlassian 与 OpenAI 扩大合作，将前沿模型与企业知识连接，帮助团队规划、构建和交付工作。",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "06753ef5f068b713de285275bccc6ef48cbb0970b638f9e6bea5172a59913ef2": {
-    "title": "安全概览中的代码扫描 AI Scan 启用状态",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
@@ -29,21 +17,9 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T08:24:26Z"
   },
-  "f57eff9c23a4454b476bbb268bd95c2d23fd7e230b5d7db7db7e5bb00c25353b": {
-    "title": "与 Ironclad 推进计算机使用",
-    "summary": "了解 OpenAI 与 Ironclad 如何在复杂合同工作流上训练和评估 AI 智能体，以推进专业工作的计算机使用。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
   "789d3f2f135ddb5fc679634f346fa6d48d50e387f6eb06f05fe528c2655fd540": {
     "title": "堆叠拉取请求正式可用",
     "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
-  "c5695ee051ae48420758a56da15137d36d706df92d450e17107a8101c380c183": {
-    "title": "借助 IBM Cloud 和 NVIDIA 扩展企业推理容量",
-    "summary": "企业现在可以在由 Together AI、IBM Cloud 和 NVIDIA 构建的专用 B300 推理集群上以生产规模运行开放模型",
     "source": "deepseek-flash",
     "at": "2026-10-07T08:24:26Z"
   },
@@ -142,5 +118,35 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
+  },
+  "c4a1f46e5a98744a7c57fd6e9c295bcadb554f343d53e79729cbf02ab67f63eb": {
+    "title": "推出 Anthropic Cyber Mission",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-09T10:40:22Z"
+  },
+  "570fe3204556675e8dd927e7dbd15e7142796fd7ecb68cb1f56d47b91d75ac01": {
+    "title": "Sophos 借助 OpenAI Daybreak 将威胁调查时间缩短 96%",
+    "summary": "了解 Sophos 如何利用 OpenAI 的 Daybreak 将网络威胁调查时间缩短 96%，并自动化 52% 的 MDR 案例，同时保留人工监督。",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T10:40:22Z"
+  },
+  "45d6a2b79938283a07ca47b39fd2409f4bc34d8465757047a15ff56c4f0b15f8": {
+    "title": "LegalOn 将 Codex 成本减半，同时保持开发速度",
+    "summary": "LegalOn 将预估的每日 Codex 成本削减 65%，同时保持开发速度。它将 Astra、Sol 和 Luna 与任务匹配，并战略性地管理预算。",
+    "source": "deepseek-flash",
+    "at": "2026-10-09T10:40:22Z"
+  },
+  "8b64b8f7c1061221034fae8fb3bd298bdb79662cef111df7a0352e29fab22666": {
+    "title": "Triage 角色或更高权限用户现可归档拉取请求",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-09T10:40:22Z"
+  },
+  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
+    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将想法转化为仿真",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-09T10:40:22Z"
   }
 }

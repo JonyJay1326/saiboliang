@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-08T17:54:23Z",
+  "dataUpdatedAt": "2026-10-09T10:40:22Z",
   "items": [
+    {
+      "title": "亚马逊云科技Amazon Bedrock AgentCore在中国区域上线：打包六大能力，贯穿Agent开发全流程",
+      "sourceUrl": "https://zhidx.com/p/599479.html",
+      "publishedAt": "2026-10-09T06:50:07Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | ZeR0 编辑 | 漠影 智东西10月9日报道，9月29日，亚马逊云科技宣布Amazon Bedrock AgentCore已在由光环新网运营",
+      "id": "064a0d77691540b135167392a3fd00553670c66e52618c1cb114e535f1aaf570",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/599479.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-09T10:40:22Z",
+      "featured": true
+    },
+    {
+      "title": "GPT-6.1 Sol极速版快8倍，但依然口碑秒崩？“变相涨价”被网友怒喷",
+      "sourceUrl": "https://zhidx.com/p/599323.html",
+      "publishedAt": "2026-10-09T04:52:10Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 毕伟豪 编辑｜云鹏 智东西10月9日报道，在重置之神Tibo“ 连续28天新发布或者重置 ”的第四天",
+      "id": "c7e3ad749594e1ac5f7a5410234ee7fd38d29840a06b31c58b8aa37f3f3c7dcc",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/599323.html",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-10-09T10:40:22Z",
+      "featured": true
+    },
+    {
+      "title": "openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业",
+      "sourceUrl": "https://www.qbitai.com/2026/10/502106.html",
+      "publishedAt": "2026-10-09T02:37:22Z",
+      "source": "量子位",
+      "summary": "多Agent协同还能自我进化",
+      "id": "fdd53ad010f53e82981cdacd9f401d6f9fa00aeeeb9e800d336218c6a4026d07",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/502106.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-09T10:40:22Z",
+      "featured": true
+    },
     {
       "title": "Claude最强迷你模型登场，价格暴降90%，直逼DeepSeek？",
       "sourceUrl": "https://zhidx.com/p/598985.html",
@@ -3308,6 +3365,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-08T17:54:23Z",
-  "generatedAt": "2026-10-08T17:54:23Z"
+  "version": "2026-10-09T10:40:22Z",
+  "generatedAt": "2026-10-09T10:40:22Z"
 }
