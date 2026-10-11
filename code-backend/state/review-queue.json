@@ -1666,18 +1666,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "michael-denyer/pstack-claude",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
-    },
-    "id": "9b3f19139a3be89a8c483b594006fac051d8a35ca30b8e321d344f46719d65a6",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "poteto/hiring-without-whiteboards",
     "reason": "AI applicability uncertain",
     "evidence": {
