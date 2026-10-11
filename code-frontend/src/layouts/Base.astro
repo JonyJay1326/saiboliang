@@ -8,7 +8,6 @@ import Footer from '../components/Footer.astro';
 import SkinToggle from '../components/SkinToggle.astro';
 import '../styles/tokens.css';
 import '../styles/site.css';
-import '../styles/commerce.css';
 import '../styles/stubs.css';
 
 const {
@@ -155,7 +154,7 @@ const DEFAULT_SKIN = 'cyber';
         release = null;
         const canvas = document.querySelector('[data-bg-motes]');
         const ctx = canvas?.getContext('2d');
-        if (!ctx) return;
+        if (!ctx || document.querySelector('[data-granary]')) return;
 
         const controller = new AbortController();
         const { signal } = controller;

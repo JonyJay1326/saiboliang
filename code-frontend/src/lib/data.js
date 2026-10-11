@@ -13,10 +13,6 @@ const FILES = ['version', 'tickets', 'models', 'github', 'news'];
 
 let cached = null;
 
-export function dataDir() {
-  return DIR;
-}
-
 export function batch() {
   if (cached) return cached;
 

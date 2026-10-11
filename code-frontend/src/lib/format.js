@@ -20,7 +20,7 @@ export function toBeijing(iso) {
 }
 
 /** 北京时间「今天」的 YYYY-MM-DD。 */
-export function shanghaiToday(now = new Date()) {
+function shanghaiToday(now = new Date()) {
   const t = new Date(now.getTime() + SHANGHAI_OFFSET_MINUTES * 60_000);
   return `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())}`;
 }
@@ -63,17 +63,6 @@ export function freshness(dataUpdatedAt, now = new Date()) {
 export function overdue(ticket, now = new Date()) {
   if (!ticket?.expiryDate) return false;
   return new Date(ticket.expiryDate).getTime() < now.getTime();
-}
-
-/** 契约 §3：期限展示口径。 */
-export function durationLabel(ticket) {
-  if (ticket?.expiryDate) return toBeijing(ticket.expiryDate);
-  return ticket?.tags?.duration === 'longterm' ? '长期有效（以官方为准）' : '期限未提供';
-}
-
-/** 前端只读派生：在架票数 = expired === false 的条数（契约 §4.2 / §5.2）。 */
-export function activeCount(list) {
-  return list.filter((t) => t.expired === false).length;
 }
 
 /** 前端只读派生：本周新增 = publishedAt 落在北京时间本周一至今天（契约 §4.2 / §5.2）。 */
@@ -121,11 +110,6 @@ export function ticketDefaultOrder(a, b) {
   return a.id < b.id ? -1 : 1;
 }
 
-/** 契约 §3：失效态章面 / 文字层用词。 */
-export function expiredLabel(ticket) {
-  return ticket?.expiryDate ? '已作废' : '已结束';
-}
-
 /**
  * 推荐分展示分档（2026-09-18 用户定，前端只读派生）：
  * 甲等 = >90；乙等 = 80–90；丙等 = 70–79；<70 不上架（返回 null）。
@@ -152,7 +136,7 @@ export function listedTickets(list, now = new Date()) {
 // ---------------------------------------------------------------- 模型（/models）
 
 /** 模型报价展示（USD / 百万 Token）：`$10`、`$0.15`；null 显示「—」。 */
-export function usdPrice(n) {
+function usdPrice(n) {
   if (n === null || n === undefined || Number.isNaN(Number(n))) return '—';
   return `$${Number(n)}`;
 }
@@ -180,12 +164,6 @@ export function currencySymbol(currency) {
 /** 周期中文。 */
 export function periodLabel(period) {
   return period === 'year' ? '年' : '月';
-}
-
-/** 档位价格标签：¥118/月、$10/月；price 为 null 显示「未提供」。 */
-export function tierPrice(tier) {
-  if (tier?.price === null || tier?.price === undefined) return '未提供';
-  return `${currencySymbol(tier.currency)}${tier.price}/${periodLabel(tier.period)}`;
 }
 
 /**
@@ -226,12 +204,6 @@ export function tierOfferLabel(tier) {
   return '常规';
 }
 
-/** 档位口径键（样式钩子，不入库）：free / new-user / promotion / standard。 */
-export function tierOfferKey(tier) {
-  if (typeof tier?.price === 'number' && tier.price === 0) return 'free';
-  return tier?.offerType === 'new-user' || tier?.offerType === 'promotion' ? tier.offerType : 'standard';
-}
-
 /** 排序用：起步价数值，无价视为正无穷（排最后）。 */
 export function startingPriceValue(plan) {
   return startingPrice(plan)?.price ?? Number.POSITIVE_INFINITY;
@@ -247,9 +219,4 @@ export function planStatusLabel(status) {
   if (status === 'available') return '可购买';
   if (status === 'unavailable') return '暂不可购';
   return '状态未核实';
-}
-
-/** 契约 §4.3 的 source → 来源标记；official 时不显示。 */
-export function planSourceLabel(source) {
-  return source === 'aggregator' ? '数据来源：第三方整理，以官方页为准' : null;
 }

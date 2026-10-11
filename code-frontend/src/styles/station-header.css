@@ -1,192 +1,195 @@
-/* 青铜错金机关梁：72px 本体，错金纹路兼作操作时的导电路径。 */
+/* 站头：墨底实色吸顶条 + 一道游走的金青光束。
+   光束只是装饰层（pointer-events: none），不改变链接位置与命中区域；
+   实底、不用 backdrop-filter（frontend-spec.md §10.3 吸顶条渲染纪律）。 */
 .station-header {
-  --station-height: 72px;
-  --station-mint: #81dbc3;
-  --station-gold: #dbbc7f;
+  --station-height: 64px;
   position: sticky;
   top: 0;
   z-index: 60;
   height: var(--station-height);
+  overflow-x: clip;
   isolation: isolate;
-  color: #e0d4bb;
-  border-block: 1px solid #b39b675e;
+  color: var(--text);
   background:
-    radial-gradient(ellipse 290px 64px at 13% 0, #c3a47030, transparent 80%),
-    radial-gradient(ellipse 180px 13px at 21% 100%, #5a987448, transparent 80%),
-    radial-gradient(ellipse 330px 18px at 76% 100%, #47856d35, transparent 80%),
-    radial-gradient(ellipse 130px 30px at 97% 80%, #416b5524, transparent 80%),
-    repeating-linear-gradient(0deg, #d5c08f03 0 1px, transparent 1px 3px),
-    linear-gradient(110deg, #947a4210, transparent 28%, #040a0724 57%, transparent 90%),
-    linear-gradient(180deg, #766347 0, #514834 2px, #252c23 5px, #292e26 18%, #1a211d 58%, #1e2822 85%, #344032 calc(100% - 5px), #514b35 calc(100% - 2px), #171d16);
-  box-shadow: inset 0 1px #ecd39835, inset 0 -1px #100f0bcc, 0 6px 16px #04070540;
-  transition: box-shadow .25s;
+    radial-gradient(420px 90px at 50% 0, rgba(232, 183, 58, .07), transparent 70%),
+    linear-gradient(180deg, #121020 0%, #0c0b17 100%);
+  box-shadow: 0 10px 30px rgba(3, 2, 9, .55);
 }
+/* 底边：渐隐金线 + 一颗沿底边游走的光点 */
 .station-header::before {
   content: '';
   position: absolute;
-  inset: 6px 0;
-  z-index: -1;
-  border-block: 1px solid #b5a37328;
-  background:
-    repeating-linear-gradient(90deg, transparent 0 65px, #a68b5110 65px 66px, transparent 66px 132px) top / 100% 4px no-repeat,
-    linear-gradient(90deg, #070e0970, transparent 10%, transparent 90%, #070e0970);
-  box-shadow: inset 0 1px #0c130f60, inset 0 -1px #90a27909;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232, 183, 58, .55) 18%, rgba(63, 217, 192, .45) 50%, rgba(232, 183, 58, .55) 82%, transparent);
   pointer-events: none;
 }
 .station-header::after {
   content: '';
   position: absolute;
-  inset: 0;
+  bottom: -1px;
+  left: 0;
+  width: 180px;
+  height: 3px;
+  background: radial-gradient(closest-side, rgba(255, 236, 190, .95), rgba(232, 183, 58, .5) 45%, transparent);
+  filter: blur(.4px);
+  opacity: .8;
   pointer-events: none;
-  background: linear-gradient(90deg, transparent, #e3cb933b 12%, #a48c5526 40%, #bba16b33 72%, transparent) top / 100% 1px no-repeat;
+  transform: translateX(-200px);
 }
-.station-header[data-scrolled] { box-shadow: inset 0 1px #ecd39840, inset 0 -1px #100f0bcc, 0 9px 24px #02060399; }
-.station-header__end { position: absolute; top: 5px; width: 86px; height: 60px; pointer-events: none; stroke: #c2a976; stroke-width: .8; opacity: .28; }
-.station-header__end--left { left: 5px; }.station-header__end--right { right: 5px; transform: scaleX(-1); }
-.station-header__end .station-header__end-shadow { stroke: #080e09; stroke-width: 1.6; opacity: .95; }
-.station-header__end circle { fill: #d1b77e; stroke: #e8d3a1; }
-.station-header__body { position: relative; max-width: 1400px; height: 100%; margin-inline: auto; padding-inline: 28px; display: grid; grid-template-columns: 214px minmax(0,1fr) 72px; align-items: center; gap: 24px; }
-.station-brand { position: relative; display: flex; align-items: center; justify-content: center; gap: 12px; width: 204px; height: 54px; }
-.station-brand__lettering { position: relative; flex: 0 0 auto; filter: drop-shadow(0 1px 1px #070d07) drop-shadow(-.5px -.5px #f5dba923); transition: filter .3s; }
-.station-brand__lettering::after { content: ''; position: absolute; inset: 0; background: linear-gradient(150deg, #eddbb3 5%, #d3ba86 34%, #baa16c 65%, #dcc18c 91%); mask: url('/font-images/brand.png') center / 100% 100% no-repeat; pointer-events: none; }
-.station-brand__word { display: block; max-width: none; width: auto; height: 30px; filter: sepia(.8) saturate(.65) brightness(.85); }
-.station-brand__seat { position: relative; display: grid; place-items: center; height: 44px; width: 44px; background: radial-gradient(ellipse at 52% 68%, #030906d9, #10180f86 48%, transparent 72%); }
-.station-brand__seat::before,.station-brand__seat::after { content: ''; position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #b9a271; box-shadow: inset 0 1px #e1d2a2, 0 1px #070e08; bottom: 3px; }
-.station-brand__seat::before { left: 5px; }.station-brand__seat::after { right: 5px; }
-.station-brand__halo { position: absolute; inset: 4px; border: 1px solid #d9be865e; border-radius: 50%; opacity: 0; box-shadow: 0 0 6px #e2c7881a,inset 0 0 4px #e2c78814; transition: opacity .25s; pointer-events: none; }
-.station-brand:is(:hover,:focus-visible) .station-brand__halo { opacity: 1; }
-.station-brand__flow { stroke: #ecd5a2; stroke-width: 1; stroke-dasharray: 18 140; stroke-dashoffset: 18; opacity: 0; }
-.station-brand__mark { display: block; width: 38px; height: 38px; object-fit: contain; transform: translateY(-1px); filter: saturate(.78) brightness(.94) drop-shadow(1px 3px 2px #020704) drop-shadow(-.5px -.5px #e5d3a226); transition: filter .3s; }
-.station-brand__inlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; stroke: #c4a77480; stroke-width: .7; filter: drop-shadow(0 1px #050c08); }
-.station-divider { position: absolute; left: 254px; top: 19px; height: 32px; width: 1px; background: linear-gradient(transparent,#b9a5774d,transparent); box-shadow: -1px 0 #07120b7d; pointer-events: none; }
-.station-nav { position: relative; min-width: 0; isolation: isolate; }
-.station-nav ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) repeat(2,minmax(0,1.16fr)) repeat(2,minmax(0,1fr)); gap: 5px; padding: 0; margin: 0; list-style: none; }
-.station-nav li { min-width: 0; }
-.station-link { position: relative; display: flex; align-items: center; justify-content: center; gap: 7px; height: 48px; padding: 0 8px 3px; color: #d0c6b1; white-space: nowrap; text-decoration: none; border-radius: 2px; -webkit-tap-highlight-color: transparent; text-shadow: 0 1px 1px #050d07; transition: color .18s, background-color .18s, box-shadow .18s; }
-.station-link::before { content: ''; position: absolute; left: -3px; top: 15px; bottom: 15px; width: 1px; background: #beaa7024; box-shadow: 1px 0 #020b0752; pointer-events: none; }
-.station-nav li:first-child .station-link::before { display: none; }
-.station-link__name { position: relative; font-size: 16px; font-weight: 600; letter-spacing: .08em; transition: text-shadow .25s,transform .18s; }
-.station-link__dot { position: relative; margin-inline: -1px; font-size: 12px; color: #99896c; }
-.station-link__verb { position: relative; font-size: 12px; color: #a0b3a3; transition: color .2s,text-shadow .2s,transform .18s; }
-.station-link__circuit { position: absolute; inset: 0; height: 100%; width: 100%; pointer-events: none; stroke-width: .8; }
-.station-link__trace { stroke: #b99d66; opacity: .11; filter: drop-shadow(0 1px #030b05); transition: opacity .2s,stroke .2s; }
-.station-link__trace--upper { opacity: .06; }
-.station-link__flow { stroke: #c4ffe8; stroke-width: 1; stroke-dasharray: 18 140; stroke-dashoffset: 18; opacity: 0; }
-.station-link__flow--halo { stroke: #7cdbb7; stroke-width: 3; stroke-opacity: .28; filter: drop-shadow(0 0 2px #70dfbf66); }
-.station-link__junction { fill: #e9c989; stroke: #ffebba; stroke-width: .5; opacity: 0; }
-.station-link__focus { stroke: #eddfb6; stroke-width: 1.5; opacity: 0; }
-.station-link:focus-visible .station-link__focus { opacity: 1; }
-.station-link__anchor { position: absolute; left: 32%; right: 32%; bottom: 4px; height: 1px; background: linear-gradient(90deg,#a98b51,#ecd5a1 48%,#aa8e56); box-shadow: 0 1px #061009,0 0 5px #d6b46d30; opacity: 0; transition: opacity .18s; }
-.station-link__anchor::before,.station-link__anchor::after { content: ''; position: absolute; top: -1.5px; width: 3.5px; height: 3.5px; border-radius: 50%; background: radial-gradient(circle at 30% 25%,#f5e3b8,#c9aa6a 55%,#856b39); box-shadow: 0 1px 1px #020905,0 0 0 .5px #7963388c; }
-.station-link__anchor::before { left: -4px; }.station-link__anchor::after { right: -4px; }
-.station-link[aria-current='page'] { color: #f1d6a0; background: linear-gradient(180deg,#09120dcc,#18201980 48%,#39301a4d); box-shadow: inset 0 3px 5px #020906b3,inset 1px 0 2px #0209053d,inset -1px 0 2px #0209053d,inset 0 -1px #d6b36c38,0 1px #b0a2760d; }
-.station-link[aria-current='page'] .station-link__name { text-shadow: 0 1px #020b05,0 0 12px #d9b15f26; }
-.station-link[aria-current='page'] .station-link__verb { color: #eac27b; }
-.station-link[aria-current='page'] .station-link__trace { opacity: .62; stroke: #d2b577; }
-.station-link[aria-current='page'] .station-link__trace--upper { opacity: .19; }
-.station-link[aria-current='page'] .station-link__anchor { opacity: 1; }
-.station-link.is-energized { color: #f3ead5; }
-.station-link.is-energized .station-link__verb { color: #d2c59e; }
-.station-link.is-energized .station-link__trace { opacity: .6; }
-.station-link.is-energized .station-link__trace--upper { opacity: .26; }
-.station-link:is(:active,.is-pressing) { box-shadow: inset 0 3px 7px #010a07ba,inset 0 -1px #c9ae6b45; }
-.station-link:active .station-link__name,.station-link:active .station-link__verb { transform: translateY(1px); }
-.station-nav__light { position: absolute; z-index: -1; left: 0; top: 0; height: 48px; width: var(--station-light-width,100px); transform: translateX(var(--station-light-x,0px)); opacity: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 95%,#81d9b923,transparent 76%),linear-gradient(110deg,transparent,#e9d8a609 48%,transparent 78%); transition: transform .3s cubic-bezier(.2,.8,.2,1),opacity .2s; }
-.station-nav[data-lit] .station-nav__light { opacity: 1; }
-.station-about { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 40px; padding-left: 12px; border-left: 1px solid #bba16b33; font-size: 12px; letter-spacing: .08em; color: #b9b09a; text-shadow: 0 1px #050d07; }
-.station-about > span:last-child { color: #a2926f; transition: transform .2s; }
-.station-about:is(:hover,[aria-current='page']) { color: #eacf97; }
-.station-header a:focus-visible { outline: 2px solid #a0ead0; outline-offset: 2px; border-radius: 2px; }
-.station-header .station-link:focus-visible { outline-color: transparent; }
-.station-skip { position: fixed; top: 8px; left: 12px; transform: translateY(-180%); z-index: 70; padding: 10px 18px; background: #f1dba5; color: #292016; }
-.station-skip:focus { transform: none; color: #292016; }
-#station-main { scroll-margin-top: 88px; }
-@media (prefers-reduced-motion: no-preference) {
-  [data-skin='cyber'] .station-link.is-energized .station-link__flow { animation: station-inlay-flow .55s linear both; }
-  [data-skin='cyber'] .station-link.is-energized .station-link__junction { animation: station-inlay-junction .55s ease-out both; }
-  [data-skin='cyber'] .station-link.is-energized .station-link__name,
-  [data-skin='cyber'] .station-link.is-energized .station-link__verb { animation: station-inlay-terminal .55s ease-out; }
-  [data-skin='cyber'] .station-brand:is(:hover,:focus-visible) .station-brand__flow { animation: station-inlay-flow .55s linear both; }
-  [data-skin='cyber'] .station-link.is-arriving .station-link__anchor::before,
-  [data-skin='cyber'] .station-link.is-arriving .station-link__anchor::after { animation: station-inlay-arrive .48s ease-out; }
-}
-@keyframes station-inlay-flow {
-  0% { stroke-dashoffset: 18; stroke-dasharray: 18 140; opacity: 0; }
-  8% { stroke-dashoffset: 8; opacity: .9; }
-  58% { stroke-dashoffset: -94; stroke-dasharray: 6 152; opacity: .9; }
-  72% { stroke-dashoffset: -100; stroke-dasharray: 2 156; opacity: 0; }
-  100% { stroke-dashoffset: -102; stroke-dasharray: 2 156; opacity: 0; }
-}
-@keyframes station-inlay-junction { 0%,48% { opacity: 0; filter: none; } 64% { opacity: 1; filter: drop-shadow(0 0 3px #f0d49a99); } 100% { opacity: 0; filter: none; } }
-@keyframes station-inlay-terminal { 0%,48% { text-shadow: 0 1px #050d07; } 66% { text-shadow: 0 0 5px #e6ca875e; } 100% { text-shadow: 0 1px #050d07; } }
-@keyframes station-inlay-arrive { 0% { filter: brightness(1); } 38% { filter: brightness(1.65) drop-shadow(0 0 3px #e5c37c80); } 100% { filter: brightness(1); } }
-@media (max-width: 1180px) {
-  .station-header__body { grid-template-columns: 196px minmax(0,1fr) 65px; gap: 15px; padding-inline: 20px; }
-  .station-brand { width: 190px; gap: 9px; }.station-brand__word { height: 29px; }
-  .station-divider { left: 224px; }.station-link { gap: 6px; padding-inline: 5px; }.station-link__name { font-size: 15px; letter-spacing: .055em; }
-}
-@media (max-width: 980px) {
-  .station-header__body { grid-template-columns: 182px minmax(0,1fr) 52px; gap: 10px; padding-inline: 18px; }
-  .station-brand { width: 180px; gap: 7px; }.station-brand__word { height: 27px; }.station-brand__seat { width: 40px; }.station-brand__mark { width: 36px; height: 36px; }
-  .station-divider { left: 208px; }.station-link { gap: 4px; padding-inline: 3px; }.station-link__name { font-size: 15px; letter-spacing: 0; }.station-about { padding-left: 8px; gap: 5px; }
-}
-@media (prefers-reduced-motion: reduce) { .station-header * { animation: none !important; transition: none !important; } }
-@media (forced-colors: active) { .station-header .station-link:focus-visible { outline-color: Highlight; }.station-link__focus { display: none; } }
+.station-glyphs { position: absolute; pointer-events: none; }
 
-/* 窄屏（≤700px）：品牌与 6 个导航项挤在一行会把导航压到 12-51px 宽、文字重叠成一片
-   （2026-10-01 实测：390px 下网格 182px + 100px + 52px，导航 scrollWidth 120 > clientWidth 100；561-640px 区间链接被压到 39-51px）。
-   对策：改两行—— 第一行「品牌 + 关于」，第二行导航横向滚动。
-   试过「单行 + 品牌缩窄 + 导航横滚」，但 nav 的 max-content 会把 minmax(0,1fr) 那列挤成 0 宽，
-   品牌 logo 消失、导航溢出视口，故改为两行。页头高度同步放开（72px → auto）。 */
-@media (max-width: 700px) {
-  .station-header { height: auto; }
-  .station-header__body {
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas: "brand about" "nav nav";
-    gap: 6px 10px;
-    padding: 6px 12px;
-    height: auto;
-  }
-  .station-brand { grid-area: brand; width: auto; gap: 6px; height: 34px; }
-  .station-brand__word { height: 22px; }
-  .station-brand__seat { width: 30px; height: 30px; }
-  .station-brand__mark { width: 26px; height: 26px; }
-  .station-brand__inlay { display: none; }
-  .station-divider { display: none; }
-  .station-about { grid-area: about; padding-left: 8px; }
-
-  /* 导航独占第二行：单行横向滚动，scrollbar 隐藏但滚动仍可用 */
-  .station-nav { grid-area: nav; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-  .station-nav::-webkit-scrollbar { display: none; }
-  .station-nav ul { display: flex; grid-template-columns: none; gap: 2px; width: max-content; padding-inline: 2px; }
-  .station-nav li { flex: none; }
-
-  /* 触控热区：窄屏无 hover 与指针，点按反馈与热区都要给足 */
-  /* 2026-10-02 P0：6 个导航项原本 492px 宽，390px 视口只有 366px 可用——「邸报」整项看不到，
-     且 scrollbar-width:none 把滚动条藏了、无任何可滚提示。窄屏改为只保留站名
-     （中间的 · 与尾字「首/领/望/比/买/看」是装饰性单字），内边距收到 6px：
-     6 ×（最宽站名「点将台」42px + 12px 内边距）≈ 324px，≥362px 视口可整排显示、无需横滚。 */
-  .station-link__dot,
-  .station-link__verb { display: none; }
-  .station-link { height: 44px; padding: 0 6px; gap: 0; }
-  .station-link__name { font-size: 14px; letter-spacing: 0; }
-  .station-link::before { top: 12px; bottom: 12px; }
+.station-header__body {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  height: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
 }
 
-/* ≤360px 仍放不下（6 项约 324px > 可用 296px），给右缘渐隐提示「还能往右滑」，
-   避免像上次那样末项被静默裁掉。360px 以上不加遮罩，免得最后一站无故发虚。 */
-@media (max-width: 360px) {
-  .station-nav { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+/* 品牌：徽记 + 站名字图；字图上叠一层按字形遮罩的流光 */
+.station-brand { display: flex; align-items: center; gap: .7rem; height: 48px; color: inherit; }
+.station-brand__mark { display: block; width: 34px; height: 38px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(63, 217, 192, .3)); transition: filter .3s, transform .5s cubic-bezier(.3, 1.6, .4, 1); }
+.station-brand__word { position: relative; display: block; width: 136px; }
+.station-brand__word img { display: block; width: 100%; height: auto; filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .8)) drop-shadow(0 0 10px rgba(232, 183, 58, .15)); }
+.station-brand__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 246, 220, .95) 48%, rgba(63, 217, 192, .7) 52%, transparent 62%) 0 0 / 260% 100% no-repeat;
+  background-position: 130% 0;
+  -webkit-mask: url(/font-images/brand.png) center / contain no-repeat;
+  mask: url(/font-images/brand.png) center / contain no-repeat;
+  pointer-events: none;
 }
+.station-brand:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
 
-/* ===== hover 专用（2026-10-01 移动端适配）：触摸端无真实 hover，
-   把这些规则收进 hover 媒体查询，避免点按后视觉态粘住。
-   含 :focus-within / :focus-visible 的组合选择器不在此列（键盘路径须保留）。===== */
+/* 主导航 */
+.station-nav {
+  position: relative;
+  min-width: 0;
+  align-self: stretch;
+  justify-self: center;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  mask-image: linear-gradient(to right, var(--nav-mask-left, #000), #000 var(--nav-mask-start, 0px), #000 calc(100% - var(--nav-mask-end, 0px)), var(--nav-mask-right, #000));
+}
+.station-nav[data-nav-start] { --nav-mask-left: transparent; --nav-mask-start: 22px; }
+.station-nav[data-nav-end] { --nav-mask-right: transparent; --nav-mask-end: 22px; }
+.station-nav::-webkit-scrollbar { display: none; }
+.station-nav ul { position: relative; display: flex; gap: 2px; width: max-content; height: 100%; list-style: none; margin: 0; padding: 0; }
+.station-nav li { flex: none; }
+
+/* 磁吸光标：贴在站头底边上的一截光轨，向上晕出一团柔光；
+   停在当前项上（金），悬停 / 聚焦时弹到目标项（青）。导航撑满站头高度，光轨与底边金线重合。 */
+.station-nav__beam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--beam-w, 0px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(var(--beam-x, 0px));
+  --beam-tone: 232, 183, 58;
+  background: radial-gradient(58% 70% at 50% 100%, rgba(var(--beam-tone), .17), transparent 72%);
+}
+.station-nav__beam::after {
+  content: '';
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(90deg, rgba(var(--beam-tone), 0), rgb(var(--beam-tone)) 30%, rgb(var(--beam-tone)) 70%, rgba(var(--beam-tone), 0));
+  box-shadow: 0 0 10px rgba(var(--beam-tone), .75), 0 -3px 16px rgba(var(--beam-tone), .3);
+}
+.station-nav__beam i { position: absolute; inset: 0; overflow: hidden; }
+.station-nav__beam i::before { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(var(--beam-tone), .14) 50%, transparent 70%); transform: translateX(-110%); }
+.station-nav[data-beam] .station-nav__beam { opacity: 1; }
+.station-nav[data-beam='hover'] .station-nav__beam { --beam-tone: 63, 217, 192; }
+.station-nav[data-beam-ready] .station-nav__beam { transition: transform .5s cubic-bezier(.25, 1.35, .4, 1), width .5s cubic-bezier(.25, 1.35, .4, 1), opacity .25s; }
+
+.station-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  height: 100%;
+  padding: 0 1rem;
+  color: #b9b2a0;
+  white-space: nowrap;
+  font-family: var(--song);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: color .25s, text-shadow .25s;
+}
+.station-link__glyph { flex-shrink: 0; color: var(--gold-deep); stroke-dasharray: 1; stroke-dashoffset: 0; transition: color .25s, filter .25s, transform .4s cubic-bezier(.3, 1.6, .4, 1); }
+.station-link__name { font-size: 15px; font-weight: 600; letter-spacing: .1em; }
+.station-link__verb { font-size: 12px; color: var(--faint); transition: color .25s; }
+.station-link__verb > span { margin-right: .3em; color: var(--gold-deep); }
+.station-link[aria-current='page'] { color: var(--gold); text-shadow: 0 0 14px rgba(232, 183, 58, .35); }
+.station-link[aria-current='page'] .station-link__glyph { color: var(--gold); filter: drop-shadow(0 0 4px rgba(232, 183, 58, .6)); }
+.station-link[aria-current='page'] .station-link__verb { color: rgba(232, 183, 58, .8); }
+.station-link:is(:focus-visible, .is-energized) { color: #f3fbf8; text-shadow: 0 0 14px rgba(63, 217, 192, .55); }
+.station-link:is(:focus-visible, .is-energized) .station-link__glyph { color: var(--cyan); filter: drop-shadow(0 0 5px rgba(63, 217, 192, .7)); transform: translateY(-1px) scale(1.12); }
+.station-link:is(:focus-visible, .is-energized) .station-link__verb { color: var(--cyan); }
+.station-link:focus-visible { outline: 1px dashed rgba(63, 217, 192, .7); outline-offset: -4px; }
+.station-link:active { transform: translateY(1px); }
+
+.station-about { position: relative; display: grid; place-items: center; height: 34px; padding: 0 .9rem 0 1.1rem; color: var(--dim); font-size: 13px; letter-spacing: .1em; border-left: 1px solid var(--line-dim); }
+.station-about[aria-current='page'] { color: var(--gold); }
+.station-about:focus-visible { outline: 1px solid var(--cyan); outline-offset: 2px; }
+
+/* 阅读进度：底边上的一条细光（滚动驱动动画；不支持的浏览器不显示） */
+.station-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gold-deep), var(--gold) 60%, var(--cyan)); box-shadow: 0 0 8px rgba(232, 183, 58, .6); pointer-events: none; opacity: 0; }
+
+.station-skip { position: fixed; top: 8px; left: 12px; z-index: 70; padding: .6rem 1rem; background: var(--paper); color: var(--ink); transform: translateY(-160%); }
+.station-skip:focus { transform: none; color: var(--ink); }
+#station-main { scroll-margin-top: calc(var(--menubar-height, 64px) + 16px); }
+.skin-toggle { display: inline-flex; border: 1px solid var(--line); font-size: 12px; }
+.skin-toggle button { padding: 3px 10px; color: var(--dim); background: none; border: 0; cursor: pointer; }
+.skin-toggle button[aria-pressed='true'] { color: var(--gold); }
+
 @media (hover: hover) and (pointer: fine) {
-
-.station-brand:hover .station-brand__lettering { filter: drop-shadow(0 1px 1px #070d07) drop-shadow(0 0 5px #e8c4822b); }
-
-.station-brand:hover .station-brand__mark { filter: saturate(.88) brightness(1) drop-shadow(1px 3px 2px #020704) drop-shadow(0 0 4px #76d9b92b); }
-
-.station-about:hover > span:last-child { transform: translate(2px,-2px); }
+  .station-brand:hover .station-brand__mark { filter: drop-shadow(0 0 10px rgba(63, 217, 192, .6)); transform: rotate(-8deg) scale(1.08); }
+  .station-about:hover { color: var(--gold); }
 }
+@media (max-width: 1100px) {
+  .station-header__body { gap: 1rem; }
+  .station-brand__word { width: 118px; }
+  .station-link { padding-inline: .7rem; }
+}
+@media (max-width: 760px) {
+  .station-header { --station-height: 56px; }
+  .station-header__body { gap: .4rem; padding-inline: .6rem; }
+  .station-brand__mark { width: 30px; height: 34px; }
+  .station-brand__word { display: none; }
+  .station-nav { justify-self: stretch; }
+  .station-link { padding-inline: .7rem; }
+  .station-link__name { font-size: 14px; letter-spacing: .04em; }
+  .station-about { padding-inline: .7rem .2rem; height: 28px; }
+}
+@media (max-width: 480px) { .station-link__glyph { display: none; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .station-header::after { animation: station-comet 11s linear infinite; }
+  .station-brand__shine { animation: station-shine 7s ease-in-out 1.2s infinite; }
+  .station-link.is-energized .station-link__glyph { animation: station-draw .7s ease-out both; }
+  .station-nav[data-beam='hover'] .station-nav__beam i::before { animation: station-sweep .7s ease-out; }
+  @supports (animation-timeline: scroll()) {
+    .station-progress { opacity: 1; animation: station-progress linear both; animation-timeline: scroll(root block); }
+  }
+}
+@keyframes station-comet { 0% { transform: translateX(-200px); } 100% { transform: translateX(calc(100vw + 40px)); } }
+@keyframes station-shine { 0%, 62% { background-position: 130% 0; } 100% { background-position: -30% 0; } }
+@keyframes station-draw { 0% { stroke-dashoffset: 1; } 100% { stroke-dashoffset: 0; } }
+@keyframes station-sweep { to { transform: translateX(110%); } }
+@keyframes station-progress { to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .station-header *, .station-header::after { animation: none !important; transition: none !important; } }
+@media (forced-colors: active) { .station-link[aria-current='page'] { outline: 1px solid Highlight; } .station-nav__beam { display: none; } }

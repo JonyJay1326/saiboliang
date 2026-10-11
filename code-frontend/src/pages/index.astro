@@ -1,137 +1,164 @@
 ---
-// 太仓：真实口粮建立焦点，探索预告引向专页；结构见 frontend-spec.md §4.1。
 import Base from '../layouts/Base.astro';
 import TicketCard from '../components/TicketCard.astro';
-import GithubLedgerRow from '../components/GithubLedgerRow.astro';
+import ModelPodium from '../components/ModelPodium.astro';
 import ModelRollRow from '../components/ModelRollRow.astro';
+import PlanCard from '../components/PlanCard.astro';
+import GithubLedgerRow from '../components/GithubLedgerRow.astro';
+import { marketDomain } from '../lib/stubs.js';
 import { github, models, tickets } from '../lib/data.js';
-import { freshness, hasFreeTier, modelPriceLabel, planStatusLabel, thous } from '../lib/format.js';
+import { freshness, planStatusLabel, thous, toBeijing, scoreTier } from '../lib/format.js';
 import { homeContent, homePlanPrice } from '../lib/home.js';
-import { modelIcon } from '../lib/vendors.js';
 import '../styles/home.css';
 
-const { listed, headTicket, restTickets, markets, marketTop, ghTop, modelTop, modelById, oldest } = homeContent(tickets(), models(), github());
-const leadRow = modelTop[0] ?? null;
-const leadModel = leadRow ? modelById.get(leadRow.modelId) ?? null : null;
-const leadIcon = leadModel ? modelIcon(leadModel.vendor) : null;
-const leadRepo = ghTop[0] ?? null;
+const modelFile = models();
+const { listed, headTicket, restTickets, markets, marketTop, ghTop, modelTop, modelById, oldest } = homeContent(tickets(), modelFile, github());
 const state = freshness(oldest);
+const firstModel = modelTop[0];
+const leadingModel = firstModel ? modelById.get(firstModel.modelId) : null;
+const eastPlan = marketTop.find((plan) => plan.group === 'domestic');
+const westPlan = marketTop.find((plan) => plan.group === 'overseas');
+const firstRepo = ghTop[0];
+const wall = headTicket ? [headTicket, ...restTickets] : restTickets;
+// 下方三块直接复用各专页的组件与样式（点将台 / 粮市 / 观星台），首页只截取前几名
+const modelRows = modelTop.map((row) => ({ ...row, model: modelById.get(row.modelId) ?? null }));
+const domainOf = Object.fromEntries(markets.map((market) => [market.group, marketDomain(market.items)]));
+const planWall = marketTop.slice(0, 4);
+const repoRows = ghTop.slice(0, 6);
+const stats = [
+  { value: listed.length, unit: '张', label: '在架粮票' },
+  { value: (modelFile.rankings?.intelligence ?? []).length, unit: '将', label: '点将台在册' },
+  { value: (modelFile.plans ?? []).length, unit: '档', label: '东西两市套餐' },
+  { value: ghTop.length, unit: '星', label: '本周星历' },
+];
+// 行情跑马灯：只是下方真实字段的滚动预览，完整数据与出处在各分区与专页
+const tape = [
+  ...modelTop.map((row) => { const model = modelById.get(row.modelId); return { tag: '点将', text: model?.name ?? row.modelId, value: `AA ${row.score}`, tone: 'gold' }; }),
+  ...marketTop.map((plan) => ({ tag: plan.group === 'domestic' ? '东市' : '西市', text: plan.product, value: homePlanPrice(plan), tone: plan.group === 'domestic' ? 'ver' : 'cyan' })),
+  ...ghTop.slice(0, 6).map((repo) => ({ tag: '观星', text: repo.repo, value: repo.periodStars == null ? '—' : `+${thous(repo.periodStars)}★`, tone: 'cyan' })),
+  ...listed.slice(0, 6).map((ticket) => ({ tag: '粮票', text: `${ticket.vendor} · ${ticket.title}`, value: `${scoreTier(ticket.score)}等`, tone: 'gold' })),
+];
 ---
-
-<Base description="找 AI 免费额度，看模型能力，比较编程套餐；期限、地区与价格口径如实展示。" dataUpdatedAt={oldest}>
-  <div class="home">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="home-hero__copy">
-        <p class="home-hero__place">太仓 <span>全站总览</span></p>
-        <h1 id="home-title" class="home-slogan">
-          <span class="visually-hidden">赛博粮站 · 大厂开仓，凭票领饭</span>
-          <span class="home-slogan__line" aria-hidden="true"><img src="/font-images/slogan.png" width="685" height="80" alt="" fetchpriority="high" /></span>
-          <span class="home-slogan__line home-slogan__line--last" aria-hidden="true"><img src="/font-images/slogan.png" width="685" height="80" alt="" /></span>
-        </h1>
-        <p class="home-hero__lede">找 AI 免费额度，看模型能力，<br />比较编程套餐。</p>
-        <a class="home-hero__link" href="/tickets/">粮票 · 领 <span aria-hidden="true">↗</span></a>
-        <p class="home-hero__hint">额度、期限、领取条件，一票看清。</p>
-      </div>
-      <div class="home-machine">
-        <span class="home-machine__rail" aria-hidden="true"></span>
-        <div class="home-machine__heading"><h2>本期口粮</h2><span>甲乙等非推广 · 按日轮换</span></div>
-        <div class="home-machine__seat">
-          <span class="home-machine__corner home-machine__corner--top" aria-hidden="true"></span>
-          <span class="home-machine__corner home-machine__corner--bottom" aria-hidden="true"></span>
-          {headTicket ? (
-            <div class="home-ticket home-ticket--lead">
-              <TicketCard ticket={headTicket} />
-              {headTicket.affiliate && <p class="home-ticket__disclosure">含推广 · 领取链接含推荐关系</p>}
-            </div>
-          ) : (
-            <div class="home-empty home-empty--lead"><strong>{listed.length ? '暂无符合推荐条件的主票' : '本期空仓'}</strong><p>{listed.length ? '其他在架粮票可在下方查看，含推广的票会明确标注。' : '当前没有符合上架条件的粮票。模型榜与套餐比价仍可查看。'}</p><a href="/tickets/">粮票 · 领 →</a></div>
-          )}
-        </div>
-        <p class="home-machine__note">从本站评分 ≥80 的非推广票前五张中轮换，活动条件以官方页为准。</p>
-      </div>
-    </section>
-
-    <section class="home-explore" aria-labelledby="home-explore-title">
-      <div class="home-explore__intro">
-        <h2 id="home-explore-title">领完，再逛逛。</h2>
-        <p>能力、花费、开源新作，<br />各有一处可看。</p>
-        {state.level !== 'ok' && <a class="home-snapshot" href="/about/">{oldest ? `存粮 · ${state.text}` : '数据尚未核验'} <span aria-hidden="true">↗</span></a>}
-      </div>
-      <a class="home-door home-door--models" href="/models/">
-        <span class="home-door__label">模型能力与报价 <span aria-hidden="true">↗</span></span>
-        <span class="home-door__name">点将台 · 比</span>
-        {leadRow ? (
-          <span class="home-door__model">
-            {leadIcon && <img src={leadIcon.url} width="32" height="32" alt="" />}
-            <span><strong>{leadModel?.name ?? leadRow.modelId}</strong><small>综合榜首 · AA {leadRow.score} 分</small></span>
-          </span>
-        ) : <span class="home-door__fact">综合榜暂未提供</span>}
-        <span class="home-door__detail">{leadRow ? modelPriceLabel(leadModel) : '查看综合榜与编程榜'}{leadRow && <small>输入 / 输出 · USD / 百万 Token</small>}</span>
-      </a>
-      <a class="home-door home-door--market" href="/plans/">
-        <span class="home-door__label">编程套餐与额度 <span aria-hidden="true">↗</span></span>
-        <span class="home-door__name">粮市 · 买</span>
-        <span class="home-door__markets">
-          {markets.map((market) => <span><small>{market.group === 'domestic' ? '东市 · 国内' : '西市 · 海外'}</small><strong>{market.items[0] ? homePlanPrice(market.items[0]) : '暂无套餐'}</strong><span>{market.items[0]?.product ?? '等待收录'}</span>{market.items[0]?.source === 'aggregator' && <small>第三方整理价</small>}{market.items[0] && market.items[0].status !== 'available' && <small>{planStatusLabel(market.items[0].status)}</small>}</span>)}
-        </span>
-        <span class="home-door__detail">各市推荐序首项 · 常规起步价</span>
-      </a>
-      <a class="home-door home-door--github" href="/github/">
-        <span class="home-door__label">热门开源与用途 <span aria-hidden="true">↗</span></span>
-        <span class="home-door__name">观星台 · 望</span>
-        <span class="home-door__repo"><strong>{leadRepo?.repo ?? '周榜暂未提供'}</strong><span>{leadRepo?.periodStars == null ? '周新增未提供' : `+${thous(leadRepo.periodStars)} ★ / 周`}</span></span>
-        <span class="home-door__detail">{leadRepo?.description ?? '看看 AI 开发者正在关注什么。'}</span>
-      </a>
-    </section>
-
-    {restTickets.length > 0 && (
-      <section class="home-rations" aria-labelledby="home-tickets">
-        <div class="home-section-heading">
-          <div><h2 id="home-tickets">还有这些口粮</h2><p>同批在架，按默认推荐序继续排开。</p></div>
-          <a href="/tickets/">全部 {listed.length} 张粮票 <span aria-hidden="true">↗</span></a>
-        </div>
-        <ul class="r4-stubs home-rations__list">
-          {restTickets.map((ticket, index) => <li class="home-ticket"><TicketCard ticket={ticket} index={index + 1} />{ticket.affiliate && <p class="home-ticket__disclosure">含推广 · 领取链接含推荐关系</p>}</li>)}
-        </ul>
-      </section>
-    )}
-
-    <section class="home-data" aria-labelledby="home-data-title">
-      <div class="home-section-heading home-section-heading--data">
-        <div><h2 id="home-data-title">把数据，摊开看。</h2><p>先看能力，再看价格；发现好工具，也是一种省。</p></div>
-        <a href="/about/">数据来源与口径 <span aria-hidden="true">↗</span></a>
-      </div>
-      <section class="home-models" aria-labelledby="home-models">
-        <div class="home-subheading"><h3 id="home-models">点将台 <span>模型综合榜 · 前五</span></h3><a href="/models/">点将台 · 比 <span aria-hidden="true">↗</span></a></div>
-        {modelTop.length > 0 ? (
-          <div class="roll">
-            <div class="roll__head" aria-hidden="true"><span>座次<em>排名</em></span><span>名将<em>模型</em></span><span>入营<em>上线</em></span><span>俸禄<em>输入 / 输出</em></span><span class="roll__num">战力<em>AA 分</em></span><span class="roll__num">距榜首<em>分差</em></span></div>
-            <ol class="roll__rows">{modelTop.map((row) => <ModelRollRow row={row} model={modelById.get(row.modelId) ?? null} topScore={modelTop[0].score} />)}</ol>
+<Base description="大厂开仓，凭票领饭。找到 AI 免费额度，比较模型能力与编程套餐，发现开源好工具。" dataUpdatedAt={oldest}>
+  <div class="granary" data-granary>
+    <section class="taicang" data-coin-stage aria-labelledby="home-title">
+      <canvas class="taicang__canvas" data-coin-canvas aria-hidden="true"></canvas>
+      <div class="taicang__grid" aria-hidden="true"></div>
+      <div class="taicang__inner">
+        <div class="taicang__copy">
+          <p class="taicang__kicker"><span class="taicang__pulse" aria-hidden="true"></span><span data-decode>TAICANG // 太仓 · 全站总仓</span></p>
+          <h1 id="home-title" class="taicang__title"><img src="/font-images/slogan.png" width="685" height="80" alt="大厂开仓，凭票领饭" fetchpriority="high" /><span class="taicang__title-shine" aria-hidden="true"></span></h1>
+          <p class="taicang__lede">AI 免费额度、模型能力与编程套餐，<br />逐张核验，<em>凭票领粮</em>，按需挑选。</p>
+          <div class="taicang__actions">
+            <a class="grain-button" href="/tickets/">领粮票 <span aria-hidden="true">›</span></a>
+            <a class="taicang__ghost" href="#granary-intel">看行情 <span aria-hidden="true">↓</span></a>
           </div>
-        ) : <p class="home-empty">综合榜暂未提供，待来源恢复后更新。</p>}
-        <p class="home-data__note">报价按输入 / 输出排列，单位为 USD / 百万 Token。</p>
-      </section>
-      <section class="home-market" aria-labelledby="home-market">
-        <div class="home-subheading"><h3 id="home-market">粮市 <span>东西两市 · 五项预览</span></h3><a href="/plans/">粮市 · 买 <span aria-hidden="true">↗</span></a></div>
-        {marketTop.length > 0 ? (
-          <ol class="home-market__list">
-            {marketTop.map((plan, index) => (
-              <li class="home-market__row" data-market={plan.group}>
-                <span class="home-market__rank" aria-label={`首页展示序号 ${index + 1}`}>{String(index + 1).padStart(2, '0')}</span>
-                <span class="home-market__badge">{plan.group === 'domestic' ? '东市' : '西市'}</span>
-                <div class="home-market__identity"><a href={`/plans/${plan.id}/`}>{plan.vendor} · {plan.product}</a><span class="home-market__models">{plan.models?.length ? plan.models.join(' / ') : '模型清单未提供'}</span></div>
-                <div class="home-market__price"><strong>{homePlanPrice(plan)}</strong><small>{hasFreeTier(plan) ? '含免费档 · 付费常规价' : '付费常规档'}{plan.source === 'aggregator' && ' · 第三方整理价'}{plan.status !== 'available' && ` · ${planStatusLabel(plan.status)}`}</small></div>
-                <a class="home-market__open" href={`/plans/${plan.id}/`} aria-label={`查看套餐详情：${plan.product}`}>兑 <span aria-hidden="true">↗</span></a>
-              </li>
-            ))}
-          </ol>
-        ) : <p class="home-empty">本期没有套餐数据，等待收录。</p>}
-        <p class="home-data__note">各市按编辑推荐序交错展示；币种与付款周期保留原值，不跨市换算。</p>
-      </section>
-      <section class="home-github" aria-labelledby="home-github">
-        <div class="home-subheading"><h3 id="home-github">观星台 <span>AI 开源周榜 · 前十</span></h3><a href="/github/">观星台 · 望 <span aria-hidden="true">↗</span></a></div>
-        {ghTop.length > 0 ? <div class="ledger"><ol>{ghTop.map((item, index) => <GithubLedgerRow item={item} index={index + 1} />)}</ol></div> : <p class="home-empty">开源周榜暂未提供，待来源恢复后更新。</p>}
-      </section>
+          <dl class="taicang__stats">{stats.map((stat) => <div><dt>{stat.label}</dt><dd><strong data-count={stat.value}>{stat.value}</strong><small>{stat.unit}</small></dd></div>)}</dl>
+          <a href="/about/" class="taicang__fresh" data-level={state.level}>数据核验 <time datetime={oldest ?? undefined}>{toBeijing(oldest) ?? '尚未核验'}</time>{state.level !== 'ok' && <span class="taicang__fresh-stale" role="status">{state.text}</span>}</a>
+        </div>
+        <div class="taicang__coin" data-coin-anchor aria-hidden="true">
+          <svg class="taicang__dial" viewBox="0 0 400 400"><circle cx="200" cy="200" r="196" /><circle class="taicang__dial-ticks" cx="200" cy="200" r="186" /><circle class="taicang__dial-arc" cx="200" cy="200" r="176" /></svg>
+          <div class="taicang__fallback"><img src="/font-images/brand.png" width="753" height="184" alt="" loading="lazy" /></div>
+          <span class="taicang__hud taicang__hud--tl"><b data-coin-label>太仓 · 赛博粮站通宝</b></span>
+          <span class="taicang__hud taicang__hud--br" data-coin-hint>拨动粮粒 · 点击放粮</span>
+        </div>
+      </div>
+      <nav class="taicang__doors" aria-label="先看看行情">
+        <a href="/models/" class="taicang-door" data-form="models" data-etched>
+          <span class="taicang-door__badge" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#station-glyph-3" /></svg></span>
+          <span class="taicang-door__body">
+            <span class="taicang-door__label">点将台</span>
+            <strong>{leadingModel?.name ?? firstModel?.modelId ?? '模型榜待更新'}</strong>
+            <span class="taicang-door__meta">{firstModel ? `综合榜首 · AA ${firstModel.score}` : '等待来源恢复'}</span>
+          </span>
+          <span class="taicang-door__go" aria-hidden="true">→</span>
+        </a>
+        <a href="/plans/" class="taicang-door" data-form="plans" data-etched>
+          <span class="taicang-door__badge" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#station-glyph-4" /></svg></span>
+          <span class="taicang-door__body">
+            <span class="taicang-door__label">东西粮市</span>
+            <strong>{eastPlan?.product ?? '东市暂无套餐'}</strong>
+            <span class="taicang-door__meta">{eastPlan ? `${homePlanPrice(eastPlan)}${eastPlan.source === 'aggregator' ? ' · 第三方整理价' : ''}${eastPlan.status !== 'available' ? ` · ${planStatusLabel(eastPlan.status)}` : ''}` : '等待收录'}</span>
+          </span>
+          <span class="taicang-door__go" aria-hidden="true">→</span>
+        </a>
+        <a href="/github/" class="taicang-door" data-form="github" data-etched>
+          <span class="taicang-door__badge" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#station-glyph-2" /></svg></span>
+          <span class="taicang-door__body">
+            <span class="taicang-door__label">观星台</span>
+            <strong>{firstRepo?.repo ?? '开源榜待更新'}</strong>
+            <span class="taicang-door__meta">{firstRepo ? (firstRepo.periodStars == null ? '周新增未提供' : `周新增 +${thous(firstRepo.periodStars)} ★`) : '等待来源恢复'}</span>
+          </span>
+          <span class="taicang-door__go" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </section>
+
+    {tape.length > 0 && <div class="granary-tape" aria-hidden="true"><div class="granary-tape__track">{[0, 1].map(() => <div class="granary-tape__run">{tape.map((item) => <span class={`granary-tape__item granary-tape__item--${item.tone}`}><b>{item.tag}</b>{item.text}<em>{item.value}</em></span>)}</div>)}</div></div>}
+
+    <section class="granary-board granary-rations" aria-labelledby="home-tickets" data-reveal>
+      <header class="granary-section-head">
+        <h2 id="home-tickets"><img src="/font-images/sec-liangpiao.png" width="153" height="80" alt="粮票" loading="lazy" /></h2>
+        <a class="grain-text-link" href="/tickets/">全部 {listed.length} 张 <span aria-hidden="true">↗</span></a>
+      </header>
+      {!headTicket && <div class="granary-empty"><h3>{listed.length ? '暂无符合推荐条件的主票' : '本期空仓'}</h3><p>先看看其余粮票，或去点将台挑选模型。</p><a href="/models/">前往点将台 ↗</a></div>}
+      {wall.length > 0 && <ul class="r4-stubs granary-ticket-wall">
+        {wall.map((ticket, index) => <li class={headTicket && index === 0 ? 'granary-featured' : undefined}>{headTicket && index === 0 && <span class="granary-featured__flag">本期主粮</span>}<TicketCard ticket={ticket} index={index} /></li>)}
+      </ul>}
+    </section>
+
+    <section class="granary-board" id="granary-intel" aria-labelledby="home-models" data-reveal>
+      <header class="granary-section-head">
+        <h2 id="home-models"><img src="/font-images/sec-jiang.png" width="226" height="80" alt="点将台" loading="lazy" /></h2>
+        <a class="grain-text-link" href="/models/">完整榜单 <span aria-hidden="true">↗</span></a>
+      </header>
+      {modelRows.length === 0 ? <p class="granary-empty">模型榜暂未提供，等待来源恢复。</p> : <>
+        <div class="podium">{modelRows.slice(0, 3).map((g) => <ModelPodium row={g} model={g.model} />)}</div>
+        {modelRows.length > 3 && <div class="roll">
+          <div class="roll__head" aria-hidden="true">
+            <span>座次<em>排名</em></span>
+            <span>名将<em>模型</em></span>
+            <span>入营<em>上线</em></span>
+            <span>俸禄<em>输入 / 输出</em></span>
+            <span class="roll__num">战力<em>AA 分</em></span>
+            <span class="roll__num">距榜首<em>分差</em></span>
+          </div>
+          <ol class="roll__rows">{modelRows.slice(3).map((g) => <ModelRollRow row={g} model={g.model} topScore={modelRows[0].score} />)}</ol>
+        </div>}
+      </>}
+    </section>
+
+    <section class="granary-board" aria-labelledby="home-plans" data-reveal>
+      <header class="granary-section-head">
+        <h2 id="home-plans"><img src="/font-images/sec-shi.png" width="157" height="80" alt="粮市" loading="lazy" /></h2>
+        <a class="grain-text-link" href="/plans/">逛逛粮市 <span aria-hidden="true">↗</span></a>
+      </header>
+      {planWall.length === 0 ? <p class="granary-empty">本期暂无套餐，等待收录。</p> : <ul class="r4-stubs r4-stubs--plan granary-plan-wall">
+        {planWall.map((plan, index) => <li><PlanCard plan={plan} index={index + 1} domain={domainOf[plan.group]} /></li>)}
+      </ul>}
+    </section>
+
+    <section class="granary-board" aria-labelledby="home-github" data-reveal>
+      <header class="granary-section-head">
+        <h2 id="home-github"><img src="/font-images/sec-guanxing.png" width="228" height="80" alt="观星台" loading="lazy" /></h2>
+        <a class="grain-text-link" href="/github/">完整星历 <span aria-hidden="true">↗</span></a>
+      </header>
+      {repoRows.length === 0 ? <p class="granary-empty">开源榜暂未提供，等待来源恢复。</p> : <div class="ledger">
+        <ol>{repoRows.map((item, index) => <GithubLedgerRow item={item} index={index + 1} />)}</ol>
+      </div>}
+    </section>
+
+    <section class="granary-outro" aria-labelledby="granary-outro-title" data-reveal>
+      <img class="granary-outro__seal" src="/font-images/sec-yichuan.png" width="158" height="80" alt="" loading="lazy" />
+      <div><p class="granary-kicker">好粮不独享</p><h2 id="granary-outro-title">发现好机会，给大伙儿捎一份。</h2></div>
+      <a href="/tip/" class="grain-button">驿传 · 报 <span aria-hidden="true">›</span></a>
     </section>
   </div>
 </Base>
+<script>
+  import { mountHome } from '../scripts/home-stage.js';
+  let release: () => void = () => {};
+  document.addEventListener('astro:before-swap', () => { release(); release = () => {}; });
+  document.addEventListener('astro:page-load', () => { release(); release = mountHome(); });
+  release = mountHome();
+</script>

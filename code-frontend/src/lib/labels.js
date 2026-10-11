@@ -1,4 +1,6 @@
 // 枚举的中文标签。Astro 与 Vue 两端共用同一份，避免重复维护（TASKS.md F7）。
+// 只保留实际有消费方的枚举：DURATION（契约 §3 时长）与 SORT_VIEWS（筛选档位）随
+// /tickets 筛选区于 2026-09-21 撤除后已无引用，一并删除（2026-09-30 死代码清理）。
 
 export const CATEGORY = {
   'api-quota': 'API 额度',
@@ -11,12 +13,6 @@ export const REGION = {
   global: '全球',
   'overseas-only': '仅海外',
   unknown: '地区未提供',
-};
-
-export const DURATION = {
-  limited: '限时',
-  longterm: '长期',
-  unknown: '未知',
 };
 
 // 事件类型角标（frontend-spec.md §5.5 / §8）：与契约 eventType 枚举一一对应。
@@ -34,9 +30,3 @@ export const EVENT_TYPE = {
   'hands-on': '产品体验',
   'deep-analysis': '深度分析',
 };
-
-export const SORT_VIEWS = [
-  { key: 'default', label: '默认' },
-  { key: 'newest', label: '最新' },
-  { key: 'score', label: '等级最高' },
-];

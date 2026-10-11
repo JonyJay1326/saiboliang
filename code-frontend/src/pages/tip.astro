@@ -1,7 +1,7 @@
 ---
 // /tip 驿传 —— frontend-spec §4.9 / 施工单 §4
 // 无岛页：原生脚本挂 astro:page-load；不引入 Vue 岛（§10.2 有岛页已超 60% 阈值）。
-// 视觉：复用站内既有类名（stn / stn-note / visually-hidden / ticket__cta），表单件样式见 site.css「驿传」段。
+// 视觉：复用站内既有类名（stn / stn-note / visually-hidden / tip-submit），表单件样式见 site.css「驿传」段。
 import Base from '../layouts/Base.astro';
 import PageIntro from '../components/PageIntro.astro';
 ---
@@ -100,7 +100,7 @@ import PageIntro from '../components/PageIntro.astro';
         <p id="tip-status" role="status" aria-live="polite"></p>
 
         <p>
-          <button type="submit" class="ticket__cta tip-submit">递交</button>
+          <button type="submit" class="tip-submit">递交</button>
         </p>
       </form>
 

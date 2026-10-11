@@ -43,12 +43,12 @@
   .r4-stub--plan { grid-template-columns: minmax(0, 1fr) 9.5rem; }
   .r4-stub.r4-is-live { transition-duration: .08s; }
   .r4-stub.r4-is-in { animation: r4-boot .8s var(--ease-out) calc(var(--i) * 60ms) both; }
-  .r4-stub:is(:hover, :focus-within) { --lift: -2px; filter: var(--glow-lift) drop-shadow(0 0 22px var(--tier-soft)); }
+  .r4-stub:is(:hover, :focus-within) { --lift: -2px; filter: var(--glow-lift) drop-shadow(0 0 16px color-mix(in srgb, var(--tier) 34%, transparent)); }
   .r4-stub:active { --lift: 1px; }
   :where(.r4-stub, .r4-sheet, .r4-tip) { --ease-out: cubic-bezier(.16, 1, .3, 1); }
 
   .r4-stub__main { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: .45rem; padding: 1.05rem 1.25rem 1rem 1.35rem; border: 1px solid var(--edge); border-right: 0; border-radius: var(--radius) 0 0 var(--radius); background:
-      radial-gradient(220px circle at var(--mx) var(--my), color-mix(in srgb, var(--tier) 28%, transparent), transparent 68%),
+      radial-gradient(200px circle at var(--mx) var(--my), color-mix(in srgb, var(--tier) 13%, transparent), transparent 70%),
       linear-gradient(125deg, var(--tier-bg1), var(--tier-bg2) 62%);
     background-blend-mode: screen, normal; color: inherit; text-decoration: none;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.08), inset 0 0 0 1px rgba(255,255,255,.03), 0 0 28px -12px var(--tier-soft);
@@ -57,7 +57,7 @@
   a.r4-stub__main { cursor: pointer; }
   .r4-stub--plan .r4-stub__main { gap: .32rem; padding: .8rem 1rem; }
   .r4-stub:is(:hover, :focus-within) .r4-stub__main {
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 0 1px color-mix(in srgb, var(--tier) 35%, transparent), 0 0 36px -8px var(--tier-soft);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 0 0 1px color-mix(in srgb, var(--tier) 22%, transparent), 0 0 30px -10px var(--tier-soft);
   }
   
   .r4-stub__main::after {
@@ -213,7 +213,7 @@
   .r4-cta:focus-visible { outline: 2px solid var(--tier-ink); outline-offset: 2px; }
   .r4-cta span { display: inline-block; letter-spacing: 0; text-indent: 0; transition: transform .25s ease; }
   .r4-barcode { width: 100%; height: 12px; color: var(--tier); opacity: .5; transition: opacity .2s ease, filter .2s ease; }
-  .r4-stub:is(:hover, :focus-within) .r4-barcode { opacity: .85; filter: drop-shadow(0 0 4px var(--tier-soft)); }
+  .r4-stub:is(:hover, :focus-within) .r4-barcode { opacity: .8; }
   .r4-stub__serial { font-family: var(--code); font-size: var(--fs-micro); letter-spacing: .06em; color: var(--tier); opacity: .9; }
 
   
@@ -271,13 +271,13 @@
   }
 
   
+  /* 取件页容器（Base.astro 里是 createElement('div') + .r4-sheet，不是 <dialog>）。
+     2026-09-30 清理：原生 <dialog> 时代的 ::backdrop / .r4-is-out 三条规则随之失效
+     —— ::backdrop 只在 dialog 元素上生效，.r4-is-out 全站无处添加（退场动画走
+     Base.astro 的 WAAPI），一并删除。随之失效的 @keyframes r4-fade / r4-sink 也已删。 */
   .r4-sheet { width: min(760px, calc(100vw - 2rem)); max-height: min(88vh, 920px); margin: auto; padding: 0; color: var(--text); background: transparent; border: 0; overflow: visible; }
-  .r4-sheet::backdrop { background: radial-gradient(680px circle at 50% 32%, color-mix(in srgb, var(--tier, #e8b73a) 14%, transparent), rgba(4, 3, 10, .82) 56%); backdrop-filter: blur(3px) saturate(.8); }
-  .r4-sheet.r4-is-in::backdrop { animation: r4-fade .22s ease both; }
-  .r4-sheet.r4-is-out::backdrop { animation: r4-fade .17s ease reverse both; }
   .r4-sheet__panel { position: relative; display: flex; flex-direction: column; max-height: inherit; overflow: hidden; border: 1px solid var(--tier); border-radius: var(--radius); background: linear-gradient(180deg, var(--tier-bg2), rgba(8,7,16,.98) 40%); box-shadow: 0 0 0 1px rgba(0,0,0,.6), 0 0 60px -12px var(--tier-soft), 0 30px 80px -30px #000; }
   .r4-sheet.r4-is-in .r4-sheet__panel { animation: r4-print .55s var(--ease-out) both; }
-  .r4-sheet.r4-is-out .r4-sheet__panel { animation: r4-sink .17s cubic-bezier(.4,0,.7,.2) both; }
   .r4-sheet__scanline { z-index: 6; }
   .r4-sheet.r4-is-in .r4-sheet__scanline { animation: r4-scan .55s var(--ease-out) 1; }
 
@@ -434,9 +434,7 @@
   
   @keyframes r4-boot { 0% { opacity: 0; translate: 0 14px; clip-path: inset(-40px -40px 100% -40px); } 45% { opacity: 1; } 100% { opacity: 1; translate: none; clip-path: inset(-40px -40px -40px -40px); } }
   @keyframes r4-print { 0% { opacity: 0; translate: var(--dx, 0px) var(--dy, 12px); scale: .985; clip-path: inset(0 0 100% 0); } 40% { opacity: 1; } 100% { opacity: 1; translate: none; scale: none; clip-path: inset(0 0 0 0); } }
-  @keyframes r4-sink { to { opacity: 0; transform: translateY(8px) scale(.99); } }
   @keyframes r4-drawer { from { transform: translateY(100%); } }
-  @keyframes r4-fade { from { opacity: 0; } }
   @keyframes r4-scan { 0% { opacity: 1; transform: translateY(-100%); } 75% { opacity: 1; } 100% { opacity: 0; transform: translateY(0); } }
   
   @keyframes r4-neon { 0% { opacity: 0; scale: 1.3; } 45% { opacity: 1; scale: .96; } 58% { opacity: .45; } 70%, 100% { opacity: 1; scale: 1; } }
@@ -456,11 +454,17 @@
     .r4-stub__scan, .r4-stub__holo, .r4-sheet__scanline { display: none; }
     .r4-stub.r4-is-in .r4-stub__seal, .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-glitch::before, .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-glitch::after, .r4-sheet.r4-is-in .r4-glitch::before, .r4-sheet.r4-is-in .r4-glitch::after, .r4-stub[data-urgent] .r4-stub__left::before, .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-beam__tick, .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-beam__deal { animation: none; }
     .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__side { transform: none; box-shadow: inset 1px 0 0 var(--tier-faint), 0 0 24px -10px var(--tier-soft); }
-    .r4-sheet *, .r4-sheet::backdrop, .r4-sheet .r4-sheet__panel { animation: none !important; }
+    .r4-sheet *, .r4-sheet .r4-sheet__panel { animation: none !important; }
   }
 
-/* 正式站载体：独立详情与现有历史记录/请求控制器共用 R4 内文。 */
+/* ===== 正式站载体：独立详情与现有历史记录/请求控制器共用 R4 内文 =====
+   R4 组件体系的类名全部经 stubs.js 的 namespace() 加 r4- 前缀，本节是同一套视觉
+   语言在「整页」形态下的落位，按职责分三段：
+   ① 整页容器与内部留白归零；② 站内链接 / 焦点可见性收口；③ 弹框形态覆盖。
+   （2026-09-30：原为一行无标题注释，追加块看不出边界，补上分段标题。） */
 .r4-sheet--page { width: min(760px, 100%); max-height: none; margin: 1.5rem auto; }
+
+/* ---- ① 整页容器：弹框内的边距 / 滚动 / 贴底 dock 在整页里都是多余的一层 ---- */
 .r4-sheet--page .r4-sheet__scroll { overflow: visible; }
 .r4-sheet .r4-sheet__sec { margin: 0; }
 .r4-sheet .r4-sheet__dock { margin: 0; flex-shrink: 0; }
@@ -475,32 +479,49 @@
 .r4-stub :is(.r4-cta, .r4-tag), .r4-sheet .r4-mini { color: inherit; }
 .r4-stub .r4-cta, .r4-sheet .r4-cta { color: #0b0916; }
 .r4-sheet .r4-minis .r4-mini { border: 1px solid var(--tier-faint); border-right-style: dashed; }
+
+/* ---- ② 站内链接与焦点可见性：R4 默认按「弹框在暗底上」配色，整页底色不同，需收口 ---- */
 .r4-sheet a:focus-visible, .r4-sheet button:focus-visible { outline: 2px solid var(--tier); outline-offset: 3px; }
+
+/* ---- ③ 弹框形态覆盖：Base.astro 建的 overlay 带 .preview，需盖掉 .preview 系的弹框尺寸 ---- */
 .preview.r4-sheet { width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 1rem; }
 .preview.r4-sheet .preview__panel { width: min(760px, calc(100vw - 2rem)); max-width: 760px; max-height: min(88dvh, 920px); }
 .preview.r4-sheet .preview__panel::before { width: auto; height: 3px; inset: 0 0 auto; border: 0; }
 .preview.r4-sheet .preview__panel::after { display: none; }
 .preview.r4-sheet .preview__backdrop { background: radial-gradient(680px circle at 50% 32%, color-mix(in srgb, var(--tier) 14%, transparent), rgba(4,3,10,.82) 56%); backdrop-filter: blur(3px) saturate(.8); }
 .preview.r4-sheet .preview__bar { justify-content: flex-start; padding: .55rem .6rem .55rem 1.1rem; }
-.preview.r4-sheet .preview__label { display: flex; flex-wrap: wrap; gap: .25rem .8rem; min-width: 0; font: inherit; color: inherit; }
+.preview.r4-sheet .preview__label { display: flex; flex-wrap: wrap; gap: .25rem .8rem; min-width: 0; margin-right: auto; font: inherit; color: inherit; }
 .preview.r4-sheet .preview__close { flex: none; min-height: 0; box-shadow: none; }
 .preview.r4-sheet .preview__scroll { padding: 0; scrollbar-gutter: auto; }
-.preview.r4-sheet .preview__dock { padding: 0; border: 0; background: transparent; }
+.preview.r4-sheet .preview__dock { flex-shrink: 0; padding: 0; border: 0; background: transparent; }
+.preview.r4-sheet .preview__dock[hidden] { display: none; }
 .preview.r4-sheet .preview__content > :first-child { margin-top: 0; }
 .preview.r4-sheet .preview__content > :last-child { margin-bottom: 0; }
 .preview.r4-sheet .preview__skeleton, .preview.r4-sheet :is(.preview__loading, .preview__error) { margin: 1.2rem; }
+/* commerce.css 删除后，取件中的骨架屏仍由 Base.astro 渲染。 */
+.preview.r4-sheet .preview__skeleton { display: grid; gap: 1rem; padding: 1.8rem 0 0; }
+.preview.r4-sheet .preview__skeleton i { display: block; height: 1rem; width: 65%; background: var(--line-dim); animation: previewPulse 1.2s ease-in-out infinite; }
+.preview.r4-sheet .preview__skeleton i:first-child { height: 2rem; width: 45%; }
+.preview.r4-sheet .preview__skeleton i:last-child { height: 6rem; width: 100%; opacity: .5; }
 .r4-sheet .r4-sheet__panel { --edge: var(--tier); }
 .r4-tip { z-index: 80; }
 @media (max-width: 640px) {
   .preview.r4-sheet { align-items: flex-end; padding: 0; }
   .preview.r4-sheet .preview__panel { width: 100%; max-width: none; max-height: 92dvh; }
   .preview.r4-sheet .preview__bar { flex-wrap: nowrap; }
+  /* 窄屏顶栏字距收紧：.preview__label 的 font:inherit 会带回 0.1em，
+     宽屏可用、窄屏挤占关闭键，故在此覆盖（2026-09-30 随 commerce.css 清理并入本断点）。 */
+  .preview.r4-sheet .preview__label { letter-spacing: .02em; }
   .r4-sheet .r4-sheet__dock { padding-bottom: max(.7rem, env(safe-area-inset-bottom)); }
   .r4-sheet--page { width: 100%; margin: 1rem auto; }
   .r4-sheet--page .r4-sheet__panel { border-radius: var(--radius); border-bottom: 1px solid var(--tier); }
   .r4-sheet .r4-minis, .r4-sheet .r4-perks { grid-template-columns: minmax(0, 1fr); }
   .r4-sheet .r4-scale__lab { max-width: 6rem; white-space: normal; }
 }
+
+/* ===== 朴素档降级（frontend-spec.md §10.1 约束 #5：皮肤档只切装饰层，不改 DOM/字段） =====
+   Base.astro 的 SHOW_SKIN_TOGGLE 当前为 false（赛博档增量未定稿），本段暂不可达，
+   但规则是活的 —— 不要当死代码删。 */
 [data-skin="plain"] :is(.r4-stub, .r4-sheet) *,
 [data-skin="plain"] :is(.r4-stub, .r4-sheet) *::before,
 [data-skin="plain"] :is(.r4-stub, .r4-sheet) *::after,
@@ -511,6 +532,7 @@
   :is(.r4-stub, .r4-sheet) *, :is(.r4-stub, .r4-sheet) *::before, :is(.r4-stub, .r4-sheet) *::after { animation: none !important; transition: none !important; }
 }
 
+/* 票卡标题链接：整页与弹框两态下都不该继承全局链接色（票面配色由 r4-stub 体系给定） */
 .r4-stub__title a { color: inherit; }
 
 /* 乙档非悬停态：:not(:hover) 表示「未悬停」而非「悬停」，故留在 hover 媒体查询之外 */
@@ -525,15 +547,15 @@
 
   
 .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__side {
-    transform: translateX(7px) rotate(1.6deg);
-    box-shadow: -6px 4px 18px -6px rgba(0,0,0,.55), 0 0 28px -8px var(--tier-soft);
+    transform: translateX(5px) rotate(1deg);
+    box-shadow: -6px 4px 18px -6px rgba(0,0,0,.55), 0 0 18px -10px var(--tier-soft);
   }
 
-  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__holo { opacity: 1; animation: r4-holo 1.4s linear 2; }
+  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__holo { opacity: .4; animation: r4-holo 1.4s linear 1; }
 
-  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__seal { transform: rotate(-1deg) scale(1.08); filter: drop-shadow(0 0 16px rgba(255,70,50,.85)); }
+  .r4-stub:is(:hover, :where(li:hover > .r4-stub)) .r4-stub__seal { transform: rotate(-2deg) scale(1.04); filter: drop-shadow(0 0 10px rgba(255,70,50,.55)); }
 
-  .r4-cta:hover { box-shadow: 0 0 22px var(--tier), inset 0 1px 0 rgba(255,255,255,.5); filter: brightness(1.06); }
+  .r4-cta:hover { box-shadow: 0 0 12px var(--tier-faint), inset 0 1px 0 rgba(255,255,255,.45); filter: brightness(1.05); }
 
   .r4-cta:hover::before { animation: r4-sweep .6s ease-out 1; }
 

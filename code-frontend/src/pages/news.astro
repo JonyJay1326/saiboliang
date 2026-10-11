@@ -187,14 +187,14 @@ const jsonLd = {
           近七日入库<b>{recentCount}</b> 条
         </p>
 
-        <div class="dibao-rail__block">
-          <h3 class="dibao-rail__h">日期跳转</h3>
-          <ul class="dibao-days">
+        <details class="dibao-rail__block dibao-rail__dates">
+          <summary class="dibao-rail__h">日期跳转</summary>
+          <ul class="dibao-days" tabindex="0" aria-label="日期跳转列表">
             {days.map((day) => (
               <li><a href={`#dibao-${day.key}`} title={`跳至 ${day.key}`}>{day.short}</a></li>
             ))}
           </ul>
-        </div>
+        </details>
 
         <div class="dibao-rail__block">
           <h3 class="dibao-rail__h">按事件筛</h3>

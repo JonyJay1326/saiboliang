@@ -93,83 +93,12 @@ table a {
   white-space: nowrap;
 }
 
-/* ===== 页头：菜单条吸顶（票根版，backup/menubar-ticket-stub） ===== */
-
-
-
-
-
-
-
-
-main,
-body > footer {
-  isolation: isolate;
-}
-
-
-
-
-
-
-
-.skin-toggle {
-  display: inline-flex;
-  border: 1px solid var(--line);
-  font-size: 12px;
-  letter-spacing: .2em;
-}
-
-.skin-toggle button {
-  appearance: none;
-  cursor: pointer;
-  font: inherit;
-  letter-spacing: inherit;
-  padding: 3px 10px;
-  color: var(--dim);
-  background: none;
-  border: 0;
-}
-
-.skin-toggle button[aria-pressed="true"] {
-  color: var(--gold);
-  background: rgba(232, 183, 58, .12);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-}
-
-@keyframes brand-sheen {
-  0%, 72% { background-position: 100% 0; }
-  100% { background-position: 0% 0; }
-}
-
-@keyframes rail-pulse {
-  0% { background-position: -30% 0; }
-  45%, 100% { background-position: 130% 0; }
-}
-
+/* 旧站头（.menubar 菜单条 + .topbar__logo 站徽）的样式已于 2026-09-30 随 R4 改版整体删除，
+   现行站头是 station-header.css 的 .station-header。原先夹在旧站头块里的三样也一并清掉：
+   · .skin-toggle（皮肤档切换控件，frontend-spec.md §5.9）→ 移至 station-header.css，
+     Base.astro 的 SHOW_SKIN_TOGGLE 当前为 false，组件与样式都是活的，别当死代码；
+   · 两条 prefers-reduced-motion 空壳——原本只包 .topbar__logo / .menubar 的动效；
+   · @keyframes brand-sheen / rail-pulse（站徽扫光、菜单条流光）——只被旧站头引用，成孤儿。 */
 main,
 body > footer {
   isolation: isolate;
@@ -229,156 +158,16 @@ section > h2 {
   margin: 0;
   font-size: 12px;
   letter-spacing: .3em;
-  color: var(--dim);
+color: var(--dim);
 }
 
-/* ===== 票卡（核心件，frontend-spec.md §5.1） ===== */
-
-/* 卡片高度统一（2026-09-18 用户定）：行高取最高者，卡面撑满格位 */
-
-/* 首页「今日份口粮」：四张精选在 1280px 桌面视口必须同排（2026-09-23 UI 审查 01）。
-   20rem 轨道在 1280px（容器 1240px）只放得下 3 张，第四张孤立到第二行、把观星台摘要推远；
-   首页这一组单独收到 17rem —— 阈值 = 4×17rem + 3×1rem = 71rem 内容宽（约 1176px 视口起四列）。
-   只改首页这一处，/tickets 与 /plans 的多列密度不受影响。 */
-
-/* 粮票墙与页头口径小字之间加一档呼吸（2026-09-23 用户反馈「文本距离粮票太近了」）：
-   原先只有 .page-intro 的 1.8rem，口径小字紧贴第一排票卡的顶部辉光；
-   这里与站点段落节奏对齐取 3rem（相邻兄弟外边距合并后即 3rem），只改粮票列表页这一处。 */
-
-/* 粮市套餐卡：行内等高，但不再跨行齐高（2026-09-24 用户定）。
-   套餐档位数差异大（3 档 ~ 8 档），继承票卡墙的 grid-auto-rows: 1fr 会让每一行都对齐到
-   整组最高的那一行（实测第二行百度千帆 8 档 = 498px），第一行四张卡全被拉到 498px ——
-   GLM 卡内容只有 266px，卡内空掉近一半（2026-09-24 用户反馈「空了太多了」）。
-   改 auto 后行高只取本行最高卡：第一行 498→402px、第三行 498→350px，整页少滚约 244px；
-   代价是同排里档位少的卡（GLM、MiniMax）仍留一段空白——这是「同排同高」的必要代价。 */
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-/* 等级三色（2026-09-18 用户定：甲金 / 乙青 / 丙灰；票卡整卡随档换色） */
-
-
-
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-
-
-
-
-
-
-
-
-/* 竖版票面（票卡专用，.ticket--detail 不套用）——
-   形式参照 demo-html/cyberpunk-grain-station-design.html 的票，整卡配色随甲/乙/丙三色。 */
-
-/* 整卡可点、弹框预览；「去领取」必须除外（2026-09-18 用户定）。
-   标题链接用伪元素铺满票面承接点击（渐进增强：无 JS 时整卡直达详情页）。 */
-
-.ticket:not(.ticket--detail) .ticket__cta {
-  position: relative;
-  z-index: 2;
-}
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-/* 内框与四角 */
-
-
-
-
-
-
-/* 左侧竖排等级 */
-
-/* 中央等级章（字体图，喜鹊古字典体；不盖作废章语义——失效票已全站下架） */
-
-
-
-
-/* 票面要素：左右对齐的行 */
-
-
-
-/* 摘要做脚注，2 行截断 */
-
-
-/* 底部：票号 + 站点铃记 + 全宽领取键 */
-
-
-
-
-.ticket:not(.ticket--detail) .ticket__cta {
-  margin-left: 0;
-  width: 100%;
-  padding: .55rem 0;
-  text-align: center;
-  font-size: 13.5px;
-  font-weight: 600;
-  letter-spacing: .4em;
-  text-indent: .4em;
-  color: #14100a;
-  background-image: linear-gradient(100deg, var(--tier, var(--gold)), var(--tier-deep, #c98f1d));
-  box-shadow: 0 0 14px var(--tier-glow, rgba(232, 183, 58, .5));
-}
-
-@media (hover: hover) and (pointer: fine) {
-.ticket:not(.ticket--detail) .ticket__cta:hover {
-  color: #14100a;
-  box-shadow: 0 0 22px var(--tier-glow, rgba(232, 183, 58, .6));
-}
-}
-
-
-/* 含推广角标：竖版票面下改为流内右上角，避免压住居中标题 */
-
-.ticket__cta {
-  margin-left: auto;
-  white-space: nowrap;
-  padding: .42rem .95rem;
-  border-radius: 2px;
-  font-size: 12.5px;
-  letter-spacing: .28em;
-  text-indent: .28em;
-  color: #241105;
-  background-image: linear-gradient(100deg, var(--gold), #c98f1d);
-  box-shadow: 0 0 14px rgba(232, 183, 58, .35);
-}
-
-@media (hover: hover) and (pointer: fine) {
-.ticket__cta:hover {
-  color: #241105;
-  box-shadow: 0 0 20px rgba(232, 183, 58, .6);
-}
-}
-
-
-
-
-
-/* 失效态用明确色值「压暗」，不用 filter（避免合成层越级） */
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-
-
-.ticket[data-expired="true"] .ticket__cta {
-  color: #1d0e04;
-  background-image: linear-gradient(100deg, #b9902f, #8a671a);
-  box-shadow: none;
-}
+/* 原 R3 票卡（ul.cards / .ticket*）与套餐卡（.plan-card* / .plan-tier* / .plan-detail*）
+   已于 2026-09-30 随 R4 改版整体删除：票与套餐现在都由 stubs.js 的 namespace() 渲染成
+   r4-stub / r4-sheet 体系（票卡在 stubs.css）。旧块的规则连同下面这批决策记录一并清走——
+   它们解释的是「当初为什么那样定」，规则已不存在，记录只会误导后来人，故不保留：
+   票墙等高（grid-auto-rows: 1fr）与 /plans 改 auto 的取舍、首页 17rem 四列阈值、
+   甲乙丙三色、整卡可点（标题伪元素铺满）、「去领取」键除外、内框四角、左侧竖排等级、
+   中央等级章、摘要两行截断、失效态压暗不用 filter。 */
 
 /* ===== 榜单行（frontend-spec.md §5.2 / §5.3） =====
    2026-09-23 用户定：首页两块摘要改为复用专页列表样式（观星台摘要 = 星历表行，
@@ -394,6 +183,9 @@ section > h2 {
   border: 1px solid var(--line);
 }
 
+/* 原 R3 通用徽记 .badge 已随旧套餐块一并删除：它唯一的两处引用者是 .plan-card__chips 与
+   .plan-tier__head，都属 .plan-card* 那组死代码。r4 体系另有自己的 .r4-flag / .r4-chip，
+   不共用本类——将来若要通用徽记，从下面的 .dibao__badge（邸报段）取形，别复活这条。 */
 
 /* ===== 星历表（/github，frontend-spec.md §4.4 / §5.2） =====
    版式线来自本机设计试作 observatory-forms-v2（cache-tools，不发布）：
@@ -1291,11 +1083,6 @@ body > footer .freshness[data-freshness="stale"] {
 }
 
 /* 详情页自带的页级外边距在弹框里就是死空白（.ticket--detail 尾随 3rem，2026-09-20 实测） */
-.preview__content .ticket--detail,
-.preview__content .plan-detail {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 .preview__loading,
 .preview__error {
@@ -1770,27 +1557,9 @@ main > p:last-child {
 
 /* 档案框角标（plan-detail / build-notice 两处取用；首页已定稿的 section 版式不动） */
 
-
-
+/* ===== 筛选栏（/tickets，frontend-spec.md §4.2、§5.6） ===== */
 
 /* ===== 票证详情（/tickets/[id]，frontend-spec.md §4.3） ===== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-.ticket__actions .ticket__cta {
-  margin-left: 0;
-}
-
 
 /* 详情页作废章：文字层章面（票卡内是 PNG 印章图，同 class 两种形态） */
 
@@ -1822,102 +1591,12 @@ section[aria-labelledby="related"] a:hover {
 }
 
 
-/* ===== 套餐卡（/plans，frontend-spec.md §5.4） ===== */
-
-/* 整卡可点、弹框预览（2026-09-20 用户定：粮市卡片点卡片即开弹框）。
-   产品名链接用伪元素铺满卡面承接点击——与票卡同一套做法（§5.1）；
-   卡内暂无其它链接，「去订阅」只在详情页，列表卡无需例外层。
-   渐进增强：无 JS 时整卡直达 /plans/[id]/。 */
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-
-
-
-
-
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-
-
-/* 免费档与付费起步价分开标（2026-09-23 UI 审查 01）：
-   「¥49/月起」是付费档起点、不是全档最低价；两枚小签把口径写在价格前面。 */
-
-
-
-
-
-
-
-
-/* 档位口径签（免费 / 首购 / 限时 / 常规；2026-09-23 UI 审查 01）：
-   五档并排时先读口径再看价，免得把促销档或免费档读成常规价。 */
-
-
-
-
-/* ===== 套餐详情（/plans/[id]，frontend-spec.md §4.6） ===== */
-
-
-
-
-
-
-
-
-/* margin 复位：通用 `section { margin: 0 0 3rem }` 会漏进档位小节，
-   档位间距由 padding + 虚线分隔线承担（2026-09-20 弹框反馈：档位之间空一大截）。 */
-
-
-
-
-
-
-
-
-
-/* 「价格依据」标头（2026-09-23）：条件整句里含第三方证据站点，标一下这句是什么，
-   并与档位网格拉开一行距；句中的域名由页面渲染成可点链接（§4.3 不新增契约字段）。 */
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-/* 证据行：价格依据站点 + 抓取日期 + 「以官方结算页为准」，与「去订阅」同区常显
-   （2026-09-23 UI 审查 01：核对证据不该要求用户翻页找）。整行独占一行、排在按钮之下。 */
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-
-
-/* 详情档位口径签沿用列表卡那套色（免费 = 青、促销 / 首购 = 金） */
-
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
+/* 原 R3 套餐卡与套餐详情（.plan-card* / .plan-tier* / .plan-detail*）已于 2026-09-30 随
+   R4 改版整体删除（票卡同批，见本文件前段的说明）。旧块里几条决策记录一并清走：整卡可点、
+   免费档与付费起步价分标、档位口径签、档位小节 margin 复位、「价格依据」标头与证据行常显。
+   需要查这些口径时看 git 历史，不要在这里找。 */
 
 /* ===== 切换条（/github、/models、/plans，frontend-spec.md §7.1） ===== */
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
 
 [data-toggle-panel] > p {
   margin: 0 0 1rem;
@@ -1965,13 +1644,6 @@ td:first-child {
 }
 
 /* ===== 施工占位（/news 等，frontend-spec.md §4.7） ===== */
-
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
 
 /* ===== 邸报（/news，frontend-spec.md §4.7） =====
    版式线（2026-09-20 用户给定参考图）：页头「板块名 + 题头」；
@@ -2031,8 +1703,11 @@ td:first-child {
   overscroll-behavior: contain;
   padding-left: 1rem;
   border-left: 1px solid rgba(200, 52, 42, .35);
-  scrollbar-width: thin;
-  scrollbar-color: rgba(232, 183, 58, .4) transparent;
+  scrollbar-width: none;
+}
+
+.dibao-rail::-webkit-scrollbar {
+  display: none;
 }
 
 .dibao-rail__title {
@@ -2107,6 +1782,34 @@ td:first-child {
   color: var(--dim);
 }
 
+.dibao-rail__dates > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dibao-rail__dates > summary::-webkit-details-marker {
+  display: none;
+}
+
+.dibao-rail__dates > summary::after {
+  content: '+';
+  font-family: var(--code);
+  letter-spacing: 0;
+}
+
+.dibao-rail__dates[open] > summary {
+  margin-bottom: .55rem;
+}
+
+.dibao-rail__dates[open] > summary::after {
+  content: '−';
+}
+
 .dibao-days {
   display: flex;
   flex-wrap: wrap;
@@ -2114,6 +1817,14 @@ td:first-child {
   margin: 0;
   padding: 0;
   list-style: none;
+  max-height: min(12rem, 28dvh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+
+.dibao-days::-webkit-scrollbar {
+  display: none;
 }
 
 .dibao-days a {
@@ -2445,32 +2156,7 @@ td:first-child {
 
 /* ===== 窄屏 ===== */
 
-@media (max-width: 960px) {
-
-
-
-
-
-
-
-
-
-
-}
-
 @media (max-width: 560px) {
-
-
-
-
-
-
-
-
-
-
-
-
   /* 弹框窄屏改整屏取件页：去掉外边距与圆角外框，顶栏贴安全边距 */
   .preview {
     padding: 0;
@@ -2514,10 +2200,6 @@ td:first-child {
     font-size: 15px;
   }
 
-
-
-
-
   table {
     font-size: 12px;
   }
@@ -2530,7 +2212,6 @@ td:first-child {
   td:first-child {
     white-space: normal;
   }
-
 
   /* 来源表窄屏改块状排列：表头收起，逐行「来源名 + 口径」上下叠放 */
   table,
@@ -2564,38 +2245,12 @@ td:first-child {
   }
 }
 
-/* ===== 校场切换：令牌造型 + 旗帜摆动（仅 /models，2026-09-20 用户确认同步试作形态）
-   放在文件末尾的原因：需按源码顺序压过上方共用的 .toggle-bar 基础条与窄屏媒体查询，
-   其他页面的切换条不受影响。 ===== */
+/* 原 R3 切换条（.board-switch / .toggle-bar，frontend-spec.md §7.1）与它那套
+   「校场切换：令牌造型 + 旗帜摆动」的装饰层已于 2026-09-30 随 R4 改版整体删除：
+   现行三器切换是 InstrumentSwitch.astro + scripts/instrument-switch.js。
+   随之清掉的还有 @keyframes flagWave（旗帜摆动，只被已删的 .toggle-bar 装饰引用）、
+   两条 max-width: 640px 空壳，以及切换条两端的小装饰（渐隐细线 + 小菱）。 */
 
-
-
-
-@media (hover: hover) and (pointer: fine) {
-}
-
-
-
-
-
-@keyframes flagWave {
-  0%, 100% { transform: skewY(0deg); }
-  50% { transform: skewY(-1.6deg); }
-}
-
-@media (max-width: 640px) {
-
-}
-
-/* 切换条两端的小装饰（2026-09-22 用户定「模式边上加一些小而美的装饰」）：
-   纯 CSS、无新增 DOM、无图片、无动画——外侧一条渐隐细线，内端一枚小菱（◆，系统字体字符），
-   与令牌按钮的「旗杆 + 菱」同一套语言；窄屏收掉，不挤压换行后的切换条。 */
-
-
-
-
-@media (max-width: 640px) {
-}
 
 /* ===== 关于：站志（/about，frontend-spec.md §4.8；2026-09-21 重构） =====
    定位是「可信度展台」而不是说明文档。三条设计意图：
@@ -2890,13 +2545,30 @@ td:first-child {
   border-top: 1px dashed var(--line-dim);
 }
 
+/* 递交键（/tip）。
+   2026-09-30 解耦：此前 tip.astro 的提交按钮 class 写的是 `ticket__cta tip-submit`，
+   其中 .ticket__cta 是旧 R3 票卡「去领取」键的样式 —— 报料是低频动作，借用「领票」的
+   视觉语言（金渐变 + 辉光 + .28em 大字距）会让人误以为点下去就领到了东西，且它横在
+   旧票卡死块里，是删除该块的唯一障碍。现把视觉并入 .tip-submit，色彩与量级保持站内一致，
+   但去掉「领取」语义过强的超大字距。 */
 .tip-submit {
   margin-left: 0;
   padding: .6rem 2rem;
   font: inherit;
   font-size: 14px;
+  letter-spacing: .12em;
   border: 0;
+  border-radius: 2px;
+  white-space: nowrap;
   cursor: pointer;
+  color: #241105;
+  background-image: linear-gradient(100deg, var(--gold), #c98f1d);
+  box-shadow: 0 0 14px rgba(232, 183, 58, .35);
+  transition: box-shadow .18s ease;
+}
+.tip-submit:hover:not(:disabled) {
+  color: #241105;
+  box-shadow: 0 0 20px rgba(232, 183, 58, .6);
 }
 
 .tip-submit:disabled {

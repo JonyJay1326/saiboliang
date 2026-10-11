@@ -1,101 +1,100 @@
-// 当前项由真实路径决定。光带只在导航条内反馈指针和键盘焦点。
+// 站头交互：当前项同步、磁吸光束、横滑边缘提示。
+// 悬停 / 聚焦某个入口时广播 `cg:station-hover`（detail.form），首页图腾据此变形；离开时 form 为 null。
 const lifetime = new AbortController();
-let mounted = null;
 let release = () => {};
-let refresh = () => {};
 
 function mount() {
-  const header = document.querySelector('[data-station-header]');
-  if (header === mounted && header) return refresh();
   release();
-  mounted = header;
+  const header = document.querySelector('[data-station-header]');
   if (!header) return;
-
   const events = new AbortController();
   const options = { signal: events.signal };
   const nav = header.querySelector('.station-nav');
-  const links = [...nav.querySelectorAll('a[href]')];
-  let pointerLink = null;
-  let litLink = null;
-  let frame = 0;
-  let arrivalTimer = 0;
-  let pressTimer = 0;
+  const links = [...nav.querySelectorAll('.station-link')];
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  let activeLink = null;
 
-  const focusLink = () => links.find(link => link === document.activeElement && link.matches(':focus-visible'));
-  function placeLight() {
-    const link = pointerLink || focusLink();
-    if (link !== litLink) {
-      litLink?.classList.remove('is-energized');
-      link?.classList.add('is-energized');
-      litLink = link;
+  const current = () => links.find(link => link.getAttribute('aria-current') === 'page') ?? null;
+
+  function placeBeam(link, mode) {
+    if (!link) {
+      nav.removeAttribute('data-beam');
+      return;
     }
-    nav.toggleAttribute('data-lit', Boolean(link));
+    nav.style.setProperty('--beam-x', `${link.offsetLeft}px`);
+    nav.style.setProperty('--beam-w', `${link.offsetWidth}px`);
+    nav.setAttribute('data-beam', mode);
+  }
+  function rest() {
+    placeBeam(current(), 'rest');
+  }
+  function broadcast(form) {
+    document.dispatchEvent(new CustomEvent('cg:station-hover', { detail: { form } }));
+  }
+
+  function close() {
+    activeLink?.classList.remove('is-energized');
+    if (activeLink) broadcast(null);
+    activeLink = null;
+    rest();
+  }
+  function show(link) {
+    if (activeLink === link) return;
+    activeLink?.classList.remove('is-energized');
+    activeLink = link;
+    link.classList.add('is-energized');
+    placeBeam(link, 'hover');
+    broadcast(link.dataset.form);
+  }
+  function updateEdges() {
+    nav.toggleAttribute('data-nav-start', nav.scrollLeft > 1);
+    nav.toggleAttribute('data-nav-end', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 1);
+  }
+  function revealLink(link) {
     if (!link) return;
-    const rect = link.getBoundingClientRect();
-    const parent = nav.getBoundingClientRect();
-    nav.style.setProperty('--station-light-width', `${rect.width}px`);
-    nav.style.setProperty('--station-light-x', `${rect.left - parent.left}px`);
+    const item = link.getBoundingClientRect();
+    const box = nav.getBoundingClientRect();
+    // 只移动导航自身；避免切页或聚焦导航时把正文一并滚动。
+    if (item.left < box.left + 2) nav.scrollLeft += item.left - box.left - 2;
+    else if (item.right > box.right - 2) nav.scrollLeft += item.right - box.right + 2;
+    updateEdges();
   }
-  function scheduleLight() {
-    cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(placeLight);
+  function syncLayout() {
+    document.documentElement.style.setProperty('--menubar-height', `${header.getBoundingClientRect().height}px`);
+    revealLink(current());
+    updateEdges();
+    if (activeLink) placeBeam(activeLink, 'hover');
+    else rest();
   }
-  function clearLight() {
-    pointerLink = null;
-    litLink?.classList.remove('is-energized');
-    litLink = null;
-    nav.removeAttribute('data-lit');
-  }
-  function sync() {
-    clearLight();
-    clearTimeout(arrivalTimer);
-    clearTimeout(pressTimer);
-    let current = null;
-    for (const link of header.querySelectorAll('a[href]')) {
-      const href = link.getAttribute('href');
-      const active = href === '/' ? location.pathname === '/' : location.pathname.startsWith(href);
-      if (active) link.setAttribute('aria-current', 'page');
-      else link.removeAttribute('aria-current');
-      link.classList.remove('is-arriving');
-      link.classList.remove('is-pressing');
-      if (active && links.includes(link)) current = link;
-    }
-    if (current) {
-      current.classList.add('is-arriving');
-      arrivalTimer = window.setTimeout(() => current.classList.remove('is-arriving'), 500);
-    }
-    placeLight();
-    header.toggleAttribute('data-scrolled', window.scrollY > 8);
+
+  for (const link of [...links, header.querySelector('.station-about')]) {
+    const href = link.getAttribute('href');
+    const on = href === '/' ? location.pathname === '/' : location.pathname.startsWith(href);
+    if (on) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
   }
   for (const link of links) {
-    link.addEventListener('pointerenter', event => {
-      if (event.pointerType !== 'mouse') return;
-      pointerLink = link;
-      placeLight();
-    }, options);
-    link.addEventListener('click', event => {
-      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      clearTimeout(pressTimer);
-      links.forEach(item => item.classList.remove('is-pressing'));
-      link.classList.add('is-pressing');
-      pressTimer = window.setTimeout(() => link.classList.remove('is-pressing'), 800);
-    }, options);
+    link.addEventListener('pointerenter', event => { if (fine.matches && event.pointerType === 'mouse') show(link); }, options);
+    link.addEventListener('focus', () => { revealLink(link); if (link.matches(':focus-visible')) show(link); }, options);
   }
-  nav.addEventListener('pointerleave', () => { pointerLink = null; placeLight(); }, options);
-  nav.addEventListener('focusin', scheduleLight, options);
-  nav.addEventListener('focusout', scheduleLight, options);
-  header.addEventListener('click', clearLight, options);
-  document.addEventListener('astro:before-swap', clearLight, options);
-  window.addEventListener('scroll', () => header.toggleAttribute('data-scrolled', window.scrollY > 8), { ...options, passive: true });
-  window.addEventListener('resize', scheduleLight, { ...options, passive: true });
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) clearLight();
+  nav.addEventListener('pointerleave', () => { if (!links.some(link => link === document.activeElement && link.matches(':focus-visible'))) close(); }, options);
+  header.addEventListener('focusout', () => {
+    queueMicrotask(() => { if (!links.includes(document.activeElement)) close(); });
   }, options);
-  refresh = sync;
-  sync();
-  release = () => { events.abort(); cancelAnimationFrame(frame); clearTimeout(arrivalTimer); clearTimeout(pressTimer); clearLight(); };
+  header.addEventListener('click', close, options);
+  nav.addEventListener('scroll', updateEdges, { ...options, passive: true });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); }, options);
+  window.addEventListener('resize', () => { close(); syncLayout(); }, options);
+  fine.addEventListener('change', close, options);
+  const sizing = new ResizeObserver(syncLayout);
+  sizing.observe(header);
+  syncLayout();
+  // 首次定位不带过渡，之后光束才「弹」过去
+  requestAnimationFrame(() => requestAnimationFrame(() => nav.setAttribute('data-beam-ready', '')));
+  release = () => { events.abort(); sizing.disconnect(); close(); };
 }
-
+document.addEventListener('astro:before-swap', () => release(), { signal: lifetime.signal });
+document.addEventListener('astro:after-swap', mount, { signal: lifetime.signal });
 document.addEventListener('astro:page-load', mount, { signal: lifetime.signal });
 mount();
 if (import.meta.hot) import.meta.hot.dispose(() => { release(); lifetime.abort(); });
