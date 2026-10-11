@@ -1,52 +1,4 @@
 {
-  "789d3f2f135ddb5fc679634f346fa6d48d50e387f6eb06f05fe528c2655fd540": {
-    "title": "堆叠拉取请求正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-07T08:24:26Z"
-  },
-  "661f64ddb5f472a2675ed75a0fb09828b0ce7323472abe119ea9528dee004ac6": {
-    "title": "帮助青少年学习、规划并塑造 AI 的未来",
-    "summary": "College Planner 即将登陆 ChatGPT for Teens，帮助学生管理大学申请，同时推出新的闪卡、测验和青少年 AI 委员会。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
-  },
-  "b6aec8c05cfc3e2f0fe397569c3768accb2ebf5d964b90334e1f4957e361ffb2": {
-    "title": "推出 Playground：创建并游玩自定义游戏",
-    "summary": "Playground 概览",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
-  },
-  "68d2d671da6664ca06f053900f2296d0caf08df31852b4df6a0272c09daa5753": {
-    "title": "为什么数据中心是 Meta AI 战略的重要部分",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "d6b735286b3739eabb6bfc47e44a44ab371511f3cb6c5b2e613faa6a581c06e2": {
-    "title": "专为检测泄露密钥打造的模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "e85b9e2ad448ed75ecf9983121091db973e759db06f6ab085ac9f0946fad126b": {
-    "title": "NVIDIA 与 Microsoft 以 RTX Spark 和 AI 代理开启 Windows PC 新篇章",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T10:41:22Z"
-  },
-  "4e66a7e453a3193bb5cb6a8f8081827e5a6357c436d5caa87cc204d983c3cfdb": {
-    "title": "2026 年使用政策更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "6c062b861d6d205bc313e939a094b3dab87b6b0c40df64dfabe563ffb4db5445": {
-    "title": "延续我们对美国科学发现的承诺",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
   "2f17b90a739a50a0c9c9cf2c5108388542db100c20ac488ebe79a6ba3c4d2bf3": {
     "title": "揭穿最大的数据中心迷思",
     "summary": "开发者兼内容创作者 Tom Shaw 拆解了关于数据中心的三大迷思。文章《揭穿最大的数据中心迷思》首发于 Meta Newsroom。",
@@ -62,12 +14,6 @@
   "855092fba1df7e8a668bec1b409ac85f8b110a1f64384b826a3381f6d67156e4": {
     "title": "Pollo AI 携手 OpenAI 将创意转化为营销活动",
     "summary": "借助 GPT-5.6、GPT-6 Astra 和 GPT‑Image‑2.5，Pollo AI 帮助创作者将大胆创意转化为精细图像和电影级视频广告。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "d9e485b409fe8517ac6e3a5ba39a5770caf1a72ddba21f80f7ddf66c5e1760f2": {
-    "title": "打击 AI 驱动的“虚假前台”行动",
-    "summary": "OpenAI 打击了两起 AI 驱动的影响力行动，这些行动利用虚假前台记者和一家智库传播地缘政治信息。",
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
   },
@@ -88,24 +34,6 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
-  },
-  "68aea5f02d37dc36523279357cbeccb31a2658f9b4a25db54259e744ab6c93ec": {
-    "title": "贯穿基础设施生命周期的 AI 转型：从供应链到车队运营",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "f447ab3c07770462892a1c58f0e0ccf17e4e6cc470830d03331b5b5cdcb8af06": {
-    "title": "Microsoft 在 2026 年 Gartner® 全球工业 AIoT 平台魔力象限中被评为领导者",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "c4a1f46e5a98744a7c57fd6e9c295bcadb554f343d53e79729cbf02ab67f63eb": {
-    "title": "推出 Anthropic Cyber Mission",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-09T10:40:22Z"
   },
   "570fe3204556675e8dd927e7dbd15e7142796fd7ecb68cb1f56d47b91d75ac01": {
     "title": "Sophos 借助 OpenAI Daybreak 将威胁调查时间缩短 96%",
@@ -130,5 +58,35 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-09T10:40:22Z"
+  },
+  "9bf93d58cc35db9987f8bca45379eba94bc31d29b6afb6124531fcd7a11cbc41": {
+    "title": "Asana 在浏览器测试中用 GPT-6.1 Sol 将模型成本降低 76 倍",
+    "summary": "Asana 在 Codex 中使用 GPT-6 Astra，使其浏览器代理在测试中成本降低 76 倍、速度提升 5 倍，从而为客户提供更强大的模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "a91405951b83e93930a5e29c6e91563e09daf4a85acecc4b134b173cd7b0a327": {
+    "title": "JetBrains 版 Copilot 新增控制项与聊天改进",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "ec899f104655cd5da0d36efc8154462ccde8b2c16658b211d0df027b1cedccc8": {
+    "title": "GitHub Copilot 每周发布 — 10 月 5 日",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "24beabc691ccd09b06b9795cb98093d61a5d35a4e1562cb247367f7b73ad1d71": {
+    "title": "CodeQL 2.27.2 改进 C++、Go、Rust 和 JavaScript 分析",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "24caa334278b69fd57602bc042a2d35991e23ee028aba5ef07a3ae63c76c0b66": {
+    "title": "Copilot 代码审查：新的组织计费选项与控制",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
   }
 }

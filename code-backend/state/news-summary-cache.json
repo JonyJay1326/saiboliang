@@ -1,7 +1,12 @@
 {
-  "167c7efa09e6db3667747012415fa57199c584cce53c21ac2d2728ac2a68a16c": {
-    "summary": "阿里发布Qwen-Image-2.1-Turbo。",
+  "a91405951b83e93930a5e29c6e91563e09daf4a85acecc4b134b173cd7b0a327": {
+    "summary": "JetBrains 版 GitHub Copilot 更新，可控制默认模型与 MCP 服务器，并改进聊天导航和账户控制。",
     "source": "deepseek-flash",
-    "at": "2026-10-09T17:27:43Z"
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "24caa334278b69fd57602bc042a2d35991e23ee028aba5ef07a3ae63c76c0b66": {
+    "summary": "Copilot 代码审查新增组织计费与许可控制，组织所有者可将成员的代码审查费用计入组织账单。",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
   }
 }

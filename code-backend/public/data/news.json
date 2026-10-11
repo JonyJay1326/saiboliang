@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-09T17:27:43Z",
+  "dataUpdatedAt": "2026-10-11T07:43:59Z",
   "items": [
+    {
+      "title": "JetBrains 版 Copilot 新增控制项与聊天改进",
+      "sourceUrl": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+      "publishedAt": "2026-10-10T18:53:39Z",
+      "source": "GitHub",
+      "summary": "JetBrains 版 GitHub Copilot 更新，可控制默认模型与 MCP 服务器，并改进聊天导航和账户控制。",
+      "id": "a91405951b83e93930a5e29c6e91563e09daf4a85acecc4b134b173cd7b0a327",
+      "originalTitle": "New controls and chat improvements in Copilot for JetBrains",
+      "translatedAt": "2026-10-11T07:43:59Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+      "originalVerifiedAt": "2026-10-11T07:43:59Z",
+      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-11T07:43:59Z",
+      "featured": true
+    },
+    {
+      "title": "编程体验接近Opus 5.5？谷歌Gemini 4新版本曝光",
+      "sourceUrl": "https://zhidx.com/p/599720.html",
+      "publishedAt": "2026-10-10T11:09:21Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 杨京丽 编辑 | 李水青 智东西10月10日消息，今日，据外媒Business Insider报道",
+      "id": "ace94ce50ff649034991ea07d47c49ccf04d6e3342920e1dd8b1124c24d7318b",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/599720.html",
+      "category": "tool",
+      "eventType": "hands-on",
+      "addedAt": "2026-10-11T07:43:59Z",
+      "featured": true
+    },
+    {
+      "title": "Asana 在浏览器测试中用 GPT-6.1 Sol 将模型成本降低 76 倍",
+      "sourceUrl": "https://openai.com/index/asana-browser-agent",
+      "publishedAt": "2026-10-09T07:00:00Z",
+      "source": "OpenAI",
+      "summary": "Asana 在 Codex 中使用 GPT-6 Astra，使其浏览器代理在测试中成本降低 76 倍、速度提升 5 倍，从而为客户提供更强大的模型。",
+      "id": "9bf93d58cc35db9987f8bca45379eba94bc31d29b6afb6124531fcd7a11cbc41",
+      "originalTitle": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "translatedAt": "2026-10-11T07:43:59Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/asana-browser-agent",
+      "originalVerifiedAt": "2026-10-11T07:43:59Z",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-11T07:43:59Z",
+      "featured": true
+    },
     {
       "title": "亚马逊云科技Amazon Bedrock AgentCore在中国区域上线：打包六大能力，贯穿Agent开发全流程",
       "sourceUrl": "https://zhidx.com/p/599479.html",
@@ -94,6 +151,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-09T10:40:22Z",
+      "featured": true
+    },
+    {
+      "title": "Copilot 代码审查：新的组织计费选项与控制",
+      "sourceUrl": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls",
+      "publishedAt": "2026-10-08T19:43:05Z",
+      "source": "GitHub",
+      "summary": "Copilot 代码审查新增组织计费与许可控制，组织所有者可将成员的代码审查费用计入组织账单。",
+      "id": "24caa334278b69fd57602bc042a2d35991e23ee028aba5ef07a3ae63c76c0b66",
+      "originalTitle": "Copilot code review: New organization billing options and controls",
+      "translatedAt": "2026-10-11T07:43:59Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls",
+      "originalVerifiedAt": "2026-10-11T07:43:59Z",
+      "url": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-11T07:43:59Z",
       "featured": true
     },
     {
@@ -3403,6 +3479,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-09T17:27:43Z",
-  "generatedAt": "2026-10-09T17:27:43Z"
+  "version": "2026-10-11T07:43:59Z",
+  "generatedAt": "2026-10-11T07:43:59Z"
 }

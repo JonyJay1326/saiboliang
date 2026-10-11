@@ -64,11 +64,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "JayWebtech/autoshorts": {
-    "text": "AutoShorts 是一个本地优先的桌面应用，可将长视频或音频录制转换为高影响力的竖屏短视频候选片段（9:16 竖屏），并借助 AI 对病毒式传播时刻进行排序。",
-    "source": "deepseek-flash",
-    "at": "2026-09-30T11:42:49Z"
-  },
   "cline/cline": {
     "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
     "source": "deepseek-flash",
@@ -81,11 +76,6 @@
   },
   "Gaurav-Gosain/tuios": {
     "text": "终端窗口管理器，可感知你的代理在做什么。平铺窗格、工作区、重启后仍保留的会话，以及为每个编码代理提供的统一收件箱。",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
-  "lharries/whatsapp-mcp": {
-    "text": "WhatsApp MCP 服务器",
     "source": "deepseek-flash",
     "at": "2026-10-05T19:38:42Z"
   },
@@ -106,11 +96,6 @@
   },
   "AtomicBot-ai/atomic-agent": {
     "text": "Atomic Agent 是本地优先的 AI 智能体。通过 llama.cpp 在自有机器上运行开放权重模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
-  },
-  "rasbt/machine-learning-book": {
-    "text": "《Machine Learning with PyTorch and Scikit-Learn》代码仓库",
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
   },
@@ -149,11 +134,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-09T17:27:43Z"
   },
-  "langchain-ai/agents-from-scratch": {
-    "text": "构建带有人工介入和记忆功能的邮件助手",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T17:27:43Z"
-  },
   "oracle-devrel/oracle-ai-developer-hub": {
     "text": "面向 AI 开发者的技术资源，用于使用 Oracle AI Database 和 OCI 服务构建应用、Agent 与系统",
     "source": "deepseek-flash",
@@ -168,5 +148,40 @@
     "text": "YuE2：前沿音乐生成，支持符号规划、零样本翻唱与 Agent 化音乐编辑。",
     "source": "deepseek-flash",
     "at": "2026-10-09T17:27:43Z"
+  },
+  "lexmount/moli": {
+    "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "shiyu-coder/Kronos": {
+    "text": "Kronos：面向金融市场语言的基础模型",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "trymirai/uzu": {
+    "text": "高性能 AI 模型推理引擎",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "Bennettxai/FounderOS": {
+    "text": "开源单人企业指挥中心：以 AI 辅助部门（沟通、漏斗、社交、财务、智能体与知识图谱）在一个实时仪表盘中运营一人公司。",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "WordPress/mcp-adapter": {
+    "text": "MCP 适配器，将 Abilities API 桥接到 Model Context Protocol，使 MCP 客户端能够以编程方式发现并调用 WordPress 插件、主题与核心能力。",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "facebookresearch/sam2": {
+    "text": "该仓库提供运行 Meta Segment Anything Model 2（SAM 2）推理的代码、下载已训练模型检查点的链接，以及展示如何使用该模型的示例 notebook。",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
+  },
+  "llm-d/llm-d-router": {
+    "text": "llm-d Router：推理请求的智能入口",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T07:43:59Z"
   }
 }
