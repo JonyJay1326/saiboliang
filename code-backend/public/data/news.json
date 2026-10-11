@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-11T07:43:59Z",
+  "dataUpdatedAt": "2026-10-11T10:06:09Z",
   "items": [
+    {
+      "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+      "sourceUrl": "https://www.qbitai.com/2026/10/502550.html",
+      "publishedAt": "2026-10-11T05:18:04Z",
+      "source": "量子位",
+      "summary": "初代4o的API快照进入停用倒计时",
+      "id": "5a08641eb2b294984359ed681b3e17c7dd65ff6879ea4b06c6350d33ea778c90",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/502550.html",
+      "category": "industry",
+      "eventType": "service-retirement",
+      "addedAt": "2026-10-11T10:06:09Z",
+      "featured": true
+    },
     {
       "title": "JetBrains 版 Copilot 新增控制项与聊天改进",
       "sourceUrl": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
@@ -3479,6 +3498,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-11T07:43:59Z",
-  "generatedAt": "2026-10-11T07:43:59Z"
+  "version": "2026-10-11T10:06:09Z",
+  "generatedAt": "2026-10-11T10:06:09Z"
 }

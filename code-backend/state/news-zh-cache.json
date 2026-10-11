@@ -59,18 +59,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-09T10:40:22Z"
   },
-  "9bf93d58cc35db9987f8bca45379eba94bc31d29b6afb6124531fcd7a11cbc41": {
-    "title": "Asana 在浏览器测试中用 GPT-6.1 Sol 将模型成本降低 76 倍",
-    "summary": "Asana 在 Codex 中使用 GPT-6 Astra，使其浏览器代理在测试中成本降低 76 倍、速度提升 5 倍，从而为客户提供更强大的模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
-  "a91405951b83e93930a5e29c6e91563e09daf4a85acecc4b134b173cd7b0a327": {
-    "title": "JetBrains 版 Copilot 新增控制项与聊天改进",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
   "ec899f104655cd5da0d36efc8154462ccde8b2c16658b211d0df027b1cedccc8": {
     "title": "GitHub Copilot 每周发布 — 10 月 5 日",
     "summary": null,
@@ -79,12 +67,6 @@
   },
   "24beabc691ccd09b06b9795cb98093d61a5d35a4e1562cb247367f7b73ad1d71": {
     "title": "CodeQL 2.27.2 改进 C++、Go、Rust 和 JavaScript 分析",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
-  "24caa334278b69fd57602bc042a2d35991e23ee028aba5ef07a3ae63c76c0b66": {
-    "title": "Copilot 代码审查：新的组织计费选项与控制",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
