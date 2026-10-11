@@ -24,11 +24,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "tt-a1i/archify": {
-    "text": "用于生成美观、可验证的架构、工作流、时序、数据流与生命周期图的代理技能——自包含 HTML，带动效与清晰导出。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "heygen-com/hyperframes": {
     "text": "编写 HTML。渲染视频。为代理而构建。",
     "source": "deepseek-flash",
@@ -114,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
   },
-  "nanobrowser/nanobrowser": {
-    "text": "开源 Chrome 扩展，用于 AI 驱动的网页自动化。使用你自己的 LLM API 密钥运行多智能体工作流。OpenAI Operator 的替代方案。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
   "docling-project/docling": {
     "text": "让你的文档为生成式 AI 做好准备",
     "source": "deepseek-flash",
@@ -131,11 +121,6 @@
   },
   "docker/docker-agent": {
     "text": "Docker Engineering 出品的 AI Agent 构建器与运行时",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T17:27:43Z"
-  },
-  "oracle-devrel/oracle-ai-developer-hub": {
-    "text": "面向 AI 开发者的技术资源，用于使用 Oracle AI Database 和 OCI 服务构建应用、Agent 与系统",
     "source": "deepseek-flash",
     "at": "2026-10-09T17:27:43Z"
   },
@@ -154,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
   },
-  "shiyu-coder/Kronos": {
-    "text": "Kronos：面向金融市场语言的基础模型",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
   "trymirai/uzu": {
     "text": "高性能 AI 模型推理引擎",
     "source": "deepseek-flash",
@@ -174,14 +154,39 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
   },
-  "facebookresearch/sam2": {
-    "text": "该仓库提供运行 Meta Segment Anything Model 2（SAM 2）推理的代码、下载已训练模型检查点的链接，以及展示如何使用该模型的示例 notebook。",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
   "llm-d/llm-d-router": {
     "text": "llm-d Router：推理请求的智能入口",
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
+  },
+  "Vincentwei1021/video-shotcraft": {
+    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作电影级产品视频，含 152 张镜头配方卡、209 个动态预览和可投产模板",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T15:27:47Z"
+  },
+  "microsoft/BitNet": {
+    "text": "面向 1-bit LLM 的官方推理框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T15:27:47Z"
+  },
+  "gepa-ai/gepa": {
+    "text": "用 AI 驱动的反思式优化来优化提示词、代码等",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T15:27:47Z"
+  },
+  "WordPress/ai": {
+    "text": "WordPress 的 AI 功能与实验。用于测试 AI 能力的模块化框架。",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T15:27:47Z"
+  },
+  "tensorflow/tensorflow": {
+    "text": "面向所有人的开源机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T15:27:47Z"
+  },
+  "higgsfield-ai/higgsfield": {
+    "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型而设计的机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-11T15:27:47Z"
   }
 }

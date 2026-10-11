@@ -506,18 +506,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "invoiceninja/invoiceninja",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A source-available invoice, quote, project and time-tracking app built with Laravel",
-      "sourceUrl": "https://github.com/invoiceninja/invoiceninja"
-    },
-    "id": "688a80592918f7d4cacc4d0a473645091f14469d1cbfa28e937bd808353ab3cc",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "daimiaopeng/coolapk-desktop",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -525,18 +513,6 @@
       "sourceUrl": "https://github.com/daimiaopeng/coolapk-desktop"
     },
     "id": "3cc77a1da31b5493db0a67f196e8a9fc8d535f6d756901d4cd58c988ba5bb185",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "frappe/crm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully featured, open source CRM",
-      "sourceUrl": "https://github.com/frappe/crm"
-    },
-    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
     "status": "pending",
     "createdAt": "2026-10-03T15:09:23Z"
   },
@@ -626,18 +602,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "touchHLE/touchHLE",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "High-level emulator for early iOS apps. This repo is used for issues, releases and CI. Submit patches at: https://review.gerrithub.io/admin/repos/touchHLE/touchHLE",
-      "sourceUrl": "https://github.com/touchHLE/touchHLE"
-    },
-    "id": "ecf1556f1b8506cecea3978f7974ab3239f2b639747b50e244a9f57553da68c4",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "shmykelsa/AAAD",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -698,18 +662,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Agent-Field/CodeAF",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open-Source Software factory for Open Models",
-      "sourceUrl": "https://github.com/Agent-Field/CodeAF"
-    },
-    "id": "935012e849935c1dc6b43129d2e57276b13eeb34e06f0e8ff81a1e2fd18d5b6a",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Vita3K/Vita3K",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -758,18 +710,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "luolangaga/tubatools",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "这是图吧工具箱基于 WinUI 3 全新重构的版本，一款由社区驱动、深度契合 Windows 11 设计美学的现代化工具箱。它不仅确保你始终使用最新版本的工具，还集成了更加丰富的实用功能，更可满足高度自定义的个性化需求。",
-      "sourceUrl": "https://github.com/luolangaga/tubatools"
-    },
-    "id": "e5c20103900c8f2d75464a8894867f8b69faecfd73a4f453009c6b7e8ee12c5a",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "TGX-Android/Telegram-X",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -806,18 +746,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "yuhonas/free-exercise-db",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
-      "sourceUrl": "https://github.com/yuhonas/free-exercise-db"
-    },
-    "id": "6e037d384e7c497e259b8b883032f755a28048ff31ac0307fe48e98b8b5c39ad",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "google/gvisor",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -849,18 +777,6 @@
       "sourceUrl": "https://github.com/itsfatduck/optimizerDuck"
     },
     "id": "cc0aa06ca0896106c713c4dc758464c710067b940888a18b0b726d12d74b6b76",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SubtitleEdit/subtitleedit",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "the subtitle editor :)",
-      "sourceUrl": "https://github.com/SubtitleEdit/subtitleedit"
-    },
-    "id": "878d8d5606ba4103740e3a799e1a7e1f8b49a2751d8f56a39d6176b2a5fab0a3",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
   },
@@ -998,18 +914,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "dotnet/aspnetcore",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
-      "sourceUrl": "https://github.com/dotnet/aspnetcore"
-    },
-    "id": "0f01724e1c4496d82adbaa955436f98b456eceb6bd488e1c249d7367cf1b7dd6",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "BeyondDimension/SteamTools",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1017,18 +921,6 @@
       "sourceUrl": "https://github.com/BeyondDimension/SteamTools"
     },
     "id": "845dbfba092c7ea257dd5ae83ab7fcef50e405dee1861284bc86101fc97917de",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "cyanfish/naps2",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Scan documents to PDF and more, as simply as possible.",
-      "sourceUrl": "https://github.com/cyanfish/naps2"
-    },
-    "id": "deb406e66bd1841f4fa3754cba8ac63ef2fc368d27e878baace0ff6110869ad9",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
   },
@@ -1058,30 +950,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "librenms/librenms",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Community-based GPL-licensed network monitoring system",
-      "sourceUrl": "https://github.com/librenms/librenms"
-    },
-    "id": "413c4345269a752d80bb23e0117eb5ddf6fb2840282036b58e5b03d4ea420244",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "glpi-project/glpi",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.",
-      "sourceUrl": "https://github.com/glpi-project/glpi"
-    },
-    "id": "a421c98e770fd4a2ac11f254701d6f9f0caed07442e760cc40c0963d2b90c219",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "woocommerce/woocommerce",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1106,18 +974,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "phpmyadmin/phpmyadmin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A web interface for MySQL and MariaDB",
-      "sourceUrl": "https://github.com/phpmyadmin/phpmyadmin"
-    },
-    "id": "8a6a9fb5e6852cc83a6c9236d98394a93302656c66052346b7b61ba9a7314942",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "symfony/symfony",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1125,18 +981,6 @@
       "sourceUrl": "https://github.com/symfony/symfony"
     },
     "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "bagisto/bagisto",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open Source eCommerce & Multi-Vendor Marketplace Platform Built with Laravel for Enterprise-Scale Commerce, Supporting 10M+ SKUs",
-      "sourceUrl": "https://github.com/bagisto/bagisto"
-    },
-    "id": "841875745f3011679b2555930fbf197e1b67e1aaa72768b86287e67989f45329",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
   },
@@ -1226,18 +1070,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "deeplethe/utopia",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "World's first open-source enterprise world model.",
-      "sourceUrl": "https://github.com/deeplethe/utopia"
-    },
-    "id": "ab4c0b2d1bb0963e00f5790bad82aad6c2f1dc5231e0a654ecf55d8f1649f94f",
-    "status": "pending",
-    "createdAt": "2026-10-08T10:41:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "EpicGames/raddebugger",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1245,18 +1077,6 @@
       "sourceUrl": "https://github.com/EpicGames/raddebugger"
     },
     "id": "90e01a7aed8d8e33de297e77fb0823e7fbecdf5fff417b97ba55651c3eea38c5",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/TypeScript",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
-      "sourceUrl": "https://github.com/microsoft/TypeScript"
-    },
-    "id": "5321ce6d148f76c616144f6e54027374b86f00f804cd2a5d5a83a2f698480925",
     "status": "pending",
     "createdAt": "2026-10-08T17:54:23Z"
   },
@@ -1317,18 +1137,6 @@
       "sourceUrl": "https://github.com/spring-projects/spring-boot"
     },
     "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PrivateBin/PrivateBin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A minimalist, open source online pastebin where the server has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.",
-      "sourceUrl": "https://github.com/PrivateBin/PrivateBin"
-    },
-    "id": "63c17e3e95d1789a6f62f54f35b1c619e2bb40760d1dfa9e6b55f15b79b61012",
     "status": "pending",
     "createdAt": "2026-10-08T17:54:23Z"
   },
@@ -1488,18 +1296,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zalexdev/strykerapp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Magic tool for pentest from your android device!",
-      "sourceUrl": "https://github.com/zalexdev/strykerapp"
-    },
-    "id": "e39d0224c0ed1e0027316f92dc5363ca5d3beb39c4c292ec214ab6b02f7309d9",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Anuken/Mindustry",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1507,18 +1303,6 @@
       "sourceUrl": "https://github.com/Anuken/Mindustry"
     },
     "id": "fd025bae92dafa0b041be269ba710e3e53771e71023ef75641dbebf79763b446",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "opensourcepos/opensourcepos",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open Source Point of Sale is a web based point of sale application written in PHP using CodeIgniter framework. It uses MySQL as the data back end and has a Bootstrap 3 based user interface. If you like this project, please give it a star! Doing so helps maintain Popular OSS status for the project.",
-      "sourceUrl": "https://github.com/opensourcepos/opensourcepos"
-    },
-    "id": "9a049ebb34f7f5360bec282045defa9da33188c67e89f8c880449e0340a1dbe9",
     "status": "pending",
     "createdAt": "2026-10-09T17:27:43Z"
   },
@@ -1555,18 +1339,6 @@
       "sourceUrl": "https://github.com/unovue/inspira-ui"
     },
     "id": "6868a0f49b923776768e34f39e5e4891e21da75fae416d84de4bbcdd085bb65c",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "vuejs/docs",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "📄 Documentation for Vue 3",
-      "sourceUrl": "https://github.com/vuejs/docs"
-    },
-    "id": "ecea95656db3f7c9a1d9dc90036a07ed222e78979be26e26ef8fa31de6ea46d0",
     "status": "pending",
     "createdAt": "2026-10-09T17:27:43Z"
   },
@@ -1655,18 +1427,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "eugenioenko/ttt",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "TTT Editor (Terminal Text Tool): A real alternative to VS Code, Zed, and Sublime that runs in your terminal. A TUI that feels like GUI. Single binary, zero config.",
-      "sourceUrl": "https://github.com/eugenioenko/ttt"
-    },
-    "id": "ae4c92e03ad88c2822f717da093bffe22c3b122ffe36230a9a03f6e72eae6f84",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "charmbracelet/bubbletea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1703,18 +1463,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "expressjs/express",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fast, unopinionated, minimalist web framework for node.",
-      "sourceUrl": "https://github.com/expressjs/express"
-    },
-    "id": "9162d642cefd6c2eeb18e2406a3a25d8fbdda90f21e8c7ef9c29cb6946d52801",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "dotnet/roslyn",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1734,18 +1482,6 @@
       "sourceUrl": "https://github.com/ShareX/ShareX"
     },
     "id": "9cbee9e42167b945e2c4ee970e2fd66a622a75516d23380f1f4e0ffeef78b15b",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "HotCakeX/Harden-Windows-Security",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Harden Windows Safely, Securely using Official Supported Microsoft methods and proper explanation | Always up-to-date and works with the latest build of Windows | Provides tools and Guides for Personal, Enterprise, Government and Military security levels | SLSA Level 3 Compliant for Secure Development and Build Process | Apps Available on MS Store✨",
-      "sourceUrl": "https://github.com/HotCakeX/Harden-Windows-Security"
-    },
-    "id": "cffef7a837f1895f71a56664b0dbefb47733e62e644be209192446220555cc36",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1787,18 +1523,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "rubys/roundhouse",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Rails as a specification; the deployment target is a build flag",
-      "sourceUrl": "https://github.com/rubys/roundhouse"
-    },
-    "id": "9d8b6fd878108e0aecdb624b6d345a5f2ff5b254eac06805acffbcf8448a4dc2",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "microsoft/mxc",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1823,18 +1547,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "woheller69/FreeDroidWarn",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/woheller69/FreeDroidWarn"
-    },
-    "id": "9a5b167efa61854df2770c120acf36b7e44a1b48dd57ed059233c5c674c1485e",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "FreshRSS/FreshRSS",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1842,18 +1554,6 @@
       "sourceUrl": "https://github.com/FreshRSS/FreshRSS"
     },
     "id": "a5a6fb9d6f00407f83cfa5a130b95548694d4519575ed91b8d8968e9c11f11cb",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "magento/magento2",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Prior to making any Submission(s), you must sign an Adobe Contributor License Agreement, available here at: https://opensource.adobe.com/cla.html . All Submissions you make to Adobe Inc. and its affiliates, assigns and subsidiaries (collectively “Adobe”) are subject to the terms of the Adobe Contributor License Agreement.",
-      "sourceUrl": "https://github.com/magento/magento2"
-    },
-    "id": "110c7ee37163c91fd216625a2f5452ad9c4650945312de4d087c35451a95c874",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1878,18 +1578,6 @@
       "sourceUrl": "https://github.com/RLS-Modding/rls_career_overhaul"
     },
     "id": "1edbf8f030abbd3737ab0f854084ab6ee48d74a48de6ca3458c5b192e1ff8dbb",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "inovector/mixpost",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "📅 Schedule, 📢 publish, and ⚡ manage your social media content on your server. No subscriptions, no limits. (Buffer alternative)",
-      "sourceUrl": "https://github.com/inovector/mixpost"
-    },
-    "id": "b75454aa4d15f15506f76a10e23f5d4963c3d6a70f408c44906976e135a002ca",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1927,5 +1615,209 @@
     "id": "450a63ada332ad512a21821d285cecc5835cf5a880b65ed08a8b7162b679a9f2",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Effect-TS/effect",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build production-ready applications in TypeScript",
+      "sourceUrl": "https://github.com/Effect-TS/effect"
+    },
+    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pocket-id/pocket-id",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The most user-friendly OpenID Connect Certified™ and OAuth 2.0 provider that lets users sign in to your applications with passkeys.",
+      "sourceUrl": "https://github.com/pocket-id/pocket-id"
+    },
+    "id": "3798d1e0d3e1283fa96e621147b4e48aa85604c111ca13d1f9975dbed4b1b408",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "M-Abozaid/esp32-c3-adblock",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
+      "sourceUrl": "https://github.com/M-Abozaid/esp32-c3-adblock"
+    },
+    "id": "aecb6d87d3351c845f3bfc847252c99da66c87e32b15a58d737cc31eed2578c3",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "mg-chao/snow-apps",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
+      "sourceUrl": "https://github.com/mg-chao/snow-apps"
+    },
+    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "michael-denyer/pstack-claude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+    },
+    "id": "9b3f19139a3be89a8c483b594006fac051d8a35ca30b8e321d344f46719d65a6",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "poteto/hiring-without-whiteboards",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "⭐️ Companies that don't have a broken hiring process",
+      "sourceUrl": "https://github.com/poteto/hiring-without-whiteboards"
+    },
+    "id": "b5d375a811b7a0603582be439ee08d2e331b4d9624b6ef7660ac801430b02114",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kanoqwq/UFI-TOOLS",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A functional tools for z*e devices (F50 | U30 Air)",
+      "sourceUrl": "https://github.com/kanoqwq/UFI-TOOLS"
+    },
+    "id": "8c8750003ece8f71ab332524a399800879b363e64f8178e500eef53e611e2ae9",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "greensock/GSAP",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web",
+      "sourceUrl": "https://github.com/greensock/GSAP"
+    },
+    "id": "8e894f889b8e65bd2edc280c80c2d80dbc8fc1ed8669eccc976e98c3d19c53e5",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "lostindark/DriverStoreExplorer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Driver Store Explorer",
+      "sourceUrl": "https://github.com/lostindark/DriverStoreExplorer"
+    },
+    "id": "578ff0941deeccdbe2beadc1f9a4a6fb496df69f7d971b5a887badbe105a28af",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "andrewmd5/Borderless-Gaming",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Play your favorite games in a borderless window; no more time consuming alt-tabs.",
+      "sourceUrl": "https://github.com/andrewmd5/Borderless-Gaming"
+    },
+    "id": "fcc7c9cc7777faa14471a4a89325d2fc102b8bd12b4ac186239f4566a96c40a8",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "laravel/framework",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Laravel is a web application framework with expressive, elegant syntax.",
+      "sourceUrl": "https://github.com/laravel/framework"
+    },
+    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nextcloud/all-in-one",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "📦 The official Nextcloud installation method. Provides easy deployment and maintenance with most features included in this one Nextcloud instance.",
+      "sourceUrl": "https://github.com/nextcloud/all-in-one"
+    },
+    "id": "14a021e68b1bab6c7e60868d80ef3e6836e821204047e9d9bdcdfd3297c14d58",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "grokability/snipe-it",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free open source IT asset/license management system",
+      "sourceUrl": "https://github.com/grokability/snipe-it"
+    },
+    "id": "112f1afba99d6cf125a19da6be2d0c7bbc733d5aeb46a998ce26919cba580a7b",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MISP/MISP",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "MISP (core software) - Open Source Threat Intelligence and Sharing Platform",
+      "sourceUrl": "https://github.com/MISP/MISP"
+    },
+    "id": "eb9a99fe8038a69ae643dc5576f3e663246892e991f4c34f87021d0c7d0e5544",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bluerobotics/BlueOS",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open source platform for ROV, USV, robotic system operation, development, and expansion.",
+      "sourceUrl": "https://github.com/bluerobotics/BlueOS"
+    },
+    "id": "b62348024ce4666902ac5847ffada910cb870302970e1480495fd008fd82abb7",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "julyx10/lap",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An offline-first photo manager for large local libraries",
+      "sourceUrl": "https://github.com/julyx10/lap"
+    },
+    "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SnailSploit/Claude-Red",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
+    },
+    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
+    "status": "pending",
+    "createdAt": "2026-10-11T15:27:47Z"
   }
 ]
