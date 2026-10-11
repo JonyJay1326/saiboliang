@@ -344,6 +344,25 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             collect_news(FakeClient(),[bad],{}, {}, NOW,lambda *x:None,lambda *x:None)
 
+    def test_news_isolates_malformed_sitemaps(self):
+        feed=('<rss><channel><item><title>示例模型正式发布</title><link>https://vendor.example/a</link>'
+              '<pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>')
+        good=dict(id='good',name='示例厂商官方',url='https://vendor.example/feed',official=True,lang='zh',articleHosts=['vendor.example'])
+        for adapter in ('seed-blog','xai-sitemap'):
+            for raw in ('<urlset></urlset><url></url>','<html>unavailable'):
+                with self.subTest(adapter=adapter,raw=raw):
+                    bad=dict(id='bad',name='坏源',url='https://bad.example/sitemap.xml',adapter=adapter)
+                    client=FakeClient(documents={bad['url']:raw,good['url']:feed})
+                    reviews=[]
+                    data=collect_news(client,[bad,good],{}, {},NOW,
+                                      lambda *x:None,lambda *x:reviews.append(x))
+                    self.assertEqual([item['source'] for item in data['items']],[good['name']])
+                    self.assertEqual([(r[0],r[1]) for r in reviews],[('news-source','bad')])
+                    self.assertIn('sitemap XML parse failed:',reviews[0][2])
+                    self.assertEqual(reviews[0][3],dict(url=bad['url']))
+                    with self.assertRaisesRegex(DataError,'all news sources failed: bad: sitemap XML parse failed:'):
+                        collect_news(client,[bad],{}, {},NOW,lambda *x:None,lambda *x:None)
+
     def test_news_summary_generation_cache_and_review(self):
         item=dict(id='a1',title='示例标题',text='来源片段')
         reply=dict(choices=[dict(message=dict(content=json.dumps({'a1':{'summary':'一句中文简介。'}},ensure_ascii=False)))])

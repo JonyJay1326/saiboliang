@@ -1612,7 +1612,10 @@ def parse_commandcode_changelog(raw,source):
 
 def sitemap_entries(raw,prefix):
     """Shared sitemap <loc>/<lastmod> reader for official news sitemaps."""
-    root=ET.fromstring(raw)
+    try:
+        root=ET.fromstring(raw)
+    except ET.ParseError as exc:
+        raise DataError('sitemap XML parse failed: '+str(exc)) from exc
     require(root.tag.rsplit('}',1)[-1]=='urlset','sitemap structure changed')
     result=[]
     for node in root:
