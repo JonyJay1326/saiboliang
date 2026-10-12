@@ -1807,5 +1807,40 @@
     "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
     "status": "pending",
     "createdAt": "2026-10-11T15:27:47Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "noVibe/DnsConf",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DNS Block and Redirect configurer for Cloudflare / NextDNS",
+      "sourceUrl": "https://github.com/noVibe/DnsConf"
+    },
+    "id": "02a4e252ba3876557622f64a3d694f16ee3fa0d27950f1716ad96682d1019873",
+    "status": "pending",
+    "createdAt": "2026-10-12T10:58:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "godotengine/godot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
+      "sourceUrl": "https://github.com/godotengine/godot"
+    },
+    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
+    "status": "pending",
+    "createdAt": "2026-10-12T10:58:57Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "41fe8315c207a444e2930207652d31fc11c261fecafa0fddd706b729eff87b46",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "c7d64abfb9a144c53634fd69847e73772e56812152bc70a671bad91ab5628c6b",
+    "status": "pending",
+    "createdAt": "2026-10-12T10:58:57Z"
   }
 ]

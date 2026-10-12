@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-11T16:39:54Z",
+  "dataUpdatedAt": "2026-10-12T10:58:57Z",
   "items": [
+    {
+      "title": "何恺明团队发布多模态Harness框架",
+      "sourceUrl": "https://www.qbitai.com/2026/10/502628.html",
+      "publishedAt": "2026-10-11T08:59:06Z",
+      "source": "量子位",
+      "summary": "多模态模型的视觉原生Harness，来了！",
+      "id": "62d2f733b9026c07f324624dc6bd4de4ce5580a845b6b41da0ff3131ceaf337f",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/502628.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-12T10:58:57Z",
+      "featured": true
+    },
     {
       "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
       "sourceUrl": "https://www.qbitai.com/2026/10/502550.html",
@@ -3498,6 +3517,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-11T16:39:54Z",
-  "generatedAt": "2026-10-11T16:39:54Z"
+  "version": "2026-10-12T10:58:57Z",
+  "generatedAt": "2026-10-12T10:58:57Z"
 }

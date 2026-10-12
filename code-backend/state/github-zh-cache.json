@@ -179,14 +179,14 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T15:27:47Z"
   },
-  "tensorflow/tensorflow": {
-    "text": "面向所有人的开源机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T15:27:47Z"
-  },
   "higgsfield-ai/higgsfield": {
     "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型而设计的机器学习框架",
     "source": "deepseek-flash",
     "at": "2026-10-11T15:27:47Z"
+  },
+  "pytorch/pytorch": {
+    "text": "使用 Python 的张量与动态神经网络，支持强大的 GPU 加速",
+    "source": "deepseek-flash",
+    "at": "2026-10-12T10:58:57Z"
   }
 }

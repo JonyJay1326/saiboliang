@@ -1,28 +1,4 @@
 {
-  "2f17b90a739a50a0c9c9cf2c5108388542db100c20ac488ebe79a6ba3c4d2bf3": {
-    "title": "揭穿最大的数据中心迷思",
-    "summary": "开发者兼内容创作者 Tom Shaw 拆解了关于数据中心的三大迷思。文章《揭穿最大的数据中心迷思》首发于 Meta Newsroom。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "570fe3204556675e8dd927e7dbd15e7142796fd7ecb68cb1f56d47b91d75ac01": {
-    "title": "Sophos 借助 OpenAI Daybreak 将威胁调查时间缩短 96%",
-    "summary": "了解 Sophos 如何利用 OpenAI 的 Daybreak 将网络威胁调查时间缩短 96%，并自动化 52% 的 MDR 案例，同时保留人工监督。",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T10:40:22Z"
-  },
-  "8b64b8f7c1061221034fae8fb3bd298bdb79662cef111df7a0352e29fab22666": {
-    "title": "Triage 角色或更高权限用户现可归档拉取请求",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-09T10:40:22Z"
-  },
-  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
-    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将想法转化为仿真",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-09T10:40:22Z"
-  },
   "ec899f104655cd5da0d36efc8154462ccde8b2c16658b211d0df027b1cedccc8": {
     "title": "GitHub Copilot 每周发布 — 10 月 5 日",
     "summary": null,
