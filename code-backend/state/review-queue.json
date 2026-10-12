@@ -554,18 +554,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zeldaret/tww",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Decompilation of The Legend of Zelda: The Wind Waker",
-      "sourceUrl": "https://github.com/zeldaret/tww"
-    },
-    "id": "5d65bae48ae1c1ad74d96ee4b37db5c3d7d530fd82cefda57aeab88f50e4c709",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "shadps4-emu/shadPS4",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -597,18 +585,6 @@
       "sourceUrl": "https://github.com/zerx-lab/FluxDown"
     },
     "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "shmykelsa/AAAD",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The original application for downloading and installing apps made specifically for Android Auto outside of Google Play Store. Active since 2021.",
-      "sourceUrl": "https://github.com/shmykelsa/AAAD"
-    },
-    "id": "ce531275e4048d40d1b9ed74430973e569c6efa038e789b56792d687821f3f57",
     "status": "pending",
     "createdAt": "2026-10-04T15:49:24Z"
   },
@@ -650,78 +626,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "cloudflare/cloudflare-os",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
-      "sourceUrl": "https://github.com/cloudflare/cloudflare-os"
-    },
-    "id": "8218d655f888d92e9ac799d94ead10bc99005e7e569659d38a14e80b41994c60",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Vita3K/Vita3K",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Experimental PlayStation Vita emulator",
-      "sourceUrl": "https://github.com/Vita3K/Vita3K"
-    },
-    "id": "27c3e5af6b1557ed63fb65017ba56c1f485eabd007eb0846336e6d73030021f0",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "moonlight-stream/moonlight-qt",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
-      "sourceUrl": "https://github.com/moonlight-stream/moonlight-qt"
-    },
-    "id": "cbc00aa7661f2c4ab7ce6c3c7ca15cc51bca58fd025f2f2c46639442467a73e8",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "tabler/tabler-icons",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A set of over 6200 free MIT-licensed high-quality SVG icons for you to use in your web projects.",
-      "sourceUrl": "https://github.com/tabler/tabler-icons"
-    },
-    "id": "4f91e521c2ef222769f39a85f0302f56c050cd445162c66737f4ee32e684817b",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Jackett/Jackett",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "API Support for your favorite torrent trackers",
-      "sourceUrl": "https://github.com/Jackett/Jackett"
-    },
-    "id": "85db5d21ffd06505efb8a47a97e239d497400b7683eb3cce09930c340fd75830",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "TGX-Android/Telegram-X",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The main repository of Telegram X — official alternative Telegram client for Android.",
-      "sourceUrl": "https://github.com/TGX-Android/Telegram-X"
-    },
-    "id": "eebf5983fd5e801cd7baeaf96d15be9a5546df987bda85c5b9795c399150b55c",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "TeamNewPipe/NewPipe",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -743,30 +647,6 @@
     "id": "57e31b87359b81a877edfda63e1632be4cc3b380cbe0c1e71288691ee084489f",
     "status": "pending",
     "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google/gvisor",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Application Kernel for Containers",
-      "sourceUrl": "https://github.com/google/gvisor"
-    },
-    "id": "9cbf9edb96b9a09be5d38c0b289d0b2af38cfd939258cc47535dc839f0d0a5c4",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "aydencharles/onionHEN",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Yet another HEN enabler for jailbroken PS5",
-      "sourceUrl": "https://github.com/aydencharles/onionHEN"
-    },
-    "id": "fc8f0f2e58a1818b1ca3405c44687511528e79690d7ce44cb47342c53ca0bf62",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
   },
   {
     "kind": "github-classification",
@@ -890,18 +770,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "withmarbleapp/os-taxonomy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
-    },
-    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "icsharpcode/ILSpy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -938,30 +806,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MeteorDevelopment/meteor-client",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Based Minecraft utility mod.",
-      "sourceUrl": "https://github.com/MeteorDevelopment/meteor-client"
-    },
-    "id": "5582b0869ffb1fc42cb7f8804d3a2159f08e25a148ee391ca3f0918a6a3c6f25",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "woocommerce/woocommerce",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A customizable, open-source ecommerce platform built on WordPress. Build any commerce solution you can imagine.",
-      "sourceUrl": "https://github.com/woocommerce/woocommerce"
-    },
-    "id": "437660ce675380110abcd3a113ec5711395b0ec6f12d68890a22663f365cd437",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "filamentphp/filament",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -986,18 +830,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "frappe/helpdesk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Modern, Streamlined, Free and Open Source Customer Service Software",
-      "sourceUrl": "https://github.com/frappe/helpdesk"
-    },
-    "id": "4335f66ab40a3d05359d9f83bb5417dcdac5b63b7077a3f5339a69a131f6ed71",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "timeshiftsauce/CeruMusic",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1005,18 +837,6 @@
       "sourceUrl": "https://github.com/timeshiftsauce/CeruMusic"
     },
     "id": "2518654e2afc0f76568f4cf31f4cc84f59560d0ca9bce61e3f35b54fa86aa2d6",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "wrapper-offline/wrapper-offline",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A project with the purpose of providing a way to use the Legacy Video Maker from GoAnimate / Vyond.",
-      "sourceUrl": "https://github.com/wrapper-offline/wrapper-offline"
-    },
-    "id": "d7945490c76fba755cd781e3eb0865009ff420f05b63bf56fa6e57783862fa9a",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
   },
@@ -1067,18 +887,6 @@
     "id": "8087ac37fdea5c6a0ab0f1c1da3dee3a60c0524f93175977fe0abc6cd6e30bdf",
     "status": "pending",
     "createdAt": "2026-10-08T10:41:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "EpicGames/raddebugger",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A native, user-mode, multi-process, graphical debugger.",
-      "sourceUrl": "https://github.com/EpicGames/raddebugger"
-    },
-    "id": "90e01a7aed8d8e33de297e77fb0823e7fbecdf5fff417b97ba55651c3eea38c5",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
   },
   {
     "kind": "github-classification",
@@ -1379,18 +1187,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "64365ce222318f4cb61ed2851b2db152ce0755a136af2af588b3ef89f873ea9e",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "tester-army/e2e",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1410,18 +1206,6 @@
       "sourceUrl": "https://github.com/hicccc77/WeFlow"
     },
     "id": "eca43e3c65f0e3a191e1c10a94ee92a1698761bbf892497c00180000db8e7247",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dortania/OpenCore-Legacy-Patcher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Experience macOS just like before",
-      "sourceUrl": "https://github.com/dortania/OpenCore-Legacy-Patcher"
-    },
-    "id": "046683cc1d74fe2bb43604de101ff86995b3724b7e4a924a53777ad810b6659c",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1618,18 +1402,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Effect-TS/effect",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Build production-ready applications in TypeScript",
-      "sourceUrl": "https://github.com/Effect-TS/effect"
-    },
-    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "pocket-id/pocket-id",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1690,30 +1462,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "greensock/GSAP",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web",
-      "sourceUrl": "https://github.com/greensock/GSAP"
-    },
-    "id": "8e894f889b8e65bd2edc280c80c2d80dbc8fc1ed8669eccc976e98c3d19c53e5",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "lostindark/DriverStoreExplorer",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Driver Store Explorer",
-      "sourceUrl": "https://github.com/lostindark/DriverStoreExplorer"
-    },
-    "id": "578ff0941deeccdbe2beadc1f9a4a6fb496df69f7d971b5a887badbe105a28af",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "andrewmd5/Borderless-Gaming",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1750,30 +1498,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "grokability/snipe-it",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A free open source IT asset/license management system",
-      "sourceUrl": "https://github.com/grokability/snipe-it"
-    },
-    "id": "112f1afba99d6cf125a19da6be2d0c7bbc733d5aeb46a998ce26919cba580a7b",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "MISP/MISP",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "MISP (core software) - Open Source Threat Intelligence and Sharing Platform",
-      "sourceUrl": "https://github.com/MISP/MISP"
-    },
-    "id": "eb9a99fe8038a69ae643dc5576f3e663246892e991f4c34f87021d0c7d0e5544",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "bluerobotics/BlueOS",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1793,18 +1517,6 @@
       "sourceUrl": "https://github.com/julyx10/lap"
     },
     "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SnailSploit/Claude-Red",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
-      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
-    },
-    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
     "status": "pending",
     "createdAt": "2026-10-11T15:27:47Z"
   },
@@ -1842,5 +1554,269 @@
     "id": "c7d64abfb9a144c53634fd69847e73772e56812152bc70a671bad91ab5628c6b",
     "status": "pending",
     "createdAt": "2026-10-12T10:58:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "morluto/rea",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "sourceUrl": "https://github.com/morluto/rea"
+    },
+    "id": "5d4f1cc349fa4b60489ebc2190d517c552dfa4dcb270a2f9de448138c7fe8654",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "VERT-sh/VERT",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The next-generation file converter. Open source, fully local* and free forever.",
+      "sourceUrl": "https://github.com/VERT-sh/VERT"
+    },
+    "id": "af67d152a2f7fa9f8bea4e788fa2abcd081f209c40d653a304dd3364531f5fd1",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Alishahryar1/free-claude-code",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "sourceUrl": "https://github.com/Alishahryar1/free-claude-code"
+    },
+    "id": "705f80cd97160edf5f2bc2dd90dcbcf4e2df9a43c7f358de855575f680badb40",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "palemoky/chinese-poetry-api",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "📜 诗泉：高性能中国古诗词 API 服务",
+      "sourceUrl": "https://github.com/palemoky/chinese-poetry-api"
+    },
+    "id": "34e55f8e9fcbed2c573f6a722be320af6bf4605feada9355429b02e36f635335",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Agent-Field/CodeAF",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open-Source Software factory for Open Models",
+      "sourceUrl": "https://github.com/Agent-Field/CodeAF"
+    },
+    "id": "935012e849935c1dc6b43129d2e57276b13eeb34e06f0e8ff81a1e2fd18d5b6a",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "BishopFox/sliver",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Adversary Emulation Framework",
+      "sourceUrl": "https://github.com/BishopFox/sliver"
+    },
+    "id": "c9c4a226a5af81d05302864ac00b4b5c295462e3a98f4650973f6e5832d7efe6",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Christ9038/Ydisks-Xianyu-Helper",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "闲鱼多账号自动发货、消息回复系统——基于 Go 与 React 构建",
+      "sourceUrl": "https://github.com/Christ9038/Ydisks-Xianyu-Helper"
+    },
+    "id": "22143bc446672f784bc003e0a363f1c097b92bb578f239c5ef57f2e06443660f",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/OmniParser",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A simple screen parsing tool towards pure vision based GUI agent",
+      "sourceUrl": "https://github.com/microsoft/OmniParser"
+    },
+    "id": "93c4df6875270cbd3a5c69cdfcb7e6a8ebc9c161be79167840292daa668a4d6f",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "datawhalechina/every-embodied",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能",
+      "sourceUrl": "https://github.com/datawhalechina/every-embodied"
+    },
+    "id": "53b7abb987bc45165cc0e5414d501f8d5342c6fd3fb06b0422089c5bac57065e",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "AssetRipper/AssetRipper",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "GUI application to analyze game files",
+      "sourceUrl": "https://github.com/AssetRipper/AssetRipper"
+    },
+    "id": "594b7fe803c70913a2d7808a5aa4a8e939145512e25911cf23942baa725b9e06",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "OpenRA/OpenRA",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL. Runs on Windows, Linux, *BSD and Mac OS X.",
+      "sourceUrl": "https://github.com/OpenRA/OpenRA"
+    },
+    "id": "e4d42b0e4b2b485e38c3431d514c31d019b867fabf682957571f0bc0d85838d9",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MUnique/OpenMU",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "This project aims to create an easy to use, extendable and customizable server for a MMORPG called \"MU Online\".",
+      "sourceUrl": "https://github.com/MUnique/OpenMU"
+    },
+    "id": "5bb209431888ae10011549b2bce71e7169a5b91dbed5ba29e8e19c38fecabdc1",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "koharu-rs/koharu",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ML-powered manga translator, written in Rust.",
+      "sourceUrl": "https://github.com/koharu-rs/koharu"
+    },
+    "id": "d375bf1c58b07ef3f6a616324a774fdf451973374e63dc07255c727dfad0d9e9",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "apache/beam",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Apache Beam is a unified programming model for Batch and Streaming data processing.",
+      "sourceUrl": "https://github.com/apache/beam"
+    },
+    "id": "4eb00083702563fb22731514c784aa7cab939adf569f9ffea4a36d5ae52bbf5d",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aleixrodriala/newtube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "SmartTube for phones, unofficial: an open-source YouTube client for Android. Background play, PiP, SponsorBlock, DeArrow, save for offline, code sign-in.",
+      "sourceUrl": "https://github.com/aleixrodriala/newtube"
+    },
+    "id": "6bfa1445b9abf3c9212f7748d0be8fc661fcfb739b716b15731c4c9276cfa139",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "php-fig/log",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/php-fig/log"
+    },
+    "id": "8bcf4c218eac4ab9e3e0ceade49bfb22e3bfa78def80ecb49e5964df8c2692d7",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "php-fig/container",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/php-fig/container"
+    },
+    "id": "8a8bd706cd850ceb1dc6ef1cbc16cb23f770b43bb23863e16e2be7cb7cc115b8",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "caigg188/LDStatusPro",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一款功能强大的 Linux.do 社区增强工具以及相关综合服务开源项目。包含论坛辅助脚本、LD 士多前端源码、LDStatusPro官网源码等。",
+      "sourceUrl": "https://github.com/caigg188/LDStatusPro"
+    },
+    "id": "b9d82bb0a6489e46010beb2cf3e9e6b94b7ff832bc23584ad7131035cc6b4762",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "crmeb/crmeb_java",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Java商城 免费 开源 CRMEB商城JAVA版，SpringBoot + Maven + Swagger + Mybatis Plus + Redis + Uniapp +Vue+elementUI 包含移动端、小程序、PC后台、Api接口；有产品、用户、购物车、订单、积分、优惠券、营销、余额、权限、角色、系统设置、组合数据、可拖拉拽的form表单等模块，大量的减少了二开的成本。",
+      "sourceUrl": "https://github.com/crmeb/crmeb_java"
+    },
+    "id": "844801abcdcbc518a68249a28237d9be741c78afd9821ae3a7597a753e5c9bd2",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "imsyy/home",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "个人主页，我的个人主页，个人主页源码，主页模板，homepage",
+      "sourceUrl": "https://github.com/imsyy/home"
+    },
+    "id": "42f4a87319668455993bc3b5c58908b1f60a0b53d68ce14b8506608027cc12fa",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HKUDS/CLI-Anything",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "sourceUrl": "https://github.com/HKUDS/CLI-Anything"
+    },
+    "id": "e0a128b52fde854252bb47dfa6d1bef454c3e7d5c313ccbbb71d8bf5258ecd04",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ankitects/anki",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Anki is a smart spaced repetition flashcard program",
+      "sourceUrl": "https://github.com/ankitects/anki"
+    },
+    "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
+    "status": "pending",
+    "createdAt": "2026-10-12T20:19:06Z"
   }
 ]

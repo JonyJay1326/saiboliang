@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-12T10:58:57Z",
+  "dataUpdatedAt": "2026-10-12T20:19:06Z",
   "items": [
+    {
+      "title": "推出 Muse Wonder 与 Muse Wonder Full：面向智能体的前沿模型",
+      "sourceUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "publishedAt": "2026-10-12T17:08:05Z",
+      "source": "Meta",
+      "summary": "Meta 推出 Muse Wonder 与 Muse Wonder Full，称其为迄今最强模型，面向个人与专业智能体任务。",
+      "id": "033e5603f4dfe677d6e5819c467bea60e8662638123f5fbf072393c4ccb03346",
+      "originalTitle": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+      "translatedAt": "2026-10-12T20:19:06Z",
+      "lang": "en",
+      "originalSource": "Meta",
+      "originalUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "originalVerifiedAt": "2026-10-12T20:19:06Z",
+      "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-12T20:19:06Z",
+      "featured": true
+    },
+    {
+      "title": "OCP 全球峰会：在生态采用中，NVIDIA 开放 Vera Rubin 架构以助全球扩展 AI 工厂",
+      "sourceUrl": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+      "publishedAt": "2026-10-12T15:00:25Z",
+      "source": "NVIDIA",
+      "summary": "OCP 全球峰会上，NVIDIA 开放 Vera Rubin 架构，Cisco、Google、Meta、Microsoft 等加入推进。",
+      "id": "cb1d8044b50f43a24e9c668bee862585dc5ff81fe980c5fd2532d4b1ed8ff338",
+      "originalTitle": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+      "translatedAt": "2026-10-12T20:19:06Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+      "originalVerifiedAt": "2026-10-12T20:19:06Z",
+      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-12T20:19:06Z",
+      "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.80.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.80.0",
+      "publishedAt": "2026-10-11T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "4e5be942e39dc70bc1e3193b8576ef4c59c3ccd70dd9605417f54207179b5cf2",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.80.0",
+      "originalVerifiedAt": "2026-10-12T20:19:06Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.80.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-12T20:19:06Z",
+      "featured": null
+    },
     {
       "title": "何恺明团队发布多模态Harness框架",
       "sourceUrl": "https://www.qbitai.com/2026/10/502628.html",
@@ -3517,6 +3574,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-12T10:58:57Z",
-  "generatedAt": "2026-10-12T10:58:57Z"
+  "version": "2026-10-12T20:19:06Z",
+  "generatedAt": "2026-10-12T20:19:06Z"
 }

@@ -29,11 +29,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "vxcontrol/pentagi": {
-    "text": "完全自主的 AI 代理系统，能够执行复杂的渗透测试任务",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "pbakaus/impeccable": {
     "text": "让 AI 工具在设计中表现更佳的设计语言。",
     "source": "deepseek-flash",
@@ -43,11 +38,6 @@
     "text": "一个活的像素艺术工作站，真实 AI 代理在此做真实工作。本地优先的桌面代理框架——自带密钥，观看你的团队实际运行。",
     "source": "deepseek-flash",
     "at": "2026-09-26T14:59:11Z"
-  },
-  "pacifio/atlas": {
-    "text": "面向智能体的源代码管理。可同时使用多个编码智能体，集中追踪其改动并查询",
-    "source": "deepseek-flash",
-    "at": "2026-09-28T18:37:28Z"
   },
   "NVIDIA/OpenShell": {
     "text": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
@@ -129,11 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-09T17:27:43Z"
   },
-  "multimodal-art-projection/YuE": {
-    "text": "YuE2：前沿音乐生成，支持符号规划、零样本翻唱与 Agent 化音乐编辑。",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T17:27:43Z"
-  },
   "lexmount/moli": {
     "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
     "source": "deepseek-flash",
@@ -169,16 +154,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T15:27:47Z"
   },
-  "gepa-ai/gepa": {
-    "text": "用 AI 驱动的反思式优化来优化提示词、代码等",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T15:27:47Z"
-  },
-  "WordPress/ai": {
-    "text": "WordPress 的 AI 功能与实验。用于测试 AI 能力的模块化框架。",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T15:27:47Z"
-  },
   "higgsfield-ai/higgsfield": {
     "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型而设计的机器学习框架",
     "source": "deepseek-flash",
@@ -188,5 +163,30 @@
     "text": "使用 Python 的张量与动态神经网络，支持强大的 GPU 加速",
     "source": "deepseek-flash",
     "at": "2026-10-12T10:58:57Z"
+  },
+  "xerj-org/xerj": {
+    "text": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-12T20:19:06Z"
+  },
+  "fastai/fastai": {
+    "text": "fastai 深度学习库",
+    "source": "deepseek-flash",
+    "at": "2026-10-12T20:19:06Z"
+  },
+  "BuilderIO/agent-native": {
+    "text": "用于构建智能体应用的框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-12T20:19:06Z"
+  },
+  "WorldFlowAI/everything-claude-code": {
+    "text": "Claude Code 工具包——智能体、命令、技能、规则和钩子，助力高效的 AI 辅助开发",
+    "source": "deepseek-flash",
+    "at": "2026-10-12T20:19:06Z"
+  },
+  "tensorflow/tensorflow": {
+    "text": "面向所有人的开源机器学习框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-12T20:19:06Z"
   }
 }
