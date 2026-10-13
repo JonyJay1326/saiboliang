@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-13T10:43:04Z",
+  "dataUpdatedAt": "2026-10-13T18:21:53Z",
   "items": [
+    {
+      "title": "Gemini 4 Argon 机器人版",
+      "sourceUrl": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "publishedAt": "2026-10-13T16:01:58Z",
+      "source": "Google DeepMind",
+      "summary": "Gemini 4 Argon机器人版在ERQA基准领先，具备物理推理、零样本控制、Real2Sim和代理工作流。",
+      "id": "94cc08977f17740f09c1909bb34730c90135e718bd7805bb30ec64144b72c389",
+      "originalTitle": "Gemini 4 Argon for Robotics",
+      "translatedAt": "2026-10-13T18:21:53Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "originalVerifiedAt": "2026-10-13T18:21:53Z",
+      "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-13T18:21:53Z",
+      "featured": true
+    },
+    {
+      "title": "Gemini 4 Argon：为攻克最难题而生",
+      "sourceUrl": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+      "publishedAt": "2026-10-13T16:01:52Z",
+      "source": "Google DeepMind",
+      "summary": "Gemini 4 Argon是面向开发者、企业、科学家和消费者的最新前沿模型。",
+      "id": "851107eacfc8ba0f286d51c34b51c95ad5adbcaf6d8aeaba9c114a9dc36913d2",
+      "originalTitle": "Gemini 4 Argon: Built to solve your hardest problems",
+      "translatedAt": "2026-10-13T18:21:53Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+      "originalVerifiedAt": "2026-10-13T18:21:53Z",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-13T18:21:53Z",
+      "featured": true
+    },
+    {
+      "title": "阿里千问上新AI眼镜！实测用眼睛 “硬控”，2218元起",
+      "sourceUrl": "https://zhidx.com/p/600405.html",
+      "publishedAt": "2026-10-13T11:15:21Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 毕伟豪 编辑｜李水青 智东西10月13日报道，刚刚，阿里千问发布了三款全新AI硬件",
+      "id": "31953f8bf4cfb0c7159915b3cfb8cf0d08237ba3f0a3c2003003318f5327b67e",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/600405.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-13T18:21:53Z",
+      "featured": true
+    },
     {
       "title": "Claude团队又搞事：实测AI全自主复制进智能家电",
       "sourceUrl": "https://www.qbitai.com/2026/10/502920.html",
@@ -75,6 +132,25 @@
       "category": "model",
       "eventType": "model-review",
       "addedAt": "2026-10-13T10:43:04Z",
+      "featured": true
+    },
+    {
+      "title": "智能体下一站，人机共生！阶跃终端正式发布STEPX Neo",
+      "sourceUrl": "https://zhidx.com/p/600206.html",
+      "publishedAt": "2026-10-12T02:22:47Z",
+      "source": "智东西",
+      "summary": "托尼·斯塔克穿上略显笨重的钢铁战甲，准备进行第一次试飞；贾维斯在一旁校准设备、分析环境、提醒风险，也随时准备替他处理飞行中可能出现的问题——近二十年前",
+      "id": "f870eb149363f86e37f8a945a7f29ff5ae616a0e73d75a4a11d825673a6a92f1",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/600206.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-13T18:21:53Z",
       "featured": true
     },
     {
@@ -3631,6 +3707,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-13T10:43:04Z",
-  "generatedAt": "2026-10-13T10:43:04Z"
+  "version": "2026-10-13T18:21:53Z",
+  "generatedAt": "2026-10-13T18:21:53Z"
 }

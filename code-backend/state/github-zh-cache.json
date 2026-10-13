@@ -34,11 +34,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-25T15:50:41Z"
   },
-  "androoAGI/starnet": {
-    "text": "一个活的像素艺术工作站，真实 AI 代理在此做真实工作。本地优先的桌面代理框架——自带密钥，观看你的团队实际运行。",
-    "source": "deepseek-flash",
-    "at": "2026-09-26T14:59:11Z"
-  },
   "NVIDIA/OpenShell": {
     "text": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
     "source": "deepseek-flash",
@@ -104,11 +99,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
   },
-  "akitaonrails/ai-memory": {
-    "text": "为智能体编码 CLI 提供长期记忆的解决方案，并便于在不同智能体供应商之间交接。",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T10:40:22Z"
-  },
   "docker/docker-agent": {
     "text": "Docker Engineering 出品的 AI Agent 构建器与运行时",
     "source": "deepseek-flash",
@@ -136,11 +126,6 @@
   },
   "WordPress/mcp-adapter": {
     "text": "MCP 适配器，将 Abilities API 桥接到 Model Context Protocol，使 MCP 客户端能够以编程方式发现并调用 WordPress 插件、主题与核心能力。",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
-  "llm-d/llm-d-router": {
-    "text": "llm-d Router：推理请求的智能入口",
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
   },
@@ -179,19 +164,49 @@
     "source": "deepseek-flash",
     "at": "2026-10-12T20:19:06Z"
   },
-  "WorldFlowAI/everything-claude-code": {
-    "text": "Claude Code 工具包——智能体、命令、技能、规则和钩子，助力高效的 AI 辅助开发",
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
-  },
-  "tensorflow/tensorflow": {
-    "text": "面向所有人的开源机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
-  },
   "BichengWang/ai-decision-system": {
     "text": "用于 AI 辅助 go/no-go 决策的可重放、可离线验证记录：类型化模型回答、策略门控审批、A/B 发布门、发布门。",
     "source": "deepseek-flash",
     "at": "2026-10-13T10:43:04Z"
+  },
+  "hugohe3/ppt-master": {
+    "text": "AI 将文档或主题转为原生 PowerPoint 演示文稿，含原生形状、切换与动画、按需生成数据图表和表格、根据演讲者备注生成音频旁白，并支持你自己的 .pptx 模板。· 作者 Hugo He",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "vxcontrol/pentagi": {
+    "text": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "uber/ADR": {
+    "text": "ADR 通过可观测性、安全基准测试和威胁检测保护企业 AI 智能体。已在 Uber 部署。",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "Armur-Ai/Pentest-Swarm-AI": {
+    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用和报告专家——支持漏洞赏金、持续监控和 CTF 模式。使用 Go 构建，集成 7 种以上原生安全工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "lharries/whatsapp-mcp": {
+    "text": "WhatsApp MCP 服务器",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "gepa-ai/gepa": {
+    "text": "使用 AI 驱动的反思优化来优化提示词、代码等",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "google/artemis": {
+    "text": "ARTEMIS 将自然语言指令转化为可靠的 Android 自动化。它自动化端到端工作流、捕获日志，并与 Antigravity、Codex 和 Claude Code 等 AI 编程助手无缝集成。在 AndroidWorld 基准测试中成功率超过 99%。",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
+  },
+  "mobile-next/mobile-mcp": {
+    "text": "用于移动自动化和抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T18:21:53Z"
   }
 }

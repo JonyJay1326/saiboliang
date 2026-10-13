@@ -363,18 +363,6 @@
     "createdAt": "2026-09-27T15:36:14Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "kestra-io/kestra",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
-      "sourceUrl": "https://github.com/kestra-io/kestra"
-    },
-    "id": "2ce8a952175f736f8722b2768b702e9c05f8cadfbaa755af118759895d3eba6f",
-    "status": "pending",
-    "createdAt": "2026-09-28T09:53:56Z"
-  },
-  {
     "kind": "plans",
     "objectId": "opencode-go-plan",
     "reason": "plan tier pattern not found: Go",
@@ -396,18 +384,6 @@
     "id": "fc4ecb4ee1570a1fe4614bdefa88c5a7d6558ee8e7f092a5ac12db25a0afae0f",
     "status": "pending",
     "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Pumpkin-MC/Pumpkin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Empowering everyone to host fast and efficient Minecraft servers",
-      "sourceUrl": "https://github.com/Pumpkin-MC/Pumpkin"
-    },
-    "id": "2ffc284b0c1432646e136019c61897861a4c2db0af8c92ea3587ecabee20202d",
-    "status": "pending",
-    "createdAt": "2026-09-30T11:42:49Z"
   },
   {
     "kind": "github-classification",
@@ -561,18 +537,6 @@
       "sourceUrl": "https://github.com/SirDiabo/GithubLauncher"
     },
     "id": "35045c763abaaa15ce71fee464cd4d548a44457227d2caa3a6fc94738c7f3e8c",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "zerx-lab/FluxDown",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
-      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
-    },
-    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
     "status": "pending",
     "createdAt": "2026-10-04T15:49:24Z"
   },
@@ -734,18 +698,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "aquasecurity/trivy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-      "sourceUrl": "https://github.com/aquasecurity/trivy"
-    },
-    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "oauth2-proxy/oauth2-proxy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -765,30 +717,6 @@
       "sourceUrl": "https://github.com/icsharpcode/ILSpy"
     },
     "id": "232558e96a99d8857227107f0c08637f4420420cd00989b54b75e556835a77b3",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "BeyondDimension/SteamTools",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
-      "sourceUrl": "https://github.com/BeyondDimension/SteamTools"
-    },
-    "id": "845dbfba092c7ea257dd5ae83ab7fcef50e405dee1861284bc86101fc97917de",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "MCRcortex/voxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An LoD rendering mod for minecraft",
-      "sourceUrl": "https://github.com/MCRcortex/voxy"
-    },
-    "id": "163ede3d3f8f7661551faf50dadf408d6e777bd06cd4e23072c588344c722609",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
   },
@@ -902,18 +830,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "fivethirtyeight/data",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Data and code behind the articles and graphics at FiveThirtyEight",
-      "sourceUrl": "https://github.com/fivethirtyeight/data"
-    },
-    "id": "b1e3103323811b4ae2315aef008ea2b9acfbc626ed3470ce1263675bba19dadf",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "openai/openai-cookbook",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -921,18 +837,6 @@
       "sourceUrl": "https://github.com/openai/openai-cookbook"
     },
     "id": "5b88966468540323efd3417bebf60ea6fc6f9e964eededdef0ab5c090f5f9801",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
     "status": "pending",
     "createdAt": "2026-10-08T17:54:23Z"
   },
@@ -1008,18 +912,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "reconurge/flowsint",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
-      "sourceUrl": "https://github.com/reconurge/flowsint"
-    },
-    "id": "5037ee3b02416a4ad8af768186a987fc32bff2eaf4bedfd44d627badd686e955",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Robbyant/lingbot-map",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1056,18 +948,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "IRNova/Nova-Proxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "یک پنل گرافیکی کاربردی برای ارائه اشتراک‌های Worker با پروکسی‌های ، Trojan و Warp به همراه زنجیره پروکسی، ارائه دهنده تنظیمات کامل DNS، IP تمیز و روتینگ پیشرفته برای کاربران تمامی پلتفرم‌ها با استفاده از هسته‌های Amnezia، Wireguard، Sing-box، Clash/Mihomo و Xray.",
-      "sourceUrl": "https://github.com/IRNova/Nova-Proxy"
-    },
-    "id": "3aa4810bfb465c9c691b84e2708ec6baee64e10b16d73f0892d3adeea5389519",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "NickvisionApps/Parabolic",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1092,18 +972,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Anuken/Mindustry",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The automation tower defense RTS",
-      "sourceUrl": "https://github.com/Anuken/Mindustry"
-    },
-    "id": "fd025bae92dafa0b041be269ba710e3e53771e71023ef75641dbebf79763b446",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "espocrm/espocrm",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1111,18 +979,6 @@
       "sourceUrl": "https://github.com/espocrm/espocrm"
     },
     "id": "a5b5344ecd42a84579834efc7cdb2fe96510d4ca507b599fdbbc75aac19ce391",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "zs1083339604/FaceWinUnlock-Tauri",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一款基于 Tauri 框架开发的现代化 Windows 面容识别解锁增强软件。它通过自定义 Credential Provider (DLL) 注入 Windows 登录界面，结合前端 Vue 3 和后端 OpenCV 人脸识别算法，为用户提供类似 Windows Hello 的解锁体验。",
-      "sourceUrl": "https://github.com/zs1083339604/FaceWinUnlock-Tauri"
-    },
-    "id": "fbb3d10c684318eee375f3f5ecca69bc5dbb1cca5ff6c110fed2dc133d339ff1",
     "status": "pending",
     "createdAt": "2026-10-09T17:27:43Z"
   },
@@ -1176,18 +1032,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "hicccc77/WeFlow",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "WeFlow - 一个本地的微信聊天记录导出和年度报告应用",
-      "sourceUrl": "https://github.com/hicccc77/WeFlow"
-    },
-    "id": "eca43e3c65f0e3a191e1c10a94ee92a1698761bbf892497c00180000db8e7247",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "charmbracelet/bubbletea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1207,42 +1051,6 @@
       "sourceUrl": "https://github.com/dyang886/Game-Cheats-Manager"
     },
     "id": "a3f3d864c381e1ece657d8e63e62c69dea22569eef09e41f7b570968f605a822",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google-deepmind/tapnet",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Tracking Any Point (TAP)",
-      "sourceUrl": "https://github.com/google-deepmind/tapnet"
-    },
-    "id": "ac3c88a1601604ee26f544f0807b77424f31aad47b31a1565bd2a089768266ac",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dotnet/roslyn",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Roslyn .NET compiler provides C# and Visual Basic languages with rich code analysis APIs.",
-      "sourceUrl": "https://github.com/dotnet/roslyn"
-    },
-    "id": "9592f52b6a95e9bc190df8d229b6596c4df513de9ed5f3571143e683801285a0",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ShareX/ShareX",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
-      "sourceUrl": "https://github.com/ShareX/ShareX"
-    },
-    "id": "9cbee9e42167b945e2c4ee970e2fd66a622a75516d23380f1f4e0ffeef78b15b",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1315,18 +1123,6 @@
       "sourceUrl": "https://github.com/FreshRSS/FreshRSS"
     },
     "id": "a5a6fb9d6f00407f83cfa5a130b95548694d4519575ed91b8d8968e9c11f11cb",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "osTicket/osTicket",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The osTicket open source ticketing system official project repository, for versions 1.8 and later",
-      "sourceUrl": "https://github.com/osTicket/osTicket"
-    },
-    "id": "c47aef7347a769eeb2b9e18cea28a21c34ee7599f6b789096a632e293fa87929",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1439,18 +1235,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "andrewmd5/Borderless-Gaming",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Play your favorite games in a borderless window; no more time consuming alt-tabs.",
-      "sourceUrl": "https://github.com/andrewmd5/Borderless-Gaming"
-    },
-    "id": "fcc7c9cc7777faa14471a4a89325d2fc102b8bd12b4ac186239f4566a96c40a8",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "laravel/framework",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1499,18 +1283,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "godotengine/godot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
-      "sourceUrl": "https://github.com/godotengine/godot"
-    },
-    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
-    "status": "pending",
-    "createdAt": "2026-10-12T10:58:57Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "morluto/rea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1518,18 +1290,6 @@
       "sourceUrl": "https://github.com/morluto/rea"
     },
     "id": "5d4f1cc349fa4b60489ebc2190d517c552dfa4dcb270a2f9de448138c7fe8654",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "VERT-sh/VERT",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The next-generation file converter. Open source, fully local* and free forever.",
-      "sourceUrl": "https://github.com/VERT-sh/VERT"
-    },
-    "id": "af67d152a2f7fa9f8bea4e788fa2abcd081f209c40d653a304dd3364531f5fd1",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
   },
@@ -1578,18 +1338,6 @@
       "sourceUrl": "https://github.com/BishopFox/sliver"
     },
     "id": "c9c4a226a5af81d05302864ac00b4b5c295462e3a98f4650973f6e5832d7efe6",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Christ9038/Ydisks-Xianyu-Helper",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "闲鱼多账号自动发货、消息回复系统——基于 Go 与 React 构建",
-      "sourceUrl": "https://github.com/Christ9038/Ydisks-Xianyu-Helper"
-    },
-    "id": "22143bc446672f784bc003e0a363f1c097b92bb578f239c5ef57f2e06443660f",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
   },
@@ -1679,18 +1427,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "aleixrodriala/newtube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "SmartTube for phones, unofficial: an open-source YouTube client for Android. Background play, PiP, SponsorBlock, DeArrow, save for offline, code sign-in.",
-      "sourceUrl": "https://github.com/aleixrodriala/newtube"
-    },
-    "id": "6bfa1445b9abf3c9212f7748d0be8fc661fcfb739b716b15731c4c9276cfa139",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "php-fig/log",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1727,18 +1463,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "imsyy/home",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "个人主页，我的个人主页，个人主页源码，主页模板，homepage",
-      "sourceUrl": "https://github.com/imsyy/home"
-    },
-    "id": "42f4a87319668455993bc3b5c58908b1f60a0b53d68ce14b8506608027cc12fa",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/CLI-Anything",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1746,18 +1470,6 @@
       "sourceUrl": "https://github.com/HKUDS/CLI-Anything"
     },
     "id": "e0a128b52fde854252bb47dfa6d1bef454c3e7d5c313ccbbb71d8bf5258ecd04",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ankitects/anki",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Anki is a smart spaced repetition flashcard program",
-      "sourceUrl": "https://github.com/ankitects/anki"
-    },
-    "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
   },
@@ -1774,25 +1486,230 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "michael-denyer/pstack-claude",
+    "objectId": "EpicGames/raddebugger",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+      "description": "A native, user-mode, multi-process, graphical debugger.",
+      "sourceUrl": "https://github.com/EpicGames/raddebugger"
     },
-    "id": "9b3f19139a3be89a8c483b594006fac051d8a35ca30b8e321d344f46719d65a6",
+    "id": "90e01a7aed8d8e33de297e77fb0823e7fbecdf5fff417b97ba55651c3eea38c5",
     "status": "pending",
-    "createdAt": "2026-10-13T10:43:04Z"
+    "createdAt": "2026-10-13T18:21:53Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
+      "description": "A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
     },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "id": "64365ce222318f4cb61ed2851b2db152ce0755a136af2af588b3ef89f873ea9e",
     "status": "pending",
-    "createdAt": "2026-10-13T10:43:04Z"
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gtsteffaniak/filebrowser",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "📂 Web File Browser",
+      "sourceUrl": "https://github.com/gtsteffaniak/filebrowser"
+    },
+    "id": "76352fe797faafed356de53fdc75d565fa7e9c28ab2572256d65dcffc64ccd0b",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "duckdb/ducklake",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DuckLake is an integrated data lake and catalog format",
+      "sourceUrl": "https://github.com/duckdb/ducklake"
+    },
+    "id": "f9cca8f341f42eb87fd8a03dae492208bb8be23e4844681c0a985d64780f2950",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zju3dv/GVHMR",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Code for \"GVHMR: World-Grounded Human Motion Recovery via Gravity-View Coordinates\", Siggraph Asia 2024, TPAMI 2026",
+      "sourceUrl": "https://github.com/zju3dv/GVHMR"
+    },
+    "id": "efb979ad15356c6a4201d3be4c4fabc00282d9b06920cddf93a6a2a69d424cbc",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "greensock/GSAP",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web",
+      "sourceUrl": "https://github.com/greensock/GSAP"
+    },
+    "id": "8e894f889b8e65bd2edc280c80c2d80dbc8fc1ed8669eccc976e98c3d19c53e5",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Devolutions/UniGetUI",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
+      "sourceUrl": "https://github.com/Devolutions/UniGetUI"
+    },
+    "id": "522f84650360b38294ddff9498567f21c2e2ab877e087328b6367d3ff3d40095",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Perfare/Il2CppDumper",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Unity il2cpp reverse engineer",
+      "sourceUrl": "https://github.com/Perfare/Il2CppDumper"
+    },
+    "id": "ca14f41fa8ee16b756a2cc78c108b5e3c0f9ac58a445ff2ff2e8a2e43c6425fb",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "LorisYounger/VPet",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "虚拟桌宠模拟器 一个开源的桌宠软件, 可以内置到任何WPF应用程序",
+      "sourceUrl": "https://github.com/LorisYounger/VPet"
+    },
+    "id": "5f18fe14e83384df705e654609f31131f8b0704932439bd0b1536bba062d32ff",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "storytold/artcraft",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "sourceUrl": "https://github.com/storytold/artcraft"
+    },
+    "id": "6b52ec3080139d83222c1c24043ca438acbbd68981619277416dd583e978c118",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "shmykelsa/AAAD",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The original application for downloading and installing apps made specifically for Android Auto outside of Google Play Store. Active since 2021.",
+      "sourceUrl": "https://github.com/shmykelsa/AAAD"
+    },
+    "id": "ce531275e4048d40d1b9ed74430973e569c6efa038e789b56792d687821f3f57",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "koel/koel",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Music streaming solution that works.",
+      "sourceUrl": "https://github.com/koel/koel"
+    },
+    "id": "60e1f2dd096f73ed650962232f61c4f404670c2d2c20812be56f5f453fe1c312",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "easychen/opc-methodology",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群。",
+      "sourceUrl": "https://github.com/easychen/opc-methodology"
+    },
+    "id": "8f4399f3c3aaabb26d8e994475a96cd89c1db9e340d400477c00767cac58dfab",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "grokability/snipe-it",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free open source IT asset/license management system",
+      "sourceUrl": "https://github.com/grokability/snipe-it"
+    },
+    "id": "112f1afba99d6cf125a19da6be2d0c7bbc733d5aeb46a998ce26919cba580a7b",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "php-fig/http-message",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The purpose of this PSR is to provide a set of common interfaces for HTTP messages as described in RFC 7230 and RFC 7231",
+      "sourceUrl": "https://github.com/php-fig/http-message"
+    },
+    "id": "b94f3a8d9cdb507e32095396437436be52ad9114ffd800bc7161416c7c9a0f8d",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yangzongzhuan/RuoYi-Vue3",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🎉 (RuoYi)官方仓库 基于SpringBoot，Spring Security，JWT，Vue3 & Vite、Element Plus 的前后端分离权限管理系统",
+      "sourceUrl": "https://github.com/yangzongzhuan/RuoYi-Vue3"
+    },
+    "id": "2139fd748ea98b1d73c68186861209f6b4cea12aa72c0f623befded351f84be3",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "wu529778790/panhub.shenzjd.com",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PanHub 网盘聚合搜索 · Netdisk Search Aggregator。一个搜索框聚合夸克/阿里云盘/百度/115/迅雷等网盘资源，多源聚合去重、智能排序、插件熔断隔离。零数据库轻量部署，支持 Docker / Vercel / Cloudflare。Aggregate netdisk links into one search.",
+      "sourceUrl": "https://github.com/wu529778790/panhub.shenzjd.com"
+    },
+    "id": "c0f3c3a485b1c57909d49de0a6b6401f84f29cb08ce8ea32444f2bd814b790ff",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FreeTubeApp/FreeTube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An Open Source YouTube app for privacy",
+      "sourceUrl": "https://github.com/FreeTubeApp/FreeTube"
+    },
+    "id": "a948dda44957e02a942fc23e65feb2a6b856c4aa3dff1b56db2a878016a735b7",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rust-lang/rust",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "sourceUrl": "https://github.com/rust-lang/rust"
+    },
+    "id": "1a855e1f24fca2414d72b77b48df790bfdf98ecef7ca8e0a2067f53bf4faf1cd",
+    "status": "pending",
+    "createdAt": "2026-10-13T18:21:53Z"
   }
 ]

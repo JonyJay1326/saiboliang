@@ -1,12 +1,12 @@
 {
-  "033e5603f4dfe677d6e5819c467bea60e8662638123f5fbf072393c4ccb03346": {
-    "summary": "Meta 推出 Muse Wonder 与 Muse Wonder Full，称其为迄今最强模型，面向个人与专业智能体任务。",
+  "94cc08977f17740f09c1909bb34730c90135e718bd7805bb30ec64144b72c389": {
+    "summary": "Gemini 4 Argon机器人版在ERQA基准领先，具备物理推理、零样本控制、Real2Sim和代理工作流。",
     "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
+    "at": "2026-10-13T18:21:53Z"
   },
-  "cb1d8044b50f43a24e9c668bee862585dc5ff81fe980c5fd2532d4b1ed8ff338": {
-    "summary": "OCP 全球峰会上，NVIDIA 开放 Vera Rubin 架构，Cisco、Google、Meta、Microsoft 等加入推进。",
+  "851107eacfc8ba0f286d51c34b51c95ad5adbcaf6d8aeaba9c114a9dc36913d2": {
+    "summary": "Gemini 4 Argon是面向开发者、企业、科学家和消费者的最新前沿模型。",
     "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
+    "at": "2026-10-13T18:21:53Z"
   }
 }
