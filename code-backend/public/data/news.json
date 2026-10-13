@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-12T20:19:06Z",
+  "dataUpdatedAt": "2026-10-13T10:43:04Z",
   "items": [
+    {
+      "title": "Claude团队又搞事：实测AI全自主复制进智能家电",
+      "sourceUrl": "https://www.qbitai.com/2026/10/502920.html",
+      "publishedAt": "2026-10-13T06:19:10Z",
+      "source": "量子位",
+      "summary": "拉马克进化的幽灵",
+      "id": "c89f79a8ac9faafe1c617eb77958b69d9319f4ce26abe70fbd7d8233add10089",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/502920.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-13T10:43:04Z",
+      "featured": true
+    },
     {
       "title": "推出 Muse Wonder 与 Muse Wonder Full：面向智能体的前沿模型",
       "sourceUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
@@ -40,6 +59,25 @@
       "featured": true
     },
     {
+      "title": "0.6B起！Jev对手模型来了，开源多模态，登上全球测评榜一",
+      "sourceUrl": "https://zhidx.com/p/600073.html",
+      "publishedAt": "2026-10-12T11:15:17Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 杨京丽 编辑 | 李水青 智东西10月12日消息，昨天，vLLM社区孵化的开源AI基础设施项目vLLM Semantic Router推出并开",
+      "id": "126aee740a7ff82b91af115df1ae78b6990871aa4e8fb0195b5c3199ccc1801d",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/600073.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-13T10:43:04Z",
+      "featured": true
+    },
+    {
       "title": "Command Code 发布 v1.80.0",
       "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.80.0",
       "publishedAt": "2026-10-11T16:00:00Z",
@@ -56,6 +94,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-12T20:19:06Z",
+      "featured": null
+    },
+    {
+      "title": "Command Code 发布 v1.81.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.81.0",
+      "publishedAt": "2026-10-11T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "919e16959d604b5a5117bdda5dcec1200c2f0394fe7823e00cbcb86a7417e88f",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.81.0",
+      "originalVerifiedAt": "2026-10-13T10:43:04Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-12&version=v1.81.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-13T10:43:04Z",
       "featured": null
     },
     {
@@ -3574,6 +3631,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-12T20:19:06Z",
-  "generatedAt": "2026-10-12T20:19:06Z"
+  "version": "2026-10-13T10:43:04Z",
+  "generatedAt": "2026-10-13T10:43:04Z"
 }

@@ -1,32 +1,38 @@
 {
-  "ec899f104655cd5da0d36efc8154462ccde8b2c16658b211d0df027b1cedccc8": {
-    "title": "GitHub Copilot 每周发布 — 10 月 5 日",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
-  "24beabc691ccd09b06b9795cb98093d61a5d35a4e1562cb247367f7b73ad1d71": {
-    "title": "CodeQL 2.27.2 改进 C++、Go、Rust 和 JavaScript 分析",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
-  "033e5603f4dfe677d6e5819c467bea60e8662638123f5fbf072393c4ccb03346": {
-    "title": "推出 Muse Wonder 与 Muse Wonder Full：面向智能体的前沿模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
-  },
   "519145787ddbc1de0b42337f180b1976e0ab5b9fcf3384574493ea5ce7a9bdc6": {
     "title": "提交的推送归属功能进入有限公开预览",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-12T20:19:06Z"
   },
-  "cb1d8044b50f43a24e9c668bee862585dc5ff81fe980c5fd2532d4b1ed8ff338": {
-    "title": "OCP 全球峰会：在生态采用中，NVIDIA 开放 Vera Rubin 架构以助全球扩展 AI 工厂",
+  "ec0714e7c8ff94385ec1bbe863956070a93c314d6b0fbcb02d98511a0e095c81": {
+    "title": "推出 X 订阅",
+    "summary": "Grok、Grok Bot、Cursor 和 X Premium，全部包含在一个套餐中。",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T10:43:04Z"
+  },
+  "9d90bbd97b85568370c75a1a74e88e1242b9a744ce28623c7e8e69d0590e7864": {
+    "title": "客户端遥测用户归因与可配置采集",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
+    "at": "2026-10-13T10:43:04Z"
+  },
+  "938ee56ecdcfa428e21dbee9df3887f87bf1f82fdf8dee5753c94c174270667d": {
+    "title": "Dependabot 的匿名组织级注册表",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-13T10:43:04Z"
+  },
+  "293b85c97d55fe8c4e9e41f72816e9f9cf67c589efb0317fb94e0d165221bc7a": {
+    "title": "从地球到轨道，法国生态携手 NVIDIA 实现规模化代理式计算",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-13T10:43:04Z"
+  },
+  "67d54252a65ac40998088f1fae7f8e54e11681ba906a1ba8d8d221cce13c078a": {
+    "title": "深入解析 Azure Maia 300 架构",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-13T10:43:04Z"
   }
 }

@@ -188,5 +188,10 @@
     "text": "面向所有人的开源机器学习框架",
     "source": "deepseek-flash",
     "at": "2026-10-12T20:19:06Z"
+  },
+  "BichengWang/ai-decision-system": {
+    "text": "用于 AI 辅助 go/no-go 决策的可重放、可离线验证记录：类型化模型回答、策略门控审批、A/B 发布门、发布门。",
+    "source": "deepseek-flash",
+    "at": "2026-10-13T10:43:04Z"
   }
 }

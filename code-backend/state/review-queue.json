@@ -506,18 +506,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "daimiaopeng/coolapk-desktop",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "酷安跨平台桌面版",
-      "sourceUrl": "https://github.com/daimiaopeng/coolapk-desktop"
-    },
-    "id": "3cc77a1da31b5493db0a67f196e8a9fc8d535f6d756901d4cd58c988ba5bb185",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "boykopovar/AnyPS5",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1163,17 +1151,6 @@
     "createdAt": "2026-10-09T17:27:43Z"
   },
   {
-    "kind": "plans",
-    "objectId": "supergrok-plan",
-    "reason": "official terms changed; retaining prior record",
-    "evidence": {
-      "sourceUrl": "https://x.ai/pricing"
-    },
-    "id": "0994024fa625d57b1037fe70a3bd6c95cc0718d3799cf976255ebe2e1aea1a3a",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "flutter/flutter",
     "reason": "AI applicability uncertain",
@@ -1522,18 +1499,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "noVibe/DnsConf",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DNS Block and Redirect configurer for Cloudflare / NextDNS",
-      "sourceUrl": "https://github.com/noVibe/DnsConf"
-    },
-    "id": "02a4e252ba3876557622f64a3d694f16ee3fa0d27950f1716ad96682d1019873",
-    "status": "pending",
-    "createdAt": "2026-10-12T10:58:57Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "godotengine/godot",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1541,17 +1506,6 @@
       "sourceUrl": "https://github.com/godotengine/godot"
     },
     "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
-    "status": "pending",
-    "createdAt": "2026-10-12T10:58:57Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "41fe8315c207a444e2930207652d31fc11c261fecafa0fddd706b729eff87b46",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "c7d64abfb9a144c53634fd69847e73772e56812152bc70a671bad91ab5628c6b",
     "status": "pending",
     "createdAt": "2026-10-12T10:58:57Z"
   },
@@ -1761,18 +1715,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "caigg188/LDStatusPro",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一款功能强大的 Linux.do 社区增强工具以及相关综合服务开源项目。包含论坛辅助脚本、LD 士多前端源码、LDStatusPro官网源码等。",
-      "sourceUrl": "https://github.com/caigg188/LDStatusPro"
-    },
-    "id": "b9d82bb0a6489e46010beb2cf3e9e6b94b7ff832bc23584ad7131035cc6b4762",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "crmeb/crmeb_java",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1818,5 +1760,39 @@
     "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "supergrok-plan",
+    "reason": "plan scope anchors not found: Get to know Grok and its capabilities for free within generous limits,Go further with significantly higher usage",
+    "evidence": {
+      "sourceUrl": "https://x.ai/pricing"
+    },
+    "id": "841648960dd6f352b380b87711bd9754c10d7795418f42255c3f19028df7e784",
+    "status": "pending",
+    "createdAt": "2026-10-13T10:43:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "michael-denyer/pstack-claude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+    },
+    "id": "9b3f19139a3be89a8c483b594006fac051d8a35ca30b8e321d344f46719d65a6",
+    "status": "pending",
+    "createdAt": "2026-10-13T10:43:04Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-13T10:43:04Z"
   }
 ]
