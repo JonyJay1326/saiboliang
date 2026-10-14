@@ -44,11 +44,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "cline/cline": {
-    "text": "作为 SDK、IDE 扩展或 CLI 助手的自主编码代理。",
-    "source": "deepseek-flash",
-    "at": "2026-10-02T07:20:15Z"
-  },
   "AI4Finance-Foundation/FinGPT": {
     "text": "FinGPT：开源金融大语言模型！带来变革 🔥 我们在 HuggingFace 上发布训练好的模型。",
     "source": "deepseek-flash",
@@ -74,25 +69,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
-  "AtomicBot-ai/atomic-agent": {
-    "text": "Atomic Agent 是本地优先的 AI 智能体。通过 llama.cpp 在自有机器上运行开放权重模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-07T17:50:43Z"
-  },
   "superdesigndev/treg": {
     "text": "面向智能体工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
-  },
-  "Tracer-Cloud/opensre": {
-    "text": "构建你自己的 AI SRE 智能体。面向 AI 时代的开源工具包。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
-  "ys-ll/uniterm": {
-    "text": "一体化终端，支持 30 多种协议——SSH、RDP、SFTP、数据库、Kubernetes 等。内置 AI Agent，可自主执行多轮 shell 命令。",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
   },
   "docling-project/docling": {
     "text": "让你的文档为生成式 AI 做好准备",
@@ -124,11 +104,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
   },
-  "WordPress/mcp-adapter": {
-    "text": "MCP 适配器，将 Abilities API 桥接到 Model Context Protocol，使 MCP 客户端能够以编程方式发现并调用 WordPress 插件、主题与核心能力。",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
   "Vincentwei1021/video-shotcraft": {
     "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作电影级产品视频，含 152 张镜头配方卡、209 个动态预览和可投产模板",
     "source": "deepseek-flash",
@@ -154,11 +129,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-12T20:19:06Z"
   },
-  "fastai/fastai": {
-    "text": "fastai 深度学习库",
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
-  },
   "BuilderIO/agent-native": {
     "text": "用于构建智能体应用的框架",
     "source": "deepseek-flash",
@@ -166,11 +136,6 @@
   },
   "vxcontrol/pentagi": {
     "text": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "uber/ADR": {
-    "text": "ADR 通过可观测性、安全基准测试和威胁检测保护企业 AI 智能体。已在 Uber 部署。",
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
@@ -184,19 +149,49 @@
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
-  "gepa-ai/gepa": {
-    "text": "使用 AI 驱动的反思优化来优化提示词、代码等",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
   "google/artemis": {
     "text": "ARTEMIS 将自然语言指令转化为可靠的 Android 自动化。它自动化端到端工作流、捕获日志，并与 Antigravity、Codex 和 Claude Code 等 AI 编程助手无缝集成。在 AndroidWorld 基准测试中成功率超过 99%。",
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
-  "mobile-next/mobile-mcp": {
-    "text": "用于移动自动化和抓取的模型上下文协议服务器（iOS、Android、模拟器、仿真器和真实设备）",
+  "ifixai-ai/iFixAi": {
+    "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi 可在 120 秒内得到答案。",
     "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "vercel-labs/skills": {
+    "text": "开放的智能体技能工具 - npx skills",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "twostraws/SwiftUI-Agent-Skill": {
+    "text": "适用于 Claude Code、Codex 及其他 AI 工具的 SwiftUI 智能体技能。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "SakanaAI/AI-Scientist": {
+    "text": "The AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "facebookresearch/audiocraft": {
+    "text": "Audiocraft 是一个基于深度学习进行音频处理与生成的库。它包含最先进的 EnCodec 音频压缩器/分词器，以及 MusicGen——一个简单可控、支持文本与旋律条件的音乐生成语言模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "llm-d/llm-d-router": {
+    "text": "llm-d Router：推理请求的智能入口",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "laravel/ai": {
+    "text": "Laravel AI SDK 提供统一且富有表现力的 API，用于与 OpenAI、Anthropic、Gemini 等 AI 提供商交互。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "WorldFlowAI/everything-claude-code": {
+    "text": "Claude Code 工具包 - 智能体、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
   }
 }

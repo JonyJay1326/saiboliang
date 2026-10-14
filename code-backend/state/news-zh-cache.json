@@ -1,10 +1,4 @@
 {
-  "519145787ddbc1de0b42337f180b1976e0ab5b9fcf3384574493ea5ce7a9bdc6": {
-    "title": "提交的推送归属功能进入有限公开预览",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
-  },
   "ec0714e7c8ff94385ec1bbe863956070a93c314d6b0fbcb02d98511a0e095c81": {
     "title": "推出 X 订阅",
     "summary": "Grok、Grok Bot、Cursor 和 X Premium，全部包含在一个套餐中。",
@@ -95,32 +89,14 @@
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
   },
-  "8b1ab1df41ac00d8450a9c25dd5dbcdb0b91a40bb3de26f2671c5e1a109999b2": {
-    "title": "负责任且安全地开发 Gemini 4 Argon",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
   "6b8c3209e70c0fe78ffd3eea647b87b8b4b718a7a2a74655cb73aa17e086f131": {
     "title": "GitHub App 在最小权限和管理方面的改进",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
   },
-  "23347420601cd4d27d10ce3aeed24023edb09eb21b267cfc390786fceeecf6e8": {
-    "title": "GitHub Copilot 中的 Gemini 4 Argon",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
   "eee6cc87fc10c58396747d73fb885d45576956894a21f213eb60cbf16669687b": {
     "title": "从企业到 Earthshot：英国生态系统携手 NVIDIA 从雄心迈向应用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "8323b3b7fc78f153da00b636d0971b1cc681a305e14383a26b0bcefa4e99db36": {
-    "title": "欧洲城市部署 NVIDIA 驱动的 AI 智能体以运行更智能的城市运营",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
@@ -136,5 +112,23 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
+  },
+  "a8b8c31de898145e14c82e5a132c6ade438a779372caca6da84483874bea0325": {
+    "title": "Third Moment Research 如何让 10,000 个 agent 运行 36 小时以上",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "200a5d3dd39c6bfb7a20192865ba844eee2602b52233f3070983235051951aad": {
+    "title": "欧盟 AI 的下一篇章是 agentic",
+    "summary": "新分析显示 agentic AI 在欧盟企业与小企业中的采用正不断增长，并指出更深入使用可在何处释放更多价值。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
+  },
+  "f5fa4d6131d7db33f0c914ee66cda36ac3bb6f23c3f16067caa62a99e7a5fcb1": {
+    "title": "GitHub Actions 工作流锁文件进入公开预览",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T15:50:52Z"
   }
 }
