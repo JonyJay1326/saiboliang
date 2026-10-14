@@ -17,12 +17,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-13T10:43:04Z"
   },
-  "938ee56ecdcfa428e21dbee9df3887f87bf1f82fdf8dee5753c94c174270667d": {
-    "title": "Dependabot 的匿名组织级注册表",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T10:43:04Z"
-  },
   "293b85c97d55fe8c4e9e41f72816e9f9cf67c589efb0317fb94e0d165221bc7a": {
     "title": "从地球到轨道，法国生态携手 NVIDIA 实现规模化代理式计算",
     "summary": null,
@@ -38,18 +32,6 @@
   "74c9e10c02543c499970682cdc00d05dd116e332e885e53c72a5b5135c768141": {
     "title": "Gemini 4 Argon：为攻克最难题而生",
     "summary": "待定",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "94cc08977f17740f09c1909bb34730c90135e718bd7805bb30ec64144b72c389": {
-    "title": "Gemini 4 Argon 机器人版",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "851107eacfc8ba0f286d51c34b51c95ad5adbcaf6d8aeaba9c114a9dc36913d2": {
-    "title": "Gemini 4 Argon：为攻克最难题而生",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
@@ -94,5 +76,65 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
+  },
+  "241a0eb7150b75c2c4dd1c670aeff735965e9595a15d3b8c006bc41c1279457d": {
+    "title": "Anthropic 开设新加坡办公室并与新加坡政府签署 MOU",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "8d45898e533e591d4241f4c1821bbb7b4d6f05ca764b796c7fbe29eb68dd7bc4": {
+    "title": "Higgsfield 将 AI 视频从 1 分钟延长至 10 分钟以上",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "36a7e1c23fbbe3b1fdc0232b25eb31c8ef9c6f6d877b564ab04d74596d0b22c4": {
+    "title": "Google DeepMind 与新加坡政府合作构建用于诈骗检测的微调 AI 模型",
+    "summary": "了解 Google DeepMind 与新加坡 GovTech 如何使用轻量级端侧 Gemma 模型在私密聊天中拦截对话式诈骗，且零云端数据外泄。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "8b1ab1df41ac00d8450a9c25dd5dbcdb0b91a40bb3de26f2671c5e1a109999b2": {
+    "title": "负责任且安全地开发 Gemini 4 Argon",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "6b8c3209e70c0fe78ffd3eea647b87b8b4b718a7a2a74655cb73aa17e086f131": {
+    "title": "GitHub App 在最小权限和管理方面的改进",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "23347420601cd4d27d10ce3aeed24023edb09eb21b267cfc390786fceeecf6e8": {
+    "title": "GitHub Copilot 中的 Gemini 4 Argon",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "eee6cc87fc10c58396747d73fb885d45576956894a21f213eb60cbf16669687b": {
+    "title": "从企业到 Earthshot：英国生态系统携手 NVIDIA 从雄心迈向应用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "8323b3b7fc78f153da00b636d0971b1cc681a305e14383a26b0bcefa4e99db36": {
+    "title": "欧洲城市部署 NVIDIA 驱动的 AI 智能体以运行更智能的城市运营",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "82663ba79a1c687c36b29f280b0f1228895afd8018e8add7b39d72cf27d99b76": {
+    "title": "使用 Ollama 和 Fly.io 安全运行 AI 智能体",
+    "summary": "AI 智能体现在可以在 Fly.io 的云计算机中安全使用 Ollama 的云模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "3d7749134a466acfd9867282662103b8c32ca6230f7f915107afbe751de6505a": {
+    "title": "Cursor Origin 应用市场",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
   }
 }

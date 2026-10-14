@@ -662,18 +662,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "eolix/photosuite",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A desktop image editor, faithful to classic Adobe Photoshop, with native PSD/PSB compatibility",
-      "sourceUrl": "https://github.com/eolix/photosuite"
-    },
-    "id": "c4c4cd5d651fdf8138e68029df84205aa443fdeb650ed037711261f3d185cc3f",
-    "status": "pending",
-    "createdAt": "2026-10-07T08:24:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "earthtojake/text-to-cad",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1147,18 +1135,6 @@
       "sourceUrl": "https://github.com/remotion-dev/remotion"
     },
     "id": "3e8a92672d34bab246721f701b4da2a833df80243a8a0b278d72986318b689b2",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "danyuchn/asd-ste100-skill",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewriting ambiguous agent-facing English.",
-      "sourceUrl": "https://github.com/danyuchn/asd-ste100-skill"
-    },
-    "id": "248110479f7b89955870940639bb72976dd77ee1d84a2e4fea3581b824745da0",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -1711,5 +1687,29 @@
     "id": "1a855e1f24fca2414d72b77b48df790bfdf98ecef7ca8e0a2067f53bf4faf1cd",
     "status": "pending",
     "createdAt": "2026-10-13T18:21:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "eolix/photosuite",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A desktop image editor, faithful to classic Adobe Photoshop, with native PSD/PSB compatibility - Live WebApp: https://photosuite.app/web",
+      "sourceUrl": "https://github.com/eolix/photosuite"
+    },
+    "id": "af886b4acab0b810e426611133ed3f1b1923ad8884573f6cebe78f131ca8be84",
+    "status": "pending",
+    "createdAt": "2026-10-14T08:48:33Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Lucas0623z/NoteLite",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open-source OMR and guided music practice: turn sheet music PDFs/images into MusicXML/MIDI, refine scores, and practice with MIDI or microphone feedback.",
+      "sourceUrl": "https://github.com/Lucas0623z/NoteLite"
+    },
+    "id": "4c4d6c4c34d0ae42c92dff34a94d4674561334d76f493f9b8ee7906e2128663e",
+    "status": "pending",
+    "createdAt": "2026-10-14T08:48:33Z"
   }
 ]

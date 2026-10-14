@@ -1,12 +1,17 @@
 {
-  "94cc08977f17740f09c1909bb34730c90135e718bd7805bb30ec64144b72c389": {
-    "summary": "Gemini 4 Argon机器人版在ERQA基准领先，具备物理推理、零样本控制、Real2Sim和代理工作流。",
+  "8323b3b7fc78f153da00b636d0971b1cc681a305e14383a26b0bcefa4e99db36": {
+    "summary": "欧洲城市用NVIDIA加速计算和模型构建智能体应用，改善城市运营与公共服务。",
     "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
+    "at": "2026-10-14T08:48:33Z"
   },
-  "851107eacfc8ba0f286d51c34b51c95ad5adbcaf6d8aeaba9c114a9dc36913d2": {
-    "summary": "Gemini 4 Argon是面向开发者、企业、科学家和消费者的最新前沿模型。",
+  "8b1ab1df41ac00d8450a9c25dd5dbcdb0b91a40bb3de26f2671c5e1a109999b2": {
+    "summary": "介绍Gemini 4 Argon在安全与保障方面的开发方法。",
     "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
+    "at": "2026-10-14T08:48:33Z"
+  },
+  "23347420601cd4d27d10ce3aeed24023edb09eb21b267cfc390786fceeecf6e8": {
+    "summary": "谷歌最新前沿模型Gemini 4 Argon已在GitHub Copilot全面可用，面向复杂编码、智能体与推理任务。",
+    "source": "deepseek-flash",
+    "at": "2026-10-14T08:48:33Z"
   }
 }
