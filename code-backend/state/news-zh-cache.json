@@ -1,10 +1,4 @@
 {
-  "ec0714e7c8ff94385ec1bbe863956070a93c314d6b0fbcb02d98511a0e095c81": {
-    "title": "推出 X 订阅",
-    "summary": "Grok、Grok Bot、Cursor 和 X Premium，全部包含在一个套餐中。",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T10:43:04Z"
-  },
   "9d90bbd97b85568370c75a1a74e88e1242b9a744ce28623c7e8e69d0590e7864": {
     "title": "客户端遥测用户归因与可配置采集",
     "summary": null,
@@ -13,12 +7,6 @@
   },
   "293b85c97d55fe8c4e9e41f72816e9f9cf67c589efb0317fb94e0d165221bc7a": {
     "title": "从地球到轨道，法国生态携手 NVIDIA 实现规模化代理式计算",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T10:43:04Z"
-  },
-  "67d54252a65ac40998088f1fae7f8e54e11681ba906a1ba8d8d221cce13c078a": {
-    "title": "深入解析 Azure Maia 300 架构",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-13T10:43:04Z"
@@ -130,5 +118,47 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
+  },
+  "ad577cc4d385593cb7c01bf987f497d37cde5b45e9e2ed8312c055180c24ff3e": {
+    "title": "为2026年美国中期选举做准备",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
+  },
+  "12251940b3b4d2234012ad5b78b04670a82d5e155a62b6535868c5ede029e745": {
+    "title": "推出 Grok Voice 3.0",
+    "summary": "全球最智能的语音模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
+  },
+  "57c3309db5bedcdec4e0532a65e896970f7cad30f5011350fb2a735b14cb8cdd": {
+    "title": "Amp 借助 OpenAI 模型让 AI 智能体超越代码工作",
+    "summary": "了解 Amp 如何利用 GPT-6 Astra、Ultrafast、GPT-Live-1 和 Sign in with ChatGPT 推动智能体能力边界。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
+  },
+  "004cd593adabcd24c97d9e96a166c251028359017ae1a6a5fbaa8f542a33706f": {
+    "title": "SentinelOne 将恶意软件分析从数周缩短至数小时",
+    "summary": "借助 OpenAI Daybreak，SentinelOne 将数周的恶意软件分析缩短至数小时，从而有能力调查更多威胁。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
+  },
+  "94ee28b93f9d2d830319b5f76c0aa72745ffecd9af8552d923f3dc0ab202dce3": {
+    "title": "Block 如何利用 OpenAI 技术构建 AI 驱动的安全体系",
+    "summary": "Block 正利用 OpenAI 构建 AI 驱动的安全体系。其安全团队能更快调查威胁，并在几分钟内提出补丁。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
+  },
+  "ffb5a326c8ee4530ec2c1b17d3fc763018e53200a52b540e4caf6885e8726905": {
+    "title": "HydraFusion 更新及全新 Max 选项",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
+  },
+  "c46dcdda349de0a51015711cd172ac5ff4e163a5ff8548d8ea1b730f0e1eb6ee": {
+    "title": "北欧与 NVIDIA 展示区域致力于先进计算所能实现的可能",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-15T08:23:34Z"
   }
 }

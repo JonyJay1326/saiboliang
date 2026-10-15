@@ -1,17 +1,7 @@
 {
-  "8323b3b7fc78f153da00b636d0971b1cc681a305e14383a26b0bcefa4e99db36": {
-    "summary": "欧洲城市用NVIDIA加速计算和模型构建智能体应用，改善城市运营与公共服务。",
+  "17557042f04c026d1cee0049b112dc1ea1677ae064f913a08b58cbeac614ce57": {
+    "summary": "开源编码代理 OpenCode 发布 vscode-v1.0.0，项目托管于 GitHub。",
     "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "8b1ab1df41ac00d8450a9c25dd5dbcdb0b91a40bb3de26f2671c5e1a109999b2": {
-    "summary": "介绍Gemini 4 Argon在安全与保障方面的开发方法。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "23347420601cd4d27d10ce3aeed24023edb09eb21b267cfc390786fceeecf6e8": {
-    "summary": "谷歌最新前沿模型Gemini 4 Argon已在GitHub Copilot全面可用，面向复杂编码、智能体与推理任务。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
+    "at": "2026-10-15T08:23:34Z"
   }
 }

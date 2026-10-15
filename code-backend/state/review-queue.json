@@ -566,18 +566,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "requarks/wiki",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Wiki.js | Next Generation Open Source Wiki",
-      "sourceUrl": "https://github.com/requarks/wiki"
-    },
-    "id": "ef5f6621c5ced8a51737290cd0a65449559aadcad75e7bac57aebe9dc05d295c",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "docmirror/dev-sidecar",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -954,18 +942,6 @@
       "sourceUrl": "https://github.com/M-Abozaid/esp32-c3-adblock"
     },
     "id": "aecb6d87d3351c845f3bfc847252c99da66c87e32b15a58d737cc31eed2578c3",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "mg-chao/snow-apps",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
-      "sourceUrl": "https://github.com/mg-chao/snow-apps"
-    },
-    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
     "status": "pending",
     "createdAt": "2026-10-11T15:27:47Z"
   },
@@ -1663,5 +1639,17 @@
     "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
     "status": "pending",
     "createdAt": "2026-10-14T15:50:52Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "noVibe/DnsConf",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DNS Block and Redirect configurer for Cloudflare / NextDNS",
+      "sourceUrl": "https://github.com/noVibe/DnsConf"
+    },
+    "id": "02a4e252ba3876557622f64a3d694f16ee3fa0d27950f1716ad96682d1019873",
+    "status": "pending",
+    "createdAt": "2026-10-15T08:23:34Z"
   }
 ]
