@@ -35,24 +35,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
-  "1b3d7c4e863349bcc378e59dc4ae879452f47363fa40fa9f5494cae4507b13da": {
-    "title": "改进对已撤回 Dependabot 警报的检测",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "c9257f2062dd3f50c05b81e218e0fe04c60d06e5e8b0955b460e5b66adc8e787": {
-    "title": "预算搜索与筛选功能现已推出",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "69cdff7c2fcce1b3737dc278b74bb4e89693f05e14e1601df814e46a2dd6cefd": {
-    "title": "安全概览中的代码扫描 AI Scan 指标",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
   "8bb1da51925f693967453e21a7dc0601b64ae356f112cbec2805b9feda009ec7": {
     "title": "全面就绪：全球 PC 应用生态为 NVIDIA RTX Spark 做好准备",
     "summary": null,
@@ -100,12 +82,6 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
-  },
-  "a8b8c31de898145e14c82e5a132c6ade438a779372caca6da84483874bea0325": {
-    "title": "Third Moment Research 如何让 10,000 个 agent 运行 36 小时以上",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
   },
   "200a5d3dd39c6bfb7a20192865ba844eee2602b52233f3070983235051951aad": {
     "title": "欧盟 AI 的下一篇章是 agentic",
@@ -160,5 +136,47 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-15T08:23:34Z"
+  },
+  "a60f4a701f887ae8f46b94e06646a5fb82b2851c561d6cf99f41823c6f66011d": {
+    "title": "通过问题教学生思考与学习",
+    "summary": "用巴西葡萄牙语版 AI for Educators 庆祝教师节，了解 Study Mode 如何帮助教师支持主动、循序渐进的学习。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "80fff3a90d51ccf91357e18777a6f52d33ffdc217c5f0264860028246ce705a1": {
+    "title": "AI Scan for pull requests 正式发布",
+    "summary": "代码扫描 AI Scan for pull requests 现已正式发布。它通过查找 CodeQL 目前不支持的…",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "449b1014bc1499c1514cf0c9e75b3727f007bafec3a8e49d506396b1fe1af516": {
+    "title": "代码扫描警报的 Agentic autofix 正式发布",
+    "summary": "代码扫描警报的 Agentic autofix 现已正式发布。它像开发者一样在代码库中工作来修复警报：探索相关文件、提出修复方案，…",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "282497830b35cf32457b60ae96419e92679b91102b970c81cd6d7f50fbaf467f": {
+    "title": "仓库推送事件的电子邮件通知已停用",
+    "summary": "自 2026 年 10 月 15 日起，仓库推送事件的电子邮件通知已停用，不再发送。我们关闭此功能是为了帮助防止垃圾邮件和滥用。…",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "b655aadac97a31177c2f3953e289c0c49eb9557ba303f648d61f427a919973ce": {
+    "title": "从数据中心到桌面：NVIDIA 扩展 Nemotron 家族，推出最高效 Super VL 和 Bolt 模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "efd79f8f5d3d6f6bc420504a12db2bbe4dbf40f23432192a2e3fd759346884dc": {
+    "title": "拨云见日：NVIDIA DLSS 4.5 控制功能登陆 GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "fb231790bb312d5b8f0e8281ee25454dcc04c69d0dfd7414e2b497f6f4f90724": {
+    "title": "NVIDIA 通过开放学习资源、合作与计算扩展欧洲科学界对先进技术的访问",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
   }
 }

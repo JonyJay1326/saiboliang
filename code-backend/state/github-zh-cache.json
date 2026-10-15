@@ -39,16 +39,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "LibreChat-AI/LibreChat": {
-    "text": "增强版 ChatGPT 克隆：具备 Agents、MCP、Skills、DeepSeek、Anthropic、AWS、OpenAI、Responses API、Azure、Groq、o1、GPT-5、Mistral、OpenRouter、Vertex AI、Gemini、Artifacts、AI 模型切换、消息搜索、Code Interpreter、langchain、DALL-E-3、OpenAPI Actions、Functions、安全多用户认证、预设，开源可自托管。活跃",
-    "source": "deepseek-flash",
-    "at": "2026-09-29T16:54:35Z"
-  },
-  "AI4Finance-Foundation/FinGPT": {
-    "text": "FinGPT：开源金融大语言模型！带来变革 🔥 我们在 HuggingFace 上发布训练好的模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-04T15:49:24Z"
-  },
   "Gaurav-Gosain/tuios": {
     "text": "终端窗口管理器，可感知你的代理在做什么。平铺窗格、工作区、重启后仍保留的会话，以及为每个编码代理提供的统一收件箱。",
     "source": "deepseek-flash",
@@ -56,16 +46,6 @@
   },
   "LaurieWired/GhidraMCP": {
     "text": "Ghidra 的 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "openai/symphony": {
-    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
-  },
-  "max-sixty/worktrunk": {
-    "text": "Worktrunk 是用于 Git worktree 管理的 CLI，专为并行 AI 智能体工作流设计",
     "source": "deepseek-flash",
     "at": "2026-10-06T17:15:08Z"
   },
@@ -84,11 +64,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-09T17:27:43Z"
   },
-  "alphaXiv/OpenResearch": {
-    "text": "将你的编码 Agent 转变为研究 Agent",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T17:27:43Z"
-  },
   "lexmount/moli": {
     "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
     "source": "deepseek-flash",
@@ -104,11 +79,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
   },
-  "Vincentwei1021/video-shotcraft": {
-    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作电影级产品视频，含 152 张镜头配方卡、209 个动态预览和可投产模板",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T15:27:47Z"
-  },
   "microsoft/BitNet": {
     "text": "面向 1-bit LLM 的官方推理框架",
     "source": "deepseek-flash",
@@ -123,11 +93,6 @@
     "text": "使用 Python 的张量与动态神经网络，支持强大的 GPU 加速",
     "source": "deepseek-flash",
     "at": "2026-10-12T10:58:57Z"
-  },
-  "xerj-org/xerj": {
-    "text": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
   },
   "BuilderIO/agent-native": {
     "text": "用于构建智能体应用的框架",
@@ -184,14 +149,49 @@
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
   },
-  "laravel/ai": {
-    "text": "Laravel AI SDK 提供统一且富有表现力的 API，用于与 OpenAI、Anthropic、Gemini 等 AI 提供商交互。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
   "WorldFlowAI/everything-claude-code": {
     "text": "Claude Code 工具包 - 智能体、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
+  },
+  "TencentCloud/TencentDB-Agent-Memory": {
+    "text": "TencentDB Agent Memory 是面向 AI Agent 的团队级记忆中枢，将会话、文档和代码转化为四类可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph），实现跨 Agent 与框架的治理、共享和装配。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "SegFault42/HeliosGen": {
+    "text": "🏆 自托管生成式 AI 桌面应用，Higgsfield、OpenArt、Freepik 等的免费替代品。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "QuantumNous/new-api": {
+    "text": "统一的 AI 模型聚合与分发中枢，支持将各类 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式，是个人与企业模型管理的集中网关。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "KittenML/KittenTTS": {
+    "text": "开源的最先进 TTS 模型，可在 CPU 上运行 😻",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "opendataloader-project/opendataloader-pdf": {
+    "text": "面向 AI 就绪数据的 PDF 解析器，自动化 PDF 无障碍处理，开源。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "alibaba/spring-ai-alibaba": {
+    "text": "面向 Java 开发者的 Agentic AI 框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "krillinai/OpenCreator": {
+    "text": "前身为 KrillinAI，视频翻译与配音工具。面向创作者的开源 AI 工作台，由 Codex 驱动。集视频下载、视频翻译、视频与图像生成、语音、数字人及 Agent 编辑于一体，适用于 YouTube、TikTok、Instagram 等社交媒体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
+  },
+  "yyjeqhc/webcodex": {
+    "text": "让云端 AI Agent 在你自己的机器上获得真实的开发环境。",
+    "source": "deepseek-flash",
+    "at": "2026-10-15T15:37:31Z"
   }
 }
