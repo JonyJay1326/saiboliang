@@ -1,7 +1,17 @@
 {
-  "17557042f04c026d1cee0049b112dc1ea1677ae064f913a08b58cbeac614ce57": {
-    "summary": "开源编码代理 OpenCode 发布 vscode-v1.0.0，项目托管于 GitHub。",
+  "6fdf4a6bc9a49fd054fb2c609babc1a120179f95410c1bdeb51512d758bc57b7": {
+    "summary": "Slack 和 Microsoft Teams 中的 GitHub Copilot 现支持在单次对话中跨多个仓库工作。",
     "source": "deepseek-flash",
-    "at": "2026-10-15T08:23:34Z"
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "0fb5cf8a26c77a059da3b3e7650e83c6cab50c42c29c08e6e74702fcbf067a5a": {
+    "summary": "GitHub Copilot 将于 2026 年 11 月 16 日在所有体验中弃用部分模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "b655aadac97a31177c2f3953e289c0c49eb9557ba303f648d61f427a919973ce": {
+    "summary": "NVIDIA 发布 Nemotron 3.5 Super VL 及两款边缘模型 Bolt 74B-A9B 24GB 和 Bolt E4B 4GB。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
   }
 }

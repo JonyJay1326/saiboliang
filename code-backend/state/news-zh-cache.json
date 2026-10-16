@@ -1,31 +1,7 @@
 {
-  "9d90bbd97b85568370c75a1a74e88e1242b9a744ce28623c7e8e69d0590e7864": {
-    "title": "客户端遥测用户归因与可配置采集",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T10:43:04Z"
-  },
-  "293b85c97d55fe8c4e9e41f72816e9f9cf67c589efb0317fb94e0d165221bc7a": {
-    "title": "从地球到轨道，法国生态携手 NVIDIA 实现规模化代理式计算",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T10:43:04Z"
-  },
   "74c9e10c02543c499970682cdc00d05dd116e332e885e53c72a5b5135c768141": {
     "title": "Gemini 4 Argon：为攻克最难题而生",
     "summary": "待定",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "dee213e55b0d0c7e6565f748a8b8077dd472c0aef8ca251bc664c27ee3e00f95": {
-    "title": "审计 GitHub Code Quality 发现的忽略与重新开启",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "ad0dc492d32241f22ffa49a64f5abcf3ffcff7674ec68bcd3c36df3a124ac3cc": {
-    "title": "机密扫描默认拦截 Anthropic 密钥，新增 Salesforce",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
@@ -67,18 +43,6 @@
   },
   "eee6cc87fc10c58396747d73fb885d45576956894a21f213eb60cbf16669687b": {
     "title": "从企业到 Earthshot：英国生态系统携手 NVIDIA 从雄心迈向应用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "82663ba79a1c687c36b29f280b0f1228895afd8018e8add7b39d72cf27d99b76": {
-    "title": "使用 Ollama 和 Fly.io 安全运行 AI 智能体",
-    "summary": "AI 智能体现在可以在 Fly.io 的云计算机中安全使用 Ollama 的云模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "3d7749134a466acfd9867282662103b8c32ca6230f7f915107afbe751de6505a": {
-    "title": "Cursor Origin 应用市场",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
@@ -178,5 +142,89 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
+  },
+  "c3f9aa1e97f35f2465d0af14f3b196ebc11ad7498a8811b869b071034882ea93": {
+    "title": "独立评估者更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "32165ee6af8945a5bd83e4231d3e052413905bc21e8455b93c147e03ace99490": {
+    "title": "将 GPT-Rosalind 引入学术研究实验室",
+    "summary": "推出 Rosalind 学术计划，为符合条件的学术实验室提供 GPT-Rosalind 的赞助访问权限及工具，以推进生命科学研究。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "94eadcab22c41e356a1d9bf1e35dbdb6491d04804b7eea5ceec3829024496784": {
+    "title": "Sullivan & Cromwell 将法律专业知识引入协议审查",
+    "summary": "Sullivan & Cromwell 与 OpenAI 合作开发了 Agreement Analyzer，一款用于识别协议草案中问题的 AI 工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "ad09b0946a60b7ff505a8aa281960497bee4e76e2a76825472b127adf5a2ba1b": {
+    "title": "利用 Google Antigravity 加速抗菌肽搜索",
+    "summary": "利用 Google Antigravity for Science 加速新型抗菌肽的搜索。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "6fdf4a6bc9a49fd054fb2c609babc1a120179f95410c1bdeb51512d758bc57b7": {
+    "title": "Slack 和 Microsoft Teams 中 GitHub Copilot 的多仓库支持及其他改进",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "6d42176d2f315f269ba0fe76ebd439ed1e2ddd036f96edaeff8fd6dc5d4b36e2": {
+    "title": "将 GitHub Code Quality 许可证使用情况下载为 CSV",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "0fb5cf8a26c77a059da3b3e7650e83c6cab50c42c29c08e6e74702fcbf067a5a": {
+    "title": "GitHub Copilot 部分模型将于 11 月中旬弃用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "46e7cecee360222aa2134f6b5a5aab320a3b4dc78227039b2d01f33a05965242": {
+    "title": "见证开端：庆祝 NVIDIA RTX Spark 发布",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "20efc1f2b3465ebc05bdad557d8d6736ee6d0389c80e0356869832b135c5cc48": {
+    "title": "Microsoft 在 2026 年 Gartner® 服务器虚拟化平台魔力象限中被评为领导者",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "95741fd459fa5556266705f05b9fcf0f73a9b13e11ab7b26b6dd54f74c2dccac": {
+    "title": "以开源 Integrated HSM 技术推进硬件安全",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "2d42d7d3c693af5741268fdfb456c912c32ae5ac2c968a33ec515317a85d04f9": {
+    "title": "前沿时代的基础设施：通过开放行业协作扩展智能",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "51edf4c643816e6fc69aba606f22e49e530ea0b14e4cd171d8658ddbb9eb6a75": {
+    "title": "推出 Timestral",
+    "summary": "最先进的概率预测，提供四种规模（5M–209M 参数），CPU 高效，零样本即用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "bed122782e163a9e3e19093e3cbbd60b615aa2c8b67b0bb1533674d4f16eca42": {
+    "title": "Meta Muse Spark Open 已在 Together AI 上线",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
+  },
+  "0f705e6495482c5fefc7c74d0656c7bae72c0f7950f50dcee3aa57d9e14b5a22": {
+    "title": "私有端点：将您的微调模型和容量引入 OpenRouter",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T08:16:01Z"
   }
 }
