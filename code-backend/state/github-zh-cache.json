@@ -39,11 +39,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "Gaurav-Gosain/tuios": {
-    "text": "终端窗口管理器，可感知你的代理在做什么。平铺窗格、工作区、重启后仍保留的会话，以及为每个编码代理提供的统一收件箱。",
-    "source": "deepseek-flash",
-    "at": "2026-10-05T19:38:42Z"
-  },
   "LaurieWired/GhidraMCP": {
     "text": "Ghidra 的 MCP 服务器",
     "source": "deepseek-flash",
@@ -58,11 +53,6 @@
     "text": "让你的文档为生成式 AI 做好准备",
     "source": "deepseek-flash",
     "at": "2026-10-08T17:54:23Z"
-  },
-  "docker/docker-agent": {
-    "text": "Docker Engineering 出品的 AI Agent 构建器与运行时",
-    "source": "deepseek-flash",
-    "at": "2026-10-09T17:27:43Z"
   },
   "lexmount/moli": {
     "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
@@ -129,11 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
   },
-  "twostraws/SwiftUI-Agent-Skill": {
-    "text": "适用于 Claude Code、Codex 及其他 AI 工具的 SwiftUI 智能体技能。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
   "SakanaAI/AI-Scientist": {
     "text": "The AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
     "source": "deepseek-flash",
@@ -169,18 +154,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
-  "KittenML/KittenTTS": {
-    "text": "开源的最先进 TTS 模型，可在 CPU 上运行 😻",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
   "opendataloader-project/opendataloader-pdf": {
     "text": "面向 AI 就绪数据的 PDF 解析器，自动化 PDF 无障碍处理，开源。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
-  "alibaba/spring-ai-alibaba": {
-    "text": "面向 Java 开发者的 Agentic AI 框架",
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
@@ -189,9 +164,49 @@
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
-  "yyjeqhc/webcodex": {
-    "text": "让云端 AI Agent 在你自己的机器上获得真实的开发环境。",
+  "tensorflow/tensorflow": {
+    "text": "面向所有人的开源机器学习框架",
     "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "lkimuk/ReArk": {
+    "text": "面向 HarmonyOS NEXT（HAP/APP/ABC）、Android（APK/AAB）、iOS（IPA）及原生 PE/ELF/Mach-O 二进制文件的智能逆向工程与 AI 辅助分析工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "DamRsn/NeuralNote": {
+    "text": "使用深度学习将音频转写为 MIDI 的音频插件。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "agentscope-ai/agentscope-java": {
+    "text": "构建分布式、生产级、长时间运行的智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "dotnet/skills": {
+    "text": "用于协助 AI 编码智能体处理 .NET 和 C# 的技能仓库",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "QwenLM/Qwen3-VL": {
+    "text": "Qwen3-VL 是阿里云 Qwen 团队开发的多模态大语言模型系列。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "OtterMind/Chat2DB": {
+    "text": "Chat2DB 是免费、跨平台、本地优先的数据库客户端与 SQL 工作区，面向开发者、DBA、分析师和数据团队。可连接 40 多种数据库，管理数据，编辑并运行 SQL，并使用自有 AI 模型生成、解释和优化查询。支持桌面端、Web、Docker 和 CLI，并支持 MCP。",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "bendlang/bend": {
+    "text": "Bend 2：一种通过证明阻止 AI 犯错的快速语言。安装：curl -fsSL https://bend-lang.com/install.sh | sh",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "mobile-next/mobile-mcp": {
+    "text": "用于移动自动化与抓取的 Model Context Protocol 服务器（iOS、Android、模拟器、仿真器和真机）",
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
   }
 }

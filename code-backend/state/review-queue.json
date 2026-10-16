@@ -434,18 +434,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "xiaolai/the-craft-of-selfteaching",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "One has no future if one couldn't teach themself.",
-      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
-    },
-    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "boykopovar/AnyPS5",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -590,30 +578,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "elixir-lang/elixir",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Simple from zero to scale",
-      "sourceUrl": "https://github.com/elixir-lang/elixir"
-    },
-    "id": "8e79c8f2112342f1bb2ebe30304e84ecfdb1818b0c37465dd899383089b4d8cc",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "phoenixframework/phoenix",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Peace of mind from prototype to production",
-      "sourceUrl": "https://github.com/phoenixframework/phoenix"
-    },
-    "id": "eef577cf65a2839e8ba614e0faea63e3859e94d7033f15913d8a9456676a9529",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "vercel/next.js",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -672,42 +636,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Tools-cx-app/meta-magic_mount-rs",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An implementation of a metamodule using Magic Mount, Based on MKSU, Template is from meta-overlay.",
-      "sourceUrl": "https://github.com/Tools-cx-app/meta-magic_mount-rs"
-    },
-    "id": "14fba517dd7ffc66d785a7e8baea2e6ffcf85bc6209706f0c9a3f832e28001bd",
-    "status": "pending",
-    "createdAt": "2026-10-09T10:40:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "666ghj/MiroFish",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
-      "sourceUrl": "https://github.com/666ghj/MiroFish"
-    },
-    "id": "b3cf26c914ae8ba1593368a593b059cd0a36f7bc1943ad6187ef5fcc9a138155",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hluk/CopyQ",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Clipboard manager with advanced features",
-      "sourceUrl": "https://github.com/hluk/CopyQ"
-    },
-    "id": "94c4edb0ff9568b29fa6bdcaae94497d21de69907795ef5c3c4b33553d7e8b44",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "NickvisionApps/Parabolic",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -720,42 +648,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "unovue/inspira-ui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Build beautiful website using Vue & Nuxt.",
-      "sourceUrl": "https://github.com/unovue/inspira-ui"
-    },
-    "id": "6868a0f49b923776768e34f39e5e4891e21da75fae416d84de4bbcdd085bb65c",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "tester-army/e2e",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Next generation e2e testing framework for web and mobile apps.",
-      "sourceUrl": "https://github.com/tester-army/e2e"
-    },
-    "id": "bc104944c3bcf2fcb7a9cea8f51a9e93bc3631581656a34d535810ae3d4efb8b",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "bevyengine/bevy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A refreshingly simple data-driven game engine built in Rust",
-      "sourceUrl": "https://github.com/bevyengine/bevy"
-    },
-    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "microsoft/mxc",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -763,18 +655,6 @@
       "sourceUrl": "https://github.com/microsoft/mxc"
     },
     "id": "3b35d9982c1457e90f0dac43bdd439115995356aeb3b1a33d1fa6a15af14e268",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FreshRSS/FreshRSS",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A free, self-hostable news aggregator…",
-      "sourceUrl": "https://github.com/FreshRSS/FreshRSS"
-    },
-    "id": "a5a6fb9d6f00407f83cfa5a130b95548694d4519575ed91b8d8968e9c11f11cb",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
   },
@@ -827,18 +707,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "laravel/framework",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Laravel is a web application framework with expressive, elegant syntax.",
-      "sourceUrl": "https://github.com/laravel/framework"
-    },
-    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "julyx10/lap",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -870,18 +738,6 @@
       "sourceUrl": "https://github.com/Alishahryar1/free-claude-code"
     },
     "id": "705f80cd97160edf5f2bc2dd90dcbcf4e2df9a43c7f358de855575f680badb40",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "palemoky/chinese-poetry-api",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "📜 诗泉：高性能中国古诗词 API 服务",
-      "sourceUrl": "https://github.com/palemoky/chinese-poetry-api"
-    },
-    "id": "34e55f8e9fcbed2c573f6a722be320af6bf4605feada9355429b02e36f635335",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
   },
@@ -942,30 +798,6 @@
       "sourceUrl": "https://github.com/koharu-rs/koharu"
     },
     "id": "d375bf1c58b07ef3f6a616324a774fdf451973374e63dc07255c727dfad0d9e9",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "apache/beam",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Apache Beam is a unified programming model for Batch and Streaming data processing.",
-      "sourceUrl": "https://github.com/apache/beam"
-    },
-    "id": "4eb00083702563fb22731514c784aa7cab939adf569f9ffea4a36d5ae52bbf5d",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "php-fig/log",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/php-fig/log"
-    },
-    "id": "8bcf4c218eac4ab9e3e0ceade49bfb22e3bfa78def80ecb49e5964df8c2692d7",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
   },
@@ -1066,42 +898,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "koel/koel",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Music streaming solution that works.",
-      "sourceUrl": "https://github.com/koel/koel"
-    },
-    "id": "60e1f2dd096f73ed650962232f61c4f404670c2d2c20812be56f5f453fe1c312",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "php-fig/http-message",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The purpose of this PSR is to provide a set of common interfaces for HTTP messages as described in RFC 7230 and RFC 7231",
-      "sourceUrl": "https://github.com/php-fig/http-message"
-    },
-    "id": "b94f3a8d9cdb507e32095396437436be52ad9114ffd800bc7161416c7c9a0f8d",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "yangzongzhuan/RuoYi-Vue3",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🎉 (RuoYi)官方仓库 基于SpringBoot，Spring Security，JWT，Vue3 & Vite、Element Plus 的前后端分离权限管理系统",
-      "sourceUrl": "https://github.com/yangzongzhuan/RuoYi-Vue3"
-    },
-    "id": "2139fd748ea98b1d73c68186861209f6b4cea12aa72c0f623befded351f84be3",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Lucas0623z/NoteLite",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1174,18 +970,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "LiteLDev/LeviLaunchroid",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A launcher designed for Minecraft Bedrock Edition on Android",
-      "sourceUrl": "https://github.com/LiteLDev/LeviLaunchroid"
-    },
-    "id": "9d08e006e3a216dc034113c701ac5249829f79cf8c3b6ff3f384663c0a8eb44a",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "skylot/jadx",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1193,18 +977,6 @@
       "sourceUrl": "https://github.com/skylot/jadx"
     },
     "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "apache/shenyu",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Apache ShenYu is a Java native API Gateway for service proxy, protocol conversion and API governance.",
-      "sourceUrl": "https://github.com/apache/shenyu"
-    },
-    "id": "91c896a53b0d90aa03a5f1c85686b7819f09dd204eaf8281ca47820cbfd65d65",
     "status": "pending",
     "createdAt": "2026-10-14T15:50:52Z"
   },
@@ -1222,18 +994,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ramsey/collection",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🗂️ A PHP library for representing and manipulating collections.",
-      "sourceUrl": "https://github.com/ramsey/collection"
-    },
-    "id": "b01537567aacebb8559e0963ef420f9fe53fdbd8cd582a4ce1a96061cbf72ed1",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "MoeKoeMusic/MoeKoeMusic",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1241,18 +1001,6 @@
       "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
     },
     "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "build-admin/buildadmin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "可视化生成CRUD代码、内置WEB终端、workerman常驻内存运行支持，技术栈为Vue3.x(setup)+ThinkPHP8+TypeScript+Vite+Pinia+Element Plus，自适应多端，同时提供Web和Server端、自动注册路由、无限级菜单权限节点、全局数据回收站、字段级修改保护等等，是集颜值、实用、敏捷于一身的管理系统。",
-      "sourceUrl": "https://github.com/build-admin/buildadmin"
-    },
-    "id": "38007ebdd05525b86a44bb17e45302f0d9ac043879b754de9cabb57ebc308e78",
     "status": "pending",
     "createdAt": "2026-10-14T15:50:52Z"
   },
@@ -1270,18 +1018,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ankitects/anki",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Anki is a smart spaced repetition flashcard program",
-      "sourceUrl": "https://github.com/ankitects/anki"
-    },
-    "id": "62a43c329e1a00d7796b492c208bb8393bbb9bc93100f8847e6298d31b81cc07",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "noVibe/DnsConf",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1291,18 +1027,6 @@
     "id": "02a4e252ba3876557622f64a3d694f16ee3fa0d27950f1716ad96682d1019873",
     "status": "pending",
     "createdAt": "2026-10-15T08:23:34Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Tencent-Hunyuan/Hy-MT2",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/Tencent-Hunyuan/Hy-MT2"
-    },
-    "id": "a81ccf836b45bb78b9883ab9197814303ffbaf2a48b41278f810db14d887b421",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
   },
   {
     "kind": "github-classification",
@@ -1354,18 +1078,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zju3dv/GVHMR",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Code for \"GVHMR: World-Grounded Human Motion Recovery via Gravity-View Coordinates\", Siggraph Asia 2024, TPAMI 2026",
-      "sourceUrl": "https://github.com/zju3dv/GVHMR"
-    },
-    "id": "efb979ad15356c6a4201d3be4c4fabc00282d9b06920cddf93a6a2a69d424cbc",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "LorisYounger/VPet",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1378,30 +1090,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "bitwarden/server",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Bitwarden infrastructure/backend (API, database, Docker, etc).",
-      "sourceUrl": "https://github.com/bitwarden/server"
-    },
-    "id": "ed295ccb5c06daedb72bcb212fb953c1584e77788475b6323846cb0816bc358a",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "k1tbyte/Wand-Enhancer",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
-      "sourceUrl": "https://github.com/k1tbyte/Wand-Enhancer"
-    },
-    "id": "e0e111499b46265bf24a30216349e8a3ed5245b1f3e06b8dbf3a79b42f795bca",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "vosen/ZLUDA",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1409,149 +1097,6 @@
       "sourceUrl": "https://github.com/vosen/ZLUDA"
     },
     "id": "fed4e9c5e554d92a7389e47b81b0adf1a08d96694bd7b7593d89db96678c62ee",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "huanfeng/WindInput",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "清风输入法 | 轻量、快速、可定制的开源中文输入法，专为五笔和码表输入方案设计，支持全拼/双拼（Windows / macOS / Linux）",
-      "sourceUrl": "https://github.com/huanfeng/WindInput"
-    },
-    "id": "f6c2de690211e2dae4107a0bdda2db4ad33f65a0a1c26a3f2a31e2e258a7c267",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "shmykelsa/AAAD",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The original application for downloading and installing apps made specifically for Android Auto outside of Google Play Store. Active since 2021.",
-      "sourceUrl": "https://github.com/shmykelsa/AAAD"
-    },
-    "id": "ce531275e4048d40d1b9ed74430973e569c6efa038e789b56792d687821f3f57",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "apache/cloudstack",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Apache CloudStack is an opensource Infrastructure as a Service (IaaS) cloud computing platform",
-      "sourceUrl": "https://github.com/apache/cloudstack"
-    },
-    "id": "26d61c82d404c45cc890139888971dcdaefaf20549fc637c45ed6c9ae9f9f7f9",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "symfony/symfony",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Symfony PHP framework",
-      "sourceUrl": "https://github.com/symfony/symfony"
-    },
-    "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "php-fig/container",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/php-fig/container"
-    },
-    "id": "8a8bd706cd850ceb1dc6ef1cbc16cb23f770b43bb23863e16e2be7cb7cc115b8",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dflydev/dflydev-dot-access-data",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Given a deep data structure representing a configuration, access configuration by dot notation.",
-      "sourceUrl": "https://github.com/dflydev/dflydev-dot-access-data"
-    },
-    "id": "de4959ba8847e18becae9038e4ff71b9371205d14824804ce4c4f318842cff1e",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "bluerobotics/BlueOS",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The open source platform for ROV, USV, robotic system operation, development, and expansion.",
-      "sourceUrl": "https://github.com/bluerobotics/BlueOS"
-    },
-    "id": "b62348024ce4666902ac5847ffada910cb870302970e1480495fd008fd82abb7",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "wrapper-offline/wrapper-offline",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A project with the purpose of providing a way to use the Legacy Video Maker from GoAnimate / Vyond.",
-      "sourceUrl": "https://github.com/wrapper-offline/wrapper-offline"
-    },
-    "id": "d7945490c76fba755cd781e3eb0865009ff420f05b63bf56fa6e57783862fa9a",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "primefaces/primevue",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Next Generation Vue UI Component Library",
-      "sourceUrl": "https://github.com/primefaces/primevue"
-    },
-    "id": "33bb9f0f0f686e716da69064262306b66149c2e120c0a7c07064c5c870a11b3e",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "juspay/hyperswitch",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open source, composable payments platform | PCI compliant | SaaS and Self-host options | Enables connectivity to multiple payment, payout, fraud, vault and tokenization providers | Uplifts authorization with intelligent routing and revenue recovery | Reduce payment processing costs with cost observability | Reduces payment ops with reconciliation",
-      "sourceUrl": "https://github.com/juspay/hyperswitch"
-    },
-    "id": "c47ee985cabf095bbc6e3be19453740cbefb7d1a7661fdcf33dc5e0157090e36",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "rust-lang/rust",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Empowering everyone to build reliable and efficient software.",
-      "sourceUrl": "https://github.com/rust-lang/rust"
-    },
-    "id": "1a855e1f24fca2414d72b77b48df790bfdf98ecef7ca8e0a2067f53bf4faf1cd",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
-    "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
-    },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
     "createdAt": "2026-10-15T15:37:31Z"
   },
@@ -1593,37 +1138,170 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "elie222/rakazo",
+    "objectId": "anthropics/claude-plugins-official",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
-      "sourceUrl": "https://github.com/elie222/rakazo"
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "sourceUrl": "https://github.com/anthropics/claude-plugins-official"
     },
-    "id": "0511056688446943b4551352d53bfc97b70089062bfe40c7f79fc3b9a6d1a8fa",
+    "id": "b360d2d14684cf88bb2ed54a7cddc65d513c416ae683ffdb97ba56d5ee84ab1e",
     "status": "pending",
-    "createdAt": "2026-10-16T08:16:01Z"
+    "createdAt": "2026-10-16T15:23:39Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "kestra-io/kestra",
+    "objectId": "agalwood/Motrix",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
-      "sourceUrl": "https://github.com/kestra-io/kestra"
+      "description": "A full-featured download manager.",
+      "sourceUrl": "https://github.com/agalwood/Motrix"
     },
-    "id": "2ce8a952175f736f8722b2768b702e9c05f8cadfbaa755af118759895d3eba6f",
+    "id": "eb5f39d061ab5707a45e6759acb00068c393cb75a3d1c72c1a2df96b4a27f94b",
     "status": "pending",
-    "createdAt": "2026-10-16T08:16:01Z"
+    "createdAt": "2026-10-16T15:23:39Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "55fe4e32c2342c3ac0f95af598caa091bce484cf89a65b639ada449c29d1da9e",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "kind": "github-classification",
+    "objectId": "eugenioenko/ttt",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "source": "AIBase"
+      "description": "TTT Editor (Terminal Text Tool): A real alternative to VS Code, Zed, and Sublime that runs in your terminal. A TUI that feels like GUI. Single binary, zero config.",
+      "sourceUrl": "https://github.com/eugenioenko/ttt"
     },
-    "id": "85901036815af70d4ceeae23f23028756e5283df2acc26b5068c02eefeeba03b",
+    "id": "ae4c92e03ad88c2822f717da093bffe22c3b122ffe36230a9a03f6e72eae6f84",
     "status": "pending",
-    "createdAt": "2026-10-16T08:16:01Z"
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "evanw/esbuild",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An extremely fast bundler for the web",
+      "sourceUrl": "https://github.com/evanw/esbuild"
+    },
+    "id": "d317a175f730a490a79cf096a085f56e7b530234c8b7cddefb9b002ecde02f8d",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Project-HAMi/HAMi",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Heterogeneous GPU Sharing on Kubernetes",
+      "sourceUrl": "https://github.com/Project-HAMi/HAMi"
+    },
+    "id": "0dcac5379ae851817bfa3666c98646fa6d07ada8f2e2adbbdd4e1efaa78adfba",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "shadps4-emu/shadPS4",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
+    },
+    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "google-gemini/cookbook",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Examples and guides for using the Gemini API",
+      "sourceUrl": "https://github.com/google-gemini/cookbook"
+    },
+    "id": "82d2bc36be90563588f1cf49ebf3a49b44b839e7ea3a5670bdb9e3baafe09f6b",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "react/react",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The library for web and native user interfaces.",
+      "sourceUrl": "https://github.com/react/react"
+    },
+    "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PowerShell/PowerShell",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PowerShell for every system!",
+      "sourceUrl": "https://github.com/PowerShell/PowerShell"
+    },
+    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "lostindark/DriverStoreExplorer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Driver Store Explorer",
+      "sourceUrl": "https://github.com/lostindark/DriverStoreExplorer"
+    },
+    "id": "578ff0941deeccdbe2beadc1f9a4a6fb496df69f7d971b5a887badbe105a28af",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SakiRinn/LiveCaptions-Translator",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Lightweight and powerful real-time audio/speech translation tool based on Windows LiveCaptions.",
+      "sourceUrl": "https://github.com/SakiRinn/LiveCaptions-Translator"
+    },
+    "id": "7e9789fbd5683ebfbe802848c8617d7c70036f3c25399db966b2cf0269b289eb",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "freeok/so-novel",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "小说下载｜网文下载 | 网络小说",
+      "sourceUrl": "https://github.com/freeok/so-novel"
+    },
+    "id": "c40c56ca924ba8f93aed475bc96bf8faa28017620c3f927700ec810dc944f342",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nextcloud/all-in-one",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "📦 The official Nextcloud installation method. Provides easy deployment and maintenance with most features included in this one Nextcloud instance.",
+      "sourceUrl": "https://github.com/nextcloud/all-in-one"
+    },
+    "id": "14a021e68b1bab6c7e60868d80ef3e6836e821204047e9d9bdcdfd3297c14d58",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "wux1an/wxapkg",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "跨平台微信小程序反编译 GUI 工具，.wxapkg 文件扫描 + 解密 + 解包工具",
+      "sourceUrl": "https://github.com/wux1an/wxapkg"
+    },
+    "id": "6dc13d1e3f845cd202f948d1d4cd9163797d6d641eeb4d51ac5040ab95ea4c36",
+    "status": "pending",
+    "createdAt": "2026-10-16T15:23:39Z"
   }
 ]

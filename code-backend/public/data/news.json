@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-16T08:16:01Z",
+  "dataUpdatedAt": "2026-10-16T15:23:39Z",
   "items": [
+    {
+      "title": "腾讯发布 Qwen3-8B-DSpine-b16",
+      "sourceUrl": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
+      "publishedAt": "2026-10-16T14:52:38Z",
+      "source": "腾讯（Hugging Face）",
+      "summary": "腾讯发布 Qwen3-8B-DSpine-b16。",
+      "id": "c479c768bc32ea901a6a171aa019945f2844af95453fbb2c382d03c1ed9f720d",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "腾讯（Hugging Face）",
+      "originalUrl": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
+      "originalVerifiedAt": "2026-10-16T15:23:39Z",
+      "url": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-16T15:23:39Z",
+      "featured": null
+    },
     {
       "title": "Slack 和 Microsoft Teams 中 GitHub Copilot 的多仓库支持及其他改进",
       "sourceUrl": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
@@ -37,6 +56,25 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-10-16T08:16:01Z",
+      "featured": true
+    },
+    {
+      "title": "Reflection 的 Beam 在 Ollama 上限时免费开放",
+      "sourceUrl": "https://ollama.com/blog/reflection-beam",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "source": "Ollama",
+      "summary": "Reflection 首个开放权重模型 Beam 上线 Ollama，限时免费，面向软件工程、推理与长时智能体任务。",
+      "id": "f29a90bccdef39cc63d3a813b23f68dab82d92a6939c3c57959eae3f8630b712",
+      "originalTitle": "Reflection's Beam is freely available on Ollama for a limited time",
+      "translatedAt": "2026-10-16T15:23:39Z",
+      "lang": "en",
+      "originalSource": "Ollama",
+      "originalUrl": "https://ollama.com/blog/reflection-beam",
+      "originalVerifiedAt": "2026-10-16T15:23:39Z",
+      "url": "https://ollama.com/blog/reflection-beam",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-10-16T15:23:39Z",
       "featured": true
     },
     {
@@ -113,7 +151,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-16T08:16:01Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "库克：苹果智能接入阿里千问大模型，10月底在中国发布测试版本",
@@ -4144,6 +4182,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-16T08:16:01Z",
-  "generatedAt": "2026-10-16T08:16:01Z"
+  "version": "2026-10-16T15:23:39Z",
+  "generatedAt": "2026-10-16T15:23:39Z"
 }

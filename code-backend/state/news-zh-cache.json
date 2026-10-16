@@ -5,26 +5,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
-  "bca5e0416551d9129bc21c4c3283b0c2807ada4a39ff3a7da4796f62b98ed12b": {
-    "title": "企业管理设置强制执行更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "8bb1da51925f693967453e21a7dc0601b64ae356f112cbec2805b9feda009ec7": {
-    "title": "全面就绪：全球 PC 应用生态为 NVIDIA RTX Spark 做好准备",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
   "241a0eb7150b75c2c4dd1c670aeff735965e9595a15d3b8c006bc41c1279457d": {
     "title": "Anthropic 开设新加坡办公室并与新加坡政府签署 MOU",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "8d45898e533e591d4241f4c1821bbb7b4d6f05ca764b796c7fbe29eb68dd7bc4": {
-    "title": "Higgsfield 将 AI 视频从 1 分钟延长至 10 分钟以上",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
@@ -32,12 +14,6 @@
   "36a7e1c23fbbe3b1fdc0232b25eb31c8ef9c6f6d877b564ab04d74596d0b22c4": {
     "title": "Google DeepMind 与新加坡政府合作构建用于诈骗检测的微调 AI 模型",
     "summary": "了解 Google DeepMind 与新加坡 GovTech 如何使用轻量级端侧 Gemma 模型在私密聊天中拦截对话式诈骗，且零云端数据外泄。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "6b8c3209e70c0fe78ffd3eea647b87b8b4b718a7a2a74655cb73aa17e086f131": {
-    "title": "GitHub App 在最小权限和管理方面的改进",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T08:48:33Z"
   },
@@ -107,12 +83,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
-  "80fff3a90d51ccf91357e18777a6f52d33ffdc217c5f0264860028246ce705a1": {
-    "title": "AI Scan for pull requests 正式发布",
-    "summary": "代码扫描 AI Scan for pull requests 现已正式发布。它通过查找 CodeQL 目前不支持的…",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
   "449b1014bc1499c1514cf0c9e75b3727f007bafec3a8e49d506396b1fe1af516": {
     "title": "代码扫描警报的 Agentic autofix 正式发布",
     "summary": "代码扫描警报的 Agentic autofix 现已正式发布。它像开发者一样在代码库中工作来修复警报：探索相关文件、提出修复方案，…",
@@ -122,12 +92,6 @@
   "282497830b35cf32457b60ae96419e92679b91102b970c81cd6d7f50fbaf467f": {
     "title": "仓库推送事件的电子邮件通知已停用",
     "summary": "自 2026 年 10 月 15 日起，仓库推送事件的电子邮件通知已停用，不再发送。我们关闭此功能是为了帮助防止垃圾邮件和滥用。…",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
-  "b655aadac97a31177c2f3953e289c0c49eb9557ba303f648d61f427a919973ce": {
-    "title": "从数据中心到桌面：NVIDIA 扩展 Nemotron 家族，推出最高效 Super VL 和 Bolt 模型",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
@@ -167,20 +131,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
   },
-  "6fdf4a6bc9a49fd054fb2c609babc1a120179f95410c1bdeb51512d758bc57b7": {
-    "title": "Slack 和 Microsoft Teams 中 GitHub Copilot 的多仓库支持及其他改进",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
   "6d42176d2f315f269ba0fe76ebd439ed1e2ddd036f96edaeff8fd6dc5d4b36e2": {
     "title": "将 GitHub Code Quality 许可证使用情况下载为 CSV",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "0fb5cf8a26c77a059da3b3e7650e83c6cab50c42c29c08e6e74702fcbf067a5a": {
-    "title": "GitHub Copilot 部分模型将于 11 月中旬弃用",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
@@ -226,5 +178,23 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
+  },
+  "97665fd5758ad12c8193b0af75a83eb5b2b6f77890a6fabb6cfdeb3dff1bdfc7": {
+    "title": "开源许可证合规功能正式发布",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "1d717ea1f886632875385b7a32c4d5023f4b925db02807a06add91e7a157a8bf": {
+    "title": "Xcode 27 runner 镜像正式发布",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
+  },
+  "f29a90bccdef39cc63d3a813b23f68dab82d92a6939c3c57959eae3f8630b712": {
+    "title": "Reflection 的 Beam 在 Ollama 上限时免费开放",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-16T15:23:39Z"
   }
 }

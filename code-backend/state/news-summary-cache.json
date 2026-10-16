@@ -1,17 +1,12 @@
 {
-  "6fdf4a6bc9a49fd054fb2c609babc1a120179f95410c1bdeb51512d758bc57b7": {
-    "summary": "Slack 和 Microsoft Teams 中的 GitHub Copilot 现支持在单次对话中跨多个仓库工作。",
+  "c479c768bc32ea901a6a171aa019945f2844af95453fbb2c382d03c1ed9f720d": {
+    "summary": "腾讯发布 Qwen3-8B-DSpine-b16。",
     "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
+    "at": "2026-10-16T15:23:39Z"
   },
-  "0fb5cf8a26c77a059da3b3e7650e83c6cab50c42c29c08e6e74702fcbf067a5a": {
-    "summary": "GitHub Copilot 将于 2026 年 11 月 16 日在所有体验中弃用部分模型。",
+  "f29a90bccdef39cc63d3a813b23f68dab82d92a6939c3c57959eae3f8630b712": {
+    "summary": "Reflection 首个开放权重模型 Beam 上线 Ollama，限时免费，面向软件工程、推理与长时智能体任务。",
     "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "b655aadac97a31177c2f3953e289c0c49eb9557ba303f648d61f427a919973ce": {
-    "summary": "NVIDIA 发布 Nemotron 3.5 Super VL 及两款边缘模型 Bolt 74B-A9B 24GB 和 Bolt E4B 4GB。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
+    "at": "2026-10-16T15:23:39Z"
   }
 }
