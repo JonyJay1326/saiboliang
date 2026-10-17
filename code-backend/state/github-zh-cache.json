@@ -4,11 +4,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-20T06:51:22Z"
   },
-  "NVIDIA/SkillSpector": {
-    "text": "面向 AI 代理技能的安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "cloudflare/security-audit-skill": {
     "text": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
     "source": "deepseek-flash",
@@ -104,11 +99,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
-  "google/artemis": {
-    "text": "ARTEMIS 将自然语言指令转化为可靠的 Android 自动化。它自动化端到端工作流、捕获日志，并与 Antigravity、Codex 和 Claude Code 等 AI 编程助手无缝集成。在 AndroidWorld 基准测试中成功率超过 99%。",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
   "ifixai-ai/iFixAi": {
     "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi 可在 120 秒内得到答案。",
     "source": "deepseek-flash",
@@ -129,11 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
   },
-  "llm-d/llm-d-router": {
-    "text": "llm-d Router：推理请求的智能入口",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
   "WorldFlowAI/everything-claude-code": {
     "text": "Claude Code 工具包 - 智能体、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
     "source": "deepseek-flash",
@@ -141,11 +126,6 @@
   },
   "TencentCloud/TencentDB-Agent-Memory": {
     "text": "TencentDB Agent Memory 是面向 AI Agent 的团队级记忆中枢，将会话、文档和代码转化为四类可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph），实现跨 Agent 与框架的治理、共享和装配。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
-  "SegFault42/HeliosGen": {
-    "text": "🏆 自托管生成式 AI 桌面应用，Higgsfield、OpenArt、Freepik 等的免费替代品。",
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
@@ -169,11 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
   },
-  "lkimuk/ReArk": {
-    "text": "面向 HarmonyOS NEXT（HAP/APP/ABC）、Android（APK/AAB）、iOS（IPA）及原生 PE/ELF/Mach-O 二进制文件的智能逆向工程与 AI 辅助分析工具。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
   "DamRsn/NeuralNote": {
     "text": "使用深度学习将音频转写为 MIDI 的音频插件。",
     "source": "deepseek-flash",
@@ -184,29 +159,59 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
   },
-  "dotnet/skills": {
-    "text": "用于协助 AI 编码智能体处理 .NET 和 C# 的技能仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
-  "QwenLM/Qwen3-VL": {
-    "text": "Qwen3-VL 是阿里云 Qwen 团队开发的多模态大语言模型系列。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
-  "OtterMind/Chat2DB": {
-    "text": "Chat2DB 是免费、跨平台、本地优先的数据库客户端与 SQL 工作区，面向开发者、DBA、分析师和数据团队。可连接 40 多种数据库，管理数据，编辑并运行 SQL，并使用自有 AI 模型生成、解释和优化查询。支持桌面端、Web、Docker 和 CLI，并支持 MCP。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
-  "bendlang/bend": {
-    "text": "Bend 2：一种通过证明阻止 AI 犯错的快速语言。安装：curl -fsSL https://bend-lang.com/install.sh | sh",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
   "mobile-next/mobile-mcp": {
     "text": "用于移动自动化与抓取的 Model Context Protocol 服务器（iOS、Android、模拟器、仿真器和真机）",
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
+  },
+  "xerj-org/xerj": {
+    "text": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "KittenML/KittenTTS": {
+    "text": "开源的最先进 TTS 模型，可在 CPU 上运行 😻",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "HandsOnLLM/Hands-On-Large-Language-Models": {
+    "text": "O'Reilly 图书《Hands-On Large Language Models》的官方代码仓库",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "poloclub/transformer-explainer": {
+    "text": "Transformer 可视化讲解：通过交互式可视化学习 LLM Transformer 模型的工作原理",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "alirezadir/AIMLInterviews": {
+    "text": "生成式 AI、智能体 AI、多模态 AI、物理 AI 面试的综合指南。经证实可助你获得多个 FAANG offer 等的公式",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "facebookresearch/segment-anything": {
+    "text": "该仓库提供使用 SegmentAnything 模型（SAM）进行推理的代码、预训练模型检查点的下载链接，以及展示如何使用该模型的示例 notebook。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "Gaurav-Gosain/tuios": {
+    "text": "一个了解你的智能体在做什么的终端窗口管理器。平铺窗格、工作区、可跨重启存活的会话，以及为每个编码智能体提供的统一收件箱。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "strands-agents/harness-sdk": {
+    "text": "构建智能体 harness 并端到端控制它。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript——任意模型、任意云。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "NVIDIA/Model-Optimizer": {
+    "text": "统一的 SOTA 模型优化技术库，包括量化、蒸馏、剪枝、神经架构搜索、推测解码等。它为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
+  },
+  "yyjeqhc/webcodex": {
+    "text": "在你自己的机器上为云端 AI 智能体提供真实的开发环境。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T14:14:10Z"
   }
 }

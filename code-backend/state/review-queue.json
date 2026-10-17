@@ -1,18 +1,6 @@
 [
   {
     "kind": "github-classification",
-    "objectId": "bilawalsidhu/gods-eye-view",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "sourceUrl": "https://github.com/bilawalsidhu/gods-eye-view"
-    },
-    "id": "827018e5a1004e58afcd8b6fb291ee8ca49f362ca3c91d7fee343f9bbf1abf4e",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "cursor/plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -375,18 +363,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Tianyu199509/DeskBox",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
-      "sourceUrl": "https://github.com/Tianyu199509/DeskBox"
-    },
-    "id": "8401b834e8d8ae5bba31d0980e591e3be0e1e591ec8d71f460296342bb67ede7",
-    "status": "pending",
-    "createdAt": "2026-10-02T07:52:02Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "NationalSecurityAgency/ghidra",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -494,18 +470,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "qier222/YesPlayMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "高颜值的第三方网易云播放器，支持 Windows / macOS / Linux",
-      "sourceUrl": "https://github.com/qier222/YesPlayMusic"
-    },
-    "id": "57e31b87359b81a877edfda63e1632be4cc3b380cbe0c1e71288691ee084489f",
-    "status": "pending",
-    "createdAt": "2026-10-05T19:38:42Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "docmirror/dev-sidecar",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -537,18 +501,6 @@
       "sourceUrl": "https://github.com/earthtojake/text-to-cad"
     },
     "id": "5e240026e9bd5e198f54a337f9965865cffa468d5dec207bed8ef4b4e5a9d777",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "p-e-w/heretic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully automatic censorship removal for language models",
-      "sourceUrl": "https://github.com/p-e-w/heretic"
-    },
-    "id": "4fdd8ea1c3b1c029d49de4c28b43b58d866ea1d02b14213507dbd1f0356c57e8",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
   },
@@ -589,18 +541,6 @@
     "createdAt": "2026-10-08T17:54:23Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "guipsamora/pandas_exercises",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Practice your pandas skills!",
-      "sourceUrl": "https://github.com/guipsamora/pandas_exercises"
-    },
-    "id": "a0a50a806b9c152c5fbceb68246eebfd408b54b03ff1e7377725dee39fccb5cd",
-    "status": "pending",
-    "createdAt": "2026-10-08T17:54:23Z"
-  },
-  {
     "kind": "plans",
     "objectId": "bigmodel-coding-plan",
     "reason": "official terms changed; retaining prior record",
@@ -621,18 +561,6 @@
     "id": "b1d8ef7f9e820137b1aa04bb71c6c9cd8ea388f8b18873ab00b2262a04549bee",
     "status": "pending",
     "createdAt": "2026-10-09T10:40:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "NickvisionApps/Parabolic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Download web video and audio",
-      "sourceUrl": "https://github.com/NickvisionApps/Parabolic"
-    },
-    "id": "6eaef829132b14d61aa0acb07d86971c8dcab874bfd9ea1ee5911e21d038d6b4",
-    "status": "pending",
-    "createdAt": "2026-10-09T17:27:43Z"
   },
   {
     "kind": "github-classification",
@@ -668,18 +596,6 @@
     "id": "450a63ada332ad512a21821d285cecc5835cf5a880b65ed08a8b7162b679a9f2",
     "status": "pending",
     "createdAt": "2026-10-11T07:43:59Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "M-Abozaid/esp32-c3-adblock",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
-      "sourceUrl": "https://github.com/M-Abozaid/esp32-c3-adblock"
-    },
-    "id": "aecb6d87d3351c845f3bfc847252c99da66c87e32b15a58d737cc31eed2578c3",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
   },
   {
     "kind": "github-classification",
@@ -767,30 +683,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "OpenRA/OpenRA",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL. Runs on Windows, Linux, *BSD and Mac OS X.",
-      "sourceUrl": "https://github.com/OpenRA/OpenRA"
-    },
-    "id": "e4d42b0e4b2b485e38c3431d514c31d019b867fabf682957571f0bc0d85838d9",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "koharu-rs/koharu",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ML-powered manga translator, written in Rust.",
-      "sourceUrl": "https://github.com/koharu-rs/koharu"
-    },
-    "id": "d375bf1c58b07ef3f6a616324a774fdf451973374e63dc07255c727dfad0d9e9",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/CLI-Anything",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -862,18 +754,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Perfare/Il2CppDumper",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Unity il2cpp reverse engineer",
-      "sourceUrl": "https://github.com/Perfare/Il2CppDumper"
-    },
-    "id": "ca14f41fa8ee16b756a2cc78c108b5e3c0f9ac58a445ff2ff2e8a2e43c6425fb",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "storytold/artcraft",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -905,42 +785,6 @@
       "sourceUrl": "https://github.com/chthollyphile/folia-major"
     },
     "id": "cc9de1b01f7dfa9dc73f2f6cb38285ce3b4ec0dbe09fe10ef1e9fae7d2c3f9d4",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hicccc77/WeFlow",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "WeFlow - 一个本地的微信聊天记录导出和年度报告应用",
-      "sourceUrl": "https://github.com/hicccc77/WeFlow"
-    },
-    "id": "eca43e3c65f0e3a191e1c10a94ee92a1698761bbf892497c00180000db8e7247",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "docker/compose",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Define and run multi-container applications with Docker",
-      "sourceUrl": "https://github.com/docker/compose"
-    },
-    "id": "76a0dc1e1d796534131c55d84cfb340dd95cf71bdbf741540b72e0f99e81da7f",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ran-j/PS2Recomp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Playstation 2 Static Recompiler & Runtime Tool to make native PC ports",
-      "sourceUrl": "https://github.com/ran-j/PS2Recomp"
-    },
-    "id": "f0283b8b0874b74538debf9452c31ba75ac870dc3af8e1a6b042d67e6f61e7f6",
     "status": "pending",
     "createdAt": "2026-10-14T15:50:52Z"
   },
@@ -994,42 +838,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "pipipi-pikachu/PPTist",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PowerPoint-ist（/'pauəpɔintist/）, An online presentation application that replicates most of the commonly used features of MS PowerPoint, allowing for the editing and presentation of PPT online. It also supports AIPPT and local PPTX file preview.",
-      "sourceUrl": "https://github.com/pipipi-pikachu/PPTist"
-    },
-    "id": "c875e1ad08a699464beb43e499bfa3949fa8220d04f2cd4222bedf7a86a1160f",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "noVibe/DnsConf",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DNS Block and Redirect configurer for Cloudflare / NextDNS",
-      "sourceUrl": "https://github.com/noVibe/DnsConf"
-    },
-    "id": "02a4e252ba3876557622f64a3d694f16ee3fa0d27950f1716ad96682d1019873",
-    "status": "pending",
-    "createdAt": "2026-10-15T08:23:34Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "rommapp/romm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A beautiful, powerful, self-hosted ROM manager and player.",
-      "sourceUrl": "https://github.com/rommapp/romm"
-    },
-    "id": "a0c387a9112775a4d789e8746d17d721c3ce8e7e8ca8187d530b022b053cdeb2",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "google/agentmesh",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1051,54 +859,6 @@
     "id": "08375beda4cc7de34c0a6b0032f690289c1a77ed9d6339b908446b17c9129a5b",
     "status": "pending",
     "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "telegramdesktop/tdesktop",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Telegram Desktop messaging app",
-      "sourceUrl": "https://github.com/telegramdesktop/tdesktop"
-    },
-    "id": "19412b41ee45830ef1e9d43a184c9f36383ea9a41d78ace74187eaa7e5212352",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "LorisYounger/VPet",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "虚拟桌宠模拟器 一个开源的桌宠软件, 可以内置到任何WPF应用程序",
-      "sourceUrl": "https://github.com/LorisYounger/VPet"
-    },
-    "id": "5f18fe14e83384df705e654609f31131f8b0704932439bd0b1536bba062d32ff",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "vosen/ZLUDA",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "CUDA on non-NVIDIA GPUs",
-      "sourceUrl": "https://github.com/vosen/ZLUDA"
-    },
-    "id": "fed4e9c5e554d92a7389e47b81b0adf1a08d96694bd7b7593d89db96678c62ee",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "LibreSpark/LibreTV",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一分钟搭建影视站，支持Docker等部署方式",
-      "sourceUrl": "https://github.com/LibreSpark/LibreTV"
-    },
-    "id": "066c5ac41f9656b08d34a5b5b63fa88a72a53008963a22f141c5463232caad9a",
-    "status": "pending",
-    "createdAt": "2026-10-16T08:16:01Z"
   },
   {
     "kind": "github-classification",
@@ -1162,30 +922,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "evanw/esbuild",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An extremely fast bundler for the web",
-      "sourceUrl": "https://github.com/evanw/esbuild"
-    },
-    "id": "d317a175f730a490a79cf096a085f56e7b530234c8b7cddefb9b002ecde02f8d",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Project-HAMi/HAMi",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Heterogeneous GPU Sharing on Kubernetes",
-      "sourceUrl": "https://github.com/Project-HAMi/HAMi"
-    },
-    "id": "0dcac5379ae851817bfa3666c98646fa6d07ada8f2e2adbbdd4e1efaa78adfba",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "shadps4-emu/shadPS4",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1193,18 +929,6 @@
       "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
     },
     "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google-gemini/cookbook",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Examples and guides for using the Gemini API",
-      "sourceUrl": "https://github.com/google-gemini/cookbook"
-    },
-    "id": "82d2bc36be90563588f1cf49ebf3a49b44b839e7ea3a5670bdb9e3baafe09f6b",
     "status": "pending",
     "createdAt": "2026-10-16T15:23:39Z"
   },
@@ -1270,50 +994,194 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "nextcloud/all-in-one",
+    "objectId": "elie222/rakazo",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "📦 The official Nextcloud installation method. Provides easy deployment and maintenance with most features included in this one Nextcloud instance.",
-      "sourceUrl": "https://github.com/nextcloud/all-in-one"
+      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+      "sourceUrl": "https://github.com/elie222/rakazo"
     },
-    "id": "14a021e68b1bab6c7e60868d80ef3e6836e821204047e9d9bdcdfd3297c14d58",
+    "id": "0511056688446943b4551352d53bfc97b70089062bfe40c7f79fc3b9a6d1a8fa",
     "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
+    "createdAt": "2026-10-17T14:14:10Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "wux1an/wxapkg",
+    "objectId": "microsoft/TRELLIS.2",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "跨平台微信小程序反编译 GUI 工具，.wxapkg 文件扫描 + 解密 + 解包工具",
-      "sourceUrl": "https://github.com/wux1an/wxapkg"
+      "description": "Native and Compact Structured Latents for 3D Generation",
+      "sourceUrl": "https://github.com/microsoft/TRELLIS.2"
     },
-    "id": "6dc13d1e3f845cd202f948d1d4cd9163797d6d641eeb4d51ac5040ab95ea4c36",
+    "id": "ea2a35d68a2f467ab3f2db268a1f7804120c0e182a24b8f63279d2e4cd5a75a7",
     "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
+    "createdAt": "2026-10-17T14:14:10Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "elysia395/dsh-wallpaper-engine",
+    "objectId": "lionsoul2014/ip2region",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "把本机 Wallpaper Engine 的壁纸搬进 DSH 网页界面：场景壁纸由内置 MIT 开源引擎 WebWallGL 实时 WebGL 渲染（粒子 / puppet 骨骼 / SceneScript / 音频反应 / 鼠标交互），失败自动降级内嵌 MP4 与场景静态帧；Web 壁纸严格沙箱 + WE API；iOS 风格液态玻璃 UI 高度自定义，遮挡暂停省电、ffmpeg 帧率上限转码、系统音频频谱与 Now Playing、自定义上传与自动轮播；设置存宿主端，对 agent 零 token 开销。Windows / macOS / Linux 三平台原生（同一个包、同一条命令）。",
-      "sourceUrl": "https://github.com/elysia395/dsh-wallpaper-engine"
+      "description": "Ip2region is an offline IP-to-Region localization library and IP data management framework with both IPv4 and IPv6 supports, 10-microsecond level query efficiency, xdb search client for many programming languages",
+      "sourceUrl": "https://github.com/lionsoul2014/ip2region"
     },
-    "id": "ddf7833f7affd2fadb2adebadbcf5fa62131212028a6d86a22f831f5f4293edc",
+    "id": "48b352c9ff1d8520a26624d9a323ac9a6369cb8e8e34f4b854d1d4c96aae3fbf",
     "status": "pending",
-    "createdAt": "2026-10-17T07:52:24Z"
+    "createdAt": "2026-10-17T14:14:10Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "apache/shenyu",
+    "objectId": "x64dbg/x64dbg",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Apache ShenYu is a Java native API Gateway for service proxy, protocol conversion and API governance.",
-      "sourceUrl": "https://github.com/apache/shenyu"
+      "description": "An open-source user mode debugger for Windows. Optimized for reverse engineering and malware analysis.",
+      "sourceUrl": "https://github.com/x64dbg/x64dbg"
     },
-    "id": "91c896a53b0d90aa03a5f1c85686b7819f09dd204eaf8281ca47820cbfd65d65",
+    "id": "ccb1740f383e483b3d01af2b428b50fa8679613c150aaeac927af5064ceae915",
     "status": "pending",
-    "createdAt": "2026-10-17T07:52:24Z"
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jackfrued/Python-100-Days",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Python - 100天从新手到大师",
+      "sourceUrl": "https://github.com/jackfrued/Python-100-Days"
+    },
+    "id": "20ef6185856bcb9f809cc4be61657928d5e4cfb39c8f1a685693f2e0cd08379a",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "slskd/slskd",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A modern client-server application for the Soulseek file sharing network.",
+      "sourceUrl": "https://github.com/slskd/slskd"
+    },
+    "id": "776078928be855a327883c85fe7e53e3c91e41aca766be1bb6482c673aa96e22",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bitwarden/server",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Bitwarden infrastructure/backend (API, database, Docker, etc).",
+      "sourceUrl": "https://github.com/bitwarden/server"
+    },
+    "id": "ed295ccb5c06daedb72bcb212fb953c1584e77788475b6323846cb0816bc358a",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "2dust/v2rayN",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
+      "sourceUrl": "https://github.com/2dust/v2rayN"
+    },
+    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "AbdurazaaqMohammed/MP-Manager",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Dual pane Android file manager with focus on APKs",
+      "sourceUrl": "https://github.com/AbdurazaaqMohammed/MP-Manager"
+    },
+    "id": "e197a7de4eb90058f4c54e2492dadf7907475233a1e7c5770abaa85a786db11b",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "spring-projects/spring-boot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
+      "sourceUrl": "https://github.com/spring-projects/spring-boot"
+    },
+    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dbeaver/dbeaver",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free universal database tool and SQL client",
+      "sourceUrl": "https://github.com/dbeaver/dbeaver"
+    },
+    "id": "04340b3a6730acaf5072444cfd1e9cb7863b76e222b1f9079c05662c2a089b57",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nextcloud/server",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "☁️ Nextcloud server, a safe home for all your data",
+      "sourceUrl": "https://github.com/nextcloud/server"
+    },
+    "id": "9d97d35e2bff60b8c5e21ebded9ad79bb58816c8658001e30d8e9908a2f24fdd",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algerkong/AlgerMusicPlayer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
+    },
+    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vercel/next.js",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The React Framework",
+      "sourceUrl": "https://github.com/vercel/next.js"
+    },
+    "id": "8087ac37fdea5c6a0ab0f1c1da3dee3a60c0524f93175977fe0abc6cd6e30bdf",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "luolangaga/tubatools",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "这是图吧工具箱基于 WinUI 3 全新重构的版本，一款由社区驱动、深度契合 Windows 11 设计美学的现代化工具箱。它不仅确保你始终使用最新版本的工具，还集成了更加丰富的实用功能，更可满足高度自定义的个性化需求。",
+      "sourceUrl": "https://github.com/luolangaga/tubatools"
+    },
+    "id": "e5c20103900c8f2d75464a8894867f8b69faecfd73a4f453009c6b7e8ee12c5a",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kestra-io/kestra",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
+      "sourceUrl": "https://github.com/kestra-io/kestra"
+    },
+    "id": "2ce8a952175f736f8722b2768b702e9c05f8cadfbaa755af118759895d3eba6f",
+    "status": "pending",
+    "createdAt": "2026-10-17T14:14:10Z"
   }
 ]
