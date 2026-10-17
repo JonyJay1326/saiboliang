@@ -1,51 +1,9 @@
 {
-  "74c9e10c02543c499970682cdc00d05dd116e332e885e53c72a5b5135c768141": {
-    "title": "Gemini 4 Argon：为攻克最难题而生",
-    "summary": "待定",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
-  "241a0eb7150b75c2c4dd1c670aeff735965e9595a15d3b8c006bc41c1279457d": {
-    "title": "Anthropic 开设新加坡办公室并与新加坡政府签署 MOU",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "36a7e1c23fbbe3b1fdc0232b25eb31c8ef9c6f6d877b564ab04d74596d0b22c4": {
-    "title": "Google DeepMind 与新加坡政府合作构建用于诈骗检测的微调 AI 模型",
-    "summary": "了解 Google DeepMind 与新加坡 GovTech 如何使用轻量级端侧 Gemma 模型在私密聊天中拦截对话式诈骗，且零云端数据外泄。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "eee6cc87fc10c58396747d73fb885d45576956894a21f213eb60cbf16669687b": {
-    "title": "从企业到 Earthshot：英国生态系统携手 NVIDIA 从雄心迈向应用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-14T08:48:33Z"
-  },
-  "200a5d3dd39c6bfb7a20192865ba844eee2602b52233f3070983235051951aad": {
-    "title": "欧盟 AI 的下一篇章是 agentic",
-    "summary": "新分析显示 agentic AI 在欧盟企业与小企业中的采用正不断增长，并指出更深入使用可在何处释放更多价值。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
   "f5fa4d6131d7db33f0c914ee66cda36ac3bb6f23c3f16067caa62a99e7a5fcb1": {
     "title": "GitHub Actions 工作流锁文件进入公开预览",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
-  },
-  "ad577cc4d385593cb7c01bf987f497d37cde5b45e9e2ed8312c055180c24ff3e": {
-    "title": "为2026年美国中期选举做准备",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-15T08:23:34Z"
-  },
-  "12251940b3b4d2234012ad5b78b04670a82d5e155a62b6535868c5ede029e745": {
-    "title": "推出 Grok Voice 3.0",
-    "summary": "全球最智能的语音模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T08:23:34Z"
   },
   "57c3309db5bedcdec4e0532a65e896970f7cad30f5011350fb2a735b14cb8cdd": {
     "title": "Amp 借助 OpenAI 模型让 AI 智能体超越代码工作",
@@ -56,12 +14,6 @@
   "004cd593adabcd24c97d9e96a166c251028359017ae1a6a5fbaa8f542a33706f": {
     "title": "SentinelOne 将恶意软件分析从数周缩短至数小时",
     "summary": "借助 OpenAI Daybreak，SentinelOne 将数周的恶意软件分析缩短至数小时，从而有能力调查更多威胁。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T08:23:34Z"
-  },
-  "94ee28b93f9d2d830319b5f76c0aa72745ffecd9af8552d923f3dc0ab202dce3": {
-    "title": "Block 如何利用 OpenAI 技术构建 AI 驱动的安全体系",
-    "summary": "Block 正利用 OpenAI 构建 AI 驱动的安全体系。其安全团队能更快调查威胁，并在几分钟内提出补丁。",
     "source": "deepseek-flash",
     "at": "2026-10-15T08:23:34Z"
   },
@@ -149,18 +101,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
   },
-  "95741fd459fa5556266705f05b9fcf0f73a9b13e11ab7b26b6dd54f74c2dccac": {
-    "title": "以开源 Integrated HSM 技术推进硬件安全",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "2d42d7d3c693af5741268fdfb456c912c32ae5ac2c968a33ec515317a85d04f9": {
-    "title": "前沿时代的基础设施：通过开放行业协作扩展智能",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
   "51edf4c643816e6fc69aba606f22e49e530ea0b14e4cd171d8658ddbb9eb6a75": {
     "title": "推出 Timestral",
     "summary": "最先进的概率预测，提供四种规模（5M–209M 参数），CPU 高效，零样本即用。",
@@ -169,12 +109,6 @@
   },
   "bed122782e163a9e3e19093e3cbbd60b615aa2c8b67b0bb1533674d4f16eca42": {
     "title": "Meta Muse Spark Open 已在 Together AI 上线",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "0f705e6495482c5fefc7c74d0656c7bae72c0f7950f50dcee3aa57d9e14b5a22": {
-    "title": "私有端点：将您的微调模型和容量引入 OpenRouter",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
@@ -191,10 +125,34 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
   },
-  "f29a90bccdef39cc63d3a813b23f68dab82d92a6939c3c57959eae3f8630b712": {
-    "title": "Reflection 的 Beam 在 Ollama 上限时免费开放",
+  "9732b2763df5a67ab9455b8255aee23064fe436ed165bb52468ec0f54969accf": {
+    "title": "Itaú 如何为其全部客户群构建生成式 AI",
+    "summary": "通过对话式界面 ia.i 和治理平台 IARA，Itaú 在巴西监管最严的行业之一，将 AI First 战略应用于客户和员工。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T07:52:24Z"
+  },
+  "9e63539289a31c8631b61e2dab00ee4355731974576a94679adaae67ea1b4655": {
+    "title": "Stack Overflow for Agents 借助 ChatGPT 插件使注册量增至三倍",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
+    "at": "2026-10-17T07:52:24Z"
+  },
+  "b6756c0a180ee554226c332b456c2b3fe634b3c508ea217138686c0c0ae92870": {
+    "title": "Benefit Street Partners 用 Codex 更快解答问题",
+    "summary": "Anant Kumar 构建工具比较贷款估值并分析信贷协议，使用 Codex 进行代码审查并加快后续跟进。",
+    "source": "deepseek-flash",
+    "at": "2026-10-17T07:52:24Z"
+  },
+  "30b8aca672158aa66293ff4e26e1a303b00e331fcc4bbb310eb7d34a7b1c5021": {
+    "title": "演进云原生基础，迎接下一代 AI",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-17T07:52:24Z"
+  },
+  "a39e7daa0f724775f4e445c126e8364e0f8eec861d96c0c2efc1db8b7486393b": {
+    "title": "Cloud Agent 画布与环境改进",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-17T07:52:24Z"
   }
 }

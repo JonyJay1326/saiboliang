@@ -1,12 +1,12 @@
 {
-  "c479c768bc32ea901a6a171aa019945f2844af95453fbb2c382d03c1ed9f720d": {
-    "summary": "腾讯发布 Qwen3-8B-DSpine-b16。",
+  "a39e7daa0f724775f4e445c126e8364e0f8eec861d96c0c2efc1db8b7486393b": {
+    "summary": "Cloud agents 可构建并分享交互式画布，Environments API 进入测试，支持300个仓库，加载快5倍。",
     "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
+    "at": "2026-10-17T07:52:24Z"
   },
-  "f29a90bccdef39cc63d3a813b23f68dab82d92a6939c3c57959eae3f8630b712": {
-    "summary": "Reflection 首个开放权重模型 Beam 上线 Ollama，限时免费，面向软件工程、推理与长时智能体任务。",
+  "bed122782e163a9e3e19093e3cbbd60b615aa2c8b67b0bb1533674d4f16eca42": {
+    "summary": "Meta 开源权重智能体编程模型 Muse Spark Open 上线 Together AI，支持100万 token 上下文。",
     "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
+    "at": "2026-10-17T07:52:24Z"
   }
 }

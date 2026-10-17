@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-16T15:23:39Z",
+  "dataUpdatedAt": "2026-10-17T07:52:24Z",
   "items": [
     {
       "title": "腾讯发布 Qwen3-8B-DSpine-b16",
@@ -19,6 +19,63 @@
       "eventType": "model-release",
       "addedAt": "2026-10-16T15:23:39Z",
       "featured": null
+    },
+    {
+      "title": "霸榜三大基准！优必选 Thinker-WM：多模态统一表征，单模型实现六大能力",
+      "sourceUrl": "https://www.qbitai.com/2026/10/503843.html",
+      "publishedAt": "2026-10-16T08:00:31Z",
+      "source": "量子位",
+      "summary": "优必选 Thinker-WM在三大公认具身世界模型基准评测中全部拿下第一名",
+      "id": "3f03840897a568b4cece254438fb471e3f901b19dacbb7f48c901b6d118e0a97",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/503843.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-17T07:52:24Z",
+      "featured": true
+    },
+    {
+      "title": "范式智能联合睿思智联推出开源一站式 生产级 AI 部署平台 “模域ModelSphere”",
+      "sourceUrl": "https://www.qbitai.com/2026/10/503829.html",
+      "publishedAt": "2026-10-16T07:16:11Z",
+      "source": "量子位",
+      "summary": "范式智能技术集团有限公司联合北京睿思智联科技有限公司宣布，一站式生产级 AI 部署平台“模域”正式上线。",
+      "id": "76cea5d3ddeff7fed46d2d01036b352bd020b54ca73068810cf564f61f774fe9",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/503829.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-17T07:52:24Z",
+      "featured": true
+    },
+    {
+      "title": "刚刚，Gemini 4终于来了：谷歌重回御三家，API限时半价",
+      "sourceUrl": "https://www.qbitai.com/2026/10/503701.html",
+      "publishedAt": "2026-10-16T05:04:59Z",
+      "source": "量子位",
+      "summary": "谷歌就是季节性气候模型公司",
+      "id": "ac175d306aa6d2a06573e8921c1db5e2835eb42058e87f8aa257ff4f9385dfb8",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/503701.html",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-10-17T07:52:24Z",
+      "featured": true
     },
     {
       "title": "Slack 和 Microsoft Teams 中 GitHub Copilot 的多仓库支持及其他改进",
@@ -59,6 +116,25 @@
       "featured": true
     },
     {
+      "title": "Cloud Agent 画布与环境改进",
+      "sourceUrl": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "source": "Cursor",
+      "summary": "Cloud agents 可构建并分享交互式画布，Environments API 进入测试，支持300个仓库，加载快5倍。",
+      "id": "a39e7daa0f724775f4e445c126e8364e0f8eec861d96c0c2efc1db8b7486393b",
+      "originalTitle": "Cloud Agent Canvases and Environment Improvements",
+      "translatedAt": "2026-10-17T07:52:24Z",
+      "lang": "en",
+      "originalSource": "Cursor",
+      "originalUrl": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+      "originalVerifiedAt": "2026-10-17T07:52:24Z",
+      "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-17T07:52:24Z",
+      "featured": true
+    },
+    {
       "title": "Reflection 的 Beam 在 Ollama 上限时免费开放",
       "sourceUrl": "https://ollama.com/blog/reflection-beam",
       "publishedAt": "2026-10-16T00:00:00Z",
@@ -95,6 +171,25 @@
       "eventType": "service-retirement",
       "addedAt": "2026-10-16T08:16:01Z",
       "featured": true
+    },
+    {
+      "title": "Command Code 发布 v1.84.0",
+      "sourceUrl": "https://commandcode.ai/changelog?date=2026-10-16&version=v1.84.0",
+      "publishedAt": "2026-10-15T16:00:00Z",
+      "source": "Command Code",
+      "summary": null,
+      "id": "4be0d291b940f737659ce57ce2639b68599d37bf133e737938f8f75ddcbf3da7",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "Command Code",
+      "originalUrl": "https://commandcode.ai/changelog?date=2026-10-16&version=v1.84.0",
+      "originalVerifiedAt": "2026-10-17T07:52:24Z",
+      "url": "https://commandcode.ai/changelog?date=2026-10-16&version=v1.84.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-17T07:52:24Z",
+      "featured": null
     },
     {
       "title": "AI Scan for pull requests 正式发布",
@@ -208,6 +303,25 @@
       "category": "model",
       "eventType": "model-review",
       "addedAt": "2026-10-15T08:23:34Z",
+      "featured": true
+    },
+    {
+      "title": "Meta Muse Spark Open 已在 Together AI 上线",
+      "sourceUrl": "https://www.together.ai/blog/meta-muse-spark-open",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "source": "Together AI",
+      "summary": "Meta 开源权重智能体编程模型 Muse Spark Open 上线 Together AI，支持100万 token 上下文。",
+      "id": "bed122782e163a9e3e19093e3cbbd60b615aa2c8b67b0bb1533674d4f16eca42",
+      "originalTitle": "Meta Muse Spark Open is live on Together AI",
+      "translatedAt": "2026-10-17T07:52:24Z",
+      "lang": "en",
+      "originalSource": "Together AI",
+      "originalUrl": "https://www.together.ai/blog/meta-muse-spark-open",
+      "originalVerifiedAt": "2026-10-17T07:52:24Z",
+      "url": "https://www.together.ai/blog/meta-muse-spark-open",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-17T07:52:24Z",
       "featured": true
     },
     {
@@ -4182,6 +4296,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-16T15:23:39Z",
-  "generatedAt": "2026-10-16T15:23:39Z"
+  "version": "2026-10-17T07:52:24Z",
+  "generatedAt": "2026-10-17T07:52:24Z"
 }
