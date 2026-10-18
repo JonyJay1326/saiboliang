@@ -1,16 +1,4 @@
 {
-  "ffb5a326c8ee4530ec2c1b17d3fc763018e53200a52b540e4caf6885e8726905": {
-    "title": "HydraFusion 更新及全新 Max 选项",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-15T08:23:34Z"
-  },
-  "c46dcdda349de0a51015711cd172ac5ff4e163a5ff8548d8ea1b730f0e1eb6ee": {
-    "title": "北欧与 NVIDIA 展示区域致力于先进计算所能实现的可能",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-15T08:23:34Z"
-  },
   "a60f4a701f887ae8f46b94e06646a5fb82b2851c561d6cf99f41823c6f66011d": {
     "title": "通过问题教学生思考与学习",
     "summary": "用巴西葡萄牙语版 AI for Educators 庆祝教师节，了解 Study Mode 如何帮助教师支持主动、循序渐进的学习。",
@@ -41,21 +29,9 @@
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
-  "c3f9aa1e97f35f2465d0af14f3b196ebc11ad7498a8811b869b071034882ea93": {
-    "title": "独立评估者更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
   "32165ee6af8945a5bd83e4231d3e052413905bc21e8455b93c147e03ace99490": {
     "title": "将 GPT-Rosalind 引入学术研究实验室",
     "summary": "推出 Rosalind 学术计划，为符合条件的学术实验室提供 GPT-Rosalind 的赞助访问权限及工具，以推进生命科学研究。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "94eadcab22c41e356a1d9bf1e35dbdb6491d04804b7eea5ceec3829024496784": {
-    "title": "Sullivan & Cromwell 将法律专业知识引入协议审查",
-    "summary": "Sullivan & Cromwell 与 OpenAI 合作开发了 Agreement Analyzer，一款用于识别协议草案中问题的 AI 工具。",
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
   },
@@ -73,12 +49,6 @@
   },
   "46e7cecee360222aa2134f6b5a5aab320a3b4dc78227039b2d01f33a05965242": {
     "title": "见证开端：庆祝 NVIDIA RTX Spark 发布",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "20efc1f2b3465ebc05bdad557d8d6736ee6d0389c80e0356869832b135c5cc48": {
-    "title": "Microsoft 在 2026 年 Gartner® 服务器虚拟化平台魔力象限中被评为领导者",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-16T08:16:01Z"
@@ -124,5 +94,11 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-17T07:52:24Z"
+  },
+  "3e1bb6f4d90247655c88e7e192bdc976c6fe870a7458c69d7b22b4dc75902bdf": {
+    "title": "RTX Spark 随新款 Windows PC 上市，引发全球庆祝",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-18T08:07:08Z"
   }
 }

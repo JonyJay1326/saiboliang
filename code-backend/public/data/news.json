@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-10-17T14:14:10Z",
+  "dataUpdatedAt": "2026-10-18T08:07:08Z",
   "items": [
+    {
+      "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+      "sourceUrl": "https://www.qbitai.com/2026/10/504067.html",
+      "publishedAt": "2026-10-17T12:21:09Z",
+      "source": "量子位",
+      "summary": "新版本V4.1-Flash-1017，还开放了自研搜索API",
+      "id": "c991932364dcef47dd178b0638c2b3d447c8cb7386ea69e812414b6d237fb84c",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/504067.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-18T08:07:08Z",
+      "featured": true
+    },
+    {
+      "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+      "sourceUrl": "https://www.qbitai.com/2026/10/503935.html",
+      "publishedAt": "2026-10-17T12:10:35Z",
+      "source": "量子位",
+      "summary": "整套系统原生支持MCP",
+      "id": "7fc73ab44f09b73ffc4e79770a3e588a021e09aa64d0c49955350c5f3e38607f",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/503935.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-18T08:07:08Z",
+      "featured": true
+    },
     {
       "title": "腾讯发布 Qwen3-8B-DSpine-b16",
       "sourceUrl": "https://huggingface.co/tencent/Qwen3-8B-DSpine-b16",
@@ -4296,6 +4334,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-17T14:14:10Z",
-  "generatedAt": "2026-10-17T14:14:10Z"
+  "version": "2026-10-18T08:07:08Z",
+  "generatedAt": "2026-10-18T08:07:08Z"
 }

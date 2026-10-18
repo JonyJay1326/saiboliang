@@ -208,10 +208,5 @@
     "text": "统一的 SOTA 模型优化技术库，包括量化、蒸馏、剪枝、神经架构搜索、推测解码等。它为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
-  },
-  "yyjeqhc/webcodex": {
-    "text": "在你自己的机器上为云端 AI 智能体提供真实的开发环境。",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
   }
 }
