@@ -44,11 +44,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-07T17:50:43Z"
   },
-  "docling-project/docling": {
-    "text": "让你的文档为生成式 AI 做好准备",
-    "source": "deepseek-flash",
-    "at": "2026-10-08T17:54:23Z"
-  },
   "lexmount/moli": {
     "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
     "source": "deepseek-flash",
@@ -109,28 +104,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
   },
-  "SakanaAI/AI-Scientist": {
-    "text": "The AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
-  "facebookresearch/audiocraft": {
-    "text": "Audiocraft 是一个基于深度学习进行音频处理与生成的库。它包含最先进的 EnCodec 音频压缩器/分词器，以及 MusicGen——一个简单可控、支持文本与旋律条件的音乐生成语言模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
-  "WorldFlowAI/everything-claude-code": {
-    "text": "Claude Code 工具包 - 智能体、命令、技能、规则与钩子，助力高效的 AI 辅助开发",
-    "source": "deepseek-flash",
-    "at": "2026-10-14T15:50:52Z"
-  },
   "TencentCloud/TencentDB-Agent-Memory": {
     "text": "TencentDB Agent Memory 是面向 AI Agent 的团队级记忆中枢，将会话、文档和代码转化为四类可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph），实现跨 Agent 与框架的治理、共享和装配。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
-  "QuantumNous/new-api": {
-    "text": "统一的 AI 模型聚合与分发中枢，支持将各类 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式，是个人与企业模型管理的集中网关。",
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
@@ -154,11 +129,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
   },
-  "agentscope-ai/agentscope-java": {
-    "text": "构建分布式、生产级、长时间运行的智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
   "mobile-next/mobile-mcp": {
     "text": "用于移动自动化与抓取的 Model Context Protocol 服务器（iOS、Android、模拟器、仿真器和真机）",
     "source": "deepseek-flash",
@@ -176,11 +146,6 @@
   },
   "HandsOnLLM/Hands-On-Large-Language-Models": {
     "text": "O'Reilly 图书《Hands-On Large Language Models》的官方代码仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
-  },
-  "poloclub/transformer-explainer": {
-    "text": "Transformer 可视化讲解：通过交互式可视化学习 LLM Transformer 模型的工作原理",
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
@@ -208,5 +173,45 @@
     "text": "统一的 SOTA 模型优化技术库，包括量化、蒸馏、剪枝、神经架构搜索、推测解码等。它为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
+  },
+  "ruvnet/ruflo": {
+    "text": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "SegFault42/HeliosGen": {
+    "text": "🏆 自托管生成式 AI 桌面应用。Higgsfield、OpenArt、Freepik 等的免费替代品……",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "heartleo/zlib": {
+    "text": "Z-Library 命令行工具。支持搜索、下载、发送至 Kindle，并可集成 AI 智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "github/github-mcp-server": {
+    "text": "GitHub 官方 MCP 服务器",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "devaccuracy/ledgerforge": {
+    "text": "面向 AI 原生资金流动的账本。开源复式记账账本，适用于钱包、付款、市场和计费，采用精确整数金额、可验证审计链、服务器强制的 AI 智能体支出限额与审批，并提供 MCP 服务器。Apache 2.0。",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "Crosstalk-Solutions/project-nomad": {
+    "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在自有硬件上，无需互联网。",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "NVIDIA/SkillSpector": {
+    "text": "AI 智能体技能安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
+  },
+  "yyjeqhc/webcodex": {
+    "text": "让云端 AI 智能体在你自己的机器上获得真实开发环境。",
+    "source": "deepseek-flash",
+    "at": "2026-10-18T14:38:23Z"
   }
 }

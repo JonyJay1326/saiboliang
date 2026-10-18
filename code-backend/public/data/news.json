@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-18T08:07:08Z",
+  "dataUpdatedAt": "2026-10-18T14:38:23Z",
   "items": [
+    {
+      "title": "VAST开源实时世界模型EdenLive！单消费级显卡、720P超24FPS",
+      "sourceUrl": "https://www.qbitai.com/2026/10/504136.html",
+      "publishedAt": "2026-10-18T11:49:49Z",
+      "source": "量子位",
+      "summary": "让人人都能自由创造并体验可交互世界",
+      "id": "06e34488cd21a025bdbc9c0e6b34a919479ea3cfdd4e3299260daec160477b1e",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/504136.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-18T14:38:23Z",
+      "featured": true
+    },
     {
       "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
       "sourceUrl": "https://www.qbitai.com/2026/10/504067.html",
@@ -4334,6 +4353,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-18T08:07:08Z",
-  "generatedAt": "2026-10-18T08:07:08Z"
+  "version": "2026-10-18T14:38:23Z",
+  "generatedAt": "2026-10-18T14:38:23Z"
 }

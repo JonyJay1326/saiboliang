@@ -13,18 +13,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "rustfs/rustfs",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
-      "sourceUrl": "https://github.com/rustfs/rustfs"
-    },
-    "id": "59c0fb8c693b4d55a7dcc85bcf42ae662c1e245aa3766e1f714994e6c9537aac",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Open-Dev-Society/OpenStock",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -506,18 +494,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "oauth2-proxy/oauth2-proxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.",
-      "sourceUrl": "https://github.com/oauth2-proxy/oauth2-proxy"
-    },
-    "id": "89cf70f16fa29bbbaa854292287ce130c3c6de5a3551e69c51247522b463b064",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "icsharpcode/ILSpy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -599,18 +575,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "poteto/hiring-without-whiteboards",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "⭐️ Companies that don't have a broken hiring process",
-      "sourceUrl": "https://github.com/poteto/hiring-without-whiteboards"
-    },
-    "id": "b5d375a811b7a0603582be439ee08d2e331b4d9624b6ef7660ac801430b02114",
-    "status": "pending",
-    "createdAt": "2026-10-11T15:27:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "julyx10/lap",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -642,18 +606,6 @@
       "sourceUrl": "https://github.com/Alishahryar1/free-claude-code"
     },
     "id": "705f80cd97160edf5f2bc2dd90dcbcf4e2df9a43c7f358de855575f680badb40",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "BishopFox/sliver",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Adversary Emulation Framework",
-      "sourceUrl": "https://github.com/BishopFox/sliver"
-    },
-    "id": "c9c4a226a5af81d05302864ac00b4b5c295462e3a98f4650973f6e5832d7efe6",
     "status": "pending",
     "createdAt": "2026-10-12T20:19:06Z"
   },
@@ -898,18 +850,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "agalwood/Motrix",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A full-featured download manager.",
-      "sourceUrl": "https://github.com/agalwood/Motrix"
-    },
-    "id": "eb5f39d061ab5707a45e6759acb00068c393cb75a3d1c72c1a2df96b4a27f94b",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "eugenioenko/ttt",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -989,18 +929,6 @@
       "sourceUrl": "https://github.com/elie222/rakazo"
     },
     "id": "0511056688446943b4551352d53bfc97b70089062bfe40c7f79fc3b9a6d1a8fa",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/TRELLIS.2",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Native and Compact Structured Latents for 3D Generation",
-      "sourceUrl": "https://github.com/microsoft/TRELLIS.2"
-    },
-    "id": "ea2a35d68a2f467ab3f2db268a1f7804120c0e182a24b8f63279d2e4cd5a75a7",
     "status": "pending",
     "createdAt": "2026-10-17T14:14:10Z"
   },
@@ -1090,18 +1018,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "dbeaver/dbeaver",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free universal database tool and SQL client",
-      "sourceUrl": "https://github.com/dbeaver/dbeaver"
-    },
-    "id": "04340b3a6730acaf5072444cfd1e9cb7863b76e222b1f9079c05662c2a089b57",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "nextcloud/server",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1174,14 +1090,194 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "geode-sdk/geode",
+    "objectId": "CopilotKit/OpenIntelligentUI",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "The ultimate Geometry Dash modding framework",
-      "sourceUrl": "https://github.com/geode-sdk/geode"
+      "description": "Open-Source Generative UI Framework",
+      "sourceUrl": "https://github.com/CopilotKit/OpenIntelligentUI"
     },
-    "id": "27138c6285ba37dd6d1ced812627e1e66955bdd63e2243290f90806e20371391",
+    "id": "7e7e924845eac4f49c59d55401c4d77b25753ce619cb223bb12ff1902c3b7b90",
     "status": "pending",
-    "createdAt": "2026-10-18T08:07:08Z"
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Autumn-27/ScopeSentry",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ScopeSentry-Cyberspace mapping, subdomain enumeration, port scanning, sensitive information discovery, vulnerability scanning, distributed nodes",
+      "sourceUrl": "https://github.com/Autumn-27/ScopeSentry"
+    },
+    "id": "d15a6535da76f060081d8a2b57790c8070e97a4784d81f393ce98077fbed6929",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ran-j/PS2Recomp",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Playstation 2 Static Recompiler & Runtime Tool to make native PC ports",
+      "sourceUrl": "https://github.com/ran-j/PS2Recomp"
+    },
+    "id": "f0283b8b0874b74538debf9452c31ba75ac870dc3af8e1a6b042d67e6f61e7f6",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ShuhongLL/SGS-SLAM",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "[ECCV 2024] SGS-SLAM: Semantic Gaussian Splatting For Neural Dense SLAM",
+      "sourceUrl": "https://github.com/ShuhongLL/SGS-SLAM"
+    },
+    "id": "60dd44aec196a18a0a639a3e678eaff0bda9fe066e6904b8482a641d729117e7",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "AI4Finance-Foundation/FinRL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "FinRL®: Financial Reinforcement Learning. 🔥",
+      "sourceUrl": "https://github.com/AI4Finance-Foundation/FinRL"
+    },
+    "id": "dfdb1192aff861251021969502f591b4c004152ce131d778424c66bcc407c680",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "withmarbleapp/os-taxonomy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
+    },
+    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "plugin87/ux-ui-agent-skills",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Turn Claude into a senior design architect: DTCG tokens, 52 components, WCAG 2.2 AA-AAA, 138 design systems, any-framework code, and 50 objective gates that fail the build instead of faking success.",
+      "sourceUrl": "https://github.com/plugin87/ux-ui-agent-skills"
+    },
+    "id": "d8e24933ea6c7503440957f30f467cfaace00d3b371dbe0755ca839dc32e0ee3",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elysia395/dsh-wallpaper-engine",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "把本机 Wallpaper Engine 的壁纸搬进 DSH 网页界面：场景壁纸由内置 MIT 开源引擎 WebWallGL 实时 WebGL 渲染（粒子 / puppet 骨骼 / SceneScript / 音频反应 / 鼠标交互），失败自动降级内嵌 MP4 与场景静态帧；Web 壁纸严格沙箱 + WE API；iOS 风格液态玻璃 UI 高度自定义，遮挡暂停省电、ffmpeg 帧率上限转码、系统音频频谱与 Now Playing、自定义上传与自动轮播；设置存宿主端，对 agent 零 token 开销。Windows / macOS / Linux 三平台原生（同一个包、同一条命令）。",
+      "sourceUrl": "https://github.com/elysia395/dsh-wallpaper-engine"
+    },
+    "id": "ddf7833f7affd2fadb2adebadbcf5fa62131212028a6d86a22f831f5f4293edc",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "koharu-rs/koharu",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ML-powered manga translator, written in Rust.",
+      "sourceUrl": "https://github.com/koharu-rs/koharu"
+    },
+    "id": "d375bf1c58b07ef3f6a616324a774fdf451973374e63dc07255c727dfad0d9e9",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "apache/kafka",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Apache Kafka - A distributed event streaming platform",
+      "sourceUrl": "https://github.com/apache/kafka"
+    },
+    "id": "a87e3b0b983b23c4f57978e65c0387555be803581f942e8d6f80d97bcc306067",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hefengxian/my-ielts",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "雅思词汇真经、雅思语法、听力 179、阅读 538 同义替换等。Everything during preparing for my IELTS exam.",
+      "sourceUrl": "https://github.com/hefengxian/my-ielts"
+    },
+    "id": "2147472fa9378bcbb313ec3b4c6705564c14cce5c641dbbffa6315fc59216572",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "golang/go",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Go programming language",
+      "sourceUrl": "https://github.com/golang/go"
+    },
+    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Tianyu199509/DeskBox",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
+      "sourceUrl": "https://github.com/Tianyu199509/DeskBox"
+    },
+    "id": "8401b834e8d8ae5bba31d0980e591e3be0e1e591ec8d71f460296342bb67ede7",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rust-lang/rust",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "sourceUrl": "https://github.com/rust-lang/rust"
+    },
+    "id": "1a855e1f24fca2414d72b77b48df790bfdf98ecef7ca8e0a2067f53bf4faf1cd",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zerx-lab/FluxDown",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
+      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
+    },
+    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "juspay/hyperswitch",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source, composable payments platform | PCI compliant | SaaS and Self-host options | Enables connectivity to multiple payment, payout, fraud, vault and tokenization providers | Uplifts authorization with intelligent routing and revenue recovery | Reduce payment processing costs with cost observability | Reduces payment ops with reconciliation",
+      "sourceUrl": "https://github.com/juspay/hyperswitch"
+    },
+    "id": "c47ee985cabf095bbc6e3be19453740cbefb7d1a7661fdcf33dc5e0157090e36",
+    "status": "pending",
+    "createdAt": "2026-10-18T14:38:23Z"
   }
 ]
