@@ -184,11 +184,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
   },
-  "heartleo/zlib": {
-    "text": "Z-Library 命令行工具。支持搜索、下载、发送至 Kindle，并可集成 AI 智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
   "github/github-mcp-server": {
     "text": "GitHub 官方 MCP 服务器",
     "source": "deepseek-flash",
@@ -209,9 +204,9 @@
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
   },
-  "yyjeqhc/webcodex": {
-    "text": "让云端 AI 智能体在你自己的机器上获得真实开发环境。",
+  "SakanaAI/AI-Scientist": {
+    "text": "AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
     "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
+    "at": "2026-10-19T09:00:21Z"
   }
 }

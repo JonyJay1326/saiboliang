@@ -1,36 +1,6 @@
 {
-  "32165ee6af8945a5bd83e4231d3e052413905bc21e8455b93c147e03ace99490": {
-    "title": "将 GPT-Rosalind 引入学术研究实验室",
-    "summary": "推出 Rosalind 学术计划，为符合条件的学术实验室提供 GPT-Rosalind 的赞助访问权限及工具，以推进生命科学研究。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "ad09b0946a60b7ff505a8aa281960497bee4e76e2a76825472b127adf5a2ba1b": {
-    "title": "利用 Google Antigravity 加速抗菌肽搜索",
-    "summary": "利用 Google Antigravity for Science 加速新型抗菌肽的搜索。",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "6d42176d2f315f269ba0fe76ebd439ed1e2ddd036f96edaeff8fd6dc5d4b36e2": {
-    "title": "将 GitHub Code Quality 许可证使用情况下载为 CSV",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
-  "46e7cecee360222aa2134f6b5a5aab320a3b4dc78227039b2d01f33a05965242": {
-    "title": "见证开端：庆祝 NVIDIA RTX Spark 发布",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T08:16:01Z"
-  },
   "97665fd5758ad12c8193b0af75a83eb5b2b6f77890a6fabb6cfdeb3dff1bdfc7": {
     "title": "开源许可证合规功能正式发布",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
-  "1d717ea1f886632875385b7a32c4d5023f4b925db02807a06add91e7a157a8bf": {
-    "title": "Xcode 27 runner 镜像正式发布",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
@@ -41,22 +11,16 @@
     "source": "deepseek-flash",
     "at": "2026-10-17T07:52:24Z"
   },
-  "9e63539289a31c8631b61e2dab00ee4355731974576a94679adaae67ea1b4655": {
-    "title": "Stack Overflow for Agents 借助 ChatGPT 插件使注册量增至三倍",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-17T07:52:24Z"
-  },
-  "b6756c0a180ee554226c332b456c2b3fe634b3c508ea217138686c0c0ae92870": {
-    "title": "Benefit Street Partners 用 Codex 更快解答问题",
-    "summary": "Anant Kumar 构建工具比较贷款估值并分析信贷协议，使用 Codex 进行代码审查并加快后续跟进。",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T07:52:24Z"
-  },
   "3e1bb6f4d90247655c88e7e192bdc976c6fe870a7458c69d7b22b4dc75902bdf": {
     "title": "RTX Spark 随新款 Windows PC 上市，引发全球庆祝",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-18T08:07:08Z"
+  },
+  "a0595c813318ccae8c08950da5c942c92349612b84631a22de879ac40ef1f743": {
+    "title": "投资公共利益",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-19T09:00:21Z"
   }
 }

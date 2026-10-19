@@ -1279,5 +1279,39 @@
     "id": "c47ee985cabf095bbc6e3be19453740cbefb7d1a7661fdcf33dc5e0157090e36",
     "status": "pending",
     "createdAt": "2026-10-18T14:38:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "YuJunZhiXue/dsh-purge",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "sourceUrl": "https://github.com/YuJunZhiXue/dsh-purge"
+    },
+    "id": "ca924fe8519e4f2d04d01d30f85e32813f736fb4e316809a7780425bd951c52d",
+    "status": "pending",
+    "createdAt": "2026-10-19T09:00:21Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-19T09:00:21Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "b5bc584fd598d72123be54df2b8d45c7744d4e21a04655efd1d93683015e412b",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "b48f3a77048cf83a5172994fb229513db49d20051c8c1e6735669a8d83ec96d3",
+    "status": "pending",
+    "createdAt": "2026-10-19T09:00:21Z"
   }
 ]
