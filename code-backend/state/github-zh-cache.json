@@ -64,11 +64,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T15:27:47Z"
   },
-  "higgsfield-ai/higgsfield": {
-    "text": "容错、高可扩展的 GPU 编排，以及为训练数十亿至数万亿参数模型而设计的机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T15:27:47Z"
-  },
   "pytorch/pytorch": {
     "text": "使用 Python 的张量与动态神经网络，支持强大的 GPU 加速",
     "source": "deepseek-flash",
@@ -89,11 +84,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-13T18:21:53Z"
   },
-  "lharries/whatsapp-mcp": {
-    "text": "WhatsApp MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
   "ifixai-ai/iFixAi": {
     "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi 可在 120 秒内得到答案。",
     "source": "deepseek-flash",
@@ -106,11 +96,6 @@
   },
   "TencentCloud/TencentDB-Agent-Memory": {
     "text": "TencentDB Agent Memory 是面向 AI Agent 的团队级记忆中枢，将会话、文档和代码转化为四类可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph），实现跨 Agent 与框架的治理、共享和装配。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
-  "opendataloader-project/opendataloader-pdf": {
-    "text": "面向 AI 就绪数据的 PDF 解析器，自动化 PDF 无障碍处理，开源。",
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
@@ -139,11 +124,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
-  "KittenML/KittenTTS": {
-    "text": "开源的最先进 TTS 模型，可在 CPU 上运行 😻",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
-  },
   "HandsOnLLM/Hands-On-Large-Language-Models": {
     "text": "O'Reilly 图书《Hands-On Large Language Models》的官方代码仓库",
     "source": "deepseek-flash",
@@ -151,11 +131,6 @@
   },
   "alirezadir/AIMLInterviews": {
     "text": "生成式 AI、智能体 AI、多模态 AI、物理 AI 面试的综合指南。经证实可助你获得多个 FAANG offer 等的公式",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
-  },
-  "facebookresearch/segment-anything": {
-    "text": "该仓库提供使用 SegmentAnything 模型（SAM）进行推理的代码、预训练模型检查点的下载链接，以及展示如何使用该模型的示例 notebook。",
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
@@ -189,18 +164,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
   },
-  "devaccuracy/ledgerforge": {
-    "text": "面向 AI 原生资金流动的账本。开源复式记账账本，适用于钱包、付款、市场和计费，采用精确整数金额、可验证审计链、服务器强制的 AI 智能体支出限额与审批，并提供 MCP 服务器。Apache 2.0。",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
   "Crosstalk-Solutions/project-nomad": {
     "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在自有硬件上，无需互联网。",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
-  "NVIDIA/SkillSpector": {
-    "text": "AI 智能体技能安全扫描器。在安装前检测 Claude Code、Codex 和 MCP 技能中的漏洞、恶意模式、安全风险、提示注入、数据外泄和供应链风险。",
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
   },
@@ -208,5 +173,35 @@
     "text": "AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
     "source": "deepseek-flash",
     "at": "2026-10-19T09:00:21Z"
+  },
+  "akitaonrails/ai-memory": {
+    "text": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "Anil-matcha/Open-Generative-AI": {
+    "text": "无限制的开源 AI 视频平台替代方案，免费 AI 图像与视频生成工作室，支持 600+ 模型（Flux、Midjourney、Kling、Sora、Veo），无内容过滤，自托管，MIT 许可",
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "citrolabs/ego-lite": {
+    "text": "面向 AI agent 运行浏览器自动化的最快浏览器，可将已登录的浏览器状态共享给 Codex 或 Claude Code 等 AI agent，且不打扰用户，零成本、零配置",
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "livekit/livekit": {
+    "text": "连接人类与 AI 的端到端实时技术栈",
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "chiphuyen/aie-book": {
+    "text": "[WIP] AI 工程师资源，也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "google/ax": {
+    "text": "Agent Executor (AX) 是 Google 开源的 agent 编排运行时",
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
   }
 }

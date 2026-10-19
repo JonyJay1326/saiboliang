@@ -1,10 +1,4 @@
 {
-  "97665fd5758ad12c8193b0af75a83eb5b2b6f77890a6fabb6cfdeb3dff1bdfc7": {
-    "title": "开源许可证合规功能正式发布",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
   "9732b2763df5a67ab9455b8255aee23064fe436ed165bb52468ec0f54969accf": {
     "title": "Itaú 如何为其全部客户群构建生成式 AI",
     "summary": "通过对话式界面 ia.i 和治理平台 IARA，Itaú 在巴西监管最严的行业之一，将 AI First 战略应用于客户和员工。",
@@ -22,5 +16,29 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-19T09:00:21Z"
+  },
+  "e2d4eb78e4d1ad54ab94a287bb7077d8141b869ce4c670e9c3f49530a6983779": {
+    "title": "部分 Git over HTTPS 可能临时需要身份验证",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "3369221ba274f1a5ea8d43886bfae1d8065889baa7155160b5effc2a35f5241f": {
+    "title": "CodeQL 针对 macOS 27、Xcode 27 和 Swift 6.4 的变更",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "ca2be23ea0a1d60912dac1607485efeb3cddc416b547662fb8c79b563049e52b": {
+    "title": "NVIDIA 推进媒体代理式安全，从欧洲公共服务广播到全球内容生产",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
+  },
+  "3917e17d2e227fd7bd992241feb254f67e761f537b47a4679f318cbdbcaeddaa": {
+    "title": "保护代理式内部人员",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-19T17:31:30Z"
   }
 }
