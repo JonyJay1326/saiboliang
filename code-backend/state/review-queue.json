@@ -13,18 +13,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Open-Dev-Society/OpenStock",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
-      "sourceUrl": "https://github.com/Open-Dev-Society/OpenStock"
-    },
-    "id": "80d86b86328421d2fc3debed1c945bd8eae285299974ff2d69a055c1734dbf3e",
-    "status": "pending",
-    "createdAt": "2026-09-20T06:51:22Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/financial-services",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -362,17 +350,6 @@
     "createdAt": "2026-10-02T07:52:02Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "b207d93ee246121ad178af0aae186c66c8f452f0ad17f32d8b2d2779ccebec30",
-    "reason": "invalid feed item: unexpected news host",
-    "evidence": {
-      "source": "Microsoft Azure"
-    },
-    "id": "ae4edfe9ed7f711af83a8ea5bfa14419c240aaf4714ce52f413427a27169d747",
-    "status": "pending",
-    "createdAt": "2026-10-03T09:14:12Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "pingdotgg/t3code",
     "reason": "AI applicability uncertain",
@@ -453,18 +430,6 @@
       "sourceUrl": "https://github.com/earthtojake/text-to-cad"
     },
     "id": "5e240026e9bd5e198f54a337f9965865cffa468d5dec207bed8ef4b4e5a9d777",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "icsharpcode/ILSpy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": ".NET Decompiler with support for PDB generation, ReadyToRun, Metadata (&more) - cross-platform!",
-      "sourceUrl": "https://github.com/icsharpcode/ILSpy"
-    },
-    "id": "232558e96a99d8857227107f0c08637f4420420cd00989b54b75e556835a77b3",
     "status": "pending",
     "createdAt": "2026-10-07T17:50:43Z"
   },
@@ -598,18 +563,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Devolutions/UniGetUI",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
-      "sourceUrl": "https://github.com/Devolutions/UniGetUI"
-    },
-    "id": "522f84650360b38294ddff9498567f21c2e2ab877e087328b6367d3ff3d40095",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "storytold/artcraft",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -706,18 +659,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "eugenioenko/ttt",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "TTT Editor (Terminal Text Tool): A real alternative to VS Code, Zed, and Sublime that runs in your terminal. A TUI that feels like GUI. Single binary, zero config.",
-      "sourceUrl": "https://github.com/eugenioenko/ttt"
-    },
-    "id": "ae4c92e03ad88c2822f717da093bffe22c3b122ffe36230a9a03f6e72eae6f84",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "shadps4-emu/shadPS4",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -785,18 +726,6 @@
       "sourceUrl": "https://github.com/x64dbg/x64dbg"
     },
     "id": "ccb1740f383e483b3d01af2b428b50fa8679613c150aaeac927af5064ceae915",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "slskd/slskd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern client-server application for the Soulseek file sharing network.",
-      "sourceUrl": "https://github.com/slskd/slskd"
-    },
-    "id": "776078928be855a327883c85fe7e53e3c91e41aca766be1bb6482c673aa96e22",
     "status": "pending",
     "createdAt": "2026-10-17T14:14:10Z"
   },
@@ -898,18 +827,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "CopilotKit/OpenIntelligentUI",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open-Source Generative UI Framework",
-      "sourceUrl": "https://github.com/CopilotKit/OpenIntelligentUI"
-    },
-    "id": "7e7e924845eac4f49c59d55401c4d77b25753ce619cb223bb12ff1902c3b7b90",
-    "status": "pending",
-    "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Autumn-27/ScopeSentry",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -965,18 +882,6 @@
       "sourceUrl": "https://github.com/apache/kafka"
     },
     "id": "a87e3b0b983b23c4f57978e65c0387555be803581f942e8d6f80d97bcc306067",
-    "status": "pending",
-    "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hefengxian/my-ielts",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "雅思词汇真经、雅思语法、听力 179、阅读 538 同义替换等。Everything during preparing for my IELTS exam.",
-      "sourceUrl": "https://github.com/hefengxian/my-ielts"
-    },
-    "id": "2147472fa9378bcbb313ec3b4c6705564c14cce5c641dbbffa6315fc59216572",
     "status": "pending",
     "createdAt": "2026-10-18T14:38:23Z"
   },
@@ -1066,66 +971,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "NVIDIA/personaplex",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PersonaPlex code.",
-      "sourceUrl": "https://github.com/NVIDIA/personaplex"
-    },
-    "id": "2dab7691f7e3328f6d2de01737c7e41b807a714d41e8fb52eb40a82be281ec11",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "OpenBMB/MiniCPM-V",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "See, hear, and interact on your local devices.",
-      "sourceUrl": "https://github.com/OpenBMB/MiniCPM-V"
-    },
-    "id": "8bb75899f0d32f4fc71e0809c297f1cb5dcd30b48a4862018dbeadacd15c303d",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "lionsoul2014/ip2region",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Ip2region is an offline IP-to-Region localization library and IP data management framework with both IPv4 and IPv6 supports, 10-microsecond level query efficiency, xdb search client for many programming languages",
-      "sourceUrl": "https://github.com/lionsoul2014/ip2region"
-    },
-    "id": "48b352c9ff1d8520a26624d9a323ac9a6369cb8e8e34f4b854d1d4c96aae3fbf",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "geode-sdk/geode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The ultimate Geometry Dash modding framework",
-      "sourceUrl": "https://github.com/geode-sdk/geode"
-    },
-    "id": "27138c6285ba37dd6d1ced812627e1e66955bdd63e2243290f90806e20371391",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "chinese-poetry/chinese-poetry",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The most comprehensive database of Chinese poetry 🧶最全中华古诗词数据库, 唐宋两朝近一万四千古诗人, 接近5.5万首唐诗加26万宋诗. 两宋时期1564位词人，21050首词。",
-      "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry"
-    },
-    "id": "faa090de3ac98f12d6df8da04171979a43152301da57b964a63e7f7fef5c41da",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Sonarr/Sonarr",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1186,18 +1031,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "google-research/google-research",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Google Research",
-      "sourceUrl": "https://github.com/google-research/google-research"
-    },
-    "id": "fbd5a74e4f66aefc5a1a039a0f0d4df35d7d2728f92861ac294777fc2ea1aae1",
-    "status": "pending",
-    "createdAt": "2026-10-20T08:38:29Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "storytold/artcraftx",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1210,14 +1043,157 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "FreeTubeApp/FreeTube",
+    "objectId": "android/skills",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "An Open Source YouTube app for privacy",
-      "sourceUrl": "https://github.com/FreeTubeApp/FreeTube"
+      "description": null,
+      "sourceUrl": "https://github.com/android/skills"
     },
-    "id": "a948dda44957e02a942fc23e65feb2a6b856c4aa3dff1b56db2a878016a735b7",
+    "id": "a8243892068f93d3e1b7e41a70649120f4e646ee55f176133c27e80f96c83649",
     "status": "pending",
-    "createdAt": "2026-10-20T08:38:29Z"
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "golang/go",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Go programming language",
+      "sourceUrl": "https://github.com/golang/go"
+    },
+    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gitleaks/gitleaks",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find secrets with Gitleaks 🔑",
+      "sourceUrl": "https://github.com/gitleaks/gitleaks"
+    },
+    "id": "9ce077a47a6d978fb237d14f48b62047b6b0bc91427b25f06c4190f24fb85371",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "AI4Finance-Foundation/FinRL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "FinRL®: Financial Reinforcement Learning. 🔥",
+      "sourceUrl": "https://github.com/AI4Finance-Foundation/FinRL"
+    },
+    "id": "dfdb1192aff861251021969502f591b4c004152ce131d778424c66bcc407c680",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jackfrued/Python-100-Days",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Python - 100天从新手到大师",
+      "sourceUrl": "https://github.com/jackfrued/Python-100-Days"
+    },
+    "id": "20ef6185856bcb9f809cc4be61657928d5e4cfb39c8f1a685693f2e0cd08379a",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SirDiabo/GithubLauncher",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Launcher that Downloads and Updates Applications from Github Releases",
+      "sourceUrl": "https://github.com/SirDiabo/GithubLauncher"
+    },
+    "id": "35045c763abaaa15ce71fee464cd4d548a44457227d2caa3a6fc94738c7f3e8c",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vosen/ZLUDA",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "CUDA on non-NVIDIA GPUs",
+      "sourceUrl": "https://github.com/vosen/ZLUDA"
+    },
+    "id": "fed4e9c5e554d92a7389e47b81b0adf1a08d96694bd7b7593d89db96678c62ee",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ModernRelay/omnigraph",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Object-storage native graph database with branching and typed ontology",
+      "sourceUrl": "https://github.com/ModernRelay/omnigraph"
+    },
+    "id": "b0cfccf2d6ba8967ea1b10e818b4dd152c87ae13d3b1278830c4dff7611e07a9",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elastic/elasticsearch",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free and Open Source, Distributed, RESTful Search Engine",
+      "sourceUrl": "https://github.com/elastic/elasticsearch"
+    },
+    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "luolangaga/tubatools",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "这是图吧工具箱基于 WinUI 3 全新重构的版本，一款由社区驱动、深度契合 Windows 11 设计美学的现代化工具箱。它不仅确保你始终使用最新版本的工具，还集成了更加丰富的实用功能，更可满足高度自定义的个性化需求。",
+      "sourceUrl": "https://github.com/luolangaga/tubatools"
+    },
+    "id": "e5c20103900c8f2d75464a8894867f8b69faecfd73a4f453009c6b7e8ee12c5a",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zerx-lab/FluxDown",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
+      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
+    },
+    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "julyx10/lap",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An offline-first photo manager for large local libraries",
+      "sourceUrl": "https://github.com/julyx10/lap"
+    },
+    "id": "61db0f1bc02be13f7671f3c001e0b2ad5202056e4a99c496e1fccb2d33b7b0d1",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-20T15:40:23Z"
   }
 ]

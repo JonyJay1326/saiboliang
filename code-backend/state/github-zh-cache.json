@@ -54,25 +54,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
   },
-  "Bennettxai/FounderOS": {
-    "text": "开源单人企业指挥中心：以 AI 辅助部门（沟通、漏斗、社交、财务、智能体与知识图谱）在一个实时仪表盘中运营一人公司。",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
-  "microsoft/BitNet": {
-    "text": "面向 1-bit LLM 的官方推理框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T15:27:47Z"
-  },
   "pytorch/pytorch": {
     "text": "使用 Python 的张量与动态神经网络，支持强大的 GPU 加速",
     "source": "deepseek-flash",
     "at": "2026-10-12T10:58:57Z"
-  },
-  "BuilderIO/agent-native": {
-    "text": "用于构建智能体应用的框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-12T20:19:06Z"
   },
   "vxcontrol/pentagi": {
     "text": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
@@ -96,11 +81,6 @@
   },
   "TencentCloud/TencentDB-Agent-Memory": {
     "text": "TencentDB Agent Memory 是面向 AI Agent 的团队级记忆中枢，将会话、文档和代码转化为四类可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph），实现跨 Agent 与框架的治理、共享和装配。",
-    "source": "deepseek-flash",
-    "at": "2026-10-15T15:37:31Z"
-  },
-  "krillinai/OpenCreator": {
-    "text": "前身为 KrillinAI，视频翻译与配音工具。面向创作者的开源 AI 工作台，由 Codex 驱动。集视频下载、视频翻译、视频与图像生成、语音、数字人及 Agent 编辑于一体，适用于 YouTube、TikTok、Instagram 等社交媒体。",
     "source": "deepseek-flash",
     "at": "2026-10-15T15:37:31Z"
   },
@@ -129,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
-  "alirezadir/AIMLInterviews": {
-    "text": "生成式 AI、智能体 AI、多模态 AI、物理 AI 面试的综合指南。经证实可助你获得多个 FAANG offer 等的公式",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
-  },
   "Gaurav-Gosain/tuios": {
     "text": "一个了解你的智能体在做什么的终端窗口管理器。平铺窗格、工作区、可跨重启存活的会话，以及为每个编码智能体提供的统一收件箱。",
     "source": "deepseek-flash",
@@ -149,25 +124,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
   },
-  "SegFault42/HeliosGen": {
-    "text": "🏆 自托管生成式 AI 桌面应用。Higgsfield、OpenArt、Freepik 等的免费替代品……",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
   "github/github-mcp-server": {
     "text": "GitHub 官方 MCP 服务器",
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
-  },
-  "Crosstalk-Solutions/project-nomad": {
-    "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在自有硬件上，无需互联网。",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
-  "SakanaAI/AI-Scientist": {
-    "text": "AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
-    "source": "deepseek-flash",
-    "at": "2026-10-19T09:00:21Z"
   },
   "akitaonrails/ai-memory": {
     "text": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
@@ -184,11 +144,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "livekit/livekit": {
-    "text": "连接人类与 AI 的端到端实时技术栈",
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
   "chiphuyen/aie-book": {
     "text": "[WIP] AI 工程师资源，也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
     "source": "deepseek-flash",
@@ -198,5 +153,40 @@
     "text": "Agent Executor (AX) 是 Google 开源的 agent 编排运行时",
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
+  },
+  "Comfy-Org/ComfyUI": {
+    "text": "最强大且模块化的扩散模型 GUI、API 与后端，提供图/节点界面，号称全球最快的本地推理引擎。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "mixelpixx/Konnect": {
+    "text": "面向 KiCAD 10 的 AI 辅助 PCB 设计。原生 KiCAD 插件，单个 Rust 二进制文件，向 Claude 或自选 LLM 暴露 217 个原理图、布局、布线、布局摆放、设计审查与制造工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "KittenML/KittenTTS": {
+    "text": "开源的最先进 TTS 模型，可在 CPU 上运行 😻",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "abus-aikorea/voice-pro": {
+    "text": "面向创作者与开发者的 Gradio WebUI，包含 TTS（Edge-TTS、kokoro）与零样本声音克隆（E2 与 F5-TTS、CosyVoice），并支持 Whisper 音频处理、YouTube 下载、Demucs 人声分离与多语言翻译。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "kenn-io/agentsview": {
+    "text": "本地优先的编码智能体会话搜索、分析、洞察与 token 用量统计，支持 Claude Code、Codex 等 20 多个智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "strands-agents/harness-sdk": {
+    "text": "构建智能体 harness 并端到端控制。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript，任意模型、任意云。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "Asymptote-Labs/agent-beacon": {
+    "text": "跨 harness、可自我改进的 AI 智能体记忆层。加入社区：https://discord.com/invite/zdNChS2fBu",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
   }
 }

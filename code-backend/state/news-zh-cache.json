@@ -41,18 +41,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T08:38:29Z"
   },
-  "ed64890568349a4e14d91ffd8e643bd8a05416b13702fbabda324cb4063131f1": {
-    "title": "面向企业、组织和团队的 Copilot 模型策略 API",
-    "summary": "现在可以使用 REST API 获取和更新企业、企业团队、企业应用及组织的 Copilot 模型策略。新增内容：GET 和 PATCH 端点现已……",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
-  },
-  "c4d5caa9ca539eec6c7fc248d7b40e0f0fc432e08e9d42fb689c7282ee4593da": {
-    "title": "GitHub Copilot 模型于 2026 年 10 月 19 日弃用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
-  },
   "64133903258a4e47198443e89d74db85554fb63fcd6061891ffbb32199f5320a": {
     "title": "西班牙初创企业携手巴塞罗那超级计算中心推进区域创新",
     "summary": null,
@@ -71,10 +59,16 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T08:38:29Z"
   },
-  "749c72ec6fc3d966df789f12f6ee9164f2b6182fc0466dedc6ba7b35c488b85e": {
-    "title": "Together 后训练：前沿级模型塑造，按你的方式",
-    "summary": "通过 SFT 或 RL 将 Qwen、GLM 和 Kimi 等开源 LLM 后训练为你拥有的自定义模型。你编写训练循环，Together 运行复杂基础设施。",
+  "7141e953827233702b64bd306be7084cb0b711024357237f5a654f96c4ab259b": {
+    "title": "Dependabot 现支持 npm 12、pnpm 11 和 12 以及 Bun 1.4",
+    "summary": "现在可将项目升级至 npm 12、pnpm 11 或 12、Bun 1.4，并继续接收 Dependabot 更新。对这些包管理器版本的支持已面向…",
     "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
+    "at": "2026-10-20T15:40:23Z"
+  },
+  "5560f044cfefdcbe1e179759f20d9a897526cfe100bfc6a8b93f3efbeee2c620": {
+    "title": "为主权 AI 而设计：从边缘到云的共享基础",
+    "summary": "灵活的主权架构使组织能够将每个工作负载置于合适环境，应用其所需控制，并保持一致。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T15:40:23Z"
   }
 }
