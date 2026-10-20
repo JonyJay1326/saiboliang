@@ -1,10 +1,4 @@
 {
-  "9732b2763df5a67ab9455b8255aee23064fe436ed165bb52468ec0f54969accf": {
-    "title": "Itaú 如何为其全部客户群构建生成式 AI",
-    "summary": "通过对话式界面 ia.i 和治理平台 IARA，Itaú 在巴西监管最严的行业之一，将 AI First 战略应用于客户和员工。",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T07:52:24Z"
-  },
   "3e1bb6f4d90247655c88e7e192bdc976c6fe870a7458c69d7b22b4dc75902bdf": {
     "title": "RTX Spark 随新款 Windows PC 上市，引发全球庆祝",
     "summary": null,
@@ -40,5 +34,47 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
+  },
+  "1dbe22633003a2af4fddcdba3c780b2ba9f507be061699ce02dd407e5165c7ab": {
+    "title": "推进低资源编程语言中的编码能力",
+    "summary": "了解 OpenAI 如何改进 ChatGPT 在低资源编程语言中的表现，并新增软件工程、SQLite 和 COBOL 迁移评估。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
+  },
+  "ed64890568349a4e14d91ffd8e643bd8a05416b13702fbabda324cb4063131f1": {
+    "title": "面向企业、组织和团队的 Copilot 模型策略 API",
+    "summary": "现在可以使用 REST API 获取和更新企业、企业团队、企业应用及组织的 Copilot 模型策略。新增内容：GET 和 PATCH 端点现已……",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
+  },
+  "c4d5caa9ca539eec6c7fc248d7b40e0f0fc432e08e9d42fb689c7282ee4593da": {
+    "title": "GitHub Copilot 模型于 2026 年 10 月 19 日弃用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
+  },
+  "64133903258a4e47198443e89d74db85554fb63fcd6061891ffbb32199f5320a": {
+    "title": "西班牙初创企业携手巴塞罗那超级计算中心推进区域创新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
+  },
+  "494a9fa3bb713759384d4568eaa23736f9c1b16b8ba68c15d7b658e4e76b6d9c": {
+    "title": "德国欲引领全球工业 AI：NVIDIA 将如何助力",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
+  },
+  "af8f36dd9165773602fd1e9c4d814244cabdd9f0a820e5988d6e8bbb3c61469a": {
+    "title": "Clef 已在 Ollama 云平台上线",
+    "summary": "Cloudflare 的 27B 多模态决策模型 Clef 现已在 Ollama 上线。可在本地或 Ollama 云平台运行。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
+  },
+  "749c72ec6fc3d966df789f12f6ee9164f2b6182fc0466dedc6ba7b35c488b85e": {
+    "title": "Together 后训练：前沿级模型塑造，按你的方式",
+    "summary": "通过 SFT 或 RL 将 Qwen、GLM 和 Kimi 等开源 LLM 后训练为你拥有的自定义模型。你编写训练循环，Together 运行复杂基础设施。",
+    "source": "deepseek-flash",
+    "at": "2026-10-20T08:38:29Z"
   }
 }

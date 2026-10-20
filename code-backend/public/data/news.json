@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-19T17:31:30Z",
+  "dataUpdatedAt": "2026-10-20T08:38:29Z",
   "items": [
+    {
+      "title": "OpenCode 发布 v2.1.0",
+      "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.1.0",
+      "publishedAt": "2026-10-20T07:17:12Z",
+      "source": "OpenCode",
+      "summary": "开源编码代理 OpenCode 发布 v2.1.0，项目托管于 GitHub。",
+      "id": "ec43c24e115282b208dc4780cea55eb104257f0bfd5015e3177887888fa8f75e",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "OpenCode",
+      "originalUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.1.0",
+      "originalVerifiedAt": "2026-10-20T08:38:29Z",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.1.0",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-20T08:38:29Z",
+      "featured": true
+    },
+    {
+      "title": "面向企业、组织和团队的 Copilot 模型策略 API",
+      "sourceUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "publishedAt": "2026-10-19T21:32:18Z",
+      "source": "GitHub",
+      "summary": "现在可以使用 REST API 获取和更新企业、企业团队、企业应用及组织的 Copilot 模型策略。新增内容：GET 和 PATCH 端点现已……",
+      "id": "ed64890568349a4e14d91ffd8e643bd8a05416b13702fbabda324cb4063131f1",
+      "originalTitle": "Copilot model policy API for enterprise, orgs, and teams",
+      "translatedAt": "2026-10-20T08:38:29Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "originalVerifiedAt": "2026-10-20T08:38:29Z",
+      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-20T08:38:29Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot 模型于 2026 年 10 月 19 日弃用",
+      "sourceUrl": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "publishedAt": "2026-10-19T21:27:10Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot 于 2026 年 10 月 19 日弃用部分模型，涉及聊天、内联编辑与代码补全。",
+      "id": "c4d5caa9ca539eec6c7fc248d7b40e0f0fc432e08e9d42fb689c7282ee4593da",
+      "originalTitle": "GitHub Copilot models deprecated on October 19, 2026",
+      "translatedAt": "2026-10-20T08:38:29Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "originalVerifiedAt": "2026-10-20T08:38:29Z",
+      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "category": "industry",
+      "eventType": "service-retirement",
+      "addedAt": "2026-10-20T08:38:29Z",
+      "featured": true
+    },
     {
       "title": "正面硬刚DeepSeek！MiniMax M3.1 Flash发布，输出卷到200+TPS，价格砍到1/2",
       "sourceUrl": "https://zhidx.com/p/602354.html",
@@ -75,7 +132,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-19T17:31:30Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "MiniMax M3.1 Flash：重新定义 Agent 的性能与成本",
@@ -94,7 +151,26 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-10-19T17:31:30Z",
-      "featured": null
+      "featured": true
+    },
+    {
+      "title": "Together 后训练：前沿级模型塑造，按你的方式",
+      "sourceUrl": "https://www.together.ai/blog/together-post-training",
+      "publishedAt": "2026-10-19T00:00:00Z",
+      "source": "Together AI",
+      "summary": "通过 SFT 或 RL 将 Qwen、GLM 和 Kimi 等开源 LLM 后训练为你拥有的自定义模型。你编写训练循环，Together 运行复杂基础设施。",
+      "id": "749c72ec6fc3d966df789f12f6ee9164f2b6182fc0466dedc6ba7b35c488b85e",
+      "originalTitle": "Together Post-Training: frontier-grade model shaping, the way that fits you",
+      "translatedAt": "2026-10-20T08:38:29Z",
+      "lang": "en",
+      "originalSource": "Together AI",
+      "originalUrl": "https://www.together.ai/blog/together-post-training",
+      "originalVerifiedAt": "2026-10-20T08:38:29Z",
+      "url": "https://www.together.ai/blog/together-post-training",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-20T08:38:29Z",
+      "featured": true
     },
     {
       "title": "VAST开源实时世界模型EdenLive！单消费级显卡、720P超24FPS",
@@ -4448,6 +4524,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-19T17:31:30Z",
-  "generatedAt": "2026-10-19T17:31:30Z"
+  "version": "2026-10-20T08:38:29Z",
+  "generatedAt": "2026-10-20T08:38:29Z"
 }

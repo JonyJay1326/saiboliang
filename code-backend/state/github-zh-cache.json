@@ -139,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
-  "strands-agents/harness-sdk": {
-    "text": "构建智能体 harness 并端到端控制它。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript——任意模型、任意云。",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
-  },
   "NVIDIA/Model-Optimizer": {
     "text": "统一的 SOTA 模型优化技术库，包括量化、蒸馏、剪枝、神经架构搜索、推测解码等。它为 TensorRT-LLM、TensorRT、vLLM 等下游部署框架压缩深度学习模型，以优化推理速度。",
     "source": "deepseek-flash",

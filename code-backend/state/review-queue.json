@@ -586,18 +586,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "64365ce222318f4cb61ed2851b2db152ce0755a136af2af588b3ef89f873ea9e",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "gtsteffaniak/filebrowser",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -634,18 +622,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Lucas0623z/NoteLite",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open-source OMR and guided music practice: turn sheet music PDFs/images into MusicXML/MIDI, refine scores, and practice with MIDI or microphone feedback.",
-      "sourceUrl": "https://github.com/Lucas0623z/NoteLite"
-    },
-    "id": "4c4d6c4c34d0ae42c92dff34a94d4674561334d76f493f9b8ee7906e2128663e",
-    "status": "pending",
-    "createdAt": "2026-10-14T08:48:33Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "chthollyphile/folia-major",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -677,18 +653,6 @@
       "sourceUrl": "https://github.com/skylot/jadx"
     },
     "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "MoeKoeMusic/MoeKoeMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
-      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
-    },
-    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
     "status": "pending",
     "createdAt": "2026-10-14T15:50:52Z"
   },
@@ -785,18 +749,6 @@
       "sourceUrl": "https://github.com/PowerShell/PowerShell"
     },
     "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SakiRinn/LiveCaptions-Translator",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Lightweight and powerful real-time audio/speech translation tool based on Windows LiveCaptions.",
-      "sourceUrl": "https://github.com/SakiRinn/LiveCaptions-Translator"
-    },
-    "id": "7e9789fbd5683ebfbe802848c8617d7c70036f3c25399db966b2cf0269b289eb",
     "status": "pending",
     "createdAt": "2026-10-16T15:23:39Z"
   },
@@ -1065,17 +1017,6 @@
     "createdAt": "2026-10-19T09:00:21Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "b5bc584fd598d72123be54df2b8d45c7744d4e21a04655efd1d93683015e412b",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "b48f3a77048cf83a5172994fb229513db49d20051c8c1e6735669a8d83ec96d3",
-    "status": "pending",
-    "createdAt": "2026-10-19T09:00:21Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "LibreSpark/LibreTV",
     "reason": "AI applicability uncertain",
@@ -1218,5 +1159,65 @@
     "id": "04340b3a6730acaf5072444cfd1e9cb7863b76e222b1f9079c05662c2a089b57",
     "status": "pending",
     "createdAt": "2026-10-19T17:31:30Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
+    "status": "pending",
+    "createdAt": "2026-10-20T08:38:29Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Renhuai123/ziwei-doushu",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "sourceUrl": "https://github.com/Renhuai123/ziwei-doushu"
+    },
+    "id": "a7e29e0f37e5db40aea6d4a8d463d93add5ae6462b4da1049a241465dec5acbb",
+    "status": "pending",
+    "createdAt": "2026-10-20T08:38:29Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "google-research/google-research",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Google Research",
+      "sourceUrl": "https://github.com/google-research/google-research"
+    },
+    "id": "fbd5a74e4f66aefc5a1a039a0f0d4df35d7d2728f92861ac294777fc2ea1aae1",
+    "status": "pending",
+    "createdAt": "2026-10-20T08:38:29Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "storytold/artcraftx",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ArtCraft-X",
+      "sourceUrl": "https://github.com/storytold/artcraftx"
+    },
+    "id": "0c728c220c3e1dfc3ca034af7c71c5516f9fbeb22a1ffbc43340ff5edb85aa55",
+    "status": "pending",
+    "createdAt": "2026-10-20T08:38:29Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FreeTubeApp/FreeTube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An Open Source YouTube app for privacy",
+      "sourceUrl": "https://github.com/FreeTubeApp/FreeTube"
+    },
+    "id": "a948dda44957e02a942fc23e65feb2a6b856c4aa3dff1b56db2a878016a735b7",
+    "status": "pending",
+    "createdAt": "2026-10-20T08:38:29Z"
   }
 ]

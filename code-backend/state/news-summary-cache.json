@@ -1,12 +1,12 @@
 {
-  "a39e7daa0f724775f4e445c126e8364e0f8eec861d96c0c2efc1db8b7486393b": {
-    "summary": "Cloud agents 可构建并分享交互式画布，Environments API 进入测试，支持300个仓库，加载快5倍。",
+  "ec43c24e115282b208dc4780cea55eb104257f0bfd5015e3177887888fa8f75e": {
+    "summary": "开源编码代理 OpenCode 发布 v2.1.0，项目托管于 GitHub。",
     "source": "deepseek-flash",
-    "at": "2026-10-17T07:52:24Z"
+    "at": "2026-10-20T08:38:29Z"
   },
-  "bed122782e163a9e3e19093e3cbbd60b615aa2c8b67b0bb1533674d4f16eca42": {
-    "summary": "Meta 开源权重智能体编程模型 Muse Spark Open 上线 Together AI，支持100万 token 上下文。",
+  "c4d5caa9ca539eec6c7fc248d7b40e0f0fc432e08e9d42fb689c7282ee4593da": {
+    "summary": "GitHub Copilot 于 2026 年 10 月 19 日弃用部分模型，涉及聊天、内联编辑与代码补全。",
     "source": "deepseek-flash",
-    "at": "2026-10-17T07:52:24Z"
+    "at": "2026-10-20T08:38:29Z"
   }
 }
