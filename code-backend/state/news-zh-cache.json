@@ -53,12 +53,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
   },
-  "5560f044cfefdcbe1e179759f20d9a897526cfe100bfc6a8b93f3efbeee2c620": {
-    "title": "为主权 AI 而设计：从边缘到云的共享基础",
-    "summary": "灵活的主权架构使组织能够将每个工作负载置于合适环境，应用其所需控制，并保持一致。",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
   "0de9428d3548b15fe7f408cf6f3a0552080edb6ebb36dafc40bcdfbad09e5fb1": {
     "title": "使用 Grok Bot 检测并响应事件",
     "summary": "IncidentWatch 在内部告警触发前发现工单激增。IncidentSweep 在获批批次中清理相关积压。",
@@ -112,5 +106,101 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-21T08:39:45Z"
+  },
+  "95dedf578de78f3ec264f66e37a7c309d1f2cf3d8987fe8b4de9182187d1ff7b": {
+    "title": "OpenAI 模型即将登陆 Google Cloud",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "de9db6f384cbc788775550a92a01be7699e7a41c8058849be39721a76c544e4d": {
+    "title": "Patch the Planet：智能体发现关键漏洞时的全球响应协调",
+    "summary": "Patch the Planet 连接安全研究人员、维护者和事件响应人员，帮助应对开源领域的关键漏洞。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "b1215e1aefc04c61e203617a80fd84e7760e29072f8e8c5c2b0a50c22fe019fd": {
+    "title": "ChatGPT Ads 扩展至 26 个新国家，已有超过 10 万广告主使用该平台",
+    "summary": "从本地商家到全球品牌，更多广告主现在可以在用户于 ChatGPT 中探索、比较和决定购买时触达他们。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "64ddfb139fec8a1cb4597ec213ad7265ff7b827324c2efbb180615bde9f68d90": {
+    "title": "利用数千个 AI 智能体在生物数据中发现新线索",
+    "summary": "了解 OpenAI、PerturbAI 和 Scripps Research 如何利用分布式 AI 智能体，在数百万脑细胞数据中发现有前景的研究线索。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "ea92da5c121ecb4527027c2b13ff73af702f93ebcad0444b648bb527336561d3": {
+    "title": "我们如何为 ChatGPT 构建兼顾用户信任与相关性的新型广告系统",
+    "summary": "了解 OpenAI 如何构建由 LLM 驱动的 ChatGPT 广告系统，以理解对话意图、将广告与回答分离，并大规模投放相关广告。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "8722385c6c33a84607c373d61347af5cf6968103da45281c21700e65a0de7106": {
+    "title": "将 Spark 带到欧洲：本地智能驱动下一代智能体",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "12c1cb38a75e4a7b39f06f011c38aab729ca5a61ab42931c30dcc6539f2bbe67": {
+    "title": "Google Cloud 与 NVIDIA 宣布 NVIDIA Vera Rubin 基础设施正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "804d4d957ec690829705fd256bb1f5d7185145e7893ec5730026a6f654bdd6ca": {
+    "title": "NVIDIA 云合作伙伴在欧洲扩张——主权、开放，并为安全 AI 智能体而构建",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "86185ff09c24ae9f959f9d298aa36c00dfd13b30729142e7cd673ad6999a7e9e": {
+    "title": "欧洲工业领军企业借助 NVIDIA 重塑工程与制造",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "b2b697f42a42e82a601063bb3668032f42d040054a331263c3462bca19924687": {
+    "title": "NVIDIA cuDSS 正式可用，加速工程与科学仿真",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "f2380296be9197f119101834db0dc44444968219f2fc8bafceb9e6329e1334f3": {
+    "title": "NVIDIA 机密计算扩展，助力前沿模型构建者在全球基础设施上安全扩展",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "09d942bb1aad0976da416aa639f2750fcaf152cc81cd37f560def1c9203e7c58": {
+    "title": "NVIDIA Agent Toolkit 扩展，将企业智能体扎根于公司数据",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "d46c8940730c093aa2d055afbb383ce53acb6e873fd442b25d5e12a705ddd2d0": {
+    "title": "NVIDIA 开放模型推动欧洲各行业主权智能发展",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "db3718abbfc4c7d4e28326478b9f515ce9a8b12f495b73978d77abde4ef7d825": {
+    "title": "GTC Berlin 2026：NVIDIA CEO 黄仁勋主题演讲实时更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "c582a39d486e86676aaa5f925ac457c13849c935464575ecbf2dd8d3b003f9f9": {
+    "title": "欧洲领军企业采用 NVIDIA Vera CPU 构建本地基础设施",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
+  },
+  "6bf82841932d223c2d1081b7fdd29441230367b23dab71a0f97eb25ab631113c": {
+    "title": "Mistral 与 NVIDIA 推进工程领域 AI 发展",
+    "summary": "Mistral 正与 NVIDIA 合作，基于 NVIDIA 加速计算开发新一代 AI 原生工程工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T15:58:55Z"
   }
 }

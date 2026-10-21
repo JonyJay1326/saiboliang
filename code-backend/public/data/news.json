@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-21T08:39:45Z",
+  "dataUpdatedAt": "2026-10-21T15:58:55Z",
   "items": [
+    {
+      "title": "OpenAI 模型即将登陆 Google Cloud",
+      "sourceUrl": "https://openai.com/index/openai-models-google-cloud",
+      "publishedAt": "2026-10-21T12:00:00Z",
+      "source": "OpenAI",
+      "summary": null,
+      "id": "95dedf578de78f3ec264f66e37a7c309d1f2cf3d8987fe8b4de9182187d1ff7b",
+      "originalTitle": "OpenAI models are coming to Google Cloud",
+      "translatedAt": "2026-10-21T15:58:55Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/openai-models-google-cloud",
+      "originalVerifiedAt": "2026-10-21T15:58:55Z",
+      "url": "https://openai.com/index/openai-models-google-cloud",
+      "category": "industry",
+      "eventType": "upcoming",
+      "addedAt": "2026-10-21T15:58:55Z",
+      "featured": true
+    },
     {
       "title": "永久保留缓存！OpenAI重磅更新，比DeepSeek还久？",
       "sourceUrl": "https://zhidx.com/p/602861.html",
@@ -19,6 +38,25 @@
       "eventType": "major-update",
       "addedAt": "2026-10-21T08:39:45Z",
       "featured": true
+    },
+    {
+      "title": "Patch the Planet：智能体发现关键漏洞时的全球响应协调",
+      "sourceUrl": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "publishedAt": "2026-10-21T07:00:00Z",
+      "source": "OpenAI",
+      "summary": "Patch the Planet 连接安全研究人员、维护者和事件响应人员，帮助应对开源领域的关键漏洞。",
+      "id": "de9db6f384cbc788775550a92a01be7699e7a41c8058849be39721a76c544e4d",
+      "originalTitle": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+      "translatedAt": "2026-10-21T15:58:55Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "originalVerifiedAt": "2026-10-21T15:58:55Z",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "category": "industry",
+      "eventType": "security-risk",
+      "addedAt": "2026-10-21T15:58:55Z",
+      "featured": null
     },
     {
       "title": "ManageEngine卓豪发布30+智能体，零Token使用成本，用于自主IT运维",
@@ -56,7 +94,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-21T08:39:45Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Command Code 发布 v0.2.4",
@@ -4638,6 +4676,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-21T08:39:45Z",
-  "generatedAt": "2026-10-21T08:39:45Z"
+  "version": "2026-10-21T15:58:55Z",
+  "generatedAt": "2026-10-21T15:58:55Z"
 }

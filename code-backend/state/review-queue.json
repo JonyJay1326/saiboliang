@@ -516,18 +516,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Alishahryar1/free-claude-code",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
-      "sourceUrl": "https://github.com/Alishahryar1/free-claude-code"
-    },
-    "id": "705f80cd97160edf5f2bc2dd90dcbcf4e2df9a43c7f358de855575f680badb40",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/CLI-Anything",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -548,18 +536,6 @@
     "id": "841648960dd6f352b380b87711bd9754c10d7795418f42255c3f19028df7e784",
     "status": "pending",
     "createdAt": "2026-10-13T10:43:04Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "gtsteffaniak/filebrowser",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "📂 Web File Browser",
-      "sourceUrl": "https://github.com/gtsteffaniak/filebrowser"
-    },
-    "id": "76352fe797faafed356de53fdc75d565fa7e9c28ab2572256d65dcffc64ccd0b",
-    "status": "pending",
-    "createdAt": "2026-10-13T18:21:53Z"
   },
   {
     "kind": "github-classification",
@@ -608,18 +584,6 @@
     "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
     "status": "pending",
     "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google/agentmesh",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Agent Mesh",
-      "sourceUrl": "https://github.com/google/agentmesh"
-    },
-    "id": "dc7fdd2f9ff879d630d8f57952b22680a9b432779f946dcd2731a36d850cfa98",
-    "status": "pending",
-    "createdAt": "2026-10-15T15:37:31Z"
   },
   {
     "kind": "github-classification",
@@ -719,18 +683,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "x64dbg/x64dbg",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An open-source user mode debugger for Windows. Optimized for reverse engineering and malware analysis.",
-      "sourceUrl": "https://github.com/x64dbg/x64dbg"
-    },
-    "id": "ccb1740f383e483b3d01af2b428b50fa8679613c150aaeac927af5064ceae915",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "bitwarden/server",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -762,18 +714,6 @@
       "sourceUrl": "https://github.com/AbdurazaaqMohammed/MP-Manager"
     },
     "id": "e197a7de4eb90058f4c54e2492dadf7907475233a1e7c5770abaa85a786db11b",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
     "status": "pending",
     "createdAt": "2026-10-17T14:14:10Z"
   },
@@ -815,18 +755,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "corrinehu/dsh-workbuddy-connect",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "将 WorkBuddy 桌面 App 包含的模型自动接入 DeepSeek Harness，零配置使用。Bring the models in the WorkBuddy desktop app into DeepSeek Harness with zero configuration.",
-      "sourceUrl": "https://github.com/corrinehu/dsh-workbuddy-connect"
-    },
-    "id": "756cb07f1bbfacbccb3921f34bc0637b4c4cacbe699b1c833a498273e024f0f7",
-    "status": "pending",
-    "createdAt": "2026-10-18T08:07:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Autumn-27/ScopeSentry",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -858,18 +786,6 @@
       "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
     },
     "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
-    "status": "pending",
-    "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "plugin87/ux-ui-agent-skills",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Turn Claude into a senior design architect: DTCG tokens, 52 components, WCAG 2.2 AA-AAA, 138 design systems, any-framework code, and 50 objective gates that fail the build instead of faking success.",
-      "sourceUrl": "https://github.com/plugin87/ux-ui-agent-skills"
-    },
-    "id": "d8e24933ea6c7503440957f30f467cfaace00d3b371dbe0755ca839dc32e0ee3",
     "status": "pending",
     "createdAt": "2026-10-18T14:38:23Z"
   },
@@ -1019,18 +935,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "storytold/artcraftx",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ArtCraft-X",
-      "sourceUrl": "https://github.com/storytold/artcraftx"
-    },
-    "id": "0c728c220c3e1dfc3ca034af7c71c5516f9fbeb22a1ffbc43340ff5edb85aa55",
-    "status": "pending",
-    "createdAt": "2026-10-20T08:38:29Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "android/skills",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1103,18 +1007,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "vosen/ZLUDA",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "CUDA on non-NVIDIA GPUs",
-      "sourceUrl": "https://github.com/vosen/ZLUDA"
-    },
-    "id": "fed4e9c5e554d92a7389e47b81b0adf1a08d96694bd7b7593d89db96678c62ee",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ModernRelay/omnigraph",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1122,18 +1014,6 @@
       "sourceUrl": "https://github.com/ModernRelay/omnigraph"
     },
     "id": "b0cfccf2d6ba8967ea1b10e818b4dd152c87ae13d3b1278830c4dff7611e07a9",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "elastic/elasticsearch",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free and Open Source, Distributed, RESTful Search Engine",
-      "sourceUrl": "https://github.com/elastic/elasticsearch"
-    },
-    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
     "status": "pending",
     "createdAt": "2026-10-20T15:40:23Z"
   },
@@ -1174,17 +1054,6 @@
     "createdAt": "2026-10-20T15:40:23Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
-    "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
-    },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "geode-sdk/geode",
     "reason": "AI applicability uncertain",
@@ -1193,18 +1062,6 @@
       "sourceUrl": "https://github.com/geode-sdk/geode"
     },
     "id": "27138c6285ba37dd6d1ced812627e1e66955bdd63e2243290f90806e20371391",
-    "status": "pending",
-    "createdAt": "2026-10-21T08:39:45Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "juce-framework/JUCE",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "JUCE is an open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, LV2 and AAX audio plug-ins.",
-      "sourceUrl": "https://github.com/juce-framework/JUCE"
-    },
-    "id": "a520e5d9416b03b579a2fa75b116df7d6b0473483b458280db0e15c9c7dca0be",
     "status": "pending",
     "createdAt": "2026-10-21T08:39:45Z"
   },
@@ -1304,14 +1161,230 @@
     "createdAt": "2026-10-21T08:39:45Z"
   },
   {
+    "kind": "github-classification",
+    "objectId": "yt-dlp/yt-dlp",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A feature-rich command-line audio/video downloader",
+      "sourceUrl": "https://github.com/yt-dlp/yt-dlp"
+    },
+    "id": "36b56a8f95945009f0e161f63cd31b33e5feb5f1f3ddc6a511fab2e4721992d1",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "superplanehq/superplane",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source factory for one-shot engineering",
+      "sourceUrl": "https://github.com/superplanehq/superplane"
+    },
+    "id": "010345c845daa27bbf7db95a9dc28c88dcb64272c155dd4793ddad33f3a302b2",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailscale",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The easiest, most secure way to use WireGuard and 2FA.",
+      "sourceUrl": "https://github.com/tailscale/tailscale"
+    },
+    "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gin-gonic/gin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.",
+      "sourceUrl": "https://github.com/gin-gonic/gin"
+    },
+    "id": "ea0b284c7b53fabe5931bbeeef48932df47bba2eb28a3aa29b8729d416c84521",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "lionsoul2014/ip2region",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Ip2region is an offline IP-to-Region localization library and IP data management framework with both IPv4 and IPv6 supports, 10-microsecond level query efficiency, xdb search client for many programming languages",
+      "sourceUrl": "https://github.com/lionsoul2014/ip2region"
+    },
+    "id": "48b352c9ff1d8520a26624d9a323ac9a6369cb8e8e34f4b854d1d4c96aae3fbf",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hashicorp/terraform",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+      "sourceUrl": "https://github.com/hashicorp/terraform"
+    },
+    "id": "c4c261396e857dc9deb2a2b42882f275e1f935f98e991bca556bd3d71bc6135b",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PCL-Community/PCL-CE",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PCL 社区版 由社区开发者维护与管理",
+      "sourceUrl": "https://github.com/PCL-Community/PCL-CE"
+    },
+    "id": "cbbac3041ea4b50a35d7dba2b6bff7237bfe72ce482550d9b72b9272e501c09a",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Unity-Technologies/unity-agent-plugin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Unity plugin for third-party agent platforms",
+      "sourceUrl": "https://github.com/Unity-Technologies/unity-agent-plugin"
+    },
+    "id": "cfad2d8cb90281da89e50d2eaa0aaab750c7a99cb8eb05773644564471d21a7f",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ShareX/ShareX",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
+      "sourceUrl": "https://github.com/ShareX/ShareX"
+    },
+    "id": "9cbee9e42167b945e2c4ee970e2fd66a622a75516d23380f1f4e0ffeef78b15b",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Tichau/FileConverter",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "File Converter is a very simple tool which allows you to convert and compress files using the context menu in windows explorer.",
+      "sourceUrl": "https://github.com/Tichau/FileConverter"
+    },
+    "id": "1dab75618b38642b654586ccfa9465b7fa3fd185c226031a7e0bd68dc4996e25",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "oven-sh/bun",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+      "sourceUrl": "https://github.com/oven-sh/bun"
+    },
+    "id": "20c58dd10cf02a9a7fb36479256c4fe8291d97720189d1ee9099771661d3af0d",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "GCWing/OpenBitFun",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
+      "sourceUrl": "https://github.com/GCWing/OpenBitFun"
+    },
+    "id": "139af102b622448f180fb2484749b451b6a3b24d54787bb1bd9e1d33a7e21bf4",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "koharu-rs/koharu",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ML-powered manga translator, written in Rust.",
+      "sourceUrl": "https://github.com/koharu-rs/koharu"
+    },
+    "id": "d375bf1c58b07ef3f6a616324a774fdf451973374e63dc07255c727dfad0d9e9",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HMCL-dev/HMCL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular",
+      "sourceUrl": "https://github.com/HMCL-dev/HMCL"
+    },
+    "id": "b2c349b20f895a33d56c53f485798b1e818664ee798742631e54a0199003dcf1",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ReSo7200/InstaEclipse",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An Instagram Xposed module with features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode.",
+      "sourceUrl": "https://github.com/ReSo7200/InstaEclipse"
+    },
+    "id": "eced9d6a382da4a54590e81fd6f3ea31c4bc668b46d281f87362c201c5370c83",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FCL-Team/FoldCraftLauncher",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fold Craft Launcher, an Android Minecraft : Java Edition launcher.",
+      "sourceUrl": "https://github.com/FCL-Team/FoldCraftLauncher"
+    },
+    "id": "920690bcba7baa1ea3ce18a1554dfdf3050460884cbc0ee792506ba60c7242de",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/playwright",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",
+      "sourceUrl": "https://github.com/microsoft/playwright"
+    },
+    "id": "2119c5b25ff95142a30faadfb1d020637f10af62190c243b236019db7dcd4850",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Pumpkin-MC/Pumpkin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Empowering everyone to host fast and efficient Minecraft servers",
+      "sourceUrl": "https://github.com/Pumpkin-MC/Pumpkin"
+    },
+    "id": "2ffc284b0c1432646e136019c61897861a4c2db0af8c92ea3587ecabee20202d",
+    "status": "pending",
+    "createdAt": "2026-10-21T15:58:55Z"
+  },
+  {
     "kind": "news-item",
-    "objectId": "02ab68be675b3bf67984aadc2776a5827ddbd419baae861c23d6f5717069a91a",
+    "objectId": "b207d93ee246121ad178af0aae186c66c8f452f0ad17f32d8b2d2779ccebec30",
     "reason": "invalid feed item: unexpected news host",
     "evidence": {
       "source": "Microsoft Azure"
     },
-    "id": "4e07e53fa5d89f40501846f1f657174af723e1ae1e3a16810c291f07b1045423",
+    "id": "ae4edfe9ed7f711af83a8ea5bfa14419c240aaf4714ce52f413427a27169d747",
     "status": "pending",
-    "createdAt": "2026-10-21T08:39:45Z"
+    "createdAt": "2026-10-21T15:58:55Z"
   }
 ]
