@@ -188,5 +188,10 @@
     "text": "跨 harness、可自我改进的 AI 智能体记忆层。加入社区：https://discord.com/invite/zdNChS2fBu",
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
+  },
+  "alirezadir/AIMLInterviews": {
+    "text": "生成式AI、智能体AI、多模态AI、物理AI面试综合指南，含多次获得FAANG等offer的验证公式。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
   }
 }

@@ -911,18 +911,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "YuJunZhiXue/dsh-purge",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
-      "sourceUrl": "https://github.com/YuJunZhiXue/dsh-purge"
-    },
-    "id": "ca924fe8519e4f2d04d01d30f85e32813f736fb4e316809a7780425bd951c52d",
-    "status": "pending",
-    "createdAt": "2026-10-19T09:00:21Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "LibreSpark/LibreTV",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1195,5 +1183,135 @@
     "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
     "createdAt": "2026-10-20T15:40:23Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "geode-sdk/geode",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The ultimate Geometry Dash modding framework",
+      "sourceUrl": "https://github.com/geode-sdk/geode"
+    },
+    "id": "27138c6285ba37dd6d1ced812627e1e66955bdd63e2243290f90806e20371391",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "juce-framework/JUCE",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "JUCE is an open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, LV2 and AAX audio plug-ins.",
+      "sourceUrl": "https://github.com/juce-framework/JUCE"
+    },
+    "id": "a520e5d9416b03b579a2fa75b116df7d6b0473483b458280db0e15c9c7dca0be",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zeldaret/botw",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Decompilation of The Legend of Zelda: Breath of the Wild (Switch 1.5.0)",
+      "sourceUrl": "https://github.com/zeldaret/botw"
+    },
+    "id": "1d6b8046b06d723e75ce18d22e57148d78c31904abc504795589f62d2a5d5be5",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "google-research/google-research",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Google Research",
+      "sourceUrl": "https://github.com/google-research/google-research"
+    },
+    "id": "fbd5a74e4f66aefc5a1a039a0f0d4df35d7d2728f92861ac294777fc2ea1aae1",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "slskd/slskd",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A modern client-server application for the Soulseek file sharing network.",
+      "sourceUrl": "https://github.com/slskd/slskd"
+    },
+    "id": "776078928be855a327883c85fe7e53e3c91e41aca766be1bb6482c673aa96e22",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "JosefNemec/Playnite",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Video game library manager with support for wide range of 3rd party libraries and game emulation support, providing one unified interface for your games.",
+      "sourceUrl": "https://github.com/JosefNemec/Playnite"
+    },
+    "id": "b60d1f390e35d82d9603e3c41fd7c2e470598c2b6009c008db6a64028057d353",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FreeTubeApp/FreeTube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An Open Source YouTube app for privacy",
+      "sourceUrl": "https://github.com/FreeTubeApp/FreeTube"
+    },
+    "id": "a948dda44957e02a942fc23e65feb2a6b856c4aa3dff1b56db2a878016a735b7",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algerkong/AlgerMusicPlayer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
+    },
+    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kubernetes/kubernetes",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Production-Grade Container Scheduling and Management",
+      "sourceUrl": "https://github.com/kubernetes/kubernetes"
+    },
+    "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "anthropic",
+    "reason": "Anthropic news list missing or restructured",
+    "evidence": {
+      "url": "https://www.anthropic.com/news"
+    },
+    "id": "edae939974b798837011f4b3647e38b877386c462bdd97120fafc789fe0c05ed",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "02ab68be675b3bf67984aadc2776a5827ddbd419baae861c23d6f5717069a91a",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "4e07e53fa5d89f40501846f1f657174af723e1ae1e3a16810c291f07b1045423",
+    "status": "pending",
+    "createdAt": "2026-10-21T08:39:45Z"
   }
 ]

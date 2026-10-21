@@ -1,16 +1,4 @@
 {
-  "3e1bb6f4d90247655c88e7e192bdc976c6fe870a7458c69d7b22b4dc75902bdf": {
-    "title": "RTX Spark 随新款 Windows PC 上市，引发全球庆祝",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-18T08:07:08Z"
-  },
-  "a0595c813318ccae8c08950da5c942c92349612b84631a22de879ac40ef1f743": {
-    "title": "投资公共利益",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-19T09:00:21Z"
-  },
   "e2d4eb78e4d1ad54ab94a287bb7077d8141b869ce4c670e9c3f49530a6983779": {
     "title": "部分 Git over HTTPS 可能临时需要身份验证",
     "summary": null,
@@ -70,5 +58,59 @@
     "summary": "灵活的主权架构使组织能够将每个工作负载置于合适环境，应用其所需控制，并保持一致。",
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
+  },
+  "0de9428d3548b15fe7f408cf6f3a0552080edb6ebb36dafc40bcdfbad09e5fb1": {
+    "title": "使用 Grok Bot 检测并响应事件",
+    "summary": "IncidentWatch 在内部告警触发前发现工单激增。IncidentSweep 在获批批次中清理相关积压。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "1725d137aa3debc0d8ae9b76a5f8f5fc192130afd14f5151c2319be05f1a5dd1": {
+    "title": "加盟商借助 ChatGPT Work 将现金对账时间缩短 94%",
+    "summary": "一位独立经营 Schlotzsky’s 和 Cinnabon 的加盟商将菜单重新定价时间缩短 95%，并构建了可释放 10 万美元现金流的工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "aa8847d44cbae3328f3c5cbb65bcffcd3b77355e99faf584c20aa718f2bc61fa": {
+    "title": "Terminal X 借助 GPT-6.1 实现 88.6% 的资深投资者判断匹配度",
+    "summary": "Terminal X 的 Eval Agent 依据 54 项标准评分，借助 GPT-6.1 Sol 多发现 25% 偏离基金授权的情况。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "1cfb6291fa158d05a5bad0e638547e0ff07dabd8e5700299a43b136146616242": {
+    "title": "OpenAI 收购 Orchestra Bio",
+    "summary": "OpenAI 收购 Orchestra Bio，将 AI 驱动的运营引入生命科学研发，帮助生物制药团队加速药物开发并推进新疗法。",
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "c7c1db1d24f97b16930900ba1c0155d84b4c693e69bc12e1dd92023bb46f0906": {
+    "title": "东南亚数字经济规模将达 3680 亿美元",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "e1fe9bf84ec496533db1692e454b153274fb04b32daa0353825176df7d20532c": {
+    "title": "为仓库批量将分支保护迁移至规则集",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "f0d3b9acbd57e8c0d05de2a373c8c9996945be06ffd76a8674ecc296d09df6a9": {
+    "title": "GitHub 机密扫描更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "bf4b6adc360d09f0286a39acffd73c8a8551fc1a39bd27222cbca61e1d918606": {
+    "title": "Dependabot 告警 REST API 现包含依赖版本",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
+  },
+  "d2f4c2d99fe6839a31691d16458e99d7db75f9e67beee8c52beb81e9c181f477": {
+    "title": "GitHub 包防火墙进入公开预览",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-21T08:39:45Z"
   }
 }
