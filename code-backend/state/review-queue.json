@@ -587,18 +587,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "michael-denyer/pstack-claude",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
-    },
-    "id": "9b3f19139a3be89a8c483b594006fac051d8a35ca30b8e321d344f46719d65a6",
-    "status": "pending",
-    "createdAt": "2026-10-16T08:16:01Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Minglink/dsh-infinite-gen-5",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1246,18 +1234,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Unity-Technologies/unity-agent-plugin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Unity plugin for third-party agent platforms",
-      "sourceUrl": "https://github.com/Unity-Technologies/unity-agent-plugin"
-    },
-    "id": "cfad2d8cb90281da89e50d2eaa0aaab750c7a99cb8eb05773644564471d21a7f",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ShareX/ShareX",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1377,14 +1353,50 @@
     "createdAt": "2026-10-21T15:58:55Z"
   },
   {
+    "kind": "github-classification",
+    "objectId": "michael-denyer/pstack-claude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Muse, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+    },
+    "id": "f03d1d5aa90f80166e8fbfa51c58073d0c5ed59e73407562a5fcdb43745159ab",
+    "status": "pending",
+    "createdAt": "2026-10-22T04:01:40Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "RayWangQvQ/BiliBiliToolPro",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。全面拥抱AI。敏感肌也能用。",
+      "sourceUrl": "https://github.com/RayWangQvQ/BiliBiliToolPro"
+    },
+    "id": "98a651736144873c21d18683fc71781468c01850802aa9a4d7a3bbfaec0bd3d2",
+    "status": "pending",
+    "createdAt": "2026-10-22T04:01:40Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "qier222/YesPlayMusic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "高颜值的第三方网易云播放器，支持 Windows / macOS / Linux",
+      "sourceUrl": "https://github.com/qier222/YesPlayMusic"
+    },
+    "id": "57e31b87359b81a877edfda63e1632be4cc3b380cbe0c1e71288691ee084489f",
+    "status": "pending",
+    "createdAt": "2026-10-22T04:01:40Z"
+  },
+  {
     "kind": "news-item",
-    "objectId": "b207d93ee246121ad178af0aae186c66c8f452f0ad17f32d8b2d2779ccebec30",
+    "objectId": "02ab68be675b3bf67984aadc2776a5827ddbd419baae861c23d6f5717069a91a",
     "reason": "invalid feed item: unexpected news host",
     "evidence": {
       "source": "Microsoft Azure"
     },
-    "id": "ae4edfe9ed7f711af83a8ea5bfa14419c240aaf4714ce52f413427a27169d747",
+    "id": "4e07e53fa5d89f40501846f1f657174af723e1ae1e3a16810c291f07b1045423",
     "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
+    "createdAt": "2026-10-22T04:01:40Z"
   }
 ]

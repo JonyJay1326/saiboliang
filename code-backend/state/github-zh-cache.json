@@ -154,11 +154,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
   },
-  "alirezadir/AIMLInterviews": {
-    "text": "生成式AI、智能体AI、多模态AI、物理AI面试综合指南，含多次获得FAANG等offer的验证公式。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
   "shiyu-coder/Kronos": {
     "text": "Kronos：面向金融市场语言的基础模型",
     "source": "deepseek-flash",
@@ -171,11 +166,6 @@
   },
   "googleworkspace/cli": {
     "text": "Google Workspace CLI：一个命令行工具，覆盖 Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等，基于 Google Discovery Service 动态构建，含 AI agent 技能",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "openai/symphony": {
-    "text": "Symphony 将项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码 agent",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
@@ -198,5 +188,15 @@
     "text": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
+  },
+  "facebookresearch/segment-anything": {
+    "text": "该仓库提供运行 SegmentAnything Model (SAM) 推理的代码、训练模型检查点的下载链接，以及展示如何使用该模型的示例 notebook。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
+  },
+  "SakanaAI/AI-Scientist": {
+    "text": "AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
   }
 }

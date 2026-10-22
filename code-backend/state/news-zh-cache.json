@@ -41,12 +41,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T08:38:29Z"
   },
-  "af8f36dd9165773602fd1e9c4d814244cabdd9f0a820e5988d6e8bbb3c61469a": {
-    "title": "Clef 已在 Ollama 云平台上线",
-    "summary": "Cloudflare 的 27B 多模态决策模型 Clef 现已在 Ollama 上线。可在本地或 Ollama 云平台运行。",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
-  },
   "7141e953827233702b64bd306be7084cb0b711024357237f5a654f96c4ab259b": {
     "title": "Dependabot 现支持 npm 12、pnpm 11 和 12 以及 Bun 1.4",
     "summary": "现在可将项目升级至 npm 12、pnpm 11 或 12、Bun 1.4，并继续接收 Dependabot 更新。对这些包管理器版本的支持已面向…",
@@ -106,18 +100,6 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-21T08:39:45Z"
-  },
-  "95dedf578de78f3ec264f66e37a7c309d1f2cf3d8987fe8b4de9182187d1ff7b": {
-    "title": "OpenAI 模型即将登陆 Google Cloud",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "de9db6f384cbc788775550a92a01be7699e7a41c8058849be39721a76c544e4d": {
-    "title": "Patch the Planet：智能体发现关键漏洞时的全球响应协调",
-    "summary": "Patch the Planet 连接安全研究人员、维护者和事件响应人员，帮助应对开源领域的关键漏洞。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
   },
   "b1215e1aefc04c61e203617a80fd84e7760e29072f8e8c5c2b0a50c22fe019fd": {
     "title": "ChatGPT Ads 扩展至 26 个新国家，已有超过 10 万广告主使用该平台",
@@ -202,5 +184,41 @@
     "summary": "Mistral 正与 NVIDIA 合作，基于 NVIDIA 加速计算开发新一代 AI 原生工程工作流。",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
+  },
+  "39cad894cdd240fbe2dba606200e547216d43a1655f56c86db3d6329a851a826": {
+    "title": "AT&T 如何借助 OpenAI 重新思考内部法律工作",
+    "summary": "AT&T 与 OpenAI 合作，让法律知识更易获取。了解其 LegalEdge 团队如何重新思考受理流程并扩展法律判断。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
+  },
+  "3f1a11956436b167380065dcbfb11acfb4b7400895eeef122ae6e9ec1be674ee": {
+    "title": "通过一致标准实现广泛访问",
+    "summary": "OpenAI 如何与分发合作伙伴合作，坚持一致的防护措施、支持负责任访问，并在使用政策中明确期望。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
+  },
+  "3fe372fb2e8166f0e8146fd86373d22b0c153e5f155ff56beb03c21126360e38": {
+    "title": "Cloudflare 借助 OpenAI 将漏洞发现与防御相连",
+    "summary": "Cloudflare 使用 OpenAI Daybreak 调查漏洞并提出修复建议供审查。其开发者使用 Codex 加快构建并提升代码质量。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
+  },
+  "e270f5ba4688033de075906df89466646eb9f009fa8bcee5c8b60ee62cebab43": {
+    "title": "前沿 AI 的民主治理，第二部分：赋能网络防御者",
+    "summary": "OpenAI 提出蓝图：以前沿 AI 赋能网络防御者、强化防护措施、现代化网络安全，并增强公共机构韧性。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
+  },
+  "22b090900222010d1427f3ec2fd92f40e888564349c3fdcfc7a740ca02e570ed": {
+    "title": "GitHub CLI：选择启用会过期并自动刷新的 OAuth 令牌",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
+  },
+  "5560f044cfefdcbe1e179759f20d9a897526cfe100bfc6a8b93f3efbeee2c620": {
+    "title": "为主权 AI 而设计：从边缘到云的共同基础",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T04:01:40Z"
   }
 }
