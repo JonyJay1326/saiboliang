@@ -1,40 +1,4 @@
 {
-  "e2d4eb78e4d1ad54ab94a287bb7077d8141b869ce4c670e9c3f49530a6983779": {
-    "title": "部分 Git over HTTPS 可能临时需要身份验证",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
-  "3369221ba274f1a5ea8d43886bfae1d8065889baa7155160b5effc2a35f5241f": {
-    "title": "CodeQL 针对 macOS 27、Xcode 27 和 Swift 6.4 的变更",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
-  "3917e17d2e227fd7bd992241feb254f67e761f537b47a4679f318cbdbcaeddaa": {
-    "title": "保护代理式内部人员",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
-  "1dbe22633003a2af4fddcdba3c780b2ba9f507be061699ce02dd407e5165c7ab": {
-    "title": "推进低资源编程语言中的编码能力",
-    "summary": "了解 OpenAI 如何改进 ChatGPT 在低资源编程语言中的表现，并新增软件工程、SQLite 和 COBOL 迁移评估。",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
-  },
-  "64133903258a4e47198443e89d74db85554fb63fcd6061891ffbb32199f5320a": {
-    "title": "西班牙初创企业携手巴塞罗那超级计算中心推进区域创新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
-  },
-  "494a9fa3bb713759384d4568eaa23736f9c1b16b8ba68c15d7b658e4e76b6d9c": {
-    "title": "德国欲引领全球工业 AI：NVIDIA 将如何助力",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-20T08:38:29Z"
-  },
   "7141e953827233702b64bd306be7084cb0b711024357237f5a654f96c4ab259b": {
     "title": "Dependabot 现支持 npm 12、pnpm 11 和 12 以及 Bun 1.4",
     "summary": "现在可将项目升级至 npm 12、pnpm 11 或 12、Bun 1.4，并继续接收 Dependabot 更新。对这些包管理器版本的支持已面向…",
@@ -191,12 +155,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-22T08:41:59Z"
   },
-  "f8df91dc14194fe527efc0a8f5d34cf6b0adc28c1952593737cca8ee1bf0e39e": {
-    "title": "NVIDIA Cosmos推出训练、评估和部署世界模型的新工具",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T08:41:59Z"
-  },
   "6f92d29565569592ae8adeb209944367b57ff00c7a586a9e85f069cabf43be03": {
     "title": "企业如何利用NVIDIA DSX突破电力瓶颈",
     "summary": null,
@@ -220,5 +178,35 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-22T08:41:59Z"
+  },
+  "da5fa7cddb0bb32116f9d2af425d72b4fb483977bf4a46b5a9a1346879691ec9": {
+    "title": "推出 SpaceX Super Intelligence 合作伙伴网络",
+    "summary": "这是我们面向使用 Grok 构建产品、解决方案和服务的公司的官方计划，服务于我们共同的潜在客户和客户。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "6400feb681472530a689e8c59132cfe6d13f5863532ecd60e409a4825c59746b": {
+    "title": "FDE 在 OpenAI 意味着什么",
+    "summary": "前向部署工程在 OpenAI 意味着什么",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "301925b8adfcebab105ac57638dcac24a724ac4ac1cc2e1498951e9f9ee0adcd": {
+    "title": "超越树冠覆盖：绘制全球森林类型地图",
+    "summary": "一张全球地图，将地球上每 10 米见方的土地划分为不同的森林类型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "af6b159eb6ea2f663c90fc62eb6dc5015ebfde2d36ae0138f2e4dcf9c2333973": {
+    "title": "NVIDIA 推出 Minerva，为 AI 工厂带来端到端可观测性",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "c3c5d14bfc3aa83f897ab4b37681a572a3be07f5b5f2db676f09d3e8ad4a7fe5": {
+    "title": "云部署来袭：《使命召唤：现代战争 4》登陆 GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
   }
 }

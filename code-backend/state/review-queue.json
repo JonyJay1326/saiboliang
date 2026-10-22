@@ -743,18 +743,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Autumn-27/ScopeSentry",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ScopeSentry-Cyberspace mapping, subdomain enumeration, port scanning, sensitive information discovery, vulnerability scanning, distributed nodes",
-      "sourceUrl": "https://github.com/Autumn-27/ScopeSentry"
-    },
-    "id": "d15a6535da76f060081d8a2b57790c8070e97a4784d81f393ce98077fbed6929",
-    "status": "pending",
-    "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ran-j/PS2Recomp",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -834,18 +822,6 @@
       "sourceUrl": "https://github.com/thesysdev/openui"
     },
     "id": "b8ad17c0dac9b3237958281fa60adcb2d02ce3f1f300e42030da345eefe2135e",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ErTasselli/OpenTerminal",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Terminal-style trading dashboard built entirely on free public market data. No API keys, no subscriptions.",
-      "sourceUrl": "https://github.com/ErTasselli/OpenTerminal"
-    },
-    "id": "2ea7117fcef9cb96490f6898a07b4eab878fd37d781cd7ff9e107baca70ede35",
     "status": "pending",
     "createdAt": "2026-10-19T17:31:30Z"
   },
@@ -1019,18 +995,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zerx-lab/FluxDown",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
-      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
-    },
-    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "julyx10/lap",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1086,18 +1050,6 @@
       "sourceUrl": "https://github.com/slskd/slskd"
     },
     "id": "776078928be855a327883c85fe7e53e3c91e41aca766be1bb6482c673aa96e22",
-    "status": "pending",
-    "createdAt": "2026-10-21T08:39:45Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "JosefNemec/Playnite",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Video game library manager with support for wide range of 3rd party libraries and game emulation support, providing one unified interface for your games.",
-      "sourceUrl": "https://github.com/JosefNemec/Playnite"
-    },
-    "id": "b60d1f390e35d82d9603e3c41fd7c2e470598c2b6009c008db6a64028057d353",
     "status": "pending",
     "createdAt": "2026-10-21T08:39:45Z"
   },
@@ -1162,30 +1114,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "superplanehq/superplane",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open source factory for one-shot engineering",
-      "sourceUrl": "https://github.com/superplanehq/superplane"
-    },
-    "id": "010345c845daa27bbf7db95a9dc28c88dcb64272c155dd4793ddad33f3a302b2",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "tailscale/tailscale",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The easiest, most secure way to use WireGuard and 2FA.",
-      "sourceUrl": "https://github.com/tailscale/tailscale"
-    },
-    "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "gin-gonic/gin",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1198,18 +1126,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "lionsoul2014/ip2region",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Ip2region is an offline IP-to-Region localization library and IP data management framework with both IPv4 and IPv6 supports, 10-microsecond level query efficiency, xdb search client for many programming languages",
-      "sourceUrl": "https://github.com/lionsoul2014/ip2region"
-    },
-    "id": "48b352c9ff1d8520a26624d9a323ac9a6369cb8e8e34f4b854d1d4c96aae3fbf",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "hashicorp/terraform",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1217,18 +1133,6 @@
       "sourceUrl": "https://github.com/hashicorp/terraform"
     },
     "id": "c4c261396e857dc9deb2a2b42882f275e1f935f98e991bca556bd3d71bc6135b",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PCL-Community/PCL-CE",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PCL 社区版 由社区开发者维护与管理",
-      "sourceUrl": "https://github.com/PCL-Community/PCL-CE"
-    },
-    "id": "cbbac3041ea4b50a35d7dba2b6bff7237bfe72ce482550d9b72b9272e501c09a",
     "status": "pending",
     "createdAt": "2026-10-21T15:58:55Z"
   },
@@ -1282,18 +1186,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "koharu-rs/koharu",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ML-powered manga translator, written in Rust.",
-      "sourceUrl": "https://github.com/koharu-rs/koharu"
-    },
-    "id": "d375bf1c58b07ef3f6a616324a774fdf451973374e63dc07255c727dfad0d9e9",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HMCL-dev/HMCL",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1330,18 +1222,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "microsoft/playwright",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",
-      "sourceUrl": "https://github.com/microsoft/playwright"
-    },
-    "id": "2119c5b25ff95142a30faadfb1d020637f10af62190c243b236019db7dcd4850",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Pumpkin-MC/Pumpkin",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1361,18 +1241,6 @@
       "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
     },
     "id": "f03d1d5aa90f80166e8fbfa51c58073d0c5ed59e73407562a5fcdb43745159ab",
-    "status": "pending",
-    "createdAt": "2026-10-22T04:01:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "RayWangQvQ/BiliBiliToolPro",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。全面拥抱AI。敏感肌也能用。",
-      "sourceUrl": "https://github.com/RayWangQvQ/BiliBiliToolPro"
-    },
-    "id": "98a651736144873c21d18683fc71781468c01850802aa9a4d7a3bbfaec0bd3d2",
     "status": "pending",
     "createdAt": "2026-10-22T04:01:40Z"
   },
@@ -1401,14 +1269,385 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MoeKoeMusic/MoeKoeMusic",
+    "objectId": "etcd-io/etcd",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
-      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "sourceUrl": "https://github.com/etcd-io/etcd"
     },
-    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
+    "id": "e498c40b1f5e965da88d8efac39ca755a5477e4421ccc212012717af8bb0a253",
     "status": "pending",
-    "createdAt": "2026-10-22T08:41:59Z"
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "GoogleCloudPlatform/scion",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/GoogleCloudPlatform/scion"
+    },
+    "id": "baf82163c2a8dcd002bc3facf7a4cfbe6e327d0b56f20344f3f3cccfef6327df",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "helm/helm",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Kubernetes Package Manager",
+      "sourceUrl": "https://github.com/helm/helm"
+    },
+    "id": "9e1d7ee13b6a3223bfec1d4e1e3a59497b391eff7f62719818b860f8dfc2e74a",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "php/frankenphp",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🧟 The modern PHP app server",
+      "sourceUrl": "https://github.com/php/frankenphp"
+    },
+    "id": "830a3cc8a6007497d749c093db693be1e513f4919362373218efa1d12979a19b",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "moby/moby",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems",
+      "sourceUrl": "https://github.com/moby/moby"
+    },
+    "id": "afc269536dc9e009288d85e592ad6094a23d0eaae2adb36a5a77cef0c5cde937",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "cilium/cilium",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "eBPF-based Networking, Security, and Observability",
+      "sourceUrl": "https://github.com/cilium/cilium"
+    },
+    "id": "788bb7617bc301b82064cc6eeffe4a6f0a4178ec04ce93173383a19f2762f3ee",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pearl-research-labs/pearl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Monorepo for the Pearl network 🐚",
+      "sourceUrl": "https://github.com/pearl-research-labs/pearl"
+    },
+    "id": "e6d8076998f5067dd5f41b63e25d3e2b1e94770ac0cd1922f57244478647f797",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PatchMon/PatchMon",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Linux Patch Management & Automation Platform",
+      "sourceUrl": "https://github.com/PatchMon/PatchMon"
+    },
+    "id": "0b4f255090eadd43318398cc1ecd94cced9e6759d8bbc28eb0824b57261286d7",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ShuhongLL/SGS-SLAM",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "[ECCV 2024] SGS-SLAM: Semantic Gaussian Splatting For Neural Dense SLAM",
+      "sourceUrl": "https://github.com/ShuhongLL/SGS-SLAM"
+    },
+    "id": "60dd44aec196a18a0a639a3e678eaff0bda9fe066e6904b8482a641d729117e7",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "NVIDIA-NeMo/Nemotron",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Developer Asset Hub for NVIDIA Nemotron — A one-stop resource for training recipes, usage cookbooks, datasets, and full end-to-end reference examples to build with Nemotron models",
+      "sourceUrl": "https://github.com/NVIDIA-NeMo/Nemotron"
+    },
+    "id": "dc9b95b3f47fd8358ef86e37bfaaf6c4fb9455b9024c3acc954c9021d4dfc7cd",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "GokuMohandas/Made-With-ML",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Learn how to develop, deploy and iterate on production-grade ML applications.",
+      "sourceUrl": "https://github.com/GokuMohandas/Made-With-ML"
+    },
+    "id": "f7180ae3e2c03c09999ec52e192ac40fa3e3bfd85b6dbbdee38b24115c27433b",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ggml-org/Llama-Windows",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Windows Llama App Companion",
+      "sourceUrl": "https://github.com/ggml-org/Llama-Windows"
+    },
+    "id": "523526feea5302d8cdfc457970d32589f55de960dc45827af82ce9d1f5a62a22",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "greenshot/greenshot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Greenshot for Windows - for more information look here:",
+      "sourceUrl": "https://github.com/greenshot/greenshot"
+    },
+    "id": "b9628ae4b71ce92cc963f757d9a797ec30ef70e22d19fca1049ce34b8fc97f29",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "sourcegit-scm/sourcegit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Windows/macOS/Linux GUI client for GIT users",
+      "sourceUrl": "https://github.com/sourcegit-scm/sourcegit"
+    },
+    "id": "556d6dc49bdfa37e08bbb2774e1805e77347b91b95ad14b0c7de58700e8b0a62",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "voidzero-dev/vite-plus",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The unified toolchain and entry point for web development.",
+      "sourceUrl": "https://github.com/voidzero-dev/vite-plus"
+    },
+    "id": "1ebd5e636c68d7dfc5942f6b3f4c4523f19d8be45118b994c26afa864c54d198",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MojoLauncher/MojoLauncher",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Minecraft: Java Edition launcher, based on PojavLauncher",
+      "sourceUrl": "https://github.com/MojoLauncher/MojoLauncher"
+    },
+    "id": "dfffca3889ec0dd1d8076abd29057627a88c3fbab0eafc71c84b215d712b762d",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nextcloud/all-in-one",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "📦 The official Nextcloud installation method. Provides easy deployment and maintenance with most features included in this one Nextcloud instance.",
+      "sourceUrl": "https://github.com/nextcloud/all-in-one"
+    },
+    "id": "14a021e68b1bab6c7e60868d80ef3e6836e821204047e9d9bdcdfd3297c14d58",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "laravel/framework",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Laravel is a web application framework with expressive, elegant syntax.",
+      "sourceUrl": "https://github.com/laravel/framework"
+    },
+    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "InvoicePlane/InvoicePlane",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A self-hosted open source application for managing your invoices, clients and payments.",
+      "sourceUrl": "https://github.com/InvoicePlane/InvoicePlane"
+    },
+    "id": "f7d2872f73d3e9cdb21d31581bd93355159f67ee5a84eb68668abc898f416919",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FreshRSS/FreshRSS",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free, self-hostable news aggregator…",
+      "sourceUrl": "https://github.com/FreshRSS/FreshRSS"
+    },
+    "id": "a5a6fb9d6f00407f83cfa5a130b95548694d4519575ed91b8d8968e9c11f11cb",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PrivateBin/PrivateBin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A minimalist, open source online pastebin where the server has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.",
+      "sourceUrl": "https://github.com/PrivateBin/PrivateBin"
+    },
+    "id": "63c17e3e95d1789a6f62f54f35b1c619e2bb40760d1dfa9e6b55f15b79b61012",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "shlinkio/shlink",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The definitive self-hosted URL shortener",
+      "sourceUrl": "https://github.com/shlinkio/shlink"
+    },
+    "id": "b3b633083393a925abb68fc14e60350c8891ecaa6591cd7c3d2e9fbad3ee03cd",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "symfony/symfony",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Symfony PHP framework",
+      "sourceUrl": "https://github.com/symfony/symfony"
+    },
+    "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pipipi-pikachu/PPTist",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PowerPoint-ist（/'pauəpɔintist/）, An online presentation application that replicates most of the commonly used features of MS PowerPoint, allowing for the editing and presentation of PPT online. It also supports AIPPT and local PPTX file preview.",
+      "sourceUrl": "https://github.com/pipipi-pikachu/PPTist"
+    },
+    "id": "c875e1ad08a699464beb43e499bfa3949fa8220d04f2cd4222bedf7a86a1160f",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PanJiaChen/vue-element-admin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🎉 A magical vue admin https://panjiachen.github.io/vue-element-admin",
+      "sourceUrl": "https://github.com/PanJiaChen/vue-element-admin"
+    },
+    "id": "558d4f73b9f2d71d66e25dd451de6bea2c3016d40595c89d3e4d59b440fe94b1",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "wu529778790/panhub.shenzjd.com",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PanHub 网盘聚合搜索 · Netdisk Search Aggregator。一个搜索框聚合夸克/阿里云盘/百度/115/迅雷等网盘资源，多源聚合去重、智能排序、插件熔断隔离。零数据库轻量部署，支持 Docker / Vercel / Cloudflare。Aggregate netdisk links into one search.",
+      "sourceUrl": "https://github.com/wu529778790/panhub.shenzjd.com"
+    },
+    "id": "c0f3c3a485b1c57909d49de0a6b6401f84f29cb08ce8ea32444f2bd814b790ff",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "teslamate-org/teslamate",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A self-hosted data logger for your Tesla 🚘 [main maintainer= @JakobLichterfeld ]",
+      "sourceUrl": "https://github.com/teslamate-org/teslamate"
+    },
+    "id": "6cfc86cfd0793c1854e226b0342d14d38c75904c1368520112bbc7b89a9cdcb7",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Effect-TS/effect",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build production-ready applications in TypeScript",
+      "sourceUrl": "https://github.com/Effect-TS/effect"
+    },
+    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "openbao/openbao",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "sourceUrl": "https://github.com/openbao/openbao"
+    },
+    "id": "2b3679e26dba551e67a0d96cb1d41d263f39b2f0bb1fc6f4433ca543633d1170",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "xiaolai/the-craft-of-selfteaching",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "One has no future if one couldn't teach themself.",
+      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
+    },
+    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hughhowey/neo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A novel-writing tool created by a novelist.",
+      "sourceUrl": "https://github.com/hughhowey/neo"
+    },
+    "id": "99c60d455e141c56f446771fa4fca7db518f52cb4851a9d15d596a11af4a51f0",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-10-22T15:54:26Z"
   }
 ]

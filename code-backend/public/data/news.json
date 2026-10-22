@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-22T08:41:59Z",
+  "dataUpdatedAt": "2026-10-22T15:54:26Z",
   "items": [
     {
       "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
@@ -40,6 +40,25 @@
       "featured": true
     },
     {
+      "title": "RSI，田渊栋交卷了！40B本地编程模型开源，MacBook Pro可跑",
+      "sourceUrl": "https://zhidx.com/p/603419.html",
+      "publishedAt": "2026-10-22T04:30:50Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 黄菲 编辑 | 江宇 智东西10月22日报道，昨夜，前Meta FAIR研究总监田渊栋参与创办的AI初创公司Recursive Superin",
+      "id": "63e019bb03b2aaeacae11ba6a818a97c4fd19be64c70634c9a0cdcbe7a999792",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/603419.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-22T15:54:26Z",
+      "featured": true
+    },
+    {
       "title": "英伟达投的AI语音独角兽发两款新模型，半秒内就能实时响应，附实测",
       "sourceUrl": "https://zhidx.com/p/603345.html",
       "publishedAt": "2026-10-22T03:40:17Z",
@@ -56,6 +75,25 @@
       "category": "model",
       "eventType": "model-review",
       "addedAt": "2026-10-22T04:01:40Z",
+      "featured": true
+    },
+    {
+      "title": "【大模型服务平台 TokenHub】关于 Hy-Image-3.0&Seedream-Image-v5.0-lite 模型下线的通知",
+      "sourceUrl": "https://cloud.tencent.com/announce/detail/2524",
+      "publishedAt": "2026-10-21T16:00:00Z",
+      "source": "腾讯云 TokenHub",
+      "summary": "腾讯云公告：Hy-Image-3.0与Seedream-Image-v5.0-lite模型下线。",
+      "id": "2fd296e65d3ff087b7b70baae2844a3dbf34c04736017aa1ea8932e88602bbd1",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "腾讯云 TokenHub",
+      "originalUrl": "https://cloud.tencent.com/announce/detail/2524",
+      "originalVerifiedAt": "2026-10-22T15:54:26Z",
+      "url": "https://cloud.tencent.com/announce/detail/2524",
+      "category": "industry",
+      "eventType": "service-retirement",
+      "addedAt": "2026-10-22T15:54:26Z",
       "featured": true
     },
     {
@@ -4828,6 +4866,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-22T08:41:59Z",
-  "generatedAt": "2026-10-22T08:41:59Z"
+  "version": "2026-10-22T15:54:26Z",
+  "generatedAt": "2026-10-22T15:54:26Z"
 }

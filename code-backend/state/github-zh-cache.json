@@ -109,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "Anil-matcha/Open-Generative-AI": {
-    "text": "无限制的开源 AI 视频平台替代方案，免费 AI 图像与视频生成工作室，支持 600+ 模型（Flux、Midjourney、Kling、Sora、Veo），无内容过滤，自托管，MIT 许可",
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
   "citrolabs/ego-lite": {
     "text": "面向 AI agent 运行浏览器自动化的最快浏览器，可将已登录的浏览器状态共享给 Codex 或 Claude Code 等 AI agent，且不打扰用户，零成本、零配置",
     "source": "deepseek-flash",
@@ -139,16 +134,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
   },
-  "KittenML/KittenTTS": {
-    "text": "开源的最先进 TTS 模型，可在 CPU 上运行 😻",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
-  "strands-agents/harness-sdk": {
-    "text": "构建智能体 harness 并端到端控制。面向生产级 AI 智能体的开源 SDK，支持 Python 与 TypeScript，任意模型、任意云。",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
   "Asymptote-Labs/agent-beacon": {
     "text": "跨 harness、可自我改进的 AI 智能体记忆层。加入社区：https://discord.com/invite/zdNChS2fBu",
     "source": "deepseek-flash",
@@ -156,11 +141,6 @@
   },
   "shiyu-coder/Kronos": {
     "text": "Kronos：面向金融市场语言的基础模型",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "SegFault42/HeliosGen": {
-    "text": "自托管生成式 AI 桌面应用，Higgsfield、OpenArt、Freepik 的免费替代品",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
@@ -174,11 +154,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "dotnet/skills": {
-    "text": "用于辅助 AI 编码 agent 处理 .NET 与 C# 的技能仓库",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "tile-ai/tilelang": {
     "text": "领域特定语言，用于简化高性能 GPU/CPU/加速器内核的开发",
     "source": "deepseek-flash",
@@ -189,19 +164,44 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "facebookresearch/segment-anything": {
-    "text": "该仓库提供运行 SegmentAnything Model (SAM) 推理的代码、训练模型检查点的下载链接，以及展示如何使用该模型的示例 notebook。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
   "SakanaAI/AI-Scientist": {
     "text": "AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
     "source": "deepseek-flash",
     "at": "2026-10-22T04:01:40Z"
   },
-  "hugohe3/ppt-master": {
-    "text": "AI 将文档或主题转为原生 PowerPoint 演示文稿，支持原生形状、切换与动画，按需生成数据图表和表格，从演讲者备注生成音频旁白，并支持自定义 .pptx 模板。作者 Hugo He",
+  "sgl-project/sglang": {
+    "text": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
     "source": "deepseek-flash",
-    "at": "2026-10-22T08:41:59Z"
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "facebookresearch/audiocraft": {
+    "text": "Audiocraft 是深度学习音频处理与生成库，包含 EnCodec 音频压缩/分词器及 MusicGen 音乐生成语言模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "CompVis/stable-diffusion": {
+    "text": "潜在文本到图像扩散模型",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "facebookresearch/sam2": {
+    "text": "该仓库提供 Meta Segment Anything Model 2（SAM 2）推理代码、预训练模型检查点下载链接及使用示例笔记本。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "pyannote/pyannote-audio": {
+    "text": "说话人日志的神经组件：语音活动检测、说话人变化检测、重叠语音检测、说话人嵌入。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "modelcontextprotocol/java-sdk": {
+    "text": "Model Context Protocol 服务端与客户端的官方 Java SDK，与 Spring AI 合作维护。",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
+  },
+  "microsoft/BitNet": {
+    "text": "1-bit 大语言模型的官方推理框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T15:54:26Z"
   }
 }
