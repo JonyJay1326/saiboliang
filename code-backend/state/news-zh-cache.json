@@ -11,12 +11,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "ca2be23ea0a1d60912dac1607485efeb3cddc416b547662fb8c79b563049e52b": {
-    "title": "NVIDIA 推进媒体代理式安全，从欧洲公共服务广播到全球内容生产",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
   "3917e17d2e227fd7bd992241feb254f67e761f537b47a4679f318cbdbcaeddaa": {
     "title": "保护代理式内部人员",
     "summary": null,
@@ -119,20 +113,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "8722385c6c33a84607c373d61347af5cf6968103da45281c21700e65a0de7106": {
-    "title": "将 Spark 带到欧洲：本地智能驱动下一代智能体",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "12c1cb38a75e4a7b39f06f011c38aab729ca5a61ab42931c30dcc6539f2bbe67": {
     "title": "Google Cloud 与 NVIDIA 宣布 NVIDIA Vera Rubin 基础设施正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "804d4d957ec690829705fd256bb1f5d7185145e7893ec5730026a6f654bdd6ca": {
-    "title": "NVIDIA 云合作伙伴在欧洲扩张——主权、开放，并为安全 AI 智能体而构建",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
@@ -155,18 +137,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "09d942bb1aad0976da416aa639f2750fcaf152cc81cd37f560def1c9203e7c58": {
-    "title": "NVIDIA Agent Toolkit 扩展，将企业智能体扎根于公司数据",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "d46c8940730c093aa2d055afbb383ce53acb6e873fd442b25d5e12a705ddd2d0": {
-    "title": "NVIDIA 开放模型推动欧洲各行业主权智能发展",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "db3718abbfc4c7d4e28326478b9f515ce9a8b12f495b73978d77abde4ef7d825": {
     "title": "GTC Berlin 2026：NVIDIA CEO 黄仁勋主题演讲实时更新",
     "summary": null,
@@ -176,12 +146,6 @@
   "c582a39d486e86676aaa5f925ac457c13849c935464575ecbf2dd8d3b003f9f9": {
     "title": "欧洲领军企业采用 NVIDIA Vera CPU 构建本地基础设施",
     "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "6bf82841932d223c2d1081b7fdd29441230367b23dab71a0f97eb25ab631113c": {
-    "title": "Mistral 与 NVIDIA 推进工程领域 AI 发展",
-    "summary": "Mistral 正与 NVIDIA 合作，基于 NVIDIA 加速计算开发新一代 AI 原生工程工作流。",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
@@ -220,5 +184,41 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-22T04:01:40Z"
+  },
+  "4ab186bcd5d93e27a7a9318717899f1e310390fecbadd98149dabd3b291fa938": {
+    "title": "欧洲领先金融服务机构采用开放模型构建专有智能",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
+  },
+  "f8df91dc14194fe527efc0a8f5d34cf6b0adc28c1952593737cca8ee1bf0e39e": {
+    "title": "NVIDIA Cosmos推出训练、评估和部署世界模型的新工具",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
+  },
+  "6f92d29565569592ae8adeb209944367b57ff00c7a586a9e85f069cabf43be03": {
+    "title": "企业如何利用NVIDIA DSX突破电力瓶颈",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
+  },
+  "13b603cf56b699869be463e78f151db5a79304815eb68026a1abdb1dc4d253c6": {
+    "title": "NVIDIA变革欧洲零售业，从数字发现到实体运营",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
+  },
+  "054347e9fabbae641e577c929e8dfec03e8486e151054c9ba4d38bf6c035ffdd": {
+    "title": "欧洲各地先锋部署NVIDIA Earth-2开放模型，助力真实世界天气与气候预测",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
+  },
+  "e6667a5dd8d4716e2a817555e5c3e45127b917d5cf4e2fd4c7a1920986dc6cb0": {
+    "title": "NVIDIA开放模型助力欧洲公共部门新一轮项目",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
   }
 }

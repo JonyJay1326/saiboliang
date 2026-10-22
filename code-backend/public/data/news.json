@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-10-22T04:01:40Z",
+  "dataUpdatedAt": "2026-10-22T08:41:59Z",
   "items": [
+    {
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "sourceUrl": "https://www.qbitai.com/2026/10/504832.html",
+      "publishedAt": "2026-10-22T07:11:14Z",
+      "source": "量子位",
+      "summary": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "id": "de46add1373038e954ad32175522cf02a20602bfe9e8623b8e4b6ad45a018da4",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/504832.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-22T08:41:59Z",
+      "featured": true
+    },
+    {
+      "title": "NVIDIA Cosmos推出训练、评估和部署世界模型的新工具",
+      "sourceUrl": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+      "publishedAt": "2026-10-22T05:00:27Z",
+      "source": "NVIDIA",
+      "summary": "NVIDIA Cosmos新增工具，加速数据管线并更高效训练、评估和优化世界模型。",
+      "id": "f8df91dc14194fe527efc0a8f5d34cf6b0adc28c1952593737cca8ee1bf0e39e",
+      "originalTitle": "NVIDIA Cosmos Opens New Tools to Train, Evaluate and Deploy World Models",
+      "translatedAt": "2026-10-22T08:41:59Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+      "originalVerifiedAt": "2026-10-22T08:41:59Z",
+      "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-22T08:41:59Z",
+      "featured": true
+    },
     {
       "title": "英伟达投的AI语音独角兽发两款新模型，半秒内就能实时响应，附实测",
       "sourceUrl": "https://zhidx.com/p/603345.html",
@@ -37,7 +75,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-22T04:01:40Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "OpenAI 模型即将登陆 Google Cloud",
@@ -132,7 +170,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-22T04:01:40Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "永久保留缓存！OpenAI重磅更新，比DeepSeek还久？",
@@ -4790,6 +4828,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-22T04:01:40Z",
-  "generatedAt": "2026-10-22T04:01:40Z"
+  "version": "2026-10-22T08:41:59Z",
+  "generatedAt": "2026-10-22T08:41:59Z"
 }

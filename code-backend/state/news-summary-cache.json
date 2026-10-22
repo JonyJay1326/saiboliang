@@ -1,22 +1,7 @@
 {
-  "8722385c6c33a84607c373d61347af5cf6968103da45281c21700e65a0de7106": {
-    "summary": "NVIDIA在GTC Berlin展示RTX Spark、DGX Spark等本地系统，加速编码、工程、机器人与AI工厂开发。",
+  "f8df91dc14194fe527efc0a8f5d34cf6b0adc28c1952593737cca8ee1bf0e39e": {
+    "summary": "NVIDIA Cosmos新增工具，加速数据管线并更高效训练、评估和优化世界模型。",
     "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "804d4d957ec690829705fd256bb1f5d7185145e7893ec5730026a6f654bdd6ca": {
-    "summary": "欧洲、北欧、非洲和中亚的AI云生态构建NVIDIA DSX Vera Rubin全栈AI工厂，满足主权算力需求。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "09d942bb1aad0976da416aa639f2750fcaf152cc81cd37f560def1c9203e7c58": {
-    "summary": "开源NVIDIA Agent Toolkit新增工具，助企业用公司数据定制、监控和治理智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "d46c8940730c093aa2d055afbb383ce53acb6e873fd442b25d5e12a705ddd2d0": {
-    "summary": "NVIDIA推出视觉、语言、检索、表格、生物、机器人和量子计算新模型系列，推动欧洲开发。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
+    "at": "2026-10-22T08:41:59Z"
   }
 }

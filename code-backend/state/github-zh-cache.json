@@ -198,5 +198,10 @@
     "text": "AI Scientist：迈向全自动开放式科学发现 🧑‍🔬",
     "source": "deepseek-flash",
     "at": "2026-10-22T04:01:40Z"
+  },
+  "hugohe3/ppt-master": {
+    "text": "AI 将文档或主题转为原生 PowerPoint 演示文稿，支持原生形状、切换与动画，按需生成数据图表和表格，从演讲者备注生成音频旁白，并支持自定义 .pptx 模板。作者 Hugo He",
+    "source": "deepseek-flash",
+    "at": "2026-10-22T08:41:59Z"
   }
 }
