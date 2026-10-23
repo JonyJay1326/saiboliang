@@ -1341,18 +1341,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "pearl-research-labs/pearl",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Monorepo for the Pearl network 🐚",
-      "sourceUrl": "https://github.com/pearl-research-labs/pearl"
-    },
-    "id": "e6d8076998f5067dd5f41b63e25d3e2b1e94770ac0cd1922f57244478647f797",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "PatchMon/PatchMon",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1449,18 +1437,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MojoLauncher/MojoLauncher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Minecraft: Java Edition launcher, based on PojavLauncher",
-      "sourceUrl": "https://github.com/MojoLauncher/MojoLauncher"
-    },
-    "id": "dfffca3889ec0dd1d8076abd29057627a88c3fbab0eafc71c84b215d712b762d",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "nextcloud/all-in-one",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1468,18 +1444,6 @@
       "sourceUrl": "https://github.com/nextcloud/all-in-one"
     },
     "id": "14a021e68b1bab6c7e60868d80ef3e6836e821204047e9d9bdcdfd3297c14d58",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "laravel/framework",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Laravel is a web application framework with expressive, elegant syntax.",
-      "sourceUrl": "https://github.com/laravel/framework"
-    },
-    "id": "45ba27f9ae351825e2bada0251faf8ab4bc70d278d7483c6b58638e59539a325",
     "status": "pending",
     "createdAt": "2026-10-22T15:54:26Z"
   },
@@ -1509,78 +1473,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "PrivateBin/PrivateBin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A minimalist, open source online pastebin where the server has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.",
-      "sourceUrl": "https://github.com/PrivateBin/PrivateBin"
-    },
-    "id": "63c17e3e95d1789a6f62f54f35b1c619e2bb40760d1dfa9e6b55f15b79b61012",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "shlinkio/shlink",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The definitive self-hosted URL shortener",
-      "sourceUrl": "https://github.com/shlinkio/shlink"
-    },
-    "id": "b3b633083393a925abb68fc14e60350c8891ecaa6591cd7c3d2e9fbad3ee03cd",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "symfony/symfony",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Symfony PHP framework",
-      "sourceUrl": "https://github.com/symfony/symfony"
-    },
-    "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pipipi-pikachu/PPTist",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PowerPoint-ist（/'pauəpɔintist/）, An online presentation application that replicates most of the commonly used features of MS PowerPoint, allowing for the editing and presentation of PPT online. It also supports AIPPT and local PPTX file preview.",
-      "sourceUrl": "https://github.com/pipipi-pikachu/PPTist"
-    },
-    "id": "c875e1ad08a699464beb43e499bfa3949fa8220d04f2cd4222bedf7a86a1160f",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PanJiaChen/vue-element-admin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🎉 A magical vue admin https://panjiachen.github.io/vue-element-admin",
-      "sourceUrl": "https://github.com/PanJiaChen/vue-element-admin"
-    },
-    "id": "558d4f73b9f2d71d66e25dd451de6bea2c3016d40595c89d3e4d59b440fe94b1",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "wu529778790/panhub.shenzjd.com",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PanHub 网盘聚合搜索 · Netdisk Search Aggregator。一个搜索框聚合夸克/阿里云盘/百度/115/迅雷等网盘资源，多源聚合去重、智能排序、插件熔断隔离。零数据库轻量部署，支持 Docker / Vercel / Cloudflare。Aggregate netdisk links into one search.",
-      "sourceUrl": "https://github.com/wu529778790/panhub.shenzjd.com"
-    },
-    "id": "c0f3c3a485b1c57909d49de0a6b6401f84f29cb08ce8ea32444f2bd814b790ff",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "teslamate-org/teslamate",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1588,54 +1480,6 @@
       "sourceUrl": "https://github.com/teslamate-org/teslamate"
     },
     "id": "6cfc86cfd0793c1854e226b0342d14d38c75904c1368520112bbc7b89a9cdcb7",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Effect-TS/effect",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Build production-ready applications in TypeScript",
-      "sourceUrl": "https://github.com/Effect-TS/effect"
-    },
-    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "openbao/openbao",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
-      "sourceUrl": "https://github.com/openbao/openbao"
-    },
-    "id": "2b3679e26dba551e67a0d96cb1d41d263f39b2f0bb1fc6f4433ca543633d1170",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "xiaolai/the-craft-of-selfteaching",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "One has no future if one couldn't teach themself.",
-      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
-    },
-    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
-    "status": "pending",
-    "createdAt": "2026-10-22T15:54:26Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hughhowey/neo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A novel-writing tool created by a novelist.",
-      "sourceUrl": "https://github.com/hughhowey/neo"
-    },
-    "id": "99c60d455e141c56f446771fa4fca7db518f52cb4851a9d15d596a11af4a51f0",
     "status": "pending",
     "createdAt": "2026-10-22T15:54:26Z"
   },
@@ -1649,5 +1493,28 @@
     "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
     "createdAt": "2026-10-22T15:54:26Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MoeKoeMusic/MoeKoeMusic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
+      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
+    },
+    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
+    "status": "pending",
+    "createdAt": "2026-10-23T08:37:58Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "389e9039182f86f02e4c4d5585fc23d1465b984ec65c457a37f5a787d03435a1",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "fb6787c82c7bab7a84e350f6f5cd1c17bc41d0584bb4d5c25ef28bb99360fa92",
+    "status": "pending",
+    "createdAt": "2026-10-23T08:37:58Z"
   }
 ]

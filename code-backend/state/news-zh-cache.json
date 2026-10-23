@@ -1,31 +1,7 @@
 {
-  "7141e953827233702b64bd306be7084cb0b711024357237f5a654f96c4ab259b": {
-    "title": "Dependabot 现支持 npm 12、pnpm 11 和 12 以及 Bun 1.4",
-    "summary": "现在可将项目升级至 npm 12、pnpm 11 或 12、Bun 1.4，并继续接收 Dependabot 更新。对这些包管理器版本的支持已面向…",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
-  "0de9428d3548b15fe7f408cf6f3a0552080edb6ebb36dafc40bcdfbad09e5fb1": {
-    "title": "使用 Grok Bot 检测并响应事件",
-    "summary": "IncidentWatch 在内部告警触发前发现工单激增。IncidentSweep 在获批批次中清理相关积压。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
   "1725d137aa3debc0d8ae9b76a5f8f5fc192130afd14f5151c2319be05f1a5dd1": {
     "title": "加盟商借助 ChatGPT Work 将现金对账时间缩短 94%",
     "summary": "一位独立经营 Schlotzsky’s 和 Cinnabon 的加盟商将菜单重新定价时间缩短 95%，并构建了可释放 10 万美元现金流的工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
-  "aa8847d44cbae3328f3c5cbb65bcffcd3b77355e99faf584c20aa718f2bc61fa": {
-    "title": "Terminal X 借助 GPT-6.1 实现 88.6% 的资深投资者判断匹配度",
-    "summary": "Terminal X 的 Eval Agent 依据 54 项标准评分，借助 GPT-6.1 Sol 多发现 25% 偏离基金授权的情况。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
-  "1cfb6291fa158d05a5bad0e638547e0ff07dabd8e5700299a43b136146616242": {
-    "title": "OpenAI 收购 Orchestra Bio",
-    "summary": "OpenAI 收购 Orchestra Bio，将 AI 驱动的运营引入生命科学研发，帮助生物制药团队加速药物开发并推进新疗法。",
     "source": "deepseek-flash",
     "at": "2026-10-21T08:39:45Z"
   },
@@ -43,18 +19,6 @@
   },
   "f0d3b9acbd57e8c0d05de2a373c8c9996945be06ffd76a8674ecc296d09df6a9": {
     "title": "GitHub 机密扫描更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
-  "bf4b6adc360d09f0286a39acffd73c8a8551fc1a39bd27222cbca61e1d918606": {
-    "title": "Dependabot 告警 REST API 现包含依赖版本",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
-  "d2f4c2d99fe6839a31691d16458e99d7db75f9e67beee8c52beb81e9c181f477": {
-    "title": "GitHub 包防火墙进入公开预览",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-21T08:39:45Z"
@@ -107,12 +71,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "c582a39d486e86676aaa5f925ac457c13849c935464575ecbf2dd8d3b003f9f9": {
-    "title": "欧洲领军企业采用 NVIDIA Vera CPU 构建本地基础设施",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "39cad894cdd240fbe2dba606200e547216d43a1655f56c86db3d6329a851a826": {
     "title": "AT&T 如何借助 OpenAI 重新思考内部法律工作",
     "summary": "AT&T 与 OpenAI 合作，让法律知识更易获取。了解其 LegalEdge 团队如何重新思考受理流程并扩展法律判断。",
@@ -139,12 +97,6 @@
   },
   "22b090900222010d1427f3ec2fd92f40e888564349c3fdcfc7a740ca02e570ed": {
     "title": "GitHub CLI：选择启用会过期并自动刷新的 OAuth 令牌",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "5560f044cfefdcbe1e179759f20d9a897526cfe100bfc6a8b93f3efbeee2c620": {
-    "title": "为主权 AI 而设计：从边缘到云的共同基础",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-22T04:01:40Z"
@@ -208,5 +160,71 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-22T15:54:26Z"
+  },
+  "1a543055a02f9816518cc03996b6a0ed89e5e65a847f479103d96112c902ed21": {
+    "title": "OpenAI 与波兰 NASK 合作推进 AI 安全与保障",
+    "summary": "OpenAI 与波兰 NASK 将在 AI 安全、保障与技术研究方面合作，以加强防护并支持更具韧性的数字生态。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "891b7e0bbf66f86d27b770f3dc53e0fbecfc246eeadf29503262f6d9c70adad7": {
+    "title": "使用 Decisions API 构建响应更快的应用",
+    "summary": "为任意应用提供快速、专注、低成本的决策。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "eda525050cea8fce4b13823379a8b9659ff224375e0356616ea34596cdb17cc5": {
+    "title": "Uber 携手 OpenAI 向全体员工提供 ChatGPT Work",
+    "summary": "Uber 正向 3 万多名员工推广 ChatGPT Work，帮助团队研究、分析数据、制作演示文稿并完成复杂工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "a45f5dfbc3465c866620e57148c541058632d1a5edf02385a45f01cef58e09d9": {
+    "title": "Visual Studio 中的 GitHub Copilot — 9 月更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "dea8ba729eb28582daacbbc84d793cf6188c0f6dfc256f1fded54e0651c79918": {
+    "title": "用量指标 API 中的自定义技能、代理和 MCP 服务器",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "767a7f383549ba646ff2264723a023fa7a69ca1a4d9513b7eb0b2d41d2d01d16": {
+    "title": "Copilot 功能的全局默认设置正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "2a94d66f0451a98a97a8af28a1e68799b4d219010ebce6be93433c9f2cfc2ea2": {
+    "title": "Meta API 端点已针对 Actions blob 存储更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "b6c252bde4e3812d77d058b62a8bc02e03250af41c29683e529cb728ee221ebd": {
+    "title": "数据驻留版现已提供公开监控",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "c0184addc509ec8882cc7a7cacd40981d99e565457fd0f149dd344cd5de136ce": {
+    "title": "拉取请求：保存空白字符偏好并改进拆分视图",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "7bf4630bf25d53522f00da09db4546e143bdd87be96e2ffc64bdb04bafd719bb": {
+    "title": "Copilot 影响仪表板中的行业对比",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "f07d0bb3b14ff2bf43917cad2760351fb41875dec27fa459839b7dd7360444af": {
+    "title": "哈萨克斯坦为其 AI 未来扩展算力",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
   }
 }

@@ -1,7 +1,27 @@
 {
-  "2fd296e65d3ff087b7b70baae2844a3dbf34c04736017aa1ea8932e88602bbd1": {
-    "summary": "腾讯云公告：Hy-Image-3.0与Seedream-Image-v5.0-lite模型下线。",
+  "a45f5dfbc3465c866620e57148c541058632d1a5edf02385a45f01cef58e09d9": {
+    "summary": "Visual Studio 9月更新：可在聊天中查看拉取请求、选用团队信任的AI模型、及时修复漏洞包。",
     "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "dea8ba729eb28582daacbbc84d793cf6188c0f6dfc256f1fded54e0651c79918": {
+    "summary": "Copilot用量指标现显示组织创建的自定义技能、代理、MCP服务器、斜杠命令和插件名称。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "767a7f383549ba646ff2264723a023fa7a69ca1a4d9513b7eb0b2d41d2d01d16": {
+    "summary": "Copilot Business和Enterprise的Copilot功能全局默认策略开始逐步推出。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "7bf4630bf25d53522f00da09db4546e143bdd87be96e2ffc64bdb04bafd719bb": {
+    "summary": "Copilot影响仪表板新增行业对比，企业可对照汇总基准比较代理采用与利用情况。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
+  },
+  "af6b159eb6ea2f663c90fc62eb6dc5015ebfde2d36ae0138f2e4dcf9c2333973": {
+    "summary": "NVIDIA推出Minerva AIOps平台，连接基础设施与工作负载遥测，提升AI工厂正常运行时间与产出。",
+    "source": "deepseek-flash",
+    "at": "2026-10-23T08:37:58Z"
   }
 }

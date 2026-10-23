@@ -194,14 +194,9 @@
     "source": "deepseek-flash",
     "at": "2026-10-22T15:54:26Z"
   },
-  "modelcontextprotocol/java-sdk": {
-    "text": "Model Context Protocol 服务端与客户端的官方 Java SDK，与 Spring AI 合作维护。",
+  "udlbook/udlbook": {
+    "text": "《理解深度学习》——Simon J.D. Prince 著",
     "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
-  "microsoft/BitNet": {
-    "text": "1-bit 大语言模型的官方推理框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
+    "at": "2026-10-23T08:37:58Z"
   }
 }
