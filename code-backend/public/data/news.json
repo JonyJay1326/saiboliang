@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-10-23T08:37:58Z",
+  "dataUpdatedAt": "2026-10-23T15:46:10Z",
   "items": [
+    {
+      "title": "DeepSeek之后，StartLux再来：开源首个决策模型推理引擎，推理快至5.3倍",
+      "sourceUrl": "https://zhidx.com/p/604121.html",
+      "publishedAt": "2026-10-23T11:50:11Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 王涵 编辑 | 漠影 近期，大模型行业掀起一股 开源自研推理引擎 的浪潮。",
+      "id": "d8b7f4e57e79ef465c7d4e33bc8024c0bc40be947a060adefe8a1111495f0742",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/604121.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-23T15:46:10Z",
+      "featured": true
+    },
+    {
+      "title": "金蝶灵基连推三项核心升级，发布企业级智能体评测基准",
+      "sourceUrl": "https://zhidx.com/p/603939.html",
+      "publishedAt": "2026-10-23T10:50:38Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | ZeR0 编辑 | 漠影 智东西10月23日报道，今日，在2026金蝶创见者大会上",
+      "id": "9fdb9c44d230d7428c133f72344d23d77e16fbae03a73ae44896d13c3bdfc604",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/603939.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-23T15:46:10Z",
+      "featured": null
+    },
     {
       "title": "Visual Studio 中的 GitHub Copilot — 9 月更新",
       "sourceUrl": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
@@ -94,7 +132,26 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-23T08:37:58Z",
-      "featured": null
+      "featured": true
+    },
+    {
+      "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+      "sourceUrl": "https://www.qbitai.com/2026/10/504879.html",
+      "publishedAt": "2026-10-22T09:07:05Z",
+      "source": "量子位",
+      "summary": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+      "id": "dfd02e8c10946ab072177f6c441e155930341d6ae71fc476979eda40aa4a1a23",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/504879.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-23T15:46:10Z",
+      "featured": true
     },
     {
       "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
@@ -4961,6 +5018,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-23T08:37:58Z",
-  "generatedAt": "2026-10-23T08:37:58Z"
+  "version": "2026-10-23T15:46:10Z",
+  "generatedAt": "2026-10-23T15:46:10Z"
 }

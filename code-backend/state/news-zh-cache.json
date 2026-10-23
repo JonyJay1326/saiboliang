@@ -1,10 +1,4 @@
 {
-  "1725d137aa3debc0d8ae9b76a5f8f5fc192130afd14f5151c2319be05f1a5dd1": {
-    "title": "加盟商借助 ChatGPT Work 将现金对账时间缩短 94%",
-    "summary": "一位独立经营 Schlotzsky’s 和 Cinnabon 的加盟商将菜单重新定价时间缩短 95%，并构建了可释放 10 万美元现金流的工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
   "c7c1db1d24f97b16930900ba1c0155d84b4c693e69bc12e1dd92023bb46f0906": {
     "title": "东南亚数字经济规模将达 3680 亿美元",
     "summary": null,
@@ -149,12 +143,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-22T15:54:26Z"
   },
-  "af6b159eb6ea2f663c90fc62eb6dc5015ebfde2d36ae0138f2e4dcf9c2333973": {
-    "title": "NVIDIA 推出 Minerva，为 AI 工厂带来端到端可观测性",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
   "c3c5d14bfc3aa83f897ab4b37681a572a3be07f5b5f2db676f09d3e8ad4a7fe5": {
     "title": "云部署来袭：《使命召唤：现代战争 4》登陆 GeForce NOW",
     "summary": null,
@@ -179,24 +167,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-23T08:37:58Z"
   },
-  "a45f5dfbc3465c866620e57148c541058632d1a5edf02385a45f01cef58e09d9": {
-    "title": "Visual Studio 中的 GitHub Copilot — 9 月更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "dea8ba729eb28582daacbbc84d793cf6188c0f6dfc256f1fded54e0651c79918": {
-    "title": "用量指标 API 中的自定义技能、代理和 MCP 服务器",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "767a7f383549ba646ff2264723a023fa7a69ca1a4d9513b7eb0b2d41d2d01d16": {
-    "title": "Copilot 功能的全局默认设置正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
   "2a94d66f0451a98a97a8af28a1e68799b4d219010ebce6be93433c9f2cfc2ea2": {
     "title": "Meta API 端点已针对 Actions blob 存储更新",
     "summary": null,
@@ -211,12 +181,6 @@
   },
   "c0184addc509ec8882cc7a7cacd40981d99e565457fd0f149dd344cd5de136ce": {
     "title": "拉取请求：保存空白字符偏好并改进拆分视图",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "7bf4630bf25d53522f00da09db4546e143bdd87be96e2ffc64bdb04bafd719bb": {
-    "title": "Copilot 影响仪表板中的行业对比",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-23T08:37:58Z"
