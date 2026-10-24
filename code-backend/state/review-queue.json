@@ -683,18 +683,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "kestra-io/kestra",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
-      "sourceUrl": "https://github.com/kestra-io/kestra"
-    },
-    "id": "2ce8a952175f736f8722b2768b702e9c05f8cadfbaa755af118759895d3eba6f",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ran-j/PS2Recomp",
     "reason": "AI applicability uncertain",
     "evidence": {

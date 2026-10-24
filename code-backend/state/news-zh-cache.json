@@ -1,37 +1,7 @@
 {
-  "c7c1db1d24f97b16930900ba1c0155d84b4c693e69bc12e1dd92023bb46f0906": {
-    "title": "东南亚数字经济规模将达 3680 亿美元",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
-  "e1fe9bf84ec496533db1692e454b153274fb04b32daa0353825176df7d20532c": {
-    "title": "为仓库批量将分支保护迁移至规则集",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
-  "f0d3b9acbd57e8c0d05de2a373c8c9996945be06ffd76a8674ecc296d09df6a9": {
-    "title": "GitHub 机密扫描更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-21T08:39:45Z"
-  },
   "b1215e1aefc04c61e203617a80fd84e7760e29072f8e8c5c2b0a50c22fe019fd": {
     "title": "ChatGPT Ads 扩展至 26 个新国家，已有超过 10 万广告主使用该平台",
     "summary": "从本地商家到全球品牌，更多广告主现在可以在用户于 ChatGPT 中探索、比较和决定购买时触达他们。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "64ddfb139fec8a1cb4597ec213ad7265ff7b827324c2efbb180615bde9f68d90": {
-    "title": "利用数千个 AI 智能体在生物数据中发现新线索",
-    "summary": "了解 OpenAI、PerturbAI 和 Scripps Research 如何利用分布式 AI 智能体，在数百万脑细胞数据中发现有前景的研究线索。",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
-  "ea92da5c121ecb4527027c2b13ff73af702f93ebcad0444b648bb527336561d3": {
-    "title": "我们如何为 ChatGPT 构建兼顾用户信任与相关性的新型广告系统",
-    "summary": "了解 OpenAI 如何构建由 LLM 驱动的 ChatGPT 广告系统，以理解对话意图、将广告与回答分离，并大规模投放相关广告。",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
@@ -74,24 +44,6 @@
   "3f1a11956436b167380065dcbfb11acfb4b7400895eeef122ae6e9ec1be674ee": {
     "title": "通过一致标准实现广泛访问",
     "summary": "OpenAI 如何与分发合作伙伴合作，坚持一致的防护措施、支持负责任访问，并在使用政策中明确期望。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "3fe372fb2e8166f0e8146fd86373d22b0c153e5f155ff56beb03c21126360e38": {
-    "title": "Cloudflare 借助 OpenAI 将漏洞发现与防御相连",
-    "summary": "Cloudflare 使用 OpenAI Daybreak 调查漏洞并提出修复建议供审查。其开发者使用 Codex 加快构建并提升代码质量。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "e270f5ba4688033de075906df89466646eb9f009fa8bcee5c8b60ee62cebab43": {
-    "title": "前沿 AI 的民主治理，第二部分：赋能网络防御者",
-    "summary": "OpenAI 提出蓝图：以前沿 AI 赋能网络防御者、强化防护措施、现代化网络安全，并增强公共机构韧性。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "22b090900222010d1427f3ec2fd92f40e888564349c3fdcfc7a740ca02e570ed": {
-    "title": "GitHub CLI：选择启用会过期并自动刷新的 OAuth 令牌",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-22T04:01:40Z"
   },
@@ -179,16 +131,52 @@
     "source": "deepseek-flash",
     "at": "2026-10-23T08:37:58Z"
   },
-  "c0184addc509ec8882cc7a7cacd40981d99e565457fd0f149dd344cd5de136ce": {
-    "title": "拉取请求：保存空白字符偏好并改进拆分视图",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
   "f07d0bb3b14ff2bf43917cad2760351fb41875dec27fa459839b7dd7360444af": {
     "title": "哈萨克斯坦为其 AI 未来扩展算力",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-23T08:37:58Z"
+  },
+  "ee4c22366ef7e7abd786b0a4bc8d65774ddf350a3208b6c38568ae822ed0b9b0": {
+    "title": "快速扩展在线存储以服务超10亿ChatGPT用户（第二部分）",
+    "summary": "了解OpenAI如何通过可靠的多租户、全局缓存和Azure Cosmos DB扩展Habitat，使ChatGPT读取速度提升12倍。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
+  },
+  "f8c156dba7886826388b35c0408d87e493aa3c6ad59ba61bfe6146ea7a6b00f6": {
+    "title": "保护我们的前沿模型训练环境",
+    "summary": "OpenAI解释了我们如何加强前沿模型训练与评估的隔离，包括离线环境和高算力红队测试。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
+  },
+  "dc1ed52c8837fe68c51dff9184c08fae42497c126b1b5c8154971f0d39a1136f": {
+    "title": "使用指标API新增OpenCode等工具的用量",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
+  },
+  "400d918642962961b8903f398dfc639bcab034fdf27cc3b7c6f748aa85aee515": {
+    "title": "在Teams中借助GitHub Copilot将通知转化为代码",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
+  },
+  "346bac8fee045e7ca0c58ff7da1d0798ea3991a07192bde8246f64a4ce312927": {
+    "title": "EMU删除问题修复",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
+  },
+  "d99a0b10cf2632a3fa9f642c14610fd95e9a5b1474c94afcb6aaae065f4d75e5": {
+    "title": "公开监控新增分类、有效性、API和Webhook",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
+  },
+  "6174c1cc26228ddf91dd7e72771dabc4138d96ca5e6cf339d1a455eb47354f5a": {
+    "title": "GitHub App企业安装正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
   }
 }

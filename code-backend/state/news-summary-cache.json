@@ -1,27 +1,22 @@
 {
-  "a45f5dfbc3465c866620e57148c541058632d1a5edf02385a45f01cef58e09d9": {
-    "summary": "Visual Studio 9月更新：可在聊天中查看拉取请求、选用团队信任的AI模型、及时修复漏洞包。",
+  "dc1ed52c8837fe68c51dff9184c08fae42497c126b1b5c8154971f0d39a1136f": {
+    "summary": "Copilot用量指标API现可报告OpenCode等更多工具的模型用量",
     "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
+    "at": "2026-10-24T08:12:59Z"
   },
-  "dea8ba729eb28582daacbbc84d793cf6188c0f6dfc256f1fded54e0651c79918": {
-    "summary": "Copilot用量指标现显示组织创建的自定义技能、代理、MCP服务器、斜杠命令和插件名称。",
+  "bf44de9e544de4cbe9fe1a2a613ba67b03dda83fe8633fc284d5c9ec8453b5d7": {
+    "summary": "月之暗面发布Kimi K3.1 Pro，3T级开放权重模型，支持100万token上下文",
     "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
+    "at": "2026-10-24T08:12:59Z"
   },
-  "767a7f383549ba646ff2264723a023fa7a69ca1a4d9513b7eb0b2d41d2d01d16": {
-    "summary": "Copilot Business和Enterprise的Copilot功能全局默认策略开始逐步推出。",
+  "4ab186bcd5d93e27a7a9318717899f1e310390fecbadd98149dabd3b291fa938": {
+    "summary": "欧洲领先金融机构采用开放模型与先进计算构建专有智能技术",
     "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
+    "at": "2026-10-24T08:12:59Z"
   },
-  "7bf4630bf25d53522f00da09db4546e143bdd87be96e2ffc64bdb04bafd719bb": {
-    "summary": "Copilot影响仪表板新增行业对比，企业可对照汇总基准比较代理采用与利用情况。",
+  "054347e9fabbae641e577c929e8dfec03e8486e151054c9ba4d38bf6c035ffdd": {
+    "summary": "NVIDIA Earth-2开放模型在欧洲多地部署，用于天气与气候预测",
     "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "af6b159eb6ea2f663c90fc62eb6dc5015ebfde2d36ae0138f2e4dcf9c2333973": {
-    "summary": "NVIDIA推出Minerva AIOps平台，连接基础设施与工作负载遥测，提升AI工厂正常运行时间与产出。",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
+    "at": "2026-10-24T08:12:59Z"
   }
 }

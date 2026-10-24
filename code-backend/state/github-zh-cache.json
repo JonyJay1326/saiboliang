@@ -144,11 +144,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "docker/docker-agent": {
-    "text": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "sgl-project/sglang": {
     "text": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
     "source": "deepseek-flash",
@@ -183,5 +178,10 @@
     "text": "一个实时像素艺术站点，真实 AI 代理在此执行真实工作。本地优先的桌面代理框架，自带密钥，观看你的团队实际运行。",
     "source": "deepseek-flash",
     "at": "2026-10-23T15:46:10Z"
+  },
+  "kestra-io/kestra": {
+    "text": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体工作流的开源控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本管理、可扩展至数百万次执行。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T08:12:59Z"
   }
 }
