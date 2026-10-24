@@ -1,9 +1,4 @@
 {
-  "anthropics/claude-code": {
-    "text": "Claude Code 是一个代理式编码工具，运行在终端中，理解你的代码库，通过自然语言命令执行日常任务、解释复杂代码并处理 git 工作流，帮助你更快编码。",
-    "source": "deepseek-flash",
-    "at": "2026-09-20T06:51:22Z"
-  },
   "cloudflare/security-audit-skill": {
     "text": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
     "source": "deepseek-flash",
@@ -33,11 +28,6 @@
     "text": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
-  },
-  "LaurieWired/GhidraMCP": {
-    "text": "Ghidra 的 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-10-06T17:15:08Z"
   },
   "lexmount/moli": {
     "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
@@ -69,11 +59,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-16T15:23:39Z"
   },
-  "mobile-next/mobile-mcp": {
-    "text": "用于移动自动化与抓取的 Model Context Protocol 服务器（iOS、Android、模拟器、仿真器和真机）",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
   "xerj-org/xerj": {
     "text": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
     "source": "deepseek-flash",
@@ -101,11 +86,6 @@
   },
   "akitaonrails/ai-memory": {
     "text": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
-    "source": "deepseek-flash",
-    "at": "2026-10-19T17:31:30Z"
-  },
-  "citrolabs/ego-lite": {
-    "text": "面向 AI agent 运行浏览器自动化的最快浏览器，可将已登录的浏览器状态共享给 Codex 或 Claude Code 等 AI agent，且不打扰用户，零成本、零配置",
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
@@ -149,11 +129,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-22T15:54:26Z"
   },
-  "facebookresearch/audiocraft": {
-    "text": "Audiocraft 是深度学习音频处理与生成库，包含 EnCodec 音频压缩/分词器及 MusicGen 音乐生成语言模型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
   "udlbook/udlbook": {
     "text": "《理解深度学习》——Simon J.D. Prince 著",
     "source": "deepseek-flash",
@@ -169,19 +144,54 @@
     "source": "deepseek-flash",
     "at": "2026-10-23T15:46:10Z"
   },
-  "onestardao/WFGY": {
-    "text": "WFGY 正迈向 WFGY 5.0 Polaris Protocol，这是面向 AI 推理、RAG、代理和实际工作流的重要开源版本。包含 Problem Map、Global Debug Card、WFGY 4.0 和 CFV Easter Egg。",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T15:46:10Z"
-  },
   "androoAGI/starnet": {
     "text": "一个实时像素艺术站点，真实 AI 代理在此执行真实工作。本地优先的桌面代理框架，自带密钥，观看你的团队实际运行。",
     "source": "deepseek-flash",
     "at": "2026-10-23T15:46:10Z"
   },
-  "kestra-io/kestra": {
-    "text": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体工作流的开源控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本管理、可扩展至数百万次执行。",
+  "abus-aikorea/voice-pro": {
+    "text": "面向创作者和开发者的 Gradio WebUI，包含 TTS（Edge-TTS、kokoro）与零样本语音克隆（E2 & F5-TTS、CosyVoice），支持 Whisper 音频处理、YouTube 下载、Demucs 人声分离和多语言翻译。",
     "source": "deepseek-flash",
-    "at": "2026-10-24T08:12:59Z"
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "macro-inc/macro": {
+    "text": "Macro 是面向团队的统一工作空间：邮件、聊天、文档、任务、智能体、通话和 CRM，通过 @ 关联并共享 AI 记忆。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "kenn-io/agentsview": {
+    "text": "本地优先的编码智能体会话搜索、分析、洞察与 token 用量统计，支持 Claude Code、Codex 及 50 多种其他智能体。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "greyhatguy007/Machine-Learning-Specialization-Coursera": {
+    "text": "包含斯坦福大学与 Deeplearning.ai 在 Coursera 上机器学习专项课程（2022 年，Andrew NG 教授）的解答与笔记。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "facebookresearch/sam2": {
+    "text": "该仓库提供运行 Meta Segment Anything Model 2（SAM 2）推理的代码、预训练模型检查点下载链接及使用示例笔记本。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "CompVis/stable-diffusion": {
+    "text": "一个潜在文本到图像扩散模型",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "microsoft/BitNet": {
+    "text": "1-bit LLM 的官方推理框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "Armur-Ai/Pentest-Swarm-AI": {
+    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用和报告专家，支持漏洞赏金、持续监控和 CTF 模式。使用 Go 构建，集成 7 种以上原生安全工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
+  },
+  "higgsfield-ai/higgsfield": {
+    "text": "容错、高可扩展的 GPU 编排与机器学习框架，专为训练数十亿至数万亿参数模型设计",
+    "source": "deepseek-flash",
+    "at": "2026-10-24T14:36:47Z"
   }
 }
