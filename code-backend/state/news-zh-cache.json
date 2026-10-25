@@ -1,16 +1,4 @@
 {
-  "301925b8adfcebab105ac57638dcac24a724ac4ac1cc2e1498951e9f9ee0adcd": {
-    "title": "超越树冠覆盖：绘制全球森林类型地图",
-    "summary": "一张全球地图，将地球上每 10 米见方的土地划分为不同的森林类型。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
-  "c3c5d14bfc3aa83f897ab4b37681a572a3be07f5b5f2db676f09d3e8ad4a7fe5": {
-    "title": "云部署来袭：《使命召唤：现代战争 4》登陆 GeForce NOW",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
   "1a543055a02f9816518cc03996b6a0ed89e5e65a847f479103d96112c902ed21": {
     "title": "OpenAI 与波兰 NASK 合作推进 AI 安全与保障",
     "summary": "OpenAI 与波兰 NASK 将在 AI 安全、保障与技术研究方面合作，以加强防护并支持更具韧性的数字生态。",
@@ -70,11 +58,5 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-24T08:12:59Z"
-  },
-  "e421b9f11a64e25976a33f9a309b564aaa59c891195ca18c45b62418ce49a318": {
-    "title": "Ollama 支持语音模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-25T08:30:30Z"
   }
 }

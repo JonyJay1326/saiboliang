@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-25T08:30:30Z",
+  "dataUpdatedAt": "2026-10-25T14:57:55Z",
   "items": [
     {
       "title": "Ollama 支持语音模型",
@@ -133,6 +133,25 @@
       "eventType": "model-review",
       "addedAt": "2026-10-23T15:46:10Z",
       "featured": null
+    },
+    {
+      "title": "MiniMax重磅模型开源！华为昇腾将接入，3天处理超100万亿Token",
+      "sourceUrl": "https://zhidx.com/p/604017.html",
+      "publishedAt": "2026-10-23T10:00:26Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 孙小雯 编辑 | 程茜 智东西10月23日报道，今日， MiniMax开源M3.1 Flash模型权重，模型总参数4280亿",
+      "id": "d233721837ae63b11b736d67275b60694a6159c9b864a4052310776c761c54af",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/604017.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-25T14:57:55Z",
+      "featured": true
     },
     {
       "title": "OpenAI给GPT-6装上“快脑”！100毫秒做决策，API全面开放",
@@ -5170,6 +5189,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-25T08:30:30Z",
-  "generatedAt": "2026-10-25T08:30:30Z"
+  "version": "2026-10-25T14:57:55Z",
+  "generatedAt": "2026-10-25T14:57:55Z"
 }

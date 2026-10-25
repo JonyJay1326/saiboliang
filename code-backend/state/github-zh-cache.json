@@ -9,11 +9,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "dream-num/univer": {
-    "text": "面向 AI 代理的 Office 工具集——电子表格、文档、幻灯片、画布、关系表与 PDF 集于一个运行时。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "heygen-com/hyperframes": {
     "text": "编写 HTML。渲染视频。为代理而构建。",
     "source": "deepseek-flash",
@@ -38,11 +33,6 @@
     "text": "高性能 AI 模型推理引擎",
     "source": "deepseek-flash",
     "at": "2026-10-11T07:43:59Z"
-  },
-  "pytorch/pytorch": {
-    "text": "使用 Python 的张量与动态神经网络，支持强大的 GPU 加速",
-    "source": "deepseek-flash",
-    "at": "2026-10-12T10:58:57Z"
   },
   "vxcontrol/pentagi": {
     "text": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
@@ -79,11 +69,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-18T14:38:23Z"
   },
-  "github/github-mcp-server": {
-    "text": "GitHub 官方 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
   "akitaonrails/ai-memory": {
     "text": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
     "source": "deepseek-flash",
@@ -91,11 +76,6 @@
   },
   "Comfy-Org/ComfyUI": {
     "text": "最强大且模块化的扩散模型 GUI、API 与后端，提供图/节点界面，号称全球最快的本地推理引擎。",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
-  "mixelpixx/Konnect": {
-    "text": "面向 KiCAD 10 的 AI 辅助 PCB 设计。原生 KiCAD 插件，单个 Rust 二进制文件，向 Claude 或自选 LLM 暴露 217 个原理图、布局、布线、布局摆放、设计审查与制造工具。",
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
   },
@@ -109,11 +89,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
   },
-  "googleworkspace/cli": {
-    "text": "Google Workspace CLI：一个命令行工具，覆盖 Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等，基于 Google Discovery Service 动态构建，含 AI agent 技能",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "tile-ai/tilelang": {
     "text": "领域特定语言，用于简化高性能 GPU/CPU/加速器内核的开发",
     "source": "deepseek-flash",
@@ -124,18 +99,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-22T15:54:26Z"
   },
-  "udlbook/udlbook": {
-    "text": "《理解深度学习》——Simon J.D. Prince 著",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
   "leepokai/Codync": {
     "text": "开源 Grok Bot 替代方案：在自有电脑上通过 iPhone、Mac、Windows、Linux 或终端，以机器人形式向 Claude Code、Codex、Cursor、Gemini 等 40+ AI 代理发消息。免费。也是 Muse 和 Dots 的替代方案。使用 Rust 构建。",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T15:46:10Z"
-  },
-  "modelcontextprotocol/java-sdk": {
-    "text": "Model Context Protocol 服务端与客户端的官方 Java SDK，与 Spring AI 合作维护。",
     "source": "deepseek-flash",
     "at": "2026-10-23T15:46:10Z"
   },
@@ -144,33 +109,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-23T15:46:10Z"
   },
-  "abus-aikorea/voice-pro": {
-    "text": "面向创作者和开发者的 Gradio WebUI，包含 TTS（Edge-TTS、kokoro）与零样本语音克隆（E2 & F5-TTS、CosyVoice），支持 Whisper 音频处理、YouTube 下载、Demucs 人声分离和多语言翻译。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T14:36:47Z"
-  },
   "macro-inc/macro": {
     "text": "Macro 是面向团队的统一工作空间：邮件、聊天、文档、任务、智能体、通话和 CRM，通过 @ 关联并共享 AI 记忆。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T14:36:47Z"
-  },
-  "kenn-io/agentsview": {
-    "text": "本地优先的编码智能体会话搜索、分析、洞察与 token 用量统计，支持 Claude Code、Codex 及 50 多种其他智能体。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T14:36:47Z"
-  },
-  "greyhatguy007/Machine-Learning-Specialization-Coursera": {
-    "text": "包含斯坦福大学与 Deeplearning.ai 在 Coursera 上机器学习专项课程（2022 年，Andrew NG 教授）的解答与笔记。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T14:36:47Z"
-  },
-  "facebookresearch/sam2": {
-    "text": "该仓库提供运行 Meta Segment Anything Model 2（SAM 2）推理的代码、预训练模型检查点下载链接及使用示例笔记本。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T14:36:47Z"
-  },
-  "CompVis/stable-diffusion": {
-    "text": "一个潜在文本到图像扩散模型",
     "source": "deepseek-flash",
     "at": "2026-10-24T14:36:47Z"
   },
@@ -188,5 +128,45 @@
     "text": "Ghidra 的 MCP 服务器",
     "source": "deepseek-flash",
     "at": "2026-10-25T08:30:30Z"
+  },
+  "multica-ai/andrej-karpathy-skills": {
+    "text": "单个 CLAUDE.md 文件，用于改进 Claude Code 行为，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "TauricResearch/TradingAgents": {
+    "text": "TradingAgents：多智能体 LLM 金融交易框架",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "citrolabs/ego-lite": {
+    "text": "面向 AI 智能体的最快浏览器自动化工具，可与 Codex 或 Claude Code 等 AI 智能体共享已登录的浏览器状态，且不干扰用户。零成本、零配置。",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "google-gemini/gemini-cli": {
+    "text": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "humanlayer/humanlayer": {
+    "text": "让 AI 编码智能体解决复杂代码库中难题的最佳方式。",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "opendataloader-project/opendataloader-pdf": {
+    "text": "面向 AI 就绪数据的 PDF 解析器。自动化 PDF 无障碍处理。开源。",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "Vincentwei1021/video-shotcraft": {
+    "text": "适用于 Claude Code 与 Codex 的 AI 视频技能——基于 Remotion 制作电影级产品视频：152 张镜头配方卡、209 个动效预览、一个生产级模板",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
+  },
+  "Armur-Ai/Pentest-Swarm-AI": {
+    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用与报告专家，支持漏洞赏金、持续监控和 CTF 模式。使用 Go 构建，集成 7 种以上原生安全工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-25T14:57:55Z"
   }
 }
