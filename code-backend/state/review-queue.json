@@ -886,18 +886,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "hashicorp/terraform",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
-      "sourceUrl": "https://github.com/hashicorp/terraform"
-    },
-    "id": "c4c261396e857dc9deb2a2b42882f275e1f935f98e991bca556bd3d71bc6135b",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ShareX/ShareX",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1568,18 +1556,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "antonio-orionus/Arroxy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free open-source downloader for YouTube and 2000+ sites on Windows, macOS, and Linux. Up to 8K HDR 60fps, Dolby audio, MP3, Shorts, playlists, channels, subtitles, SponsorBlock, and just part of a video. Built-in browser: sign in to download private, members-only, and age-restricted videos. No ads. 50 languages.",
-      "sourceUrl": "https://github.com/antonio-orionus/Arroxy"
-    },
-    "id": "025192aea9ec535a70358abca258dd1b6d0618be998f2a9fcb2f0bfd01bd5be7",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ranxianglei/billion-context",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1807,17 +1783,6 @@
     "createdAt": "2026-10-24T14:36:47Z"
   },
   {
-    "kind": "github-page",
-    "objectId": "java",
-    "reason": "Trending article structure missing",
-    "evidence": {
-      "sourceUrl": "https://github.com/trending/java?since=monthly"
-    },
-    "id": "9ff9452189a635b6af9416c95b32373c4bf06a97d2dd3b06999bc15baf5cba51",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "Effect-TS/effect",
     "reason": "AI applicability uncertain",
@@ -1838,18 +1803,6 @@
       "sourceUrl": "https://github.com/anthropics/sandbox-runtime"
     },
     "id": "af8f4d823ef6465385537bcdc0596711764278ec44e623348e770a90646fe986",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "trufflesecurity/trufflehog",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find, verify, and analyze leaked credentials",
-      "sourceUrl": "https://github.com/trufflesecurity/trufflehog"
-    },
-    "id": "545a78d5b55ee4e88256df13f290f2765dd6aae9d92ec4529cadbfd377357b84",
     "status": "pending",
     "createdAt": "2026-10-24T14:36:47Z"
   },
@@ -1879,18 +1832,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "XTLS/Xray-core",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
-      "sourceUrl": "https://github.com/XTLS/Xray-core"
-    },
-    "id": "85e86ff6c092e61895dfabb839f2d473c618b15a46d2882c79df7fa267641855",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "seaweedfs/seaweedfs",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1898,42 +1839,6 @@
       "sourceUrl": "https://github.com/seaweedfs/seaweedfs"
     },
     "id": "84897e3cbdefb40e8092cabccf9683c25069c5e43394fa7fb4e91753c9ee0b12",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/WSL",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Windows Subsystem for Linux",
-      "sourceUrl": "https://github.com/microsoft/WSL"
-    },
-    "id": "007775127776e484106e5548c3659ef76bf2d1a392e722ef8426851fd9826add",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "hugo2046/QuantsPlaybook",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "量化研究-券商金工研报复现",
-      "sourceUrl": "https://github.com/hugo2046/QuantsPlaybook"
-    },
-    "id": "e5a0925e8c14649b24b0e6047fd4992435f60d0b25a34b60df86512e7378a8c9",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "xiaolai/the-craft-of-selfteaching",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "One has no future if one couldn't teach themself.",
-      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
-    },
-    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
     "status": "pending",
     "createdAt": "2026-10-24T14:36:47Z"
   },
@@ -1963,18 +1868,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "icsharpcode/ILSpy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": ".NET Decompiler with support for PDB generation, ReadyToRun, Metadata (&more) - cross-platform!",
-      "sourceUrl": "https://github.com/icsharpcode/ILSpy"
-    },
-    "id": "232558e96a99d8857227107f0c08637f4420420cd00989b54b75e556835a77b3",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Sonarr/Sonarr",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1987,30 +1880,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "RayrenSX/iPhoneMirror",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Local Windows iPhone/iPad mirroring over USB and AirPlay with D3D11 preview, multi-device sessions, OBS output, and a standalone driver manager.",
-      "sourceUrl": "https://github.com/RayrenSX/iPhoneMirror"
-    },
-    "id": "de06690f00c6b34b7e290de95a74021c1ea8653f2c442dec72babc62d159dcfb",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "QL-Win/QuickLook",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Bring macOS “Quick Look” feature to Windows",
-      "sourceUrl": "https://github.com/QL-Win/QuickLook"
-    },
-    "id": "65a8807bd9f91f9f3f6485dfe63fb5b678ba35261b9a0e0f17731e90b3c06d76",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "bevyengine/bevy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -2018,18 +1887,6 @@
       "sourceUrl": "https://github.com/bevyengine/bevy"
     },
     "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "timhartmann7/omnyssh",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fast, open-source SSH client and server manager for macOS, Windows and Linux. Desktop GUI and terminal TUI with a live metrics dashboard, tabbed terminal, SFTP file manager, port forwarding, one-click SSH keys and snippets. Built in Rust.",
-      "sourceUrl": "https://github.com/timhartmann7/omnyssh"
-    },
-    "id": "b820c354c385c5eace1974c9eb0a60d950b274918abfe63517ce1abdf21c3ee6",
     "status": "pending",
     "createdAt": "2026-10-24T14:36:47Z"
   },

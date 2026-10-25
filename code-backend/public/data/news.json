@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-24T14:36:47Z",
+  "dataUpdatedAt": "2026-10-25T08:30:30Z",
   "items": [
+    {
+      "title": "Ollama 支持语音模型",
+      "sourceUrl": "https://ollama.com/blog/speech-models",
+      "publishedAt": "2026-10-24T00:00:00Z",
+      "source": "Ollama",
+      "summary": "Ollama新增语音模型支持，首发Gradium的Phonon，支持五种语言、数十种音色，生成即流式播放，Apple Silicon上速度超实时100倍。",
+      "id": "e421b9f11a64e25976a33f9a309b564aaa59c891195ca18c45b62418ce49a318",
+      "originalTitle": "Speech models in Ollama",
+      "translatedAt": "2026-10-25T08:30:30Z",
+      "lang": "en",
+      "originalSource": "Ollama",
+      "originalUrl": "https://ollama.com/blog/speech-models",
+      "originalVerifiedAt": "2026-10-25T08:30:30Z",
+      "url": "https://ollama.com/blog/speech-models",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-25T08:30:30Z",
+      "featured": true
+    },
     {
       "title": "使用指标API新增OpenCode等工具的用量",
       "sourceUrl": "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode",
@@ -5151,6 +5170,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-24T14:36:47Z",
-  "generatedAt": "2026-10-24T14:36:47Z"
+  "version": "2026-10-25T08:30:30Z",
+  "generatedAt": "2026-10-25T08:30:30Z"
 }

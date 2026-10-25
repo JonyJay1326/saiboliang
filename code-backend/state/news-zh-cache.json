@@ -1,46 +1,4 @@
 {
-  "39cad894cdd240fbe2dba606200e547216d43a1655f56c86db3d6329a851a826": {
-    "title": "AT&T 如何借助 OpenAI 重新思考内部法律工作",
-    "summary": "AT&T 与 OpenAI 合作，让法律知识更易获取。了解其 LegalEdge 团队如何重新思考受理流程并扩展法律判断。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "3f1a11956436b167380065dcbfb11acfb4b7400895eeef122ae6e9ec1be674ee": {
-    "title": "通过一致标准实现广泛访问",
-    "summary": "OpenAI 如何与分发合作伙伴合作，坚持一致的防护措施、支持负责任访问，并在使用政策中明确期望。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T04:01:40Z"
-  },
-  "6f92d29565569592ae8adeb209944367b57ff00c7a586a9e85f069cabf43be03": {
-    "title": "企业如何利用NVIDIA DSX突破电力瓶颈",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T08:41:59Z"
-  },
-  "13b603cf56b699869be463e78f151db5a79304815eb68026a1abdb1dc4d253c6": {
-    "title": "NVIDIA变革欧洲零售业，从数字发现到实体运营",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T08:41:59Z"
-  },
-  "e6667a5dd8d4716e2a817555e5c3e45127b917d5cf4e2fd4c7a1920986dc6cb0": {
-    "title": "NVIDIA开放模型助力欧洲公共部门新一轮项目",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-22T08:41:59Z"
-  },
-  "da5fa7cddb0bb32116f9d2af425d72b4fb483977bf4a46b5a9a1346879691ec9": {
-    "title": "推出 SpaceX Super Intelligence 合作伙伴网络",
-    "summary": "这是我们面向使用 Grok 构建产品、解决方案和服务的公司的官方计划，服务于我们共同的潜在客户和客户。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
-  "6400feb681472530a689e8c59132cfe6d13f5863532ecd60e409a4825c59746b": {
-    "title": "FDE 在 OpenAI 意味着什么",
-    "summary": "前向部署工程在 OpenAI 意味着什么",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
-  },
   "301925b8adfcebab105ac57638dcac24a724ac4ac1cc2e1498951e9f9ee0adcd": {
     "title": "超越树冠覆盖：绘制全球森林类型地图",
     "summary": "一张全球地图，将地球上每 10 米见方的土地划分为不同的森林类型。",
@@ -62,12 +20,6 @@
   "891b7e0bbf66f86d27b770f3dc53e0fbecfc246eeadf29503262f6d9c70adad7": {
     "title": "使用 Decisions API 构建响应更快的应用",
     "summary": "为任意应用提供快速、专注、低成本的决策。",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "eda525050cea8fce4b13823379a8b9659ff224375e0356616ea34596cdb17cc5": {
-    "title": "Uber 携手 OpenAI 向全体员工提供 ChatGPT Work",
-    "summary": "Uber 正向 3 万多名员工推广 ChatGPT Work，帮助团队研究、分析数据、制作演示文稿并完成复杂工作流。",
     "source": "deepseek-flash",
     "at": "2026-10-23T08:37:58Z"
   },
@@ -118,5 +70,11 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-24T08:12:59Z"
+  },
+  "e421b9f11a64e25976a33f9a309b564aaa59c891195ca18c45b62418ce49a318": {
+    "title": "Ollama 支持语音模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-25T08:30:30Z"
   }
 }
