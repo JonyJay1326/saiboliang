@@ -812,17 +812,6 @@
     "createdAt": "2026-10-23T08:37:58Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "389e9039182f86f02e4c4d5585fc23d1465b984ec65c457a37f5a787d03435a1",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "fb6787c82c7bab7a84e350f6f5cd1c17bc41d0584bb4d5c25ef28bb99360fa92",
-    "status": "pending",
-    "createdAt": "2026-10-23T08:37:58Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "fastapi/fastapi",
     "reason": "AI applicability uncertain",

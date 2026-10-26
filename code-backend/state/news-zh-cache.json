@@ -1,34 +1,4 @@
 {
-  "1a543055a02f9816518cc03996b6a0ed89e5e65a847f479103d96112c902ed21": {
-    "title": "OpenAI 与波兰 NASK 合作推进 AI 安全与保障",
-    "summary": "OpenAI 与波兰 NASK 将在 AI 安全、保障与技术研究方面合作，以加强防护并支持更具韧性的数字生态。",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "891b7e0bbf66f86d27b770f3dc53e0fbecfc246eeadf29503262f6d9c70adad7": {
-    "title": "使用 Decisions API 构建响应更快的应用",
-    "summary": "为任意应用提供快速、专注、低成本的决策。",
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "2a94d66f0451a98a97a8af28a1e68799b4d219010ebce6be93433c9f2cfc2ea2": {
-    "title": "Meta API 端点已针对 Actions blob 存储更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "b6c252bde4e3812d77d058b62a8bc02e03250af41c29683e529cb728ee221ebd": {
-    "title": "数据驻留版现已提供公开监控",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
-  "f07d0bb3b14ff2bf43917cad2760351fb41875dec27fa459839b7dd7360444af": {
-    "title": "哈萨克斯坦为其 AI 未来扩展算力",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-23T08:37:58Z"
-  },
   "f8c156dba7886826388b35c0408d87e493aa3c6ad59ba61bfe6146ea7a6b00f6": {
     "title": "保护我们的前沿模型训练环境",
     "summary": "OpenAI解释了我们如何加强前沿模型训练与评估的隔离，包括离线环境和高算力红队测试。",

@@ -79,11 +79,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-20T15:40:23Z"
   },
-  "Asymptote-Labs/agent-beacon": {
-    "text": "跨 harness、可自我改进的 AI 智能体记忆层。加入社区：https://discord.com/invite/zdNChS2fBu",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
   "shiyu-coder/Kronos": {
     "text": "Kronos：面向金融市场语言的基础模型",
     "source": "deepseek-flash",
@@ -164,9 +159,14 @@
     "source": "deepseek-flash",
     "at": "2026-10-25T14:57:55Z"
   },
-  "Armur-Ai/Pentest-Swarm-AI": {
-    "text": "使用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用与报告专家，支持漏洞赏金、持续监控和 CTF 模式。使用 Go 构建，集成 7 种以上原生安全工具。",
+  "jub0t/Concat": {
+    "text": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
     "source": "deepseek-flash",
-    "at": "2026-10-25T14:57:55Z"
+    "at": "2026-10-26T09:03:08Z"
+  },
+  "higgsfield-ai/higgsfield": {
+    "text": "容错、高可扩展的 GPU 编排与机器学习框架，面向数十亿至数万亿参数模型的训练。",
+    "source": "deepseek-flash",
+    "at": "2026-10-26T09:03:08Z"
   }
 }

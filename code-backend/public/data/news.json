@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-10-25T14:57:55Z",
+  "dataUpdatedAt": "2026-10-26T09:03:08Z",
   "items": [
+    {
+      "title": "KV Cache砍掉99%，单卡吞吐飙6倍，港科CMU联手岩山科技开源新模型",
+      "sourceUrl": "https://www.qbitai.com/2026/10/505407.html",
+      "publishedAt": "2026-10-26T06:45:25Z",
+      "source": "量子位",
+      "summary": "一张卡，512路长推理同时跑",
+      "id": "19e43b19bc6a13b3c51bc28c9daab1bf1b64c043624e7f95447676a42310077b",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/505407.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-10-26T09:03:08Z",
+      "featured": true
+    },
+    {
+      "title": "无问芯穹与三体宇宙联合发布智子Agent 1.0",
+      "sourceUrl": "https://www.qbitai.com/2026/10/505309.html",
+      "publishedAt": "2026-10-26T06:33:56Z",
+      "source": "量子位",
+      "summary": "打造以多智能体协同为核心的角色Agent",
+      "id": "1b4c08411d00e8409419814dfdd34952020946699353272c1c8deead5a8812db",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/505309.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-26T09:03:08Z",
+      "featured": true
+    },
+    {
+      "title": "10亿Tokens免费送！实测全国产算力模型Spark-X2.6，纯代码搓出3D故宫",
+      "sourceUrl": "https://www.qbitai.com/2026/10/505225.html",
+      "publishedAt": "2026-10-26T06:31:50Z",
+      "source": "量子位",
+      "summary": "从训练、推理到端侧部署，讯飞坚持全栈自主可控",
+      "id": "03176602933192bace351966358b0096e61f304ff09c7fc65f26f1530aaf78cb",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/505225.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-26T09:03:08Z",
+      "featured": true
+    },
     {
       "title": "Ollama 支持语音模型",
       "sourceUrl": "https://ollama.com/blog/speech-models",
@@ -5189,6 +5246,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-25T14:57:55Z",
-  "generatedAt": "2026-10-25T14:57:55Z"
+  "version": "2026-10-26T09:03:08Z",
+  "generatedAt": "2026-10-26T09:03:08Z"
 }
