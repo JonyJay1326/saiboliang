@@ -1,10 +1,4 @@
 {
-  "f8c156dba7886826388b35c0408d87e493aa3c6ad59ba61bfe6146ea7a6b00f6": {
-    "title": "保护我们的前沿模型训练环境",
-    "summary": "OpenAI解释了我们如何加强前沿模型训练与评估的隔离，包括离线环境和高算力红队测试。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T08:12:59Z"
-  },
   "400d918642962961b8903f398dfc639bcab034fdf27cc3b7c6f748aa85aee515": {
     "title": "在Teams中借助GitHub Copilot将通知转化为代码",
     "summary": null,
@@ -17,16 +11,16 @@
     "source": "deepseek-flash",
     "at": "2026-10-24T08:12:59Z"
   },
-  "d99a0b10cf2632a3fa9f642c14610fd95e9a5b1474c94afcb6aaae065f4d75e5": {
-    "title": "公开监控新增分类、有效性、API和Webhook",
-    "summary": null,
+  "7e73eebe3e909303c4c59a7dc0b734e92c38bcdbedd7db32071af67e1885bb5c": {
+    "title": "Fanatics 与 OpenAI 如何简化球迷体验",
+    "summary": "Fanatics 借助 OpenAI 通过 Shop the Look 帮助球迷搭配比赛日穿搭。在约 3 万件 MLB 产品上测试显示互动率提升 10%。",
     "source": "deepseek-flash",
-    "at": "2026-10-24T08:12:59Z"
+    "at": "2026-10-26T17:25:14Z"
   },
-  "6174c1cc26228ddf91dd7e72771dabc4138d96ca5e6cf339d1a455eb47354f5a": {
-    "title": "GitHub App企业安装正式可用",
-    "summary": null,
+  "b1d7eb2dedce5839f5898b833190e67feba22fd18c12ab158ab4af97756b01c4": {
+    "title": "我们的最新 AI Quest：绘制人类大脑图谱",
+    "summary": "一幅旋转行星的插图，展示多个卡通人物挥手。顶部文字为“AI Quests”",
     "source": "deepseek-flash",
-    "at": "2026-10-24T08:12:59Z"
+    "at": "2026-10-26T17:25:14Z"
   }
 }

@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-26T09:03:08Z",
+  "dataUpdatedAt": "2026-10-26T17:25:14Z",
   "items": [
+    {
+      "title": "启元机器人5000台下线 物理AI迈向家庭消费场",
+      "sourceUrl": "https://zhidx.com/p/604553.html",
+      "publishedAt": "2026-10-26T12:02:51Z",
+      "source": "智东西",
+      "summary": "智东西 编辑 | 三北 智东西10月26日报道，10月25日，启元机器人第5000台个人机器人正式下线。",
+      "id": "9dc3d2a1c464d6a5f8db71b1da8e556cb260911a0637c0bb27ae27e1563fa334",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/604553.html",
+      "category": "industry",
+      "eventType": "service-retirement",
+      "addedAt": "2026-10-26T17:25:14Z",
+      "featured": true
+    },
     {
       "title": "KV Cache砍掉99%，单卡吞吐飙6倍，港科CMU联手岩山科技开源新模型",
       "sourceUrl": "https://www.qbitai.com/2026/10/505407.html",
@@ -5246,6 +5265,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-26T09:03:08Z",
-  "generatedAt": "2026-10-26T09:03:08Z"
+  "version": "2026-10-26T17:25:14Z",
+  "generatedAt": "2026-10-26T17:25:14Z"
 }
