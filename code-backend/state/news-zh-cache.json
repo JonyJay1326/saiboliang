@@ -29,12 +29,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T09:06:20Z"
   },
-  "27334100e818b98514ff319836bc3b78479c8228c2a09656f9dea445b0edf902": {
-    "title": "ChatGPT 不断扩展的工作世界",
-    "summary": "探索 OpenAI Signals 关于近 100 个国家 165 项工作活动的数据，揭示人们如何用 ChatGPT 工作及使用变化。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
-  },
   "742d30efdc4090c11a97794f6a72e90c1243857798823aeed51fe879a1c3fcd7": {
     "title": "Ultrafast 如何将 OpenAI 的事件调查从数小时缩短至数分钟",
     "summary": "了解 OpenAI 工程师如何用 Codex Ultrafast 在数分钟内调查事件，实现更快安全分析、代码重构与日常工作流。",
@@ -47,16 +41,28 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T09:06:20Z"
   },
-  "b26f70c790034ce0463adf39499836fd564af69cb0b98406a80859a5b0986d83": {
-    "title": "GitHub Copilot 辅助权限正式可用",
-    "summary": null,
+  "2cf69418651c9e4ae19010e7f210c4550a14bbfc11f9a53f06014e006f69e36a": {
+    "title": "你的下一位销售队友应该是 Grok Bot",
+    "summary": "SpaceXSI 销售团队构建了 Shared Bots，用于潜在客户开发、报价和交易审核，让每位销售代表都能基于同一套最新专业知识开展工作。",
     "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
+    "at": "2026-10-27T16:42:38Z"
   },
-  "256c7b6c72dd5aaae095aea797fd23cb7b985923189440629f312245ad6b1112": {
-    "title": "GitHub Copilot 中的 GPT-6.1 Terra",
+  "393575ee7d83ff0a65d333d8be46ec5237c4c4f8ffd65a18f4b5764a81e08f2c": {
+    "title": "Genie 4：新一代世界模拟",
+    "summary": "Genie 4：我们的新世界模型，在实时模拟中实现前所未有的真实感。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "85fdf95f1fdc5eecfcb1a7c5c441591b375a1a4306eb106a0903d46a2a17b2e3": {
+    "title": "AI 如何改变数百万痴呆症患者的发现节奏",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "a9dcb410f7163a89c7350c7358707fb1869f37cd22bd781f15669bc6ff2866c7": {
+    "title": "通过敏捷油藏建模扩展油藏不确定性分析",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
   }
 }

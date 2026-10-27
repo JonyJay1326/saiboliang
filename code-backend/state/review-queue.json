@@ -339,18 +339,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "docmirror/dev-sidecar",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "开发者边车，github打不开，github加速，git clone加速，git release下载加速，stackoverflow加速",
-      "sourceUrl": "https://github.com/docmirror/dev-sidecar"
-    },
-    "id": "65dc4911aee291d65c8cafaba72e974893140e771241d255b80d6e73af49307b",
-    "status": "pending",
-    "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/knowledge-work-plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -360,18 +348,6 @@
     "id": "093ff0a729620a78a81e3dad9f4f2c435b2c42cff1c1e1e8384107c785399107",
     "status": "pending",
     "createdAt": "2026-10-06T17:15:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "earthtojake/text-to-cad",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Give your agent CAD superpowers.",
-      "sourceUrl": "https://github.com/earthtojake/text-to-cad"
-    },
-    "id": "5e240026e9bd5e198f54a337f9965865cffa468d5dec207bed8ef4b4e5a9d777",
-    "status": "pending",
-    "createdAt": "2026-10-07T17:50:43Z"
   },
   {
     "kind": "github-classification",
@@ -479,18 +455,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "skylot/jadx",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dex to Java decompiler",
-      "sourceUrl": "https://github.com/skylot/jadx"
-    },
-    "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
-    "status": "pending",
-    "createdAt": "2026-10-14T15:50:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/claude-plugins-official",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -510,18 +474,6 @@
       "sourceUrl": "https://github.com/react/react"
     },
     "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PowerShell/PowerShell",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PowerShell for every system!",
-      "sourceUrl": "https://github.com/PowerShell/PowerShell"
-    },
-    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
     "status": "pending",
     "createdAt": "2026-10-16T15:23:39Z"
   },
@@ -548,18 +500,6 @@
     "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
     "status": "pending",
     "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "LibreSpark/LibreTV",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一分钟搭建影视站，支持Docker等部署方式",
-      "sourceUrl": "https://github.com/LibreSpark/LibreTV"
-    },
-    "id": "066c5ac41f9656b08d34a5b5b63fa88a72a53008963a22f141c5463232caad9a",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
   },
   {
     "kind": "github-classification",
@@ -646,30 +586,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ShareX/ShareX",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
-      "sourceUrl": "https://github.com/ShareX/ShareX"
-    },
-    "id": "9cbee9e42167b945e2c4ee970e2fd66a622a75516d23380f1f4e0ffeef78b15b",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "oven-sh/bun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
-      "sourceUrl": "https://github.com/oven-sh/bun"
-    },
-    "id": "20c58dd10cf02a9a7fb36479256c4fe8291d97720189d1ee9099771661d3af0d",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HMCL-dev/HMCL",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -717,18 +633,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MoeKoeMusic/MoeKoeMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
-      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
-    },
-    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
-    "status": "pending",
-    "createdAt": "2026-10-23T08:37:58Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "fastapi/fastapi",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -736,18 +640,6 @@
       "sourceUrl": "https://github.com/fastapi/fastapi"
     },
     "id": "dfc65ae20f33304bd26304c6e7a28cc826d12fa36d96f0685186fe6584986a8d",
-    "status": "pending",
-    "createdAt": "2026-10-23T15:46:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "plugin87/ux-ui-agent-skills",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Turn Claude into a senior design architect: DTCG tokens, 52 components, WCAG 2.2 AA-AAA, 138 design systems, any-framework code, and 50 objective gates that fail the build instead of faking success.",
-      "sourceUrl": "https://github.com/plugin87/ux-ui-agent-skills"
-    },
-    "id": "d8e24933ea6c7503440957f30f467cfaace00d3b371dbe0755ca839dc32e0ee3",
     "status": "pending",
     "createdAt": "2026-10-23T15:46:10Z"
   },
@@ -813,42 +705,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "chaitin/SafeLine",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.",
-      "sourceUrl": "https://github.com/chaitin/SafeLine"
-    },
-    "id": "a463394921e73b9d26c2c54daac1cf62ce17ad304db554ca500262889469df79",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "aquasecurity/trivy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-      "sourceUrl": "https://github.com/aquasecurity/trivy"
-    },
-    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "eugenioenko/ttt",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "TTT Editor (Terminal Text Tool): A real alternative to VS Code, Zed, and Sublime that runs in your terminal. A TUI that feels like GUI. Single binary, zero config.",
-      "sourceUrl": "https://github.com/eugenioenko/ttt"
-    },
-    "id": "ae4c92e03ad88c2822f717da093bffe22c3b122ffe36230a9a03f6e72eae6f84",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "duckdb/duckdb",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -873,18 +729,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Automattic/harper",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
-      "sourceUrl": "https://github.com/Automattic/harper"
-    },
-    "id": "f8aa9a8f53669559754a2d8404fe56b4106eadfb97a7d1fbf9f4e941d0c2bcc1",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "microsoft/skill-recorder",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -892,18 +736,6 @@
       "sourceUrl": "https://github.com/microsoft/skill-recorder"
     },
     "id": "7c5ce64515944bc2daf9427cc9c91d9107b20f87bc01b0425abc3bde0cb3d87c",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Autumn-27/ScopeSentry",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ScopeSentry-Cyberspace mapping, subdomain enumeration, port scanning, sensitive information discovery, vulnerability scanning, distributed nodes",
-      "sourceUrl": "https://github.com/Autumn-27/ScopeSentry"
-    },
-    "id": "d15a6535da76f060081d8a2b57790c8070e97a4784d81f393ce98077fbed6929",
     "status": "pending",
     "createdAt": "2026-10-25T14:57:55Z"
   },
@@ -921,18 +753,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "optiscaler/OptiScaler",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OptiScaler bridges upscaling/frame gen across GPUs. Supports DLSS2+/XeSS/FSR2+ inputs, replaces native upscalers, enables FSR-FG/XeFG on non-FG titles. Supports Nukem mod for DLSSG-to-FSR3 FG.",
-      "sourceUrl": "https://github.com/optiscaler/OptiScaler"
-    },
-    "id": "bc8ecfe130c9e470e73baee0f6d317496e91cc2c3407df1d51267dd61eb6fe0f",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "harry0703/MangoDisk",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -940,18 +760,6 @@
       "sourceUrl": "https://github.com/harry0703/MangoDisk"
     },
     "id": "c14f5d5a1eb919cb7e9ec196747138506cc561b74633f96e6ce7046b36765882",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "yuliskov/SmartTube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Browse media content with your own rules on Android TV",
-      "sourceUrl": "https://github.com/yuliskov/SmartTube"
-    },
-    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
     "status": "pending",
     "createdAt": "2026-10-25T14:57:55Z"
   },
@@ -993,114 +801,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "gin-gonic/gin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.",
-      "sourceUrl": "https://github.com/gin-gonic/gin"
-    },
-    "id": "ea0b284c7b53fabe5931bbeeef48932df47bba2eb28a3aa29b8729d416c84521",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ltaoo/wx_channels_download",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "微信视频号下载器",
-      "sourceUrl": "https://github.com/ltaoo/wx_channels_download"
-    },
-    "id": "a483c130b24b37207597056c2d83f5430094f83e43d58ab4251b60d4198956b4",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "php/frankenphp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🧟 The modern PHP app server",
-      "sourceUrl": "https://github.com/php/frankenphp"
-    },
-    "id": "830a3cc8a6007497d749c093db693be1e513f4919362373218efa1d12979a19b",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "OpenListTeam/OpenList",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A new AList Fork to Anti Trust Crisis",
-      "sourceUrl": "https://github.com/OpenListTeam/OpenList"
-    },
-    "id": "43fd662396c3d0ef8583812afcea23b3cb67a69ff7813b22b1f9a4eb662d248e",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "geode-sdk/geode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The ultimate Geometry Dash modding framework",
-      "sourceUrl": "https://github.com/geode-sdk/geode"
-    },
-    "id": "27138c6285ba37dd6d1ced812627e1e66955bdd63e2243290f90806e20371391",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "official-stockfish/Stockfish",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A free and strong UCI chess engine",
-      "sourceUrl": "https://github.com/official-stockfish/Stockfish"
-    },
-    "id": "18a56f0522e749741e8a67609ed9a5c6dc7406065c6a6351ca45a0ecbf088805",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google-research/google-research",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Google Research",
-      "sourceUrl": "https://github.com/google-research/google-research"
-    },
-    "id": "fbd5a74e4f66aefc5a1a039a0f0d4df35d7d2728f92861ac294777fc2ea1aae1",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FinanceFlash/unvibecode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
-      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
-    },
-    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "karpathy/micrograd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A tiny scalar-valued autograd engine and a neural net library on top of it with PyTorch-like API",
-      "sourceUrl": "https://github.com/karpathy/micrograd"
-    },
-    "id": "b018d1edf849287df53ce95b6636f1c6ee6bfce05de7b48bd529989a103e629c",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "jackfrued/Python-100-Days",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1113,42 +813,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "SirDiabo/GithubLauncher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Launcher that Downloads and Updates Applications from Github Releases",
-      "sourceUrl": "https://github.com/SirDiabo/GithubLauncher"
-    },
-    "id": "35045c763abaaa15ce71fee464cd4d548a44457227d2caa3a6fc94738c7f3e8c",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "STranslate/STranslate",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A ready-to-go translation ocr tool developed with WPF/WPF 开发的一款即用即走的翻译、OCR工具",
-      "sourceUrl": "https://github.com/STranslate/STranslate"
-    },
-    "id": "cd6a4a590ebaeb2ac1deb4a17fc33c0dd89cab2c16208d638410fb5701be7a15",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "JosefNemec/Playnite",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Video game library manager with support for wide range of 3rd party libraries and game emulation support, providing one unified interface for your games.",
-      "sourceUrl": "https://github.com/JosefNemec/Playnite"
-    },
-    "id": "b60d1f390e35d82d9603e3c41fd7c2e470598c2b6009c008db6a64028057d353",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "nautechsystems/nautilus_trader",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1156,174 +820,6 @@
       "sourceUrl": "https://github.com/nautechsystems/nautilus_trader"
     },
     "id": "ab592a52af65babb43349acf08a6158763364d63e48809cc76cb165aab9d9d97",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "redlib-org/redlib",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Private front-end for Reddit",
-      "sourceUrl": "https://github.com/redlib-org/redlib"
-    },
-    "id": "f3de2628b9ff950c8f4260257e25b600482c7edf36a4968a3d196a125909263c",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "TheAlgorithms/Java",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "All Algorithms implemented in Java",
-      "sourceUrl": "https://github.com/TheAlgorithms/Java"
-    },
-    "id": "b1c4379ae2af77a1984dcc09dcb9fd81f8426f2570aab6feb2a90975df1ca6c4",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ReSo7200/InstaEclipse",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An Instagram Xposed module with features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode.",
-      "sourceUrl": "https://github.com/ReSo7200/InstaEclipse"
-    },
-    "id": "eced9d6a382da4a54590e81fd6f3ea31c4bc668b46d281f87362c201c5370c83",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FCL-Team/FoldCraftLauncher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fold Craft Launcher, an Android Minecraft : Java Edition launcher.",
-      "sourceUrl": "https://github.com/FCL-Team/FoldCraftLauncher"
-    },
-    "id": "920690bcba7baa1ea3ce18a1554dfdf3050460884cbc0ee792506ba60c7242de",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "AbdurazaaqMohammed/MP-Manager",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dual pane Android file manager with focus on APKs",
-      "sourceUrl": "https://github.com/AbdurazaaqMohammed/MP-Manager"
-    },
-    "id": "e197a7de4eb90058f4c54e2492dadf7907475233a1e7c5770abaa85a786db11b",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "halo-dev/halo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
-      "sourceUrl": "https://github.com/halo-dev/halo"
-    },
-    "id": "9e05d4c615e1c58406f8c976af5c3dda78fb291c640c6d839f72c33f23f42c50",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "kdn251/interviews",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Everything you need to know to get the job.",
-      "sourceUrl": "https://github.com/kdn251/interviews"
-    },
-    "id": "6e419bcb1fffb22d4e0749e964ad849d8b695aaf97c8af63470b2cb3acc2fd6a",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FreshRSS/FreshRSS",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A free, self-hostable news aggregator…",
-      "sourceUrl": "https://github.com/FreshRSS/FreshRSS"
-    },
-    "id": "a5a6fb9d6f00407f83cfa5a130b95548694d4519575ed91b8d8968e9c11f11cb",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nextcloud/all-in-one",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "📦 The official Nextcloud installation method. Provides easy deployment and maintenance with most features included in this one Nextcloud instance.",
-      "sourceUrl": "https://github.com/nextcloud/all-in-one"
-    },
-    "id": "14a021e68b1bab6c7e60868d80ef3e6836e821204047e9d9bdcdfd3297c14d58",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nextcloud/server",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "☁️ Nextcloud server, a safe home for all your data",
-      "sourceUrl": "https://github.com/nextcloud/server"
-    },
-    "id": "9d97d35e2bff60b8c5e21ebded9ad79bb58816c8658001e30d8e9908a2f24fdd",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "qier222/YesPlayMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "高颜值的第三方网易云播放器，支持 Windows / macOS / Linux",
-      "sourceUrl": "https://github.com/qier222/YesPlayMusic"
-    },
-    "id": "57e31b87359b81a877edfda63e1632be4cc3b380cbe0c1e71288691ee084489f",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FreeTubeApp/FreeTube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An Open Source YouTube app for privacy",
-      "sourceUrl": "https://github.com/FreeTubeApp/FreeTube"
-    },
-    "id": "a948dda44957e02a942fc23e65feb2a6b856c4aa3dff1b56db2a878016a735b7",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "algerkong/AlgerMusicPlayer",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
-      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
-    },
-    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "geekgeekrun/geekgeekrun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "牛人快跑 - GeekGeekRun，求职找工作自动化工具，基于 Puppeteer、Electron。界面友好，简单易用！开源，免费！快速海投、自动开聊、已读不回提醒、职位信息抓取、不合适职位标记、僵尸职位清理；让你即刻变身成为一台冇得感情的求职机器🤖，找工作不内耗。宝宝不用动，妈妈全自动~祝你收获好Offer！",
-      "sourceUrl": "https://github.com/geekgeekrun/geekgeekrun"
-    },
-    "id": "6bfba03a6b314a70bffe6c7e51b074970cfa40e2bca50e652f6b4445b2575700",
     "status": "pending",
     "createdAt": "2026-10-26T17:25:14Z"
   },
@@ -1353,14 +849,26 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zerx-lab/FluxDown",
+    "objectId": "flutter/flutter",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
-      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "sourceUrl": "https://github.com/flutter/flutter"
     },
-    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
+    "id": "cfbd0f27e4bba5eda99ccee79018315b8567e6ede963f0691d7e427109ab106d",
     "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
+    "createdAt": "2026-10-27T16:42:38Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "mg-chao/snow-apps",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
+      "sourceUrl": "https://github.com/mg-chao/snow-apps"
+    },
+    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
+    "status": "pending",
+    "createdAt": "2026-10-27T16:42:38Z"
   }
 ]

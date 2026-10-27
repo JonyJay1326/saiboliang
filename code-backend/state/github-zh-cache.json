@@ -64,11 +64,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "Comfy-Org/ComfyUI": {
-    "text": "最强大且模块化的扩散模型 GUI、API 与后端，提供图/节点界面，号称全球最快的本地推理引擎。",
-    "source": "deepseek-flash",
-    "at": "2026-10-20T15:40:23Z"
-  },
   "shiyu-coder/Kronos": {
     "text": "Kronos：面向金融市场语言的基础模型",
     "source": "deepseek-flash",
@@ -83,11 +78,6 @@
     "text": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
     "source": "deepseek-flash",
     "at": "2026-10-22T15:54:26Z"
-  },
-  "macro-inc/macro": {
-    "text": "Macro 是面向团队的统一工作空间：邮件、聊天、文档、任务、智能体、通话和 CRM，通过 @ 关联并共享 AI 记忆。",
-    "source": "deepseek-flash",
-    "at": "2026-10-24T14:36:47Z"
   },
   "kestra-io/kestra": {
     "text": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体的开源工作流控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本化，可扩展至数百万次执行。",
@@ -139,18 +129,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-26T17:25:14Z"
   },
-  "croffasia/itsaplan": {
-    "text": "开源、自托管的 Linear 与 Plane 替代方案。项目管理与问题跟踪，团队和 AI 代理并肩协作规划并交付产品。",
-    "source": "deepseek-flash",
-    "at": "2026-10-26T17:25:14Z"
-  },
   "aws/agent-toolkit-for-aws": {
     "text": "AWS 官方支持的 MCP 服务器、技能与插件，帮助 AI 代理在 AWS 上构建应用",
-    "source": "deepseek-flash",
-    "at": "2026-10-26T17:25:14Z"
-  },
-  "cloudwego/eino": {
-    "text": "Go 语言的 LLM/AI 应用开发框架。",
     "source": "deepseek-flash",
     "at": "2026-10-26T17:25:14Z"
   },
@@ -159,14 +139,39 @@
     "source": "deepseek-flash",
     "at": "2026-10-26T17:25:14Z"
   },
-  "docker/docker-agent": {
-    "text": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
+  "gitroomhq/postiz-app": {
+    "text": "终极智能体社交媒体排程工具",
     "source": "deepseek-flash",
-    "at": "2026-10-26T17:25:14Z"
+    "at": "2026-10-27T16:42:38Z"
   },
-  "greyhatguy007/Machine-Learning-Specialization-Coursera": {
-    "text": "包含斯坦福大学与Deeplearning.ai在Coursera上机器学习专项课程的习题解答与笔记（2022），由Andrew NG教授讲授",
+  "nightly-labs/openbot": {
+    "text": "本地优先的桌面工作区，用于持久化 AI 队友。运行 Codex、Claude 和 Grok，提供专属工作区、任务队列、文件共享、浏览器控制与智能体间协作。",
     "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "multica-ai/multica": {
+    "text": "让人类与 AI 智能体作为一个团队协作——开源且可自托管。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "QuantumNous/new-api": {
+    "text": "统一的 AI 模型聚合与分发中心。支持将各类 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式。面向个人与企业的集中式模型管理网关。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "infiniflow/ragflow": {
+    "text": "RAGFlow 是领先的开源检索增强生成（RAG）引擎，将前沿 RAG 与 Agent 能力融合，为 LLM 构建更优的上下文层。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "agentgateway/agentgateway": {
+    "text": "面向 AI 智能体与 MCP 服务器的下一代智能体代理。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
+  },
+  "NVIDIA/SkillSpector": {
+    "text": "AI 智能体技能安全扫描器。在安装 Claude Code、Codex 和 MCP 技能前，检测漏洞、恶意模式、安全风险、提示注入、数据外泄与供应链风险。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T16:42:38Z"
   }
 }

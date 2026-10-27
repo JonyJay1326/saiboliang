@@ -2269,16 +2269,16 @@
   },
   "github": {
     "source": "github-trending",
-    "dataUpdatedAt": "2026-10-27T09:06:20Z",
+    "dataUpdatedAt": "2026-10-27T16:42:38Z",
     "week": {
       "period": "weekly",
       "sourceUrl": "https://github.com/trending?since=weekly",
-      "fetchedAt": "2026-10-27T09:06:20Z",
+      "fetchedAt": "2026-10-27T16:42:38Z",
       "items": [
         {
           "repo": "cloudflare/security-audit-skill",
           "sourceRank": 1,
-          "stars": 49061,
+          "stars": 49728,
           "periodStars": 16593,
           "language": "JavaScript",
           "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
@@ -2287,7 +2287,7 @@
         {
           "repo": "stablyai/orca",
           "sourceRank": 3,
-          "stars": 107446,
+          "stars": 107827,
           "periodStars": 9241,
           "language": "TypeScript",
           "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -2296,7 +2296,7 @@
         {
           "repo": "xerj-org/xerj",
           "sourceRank": 4,
-          "stars": 16953,
+          "stars": 17030,
           "periodStars": 8261,
           "language": "Rust",
           "description": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
@@ -2305,7 +2305,7 @@
         {
           "repo": "pbakaus/impeccable",
           "sourceRank": 2,
-          "stars": 89679,
+          "stars": 90179,
           "periodStars": 5863,
           "language": "Rust",
           "description": "让 AI 工具在设计中表现更佳的设计语言。",
@@ -2313,8 +2313,8 @@
         },
         {
           "repo": "heygen-com/hyperframes",
-          "sourceRank": 4,
-          "stars": 73438,
+          "sourceRank": 5,
+          "stars": 73717,
           "periodStars": 5540,
           "language": "TypeScript",
           "description": "编写 HTML。渲染视频。为代理而构建。",
@@ -2322,26 +2322,17 @@
         },
         {
           "repo": "tashfeenahmed/freellmapi",
-          "sourceRank": 9,
-          "stars": 42372,
+          "sourceRank": 10,
+          "stars": 42579,
           "periodStars": 4664,
           "language": "TypeScript",
           "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
           "url": "https://github.com/tashfeenahmed/freellmapi"
         },
         {
-          "repo": "Comfy-Org/ComfyUI",
-          "sourceRank": 6,
-          "stars": 143415,
-          "periodStars": 4109,
-          "language": "Python",
-          "description": "最强大且模块化的扩散模型 GUI、API 与后端，提供图/节点界面，号称全球最快的本地推理引擎。",
-          "url": "https://github.com/Comfy-Org/ComfyUI"
-        },
-        {
           "repo": "TauricResearch/TradingAgents",
           "sourceRank": 3,
-          "stars": 116754,
+          "stars": 117137,
           "periodStars": 3437,
           "language": "Python",
           "description": "TradingAgents：多智能体 LLM 金融交易框架",
@@ -2349,8 +2340,8 @@
         },
         {
           "repo": "NVIDIA/OpenShell",
-          "sourceRank": 8,
-          "stars": 20168,
+          "sourceRank": 7,
+          "stars": 20239,
           "periodStars": 3405,
           "language": "Rust",
           "description": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
@@ -2358,8 +2349,8 @@
         },
         {
           "repo": "multica-ai/andrej-karpathy-skills",
-          "sourceRank": 9,
-          "stars": 225044,
+          "sourceRank": 4,
+          "stars": 225315,
           "periodStars": 3286,
           "language": null,
           "description": "单个 CLAUDE.md 文件，用于改进 Claude Code 行为，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。",
@@ -2367,8 +2358,8 @@
         },
         {
           "repo": "makecindy/cindy",
-          "sourceRank": 6,
-          "stars": 6994,
+          "sourceRank": 8,
+          "stars": 7286,
           "periodStars": 2913,
           "language": "TypeScript",
           "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
@@ -2377,7 +2368,7 @@
         {
           "repo": "akitaonrails/ai-memory",
           "sourceRank": 1,
-          "stars": 13900,
+          "stars": 14000,
           "periodStars": 2838,
           "language": "Rust",
           "description": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
@@ -2386,7 +2377,7 @@
         {
           "repo": "ruvnet/ruflo",
           "sourceRank": 1,
-          "stars": 79637,
+          "stars": 79718,
           "periodStars": 2683,
           "language": "TypeScript",
           "description": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
@@ -2394,8 +2385,8 @@
         },
         {
           "repo": "AgriciDaniel/claude-seo",
-          "sourceRank": 5,
-          "stars": 22399,
+          "sourceRank": 2,
+          "stars": 22586,
           "periodStars": 2546,
           "language": "Python",
           "description": "Claude Code 通用 SEO 技能。26 个子技能与 19 个子代理，覆盖技术 SEO、E-E-A-T、schema、GEO/AEO、代理就绪（Lighthouse Agentic Browsing、WebMCP、llms.txt）、外链、本地 SEO、电商、国际 SEO、Google API 及 PDF/Excel 报告。9 个可选扩展用于实时 SEO 数据。",
@@ -2403,8 +2394,8 @@
         },
         {
           "repo": "shiyu-coder/Kronos",
-          "sourceRank": 13,
-          "stars": 43899,
+          "sourceRank": 12,
+          "stars": 43935,
           "periodStars": 2494,
           "language": "Python",
           "description": "Kronos：面向金融市场语言的基础模型",
@@ -2412,8 +2403,8 @@
         },
         {
           "repo": "jub0t/Concat",
-          "sourceRank": 7,
-          "stars": 11857,
+          "sourceRank": 16,
+          "stars": 11936,
           "periodStars": 2376,
           "language": "Rust",
           "description": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
@@ -2421,71 +2412,107 @@
         },
         {
           "repo": "citrolabs/ego-lite",
-          "sourceRank": 3,
-          "stars": 19985,
+          "sourceRank": 4,
+          "stars": 20111,
           "periodStars": 2034,
           "language": "JavaScript",
           "description": "面向 AI 智能体的最快浏览器自动化工具，可与 Codex 或 Claude Code 等 AI 智能体共享已登录的浏览器状态，且不干扰用户。零成本、零配置。",
           "url": "https://github.com/citrolabs/ego-lite"
         },
         {
-          "repo": "PC2005-cloud/dsh-pet",
-          "sourceRank": 14,
-          "stars": 4431,
-          "periodStars": 1594,
+          "repo": "basketikun/infinite-canvas",
+          "sourceRank": 16,
+          "stars": 9250,
+          "periodStars": 1466,
           "language": "TypeScript",
-          "description": "DSH 桌面宠物：一行命令装好即用的透明动画小桌宠，支持多开、大小位置随心配置；还内置 DIY 素材链，能用 AI 视频自造专属宠物",
-          "url": "https://github.com/PC2005-cloud/dsh-pet"
+          "description": "面向 AI 创作的开源无限画布工作台，集成 AI 生图、参考图编辑、视频生成、Agent 智能助手、画布编排、对话创作、提示词库与素材管理等能力，支持可视化创作流程与多 Agent 协同工作。兼容 OpenAI 接口生态，支持 chatgpt2api、grok2api、flow2api、newapi 等渠道接入。",
+          "url": "https://github.com/basketikun/infinite-canvas"
+        },
+        {
+          "repo": "gitroomhq/postiz-app",
+          "sourceRank": 19,
+          "stars": 39076,
+          "periodStars": 1433,
+          "language": "TypeScript",
+          "description": "终极智能体社交媒体排程工具",
+          "url": "https://github.com/gitroomhq/postiz-app"
         },
         {
           "repo": "Vincentwei1021/video-shotcraft",
-          "sourceRank": 17,
-          "stars": 13943,
+          "sourceRank": 13,
+          "stars": 14055,
           "periodStars": 1297,
           "language": "TypeScript",
           "description": "适用于 Claude Code 与 Codex 的 AI 视频技能——基于 Remotion 制作电影级产品视频：152 张镜头配方卡、209 个动效预览、一个生产级模板",
           "url": "https://github.com/Vincentwei1021/video-shotcraft"
         },
         {
+          "repo": "nightly-labs/openbot",
+          "sourceRank": 14,
+          "stars": 2130,
+          "periodStars": 1151,
+          "language": "TypeScript",
+          "description": "本地优先的桌面工作区，用于持久化 AI 队友。运行 Codex、Claude 和 Grok，提供专属工作区、任务队列、文件共享、浏览器控制与智能体间协作。",
+          "url": "https://github.com/nightly-labs/openbot"
+        },
+        {
           "repo": "google-gemini/gemini-cli",
-          "sourceRank": 16,
-          "stars": 108564,
+          "sourceRank": 6,
+          "stars": 108570,
           "periodStars": 1097,
           "language": "TypeScript",
           "description": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
           "url": "https://github.com/google-gemini/gemini-cli"
         },
         {
-          "repo": "vercel-labs/skills",
-          "sourceRank": 7,
-          "stars": 36764,
-          "periodStars": 1076,
-          "language": "TypeScript",
-          "description": "开放的智能体技能工具 - npx skills",
-          "url": "https://github.com/vercel-labs/skills"
-        },
-        {
           "repo": "sgl-project/sglang",
-          "sourceRank": 8,
-          "stars": 38247,
+          "sourceRank": 7,
+          "stars": 38272,
           "periodStars": 840,
           "language": "Python",
           "description": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
           "url": "https://github.com/sgl-project/sglang"
         },
         {
-          "repo": "croffasia/itsaplan",
+          "repo": "multica-ai/multica",
+          "sourceRank": 7,
+          "stars": 53986,
+          "periodStars": 720,
+          "language": "Go",
+          "description": "让人类与 AI 智能体作为一个团队协作——开源且可自托管。",
+          "url": "https://github.com/multica-ai/multica"
+        },
+        {
+          "repo": "QuantumNous/new-api",
           "sourceRank": 15,
-          "stars": 2012,
-          "periodStars": 575,
-          "language": "TypeScript",
-          "description": "开源、自托管的 Linear 与 Plane 替代方案。项目管理与问题跟踪，团队和 AI 代理并肩协作规划并交付产品。",
-          "url": "https://github.com/croffasia/itsaplan"
+          "stars": 50804,
+          "periodStars": 542,
+          "language": "Go",
+          "description": "统一的 AI 模型聚合与分发中心。支持将各类 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式。面向个人与企业的集中式模型管理网关。",
+          "url": "https://github.com/QuantumNous/new-api"
+        },
+        {
+          "repo": "infiniflow/ragflow",
+          "sourceRank": 17,
+          "stars": 92963,
+          "periodStars": 486,
+          "language": "Go",
+          "description": "RAGFlow 是领先的开源检索增强生成（RAG）引擎，将前沿 RAG 与 Agent 能力融合，为 LLM 构建更优的上下文层。",
+          "url": "https://github.com/infiniflow/ragflow"
+        },
+        {
+          "repo": "higgsfield-ai/skills",
+          "sourceRank": 11,
+          "stars": 1732,
+          "periodStars": 390,
+          "language": "Python",
+          "description": null,
+          "url": "https://github.com/higgsfield-ai/skills"
         },
         {
           "repo": "aws/agent-toolkit-for-aws",
-          "sourceRank": 11,
-          "stars": 3303,
+          "sourceRank": 9,
+          "stars": 3309,
           "periodStars": 388,
           "language": "Python",
           "description": "AWS 官方支持的 MCP 服务器、技能与插件，帮助 AI 代理在 AWS 上构建应用",
@@ -2494,7 +2521,7 @@
         {
           "repo": "datawhalechina/diy-llm",
           "sourceRank": 8,
-          "stars": 1909,
+          "stars": 1930,
           "periodStars": 367,
           "language": "Jupyter Notebook",
           "description": "Covers pre-training data, Tokenizer, Transformer, MoE,distributed training, Scaling Laws, inference & alignment .6 progressive code assignments for full-stack LLM learning | 涵盖预训练数据、分词器、Transformer、MoE、分布式训练、缩放定律、推理与对齐，6 项渐进代码作业，掌握 LLM 全栈知识",
@@ -2502,60 +2529,33 @@
         },
         {
           "repo": "opendataloader-project/opendataloader-pdf",
-          "sourceRank": 7,
-          "stars": 30059,
+          "sourceRank": 6,
+          "stars": 30065,
           "periodStars": 315,
           "language": "Java",
           "description": "面向 AI 就绪数据的 PDF 解析器。自动化 PDF 无障碍处理。开源。",
           "url": "https://github.com/opendataloader-project/opendataloader-pdf"
         },
         {
-          "repo": "macro-inc/macro",
-          "sourceRank": 11,
-          "stars": 5023,
-          "periodStars": 216,
+          "repo": "agentgateway/agentgateway",
+          "sourceRank": 8,
+          "stars": 5680,
+          "periodStars": 258,
           "language": "Rust",
-          "description": "Macro 是面向团队的统一工作空间：邮件、聊天、文档、任务、智能体、通话和 CRM，通过 @ 关联并共享 AI 记忆。",
-          "url": "https://github.com/macro-inc/macro"
-        },
-        {
-          "repo": "zhoushoujianwork/easyeda-agent",
-          "sourceRank": 19,
-          "stars": 843,
-          "periodStars": 119,
-          "language": "Go",
-          "description": "嘉立创EDA专业版(EasyEDA Pro)自动化：给 AI harness 装上画板的「手」—— 一套 typed 原理图/PCB 动作，CLI / Agent Skill / stdio MCP 三形态融合接入。承接嘉立创「不以卖板赚钱，以培养中国工程师为己任」 | EasyEDA Pro automation: the hands of your AI harness — typed schematic/PCB actions via CLI, Agent Skill and stdio MCP.",
-          "url": "https://github.com/zhoushoujianwork/easyeda-agent"
-        },
-        {
-          "repo": "cloudwego/eino",
-          "sourceRank": 18,
-          "stars": 13459,
-          "periodStars": 108,
-          "language": "Go",
-          "description": "Go 语言的 LLM/AI 应用开发框架。",
-          "url": "https://github.com/cloudwego/eino"
-        },
-        {
-          "repo": "greyhatguy007/Machine-Learning-Specialization-Coursera",
-          "sourceRank": 13,
-          "stars": 8106,
-          "periodStars": 63,
-          "language": "Jupyter Notebook",
-          "description": "包含斯坦福大学与Deeplearning.ai在Coursera上机器学习专项课程的习题解答与笔记（2022），由Andrew NG教授讲授",
-          "url": "https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera"
+          "description": "面向 AI 智能体与 MCP 服务器的下一代智能体代理。",
+          "url": "https://github.com/agentgateway/agentgateway"
         }
       ]
     },
     "month": {
       "period": "monthly",
       "sourceUrl": "https://github.com/trending?since=monthly",
-      "fetchedAt": "2026-10-27T09:06:20Z",
+      "fetchedAt": "2026-10-27T16:42:38Z",
       "items": [
         {
           "repo": "stablyai/orca",
           "sourceRank": 11,
-          "stars": 107446,
+          "stars": 107827,
           "periodStars": 28711,
           "language": "TypeScript",
           "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
@@ -2564,7 +2564,7 @@
         {
           "repo": "cloudflare/security-audit-skill",
           "sourceRank": 1,
-          "stars": 49061,
+          "stars": 49728,
           "periodStars": 26289,
           "language": "JavaScript",
           "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
@@ -2573,7 +2573,7 @@
         {
           "repo": "heygen-com/hyperframes",
           "sourceRank": 1,
-          "stars": 73438,
+          "stars": 73717,
           "periodStars": 19856,
           "language": "TypeScript",
           "description": "编写 HTML。渲染视频。为代理而构建。",
@@ -2582,7 +2582,7 @@
         {
           "repo": "lexmount/moli",
           "sourceRank": 6,
-          "stars": 21036,
+          "stars": 21149,
           "periodStars": 19052,
           "language": "Rust",
           "description": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
@@ -2591,7 +2591,7 @@
         {
           "repo": "Panniantong/Agent-Reach",
           "sourceRank": 5,
-          "stars": 104312,
+          "stars": 104710,
           "periodStars": 18035,
           "language": "Python",
           "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
@@ -2600,7 +2600,7 @@
         {
           "repo": "pbakaus/impeccable",
           "sourceRank": 1,
-          "stars": 89679,
+          "stars": 90179,
           "periodStars": 17522,
           "language": "Rust",
           "description": "让 AI 工具在设计中表现更佳的设计语言。",
@@ -2609,7 +2609,7 @@
         {
           "repo": "xerj-org/xerj",
           "sourceRank": 5,
-          "stars": 16953,
+          "stars": 17030,
           "periodStars": 14963,
           "language": "Rust",
           "description": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
@@ -2618,7 +2618,7 @@
         {
           "repo": "tashfeenahmed/freellmapi",
           "sourceRank": 6,
-          "stars": 42372,
+          "stars": 42579,
           "periodStars": 13270,
           "language": "TypeScript",
           "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -2626,8 +2626,8 @@
         },
         {
           "repo": "addyosmani/agent-skills",
-          "sourceRank": 9,
-          "stars": 110912,
+          "sourceRank": 4,
+          "stars": 111037,
           "periodStars": 12002,
           "language": "JavaScript",
           "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -2636,7 +2636,7 @@
         {
           "repo": "NVIDIA/OpenShell",
           "sourceRank": 2,
-          "stars": 20168,
+          "stars": 20239,
           "periodStars": 11321,
           "language": "Rust",
           "description": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
@@ -2645,7 +2645,7 @@
         {
           "repo": "jub0t/Concat",
           "sourceRank": 8,
-          "stars": 11857,
+          "stars": 11936,
           "periodStars": 8058,
           "language": "Rust",
           "description": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
@@ -2654,7 +2654,7 @@
         {
           "repo": "vxcontrol/pentagi",
           "sourceRank": 4,
-          "stars": 32543,
+          "stars": 32565,
           "periodStars": 7733,
           "language": "Go",
           "description": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
@@ -2662,8 +2662,8 @@
         },
         {
           "repo": "t8y2/dbx",
-          "sourceRank": 4,
-          "stars": 27895,
+          "sourceRank": 7,
+          "stars": 27922,
           "periodStars": 7217,
           "language": "Rust",
           "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
@@ -2671,8 +2671,8 @@
         },
         {
           "repo": "ruvnet/ruflo",
-          "sourceRank": 13,
-          "stars": 79637,
+          "sourceRank": 12,
+          "stars": 79718,
           "periodStars": 6557,
           "language": "TypeScript",
           "description": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
@@ -2681,7 +2681,7 @@
         {
           "repo": "TencentCloud/Octop",
           "sourceRank": 9,
-          "stars": 11163,
+          "stars": 11185,
           "periodStars": 6198,
           "language": "Python",
           "description": "更智能的自托管 AI 助手——多用户、多代理。",
@@ -2690,7 +2690,7 @@
         {
           "repo": "byoungd/up",
           "sourceRank": 15,
-          "stars": 69512,
+          "stars": 69548,
           "periodStars": 5968,
           "language": "JavaScript",
           "description": "韩先凯的人生进阶指南 AI时代 中英双语终身学习指南：英语学习、AI 协作、真实项目与成长证据。",
@@ -2698,26 +2698,26 @@
         },
         {
           "repo": "akitaonrails/ai-memory",
-          "sourceRank": 7,
-          "stars": 13900,
+          "sourceRank": 9,
+          "stars": 14001,
           "periodStars": 5360,
           "language": "Rust",
           "description": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
           "url": "https://github.com/akitaonrails/ai-memory"
         },
         {
-          "repo": "shiyu-coder/Kronos",
-          "sourceRank": 11,
-          "stars": 43899,
-          "periodStars": 4567,
+          "repo": "NVIDIA/SkillSpector",
+          "sourceRank": 17,
+          "stars": 22682,
+          "periodStars": 4309,
           "language": "Python",
-          "description": "Kronos：面向金融市场语言的基础模型",
-          "url": "https://github.com/shiyu-coder/Kronos"
+          "description": "AI 智能体技能安全扫描器。在安装 Claude Code、Codex 和 MCP 技能前，检测漏洞、恶意模式、安全风险、提示注入、数据外泄与供应链风险。",
+          "url": "https://github.com/NVIDIA/SkillSpector"
         },
         {
           "repo": "vercel-labs/skills",
           "sourceRank": 9,
-          "stars": 36764,
+          "stars": 36815,
           "periodStars": 4297,
           "language": "TypeScript",
           "description": "开放的智能体技能工具 - npx skills",
@@ -2725,8 +2725,8 @@
         },
         {
           "repo": "Vincentwei1021/video-shotcraft",
-          "sourceRank": 18,
-          "stars": 13943,
+          "sourceRank": 15,
+          "stars": 14055,
           "periodStars": 4231,
           "language": "TypeScript",
           "description": "适用于 Claude Code 与 Codex 的 AI 视频技能——基于 Remotion 制作电影级产品视频：152 张镜头配方卡、209 个动效预览、一个生产级模板",
@@ -2734,8 +2734,8 @@
         },
         {
           "repo": "makecindy/cindy",
-          "sourceRank": 22,
-          "stars": 6994,
+          "sourceRank": 13,
+          "stars": 7286,
           "periodStars": 3336,
           "language": "TypeScript",
           "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
@@ -2744,16 +2744,25 @@
         {
           "repo": "AstrBotDevs/AstrBot",
           "sourceRank": 14,
-          "stars": 44011,
+          "stars": 44149,
           "periodStars": 2947,
           "language": "Python",
           "description": "AI Agent 助手与开发框架，集成多种 IM 平台、LLM、插件与 AI 功能，可作为 openclaw 替代方案。",
           "url": "https://github.com/AstrBotDevs/AstrBot"
         },
         {
+          "repo": "gitroomhq/postiz-app",
+          "sourceRank": 19,
+          "stars": 39076,
+          "periodStars": 2590,
+          "language": "TypeScript",
+          "description": "终极智能体社交媒体排程工具",
+          "url": "https://github.com/gitroomhq/postiz-app"
+        },
+        {
           "repo": "Gaurav-Gosain/tuios",
           "sourceRank": 1,
-          "stars": 6119,
+          "stars": 6136,
           "periodStars": 2403,
           "language": "Go",
           "description": "一个了解你的智能体在做什么的终端窗口管理器。平铺窗格、工作区、可跨重启存活的会话，以及为每个编码智能体提供的统一收件箱。",
@@ -2762,7 +2771,7 @@
         {
           "repo": "78/xiaozhi-esp32",
           "sourceRank": 2,
-          "stars": 32047,
+          "stars": 32070,
           "periodStars": 1857,
           "language": "C++",
           "description": "An MCP-based chatbot | 一个基于MCP的聊天机器人",
@@ -2770,8 +2779,8 @@
         },
         {
           "repo": "google-gemini/gemini-cli",
-          "sourceRank": 21,
-          "stars": 108564,
+          "sourceRank": 16,
+          "stars": 108570,
           "periodStars": 1759,
           "language": "TypeScript",
           "description": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
@@ -2779,8 +2788,8 @@
         },
         {
           "repo": "kestra-io/kestra",
-          "sourceRank": 8,
-          "stars": 30025,
+          "sourceRank": 9,
+          "stars": 30035,
           "periodStars": 1737,
           "language": "Java",
           "description": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体的开源工作流控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本化，可扩展至数百万次执行。",
@@ -2788,8 +2797,8 @@
         },
         {
           "repo": "tensorflow/tensorflow",
-          "sourceRank": 16,
-          "stars": 201288,
+          "sourceRank": 12,
+          "stars": 201296,
           "periodStars": 1683,
           "language": "C++",
           "description": "面向所有人的开源机器学习框架",
@@ -2798,7 +2807,7 @@
         {
           "repo": "LaurieWired/GhidraMCP",
           "sourceRank": 4,
-          "stars": 11594,
+          "stars": 11596,
           "periodStars": 1448,
           "language": "Java",
           "description": "Ghidra 的 MCP 服务器",
@@ -2806,27 +2815,18 @@
         },
         {
           "repo": "tile-ai/tilelang",
-          "sourceRank": 16,
-          "stars": 8801,
+          "sourceRank": 15,
+          "stars": 8805,
           "periodStars": 1332,
           "language": "Python",
           "description": "领域特定语言，用于简化高性能 GPU/CPU/加速器内核的开发",
           "url": "https://github.com/tile-ai/tilelang"
-        },
-        {
-          "repo": "docker/docker-agent",
-          "sourceRank": 22,
-          "stars": 4611,
-          "periodStars": 1272,
-          "language": "Go",
-          "description": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
-          "url": "https://github.com/docker/docker-agent"
         }
       ]
     }
   },
   "news": {
-    "dataUpdatedAt": "2026-10-27T09:06:20Z",
+    "dataUpdatedAt": "2026-10-27T16:42:38Z",
     "items": [
       {
         "title": "OpenCode 发布 v2.2.0",
@@ -2902,6 +2902,25 @@
         "category": "model",
         "eventType": "model-release",
         "addedAt": "2026-10-27T09:06:20Z",
+        "featured": true
+      },
+      {
+        "title": "阿里发布 qwen-audio-3.1-realtime-flash",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-27&model=qwen-audio-3.1-realtime-flash",
+        "publishedAt": "2026-10-26T16:00:00Z",
+        "source": "阿里云百炼",
+        "summary": "实时双工语音对话模型，支持文本和音频输入输出、工具调用、联网搜索及声音复刻。上下文长度为 262,144 Token。",
+        "id": "509ca37560a2d728bbcf8d62aa912bb9b93760fe19d371ea21b67febc9e7f3a4",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": "阿里云百炼",
+        "originalUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-27&model=qwen-audio-3.1-realtime-flash",
+        "originalVerifiedAt": "2026-10-27T16:42:38Z",
+        "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-27&model=qwen-audio-3.1-realtime-flash",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-10-27T16:42:38Z",
         "featured": true
       },
       {

@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-27T09:06:20Z",
+  "dataUpdatedAt": "2026-10-27T16:42:38Z",
   "items": [
     {
       "title": "OpenCode 发布 v2.2.0",
@@ -75,6 +75,25 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-10-27T09:06:20Z",
+      "featured": true
+    },
+    {
+      "title": "阿里发布 qwen-audio-3.1-realtime-flash",
+      "sourceUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-27&model=qwen-audio-3.1-realtime-flash",
+      "publishedAt": "2026-10-26T16:00:00Z",
+      "source": "阿里云百炼",
+      "summary": "实时双工语音对话模型，支持文本和音频输入输出、工具调用、联网搜索及声音复刻。上下文长度为 262,144 Token。",
+      "id": "509ca37560a2d728bbcf8d62aa912bb9b93760fe19d371ea21b67febc9e7f3a4",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "阿里云百炼",
+      "originalUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-27&model=qwen-audio-3.1-realtime-flash",
+      "originalVerifiedAt": "2026-10-27T16:42:38Z",
+      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-10-27&model=qwen-audio-3.1-realtime-flash",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-10-27T16:42:38Z",
       "featured": true
     },
     {
@@ -5379,6 +5398,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-27T09:06:20Z",
-  "generatedAt": "2026-10-27T09:06:20Z"
+  "version": "2026-10-27T16:42:38Z",
+  "generatedAt": "2026-10-27T16:42:38Z"
 }
