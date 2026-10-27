@@ -163,5 +163,10 @@
     "text": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
     "source": "deepseek-flash",
     "at": "2026-10-26T17:25:14Z"
+  },
+  "greyhatguy007/Machine-Learning-Specialization-Coursera": {
+    "text": "包含斯坦福大学与Deeplearning.ai在Coursera上机器学习专项课程的习题解答与笔记（2022），由Andrew NG教授讲授",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
   }
 }

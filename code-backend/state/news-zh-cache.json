@@ -1,16 +1,4 @@
 {
-  "400d918642962961b8903f398dfc639bcab034fdf27cc3b7c6f748aa85aee515": {
-    "title": "在Teams中借助GitHub Copilot将通知转化为代码",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-24T08:12:59Z"
-  },
-  "346bac8fee045e7ca0c58ff7da1d0798ea3991a07192bde8246f64a4ce312927": {
-    "title": "EMU删除问题修复",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-24T08:12:59Z"
-  },
   "7e73eebe3e909303c4c59a7dc0b734e92c38bcdbedd7db32071af67e1885bb5c": {
     "title": "Fanatics 与 OpenAI 如何简化球迷体验",
     "summary": "Fanatics 借助 OpenAI 通过 Shop the Look 帮助球迷搭配比赛日穿搭。在约 3 万件 MLB 产品上测试显示互动率提升 10%。",
@@ -22,5 +10,53 @@
     "summary": "一幅旋转行星的插图，展示多个卡通人物挥手。顶部文字为“AI Quests”",
     "source": "deepseek-flash",
     "at": "2026-10-26T17:25:14Z"
+  },
+  "a9c488820a62ac4adcd9d66c87dfdb487fb6897ef015ab83ccdf2e6a9db2968a": {
+    "title": "Greptile 借助 GPT-6 Astra 将缺陷检测拓展至代码审查之外",
+    "summary": "Greptile 如何用 GPT-6 Astra 测试用户工作流、用 Daybreak 强化安全、用 Codex 减少返工。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "8eb6001a836a6e50b8fb133e1590f182de0e7997306db3a54dcb8d2c2e5a6daa": {
+    "title": "与学术社区合作构建科学理解",
+    "summary": "OpenAI 分享在 Kakeya 猜想、指数时间假设和量子色动力学上的模型结果，以及研究者如何验证并在此基础上推进。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "7d972df501d01ba1f64ace9f515a56fb23b6429c84e2c13cce6a1dfa0631bf43": {
+    "title": "GPT-6.1 Sol 助力 CodeRabbit 强化复杂代码库安全",
+    "summary": "CodeRabbit 使用 GPT-6.1 Sol 排查复杂代码库中的安全风险，其安全智能体帮助开发者审查发现与修复建议。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "27334100e818b98514ff319836bc3b78479c8228c2a09656f9dea445b0edf902": {
+    "title": "ChatGPT 不断扩展的工作世界",
+    "summary": "探索 OpenAI Signals 关于近 100 个国家 165 项工作活动的数据，揭示人们如何用 ChatGPT 工作及使用变化。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "742d30efdc4090c11a97794f6a72e90c1243857798823aeed51fe879a1c3fcd7": {
+    "title": "Ultrafast 如何将 OpenAI 的事件调查从数小时缩短至数分钟",
+    "summary": "了解 OpenAI 工程师如何用 Codex Ultrafast 在数分钟内调查事件，实现更快安全分析、代码重构与日常工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "35e334c198740f7416638922d137b34400b1d3f32a340ea04060840443b03b8a": {
+    "title": "推出 GPT-6.1 Terra",
+    "summary": "为所有人带来快速且强大的计算机使用能力",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "b26f70c790034ce0463adf39499836fd564af69cb0b98406a80859a5b0986d83": {
+    "title": "GitHub Copilot 辅助权限正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "256c7b6c72dd5aaae095aea797fd23cb7b985923189440629f312245ad6b1112": {
+    "title": "GitHub Copilot 中的 GPT-6.1 Terra",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
   }
 }

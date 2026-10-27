@@ -936,12 +936,12 @@
     ]
   },
   "models": {
-    "dataUpdatedAt": "2026-10-26T09:03:08Z",
+    "dataUpdatedAt": "2026-10-27T09:06:20Z",
     "rankings": {
       "source": "artificial-analysis",
       "sourceUrl": "https://artificialanalysis.ai/",
       "indexVersion": "4.3",
-      "updatedAt": "2026-10-26T09:03:08Z",
+      "updatedAt": "2026-10-27T09:06:20Z",
       "intelligence": [
         {
           "modelId": "claude-opus-5-5",
@@ -999,98 +999,98 @@
           "rank": 11
         },
         {
-          "modelId": "muse-spark-1-3",
+          "modelId": "gpt-6-1-terra",
           "score": 48.1,
           "rank": 12
         },
         {
+          "modelId": "muse-spark-1-3",
+          "score": 48.1,
+          "rank": 13
+        },
+        {
           "modelId": "gpt-6-sol",
           "score": 47.6,
-          "rank": 13
+          "rank": 14
         },
         {
           "modelId": "gpt-5-6-sol",
           "score": 47,
-          "rank": 14
+          "rank": 15
         },
         {
           "modelId": "grok-4-7",
           "score": 46.4,
-          "rank": 15
+          "rank": 16
         },
         {
           "modelId": "mimo-v2-6-pro",
           "score": 46.3,
-          "rank": 16
+          "rank": 17
         },
         {
           "modelId": "qwen3-8-max",
           "score": 45.4,
-          "rank": 17
+          "rank": 18
         },
         {
           "modelId": "deepseek-v4-1-flash-1017",
           "score": 45.1,
-          "rank": 18
+          "rank": 19
         },
         {
           "modelId": "glm-5-3",
           "score": 44.8,
-          "rank": 19
+          "rank": 20
         },
         {
           "modelId": "grok-4-6",
           "score": 44.3,
-          "rank": 20
+          "rank": 21
         },
         {
           "modelId": "ling-3-1-flash-1019",
           "score": 43.9,
-          "rank": 21
+          "rank": 22
         },
         {
           "modelId": "step-5",
           "score": 43.7,
-          "rank": 22
+          "rank": 23
         },
         {
           "modelId": "kimi-k3",
           "score": 43.6,
-          "rank": 23
+          "rank": 24
         },
         {
           "modelId": "claude-haiku-5-5",
           "score": 43.4,
-          "rank": 24
+          "rank": 25
         },
         {
           "modelId": "minimax-m3-1-flash",
           "score": 42.7,
-          "rank": 25
+          "rank": 26
         },
         {
           "modelId": "gpt-5-6-terra",
           "score": 42.1,
-          "rank": 26
+          "rank": 27
         },
         {
           "modelId": "claude-opus-4-8",
           "score": 41.8,
-          "rank": 27
+          "rank": 28
         },
         {
           "modelId": "glm-5-3-flash",
           "score": 41.8,
-          "rank": 28
+          "rank": 29
         },
         {
           "modelId": "ling-3-1-flash",
           "score": 41.1,
-          "rank": 29
-        },
-        {
-          "modelId": "gemini-3-8-flash",
-          "score": 40.9,
           "rank": 30
         }
       ],
@@ -1258,7 +1258,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-fable-5-1",
@@ -1270,7 +1270,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-haiku-5-5",
@@ -1282,7 +1282,7 @@
         "outputCost": 0.5,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-haiku-5-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-opus-4-7",
@@ -1294,7 +1294,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-7",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-opus-4-8",
@@ -1306,7 +1306,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-4-8",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-opus-5",
@@ -1318,7 +1318,7 @@
         "outputCost": 25.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-opus-5-5",
@@ -1330,7 +1330,7 @@
         "outputCost": 20.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-sonnet-5",
@@ -1342,7 +1342,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "claude-sonnet-5-5",
@@ -1354,7 +1354,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "deepseek-v4-1-flash-1017",
@@ -1366,7 +1366,7 @@
         "outputCost": 1.2,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "deepseek-v4-flash",
@@ -1378,7 +1378,7 @@
         "outputCost": 0.28,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "deepseek-v4-pro",
@@ -1390,7 +1390,7 @@
         "outputCost": 3.96,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-pro",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gemini-3-1-pro-preview",
@@ -1402,7 +1402,7 @@
         "outputCost": 12.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gemini-3-6-flash",
@@ -1414,7 +1414,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-6-flash",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gemini-3-7-flash-medium",
@@ -1438,7 +1438,7 @@
         "outputCost": 3.75,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gemini-4-argon",
@@ -1450,7 +1450,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-4-argon",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "glm-5-3",
@@ -1462,7 +1462,7 @@
         "outputCost": 4.4,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "glm-5-3-flash",
@@ -1474,7 +1474,7 @@
         "outputCost": 0.5,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3-flash",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-5-4",
@@ -1486,7 +1486,7 @@
         "outputCost": 15.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-4",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-5-5",
@@ -1498,7 +1498,7 @@
         "outputCost": 30.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-5-6-luna",
@@ -1510,7 +1510,7 @@
         "outputCost": 1.2,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-luna",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-5-6-sol",
@@ -1522,7 +1522,7 @@
         "outputCost": 20.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-5-6-terra",
@@ -1534,7 +1534,7 @@
         "outputCost": 12.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-terra",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-6-1-sol",
@@ -1546,7 +1546,19 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-1-sol",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
+      },
+      {
+        "id": "gpt-6-1-terra",
+        "name": "GPT-6.1 Terra",
+        "vendor": "OpenAI",
+        "aaId": "b0c462cf-f2d0-4126-9434-28db9502219f",
+        "releasedAt": "2026-10-26",
+        "inputCost": 1.0,
+        "outputCost": 5.0,
+        "priceSource": "artificial-analysis",
+        "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-6-astra",
@@ -1558,7 +1570,7 @@
         "outputCost": 50.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-astra",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "gpt-6-sol",
@@ -1570,7 +1582,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-sol",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "grok-4-5",
@@ -1582,7 +1594,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "grok-4-6",
@@ -1594,7 +1606,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-6",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "grok-4-7",
@@ -1606,7 +1618,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-7",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "kimi-k3",
@@ -1618,7 +1630,7 @@
         "outputCost": 15.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "kimi-k3-1-pro",
@@ -1630,7 +1642,7 @@
         "outputCost": 10.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "ling-3-1-flash",
@@ -1642,7 +1654,7 @@
         "outputCost": 0.9,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/ling-3-1-flash",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "ling-3-1-flash-1019",
@@ -1654,7 +1666,7 @@
         "outputCost": 0.9,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/ling-3-1-flash-1019",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "mimo-v2-6-pro",
@@ -1666,7 +1678,7 @@
         "outputCost": 0.87,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "minimax-m3-1-flash",
@@ -1678,7 +1690,7 @@
         "outputCost": 0.6,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "muse-spark-1-1",
@@ -1690,7 +1702,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-1",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "muse-spark-1-2",
@@ -1702,7 +1714,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-2",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "muse-spark-1-3",
@@ -1714,7 +1726,7 @@
         "outputCost": 4.25,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "muse-wonder",
@@ -1726,7 +1738,7 @@
         "outputCost": 20.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/muse-wonder",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "muse-wonder-full",
@@ -1750,7 +1762,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "qwen3-8-flash-next",
@@ -1762,7 +1774,7 @@
         "outputCost": 0.47,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "qwen3-8-max",
@@ -1774,7 +1786,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "qwen3-8-max-0803",
@@ -1786,7 +1798,7 @@
         "outputCost": 6.0,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       },
       {
         "id": "step-5",
@@ -1798,7 +1810,7 @@
         "outputCost": 2.7,
         "priceSource": "artificial-analysis",
         "priceSourceUrl": "https://artificialanalysis.ai/models/step-5",
-        "priceUpdatedAt": "2026-10-26T09:03:08Z"
+        "priceUpdatedAt": "2026-10-27T09:06:20Z"
       }
     ],
     "plans": [
@@ -2250,24 +2262,24 @@
         "status": "available",
         "source": "official",
         "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
-        "updatedAt": "2026-10-26",
+        "updatedAt": "2026-10-27",
         "checkMethod": "auto"
       }
     ]
   },
   "github": {
     "source": "github-trending",
-    "dataUpdatedAt": "2026-10-26T17:25:14Z",
+    "dataUpdatedAt": "2026-10-27T09:06:20Z",
     "week": {
       "period": "weekly",
       "sourceUrl": "https://github.com/trending?since=weekly",
-      "fetchedAt": "2026-10-26T17:25:14Z",
+      "fetchedAt": "2026-10-27T09:06:20Z",
       "items": [
         {
           "repo": "cloudflare/security-audit-skill",
           "sourceRank": 1,
-          "stars": 48188,
-          "periodStars": 15072,
+          "stars": 49061,
+          "periodStars": 16593,
           "language": "JavaScript",
           "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
           "url": "https://github.com/cloudflare/security-audit-skill"
@@ -2275,8 +2287,8 @@
         {
           "repo": "stablyai/orca",
           "sourceRank": 3,
-          "stars": 106794,
-          "periodStars": 9622,
+          "stars": 107446,
+          "periodStars": 9241,
           "language": "TypeScript",
           "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
           "url": "https://github.com/stablyai/orca"
@@ -2284,89 +2296,116 @@
         {
           "repo": "xerj-org/xerj",
           "sourceRank": 4,
-          "stars": 16771,
-          "periodStars": 7637,
+          "stars": 16953,
+          "periodStars": 8261,
           "language": "Rust",
           "description": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
           "url": "https://github.com/xerj-org/xerj"
         },
         {
-          "repo": "heygen-com/hyperframes",
-          "sourceRank": 4,
-          "stars": 72845,
-          "periodStars": 5612,
-          "language": "TypeScript",
-          "description": "编写 HTML。渲染视频。为代理而构建。",
-          "url": "https://github.com/heygen-com/hyperframes"
-        },
-        {
-          "repo": "Comfy-Org/ComfyUI",
-          "sourceRank": 6,
-          "stars": 143195,
-          "periodStars": 4790,
-          "language": "Python",
-          "description": "最强大且模块化的扩散模型 GUI、API 与后端，提供图/节点界面，号称全球最快的本地推理引擎。",
-          "url": "https://github.com/Comfy-Org/ComfyUI"
-        },
-        {
           "repo": "pbakaus/impeccable",
           "sourceRank": 2,
-          "stars": 88816,
-          "periodStars": 4741,
+          "stars": 89679,
+          "periodStars": 5863,
           "language": "Rust",
           "description": "让 AI 工具在设计中表现更佳的设计语言。",
           "url": "https://github.com/pbakaus/impeccable"
         },
         {
+          "repo": "heygen-com/hyperframes",
+          "sourceRank": 4,
+          "stars": 73438,
+          "periodStars": 5540,
+          "language": "TypeScript",
+          "description": "编写 HTML。渲染视频。为代理而构建。",
+          "url": "https://github.com/heygen-com/hyperframes"
+        },
+        {
           "repo": "tashfeenahmed/freellmapi",
           "sourceRank": 9,
-          "stars": 42017,
-          "periodStars": 4597,
+          "stars": 42372,
+          "periodStars": 4664,
           "language": "TypeScript",
           "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
           "url": "https://github.com/tashfeenahmed/freellmapi"
         },
         {
-          "repo": "akitaonrails/ai-memory",
-          "sourceRank": 1,
-          "stars": 13731,
-          "periodStars": 3254,
-          "language": "Rust",
-          "description": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
-          "url": "https://github.com/akitaonrails/ai-memory"
+          "repo": "Comfy-Org/ComfyUI",
+          "sourceRank": 6,
+          "stars": 143415,
+          "periodStars": 4109,
+          "language": "Python",
+          "description": "最强大且模块化的扩散模型 GUI、API 与后端，提供图/节点界面，号称全球最快的本地推理引擎。",
+          "url": "https://github.com/Comfy-Org/ComfyUI"
+        },
+        {
+          "repo": "TauricResearch/TradingAgents",
+          "sourceRank": 3,
+          "stars": 116754,
+          "periodStars": 3437,
+          "language": "Python",
+          "description": "TradingAgents：多智能体 LLM 金融交易框架",
+          "url": "https://github.com/TauricResearch/TradingAgents"
         },
         {
           "repo": "NVIDIA/OpenShell",
           "sourceRank": 8,
-          "stars": 20050,
-          "periodStars": 3233,
+          "stars": 20168,
+          "periodStars": 3405,
           "language": "Rust",
           "description": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
           "url": "https://github.com/NVIDIA/OpenShell"
         },
         {
-          "repo": "ruvnet/ruflo",
-          "sourceRank": 1,
-          "stars": 79457,
-          "periodStars": 2987,
-          "language": "TypeScript",
-          "description": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
-          "url": "https://github.com/ruvnet/ruflo"
-        },
-        {
           "repo": "multica-ai/andrej-karpathy-skills",
           "sourceRank": 9,
-          "stars": 224365,
-          "periodStars": 2937,
+          "stars": 225044,
+          "periodStars": 3286,
           "language": null,
           "description": "单个 CLAUDE.md 文件，用于改进 Claude Code 行为，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。",
           "url": "https://github.com/multica-ai/andrej-karpathy-skills"
         },
         {
+          "repo": "makecindy/cindy",
+          "sourceRank": 6,
+          "stars": 6994,
+          "periodStars": 2913,
+          "language": "TypeScript",
+          "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+          "url": "https://github.com/makecindy/cindy"
+        },
+        {
+          "repo": "akitaonrails/ai-memory",
+          "sourceRank": 1,
+          "stars": 13900,
+          "periodStars": 2838,
+          "language": "Rust",
+          "description": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
+          "url": "https://github.com/akitaonrails/ai-memory"
+        },
+        {
+          "repo": "ruvnet/ruflo",
+          "sourceRank": 1,
+          "stars": 79637,
+          "periodStars": 2683,
+          "language": "TypeScript",
+          "description": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
+          "url": "https://github.com/ruvnet/ruflo"
+        },
+        {
+          "repo": "AgriciDaniel/claude-seo",
+          "sourceRank": 5,
+          "stars": 22399,
+          "periodStars": 2546,
+          "language": "Python",
+          "description": "Claude Code 通用 SEO 技能。26 个子技能与 19 个子代理，覆盖技术 SEO、E-E-A-T、schema、GEO/AEO、代理就绪（Lighthouse Agentic Browsing、WebMCP、llms.txt）、外链、本地 SEO、电商、国际 SEO、Google API 及 PDF/Excel 报告。9 个可选扩展用于实时 SEO 数据。",
+          "url": "https://github.com/AgriciDaniel/claude-seo"
+        },
+        {
           "repo": "shiyu-coder/Kronos",
           "sourceRank": 13,
-          "stars": 43833,
-          "periodStars": 2801,
+          "stars": 43899,
+          "periodStars": 2494,
           "language": "Python",
           "description": "Kronos：面向金融市场语言的基础模型",
           "url": "https://github.com/shiyu-coder/Kronos"
@@ -2374,62 +2413,35 @@
         {
           "repo": "jub0t/Concat",
           "sourceRank": 7,
-          "stars": 11720,
-          "periodStars": 2616,
+          "stars": 11857,
+          "periodStars": 2376,
           "language": "Rust",
           "description": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
           "url": "https://github.com/jub0t/Concat"
         },
         {
-          "repo": "AgriciDaniel/claude-seo",
-          "sourceRank": 5,
-          "stars": 21916,
-          "periodStars": 2492,
-          "language": "Python",
-          "description": "Claude Code 通用 SEO 技能。26 个子技能与 19 个子代理，覆盖技术 SEO、E-E-A-T、schema、GEO/AEO、代理就绪（Lighthouse Agentic Browsing、WebMCP、llms.txt）、外链、本地 SEO、电商、国际 SEO、Google API 及 PDF/Excel 报告。9 个可选扩展用于实时 SEO 数据。",
-          "url": "https://github.com/AgriciDaniel/claude-seo"
-        },
-        {
-          "repo": "TauricResearch/TradingAgents",
-          "sourceRank": 3,
-          "stars": 115684,
-          "periodStars": 2461,
-          "language": "Python",
-          "description": "TradingAgents：多智能体 LLM 金融交易框架",
-          "url": "https://github.com/TauricResearch/TradingAgents"
-        },
-        {
-          "repo": "PC2005-cloud/dsh-pet",
-          "sourceRank": 14,
-          "stars": 4307,
-          "periodStars": 2283,
-          "language": "TypeScript",
-          "description": "DSH 桌面宠物：一行命令装好即用的透明动画小桌宠，支持多开、大小位置随心配置；还内置 DIY 素材链，能用 AI 视频自造专属宠物",
-          "url": "https://github.com/PC2005-cloud/dsh-pet"
-        },
-        {
           "repo": "citrolabs/ego-lite",
           "sourceRank": 3,
-          "stars": 19717,
-          "periodStars": 1853,
+          "stars": 19985,
+          "periodStars": 2034,
           "language": "JavaScript",
           "description": "面向 AI 智能体的最快浏览器自动化工具，可与 Codex 或 Claude Code 等 AI 智能体共享已登录的浏览器状态，且不干扰用户。零成本、零配置。",
           "url": "https://github.com/citrolabs/ego-lite"
         },
         {
-          "repo": "makecindy/cindy",
-          "sourceRank": 6,
-          "stars": 6128,
-          "periodStars": 1514,
+          "repo": "PC2005-cloud/dsh-pet",
+          "sourceRank": 14,
+          "stars": 4431,
+          "periodStars": 1594,
           "language": "TypeScript",
-          "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
-          "url": "https://github.com/makecindy/cindy"
+          "description": "DSH 桌面宠物：一行命令装好即用的透明动画小桌宠，支持多开、大小位置随心配置；还内置 DIY 素材链，能用 AI 视频自造专属宠物",
+          "url": "https://github.com/PC2005-cloud/dsh-pet"
         },
         {
           "repo": "Vincentwei1021/video-shotcraft",
           "sourceRank": 17,
-          "stars": 13778,
-          "periodStars": 1252,
+          "stars": 13943,
+          "periodStars": 1297,
           "language": "TypeScript",
           "description": "适用于 Claude Code 与 Codex 的 AI 视频技能——基于 Remotion 制作电影级产品视频：152 张镜头配方卡、209 个动效预览、一个生产级模板",
           "url": "https://github.com/Vincentwei1021/video-shotcraft"
@@ -2437,8 +2449,8 @@
         {
           "repo": "google-gemini/gemini-cli",
           "sourceRank": 16,
-          "stars": 108409,
-          "periodStars": 1092,
+          "stars": 108564,
+          "periodStars": 1097,
           "language": "TypeScript",
           "description": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
           "url": "https://github.com/google-gemini/gemini-cli"
@@ -2446,8 +2458,8 @@
         {
           "repo": "vercel-labs/skills",
           "sourceRank": 7,
-          "stars": 36671,
-          "periodStars": 1078,
+          "stars": 36764,
+          "periodStars": 1076,
           "language": "TypeScript",
           "description": "开放的智能体技能工具 - npx skills",
           "url": "https://github.com/vercel-labs/skills"
@@ -2455,8 +2467,8 @@
         {
           "repo": "sgl-project/sglang",
           "sourceRank": 8,
-          "stars": 38204,
-          "periodStars": 946,
+          "stars": 38247,
+          "periodStars": 840,
           "language": "Python",
           "description": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
           "url": "https://github.com/sgl-project/sglang"
@@ -2464,8 +2476,8 @@
         {
           "repo": "croffasia/itsaplan",
           "sourceRank": 15,
-          "stars": 1997,
-          "periodStars": 586,
+          "stars": 2012,
+          "periodStars": 575,
           "language": "TypeScript",
           "description": "开源、自托管的 Linear 与 Plane 替代方案。项目管理与问题跟踪，团队和 AI 代理并肩协作规划并交付产品。",
           "url": "https://github.com/croffasia/itsaplan"
@@ -2473,8 +2485,8 @@
         {
           "repo": "aws/agent-toolkit-for-aws",
           "sourceRank": 11,
-          "stars": 3292,
-          "periodStars": 383,
+          "stars": 3303,
+          "periodStars": 388,
           "language": "Python",
           "description": "AWS 官方支持的 MCP 服务器、技能与插件，帮助 AI 代理在 AWS 上构建应用",
           "url": "https://github.com/aws/agent-toolkit-for-aws"
@@ -2482,8 +2494,8 @@
         {
           "repo": "datawhalechina/diy-llm",
           "sourceRank": 8,
-          "stars": 1881,
-          "periodStars": 304,
+          "stars": 1909,
+          "periodStars": 367,
           "language": "Jupyter Notebook",
           "description": "Covers pre-training data, Tokenizer, Transformer, MoE,distributed training, Scaling Laws, inference & alignment .6 progressive code assignments for full-stack LLM learning | 涵盖预训练数据、分词器、Transformer、MoE、分布式训练、缩放定律、推理与对齐，6 项渐进代码作业，掌握 LLM 全栈知识",
           "url": "https://github.com/datawhalechina/diy-llm"
@@ -2491,8 +2503,8 @@
         {
           "repo": "opendataloader-project/opendataloader-pdf",
           "sourceRank": 7,
-          "stars": 30036,
-          "periodStars": 281,
+          "stars": 30059,
+          "periodStars": 315,
           "language": "Java",
           "description": "面向 AI 就绪数据的 PDF 解析器。自动化 PDF 无障碍处理。开源。",
           "url": "https://github.com/opendataloader-project/opendataloader-pdf"
@@ -2500,8 +2512,8 @@
         {
           "repo": "macro-inc/macro",
           "sourceRank": 11,
-          "stars": 4945,
-          "periodStars": 217,
+          "stars": 5023,
+          "periodStars": 216,
           "language": "Rust",
           "description": "Macro 是面向团队的统一工作空间：邮件、聊天、文档、任务、智能体、通话和 CRM，通过 @ 关联并共享 AI 记忆。",
           "url": "https://github.com/macro-inc/macro"
@@ -2509,8 +2521,8 @@
         {
           "repo": "zhoushoujianwork/easyeda-agent",
           "sourceRank": 19,
-          "stars": 836,
-          "periodStars": 122,
+          "stars": 843,
+          "periodStars": 119,
           "language": "Go",
           "description": "嘉立创EDA专业版(EasyEDA Pro)自动化：给 AI harness 装上画板的「手」—— 一套 typed 原理图/PCB 动作，CLI / Agent Skill / stdio MCP 三形态融合接入。承接嘉立创「不以卖板赚钱，以培养中国工程师为己任」 | EasyEDA Pro automation: the hands of your AI harness — typed schematic/PCB actions via CLI, Agent Skill and stdio MCP.",
           "url": "https://github.com/zhoushoujianwork/easyeda-agent"
@@ -2518,33 +2530,33 @@
         {
           "repo": "cloudwego/eino",
           "sourceRank": 18,
-          "stars": 13449,
-          "periodStars": 109,
+          "stars": 13459,
+          "periodStars": 108,
           "language": "Go",
           "description": "Go 语言的 LLM/AI 应用开发框架。",
           "url": "https://github.com/cloudwego/eino"
         },
         {
-          "repo": "udlbook/udlbook",
-          "sourceRank": 6,
-          "stars": 10100,
-          "periodStars": 66,
+          "repo": "greyhatguy007/Machine-Learning-Specialization-Coursera",
+          "sourceRank": 13,
+          "stars": 8106,
+          "periodStars": 63,
           "language": "Jupyter Notebook",
-          "description": "Understanding Deep Learning - Simon J.D. Prince",
-          "url": "https://github.com/udlbook/udlbook"
+          "description": "包含斯坦福大学与Deeplearning.ai在Coursera上机器学习专项课程的习题解答与笔记（2022），由Andrew NG教授讲授",
+          "url": "https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera"
         }
       ]
     },
     "month": {
       "period": "monthly",
       "sourceUrl": "https://github.com/trending?since=monthly",
-      "fetchedAt": "2026-10-26T17:25:14Z",
+      "fetchedAt": "2026-10-27T09:06:20Z",
       "items": [
         {
           "repo": "stablyai/orca",
           "sourceRank": 11,
-          "stars": 106794,
-          "periodStars": 28149,
+          "stars": 107446,
+          "periodStars": 28711,
           "language": "TypeScript",
           "description": "面向多 Agent 并行协作的 ADE：用你自己的订阅驱动任意编程 Agent，支持桌面端、移动端与远程运行时。",
           "url": "https://github.com/stablyai/orca"
@@ -2552,8 +2564,8 @@
         {
           "repo": "cloudflare/security-audit-skill",
           "sourceRank": 1,
-          "stars": 48190,
-          "periodStars": 24611,
+          "stars": 49061,
+          "periodStars": 26289,
           "language": "JavaScript",
           "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
           "url": "https://github.com/cloudflare/security-audit-skill"
@@ -2561,8 +2573,8 @@
         {
           "repo": "heygen-com/hyperframes",
           "sourceRank": 1,
-          "stars": 72845,
-          "periodStars": 19211,
+          "stars": 73438,
+          "periodStars": 19856,
           "language": "TypeScript",
           "description": "编写 HTML。渲染视频。为代理而构建。",
           "url": "https://github.com/heygen-com/hyperframes"
@@ -2570,8 +2582,8 @@
         {
           "repo": "lexmount/moli",
           "sourceRank": 6,
-          "stars": 20871,
-          "periodStars": 18837,
+          "stars": 21036,
+          "periodStars": 19052,
           "language": "Rust",
           "description": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
           "url": "https://github.com/lexmount/moli"
@@ -2579,8 +2591,8 @@
         {
           "repo": "Panniantong/Agent-Reach",
           "sourceRank": 5,
-          "stars": 103228,
-          "periodStars": 17531,
+          "stars": 104312,
+          "periodStars": 18035,
           "language": "Python",
           "description": "给 AI Agent 装上「看全网」的眼睛：一个 CLI 读取和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书，无需 API 费用。",
           "url": "https://github.com/Panniantong/Agent-Reach"
@@ -2588,8 +2600,8 @@
         {
           "repo": "pbakaus/impeccable",
           "sourceRank": 1,
-          "stars": 88816,
-          "periodStars": 16493,
+          "stars": 89679,
+          "periodStars": 17522,
           "language": "Rust",
           "description": "让 AI 工具在设计中表现更佳的设计语言。",
           "url": "https://github.com/pbakaus/impeccable"
@@ -2597,8 +2609,8 @@
         {
           "repo": "xerj-org/xerj",
           "sourceRank": 5,
-          "stars": 16771,
-          "periodStars": 13668,
+          "stars": 16953,
+          "periodStars": 14963,
           "language": "Rust",
           "description": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
           "url": "https://github.com/xerj-org/xerj"
@@ -2606,8 +2618,8 @@
         {
           "repo": "tashfeenahmed/freellmapi",
           "sourceRank": 6,
-          "stars": 42017,
-          "periodStars": 12957,
+          "stars": 42372,
+          "periodStars": 13270,
           "language": "TypeScript",
           "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
           "url": "https://github.com/tashfeenahmed/freellmapi"
@@ -2615,8 +2627,8 @@
         {
           "repo": "addyosmani/agent-skills",
           "sourceRank": 9,
-          "stars": 110727,
-          "periodStars": 11926,
+          "stars": 110912,
+          "periodStars": 12002,
           "language": "JavaScript",
           "description": "面向 AI 编程 Agent 的生产级工程技能集。",
           "url": "https://github.com/addyosmani/agent-skills"
@@ -2624,8 +2636,8 @@
         {
           "repo": "NVIDIA/OpenShell",
           "sourceRank": 2,
-          "stars": 20050,
-          "periodStars": 11062,
+          "stars": 20168,
+          "periodStars": 11321,
           "language": "Rust",
           "description": "OpenShell 是面向自主 AI 智能体的安全、私密运行时。",
           "url": "https://github.com/NVIDIA/OpenShell"
@@ -2633,8 +2645,8 @@
         {
           "repo": "jub0t/Concat",
           "sourceRank": 8,
-          "stars": 11720,
-          "periodStars": 7934,
+          "stars": 11857,
+          "periodStars": 8058,
           "language": "Rust",
           "description": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
           "url": "https://github.com/jub0t/Concat"
@@ -2642,8 +2654,8 @@
         {
           "repo": "vxcontrol/pentagi",
           "sourceRank": 4,
-          "stars": 32493,
-          "periodStars": 7655,
+          "stars": 32543,
+          "periodStars": 7733,
           "language": "Go",
           "description": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
           "url": "https://github.com/vxcontrol/pentagi"
@@ -2651,8 +2663,8 @@
         {
           "repo": "t8y2/dbx",
           "sourceRank": 4,
-          "stars": 27809,
-          "periodStars": 7208,
+          "stars": 27895,
+          "periodStars": 7217,
           "language": "Rust",
           "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
           "url": "https://github.com/t8y2/dbx"
@@ -2660,8 +2672,8 @@
         {
           "repo": "ruvnet/ruflo",
           "sourceRank": 13,
-          "stars": 79457,
-          "periodStars": 6384,
+          "stars": 79637,
+          "periodStars": 6557,
           "language": "TypeScript",
           "description": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
           "url": "https://github.com/ruvnet/ruflo"
@@ -2669,8 +2681,8 @@
         {
           "repo": "TencentCloud/Octop",
           "sourceRank": 9,
-          "stars": 11121,
-          "periodStars": 6203,
+          "stars": 11163,
+          "periodStars": 6198,
           "language": "Python",
           "description": "更智能的自托管 AI 助手——多用户、多代理。",
           "url": "https://github.com/TencentCloud/Octop"
@@ -2678,8 +2690,8 @@
         {
           "repo": "byoungd/up",
           "sourceRank": 15,
-          "stars": 69467,
-          "periodStars": 5937,
+          "stars": 69512,
+          "periodStars": 5968,
           "language": "JavaScript",
           "description": "韩先凯的人生进阶指南 AI时代 中英双语终身学习指南：英语学习、AI 协作、真实项目与成长证据。",
           "url": "https://github.com/byoungd/up"
@@ -2687,8 +2699,8 @@
         {
           "repo": "akitaonrails/ai-memory",
           "sourceRank": 7,
-          "stars": 13731,
-          "periodStars": 5139,
+          "stars": 13900,
+          "periodStars": 5360,
           "language": "Rust",
           "description": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
           "url": "https://github.com/akitaonrails/ai-memory"
@@ -2696,8 +2708,8 @@
         {
           "repo": "shiyu-coder/Kronos",
           "sourceRank": 11,
-          "stars": 43833,
-          "periodStars": 4462,
+          "stars": 43899,
+          "periodStars": 4567,
           "language": "Python",
           "description": "Kronos：面向金融市场语言的基础模型",
           "url": "https://github.com/shiyu-coder/Kronos"
@@ -2705,8 +2717,8 @@
         {
           "repo": "vercel-labs/skills",
           "sourceRank": 9,
-          "stars": 36671,
-          "periodStars": 4207,
+          "stars": 36764,
+          "periodStars": 4297,
           "language": "TypeScript",
           "description": "开放的智能体技能工具 - npx skills",
           "url": "https://github.com/vercel-labs/skills"
@@ -2714,8 +2726,8 @@
         {
           "repo": "Vincentwei1021/video-shotcraft",
           "sourceRank": 18,
-          "stars": 13778,
-          "periodStars": 4115,
+          "stars": 13943,
+          "periodStars": 4231,
           "language": "TypeScript",
           "description": "适用于 Claude Code 与 Codex 的 AI 视频技能——基于 Remotion 制作电影级产品视频：152 张镜头配方卡、209 个动效预览、一个生产级模板",
           "url": "https://github.com/Vincentwei1021/video-shotcraft"
@@ -2723,8 +2735,8 @@
         {
           "repo": "makecindy/cindy",
           "sourceRank": 22,
-          "stars": 6129,
-          "periodStars": 2873,
+          "stars": 6994,
+          "periodStars": 3336,
           "language": "TypeScript",
           "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
           "url": "https://github.com/makecindy/cindy"
@@ -2732,8 +2744,8 @@
         {
           "repo": "AstrBotDevs/AstrBot",
           "sourceRank": 14,
-          "stars": 43786,
-          "periodStars": 2622,
+          "stars": 44011,
+          "periodStars": 2947,
           "language": "Python",
           "description": "AI Agent 助手与开发框架，集成多种 IM 平台、LLM、插件与 AI 功能，可作为 openclaw 替代方案。",
           "url": "https://github.com/AstrBotDevs/AstrBot"
@@ -2741,8 +2753,8 @@
         {
           "repo": "Gaurav-Gosain/tuios",
           "sourceRank": 1,
-          "stars": 6089,
-          "periodStars": 2223,
+          "stars": 6119,
+          "periodStars": 2403,
           "language": "Go",
           "description": "一个了解你的智能体在做什么的终端窗口管理器。平铺窗格、工作区、可跨重启存活的会话，以及为每个编码智能体提供的统一收件箱。",
           "url": "https://github.com/Gaurav-Gosain/tuios"
@@ -2750,8 +2762,8 @@
         {
           "repo": "78/xiaozhi-esp32",
           "sourceRank": 2,
-          "stars": 32004,
-          "periodStars": 1808,
+          "stars": 32047,
+          "periodStars": 1857,
           "language": "C++",
           "description": "An MCP-based chatbot | 一个基于MCP的聊天机器人",
           "url": "https://github.com/78/xiaozhi-esp32"
@@ -2759,8 +2771,8 @@
         {
           "repo": "google-gemini/gemini-cli",
           "sourceRank": 21,
-          "stars": 108409,
-          "periodStars": 1747,
+          "stars": 108564,
+          "periodStars": 1759,
           "language": "TypeScript",
           "description": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
           "url": "https://github.com/google-gemini/gemini-cli"
@@ -2768,8 +2780,8 @@
         {
           "repo": "kestra-io/kestra",
           "sourceRank": 8,
-          "stars": 30011,
-          "periodStars": 1733,
+          "stars": 30025,
+          "periodStars": 1737,
           "language": "Java",
           "description": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体的开源工作流控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本化，可扩展至数百万次执行。",
           "url": "https://github.com/kestra-io/kestra"
@@ -2777,8 +2789,8 @@
         {
           "repo": "tensorflow/tensorflow",
           "sourceRank": 16,
-          "stars": 201270,
-          "periodStars": 1718,
+          "stars": 201288,
+          "periodStars": 1683,
           "language": "C++",
           "description": "面向所有人的开源机器学习框架",
           "url": "https://github.com/tensorflow/tensorflow"
@@ -2786,8 +2798,8 @@
         {
           "repo": "LaurieWired/GhidraMCP",
           "sourceRank": 4,
-          "stars": 11579,
-          "periodStars": 1413,
+          "stars": 11594,
+          "periodStars": 1448,
           "language": "Java",
           "description": "Ghidra 的 MCP 服务器",
           "url": "https://github.com/LaurieWired/GhidraMCP"
@@ -2795,8 +2807,8 @@
         {
           "repo": "tile-ai/tilelang",
           "sourceRank": 16,
-          "stars": 8784,
-          "periodStars": 1320,
+          "stars": 8801,
+          "periodStars": 1332,
           "language": "Python",
           "description": "领域特定语言，用于简化高性能 GPU/CPU/加速器内核的开发",
           "url": "https://github.com/tile-ai/tilelang"
@@ -2804,8 +2816,8 @@
         {
           "repo": "docker/docker-agent",
           "sourceRank": 22,
-          "stars": 4610,
-          "periodStars": 1271,
+          "stars": 4611,
+          "periodStars": 1272,
           "language": "Go",
           "description": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
           "url": "https://github.com/docker/docker-agent"
@@ -2814,8 +2826,84 @@
     }
   },
   "news": {
-    "dataUpdatedAt": "2026-10-26T17:25:14Z",
+    "dataUpdatedAt": "2026-10-27T09:06:20Z",
     "items": [
+      {
+        "title": "OpenCode 发布 v2.2.0",
+        "sourceUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.0",
+        "publishedAt": "2026-10-27T09:04:44Z",
+        "source": "OpenCode",
+        "summary": "开源编码代理 OpenCode 发布 v2.2.0，项目托管于 GitHub。",
+        "id": "9310336c0e60a4b8facceb484d6700cf5a01e83f27b3705464a73ea07a0d7d71",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": "OpenCode",
+        "originalUrl": "https://github.com/anomalyco/opencode/releases/tag/v2.2.0",
+        "originalVerifiedAt": "2026-10-27T09:06:20Z",
+        "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.0",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-10-27T09:06:20Z",
+        "featured": true
+      },
+      {
+        "title": "钛动科技发布行业首个Pro-Agent, Navos Pro定义结果导向的AI for Work | TGC 2026科技增长大会",
+        "sourceUrl": "https://www.qbitai.com/2026/10/505580.html",
+        "publishedAt": "2026-10-27T03:23:55Z",
+        "source": "量子位",
+        "summary": "10 月 23 日，以 “ AI is Profitable ” 为主题的 2026 TGC 科技增长大会于广州召开。",
+        "id": "fafd3718bd44303a7934e5be9a45c3577deff996a3714f10ad510d1531f25235",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.qbitai.com/2026/10/505580.html",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-10-27T09:06:20Z",
+        "featured": null
+      },
+      {
+        "title": "GitHub Copilot 辅助权限正式可用",
+        "sourceUrl": "https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available",
+        "publishedAt": "2026-10-26T22:31:30Z",
+        "source": "GitHub",
+        "summary": "GitHub Copilot 辅助权限在 CLI、应用和 VS Code 中正式可用。",
+        "id": "b26f70c790034ce0463adf39499836fd564af69cb0b98406a80859a5b0986d83",
+        "originalTitle": "GitHub Copilot assisted permissions generally available",
+        "translatedAt": "2026-10-27T09:06:20Z",
+        "lang": "en",
+        "originalSource": "GitHub",
+        "originalUrl": "https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available",
+        "originalVerifiedAt": "2026-10-27T09:06:20Z",
+        "url": "https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-10-27T09:06:20Z",
+        "featured": true
+      },
+      {
+        "title": "GitHub Copilot 中的 GPT-6.1 Terra",
+        "sourceUrl": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+        "publishedAt": "2026-10-26T19:15:53Z",
+        "source": "GitHub",
+        "summary": "OpenAI 新模型 GPT-6.1 Terra 在 GitHub Copilot 中正式可用，成本低于 GPT-6.1 Sol。",
+        "id": "256c7b6c72dd5aaae095aea797fd23cb7b985923189440629f312245ad6b1112",
+        "originalTitle": "GPT-6.1 Terra in GitHub Copilot",
+        "translatedAt": "2026-10-27T09:06:20Z",
+        "lang": "en",
+        "originalSource": "GitHub",
+        "originalUrl": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+        "originalVerifiedAt": "2026-10-27T09:06:20Z",
+        "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+        "category": "model",
+        "eventType": "model-release",
+        "addedAt": "2026-10-27T09:06:20Z",
+        "featured": true
+      },
       {
         "title": "启元机器人5000台下线 物理AI迈向家庭消费场",
         "sourceUrl": "https://zhidx.com/p/604553.html",
@@ -2833,7 +2921,45 @@
         "category": "industry",
         "eventType": "service-retirement",
         "addedAt": "2026-10-26T17:25:14Z",
-        "featured": true
+        "featured": null
+      },
+      {
+        "title": "ChatGPT 不断扩展的工作世界",
+        "sourceUrl": "https://openai.com/index/chatgpt-expanding-world-of-work",
+        "publishedAt": "2026-10-26T10:00:00Z",
+        "source": "OpenAI",
+        "summary": "探索 OpenAI Signals 关于近 100 个国家 165 项工作活动的数据，揭示人们如何用 ChatGPT 工作及使用变化。",
+        "id": "27334100e818b98514ff319836bc3b78479c8228c2a09656f9dea445b0edf902",
+        "originalTitle": "ChatGPT’s expanding world of work",
+        "translatedAt": "2026-10-27T09:06:20Z",
+        "lang": "en",
+        "originalSource": "OpenAI",
+        "originalUrl": "https://openai.com/index/chatgpt-expanding-world-of-work",
+        "originalVerifiedAt": "2026-10-27T09:06:20Z",
+        "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+        "category": "tool",
+        "eventType": "major-update",
+        "addedAt": "2026-10-27T09:06:20Z",
+        "featured": null
+      },
+      {
+        "title": "AI时代，一个人能有多大能量？天禧AI × 观猹大会现场实测个人AI跨端协同新体验",
+        "sourceUrl": "https://www.qbitai.com/2026/10/505539.html",
+        "publishedAt": "2026-10-26T09:46:13Z",
+        "source": "量子位",
+        "summary": "10月23日至25日，以“见证超能发生”为主题的“天禧AI × 观猹大会”在杭州茶叶博览会会议会展中心启幕。",
+        "id": "5fff9b77094b4e0aee9d59396c4e2eff39fdc644a4a8e28e62f07e21c18d4802",
+        "originalTitle": null,
+        "translatedAt": null,
+        "lang": "zh",
+        "originalSource": null,
+        "originalUrl": null,
+        "originalVerifiedAt": null,
+        "url": "https://www.qbitai.com/2026/10/505539.html",
+        "category": "model",
+        "eventType": "model-review",
+        "addedAt": "2026-10-27T09:06:20Z",
+        "featured": null
       },
       {
         "title": "KV Cache砍掉99%，单卡吞吐飙6倍，港科CMU联手岩山科技开源新模型",

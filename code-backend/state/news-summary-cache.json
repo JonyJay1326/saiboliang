@@ -1,7 +1,17 @@
 {
-  "e421b9f11a64e25976a33f9a309b564aaa59c891195ca18c45b62418ce49a318": {
-    "summary": "Ollama新增语音模型支持，首发Gradium的Phonon，支持五种语言、数十种音色，生成即流式播放，Apple Silicon上速度超实时100倍。",
+  "9310336c0e60a4b8facceb484d6700cf5a01e83f27b3705464a73ea07a0d7d71": {
+    "summary": "开源编码代理 OpenCode 发布 v2.2.0，项目托管于 GitHub。",
     "source": "deepseek-flash",
-    "at": "2026-10-25T08:30:30Z"
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "b26f70c790034ce0463adf39499836fd564af69cb0b98406a80859a5b0986d83": {
+    "summary": "GitHub Copilot 辅助权限在 CLI、应用和 VS Code 中正式可用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
+  },
+  "256c7b6c72dd5aaae095aea797fd23cb7b985923189440629f312245ad6b1112": {
+    "summary": "OpenAI 新模型 GPT-6.1 Terra 在 GitHub Copilot 中正式可用，成本低于 GPT-6.1 Sol。",
+    "source": "deepseek-flash",
+    "at": "2026-10-27T09:06:20Z"
   }
 }
