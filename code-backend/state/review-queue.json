@@ -145,17 +145,6 @@
   },
   {
     "kind": "news-item",
-    "objectId": "5562d4af1c32fc4324a0734d8bcd33e8fdd574a90cbefe2e3ff1d53ec61cf4ce",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "c1df8a010a4241e46745d29703366b1a52c1642511c2b7bd7d8b6219b6aa4bb4",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
     "objectId": "dc86e63ec13fd1773a1f60691cae9f431bf15718c3e2c5a1e0fece77da8f25ca",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
@@ -551,18 +540,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ModernRelay/omnigraph",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Object-storage native graph database with branching and typed ontology",
-      "sourceUrl": "https://github.com/ModernRelay/omnigraph"
-    },
-    "id": "b0cfccf2d6ba8967ea1b10e818b4dd152c87ae13d3b1278830c4dff7611e07a9",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "kubernetes/kubernetes",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -645,18 +622,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "PCL-Community/PCL-CE",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PCL 社区版 由社区开发者维护与管理",
-      "sourceUrl": "https://github.com/PCL-Community/PCL-CE"
-    },
-    "id": "cbbac3041ea4b50a35d7dba2b6bff7237bfe72ce482550d9b72b9272e501c09a",
-    "status": "pending",
-    "createdAt": "2026-10-23T15:46:10Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "jellyfin/jellyfin",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -700,18 +665,6 @@
       "sourceUrl": "https://github.com/ranxianglei/billion-context"
     },
     "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "duckdb/duckdb",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DuckDB is a high-performance analytical database system",
-      "sourceUrl": "https://github.com/duckdb/duckdb"
-    },
-    "id": "975993f39e7e521e0c61b90b44948d9147c77f36886f18644ee45e8cf4b8ef2d",
     "status": "pending",
     "createdAt": "2026-10-24T14:36:47Z"
   },
@@ -796,18 +749,6 @@
       "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
     },
     "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "jackfrued/Python-100-Days",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Python - 100天从新手到大师",
-      "sourceUrl": "https://github.com/jackfrued/Python-100-Days"
-    },
-    "id": "20ef6185856bcb9f809cc4be61657928d5e4cfb39c8f1a685693f2e0cd08379a",
     "status": "pending",
     "createdAt": "2026-10-26T17:25:14Z"
   },

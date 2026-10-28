@@ -1,17 +1,12 @@
 {
-  "9310336c0e60a4b8facceb484d6700cf5a01e83f27b3705464a73ea07a0d7d71": {
-    "summary": "开源编码代理 OpenCode 发布 v2.2.0，项目托管于 GitHub。",
+  "cd6af38eca7d89e72d24a1fd91bb118b800fb4fe545d1f3294b0edb5c6af4439": {
+    "summary": "开源编码代理 OpenCode 发布 v1.19.5。",
     "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
+    "at": "2026-10-28T09:47:01Z"
   },
-  "b26f70c790034ce0463adf39499836fd564af69cb0b98406a80859a5b0986d83": {
-    "summary": "GitHub Copilot 辅助权限在 CLI、应用和 VS Code 中正式可用。",
+  "92608e65bdba9862559e3872f1d5a3d6929931d2fbf7ff36de1d8f156b975a4e": {
+    "summary": "GitHub Copilot 公测支持组织安装的 GitHub Apps 服务器到服务器身份验证。",
     "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
-  },
-  "256c7b6c72dd5aaae095aea797fd23cb7b985923189440629f312245ad6b1112": {
-    "summary": "OpenAI 新模型 GPT-6.1 Terra 在 GitHub Copilot 中正式可用，成本低于 GPT-6.1 Sol。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
+    "at": "2026-10-28T09:47:01Z"
   }
 }

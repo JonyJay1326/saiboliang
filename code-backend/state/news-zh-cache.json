@@ -64,5 +64,41 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
+  },
+  "1e3ebf94e41ebe19793bfa16d9a1ceac171abfb39683d16886169781f84081b8": {
+    "title": "Retell 借助 OpenAI 模型支撑每月 1 亿次通话",
+    "summary": "GPT-6 Astra 在 Retell 语音智能体基准测试中居首，Codex 助其实现每名员工 160 万美元年化营收。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T09:47:01Z"
+  },
+  "c417f8e3d39d0b893c07541bfe85fce19056b39882f88193551609651d5af4ff": {
+    "title": "OpenAI 扩大与 Oracle 合作，将其应用引入 ChatGPT",
+    "summary": "OpenAI 与 Oracle 扩大合作，将业务应用和 AI 智能体引入 ChatGPT，并为 Oracle 新产品提供支持。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T09:47:01Z"
+  },
+  "c44dc9ed271ff418b14ac5c964f0f9272d3413bd0c2b38b09efd327bf214a17d": {
+    "title": "Check Point 如何借助 Daybreak 加速漏洞研究",
+    "summary": "借助 OpenAI Daybreak，Check Point 加快新安全防护背后的研究，使分析师能更快将漏洞情报转化为客户防护。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T09:47:01Z"
+  },
+  "92608e65bdba9862559e3872f1d5a3d6929931d2fbf7ff36de1d8f156b975a4e": {
+    "title": "GitHub Copilot 支持服务器到服务器身份验证",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T09:47:01Z"
+  },
+  "5f3a6e7942f4e06f8738302fb94c4a8d445c6baa41bf9c4074a6b1f40b0ba8b5": {
+    "title": "Together GPU 集群自动修复：从 GPU 故障到健康节点",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T09:47:01Z"
+  },
+  "82b1e50baf2c41283cdf81214f0b11b28560cb2a3c8a6b26c982acb7e88215a8": {
+    "title": "OpenRouter 全面筛查 CSAM",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T09:47:01Z"
   }
 }
