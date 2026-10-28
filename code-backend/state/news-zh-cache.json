@@ -71,21 +71,9 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T09:47:01Z"
   },
-  "c417f8e3d39d0b893c07541bfe85fce19056b39882f88193551609651d5af4ff": {
-    "title": "OpenAI 扩大与 Oracle 合作，将其应用引入 ChatGPT",
-    "summary": "OpenAI 与 Oracle 扩大合作，将业务应用和 AI 智能体引入 ChatGPT，并为 Oracle 新产品提供支持。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
   "c44dc9ed271ff418b14ac5c964f0f9272d3413bd0c2b38b09efd327bf214a17d": {
     "title": "Check Point 如何借助 Daybreak 加速漏洞研究",
     "summary": "借助 OpenAI Daybreak，Check Point 加快新安全防护背后的研究，使分析师能更快将漏洞情报转化为客户防护。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
-  "92608e65bdba9862559e3872f1d5a3d6929931d2fbf7ff36de1d8f156b975a4e": {
-    "title": "GitHub Copilot 支持服务器到服务器身份验证",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-28T09:47:01Z"
   },
@@ -100,5 +88,101 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-28T09:47:01Z"
+  },
+  "9327e550d0f4f4ee15b033f0d79da401fcf96b5ca6c7f70c414ea94318563fa6": {
+    "title": "Meta与五所美国大学合作，加速医学与科学突破",
+    "summary": "Meta将向使用其模型解决科学与医学关键问题的美国大学提供Superintelligence模型、研究资金和直接的研究人员协作。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "67c6b18b0a76451db874442c24f6ea5f495cc3b47e8381a05018127b62758012": {
+    "title": "Legora正在构建法律工作的智能体操作系统",
+    "summary": "了解Legora如何利用OpenAI模型、ChatGPT和Codex加速法律工作流、扩展合同分析，并让律师专注于更高价值的工作。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "709cc8e2bd467b7916899fb3ec62dbecfa135fc3209b011a85a1239ca7c1f0f6": {
+    "title": "Legora正在构建法律工作的智能体操作系统",
+    "summary": "了解Legora如何利用OpenAI模型、ChatGPT和Codex加速法律工作流、扩展合同分析，并让律师专注于更高价值的工作。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "e8e0cb1d0e685ced8c0e7ac9d1fec69ff1aeb58dda3bc427572a678f29f8cd65": {
+    "title": "Gemini 4 Carbon：我们的下一代前沿模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "af8e72e013cbe8cf712f02b8002cac8eb6a7f7b865c41978814bbf913f04f6f4": {
+    "title": "使用GitHub Copilot Fusion路由与编排模型",
+    "summary": "GitHub Copilot Fusion已正式可用。无需为每项任务挑选模型，选择Copilot Fusion即可让Copilot智能地为你路由和编排所用模型。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "515b472922216f5193f82deec3e40c39493e399d221d928b8d389a3cc5f07604": {
+    "title": "GitHub Copilot应用、Universe发布",
+    "summary": "工作并不总是局限于单个仓库或会话。一项功能可能跨越多个仓库。发布计划可能涉及规格、设计和资源，而无需触碰仓库。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "9084abaaec71303f8aba7e0f90bb647670965ad2615c86da6a48862d7acfbc84": {
+    "title": "GitHub Enterprise现已包含GitHub Copilot访问权限",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "532ef9d141d935742f5ba5423db15cd9bad15392942d882f9a34a7f23718d129": {
+    "title": "GitHub Copilot应用的安全扩展",
+    "summary": "现在，你无需离开GitHub Copilot应用即可处理仓库的GitHub代码扫描警报。新的GitHub安全扩展现已进入公开预览，可让你查找……",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "6e5ebe8af36db950532382c0197d8ccc1f04592ec8c5de5c6ff11d84f671fbd2": {
+    "title": "GitHub intelligence让你的代码、上下文和历史发挥作用",
+    "summary": "智能体应理解的不仅是你的代码库，还应理解你的团队如何工作。你的偏好、仓库约定、技能和自定义指令指导应如何做出更改，而代码……",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "e825f4123d0c16bf22c39fba136b6f4aa7799a239174c48bed08b9311120b1a8": {
+    "title": "使用Copilot Automations为团队构建共享工作流",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "535be6664def3f05f94d43459b9db9364f46a71e2cc8e6c028c68c5d9b909415": {
+    "title": "直接在Copilot中生成和编辑图像",
+    "summary": "现在，你可以在GitHub Copilot中使用自然语言生成和编辑图像。当你请求图像时，你选择的推理模型会调用由……驱动的专用图像生成工具。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "f48a388f03b95e78329d977b6d3b1b4788264055d01079b1ca08de217da022e7": {
+    "title": "GitHub Copilot Fusion现支持选择本地模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "d48e37e09df5a7b1656f65e6c5a9346d6ad4cfcedbeb57236faaae21863e7359": {
+    "title": "GitHub Agentic Workflows正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "15614e45c12695c2130496dec57122392ed4a54dca6c99f5214a3aff45350fe3": {
+    "title": "通过可达性分析确定Dependabot警报优先级",
+    "summary": "Dependabot警报的累积速度可能快于团队处理速度。依赖树中存在易受攻击的包，并不总是意味着你的代码使用了……的易受攻击部分。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "a8532ea6bc30bc96cacf6542983f4d797b350f4c44d392a61b2e5973bf3bb4a4": {
+    "title": "JetBrains中的GitHub Copilot、Universe发布",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "9fa8e4999dc547768cea2d0e8770644fb87b13bf896ca5138744b6991c417066": {
+    "title": "轻薄全能：NVIDIA RTX Spark Windows 笔记本新增型号、智能体工具与游戏",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
   }
 }

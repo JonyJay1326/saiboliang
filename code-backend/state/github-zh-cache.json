@@ -64,20 +64,10 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "shiyu-coder/Kronos": {
-    "text": "Kronos：面向金融市场语言的基础模型",
-    "source": "deepseek-flash",
-    "at": "2026-10-21T15:58:55Z"
-  },
   "tile-ai/tilelang": {
     "text": "领域特定语言，用于简化高性能 GPU/CPU/加速器内核的开发",
     "source": "deepseek-flash",
     "at": "2026-10-21T15:58:55Z"
-  },
-  "sgl-project/sglang": {
-    "text": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
-    "source": "deepseek-flash",
-    "at": "2026-10-22T15:54:26Z"
   },
   "kestra-io/kestra": {
     "text": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体的开源工作流控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本化，可扩展至数百万次执行。",
@@ -106,11 +96,6 @@
   },
   "google-gemini/gemini-cli": {
     "text": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
-    "source": "deepseek-flash",
-    "at": "2026-10-25T14:57:55Z"
-  },
-  "Vincentwei1021/video-shotcraft": {
-    "text": "适用于 Claude Code 与 Codex 的 AI 视频技能——基于 Remotion 制作电影级产品视频：152 张镜头配方卡、209 个动效预览、一个生产级模板",
     "source": "deepseek-flash",
     "at": "2026-10-25T14:57:55Z"
   },
@@ -173,5 +158,30 @@
     "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、智能体、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
     "source": "deepseek-flash",
     "at": "2026-10-28T09:47:01Z"
+  },
+  "mvanhorn/last30days-skill": {
+    "text": "AI agent 技能，可在 Reddit、X、YouTube、HN、Polymarket 及网页上研究任意主题，并综合出有依据的摘要",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "trymirai/uzu": {
+    "text": "面向 AI 模型的高性能推理引擎",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "opendataloader-project/opendataloader-pdf": {
+    "text": "面向 AI 可用数据的 PDF 解析器，自动化 PDF 无障碍处理，开源",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "Nutlope/hallmark": {
+    "text": "面向 Claude Code、Cursor 和 Codex 的反 AI 套路设计技能",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "docker/docker-agent": {
+    "text": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
   }
 }

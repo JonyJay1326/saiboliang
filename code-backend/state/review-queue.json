@@ -456,18 +456,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "react/react",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The library for web and native user interfaces.",
-      "sourceUrl": "https://github.com/react/react"
-    },
-    "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
-    "status": "pending",
-    "createdAt": "2026-10-16T15:23:39Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "elie222/rakazo",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -513,18 +501,6 @@
     "id": "a7e29e0f37e5db40aea6d4a8d463d93add5ae6462b4da1049a241465dec5acbb",
     "status": "pending",
     "createdAt": "2026-10-20T08:38:29Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "android/skills",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/android/skills"
-    },
-    "id": "a8243892068f93d3e1b7e41a70649120f4e646ee55f176133c27e80f96c83649",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
   },
   {
     "kind": "github-classification",
@@ -670,18 +646,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "xmanrui/dsh-im",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "通过扫码或机器人凭据把IM机器人接入DeepSeek Harness（支持飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord和WhatsApp）。 Connect IM bots to DeepSeek Harness via QR code or credentials (9 channels).",
-      "sourceUrl": "https://github.com/xmanrui/dsh-im"
-    },
-    "id": "ae659155c6e244984641929833856694b8595f8e0eedc925e50c662a177af358",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "microsoft/skill-recorder",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -701,30 +665,6 @@
       "sourceUrl": "https://github.com/godotengine/godot"
     },
     "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "harry0703/MangoDisk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Safety-first disk cleaner and space analyzer for macOS, Windows and Linux, with duplicate cleanup, app uninstall, startup management, system optimization, and maintenance.",
-      "sourceUrl": "https://github.com/harry0703/MangoDisk"
-    },
-    "id": "c14f5d5a1eb919cb7e9ec196747138506cc561b74633f96e6ce7046b36765882",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "HunxByts/GhostTrack",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Useful tool to track location or mobile number",
-      "sourceUrl": "https://github.com/HunxByts/GhostTrack"
-    },
-    "id": "4ede85173444dbe8dd8f0e250cf023081dd51dcb5fe2782d672b176dba9f1df0",
     "status": "pending",
     "createdAt": "2026-10-25T14:57:55Z"
   },
@@ -790,18 +730,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "flutter/flutter",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
-      "sourceUrl": "https://github.com/flutter/flutter"
-    },
-    "id": "cfbd0f27e4bba5eda99ccee79018315b8567e6ede963f0691d7e427109ab106d",
-    "status": "pending",
-    "createdAt": "2026-10-27T16:42:38Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "mg-chao/snow-apps",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -811,5 +739,89 @@
     "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
     "status": "pending",
     "createdAt": "2026-10-27T16:42:38Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "JetBrains/thinkrail",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "sourceUrl": "https://github.com/JetBrains/thinkrail"
+    },
+    "id": "b4ec657a365ba87fe32e0f22351ed2785daf2de9e5940764226ce69af48633c7",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HKUDS/DeepTutor",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
+      "sourceUrl": "https://github.com/HKUDS/DeepTutor"
+    },
+    "id": "cd79cdde47336d8c843d0e1508a006201d876eddfac4a5a108c2105d7ff75fed",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailscale",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The easiest, most secure way to use WireGuard and 2FA.",
+      "sourceUrl": "https://github.com/tailscale/tailscale"
+    },
+    "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "xiaolai/the-craft-of-selfteaching",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "One has no future if one couldn't teach themself.",
+      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
+    },
+    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yuliskov/SmartTube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Browse media content with your own rules on Android TV",
+      "sourceUrl": "https://github.com/yuliskov/SmartTube"
+    },
+    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pablostanley/yoinks",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "yoink any video from your terminal. no shady ads.",
+      "sourceUrl": "https://github.com/pablostanley/yoinks"
+    },
+    "id": "ac2d1000a433e4ac81841d448ad9ff723f4899278310cd1fae255c025ff47a73",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zerx-lab/FluxDown",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
+      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
+    },
+    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
+    "status": "pending",
+    "createdAt": "2026-10-28T17:11:13Z"
   }
 ]

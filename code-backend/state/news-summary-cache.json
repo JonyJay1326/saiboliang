@@ -1,12 +1,17 @@
 {
-  "cd6af38eca7d89e72d24a1fd91bb118b800fb4fe545d1f3294b0edb5c6af4439": {
-    "summary": "开源编码代理 OpenCode 发布 v1.19.5。",
+  "e8e0cb1d0e685ced8c0e7ac9d1fec69ff1aeb58dda3bc427572a678f29f8cd65": {
+    "summary": "Gemini 4 Carbon是谷歌最强模型，具备顶尖网络安全与长程能力。",
     "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
+    "at": "2026-10-28T17:11:13Z"
   },
-  "92608e65bdba9862559e3872f1d5a3d6929931d2fbf7ff36de1d8f156b975a4e": {
-    "summary": "GitHub Copilot 公测支持组织安装的 GitHub Apps 服务器到服务器身份验证。",
+  "9084abaaec71303f8aba7e0f90bb647670965ad2615c86da6a48862d7acfbc84": {
+    "summary": "GitHub Enterprise现为每位授权用户附带Copilot，无需再分开管理。",
     "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
+    "at": "2026-10-28T17:11:13Z"
+  },
+  "e825f4123d0c16bf22c39fba136b6f4aa7799a239174c48bed08b9311120b1a8": {
+    "summary": "共享Copilot Automations正推出，团队可共同构建维护AI工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-10-28T17:11:13Z"
   }
 }
