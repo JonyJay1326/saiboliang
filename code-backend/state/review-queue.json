@@ -68,28 +68,6 @@
   },
   {
     "kind": "news-item",
-    "objectId": "42a9afff2abe1e182f695b9872221f126ae5a577b891051f711ced6c4adafb7a",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "46cab9dbb90a74b170fa8ef9e11a8001d7781ee1b11103824be48d8c73c82bf6",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "d297f950e31ab4273ef88d97bcea7210f5719d6f2ec96ccf67014766ebfc3948",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "485059c80706e9299940dcafaa466b4b468618bea93500353b2eaeb4f7b1f59f",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
     "objectId": "b5f456afce24eb12fd731444abea92ed92dd15d7104b5adf63df31feba57d3ba",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
@@ -123,39 +101,6 @@
   },
   {
     "kind": "news-item",
-    "objectId": "4f79d1d276a7df16b91d3b689436d11f05b8c8b4ab610e261aa4e4c334e7f2f2",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "67c4fda558e1ccf5b5398dc52fdfc91ec441a21b1a25f2653ae94bde2eb59b80",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "d656bdaac72c3c1db5990b8f5288b249403a4b89f669d8828b4609ed6c3553e6",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "be2c72d0a0a8a3548dac6852b6693b3cf592aa7339f75a5963d18fe4f6a8096f",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "dc86e63ec13fd1773a1f60691cae9f431bf15718c3e2c5a1e0fece77da8f25ca",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "dc88512538c17d77c1c6083f39857a6e300fa1ab855df4f890f65a0e32308c3c",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
     "objectId": "0b8d9dce8cff70c8cd2208820c8fdce8bad16c2bb8c78daf5e72c7c0debf74d4",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
@@ -178,45 +123,12 @@
   },
   {
     "kind": "news-item",
-    "objectId": "010aa2a729146f3ccfd8a7ff1fbb716a499abfe77c16d03cb5ef6b13450186ce",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "e6fbef7b3d8f6dafd5429edec398c288dbea626175bbc09e2d024e602771fb56",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
     "objectId": "e5d250bcdf8eb062cbf07ce72f9a0a58053f9f4e3b40e858ada550135f498a2d",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
       "source": "Together AI"
     },
     "id": "f120521e324e711c681810b88a320016c457ddc7186e8395202b469814d651b1",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "9796f6029de66e67416627619b5648a0bb036447f3dafed996f93b5a8757c4c2",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "f18df4f45ba5c3dc4f577d52c0241a51badbdbf6a50d18c3ab5f7fb5db2b1ca2",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "62cae8ae61cee5adac6b76ec888b8a0938aa29b9259cd391558ff31e94078824",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "f838c9137f9fea5ca4b40f814efd42d961f2657bb396c50ff8d6d556d80a9af8",
     "status": "pending",
     "createdAt": "2026-09-25T06:59:08Z"
   },
@@ -456,18 +368,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "elie222/rakazo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
-      "sourceUrl": "https://github.com/elie222/rakazo"
-    },
-    "id": "0511056688446943b4551352d53bfc97b70089062bfe40c7f79fc3b9a6d1a8fa",
-    "status": "pending",
-    "createdAt": "2026-10-17T14:14:10Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "withmarbleapp/os-taxonomy",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -477,18 +377,6 @@
     "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
     "status": "pending",
     "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "thesysdev/openui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Open Standard for Generative UI",
-      "sourceUrl": "https://github.com/thesysdev/openui"
-    },
-    "id": "b8ad17c0dac9b3237958281fa60adcb2d02ce3f1f300e42030da345eefe2135e",
-    "status": "pending",
-    "createdAt": "2026-10-19T17:31:30Z"
   },
   {
     "kind": "github-classification",
@@ -539,18 +427,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Pumpkin-MC/Pumpkin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Empowering everyone to host fast and efficient Minecraft servers",
-      "sourceUrl": "https://github.com/Pumpkin-MC/Pumpkin"
-    },
-    "id": "2ffc284b0c1432646e136019c61897861a4c2db0af8c92ea3587ecabee20202d",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "michael-denyer/pstack-claude",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -571,30 +447,6 @@
     "id": "4e07e53fa5d89f40501846f1f657174af723e1ae1e3a16810c291f07b1045423",
     "status": "pending",
     "createdAt": "2026-10-22T04:01:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "fastapi/fastapi",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
-      "sourceUrl": "https://github.com/fastapi/fastapi"
-    },
-    "id": "dfc65ae20f33304bd26304c6e7a28cc826d12fa36d96f0685186fe6584986a8d",
-    "status": "pending",
-    "createdAt": "2026-10-23T15:46:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "jellyfin/jellyfin",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Free Software Media System - Server Backend & API",
-      "sourceUrl": "https://github.com/jellyfin/jellyfin"
-    },
-    "id": "1463911a487eb1a1f3d5e5a63297f0fe24419e11b49b7474822fc5afb32a6c66",
-    "status": "pending",
-    "createdAt": "2026-10-23T15:46:10Z"
   },
   {
     "kind": "github-classification",
@@ -677,18 +529,6 @@
       "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
     },
     "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nautechsystems/nautilus_trader",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
-      "sourceUrl": "https://github.com/nautechsystems/nautilus_trader"
-    },
-    "id": "ab592a52af65babb43349acf08a6158763364d63e48809cc76cb165aab9d9d97",
     "status": "pending",
     "createdAt": "2026-10-26T17:25:14Z"
   },
@@ -778,18 +618,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "yuliskov/SmartTube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Browse media content with your own rules on Android TV",
-      "sourceUrl": "https://github.com/yuliskov/SmartTube"
-    },
-    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
-    "status": "pending",
-    "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "pablostanley/yoinks",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -813,14 +641,111 @@
     "createdAt": "2026-10-28T17:11:13Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "5dbadd761c8e8714b233db16fa803cf638074590ea9a6c089249341b39f1ee22",
-    "reason": "invalid feed item: unexpected news host",
+    "kind": "github-classification",
+    "objectId": "php/php-src",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "source": "Microsoft Azure"
+      "description": "The PHP Interpreter",
+      "sourceUrl": "https://github.com/php/php-src"
     },
-    "id": "ce53b7df799ea0da97f382d5e3ec709cdeb6384c5fd76a5b52331f03e07995ac",
+    "id": "a42926ad6a6db7f0f06ae4c0ea2c4368dd2c244762080449f08345618c982202",
     "status": "pending",
-    "createdAt": "2026-10-29T10:05:48Z"
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ruvnet/RuView",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "sourceUrl": "https://github.com/ruvnet/RuView"
+    },
+    "id": "0fadb702a3fe7d042012de26c1ca81c9ee6e15f68a8194797b735c27304da6e6",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "flutter/flutter",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "sourceUrl": "https://github.com/flutter/flutter"
+    },
+    "id": "cfbd0f27e4bba5eda99ccee79018315b8567e6ede963f0691d7e427109ab106d",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "chthollyphile/folia-major",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "专注于绚丽的歌词动画效果的本地音乐/navidrome/第三方多平台在线音乐播放器",
+      "sourceUrl": "https://github.com/chthollyphile/folia-major"
+    },
+    "id": "cc9de1b01f7dfa9dc73f2f6cb38285ce3b4ec0dbe09fe10ef1e9fae7d2c3f9d4",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "LibreSpark/LibreTV",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一分钟搭建影视站，支持Docker等部署方式",
+      "sourceUrl": "https://github.com/LibreSpark/LibreTV"
+    },
+    "id": "066c5ac41f9656b08d34a5b5b63fa88a72a53008963a22f141c5463232caad9a",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Effect-TS/effect",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build production-ready applications in TypeScript",
+      "sourceUrl": "https://github.com/Effect-TS/effect"
+    },
+    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "shadps4-emu/shadPS4",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
+    },
+    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bevyengine/bevy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A refreshingly simple data-driven game engine built in Rust",
+      "sourceUrl": "https://github.com/bevyengine/bevy"
+    },
+    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "emilk/egui",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "egui: an easy-to-use immediate mode GUI in Rust that runs on both web and native",
+      "sourceUrl": "https://github.com/emilk/egui"
+    },
+    "id": "8c612bcfc7d76dbb8520b63599960ca51316539124e96cb96139d7a0ec44f6ed",
+    "status": "pending",
+    "createdAt": "2026-10-29T17:27:20Z"
   }
 ]

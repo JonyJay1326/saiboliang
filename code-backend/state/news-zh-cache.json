@@ -1,25 +1,7 @@
 {
-  "b1d7eb2dedce5839f5898b833190e67feba22fd18c12ab158ab4af97756b01c4": {
-    "title": "我们的最新 AI Quest：绘制人类大脑图谱",
-    "summary": "一幅旋转行星的插图，展示多个卡通人物挥手。顶部文字为“AI Quests”",
-    "source": "deepseek-flash",
-    "at": "2026-10-26T17:25:14Z"
-  },
   "a9c488820a62ac4adcd9d66c87dfdb487fb6897ef015ab83ccdf2e6a9db2968a": {
     "title": "Greptile 借助 GPT-6 Astra 将缺陷检测拓展至代码审查之外",
     "summary": "Greptile 如何用 GPT-6 Astra 测试用户工作流、用 Daybreak 强化安全、用 Codex 减少返工。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
-  },
-  "8eb6001a836a6e50b8fb133e1590f182de0e7997306db3a54dcb8d2c2e5a6daa": {
-    "title": "与学术社区合作构建科学理解",
-    "summary": "OpenAI 分享在 Kakeya 猜想、指数时间假设和量子色动力学上的模型结果，以及研究者如何验证并在此基础上推进。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
-  },
-  "7d972df501d01ba1f64ace9f515a56fb23b6429c84e2c13cce6a1dfa0631bf43": {
-    "title": "GPT-6.1 Sol 助力 CodeRabbit 强化复杂代码库安全",
-    "summary": "CodeRabbit 使用 GPT-6.1 Sol 排查复杂代码库中的安全风险，其安全智能体帮助开发者审查发现与修复建议。",
     "source": "deepseek-flash",
     "at": "2026-10-27T09:06:20Z"
   },
@@ -37,12 +19,6 @@
   },
   "85fdf95f1fdc5eecfcb1a7c5c441591b375a1a4306eb106a0903d46a2a17b2e3": {
     "title": "AI 如何改变数百万痴呆症患者的发现节奏",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
-  "a9dcb410f7163a89c7350c7358707fb1869f37cd22bd781f15669bc6ff2866c7": {
-    "title": "通过敏捷油藏建模扩展油藏不确定性分析",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
@@ -136,5 +112,29 @@
     "summary": "我们默认的路由过去会将大多数流量发送给模型最便宜的提供商。新的路由算法持续监控每个提供商端点的性能，以针对每个新请求优化成本、速度和可靠性的平衡。",
     "source": "deepseek-flash",
     "at": "2026-10-29T10:05:48Z"
+  },
+  "0f01adb2acab0a67ba71c0b077a856b8d5e6ddb0aecdbfc3051cca05fba1e4d6": {
+    "title": "我们如何检测前沿模型失准",
+    "summary": "OpenAI 采用分层监控来检测前沿模型失准和未经授权的智能体行为，以便响应人员在事件升级前介入。",
+    "source": "deepseek-flash",
+    "at": "2026-10-29T17:27:20Z"
+  },
+  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
+    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将想法转化为仿真",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-29T17:27:20Z"
+  },
+  "84f5c4345b63da3c308d144b55027c251424773baafc90021b7ca7842fe70a24": {
+    "title": "GFN 周四切片：《Phantom Blade Zero》登陆 GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-29T17:27:20Z"
+  },
+  "bd03e4a483646b8532a8be38f63038c71b34c72e91048d24fad76cc874818f73": {
+    "title": "Le Chonk：为程序员打造，受防御者信赖。",
+    "summary": "Mistral Large 4（Le Chonk）的权重现已开放。这是一个 1T 参数多模态模型，也是最佳的开源权重编程模型，在欧洲训练。",
+    "source": "deepseek-flash",
+    "at": "2026-10-29T17:27:20Z"
   }
 }

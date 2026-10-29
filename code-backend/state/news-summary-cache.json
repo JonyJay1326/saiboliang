@@ -1,17 +1,12 @@
 {
-  "e8e0cb1d0e685ced8c0e7ac9d1fec69ff1aeb58dda3bc427572a678f29f8cd65": {
-    "summary": "Gemini 4 Carbon是谷歌最强模型，具备顶尖网络安全与长程能力。",
+  "f48a388f03b95e78329d977b6d3b1b4788264055d01079b1ca08de217da022e7": {
+    "summary": "GitHub Copilot Fusion 实验性预览支持在设备端模型与云端模型间智能路由。",
     "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
+    "at": "2026-10-29T17:27:20Z"
   },
-  "9084abaaec71303f8aba7e0f90bb647670965ad2615c86da6a48862d7acfbc84": {
-    "summary": "GitHub Enterprise现为每位授权用户附带Copilot，无需再分开管理。",
+  "9fa8e4999dc547768cea2d0e8770644fb87b13bf896ca5138744b6991c417066": {
+    "summary": "NVIDIA RTX Spark 轻薄本新增华硕、戴尔、惠普、联想、微软、微星型号，搭载 Blackwell RTX GPU 与 Grace CPU。",
     "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "e825f4123d0c16bf22c39fba136b6f4aa7799a239174c48bed08b9311120b1a8": {
-    "summary": "共享Copilot Automations正推出，团队可共同构建维护AI工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
+    "at": "2026-10-29T17:27:20Z"
   }
 }
