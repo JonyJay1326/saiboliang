@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-28T17:11:13Z",
+  "dataUpdatedAt": "2026-10-29T10:05:48Z",
   "items": [
+    {
+      "title": "刚刚，Gemini 4 Carbon全面超越Opus 5.5！首发Token半价",
+      "sourceUrl": "https://www.qbitai.com/2026/10/506227.html",
+      "publishedAt": "2026-10-29T00:03:58Z",
+      "source": "量子位",
+      "summary": "能连肝数日修Bug，免疫提示词注入",
+      "id": "6ccd1352f98e15c3a6d4ecfee0f4f0c3db350342fea9f5c0f9c7087025751509",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/506227.html",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-10-29T10:05:48Z",
+      "featured": true
+    },
     {
       "title": "Gemini 4 Carbon：我们的下一代前沿模型",
       "sourceUrl": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
@@ -113,7 +132,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-10-28T17:11:13Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "下中国象棋赢了Jev！扩散智能推出决策模型，判断正确率达95%",
@@ -132,6 +151,25 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-10-28T17:11:13Z",
+      "featured": true
+    },
+    {
+      "title": "蚂蚁版Muse背后模型开源！Agent测评赶超Deepseek-V4-Pro",
+      "sourceUrl": "https://zhidx.com/p/605139.html",
+      "publishedAt": "2026-10-28T10:33:49Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 孙小雯 编辑 | 程茜 智东西10月29日消息，昨日，蚂蚁百灵 开源面向Personal Agent场景进一步训练 Ling-3.1-flas",
+      "id": "4534a121f565280cd8e2ebb19937709786f6c5d9000e0d8322def23785524470",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/605139.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-10-29T10:05:48Z",
       "featured": true
     },
     {
@@ -5683,6 +5721,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-28T17:11:13Z",
-  "generatedAt": "2026-10-28T17:11:13Z"
+  "version": "2026-10-29T10:05:48Z",
+  "generatedAt": "2026-10-29T10:05:48Z"
 }

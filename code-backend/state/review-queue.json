@@ -539,18 +539,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "HMCL-dev/HMCL",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular",
-      "sourceUrl": "https://github.com/HMCL-dev/HMCL"
-    },
-    "id": "b2c349b20f895a33d56c53f485798b1e818664ee798742631e54a0199003dcf1",
-    "status": "pending",
-    "createdAt": "2026-10-21T15:58:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Pumpkin-MC/Pumpkin",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -823,5 +811,16 @@
     "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
     "status": "pending",
     "createdAt": "2026-10-28T17:11:13Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "5dbadd761c8e8714b233db16fa803cf638074590ea9a6c089249341b39f1ee22",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "ce53b7df799ea0da97f382d5e3ec709cdeb6384c5fd76a5b52331f03e07995ac",
+    "status": "pending",
+    "createdAt": "2026-10-29T10:05:48Z"
   }
 ]
