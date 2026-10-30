@@ -498,18 +498,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "godotengine/godot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
-      "sourceUrl": "https://github.com/godotengine/godot"
-    },
-    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/sandbox-runtime",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -726,18 +714,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "bevyengine/bevy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A refreshingly simple data-driven game engine built in Rust",
-      "sourceUrl": "https://github.com/bevyengine/bevy"
-    },
-    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "emilk/egui",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -747,5 +723,39 @@
     "id": "8c612bcfc7d76dbb8520b63599960ca51316539124e96cb96139d7a0ec44f6ed",
     "status": "pending",
     "createdAt": "2026-10-29T17:27:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "danyuchn/asd-ste100-skill",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewriting ambiguous agent-facing English.",
+      "sourceUrl": "https://github.com/danyuchn/asd-ste100-skill"
+    },
+    "id": "248110479f7b89955870940639bb72976dd77ee1d84a2e4fea3581b824745da0",
+    "status": "pending",
+    "createdAt": "2026-10-30T10:08:36Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "5dbadd761c8e8714b233db16fa803cf638074590ea9a6c089249341b39f1ee22",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "ce53b7df799ea0da97f382d5e3ec709cdeb6384c5fd76a5b52331f03e07995ac",
+    "status": "pending",
+    "createdAt": "2026-10-30T10:08:36Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "1cb158862fc4e0c0fe5a62b14027455e98cf77c444b65cfe25c04c8f6725c34e",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "7d4062bfea6253980ce806069662e33414ede3bc6e03aaad3faef258fa6a14cc",
+    "status": "pending",
+    "createdAt": "2026-10-30T10:08:36Z"
   }
 ]

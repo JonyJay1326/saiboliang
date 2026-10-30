@@ -1,16 +1,4 @@
 {
-  "a9c488820a62ac4adcd9d66c87dfdb487fb6897ef015ab83ccdf2e6a9db2968a": {
-    "title": "Greptile 借助 GPT-6 Astra 将缺陷检测拓展至代码审查之外",
-    "summary": "Greptile 如何用 GPT-6 Astra 测试用户工作流、用 Daybreak 强化安全、用 Codex 减少返工。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T09:06:20Z"
-  },
-  "2cf69418651c9e4ae19010e7f210c4550a14bbfc11f9a53f06014e006f69e36a": {
-    "title": "你的下一位销售队友应该是 Grok Bot",
-    "summary": "SpaceXSI 销售团队构建了 Shared Bots，用于潜在客户开发、报价和交易审核，让每位销售代表都能基于同一套最新专业知识开展工作。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
   "393575ee7d83ff0a65d333d8be46ec5237c4c4f8ffd65a18f4b5764a81e08f2c": {
     "title": "Genie 4：新一代世界模拟",
     "summary": "Genie 4：我们的新世界模型，在实时模拟中实现前所未有的真实感。",
@@ -29,63 +17,15 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T09:47:01Z"
   },
-  "c44dc9ed271ff418b14ac5c964f0f9272d3413bd0c2b38b09efd327bf214a17d": {
-    "title": "Check Point 如何借助 Daybreak 加速漏洞研究",
-    "summary": "借助 OpenAI Daybreak，Check Point 加快新安全防护背后的研究，使分析师能更快将漏洞情报转化为客户防护。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
-  "5f3a6e7942f4e06f8738302fb94c4a8d445c6baa41bf9c4074a6b1f40b0ba8b5": {
-    "title": "Together GPU 集群自动修复：从 GPU 故障到健康节点",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
-  "82b1e50baf2c41283cdf81214f0b11b28560cb2a3c8a6b26c982acb7e88215a8": {
-    "title": "OpenRouter 全面筛查 CSAM",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
   "9327e550d0f4f4ee15b033f0d79da401fcf96b5ca6c7f70c414ea94318563fa6": {
     "title": "Meta与五所美国大学合作，加速医学与科学突破",
     "summary": "Meta将向使用其模型解决科学与医学关键问题的美国大学提供Superintelligence模型、研究资金和直接的研究人员协作。",
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
-  "709cc8e2bd467b7916899fb3ec62dbecfa135fc3209b011a85a1239ca7c1f0f6": {
-    "title": "Legora正在构建法律工作的智能体操作系统",
-    "summary": "了解Legora如何利用OpenAI模型、ChatGPT和Codex加速法律工作流、扩展合同分析，并让律师专注于更高价值的工作。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
   "6e5ebe8af36db950532382c0197d8ccc1f04592ec8c5de5c6ff11d84f671fbd2": {
     "title": "GitHub intelligence让你的代码、上下文和历史发挥作用",
     "summary": "智能体应理解的不仅是你的代码库，还应理解你的团队如何工作。你的偏好、仓库约定、技能和自定义指令指导应如何做出更改，而代码……",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "535be6664def3f05f94d43459b9db9364f46a71e2cc8e6c028c68c5d9b909415": {
-    "title": "直接在Copilot中生成和编辑图像",
-    "summary": "现在，你可以在GitHub Copilot中使用自然语言生成和编辑图像。当你请求图像时，你选择的推理模型会调用由……驱动的专用图像生成工具。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "f48a388f03b95e78329d977b6d3b1b4788264055d01079b1ca08de217da022e7": {
-    "title": "GitHub Copilot Fusion现支持选择本地模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "d48e37e09df5a7b1656f65e6c5a9346d6ad4cfcedbeb57236faaae21863e7359": {
-    "title": "GitHub Agentic Workflows正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "9fa8e4999dc547768cea2d0e8770644fb87b13bf896ca5138744b6991c417066": {
-    "title": "轻薄全能：NVIDIA RTX Spark Windows 笔记本新增型号、智能体工具与游戏",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
@@ -98,12 +38,6 @@
   "e2ed7680c50ae3f074e04f962f033e8bab070f352fa8087e45258e537064a005": {
     "title": "公司的未来",
     "summary": "AI 可能如何进入组织架构图——在我们之下、身旁与之间。",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T10:05:48Z"
-  },
-  "1e84e499960d1fc40c5150d7f657f6787050d5d3ea14708799135a42c4b93a02": {
-    "title": "VS Code 中的 GitHub Copilot，Universe 发布",
-    "summary": "今年，我们专注于让您在 Visual Studio Code 中使用 GitHub Copilot 时拥有更多选择：使用哪些模型、智能体在哪里运行，以及如何……",
     "source": "deepseek-flash",
     "at": "2026-10-29T10:05:48Z"
   },
@@ -136,5 +70,29 @@
     "summary": "Mistral Large 4（Le Chonk）的权重现已开放。这是一个 1T 参数多模态模型，也是最佳的开源权重编程模型，在欧洲训练。",
     "source": "deepseek-flash",
     "at": "2026-10-29T17:27:20Z"
+  },
+  "9349f418e7bc7ab45091d36c0bfe75e2136622d8b5dbcf107bb7aa7386820b2a": {
+    "title": "更强大且有益的 AI 的更新版 Model Spec",
+    "summary": "OpenAI 更新版 Model Spec 概述五项核心价值，引导更强大的 AI 具备良好判断力、尊重人类自主性并忠实于人类意图。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T10:08:36Z"
+  },
+  "d948735545c20cf3072195dbbc120386d43c1319abb3514dc8f0d2f4f07f9bdc": {
+    "title": "Ropes & Gray 如何为交易尽职调查开发 AI",
+    "summary": "Ropes & Gray 正与 OpenAI 合作为交易尽职调查开发 AI。律师在为客户提供建议前审阅分组文档、摘要和报告。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T10:08:36Z"
+  },
+  "2746f11e7a8ea5235917218ef88b800e8e32c6e73f15cf5e0097f4c15aec72aa": {
+    "title": "Meta API 新增 Webhook IP 范围",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-30T10:08:36Z"
+  },
+  "11dab8e53a50e1d646ff6cff43edaac119c4002de195c9296d7e2bbe9dcecdf2": {
+    "title": "仓库插件默认设置与企业插件控制正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-30T10:08:36Z"
   }
 }

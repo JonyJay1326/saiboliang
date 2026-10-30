@@ -139,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
   },
-  "rasbt/LLMs-from-scratch": {
-    "text": "从零开始，用 PyTorch 逐步实现一个类似 ChatGPT 的大语言模型",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
   "macro-inc/macro": {
     "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、智能体、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
     "source": "deepseek-flash",
@@ -181,11 +176,6 @@
   },
   "zarazhangrui/frontend-slides": {
     "text": "借助编码代理的前端技能在网页上创建精美幻灯片",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
-  },
-  "iOfficeAI/OfficeCLI": {
-    "text": "OfficeCLI 是首个专为 AI 代理打造的 Office 套件，可读取、编辑并自动化 Word、Excel 和 PowerPoint 文件。免费开源，单一二进制文件，无需安装 Office。",
     "source": "deepseek-flash",
     "at": "2026-10-29T17:27:20Z"
   },
