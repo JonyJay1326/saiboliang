@@ -144,11 +144,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T09:47:01Z"
   },
-  "mvanhorn/last30days-skill": {
-    "text": "AI agent 技能，可在 Reddit、X、YouTube、HN、Polymarket 及网页上研究任意主题，并综合出有依据的摘要",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
   "trymirai/uzu": {
     "text": "面向 AI 模型的高性能推理引擎",
     "source": "deepseek-flash",
@@ -156,11 +151,6 @@
   },
   "Nutlope/hallmark": {
     "text": "面向 Claude Code、Cursor 和 Codex 的反 AI 套路设计技能",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "docker/docker-agent": {
-    "text": "由 Docker Engineering 开发的 AI Agent 构建器与运行时",
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
@@ -174,14 +164,34 @@
     "source": "deepseek-flash",
     "at": "2026-10-29T17:27:20Z"
   },
-  "zarazhangrui/frontend-slides": {
-    "text": "借助编码代理的前端技能在网页上创建精美幻灯片",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
-  },
   "microsoft/BitNet": {
     "text": "1-bit LLM 的官方推理框架",
     "source": "deepseek-flash",
     "at": "2026-10-29T17:27:20Z"
+  },
+  "anthropics/skills": {
+    "text": "Agent Skills 的公开仓库",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "CopilotKit/OpenBot": {
+    "text": "开源 AI 同事，各自拥有独立计算机：浏览器、文件与工具，每个动作执行前先决策、执行后记录。可接入任意 AG-UI agent。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "Nasiko-Labs/nasiko": {
+    "text": "AI Agents 的开放运行时",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "langfuse/langfuse": {
+    "text": "开源 agent 评估与可观测性：通过一个开放平台追踪、评估并改进 LLM 应用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "androoAGI/starnet": {
+    "text": "一个鲜活的像素艺术空间站，真实 AI agents 在此做真实工作。本地优先的桌面 agent 运行框架——自带密钥，观看你的团队实际运行。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
   }
 }

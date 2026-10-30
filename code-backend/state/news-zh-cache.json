@@ -1,22 +1,4 @@
 {
-  "393575ee7d83ff0a65d333d8be46ec5237c4c4f8ffd65a18f4b5764a81e08f2c": {
-    "title": "Genie 4：新一代世界模拟",
-    "summary": "Genie 4：我们的新世界模型，在实时模拟中实现前所未有的真实感。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
-  "85fdf95f1fdc5eecfcb1a7c5c441591b375a1a4306eb106a0903d46a2a17b2e3": {
-    "title": "AI 如何改变数百万痴呆症患者的发现节奏",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
-  "1e3ebf94e41ebe19793bfa16d9a1ceac171abfb39683d16886169781f84081b8": {
-    "title": "Retell 借助 OpenAI 模型支撑每月 1 亿次通话",
-    "summary": "GPT-6 Astra 在 Retell 语音智能体基准测试中居首，Codex 助其实现每名员工 160 万美元年化营收。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
   "9327e550d0f4f4ee15b033f0d79da401fcf96b5ca6c7f70c414ea94318563fa6": {
     "title": "Meta与五所美国大学合作，加速医学与科学突破",
     "summary": "Meta将向使用其模型解决科学与医学关键问题的美国大学提供Superintelligence模型、研究资金和直接的研究人员协作。",
@@ -94,5 +76,29 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-30T10:08:36Z"
+  },
+  "a86d24c59c826150d16deb117d5d2c5c4ade94e1abd42be5bfff46adde0bd560": {
+    "title": "社区安全报告与青少年新保护措施",
+    "summary": "OpenAI 通过扩展防护、更早干预以及新的公共安全报告承诺，加强 ChatGPT 中的暴力预防。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "85f94c0fe8f02a81789bf1080d36944ec8ac0a0eece0a3547fb83f15ce90723f": {
+    "title": "Credit Saison 在 ChatGPT Enterprise 试点中实现 954% ROI",
+    "summary": "Credit Saison 的 ChatGPT Enterprise 试点实现了 954% ROI。了解领导者和员工如何推动成果转化为全公司采用。",
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "d5d3db1f3a9a150388c476b02fda17004aaaf7532de28059efee07ceef81431b": {
+    "title": "夜间鸣响之物：Agentic AI 加入搜寻地外信号",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
+  },
+  "9a0356b4ea7116d2bd2f504ffbb0f1869b08f5b9c3620298a7052d3f71410bb8": {
+    "title": "Azure Cloud HSM 硬件审计日志：面向安全与合规的可验证审计追踪",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-10-30T17:02:06Z"
   }
 }

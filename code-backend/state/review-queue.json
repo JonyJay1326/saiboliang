@@ -368,18 +368,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "withmarbleapp/os-taxonomy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
-    },
-    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
-    "status": "pending",
-    "createdAt": "2026-10-18T14:38:23Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Renhuai123/ziwei-doushu",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -459,18 +447,6 @@
     "id": "16445aac3032f06f8f858781400c285e02bbac70f119213b797967e8713193ea",
     "status": "pending",
     "createdAt": "2026-10-23T15:46:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Graphify-Labs/graphify",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "sourceUrl": "https://github.com/Graphify-Labs/graphify"
-    },
-    "id": "b6341360ba50bc2a79182e28ebf31422aaae77b5eaf6e996237964416caff00b",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
   },
   {
     "kind": "github-classification",
@@ -582,18 +558,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "tailscale/tailscale",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The easiest, most secure way to use WireGuard and 2FA.",
-      "sourceUrl": "https://github.com/tailscale/tailscale"
-    },
-    "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
-    "status": "pending",
-    "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "xiaolai/the-craft-of-selfteaching",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -601,18 +565,6 @@
       "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
     },
     "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
-    "status": "pending",
-    "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pablostanley/yoinks",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "yoink any video from your terminal. no shady ads.",
-      "sourceUrl": "https://github.com/pablostanley/yoinks"
-    },
-    "id": "ac2d1000a433e4ac81841d448ad9ff723f4899278310cd1fae255c025ff47a73",
     "status": "pending",
     "createdAt": "2026-10-28T17:11:13Z"
   },
@@ -627,18 +579,6 @@
     "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
     "status": "pending",
     "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "php/php-src",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The PHP Interpreter",
-      "sourceUrl": "https://github.com/php/php-src"
-    },
-    "id": "a42926ad6a6db7f0f06ae4c0ea2c4368dd2c244762080449f08345618c982202",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
   },
   {
     "kind": "github-classification",
@@ -685,18 +625,6 @@
       "sourceUrl": "https://github.com/LibreSpark/LibreTV"
     },
     "id": "066c5ac41f9656b08d34a5b5b63fa88a72a53008963a22f141c5463232caad9a",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Effect-TS/effect",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Build production-ready applications in TypeScript",
-      "sourceUrl": "https://github.com/Effect-TS/effect"
-    },
-    "id": "22530a3c106ff3fb6466959696a04fd1514ae132c5201465e38d51283d94c75c",
     "status": "pending",
     "createdAt": "2026-10-29T17:27:20Z"
   },
@@ -757,5 +685,65 @@
     "id": "7d4062bfea6253980ce806069662e33414ede3bc6e03aaad3faef258fa6a14cc",
     "status": "pending",
     "createdAt": "2026-10-30T10:08:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "android/skills",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/android/skills"
+    },
+    "id": "a8243892068f93d3e1b7e41a70649120f4e646ee55f176133c27e80f96c83649",
+    "status": "pending",
+    "createdAt": "2026-10-30T17:02:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "thesysdev/openui",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Open Standard for Generative UI",
+      "sourceUrl": "https://github.com/thesysdev/openui"
+    },
+    "id": "b8ad17c0dac9b3237958281fa60adcb2d02ce3f1f300e42030da345eefe2135e",
+    "status": "pending",
+    "createdAt": "2026-10-30T17:02:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Kruk2/jasna",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Video restoration tool",
+      "sourceUrl": "https://github.com/Kruk2/jasna"
+    },
+    "id": "e9344bea10ceabbd60157f635ca186b34cc4db41444806b1c2a12c75117af53c",
+    "status": "pending",
+    "createdAt": "2026-10-30T17:02:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dyang886/Game-Cheats-Manager",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Easily download and manage single-player game cheats for your convenience",
+      "sourceUrl": "https://github.com/dyang886/Game-Cheats-Manager"
+    },
+    "id": "a3f3d864c381e1ece657d8e63e62c69dea22569eef09e41f7b570968f605a822",
+    "status": "pending",
+    "createdAt": "2026-10-30T17:02:06Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bevyengine/bevy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A refreshingly simple data-driven game engine built in Rust",
+      "sourceUrl": "https://github.com/bevyengine/bevy"
+    },
+    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
+    "status": "pending",
+    "createdAt": "2026-10-30T17:02:06Z"
   }
 ]

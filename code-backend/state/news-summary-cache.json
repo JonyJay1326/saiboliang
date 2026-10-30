@@ -1,12 +1,12 @@
 {
-  "f48a388f03b95e78329d977b6d3b1b4788264055d01079b1ca08de217da022e7": {
-    "summary": "GitHub Copilot Fusion 实验性预览支持在设备端模型与云端模型间智能路由。",
+  "d5d3db1f3a9a150388c476b02fda17004aaaf7532de28059efee07ceef81431b": {
+    "summary": "艾伦望远镜阵列集成NVIDIA Holoscan平台，用于搜寻可能来自外星人或其AI的信号。",
     "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
+    "at": "2026-10-30T17:02:06Z"
   },
-  "9fa8e4999dc547768cea2d0e8770644fb87b13bf896ca5138744b6991c417066": {
-    "summary": "NVIDIA RTX Spark 轻薄本新增华硕、戴尔、惠普、联想、微软、微星型号，搭载 Blackwell RTX GPU 与 Grace CPU。",
+  "666a1f719c44600b52785454006cc5815273c0cfddf41f30b12d81e9d50f2e26": {
+    "summary": "百度APP发布四大AI升级，搜索实现递归自我进化，AI API最低4.9元/千次。",
     "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
+    "at": "2026-10-30T17:02:06Z"
   }
 }
