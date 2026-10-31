@@ -23,12 +23,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-29T10:05:48Z"
   },
-  "1a5acc617be08922808f693eed843673849fdfe1df21743850bec97bab1e1ca5": {
-    "title": "OpenRouter 如何重建提供商路由以实现更优更快的推理",
-    "summary": "我们默认的路由过去会将大多数流量发送给模型最便宜的提供商。新的路由算法持续监控每个提供商端点的性能，以针对每个新请求优化成本、速度和可靠性的平衡。",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T10:05:48Z"
-  },
   "0f01adb2acab0a67ba71c0b077a856b8d5e6ddb0aecdbfc3051cca05fba1e4d6": {
     "title": "我们如何检测前沿模型失准",
     "summary": "OpenAI 采用分层监控来检测前沿模型失准和未经授权的智能体行为，以便响应人员在事件升级前介入。",
@@ -52,12 +46,6 @@
     "summary": "Mistral Large 4（Le Chonk）的权重现已开放。这是一个 1T 参数多模态模型，也是最佳的开源权重编程模型，在欧洲训练。",
     "source": "deepseek-flash",
     "at": "2026-10-29T17:27:20Z"
-  },
-  "9349f418e7bc7ab45091d36c0bfe75e2136622d8b5dbcf107bb7aa7386820b2a": {
-    "title": "更强大且有益的 AI 的更新版 Model Spec",
-    "summary": "OpenAI 更新版 Model Spec 概述五项核心价值，引导更强大的 AI 具备良好判断力、尊重人类自主性并忠实于人类意图。",
-    "source": "deepseek-flash",
-    "at": "2026-10-30T10:08:36Z"
   },
   "d948735545c20cf3072195dbbc120386d43c1319abb3514dc8f0d2f4f07f9bdc": {
     "title": "Ropes & Gray 如何为交易尽职调查开发 AI",
@@ -83,22 +71,22 @@
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
-  "85f94c0fe8f02a81789bf1080d36944ec8ac0a0eece0a3547fb83f15ce90723f": {
-    "title": "Credit Saison 在 ChatGPT Enterprise 试点中实现 954% ROI",
-    "summary": "Credit Saison 的 ChatGPT Enterprise 试点实现了 954% ROI。了解领导者和员工如何推动成果转化为全公司采用。",
-    "source": "deepseek-flash",
-    "at": "2026-10-30T17:02:06Z"
-  },
-  "d5d3db1f3a9a150388c476b02fda17004aaaf7532de28059efee07ceef81431b": {
-    "title": "夜间鸣响之物：Agentic AI 加入搜寻地外信号",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-30T17:02:06Z"
-  },
   "9a0356b4ea7116d2bd2f504ffbb0f1869b08f5b9c3620298a7052d3f71410bb8": {
     "title": "Azure Cloud HSM 硬件审计日志：面向安全与合规的可验证审计追踪",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
+  },
+  "84abd1857de5dfd951d90dcfdd8cecc910571c46b00c6ecbe7661909d42cb5b5": {
+    "title": "让网站更轻松地表达 AI 训练偏好",
+    "summary": "OpenAI 将遵循共享的 robots.txt 信号，帮助网站运营者向参与的服务商传达其 AI 训练偏好。",
+    "source": "deepseek-flash",
+    "at": "2026-10-31T07:59:08Z"
+  },
+  "574dbaf7fc8731e405753fdd629edf08113dcd8a86398ab5c6140b68360db244": {
+    "title": "合理使用惠及所有人",
+    "summary": "OpenAI 分享了创作者、学者、无障碍倡导者和法律专家等提交的法庭简报摘录，说明合理使用如何支持 AI 训练与创新。",
+    "source": "deepseek-flash",
+    "at": "2026-10-31T07:59:08Z"
   }
 }

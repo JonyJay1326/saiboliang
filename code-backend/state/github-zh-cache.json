@@ -189,9 +189,9 @@
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
-  "androoAGI/starnet": {
-    "text": "一个鲜活的像素艺术空间站，真实 AI agents 在此做真实工作。本地优先的桌面 agent 运行框架——自带密钥，观看你的团队实际运行。",
+  "iOfficeAI/OfficeCLI": {
+    "text": "OfficeCLI 是首个专为 AI 代理打造的 Office 套件，可读取、编辑并自动化 Word、Excel 和 PowerPoint 文件。免费开源，单一二进制文件，无需安装 Office。",
     "source": "deepseek-flash",
-    "at": "2026-10-30T17:02:06Z"
+    "at": "2026-10-31T07:59:08Z"
   }
 }
