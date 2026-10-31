@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-10-22T03:57:42Z",
+  "dataUpdatedAt": "2026-10-31T07:58:18Z",
   "tickets": [
     {
       "id": "qoder-deepseek-flash-free-202610",
@@ -931,8 +931,103 @@
       "affiliate": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-09-28"
+    },
+    {
+      "id": "qiniu-conatus-free-202610",
+      "title": "七牛云 Conatus 免费 1 亿/日",
+      "vendor": "七牛云",
+      "category": "token",
+      "score": 81,
+      "tags": {
+        "duration": "limited",
+        "region": "cn"
+      },
+      "expired": false,
+      "expiryDate": "2026-11-30T23:59:59+08:00",
+      "summary": "实名后每日 1 亿 Token，免费用到 11 月底",
+      "content": "七牛云 1024 程序员节上线 Conatus 融合模型，实名后每日送 1 亿 Token，不充值也能用。\n\n- 额度：**每日 1 亿 Token**，输入、输出、缓存输入都计入\n- 限时：**10 月 24 日 ～ 11 月 30 日 23:59**，到期即停\n- 规格：1M 上下文、128K 输出，支持工具调用与图像理解\n- 接口：OpenAI 与 Anthropic 双协议通吃\n\n领取步骤：\n\n1. 打开 [七牛云活动页](https://www.qiniu.com/ai/free-models/conatus-2026)，登录做实名\n2. 控制台模型页创建 API Key，同账号共用一个额度池\n\nBaseURL：https://api.qnaigc.com/v1，模型名 **qiniu/conatus-free**。\n\n**注意**：单笔充值 >100 元（含历史）可升每日 10 亿，多笔不累加；额度每日 00:00 清零、用完即拒，不扣余额也不切付费模型；底层模型匿名可能轮换、无 SLA，别押主链路。",
+      "link": "https://www.qiniu.com/ai/free-models/conatus-2026",
+      "affiliate": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25"
+    },
+    {
+      "id": "xfyun-maas-sparkx26-10b-202610",
+      "title": "星辰 MaaS 领 10 亿 Token",
+      "vendor": "讯飞星辰 MaaS",
+      "category": "token",
+      "score": 72,
+      "tags": {
+        "duration": "unknown",
+        "region": "cn"
+      },
+      "expired": false,
+      "expiryDate": null,
+      "summary": "限 Spark-X2.6，10 亿额度 31 天有效",
+      "content": "讯飞星辰 MaaS 在 1024 开发者节放出 Spark-X2.6 免费额度，零门槛领取，额度直接绑在 API Key 上。\n\n- 额度：**10 亿 Token**，仅限 Spark-X2.6 调用\n- 模型：293B-A30B MoE，**1M 上下文**，国产算力训练\n- 门槛：注册 + 实名认证，每账号限领一次\n- 时效：领取后 **31 天**内有效，用不完作废\n\n领取步骤：\n\n1. 打开 [星辰 MaaS 首页](https://maas.xfyun.cn/overview)，登录并完成实名\n2. 「常用功能」第一格点「Spark-X2.6 赋能开发者」\n3. 选一个或新建 API Key，确认领取绑定额度\n4. 按页面示例填接口地址与模型名 spark-x2.6 即可调用\n\n**注意**：领取页底部「额度用尽自动切换按量计费」勾选后额度耗尽会直接扣款，只想白嫖记得取消勾选；31 天从领取当天起算，一时用不上先别点；官方未公布活动截止日，以领取页实显为准。",
+      "link": "https://maas.xfyun.cn/overview",
+      "affiliate": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25"
+    },
+    {
+      "id": "minimax-code-checkin-202610",
+      "title": "MiniMax Code 周签 4000 积分",
+      "vendor": "MiniMax",
+      "category": "credits",
+      "score": 71,
+      "tags": {
+        "duration": "longterm",
+        "region": "cn"
+      },
+      "expired": false,
+      "expiryDate": null,
+      "summary": "每日签到 400 积分，第 4、7 天各 1000",
+      "content": "MiniMax Code 是 MiniMax 的桌面 Agent 客户端（macOS / Windows），官方每日签到长期送积分，免费用户也能签。\n\n- 签到：**每日 400 积分**，需在客户端内手动领取\n- 加码：连续第 4 天、第 7 天单日 **1000 积分**\n- 周累计：连签 7 天共 **4000 积分**\n- 时效：积分自到账起 **30 天有效**，可累积使用\n- 用途：编程、深度调研、数据库调用、PPT 与音视频\n\n签到步骤：\n\n1. 打开 [MiniMax Code 下载页](https://agent.minimaxi.com/download)装桌面端\n2. 登录后找到「每日签到」卡片，点一下领当日积分\n3. 第 4、7 天别断签，加码日漏掉就要重新轮\n\n**注意**：第 4、7 天的加码替代当天常规额度而非叠加，连签中断会错过加码日；额度与规则以客户端内显示为准。",
+      "link": "https://agent.minimaxi.com/download",
+      "affiliate": false,
+      "publishedAt": "2026-10-30",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "baidu-dumate-checkin-202610",
+      "title": "百度搭子 签到领 500 积分",
+      "vendor": "百度搭子",
+      "category": "credits",
+      "score": 75,
+      "tags": {
+        "duration": "unknown",
+        "region": "cn"
+      },
+      "expired": false,
+      "expiryDate": null,
+      "summary": "免费版每日签到领 500 积分，全量功能开放",
+      "content": "百度官方桌面 AI 办公智能体 DuMate，免费版 ¥0 即可用全量产品功能，积分限时赠送。\n\n- 额度：**每日签到领 500 积分**（限时活动）\n- 版本：免费版 **全量产品功能开放**，高峰时段响应可能受限\n- 场景：文件管理、数据分析、汇报生成、网页自动化等桌面任务\n- 安全：本地沙箱运行，数据不出设备，风险操作二次确认\n\n领取步骤：\n\n1. 打开 [DuMate 官网](https://www.dumate.cn/)下载桌面版（macOS / Windows）\n2. 百度账号或手机号注册登录\n3. 客户端内每日签到，积分自动到账\n\n**注意**：签到送积分属限时活动，赠送机制官方保留调整权、以客户端内实领为准；赠送积分到期清零；基础版不另含订阅积分，用量全靠每日签到。",
+      "link": "https://www.dumate.cn/",
+      "affiliate": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15"
+    },
+    {
+      "id": "zcode-flash-300m-daily-202610",
+      "title": "ZCode 每日送 3 亿 Token",
+      "vendor": "智谱",
+      "category": "token",
+      "score": 92,
+      "tags": {
+        "duration": "unknown",
+        "region": "cn"
+      },
+      "expired": false,
+      "expiryDate": null,
+      "summary": "每天可领 3 亿 Token，只在 23 点后能用",
+      "content": "ZCode 把周末限时福利改成每日发放：每人每天 3 亿 GLM-5.3-Flash Token，天天可领，官方未公布截止日。\n\n- 额度：**3 亿 Token/天**，次日 09:00 清零、不累积\n- 领取：每天 19:00 起，客户端内点卡片领当日份额\n- 可用：当晚 23:00 ～ 次日 09:00，共 10 小时\n- 范围：仅客户端内，切 Global Building 选 Flash\n\n领取步骤：\n\n1. 更新 [ZCode 客户端](https://zcode.z.ai/cn)到最新版，低于 3.10 无入口\n2. 每天 19:00 后登录，点左下角活动卡片领取\n3. 模型设置切到 Global Building，选 GLM-5.3-Flash\n\n**注意**：领完要等 23:00 才生效，白天调用仍扣套餐额度；额度只在当夜有效、不结转；不能导出成 API Key；截止日未公布，以客户端实显为准。",
+      "link": "https://zcode.z.ai/cn",
+      "affiliate": false,
+      "publishedAt": "2026-10-28",
+      "updatedAt": "2026-10-31"
     }
   ],
-  "version": "2026-10-30T17:02:06Z",
-  "generatedAt": "2026-10-30T17:02:06Z"
+  "version": "2026-10-31T07:58:18Z",
+  "generatedAt": "2026-10-31T07:58:18Z"
 }
