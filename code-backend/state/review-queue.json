@@ -619,18 +619,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "shadps4-emu/shadPS4",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
-    },
-    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "emilk/egui",
     "reason": "AI applicability uncertain",
     "evidence": {
