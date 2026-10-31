@@ -5,24 +5,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
-  "6e5ebe8af36db950532382c0197d8ccc1f04592ec8c5de5c6ff11d84f671fbd2": {
-    "title": "GitHub intelligence让你的代码、上下文和历史发挥作用",
-    "summary": "智能体应理解的不仅是你的代码库，还应理解你的团队如何工作。你的偏好、仓库约定、技能和自定义指令指导应如何做出更改，而代码……",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "a395c7da350b5086cc15f6b616a71f222298172ced3c491458f1fd1d38e79b77": {
-    "title": "OpenAI 与 ServiceNow 扩大企业工作流合作",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-29T10:05:48Z"
-  },
-  "e2ed7680c50ae3f074e04f962f033e8bab070f352fa8087e45258e537064a005": {
-    "title": "公司的未来",
-    "summary": "AI 可能如何进入组织架构图——在我们之下、身旁与之间。",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T10:05:48Z"
-  },
   "0f01adb2acab0a67ba71c0b077a856b8d5e6ddb0aecdbfc3051cca05fba1e4d6": {
     "title": "我们如何检测前沿模型失准",
     "summary": "OpenAI 采用分层监控来检测前沿模型失准和未经授权的智能体行为，以便响应人员在事件升级前介入。",
@@ -55,12 +37,6 @@
   },
   "2746f11e7a8ea5235917218ef88b800e8e32c6e73f15cf5e0097f4c15aec72aa": {
     "title": "Meta API 新增 Webhook IP 范围",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-10-30T10:08:36Z"
-  },
-  "11dab8e53a50e1d646ff6cff43edaac119c4002de195c9296d7e2bbe9dcecdf2": {
-    "title": "仓库插件默认设置与企业插件控制正式可用",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-10-30T10:08:36Z"

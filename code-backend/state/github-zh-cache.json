@@ -4,11 +4,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-23T03:21:32Z"
   },
-  "TencentCloud/Octop": {
-    "text": "更智能的自托管 AI 助手——多用户、多代理。",
-    "source": "deepseek-flash",
-    "at": "2026-09-23T03:21:32Z"
-  },
   "heygen-com/hyperframes": {
     "text": "编写 HTML。渲染视频。为代理而构建。",
     "source": "deepseek-flash",
@@ -154,11 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
-  "sgl-project/sglang": {
-    "text": "SGLang 是面向大语言模型与多模态模型的高性能服务框架。",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
-  },
   "OpenWhispr/openwhispr": {
     "text": "语音转文字听写应用，支持本地（Nvidia Parakeet/Whisper）与云端模型（BYOK），注重隐私，跨平台可用。",
     "source": "deepseek-flash",
@@ -189,9 +179,14 @@
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
-  "iOfficeAI/OfficeCLI": {
-    "text": "OfficeCLI 是首个专为 AI 代理打造的 Office 套件，可读取、编辑并自动化 Word、Excel 和 PowerPoint 文件。免费开源，单一二进制文件，无需安装 Office。",
+  "docker/docker-agent": {
+    "text": "Docker 工程团队推出的 AI Agent 构建器与运行时",
     "source": "deepseek-flash",
-    "at": "2026-10-31T07:59:08Z"
+    "at": "2026-10-31T16:08:43Z"
+  },
+  "androoAGI/starnet": {
+    "text": "一个实时像素艺术空间站，真实 AI agent 在此执行真实工作。本地优先的桌面 agent 框架，自带密钥，可观察团队实际运行。",
+    "source": "deepseek-flash",
+    "at": "2026-10-31T16:08:43Z"
   }
 }

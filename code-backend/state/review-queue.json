@@ -475,18 +475,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "SnailSploit/Claude-Red",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
-      "sourceUrl": "https://github.com/SnailSploit/Claude-Red"
-    },
-    "id": "b776712863efb748daf95f3f49e6ea33857426e3df4cbc2bef6833a5daf94b38",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Alishahryar1/free-claude-code",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -697,5 +685,125 @@
     "id": "64e345cc6f10f8b0b864d1e45b4326be13fcb5d817f0c4405d1c510f81e27e52",
     "status": "pending",
     "createdAt": "2026-10-31T07:59:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "YuJunZhiXue/dsh-purge",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "sourceUrl": "https://github.com/YuJunZhiXue/dsh-purge"
+    },
+    "id": "ca924fe8519e4f2d04d01d30f85e32813f736fb4e316809a7780425bd951c52d",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Graphify-Labs/graphify",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "sourceUrl": "https://github.com/Graphify-Labs/graphify"
+    },
+    "id": "b6341360ba50bc2a79182e28ebf31422aaae77b5eaf6e996237964416caff00b",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "danyuchn/asd-ste100-skill",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewriting ambiguous agent-facing English.",
+      "sourceUrl": "https://github.com/danyuchn/asd-ste100-skill"
+    },
+    "id": "248110479f7b89955870940639bb72976dd77ee1d84a2e4fea3581b824745da0",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "666ghj/MiroFish",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+      "sourceUrl": "https://github.com/666ghj/MiroFish"
+    },
+    "id": "b3cf26c914ae8ba1593368a593b059cd0a36f7bc1943ad6187ef5fcc9a138155",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailscale",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The easiest, most secure way to use WireGuard and 2FA.",
+      "sourceUrl": "https://github.com/tailscale/tailscale"
+    },
+    "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "shadps4-emu/shadPS4",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
+    },
+    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dyang886/Game-Cheats-Manager",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Easily download and manage single-player game cheats for your convenience",
+      "sourceUrl": "https://github.com/dyang886/Game-Cheats-Manager"
+    },
+    "id": "a3f3d864c381e1ece657d8e63e62c69dea22569eef09e41f7b570968f605a822",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "withmarbleapp/os-taxonomy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
+    },
+    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "qist/tvbox",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OK影视、tvbox配置文件，如果喜欢，请Fork自用。使用前请仔细阅读仓库说明，一旦使用将被视为你已了解。",
+      "sourceUrl": "https://github.com/qist/tvbox"
+    },
+    "id": "67e27fbce1385c077eb390cc7060374dff5b1b204f6b8b4c0c005b65d52b380d",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bevyengine/bevy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A refreshingly simple data-driven game engine built in Rust",
+      "sourceUrl": "https://github.com/bevyengine/bevy"
+    },
+    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
+    "status": "pending",
+    "createdAt": "2026-10-31T16:08:43Z"
   }
 ]
