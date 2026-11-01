@@ -1,16 +1,4 @@
 {
-  "9327e550d0f4f4ee15b033f0d79da401fcf96b5ca6c7f70c414ea94318563fa6": {
-    "title": "Meta与五所美国大学合作，加速医学与科学突破",
-    "summary": "Meta将向使用其模型解决科学与医学关键问题的美国大学提供Superintelligence模型、研究资金和直接的研究人员协作。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
-  "0f01adb2acab0a67ba71c0b077a856b8d5e6ddb0aecdbfc3051cca05fba1e4d6": {
-    "title": "我们如何检测前沿模型失准",
-    "summary": "OpenAI 采用分层监控来检测前沿模型失准和未经授权的智能体行为，以便响应人员在事件升级前介入。",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
-  },
   "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
     "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将想法转化为仿真",
     "summary": null,
@@ -28,12 +16,6 @@
     "summary": "Mistral Large 4（Le Chonk）的权重现已开放。这是一个 1T 参数多模态模型，也是最佳的开源权重编程模型，在欧洲训练。",
     "source": "deepseek-flash",
     "at": "2026-10-29T17:27:20Z"
-  },
-  "d948735545c20cf3072195dbbc120386d43c1319abb3514dc8f0d2f4f07f9bdc": {
-    "title": "Ropes & Gray 如何为交易尽职调查开发 AI",
-    "summary": "Ropes & Gray 正与 OpenAI 合作为交易尽职调查开发 AI。律师在为客户提供建议前审阅分组文档、摘要和报告。",
-    "source": "deepseek-flash",
-    "at": "2026-10-30T10:08:36Z"
   },
   "2746f11e7a8ea5235917218ef88b800e8e32c6e73f15cf5e0097f4c15aec72aa": {
     "title": "Meta API 新增 Webhook IP 范围",

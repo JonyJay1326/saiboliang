@@ -174,19 +174,19 @@
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
-  "langfuse/langfuse": {
-    "text": "开源 agent 评估与可观测性：通过一个开放平台追踪、评估并改进 LLM 应用。",
-    "source": "deepseek-flash",
-    "at": "2026-10-30T17:02:06Z"
-  },
   "docker/docker-agent": {
     "text": "Docker 工程团队推出的 AI Agent 构建器与运行时",
     "source": "deepseek-flash",
     "at": "2026-10-31T16:08:43Z"
   },
-  "androoAGI/starnet": {
-    "text": "一个实时像素艺术空间站，真实 AI agent 在此执行真实工作。本地优先的桌面 agent 框架，自带密钥，可观察团队实际运行。",
+  "iOfficeAI/OfficeCLI": {
+    "text": "OfficeCLI 是首个专为 AI 代理读取、编辑和自动化 Word、Excel、PowerPoint 文件而构建的 Office 套件。免费、开源、单一二进制文件，无需安装 Office。",
     "source": "deepseek-flash",
-    "at": "2026-10-31T16:08:43Z"
+    "at": "2026-11-01T10:34:19Z"
+  },
+  "miqdadbadjuber/anti-slop": {
+    "text": "供 AI 编码代理过滤通用 AI 生成 UI 设计、文本和代码的规则。",
+    "source": "deepseek-flash",
+    "at": "2026-11-01T10:34:19Z"
   }
 }

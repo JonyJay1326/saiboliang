@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-10-31T16:08:43Z",
+  "dataUpdatedAt": "2026-11-01T10:34:19Z",
   "items": [
+    {
+      "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+      "sourceUrl": "https://www.qbitai.com/2026/11/507031.html",
+      "publishedAt": "2026-11-01T08:02:37Z",
+      "source": "量子位",
+      "summary": "让AI像牛顿一样思考",
+      "id": "156f3096451c0f9a6cb112662aa9fdb54d041a3d47b8dfb173376983e0b360ae",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/507031.html",
+      "category": "industry",
+      "eventType": "deep-analysis",
+      "addedAt": "2026-11-01T10:34:19Z",
+      "featured": null
+    },
     {
       "title": "DeepSeek又开源了！公布Super agent架构",
       "sourceUrl": "https://zhidx.com/p/606311.html",
@@ -19,6 +38,25 @@
       "eventType": "major-update",
       "addedAt": "2026-10-31T16:08:43Z",
       "featured": true
+    },
+    {
+      "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+      "sourceUrl": "https://www.qbitai.com/2026/10/506904.html",
+      "publishedAt": "2026-10-31T13:49:44Z",
+      "source": "量子位",
+      "summary": "AI已经自己找到Bug并提交PR",
+      "id": "53329debad3f5e102b5d9ecf6a6e9ddbd03fbd74e5c0954d3050517cb5dbf0bb",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/10/506904.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-01T10:34:19Z",
+      "featured": null
     },
     {
       "title": "0.8B！小米开源新模型，让超级小爱识屏主动办事",
@@ -6025,6 +6063,6 @@
       "featured": true
     }
   ],
-  "version": "2026-10-31T16:08:43Z",
-  "generatedAt": "2026-10-31T16:08:43Z"
+  "version": "2026-11-01T10:34:19Z",
+  "generatedAt": "2026-11-01T10:34:19Z"
 }
