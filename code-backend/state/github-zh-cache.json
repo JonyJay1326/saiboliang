@@ -34,11 +34,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-14T15:50:52Z"
   },
-  "tensorflow/tensorflow": {
-    "text": "面向所有人的开源机器学习框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-16T15:23:39Z"
-  },
   "xerj-org/xerj": {
     "text": "XERJ 是 AI 搜索数据的新方式。其自动索引能力让智能体无需 grep 和 sed 的 token 浪费即可了解你的数据。一条命令即可索引代码、文档、日志和 PDF，用于搜索、RAG、安全审计和智能体记忆，token 消耗比 grep 少 40 倍。兼容 Elasticsearch，现有客户端可直接使用。",
     "source": "deepseek-flash",
@@ -119,16 +114,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
   },
-  "QuantumNous/new-api": {
-    "text": "统一的 AI 模型聚合与分发中心。支持将各类 LLM 转换为 OpenAI、Claude 或 Gemini 兼容格式。面向个人与企业的集中式模型管理网关。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
-  "infiniflow/ragflow": {
-    "text": "RAGFlow 是领先的开源检索增强生成（RAG）引擎，将前沿 RAG 与 Agent 能力融合，为 LLM 构建更优的上下文层。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
   "NVIDIA/SkillSpector": {
     "text": "AI 智能体技能安全扫描器。在安装 Claude Code、Codex 和 MCP 技能前，检测漏洞、恶意模式、安全风险、提示注入、数据外泄与供应链风险。",
     "source": "deepseek-flash",
@@ -179,14 +164,29 @@
     "source": "deepseek-flash",
     "at": "2026-10-31T16:08:43Z"
   },
-  "iOfficeAI/OfficeCLI": {
-    "text": "OfficeCLI 是首个专为 AI 代理读取、编辑和自动化 Word、Excel、PowerPoint 文件而构建的 Office 套件。免费、开源、单一二进制文件，无需安装 Office。",
+  "beenuar/AiSOC": {
+    "text": "开源 AI 安全运营中心：告警融合、LLM 智能体分诊、MITRE ATT&CK 调查，以及可回放的智能体决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
     "source": "deepseek-flash",
-    "at": "2026-11-01T10:34:19Z"
+    "at": "2026-11-01T17:09:14Z"
   },
-  "miqdadbadjuber/anti-slop": {
-    "text": "供 AI 编码代理过滤通用 AI 生成 UI 设计、文本和代码的规则。",
+  "herdrdev/herdr": {
+    "text": "编码智能体所运行的运行时",
     "source": "deepseek-flash",
-    "at": "2026-11-01T10:34:19Z"
+    "at": "2026-11-01T17:09:14Z"
+  },
+  "guillaumemeyer/watermarks-remover": {
+    "text": "隐私优先的应用，可从你拥有的内容中去除 AI 水印。",
+    "source": "deepseek-flash",
+    "at": "2026-11-01T17:09:14Z"
+  },
+  "leepokai/Codync": {
+    "text": "开源 Grok Bot 替代品，自带智能体与订阅：在自有电脑上通过 iPhone、Mac、Windows、Linux 或终端，以机器人方式与 Claude Code、Codex、Gemini CLI、Cursor、Copilot 等 40+ AI 智能体对话。智能体无关且免费。也是 Muse 和 Dots 的替代品。使用 Rust 构建。",
+    "source": "deepseek-flash",
+    "at": "2026-11-01T17:09:14Z"
+  },
+  "ifixai-ai/iFixAi": {
+    "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi，可在 120 秒内得到答案。",
+    "source": "deepseek-flash",
+    "at": "2026-11-01T17:09:14Z"
   }
 }

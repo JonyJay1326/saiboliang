@@ -180,18 +180,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "tgeorgiadis/quiver-launcher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern launcher for downloading, installing, and running apps from GitHub and GitLab releases. With a personal library, community catalog subscriptions, and flexible filtering.",
-      "sourceUrl": "https://github.com/tgeorgiadis/quiver-launcher"
-    },
-    "id": "fc4ecb4ee1570a1fe4614bdefa88c5a7d6558ee8e7f092a5ac12db25a0afae0f",
-    "status": "pending",
-    "createdAt": "2026-09-29T16:54:35Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "NationalSecurityAgency/ghidra",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -272,18 +260,6 @@
     "id": "a4f8d3a3f0210ff3b8517bccd93fa12e7cc498d1e00520147f5605507a79fef3",
     "status": "pending",
     "createdAt": "2026-10-09T10:40:22Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/mxc",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Policy-driven, layered isolation and containment",
-      "sourceUrl": "https://github.com/microsoft/mxc"
-    },
-    "id": "3b35d9982c1457e90f0dac43bdd439115995356aeb3b1a33d1fa6a15af14e268",
-    "status": "pending",
-    "createdAt": "2026-10-11T07:43:59Z"
   },
   {
     "kind": "github-classification",
@@ -547,18 +523,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zerx-lab/FluxDown",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Rust 驱动的多协议下载管理器，支持 HTTP/FTP/BitTorrent 磁力链接及 HLS/DASH 流媒体，智能多线程加速与浏览器无缝集成。精美界面，极致性能，永久免费，零广告。",
-      "sourceUrl": "https://github.com/zerx-lab/FluxDown"
-    },
-    "id": "1f84be107ea5c626652c9103c52bd4ca7482bfe53b8a13c02a6e96ca1a49e6bc",
-    "status": "pending",
-    "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ruvnet/RuView",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -664,18 +628,6 @@
     "createdAt": "2026-10-30T17:02:06Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "Kruk2/jasna",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Video restoration tool",
-      "sourceUrl": "https://github.com/Kruk2/jasna"
-    },
-    "id": "e9344bea10ceabbd60157f635ca186b34cc4db41444806b1c2a12c75117af53c",
-    "status": "pending",
-    "createdAt": "2026-10-30T17:02:06Z"
-  },
-  {
     "kind": "plans",
     "objectId": "claude-plans",
     "reason": "plan scope anchors not found: Free for everyone,For everyday work,For people who work with Claude all day",
@@ -724,18 +676,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "666ghj/MiroFish",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
-      "sourceUrl": "https://github.com/666ghj/MiroFish"
-    },
-    "id": "b3cf26c914ae8ba1593368a593b059cd0a36f7bc1943ad6187ef5fcc9a138155",
-    "status": "pending",
-    "createdAt": "2026-10-31T16:08:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "tailscale/tailscale",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -759,29 +699,6 @@
     "createdAt": "2026-10-31T16:08:43Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "FinanceFlash/unvibecode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
-      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
-    },
-    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
-    "status": "pending",
-    "createdAt": "2026-11-01T10:34:19Z"
-  },
-  {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
-    "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
-    },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
-    "status": "pending",
-    "createdAt": "2026-11-01T10:34:19Z"
-  },
-  {
     "kind": "news-item",
     "objectId": "e79b238687258d4b6a054575e839f677d3371e6315c4816976da53601d2adb21",
     "reason": "invalid feed item: unexpected news host",
@@ -791,5 +708,89 @@
     "id": "eeb528d24cbaa0288a42276613588b02a922d1fd3570660207fd05ee8c794681",
     "status": "pending",
     "createdAt": "2026-11-01T10:34:19Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "lfnovo/open-notebook",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+      "sourceUrl": "https://github.com/lfnovo/open-notebook"
+    },
+    "id": "58baecd3bb90063f16db7453ba78ec5f99bf66ed81de1cf23202773396400bdc",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "github/spec-kit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "💫 Toolkit to help you get started with SDD or any other process!",
+      "sourceUrl": "https://github.com/github/spec-kit"
+    },
+    "id": "c987a8038c90dff85547f015c17fd7541e5298b89c5d041e3caeb4ee39467b49",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "DeanChensj/jiangshan-map",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 164 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "sourceUrl": "https://github.com/DeanChensj/jiangshan-map"
+    },
+    "id": "beaccbbe4013073a444c0b1893b696d6bd59fd27be94a882346ff4c745c54ed7",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tester-army/e2e",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "sourceUrl": "https://github.com/tester-army/e2e"
+    },
+    "id": "bc104944c3bcf2fcb7a9cea8f51a9e93bc3631581656a34d535810ae3d4efb8b",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "M-Abozaid/esp32-c3-adblock",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
+      "sourceUrl": "https://github.com/M-Abozaid/esp32-c3-adblock"
+    },
+    "id": "aecb6d87d3351c845f3bfc847252c99da66c87e32b15a58d737cc31eed2578c3",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "greensock/GSAP",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web",
+      "sourceUrl": "https://github.com/greensock/GSAP"
+    },
+    "id": "8e894f889b8e65bd2edc280c80c2d80dbc8fc1ed8669eccc976e98c3d19c53e5",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vercel-labs/agent-desktop",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app's real UI structure through OS accessibility trees and operates it — refs stay stable and actions stay safe to retry, instead of guessing from pixels.",
+      "sourceUrl": "https://github.com/vercel-labs/agent-desktop"
+    },
+    "id": "1786d2b11317531da1eb587930daec8c8284dec26e2081725cf039499ecc4367",
+    "status": "pending",
+    "createdAt": "2026-11-01T17:09:14Z"
   }
 ]
