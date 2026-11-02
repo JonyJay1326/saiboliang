@@ -54,11 +54,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "kestra-io/kestra": {
-    "text": "编排一切，无处不在。面向数据、基础设施、业务流程和 AI 智能体的开源工作流控制平面。声明式 YAML、事件驱动、支持任意语言、Git 版本化，可扩展至数百万次执行。",
-    "source": "deepseek-flash",
-    "at": "2026-10-25T08:30:30Z"
-  },
   "LaurieWired/GhidraMCP": {
     "text": "Ghidra 的 MCP 服务器",
     "source": "deepseek-flash",
@@ -76,11 +71,6 @@
   },
   "citrolabs/ego-lite": {
     "text": "面向 AI 智能体的最快浏览器自动化工具，可与 Codex 或 Claude Code 等 AI 智能体共享已登录的浏览器状态，且不干扰用户。零成本、零配置。",
-    "source": "deepseek-flash",
-    "at": "2026-10-25T14:57:55Z"
-  },
-  "google-gemini/gemini-cli": {
-    "text": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
     "source": "deepseek-flash",
     "at": "2026-10-25T14:57:55Z"
   },
@@ -134,11 +124,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
-  "OpenWhispr/openwhispr": {
-    "text": "语音转文字听写应用，支持本地（Nvidia Parakeet/Whisper）与云端模型（BYOK），注重隐私，跨平台可用。",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
-  },
   "microsoft/BitNet": {
     "text": "1-bit LLM 的官方推理框架",
     "source": "deepseek-flash",
@@ -164,11 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-31T16:08:43Z"
   },
-  "beenuar/AiSOC": {
-    "text": "开源 AI 安全运营中心：告警融合、LLM 智能体分诊、MITRE ATT&CK 调查，以及可回放的智能体决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
-    "source": "deepseek-flash",
-    "at": "2026-11-01T17:09:14Z"
-  },
   "herdrdev/herdr": {
     "text": "编码智能体所运行的运行时",
     "source": "deepseek-flash",
@@ -188,5 +168,30 @@
     "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi，可在 120 秒内得到答案。",
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
+  },
+  "KeygraphHQ/shannon": {
+    "text": "Shannon 是面向 Web 应用与 API 的 AI 渗透测试工具。它分析源代码，识别攻击向量，并执行真实利用以在生产前证明漏洞。",
+    "source": "deepseek-flash",
+    "at": "2026-11-02T11:19:40Z"
+  },
+  "superdesigndev/treg": {
+    "text": "面向 agent 工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
+    "source": "deepseek-flash",
+    "at": "2026-11-02T11:19:40Z"
+  },
+  "DavidHDev/react-bits": {
+    "text": "最大的开源动画、交互式、可定制 React 与 Next.js 组件库，用于构建出色的 Web 产品与体验。为人类和 AI agent 打造。",
+    "source": "deepseek-flash",
+    "at": "2026-11-02T11:19:40Z"
+  },
+  "vercel-labs/agent-browser": {
+    "text": "面向 AI agent 的浏览器自动化 CLI",
+    "source": "deepseek-flash",
+    "at": "2026-11-02T11:19:40Z"
+  },
+  "memvid/memvid": {
+    "text": "AI Agent 的记忆层。用无服务器单文件记忆层替代复杂 RAG 流水线。为 agent 提供即时检索与长期记忆。",
+    "source": "deepseek-flash",
+    "at": "2026-11-02T11:19:40Z"
   }
 }
