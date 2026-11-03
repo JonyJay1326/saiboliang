@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-11-02T11:19:40Z",
+  "dataUpdatedAt": "2026-11-03T10:58:10Z",
   "items": [
+    {
+      "title": "实测阿里版Muse：千问Go 7×24小时在线，帮我逛淘宝、盯大麦",
+      "sourceUrl": "https://zhidx.com/p/606790.html",
+      "publishedAt": "2026-11-03T09:26:39Z",
+      "source": "智东西",
+      "summary": "AI应用风向标（公众号：ZhidxcomAI） 作者｜毕伟豪 编辑｜漠影 如果有这样一个AI，它有 一部手机和一台电脑在云端24小时运转 等你发号施令",
+      "id": "dc0b8fa6056488ea609bd99a4dbe0c4068419bca805249326e5a76aec2569aa9",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/606790.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-03T10:58:10Z",
+      "featured": true
+    },
+    {
+      "title": "爱诗科技PixVerse 与 OpenAI 共同推出产品集成和创作者教育计划，高效打通 AI 创意全流程",
+      "sourceUrl": "https://www.qbitai.com/2026/11/507313.html",
+      "publishedAt": "2026-11-03T01:46:55Z",
+      "source": "量子位",
+      "summary": "近日，爱诗科技（AIsphere）旗下模型和开放平台PixVerse 与 OpenAI 宣布开启深度合作",
+      "id": "04ee5ea2d0db419ba9c2fc43a383be3945c2e2f270a90eecc7243e17231e34d6",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/507313.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-03T10:58:10Z",
+      "featured": null
+    },
+    {
+      "title": "2026 年 10 月我们发布的最新 AI 新闻",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "publishedAt": "2026-11-02T17:45:00Z",
+      "source": "Google AI",
+      "summary": "10 月 AI 帖子图片的动画轮播",
+      "id": "c45a0b6d7de18ac55a144d1972110112522405fc8ecb4e8f5a157c6e98e835e5",
+      "originalTitle": "The latest AI news we announced in October 2026",
+      "translatedAt": "2026-11-03T10:58:10Z",
+      "lang": "en",
+      "originalSource": "Google AI",
+      "originalUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "originalVerifiedAt": "2026-11-03T10:58:10Z",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-03T10:58:10Z",
+      "featured": null
+    },
     {
       "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
       "sourceUrl": "https://www.qbitai.com/2026/11/507107.html",
@@ -6082,6 +6139,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-02T11:19:40Z",
-  "generatedAt": "2026-11-02T11:19:40Z"
+  "version": "2026-11-03T10:58:10Z",
+  "generatedAt": "2026-11-03T10:58:10Z"
 }

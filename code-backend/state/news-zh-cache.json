@@ -1,8 +1,74 @@
 {
-  "1b296d8bb115085d301f1a9a89965d4fd7fce9d0aacb1619ed7e5b86e4dbf866": {
-    "title": "用AI加速规划决策",
-    "summary": "Google DeepMind与英国政府合作，缩短规划评估时间",
+  "de0a5e46e19ea127afccca5bf7ad76b54d77c3c7f270e8f479f15342cce1abd1": {
+    "title": "用 Grok Bot 为每个团队配备数据科学家",
+    "summary": "Data Bot 是 Grok Bot 中的团队机器人，由数据科学团队训练，让每个团队都能像数据科学家一样查询数据仓库、运行分析并获取答案。",
     "source": "deepseek-flash",
-    "at": "2026-11-02T11:19:40Z"
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "fc87a45dcfbf03d417250555e1df3237ca0ef7928116e265a011dfff6b14fbc2": {
+    "title": "Heimstaden 借助 AI 变革住宅房地产管理",
+    "summary": "了解 Heimstaden 如何利用 OpenAI 的 ChatGPT Enterprise 和 Codex 变革物业管理、降低成本，并赋能欧洲各地员工。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "277870ffc8d71544c0465c137654062f6f2bf7e7d7a1ec8af9071c966d86edc3": {
+    "title": "在 OpenAI 扩展 Git",
+    "summary": "OpenAI 如何构建 Pando——一个兼容 Git 的后端，专为 Codex 所实现的开发规模而设计。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "5d33ed0c66ace544e65f6063efa96737fd184e0288033033361ae48877b21fc8": {
+    "title": "推出 Grid Protectors 计划",
+    "summary": "OpenAI 的 Grid Protectors 计划将与公用事业公司合作，帮助未来的计算园区支持电网可靠性并保护消费者电费。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "bca108e4c77bd86b238b884ff1c18e5c63018f84444ba049fc49aa2f4ac03dcf": {
+    "title": "以更高漏洞赏金奖励安全研究者",
+    "summary": "OpenAI 提高安全漏洞赏金奖励，并为独立安全研究者推出报告质量、忠诚度和优先活动奖金。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "0d297090385ad5a7245151aa36b61200b4bbf9fa9e2ae1ab47c6dc913703fe4d": {
+    "title": "筹备下一轮安全冲刺以强化 OpenAI",
+    "summary": "OpenAI 正与 Cathedral Systems 筹备下一轮内部安全冲刺，利用 AI 测试并加强其防御。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "4094d4340f9e66f9e2fcbdf55d52c8459c6b02d6daa5c6c2ae592ebcd92aa22f": {
+    "title": "Qodo 借助 Codex 将上下文引入 AI 代码审查",
+    "summary": "Qodo 将公司知识和编码标准引入 Codex，帮助开发者在创建拉取请求前发现各代码仓库中的 P0 问题。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "945f879ef3a469b4aebe760cf27598de5ac153aec5be30239cc23bf038b35a21": {
+    "title": "OpenAI 任命 Dan Driscoll 为国家安全现代化高级顾问",
+    "summary": "OpenAI 任命 Dan Driscoll，就国家安全现代化、网络韧性和与美国盟友合作中的负责任 AI 提供建议。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "c45a0b6d7de18ac55a144d1972110112522405fc8ecb4e8f5a157c6e98e835e5": {
+    "title": "2026 年 10 月我们发布的最新 AI 新闻",
+    "summary": "10 月 AI 帖子图片的动画轮播",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "f2ec68b6ee8d48832244704a24148f4e6658c9772da7f915fd94808560945508": {
+    "title": "安全风险评估包含仓库保护状态",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "058c405b4196bea2e45e0fd65b32283aadd0bc8796f826507e9085c9ba5f0c48": {
+    "title": "pull_request_target 将于 12 月 2 日默认阻止",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "853e96282fcb2cad76d4e5797568ac503e89b370d755e1c7c3f874447d391392": {
+    "title": "全球城市借助 NVIDIA 物理与代理式 AI 构建并扩展 AI 服务",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
   }
 }

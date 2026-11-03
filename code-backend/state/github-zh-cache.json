@@ -124,11 +124,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-28T17:11:13Z"
   },
-  "microsoft/BitNet": {
-    "text": "1-bit LLM 的官方推理框架",
-    "source": "deepseek-flash",
-    "at": "2026-10-29T17:27:20Z"
-  },
   "anthropics/skills": {
     "text": "Agent Skills 的公开仓库",
     "source": "deepseek-flash",
@@ -154,18 +149,8 @@
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
   },
-  "guillaumemeyer/watermarks-remover": {
-    "text": "隐私优先的应用，可从你拥有的内容中去除 AI 水印。",
-    "source": "deepseek-flash",
-    "at": "2026-11-01T17:09:14Z"
-  },
   "leepokai/Codync": {
     "text": "开源 Grok Bot 替代品，自带智能体与订阅：在自有电脑上通过 iPhone、Mac、Windows、Linux 或终端，以机器人方式与 Claude Code、Codex、Gemini CLI、Cursor、Copilot 等 40+ AI 智能体对话。智能体无关且免费。也是 Muse 和 Dots 的替代品。使用 Rust 构建。",
-    "source": "deepseek-flash",
-    "at": "2026-11-01T17:09:14Z"
-  },
-  "ifixai-ai/iFixAi": {
-    "text": "AI 智能体的独立审计。由人或智能体自身运行，回答 AI 智能体经济中最关键的问题：智能体是否在做它该做的事？使用 iFixAi，可在 120 秒内得到答案。",
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
   },
@@ -179,19 +164,34 @@
     "source": "deepseek-flash",
     "at": "2026-11-02T11:19:40Z"
   },
-  "DavidHDev/react-bits": {
-    "text": "最大的开源动画、交互式、可定制 React 与 Next.js 组件库，用于构建出色的 Web 产品与体验。为人类和 AI agent 打造。",
-    "source": "deepseek-flash",
-    "at": "2026-11-02T11:19:40Z"
-  },
   "vercel-labs/agent-browser": {
     "text": "面向 AI agent 的浏览器自动化 CLI",
     "source": "deepseek-flash",
     "at": "2026-11-02T11:19:40Z"
   },
-  "memvid/memvid": {
-    "text": "AI Agent 的记忆层。用无服务器单文件记忆层替代复杂 RAG 流水线。为 agent 提供即时检索与长期记忆。",
+  "beenuar/AiSOC": {
+    "text": "开源 AI 安全运营中心：告警融合、LLM 智能体分诊、MITRE ATT&CK 调查，以及可回放的智能体决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
     "source": "deepseek-flash",
-    "at": "2026-11-02T11:19:40Z"
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "Crosstalk-Solutions/project-nomad": {
+    "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在自有硬件上，无需联网。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "mvanhorn/last30days-skill": {
+    "text": "AI 智能体技能，可在 Reddit、X、YouTube、HN、Polymarket 及网络上研究任意主题，并合成有依据的摘要",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "vercel-labs/agent-desktop": {
+    "text": "面向 AI 智能体的计算机使用 CLI",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
+  },
+  "N4darae/shrt": {
+    "text": "面向 AI 编码智能体的契约驱动 gRPC 回归测试工具，基线经人工批准。快照 API 的有效调用链，让智能体直接查询而非追踪。当前支持 gRPC，后续支持 OpenAPI",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T10:58:10Z"
   }
 }

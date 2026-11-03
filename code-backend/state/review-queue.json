@@ -391,18 +391,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "microsoft/skill-recorder",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Desktop app that records your on-screen work session and uses the GitHub Copilot SDK to reconstruct it as an intent + ordered steps, then builds a reusable Skill or Automation for Microsoft Autopilots like Scout, Microsoft Copilot Cowork, or Copilot Studio.",
-      "sourceUrl": "https://github.com/microsoft/skill-recorder"
-    },
-    "id": "7c5ce64515944bc2daf9427cc9c91d9107b20f87bc01b0425abc3bde0cb3d87c",
-    "status": "pending",
-    "createdAt": "2026-10-25T14:57:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/sandbox-runtime",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -436,18 +424,6 @@
     "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
     "status": "pending",
     "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "mg-chao/snow-apps",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
-      "sourceUrl": "https://github.com/mg-chao/snow-apps"
-    },
-    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
-    "status": "pending",
-    "createdAt": "2026-10-27T16:42:38Z"
   },
   {
     "kind": "github-classification",
@@ -522,18 +498,6 @@
     "createdAt": "2026-10-29T17:27:20Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "emilk/egui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "egui: an easy-to-use immediate mode GUI in Rust that runs on both web and native",
-      "sourceUrl": "https://github.com/emilk/egui"
-    },
-    "id": "8c612bcfc7d76dbb8520b63599960ca51316539124e96cb96139d7a0ec44f6ed",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
-  },
-  {
     "kind": "news-item",
     "objectId": "5dbadd761c8e8714b233db16fa803cf638074590ea9a6c089249341b39f1ee22",
     "reason": "invalid feed item: unexpected news host",
@@ -543,18 +507,6 @@
     "id": "ce53b7df799ea0da97f382d5e3ec709cdeb6384c5fd76a5b52331f03e07995ac",
     "status": "pending",
     "createdAt": "2026-10-30T10:08:36Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "thesysdev/openui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Open Standard for Generative UI",
-      "sourceUrl": "https://github.com/thesysdev/openui"
-    },
-    "id": "b8ad17c0dac9b3237958281fa60adcb2d02ce3f1f300e42030da345eefe2135e",
-    "status": "pending",
-    "createdAt": "2026-10-30T17:02:06Z"
   },
   {
     "kind": "plans",
@@ -676,18 +628,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "vercel-labs/agent-desktop",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app's real UI structure through OS accessibility trees and operates it — refs stay stable and actions stay safe to retry, instead of guessing from pixels.",
-      "sourceUrl": "https://github.com/vercel-labs/agent-desktop"
-    },
-    "id": "1786d2b11317531da1eb587930daec8c8284dec26e2081725cf039499ecc4367",
-    "status": "pending",
-    "createdAt": "2026-11-01T17:09:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "morluto/rea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -700,132 +640,38 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Kruk2/jasna",
+    "objectId": "ghostty-org/ghostty",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Video restoration tool",
-      "sourceUrl": "https://github.com/Kruk2/jasna"
+      "description": "👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.",
+      "sourceUrl": "https://github.com/ghostty-org/ghostty"
     },
-    "id": "e9344bea10ceabbd60157f635ca186b34cc4db41444806b1c2a12c75117af53c",
+    "id": "18432ef09efe7bf98f2be7f8059a1995e8d4f8401c53e1076e55323b084bcf03",
     "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
+    "createdAt": "2026-11-03T10:58:10Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "shadps4-emu/shadPS4",
+    "objectId": "hyprwm/Hyprland",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "sourceUrl": "https://github.com/hyprwm/Hyprland"
     },
-    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
+    "id": "daeede7e1b28ace4d575f00474527c533c6da61af8f69b36be625d925e4377bd",
     "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
+    "createdAt": "2026-11-03T10:58:10Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "dyang886/Game-Cheats-Manager",
+    "objectId": "Renhuai123/ziwei-doushu",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Easily download and manage single-player game cheats for your convenience",
-      "sourceUrl": "https://github.com/dyang886/Game-Cheats-Manager"
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "sourceUrl": "https://github.com/Renhuai123/ziwei-doushu"
     },
-    "id": "a3f3d864c381e1ece657d8e63e62c69dea22569eef09e41f7b570968f605a822",
+    "id": "a7e29e0f37e5db40aea6d4a8d463d93add5ae6462b4da1049a241465dec5acbb",
     "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "karpathy/micrograd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A tiny scalar-valued autograd engine and a neural net library on top of it with PyTorch-like API",
-      "sourceUrl": "https://github.com/karpathy/micrograd"
-    },
-    "id": "b018d1edf849287df53ce95b6636f1c6ee6bfce05de7b48bd529989a103e629c",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "qist/tvbox",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OK影视、tvbox配置文件，如果喜欢，请Fork自用。使用前请仔细阅读仓库说明，一旦使用将被视为你已了解。",
-      "sourceUrl": "https://github.com/qist/tvbox"
-    },
-    "id": "67e27fbce1385c077eb390cc7060374dff5b1b204f6b8b4c0c005b65d52b380d",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ShareX/ShareX",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
-      "sourceUrl": "https://github.com/ShareX/ShareX"
-    },
-    "id": "9cbee9e42167b945e2c4ee970e2fd66a622a75516d23380f1f4e0ffeef78b15b",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "bevyengine/bevy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A refreshingly simple data-driven game engine built in Rust",
-      "sourceUrl": "https://github.com/bevyengine/bevy"
-    },
-    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "denoland/deno",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern runtime for JavaScript and TypeScript.",
-      "sourceUrl": "https://github.com/denoland/deno"
-    },
-    "id": "61068d2a8f8df7ab581b7ca656681a540af564e1dbaeb96477ea90926be20604",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "skylot/jadx",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dex to Java decompiler",
-      "sourceUrl": "https://github.com/skylot/jadx"
-    },
-    "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "news-source",
-    "objectId": "minimax",
-    "reason": "HTTP 404",
-    "evidence": {
-      "url": "https://www.minimax.cn/blog"
-    },
-    "id": "3a5aec1467124013c89bb0da5625096b738731597ec9ab71bad1f1daa112fb08",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "893018e83a7c4b0145ca56b631aff913d82c80d8600509cc2d6c7cf8e3ea7337",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "cff09dcf7f71c1c3753c786c4494e2be2846ea69f7cec85ab2595016bf557eb7",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
+    "createdAt": "2026-11-03T10:58:10Z"
   }
 ]
