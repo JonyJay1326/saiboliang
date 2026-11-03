@@ -193,5 +193,10 @@
     "text": "面向 AI 编码智能体的契约驱动 gRPC 回归测试工具，基线经人工批准。快照 API 的有效调用链，让智能体直接查询而非追踪。当前支持 gRPC，后续支持 OpenAPI",
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
+  },
+  "Vincentwei1021/video-shotcraft": {
+    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
   }
 }

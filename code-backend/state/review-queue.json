@@ -475,18 +475,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "chthollyphile/folia-major",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "专注于绚丽的歌词动画效果的本地音乐/navidrome/第三方多平台在线音乐播放器",
-      "sourceUrl": "https://github.com/chthollyphile/folia-major"
-    },
-    "id": "cc9de1b01f7dfa9dc73f2f6cb38285ce3b4ec0dbe09fe10ef1e9fae7d2c3f9d4",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "LibreSpark/LibreTV",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -518,18 +506,6 @@
     "id": "64e345cc6f10f8b0b864d1e45b4326be13fcb5d817f0c4405d1c510f81e27e52",
     "status": "pending",
     "createdAt": "2026-10-31T07:59:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "YuJunZhiXue/dsh-purge",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
-      "sourceUrl": "https://github.com/YuJunZhiXue/dsh-purge"
-    },
-    "id": "ca924fe8519e4f2d04d01d30f85e32813f736fb4e316809a7780425bd951c52d",
-    "status": "pending",
-    "createdAt": "2026-10-31T16:08:43Z"
   },
   {
     "kind": "github-classification",
@@ -673,5 +649,29 @@
     "id": "a7e29e0f37e5db40aea6d4a8d463d93add5ae6462b4da1049a241465dec5acbb",
     "status": "pending",
     "createdAt": "2026-11-03T10:58:10Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HunYiSage/dsh-purge",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "sourceUrl": "https://github.com/HunYiSage/dsh-purge"
+    },
+    "id": "b0c9799751c02ea1fdf43f4631dffb2c27802f4b5d3889ab28c84fbbbae1f024",
+    "status": "pending",
+    "createdAt": "2026-11-03T18:28:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "chthollyphile/folia-major",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "专注于绚丽的歌词动画效果的本地音乐/navidrome/第三方多平台在线音乐播放器 A multi-platform music player for local files, Navidrome, and online streaming services, featuring stunning animated lyrics.",
+      "sourceUrl": "https://github.com/chthollyphile/folia-major"
+    },
+    "id": "5423e85d6cfe615a9144eb6d3ee83f59800d179643c207c7c86273d34f8a0417",
+    "status": "pending",
+    "createdAt": "2026-11-03T18:28:17Z"
   }
 ]

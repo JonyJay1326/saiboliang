@@ -1,6 +1,82 @@
 {
-  "dataUpdatedAt": "2026-11-03T10:58:10Z",
+  "dataUpdatedAt": "2026-11-03T18:28:17Z",
   "items": [
+    {
+      "title": "使用 Google Antigravity 的智能体化学信息学",
+      "sourceUrl": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "publishedAt": "2026-11-03T17:01:49Z",
+      "source": "Google DeepMind",
+      "summary": "Google DeepMind 介绍使用 Google Antigravity 的智能体化学信息学",
+      "id": "da38bc697163569b34347a26c22a149b3e4e25a121038cd810ababffbf5d3427",
+      "originalTitle": "Agentic cheminformatics with Google Antigravity",
+      "translatedAt": "2026-11-03T18:28:17Z",
+      "lang": "en",
+      "originalSource": "Google DeepMind",
+      "originalUrl": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "originalVerifiedAt": "2026-11-03T18:28:17Z",
+      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-03T18:28:17Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot 现已在 JetBrains Air 中可用",
+      "sourceUrl": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+      "publishedAt": "2026-11-03T15:11:46Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot 通过 Agent Client Protocol 集成到 JetBrains Air，可委派编码任务并审查结果",
+      "id": "2b4786f99076579d8179f1f7799c0303aba10940fd7e1c0f9b468e75eac769ab",
+      "originalTitle": "GitHub Copilot is now available in JetBrains Air",
+      "translatedAt": "2026-11-03T18:28:17Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+      "originalVerifiedAt": "2026-11-03T18:28:17Z",
+      "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-03T18:28:17Z",
+      "featured": true
+    },
+    {
+      "title": "Gartner发布2027十大技术趋势：非文本AI排第一，Harness是未来1-3年重点",
+      "sourceUrl": "https://zhidx.com/p/606902.html",
+      "publishedAt": "2026-11-03T11:27:58Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 杨京丽 编辑 | 李水青 智东西11月3日报道，今日，知名研究机构Gartner的研究副总裁高挺（Arnold Gao）在媒体交流会上",
+      "id": "b4a1ef9db65a62cb4ba0285e5beeb7d6ce27dc1f6f939236efec08a272526afd",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/606902.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-03T18:28:17Z",
+      "featured": true
+    },
+    {
+      "title": "英特尔与腾讯发布基于至强6+的云实例，晒智能体AI基础设施全家桶",
+      "sourceUrl": "https://zhidx.com/p/606250.html",
+      "publishedAt": "2026-11-03T11:10:21Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | ZeR0 编辑 | 漠影 智东西11月3日报道，近日，在2026腾讯全球数字生态大会上",
+      "id": "5e16932143271af19a702a8052458c5c07244f91857ba8bb6cb36fdd92bcb464",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/606250.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-03T18:28:17Z",
+      "featured": true
+    },
     {
       "title": "实测阿里版Muse：千问Go 7×24小时在线，帮我逛淘宝、盯大麦",
       "sourceUrl": "https://zhidx.com/p/606790.html",
@@ -18,6 +94,25 @@
       "category": "model",
       "eventType": "model-review",
       "addedAt": "2026-11-03T10:58:10Z",
+      "featured": true
+    },
+    {
+      "title": "商汤新模型实测：8分钟速读582页招股书，“卡”在了做PPT上",
+      "sourceUrl": "https://zhidx.com/p/606911.html",
+      "publishedAt": "2026-11-03T09:08:13Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 王涵 编辑 | 云鹏 智东西11月3日报道，昨日傍晚，商汤多模态智能体模型 SenseNova 6.8 Flash正式版 发布。",
+      "id": "eec4e0333bc02d9a165ff41fd2a0fcad4f981e243a3d0f5dae8155fe6b6f4866",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/606911.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-03T18:28:17Z",
       "featured": true
     },
     {
@@ -6139,6 +6234,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-03T10:58:10Z",
-  "generatedAt": "2026-11-03T10:58:10Z"
+  "version": "2026-11-03T18:28:17Z",
+  "generatedAt": "2026-11-03T18:28:17Z"
 }

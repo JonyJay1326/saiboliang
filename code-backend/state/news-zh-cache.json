@@ -47,12 +47,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
-  "c45a0b6d7de18ac55a144d1972110112522405fc8ecb4e8f5a157c6e98e835e5": {
-    "title": "2026 年 10 月我们发布的最新 AI 新闻",
-    "summary": "10 月 AI 帖子图片的动画轮播",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "f2ec68b6ee8d48832244704a24148f4e6658c9772da7f915fd94808560945508": {
     "title": "安全风险评估包含仓库保护状态",
     "summary": null,
@@ -70,5 +64,53 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
+  },
+  "da38bc697163569b34347a26c22a149b3e4e25a121038cd810ababffbf5d3427": {
+    "title": "使用 Google Antigravity 的智能体化学信息学",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "9bd4399ba924a984ce4314ca74d3c4fb01100f2d6a50c2d467bc5d8e6b642c65": {
+    "title": "使用 GitHub REST API 查询资源的成本中心",
+    "summary": "现在可以使用 GitHub REST API 查找用户、组织、仓库或企业团队所属的成本中心。此前必须列出所有成本中心……",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "2b4786f99076579d8179f1f7799c0303aba10940fd7e1c0f9b468e75eac769ab": {
+    "title": "GitHub Copilot 现已在 JetBrains Air 中可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "1ebb6cad83f637e5e4ba2eac0106d300b02bab7a07a09d1d8806326599f485a4": {
+    "title": "CodeQL 2.27.3 新增 Python 3.15 特性和 JSON 数据扩展",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "1784e6027394947ffa72112177af5dbbf3def5c8f94cae8f135e0b403d75c908": {
+    "title": "Dependabot 现已支持 Python 3.15",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "7b6b652cf9eb8d917caf57ec0a8bbf3032d4760a59702ef170d7d47466d84cb4": {
+    "title": "GitHub Desktop 新增短期身份验证令牌",
+    "summary": "登录 GitHub Desktop 3.6.10 或更高版本时，符合条件的账户现在可以使用短期、自动刷新的身份验证令牌。短期访问令牌可缩短泄露令牌的……",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "55e43bcf2392574765dff7406b7f6da0287e451a9ee242c5d1f28b451b9ec90e": {
+    "title": "AI 正在改变半导体晶圆厂的工作方式，工程师因此行动更快",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
+  },
+  "708c02545a51f43d2676f69e578a0fc2ef9dbf51f38a278ee7565e3b8ba4c90b": {
+    "title": "你应该使用哪个 MiniMax H3 模型？",
+    "summary": "三个 MiniMax H3 模型，三种价格。以下是 H3 Highspeed、H3 Lite 和 H3 的适用场景。",
+    "source": "deepseek-flash",
+    "at": "2026-11-03T18:28:17Z"
   }
 }
