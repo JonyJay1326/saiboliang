@@ -192,18 +192,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "caddyserver/caddy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
-      "sourceUrl": "https://github.com/caddyserver/caddy"
-    },
-    "id": "ff301507dc9946038e3a9d0fc71900a04b6011bbc1a4abb3bd8ff61064c8cc29",
-    "status": "pending",
-    "createdAt": "2026-10-04T15:49:24Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/knowledge-work-plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -320,18 +308,6 @@
     "createdAt": "2026-10-20T15:40:23Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "kubernetes/kubernetes",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Production-Grade Container Scheduling and Management",
-      "sourceUrl": "https://github.com/kubernetes/kubernetes"
-    },
-    "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
-    "status": "pending",
-    "createdAt": "2026-10-21T08:39:45Z"
-  },
-  {
     "kind": "news-source",
     "objectId": "anthropic",
     "reason": "Anthropic news list missing or restructured",
@@ -343,18 +319,6 @@
     "createdAt": "2026-10-21T08:39:45Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "michael-denyer/pstack-claude",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Claude Code, Codex, Copilot, Pi, OpenCode, Muse, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
-    },
-    "id": "f03d1d5aa90f80166e8fbfa51c58073d0c5ed59e73407562a5fcdb43745159ab",
-    "status": "pending",
-    "createdAt": "2026-10-22T04:01:40Z"
-  },
-  {
     "kind": "news-item",
     "objectId": "02ab68be675b3bf67984aadc2776a5827ddbd419baae861c23d6f5717069a91a",
     "reason": "invalid feed item: unexpected news host",
@@ -364,18 +328,6 @@
     "id": "4e07e53fa5d89f40501846f1f657174af723e1ae1e3a16810c291f07b1045423",
     "status": "pending",
     "createdAt": "2026-10-22T04:01:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
-    "status": "pending",
-    "createdAt": "2026-10-24T14:36:47Z"
   },
   {
     "kind": "github-classification",
@@ -651,14 +603,111 @@
     "createdAt": "2026-11-03T18:28:17Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
+    "kind": "github-classification",
+    "objectId": "The-PR-Agent/pr-agent",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
+      "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+      "sourceUrl": "https://github.com/The-PR-Agent/pr-agent"
     },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "id": "95df7a63b9cce487e8b2896062659920d0cbd6d6aff8da5297739d772a1ff7ac",
     "status": "pending",
-    "createdAt": "2026-11-04T11:02:40Z"
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FinanceFlash/unvibecode",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
+      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
+    },
+    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "2dust/v2rayN",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
+      "sourceUrl": "https://github.com/2dust/v2rayN"
+    },
+    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zyronon/TypeWords",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Practice English, one strike, one step forward",
+      "sourceUrl": "https://github.com/zyronon/TypeWords"
+    },
+    "id": "d12a3068d7a66958c8818ae7f2aa1784887b1869a8b6b3fe0925a81c6fa50886",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "paperclipai/paperclip",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source app everyone uses to manage agents at work",
+      "sourceUrl": "https://github.com/paperclipai/paperclip"
+    },
+    "id": "68045d0329774c6004fc13032b0e8972fe26c1e7df1f0e81ab0160dec6db224e",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Kruk2/jasna",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Video restoration tool",
+      "sourceUrl": "https://github.com/Kruk2/jasna"
+    },
+    "id": "e9344bea10ceabbd60157f635ca186b34cc4db41444806b1c2a12c75117af53c",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailscale",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The easiest, most secure way to use WireGuard and 2FA.",
+      "sourceUrl": "https://github.com/tailscale/tailscale"
+    },
+    "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "michael-denyer/pstack-claude",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Antigravity, Claude Code, Codex, Copilot, Gemini, Muse, OpenCode, Pi, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
+    },
+    "id": "0039627ab2e6b41ef5f7c28528a9cd457cf93d608d552e80b4bfe5a95cd85363",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "storytold/artcraft",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "sourceUrl": "https://github.com/storytold/artcraft"
+    },
+    "id": "6b52ec3080139d83222c1c24043ca438acbbd68981619277416dd583e978c118",
+    "status": "pending",
+    "createdAt": "2026-11-04T18:40:18Z"
   }
 ]

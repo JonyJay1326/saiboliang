@@ -1,7 +1,22 @@
 {
-  "4959bfd1066b41ad8d33bf59f751842bf33154751a96123c5b4c09918fb719c4": {
-    "summary": "腾讯云公告：大模型服务平台TokenHub与云开发CloudBase调整Step 5 Preview模型缓存命中输入价格。",
+  "3120cb53fbc5954ecff0513cc7de91c5144578c63df6d76ddfcda859582a9144": {
+    "summary": "Copilot 使用指标 API 现可显示 BYOK 用量，并与 Copilot 托管模型用量分开统计。",
     "source": "deepseek-flash",
-    "at": "2026-11-04T11:02:40Z"
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "3e89035fdd0e3c0bf7b755db5d4d55e8700120ca2da8d5b970f5922473d90f62": {
+    "summary": "Polymorphic Inference 适配模型、流量与芯片变化，Together Compiler 用 AI 代理调优生产推理。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "130d10d3c1a4b493d9dfd1ed8522c75abdd4e0045e4b09bc29dc44469845d603": {
+    "summary": "Dependabot 版本更新现支持 Agent Package Manager，可自动提交 PR 更新 AI 代理技能与提示。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "f4a904d03d800a16a7770eb45e6294e17d198382b354ef891a63e5cd21dfe6b8": {
+    "summary": "月之暗面发布 Kimi-K3.1-Pro，2.8T 参数图文转文本模型，可在 Hugging Face 下载运行。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
   }
 }

@@ -39,11 +39,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
-  "Gaurav-Gosain/tuios": {
-    "text": "一个了解你的智能体在做什么的终端窗口管理器。平铺窗格、工作区、可跨重启存活的会话，以及为每个编码智能体提供的统一收件箱。",
-    "source": "deepseek-flash",
-    "at": "2026-10-17T14:14:10Z"
-  },
   "ruvnet/ruflo": {
     "text": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
     "source": "deepseek-flash",
@@ -169,11 +164,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
-  "mvanhorn/last30days-skill": {
-    "text": "AI 智能体技能，可在 Reddit、X、YouTube、HN、Polymarket 及网络上研究任意主题，并合成有依据的摘要",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "vercel-labs/agent-desktop": {
     "text": "面向 AI 智能体的计算机使用 CLI",
     "source": "deepseek-flash",
@@ -193,5 +183,25 @@
     "text": "Worktrunk 是一个用于 Git worktree 管理的 CLI，专为并行 AI agent 工作流设计",
     "source": "deepseek-flash",
     "at": "2026-11-04T11:02:40Z"
+  },
+  "guillaumemeyer/watermarks-remover": {
+    "text": "隐私优先的应用，可从你拥有的内容中去除 AI 水印。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "vercel-labs/agent-browser": {
+    "text": "面向 AI 智能体的浏览器自动化 CLI",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "MemPalace/mempalace": {
+    "text": "基准测试表现最佳的开源 AI 记忆系统，且免费。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "QuantumNous/new-api": {
+    "text": "开源 AI 网关。自托管 LLM 网关，兼容 OpenAI、Claude 与 Gemini API，支持模型路由、访问控制、用量追踪与成本核算。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
   }
 }

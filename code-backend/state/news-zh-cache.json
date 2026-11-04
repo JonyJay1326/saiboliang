@@ -130,5 +130,29 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-04T11:02:40Z"
+  },
+  "1be4fdd8e6ca80f0ec0127711bf05d7cfcd7194eac7f7e3b9f6a7d04824358c9": {
+    "title": "OpenAI 将收购 Pierre Computer Company, Inc.",
+    "summary": "OpenAI 将收购 Pierre Computer Company，扩展 Codex 用于构建、理解和审查代码的工具。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "a3433e936d2c04bfa7722c64f05b5efdfdc6024634f8a182254f80d5e66c1036": {
+    "title": "Daybreak Red 现已在 AWS GovCloud（美国东部）上线",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "30689b894f03e4c2efb3ae2f394374c53f4b84c1ba2fd81386c1c2d1fdbe14be": {
+    "title": "Together Compiler：面向 AI 推理的持续编译",
+    "summary": "Together Compiler 利用智能体和持久引擎在 24 小时内优化开放模型，随流量变化实现最高 3.7 倍吞吐量提升。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
+  },
+  "3e89035fdd0e3c0bf7b755db5d4d55e8700120ca2da8d5b970f5922473d90f62": {
+    "title": "Polymorphic Inference：面向开放模型的自调优推理",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-04T18:40:18Z"
   }
 }
