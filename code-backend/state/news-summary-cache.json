@@ -1,12 +1,7 @@
 {
-  "da38bc697163569b34347a26c22a149b3e4e25a121038cd810ababffbf5d3427": {
-    "summary": "Google DeepMind 介绍使用 Google Antigravity 的智能体化学信息学",
+  "4959bfd1066b41ad8d33bf59f751842bf33154751a96123c5b4c09918fb719c4": {
+    "summary": "腾讯云公告：大模型服务平台TokenHub与云开发CloudBase调整Step 5 Preview模型缓存命中输入价格。",
     "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "2b4786f99076579d8179f1f7799c0303aba10940fd7e1c0f9b468e75eac769ab": {
-    "summary": "GitHub Copilot 通过 Agent Client Protocol 集成到 JetBrains Air，可委派编码任务并审查结果",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
+    "at": "2026-11-04T11:02:40Z"
   }
 }

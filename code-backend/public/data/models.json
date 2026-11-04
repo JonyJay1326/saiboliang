@@ -1,19 +1,19 @@
 {
-  "dataUpdatedAt": "2026-11-03T10:58:10Z",
+  "dataUpdatedAt": "2026-11-04T11:02:40Z",
   "rankings": {
     "source": "artificial-analysis",
     "sourceUrl": "https://artificialanalysis.ai/",
     "indexVersion": "5",
-    "updatedAt": "2026-11-03T10:58:10Z",
+    "updatedAt": "2026-11-04T11:02:40Z",
     "intelligence": [
       {
         "modelId": "gemini-4-carbon",
-        "score": 59.4,
+        "score": 60,
         "rank": 1
       },
       {
         "modelId": "claude-opus-5-5",
-        "score": 58.4,
+        "score": 59.1,
         "rank": 2
       },
       {
@@ -23,17 +23,17 @@
       },
       {
         "modelId": "gpt-6-1-sol",
-        "score": 54.5,
+        "score": 54.6,
         "rank": 4
       },
       {
         "modelId": "claude-sonnet-5-5",
-        "score": 54.2,
+        "score": 54.5,
         "rank": 5
       },
       {
         "modelId": "gpt-6-1-terra",
-        "score": 51,
+        "score": 51.3,
         "rank": 6
       },
       {
@@ -42,118 +42,118 @@
         "rank": 7
       },
       {
-        "modelId": "claude-fable-5-1-xhigh",
-        "score": 49.7,
+        "modelId": "muse-wonder-full",
+        "score": 50.1,
         "rank": 8
       },
       {
-        "modelId": "muse-wonder-full",
-        "score": 49.7,
+        "modelId": "claude-fable-5-1-xhigh",
+        "score": 50,
         "rank": 9
       },
       {
         "modelId": "kimi-k3-1-pro",
-        "score": 46,
+        "score": 46.5,
         "rank": 10
       },
       {
-        "modelId": "muse-wonder",
-        "score": 43.3,
+        "modelId": "gpt-6-sol",
+        "score": 44.2,
         "rank": 11
       },
       {
-        "modelId": "muse-spark-1-3",
-        "score": 36.4,
+        "modelId": "muse-wonder",
+        "score": 43.6,
         "rank": 12
       },
       {
-        "modelId": "claude-haiku-5-5",
-        "score": 36.2,
+        "modelId": "muse-spark-1-3",
+        "score": 36.6,
         "rank": 13
       },
       {
-        "modelId": "grok-4-7",
-        "score": 35.3,
+        "modelId": "claude-haiku-5-5",
+        "score": 36.5,
         "rank": 14
       },
       {
-        "modelId": "qwen3-8-max",
-        "score": 33.6,
+        "modelId": "grok-4-7",
+        "score": 35.5,
         "rank": 15
       },
       {
-        "modelId": "deepseek-v4-1-flash-1017",
-        "score": 32.5,
+        "modelId": "qwen3-8-max",
+        "score": 33.7,
         "rank": 16
+      },
+      {
+        "modelId": "deepseek-v4-1-flash-1017",
+        "score": 32.6,
+        "rank": 17
+      },
+      {
+        "modelId": "gpt-5-6-terra",
+        "score": 32.3,
+        "rank": 18
       },
       {
         "modelId": "glm-5-3",
         "score": 31.7,
-        "rank": 17
+        "rank": 19
       },
       {
         "modelId": "gemini-3-8-flash",
-        "score": 30.5,
-        "rank": 18
+        "score": 30.8,
+        "rank": 20
       },
       {
         "modelId": "mimo-v2-6-pro",
         "score": 29.9,
-        "rank": 19
+        "rank": 21
       },
       {
         "modelId": "ling-3-1-flash-1019",
-        "score": 29.5,
-        "rank": 20
+        "score": 29.6,
+        "rank": 22
       },
       {
         "modelId": "minimax-m3-1-flash",
-        "score": 28.9,
-        "rank": 21
+        "score": 29.1,
+        "rank": 23
       },
       {
         "modelId": "step-5",
         "score": 28.5,
-        "rank": 22
+        "rank": 24
+      },
+      {
+        "modelId": "gpt-6-luna",
+        "score": 27.9,
+        "rank": 25
       },
       {
         "modelId": "glm-5-3-flash",
         "score": 27.8,
-        "rank": 23
-      },
-      {
-        "modelId": "gpt-6-luna",
-        "score": 27.8,
-        "rank": 24
+        "rank": 26
       },
       {
         "modelId": "mimo-v2-6-flash",
         "score": 26.7,
-        "rank": 25
+        "rank": 27
       },
       {
         "modelId": "mistral-large-4",
-        "score": 26,
-        "rank": 26
+        "score": 26.1,
+        "rank": 28
       },
       {
         "modelId": "mistral-large-4-preview",
         "score": 25.3,
-        "rank": 27
-      },
-      {
-        "modelId": "muse-spark-open",
-        "score": 24.7,
-        "rank": 28
-      },
-      {
-        "modelId": "deepseek-v4-pro",
-        "score": 23.1,
         "rank": 29
       },
       {
-        "modelId": "nanbeige4-3-33b",
-        "score": 20.4,
+        "modelId": "muse-spark-open",
+        "score": 24.9,
         "rank": 30
       }
     ],
@@ -170,7 +170,7 @@
       "outputCost": 50.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1-xhigh",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "claude-haiku-5-5",
@@ -182,7 +182,7 @@
       "outputCost": 0.5,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-haiku-5-5",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "claude-opus-5-5",
@@ -194,7 +194,7 @@
       "outputCost": 20.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-opus-5-5",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "claude-sonnet-5-5",
@@ -206,7 +206,7 @@
       "outputCost": 10.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "deepseek-v4-1-flash-1017",
@@ -218,19 +218,7 @@
       "outputCost": 1.2,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
-    },
-    {
-      "id": "deepseek-v4-pro",
-      "name": "DeepSeek V4 Pro 0813",
-      "vendor": "DeepSeek",
-      "aaId": "83173329-c09a-41f1-a028-a282a5f908d7",
-      "releasedAt": "2026-08-13",
-      "inputCost": 1.32,
-      "outputCost": 3.96,
-      "priceSource": "artificial-analysis",
-      "priceSourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-pro",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gemini-3-8-flash",
@@ -242,7 +230,7 @@
       "outputCost": 3.75,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gemini-4-argon",
@@ -254,7 +242,7 @@
       "outputCost": 20.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-4-argon",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gemini-4-carbon",
@@ -266,7 +254,7 @@
       "outputCost": 20.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gemini-4-carbon",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "glm-5-3",
@@ -278,7 +266,7 @@
       "outputCost": 4.4,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "glm-5-3-flash",
@@ -290,7 +278,19 @@
       "outputCost": 0.5,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/glm-5-3-flash",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "name": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "aaId": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+      "releasedAt": "2026-07-09",
+      "inputCost": 2.0,
+      "outputCost": 12.0,
+      "priceSource": "artificial-analysis",
+      "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gpt-6-1-sol",
@@ -302,7 +302,7 @@
       "outputCost": 10.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-1-sol",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gpt-6-1-terra",
@@ -314,7 +314,7 @@
       "outputCost": 5.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-1-terra",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gpt-6-astra",
@@ -326,7 +326,7 @@
       "outputCost": 50.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-astra",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "gpt-6-luna",
@@ -338,7 +338,19 @@
       "outputCost": 0.5,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-luna",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "vendor": "OpenAI",
+      "aaId": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+      "releasedAt": "2026-09-22",
+      "inputCost": 2.0,
+      "outputCost": 10.0,
+      "priceSource": "artificial-analysis",
+      "priceSourceUrl": "https://artificialanalysis.ai/models/gpt-6-sol",
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "grok-4-7",
@@ -350,7 +362,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/grok-4-7",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "kimi-k3-1-pro",
@@ -362,7 +374,7 @@
       "outputCost": 10.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "ling-3-1-flash-1019",
@@ -374,7 +386,7 @@
       "outputCost": 0.9,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/ling-3-1-flash-1019",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "mimo-v2-6-flash",
@@ -386,7 +398,7 @@
       "outputCost": 0.28,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "mimo-v2-6-pro",
@@ -398,7 +410,7 @@
       "outputCost": 0.87,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "minimax-m3-1-flash",
@@ -410,7 +422,7 @@
       "outputCost": 0.6,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "mistral-large-4",
@@ -422,7 +434,7 @@
       "outputCost": 2.1,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/mistral-large-4",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "mistral-large-4-preview",
@@ -434,7 +446,7 @@
       "outputCost": 2.1,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/mistral-large-4-preview",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "muse-spark-1-3",
@@ -446,7 +458,7 @@
       "outputCost": 4.25,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "muse-spark-open",
@@ -458,7 +470,7 @@
       "outputCost": 4.25,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/muse-spark-open",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "muse-wonder",
@@ -470,7 +482,7 @@
       "outputCost": 20.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/muse-wonder",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "muse-wonder-full",
@@ -478,18 +490,6 @@
       "vendor": "Meta",
       "aaId": "e994a6e0-d36b-4dab-8ae1-c1b469e4d9e2",
       "releasedAt": "2026-10-12",
-      "inputCost": null,
-      "outputCost": null,
-      "priceSource": null,
-      "priceSourceUrl": null,
-      "priceUpdatedAt": null
-    },
-    {
-      "id": "nanbeige4-3-33b",
-      "name": "Nanbeige4.3-33B",
-      "vendor": "Nanbeige",
-      "aaId": "4cef9716-27a3-4ac3-9620-cd75135d7bbf",
-      "releasedAt": "2026-10-25",
       "inputCost": null,
       "outputCost": null,
       "priceSource": null,
@@ -506,7 +506,7 @@
       "outputCost": 6.0,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     },
     {
       "id": "step-5",
@@ -518,7 +518,7 @@
       "outputCost": 2.7,
       "priceSource": "artificial-analysis",
       "priceSourceUrl": "https://artificialanalysis.ai/models/step-5",
-      "priceUpdatedAt": "2026-11-03T10:58:10Z"
+      "priceUpdatedAt": "2026-11-04T11:02:40Z"
     }
   ],
   "plans": [
@@ -2562,7 +2562,7 @@
       "status": "available",
       "source": "official",
       "sourceUrl": "https://www.xfyun.cn/doc/spark/CodingPlan.html",
-      "updatedAt": "2026-11-03",
+      "updatedAt": "2026-11-04",
       "checkMethod": "auto"
     },
     {
@@ -2657,6 +2657,6 @@
       "checkMethod": "manual"
     }
   ],
-  "version": "2026-11-03T18:28:17Z",
-  "generatedAt": "2026-11-03T18:28:17Z"
+  "version": "2026-11-04T11:02:40Z",
+  "generatedAt": "2026-11-04T11:02:40Z"
 }

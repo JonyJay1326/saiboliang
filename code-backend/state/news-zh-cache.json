@@ -65,21 +65,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
-  "da38bc697163569b34347a26c22a149b3e4e25a121038cd810ababffbf5d3427": {
-    "title": "使用 Google Antigravity 的智能体化学信息学",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
   "9bd4399ba924a984ce4314ca74d3c4fb01100f2d6a50c2d467bc5d8e6b642c65": {
     "title": "使用 GitHub REST API 查询资源的成本中心",
     "summary": "现在可以使用 GitHub REST API 查找用户、组织、仓库或企业团队所属的成本中心。此前必须列出所有成本中心……",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "2b4786f99076579d8179f1f7799c0303aba10940fd7e1c0f9b468e75eac769ab": {
-    "title": "GitHub Copilot 现已在 JetBrains Air 中可用",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-03T18:28:17Z"
   },
@@ -112,5 +100,35 @@
     "summary": "三个 MiniMax H3 模型，三种价格。以下是 H3 Highspeed、H3 Lite 和 H3 的适用场景。",
     "source": "deepseek-flash",
     "at": "2026-11-03T18:28:17Z"
+  },
+  "25493a43cba550c7fe81484acae2a066a0e92a0ab7396a9764a18c9bb949ba12": {
+    "title": "加速物理世界的工程工作",
+    "summary": "了解 ChatGPT 和 Codex 如何帮助工程师加速 CAD、PCB 设计、仿真等物理世界工作流程。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T11:02:40Z"
+  },
+  "34e7d62615202d0de65fe802c6c6ca14703e67df603d58e71ec501e575fe9eda": {
+    "title": "Cisco 如何借助 OpenAI 以机器速度防御",
+    "summary": "Cisco 将网络智能与 OpenAI 模型结合，增强企业安全。了解其如何构建更具适应性的防御。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T11:02:40Z"
+  },
+  "019edb616369c3322f4c44a55e04677f77bd523e681eb1a6308bc4ebad0c1377": {
+    "title": "OpenAI 任命 Jill Hazelbaker 为首席企业事务官",
+    "summary": "Jill Hazelbaker 将加入 OpenAI 担任首席企业事务官，负责公司全球传播与企业定位。",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T11:02:40Z"
+  },
+  "3120cb53fbc5954ecff0513cc7de91c5144578c63df6d76ddfcda859582a9144": {
+    "title": "Copilot 使用 API 中的 BYOK 与企业自定义模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-04T11:02:40Z"
+  },
+  "130d10d3c1a4b493d9dfd1ed8522c75abdd4e0045e4b09bc29dc44469845d603": {
+    "title": "Dependabot 版本更新支持 Agent Package Manager",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-04T11:02:40Z"
   }
 }

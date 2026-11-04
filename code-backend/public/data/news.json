@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-11-03T18:28:17Z",
+  "dataUpdatedAt": "2026-11-04T11:02:40Z",
   "items": [
+    {
+      "title": "网易智企帝王蟹乌镇升级，推出Agent Team、知识引擎“万典”，首发智能工牌",
+      "sourceUrl": "https://zhidx.com/p/607408.html",
+      "publishedAt": "2026-11-04T09:54:57Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | ZeR0 编辑 | 漠影 智东西11月4日报道，今日，2026世界互联网大会乌镇峰会浙江分论坛举行。",
+      "id": "e4ca8d5919c3f055acdd16063e602762093a4c723afa45b1aa6ba94a97e44be7",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607408.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-04T11:02:40Z",
+      "featured": true
+    },
+    {
+      "title": "17秒验明AI“真身”！Anthropic开源可证明推理系统，能抓模型调包",
+      "sourceUrl": "https://zhidx.com/p/607361.html",
+      "publishedAt": "2026-11-04T09:53:45Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 孙小雯 编辑 | 程茜 智东西11月4日消息，今天凌晨，Anthropic 开源大模型可证明推理系统FlashProve",
+      "id": "c49bf746a69f71e0ebf7edb6b019636870c9a27cc29d1598e12b034744e255ed",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607361.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-04T11:02:40Z",
+      "featured": true
+    },
     {
       "title": "使用 Google Antigravity 的智能体化学信息学",
       "sourceUrl": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
@@ -18,6 +56,44 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-03T18:28:17Z",
+      "featured": null
+    },
+    {
+      "title": "【大模型服务平台 TokenHub】&【云开发 CloudBase】关于 Step 5 Preview 模型缓存命中输入价格调整的公告",
+      "sourceUrl": "https://cloud.tencent.com/announce/detail/2542",
+      "publishedAt": "2026-11-03T16:00:00Z",
+      "source": "腾讯云 TokenHub",
+      "summary": "腾讯云公告：大模型服务平台TokenHub与云开发CloudBase调整Step 5 Preview模型缓存命中输入价格。",
+      "id": "4959bfd1066b41ad8d33bf59f751842bf33154751a96123c5b4c09918fb719c4",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "腾讯云 TokenHub",
+      "originalUrl": "https://cloud.tencent.com/announce/detail/2542",
+      "originalVerifiedAt": "2026-11-04T11:02:40Z",
+      "url": "https://cloud.tencent.com/announce/detail/2542",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-11-04T11:02:40Z",
+      "featured": true
+    },
+    {
+      "title": "腾讯云 TokenHub 上线 Hy4 模型",
+      "sourceUrl": "https://cloud.tencent.com/document/product/1823/130675?date=2026-11-04&model=hy4",
+      "publishedAt": "2026-11-03T16:00:00Z",
+      "source": "腾讯云 TokenHub",
+      "summary": "新增支持 Hy4 模型。",
+      "id": "9984da29e7d047d80d20b006ef86409fcac38ed34d4c252d6ae460644dfccde4",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "腾讯云 TokenHub",
+      "originalUrl": "https://cloud.tencent.com/document/product/1823/130675?date=2026-11-04&model=hy4",
+      "originalVerifiedAt": "2026-11-04T11:02:40Z",
+      "url": "https://cloud.tencent.com/document/product/1823/130675?date=2026-11-04&model=hy4",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-04T11:02:40Z",
       "featured": true
     },
     {
@@ -6234,6 +6310,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-03T18:28:17Z",
-  "generatedAt": "2026-11-03T18:28:17Z"
+  "version": "2026-11-04T11:02:40Z",
+  "generatedAt": "2026-11-04T11:02:40Z"
 }

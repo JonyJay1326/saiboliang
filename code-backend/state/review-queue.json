@@ -367,18 +367,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "pollen-robotics/microduck",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A Tiny biped duck robot 🦆",
-      "sourceUrl": "https://github.com/pollen-robotics/microduck"
-    },
-    "id": "16445aac3032f06f8f858781400c285e02bbac70f119213b797967e8713193ea",
-    "status": "pending",
-    "createdAt": "2026-10-23T15:46:10Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ranxianglei/billion-context",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -410,18 +398,6 @@
       "sourceUrl": "https://github.com/Alishahryar1/free-claude-code"
     },
     "id": "63576735998079fdb8839b8819f6a81afb093c241c763bf84a3fad301c5bace3",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "2dust/v2rayN",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
-      "sourceUrl": "https://github.com/2dust/v2rayN"
-    },
-    "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
     "status": "pending",
     "createdAt": "2026-10-26T17:25:14Z"
   },
@@ -673,5 +649,16 @@
     "id": "5423e85d6cfe615a9144eb6d3ee83f59800d179643c207c7c86273d34f8a0417",
     "status": "pending",
     "createdAt": "2026-11-03T18:28:17Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-11-04T11:02:40Z"
   }
 ]

@@ -139,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
-  "docker/docker-agent": {
-    "text": "Docker 工程团队推出的 AI Agent 构建器与运行时",
-    "source": "deepseek-flash",
-    "at": "2026-10-31T16:08:43Z"
-  },
   "herdrdev/herdr": {
     "text": "编码智能体所运行的运行时",
     "source": "deepseek-flash",
@@ -161,11 +156,6 @@
   },
   "superdesigndev/treg": {
     "text": "面向 agent 工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
-    "source": "deepseek-flash",
-    "at": "2026-11-02T11:19:40Z"
-  },
-  "vercel-labs/agent-browser": {
-    "text": "面向 AI agent 的浏览器自动化 CLI",
     "source": "deepseek-flash",
     "at": "2026-11-02T11:19:40Z"
   },
@@ -198,5 +188,10 @@
     "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
     "source": "deepseek-flash",
     "at": "2026-11-03T18:28:17Z"
+  },
+  "max-sixty/worktrunk": {
+    "text": "Worktrunk 是一个用于 Git worktree 管理的 CLI，专为并行 AI agent 工作流设计",
+    "source": "deepseek-flash",
+    "at": "2026-11-04T11:02:40Z"
   }
 }
