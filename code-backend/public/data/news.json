@@ -1,6 +1,82 @@
 {
-  "dataUpdatedAt": "2026-11-05T11:03:48Z",
+  "dataUpdatedAt": "2026-11-05T18:48:11Z",
   "items": [
+    {
+      "title": "开放权重的魔法师：Chris Alexiuk 用开放模型让 AI 变简单",
+      "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
+      "publishedAt": "2026-11-05T16:00:05Z",
+      "source": "NVIDIA",
+      "summary": "NVIDIA 深度学习高级产品研究工程师 Chris Alexiuk 专注让开放大语言模型对开发者更实用。",
+      "id": "e944b7536cec799b63e475c1012dfb78a0dd07ed24b094bea9193f1f204a3f88",
+      "originalTitle": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
+      "translatedAt": "2026-11-05T18:48:11Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
+      "originalVerifiedAt": "2026-11-05T18:48:11Z",
+      "url": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-05T18:48:11Z",
+      "featured": null
+    },
+    {
+      "title": "阿里发布AI向善报告2026：数据中心算力密度两年增近5倍，绿电占比73.6%",
+      "sourceUrl": "https://zhidx.com/p/607791.html",
+      "publishedAt": "2026-11-05T11:58:11Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 杨京丽 编辑 | 李水青 智东西11月5日报道，今日，阿里巴巴发布《阿里巴巴AI向善行动报告2026》。",
+      "id": "364ca4ec097ed89553a5dec6874e5549daa15ece7af1228e1973957b400ece80",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607791.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-05T18:48:11Z",
+      "featured": true
+    },
+    {
+      "title": "280B总参数、14B激活！百度开源文心5.5 Flash Base，拿下同尺寸SOTA",
+      "sourceUrl": "https://zhidx.com/p/607749.html",
+      "publishedAt": "2026-11-05T09:05:08Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 三北 编辑 | 漠影 智东西11月5日报道，今日，百度正式发布并开源 文心5.5 Flash Base（ERNIE-5.5-Flash-Bas",
+      "id": "f22fc7db4010abb4bcadf6467a592548c34c58ba0c4dff1e0ed39f5d7922878a",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607749.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-05T18:48:11Z",
+      "featured": true
+    },
+    {
+      "title": "GPT‑6 Cyber：推进对齐网络安全智能体的前沿",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber",
+      "publishedAt": "2026-11-05T09:00:00Z",
+      "source": "OpenAI",
+      "summary": "推出 GPT‑6 Cyber，OpenAI 的网络安全模型，用于发现可利用漏洞并开发修复方案，训练使其保持在授权范围内。",
+      "id": "14e90e72d3401ddf817f6448fcef8d95a77a43c8c720ccf3b66937d995ee0634",
+      "originalTitle": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "translatedAt": "2026-11-05T18:48:11Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/introducing-gpt-6-cyber",
+      "originalVerifiedAt": "2026-11-05T18:48:11Z",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-05T18:48:11Z",
+      "featured": true
+    },
     {
       "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
       "sourceUrl": "https://www.qbitai.com/2026/11/507787.html",
@@ -38,6 +114,25 @@
       "eventType": "model-review",
       "addedAt": "2026-11-05T11:03:48Z",
       "featured": null
+    },
+    {
+      "title": "GitHub Copilot 现已登陆 Xcode 编码助手",
+      "sourceUrl": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+      "publishedAt": "2026-11-04T19:10:40Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot 已集成到 Xcode 内置编码助手，现处于公开预览阶段。",
+      "id": "d53634b505a78ccb6c4a76061a8fca87561a57c19891134964398be519d8a922",
+      "originalTitle": "GitHub Copilot is now available in Xcode’s coding assistant",
+      "translatedAt": "2026-11-05T18:48:11Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+      "originalVerifiedAt": "2026-11-05T18:48:11Z",
+      "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-05T18:48:11Z",
+      "featured": true
     },
     {
       "title": "英伟达团队下场！国产视频模型开源，硅谷公司上门谈授权",
@@ -6538,6 +6633,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-05T11:03:48Z",
-  "generatedAt": "2026-11-05T11:03:48Z"
+  "version": "2026-11-05T18:48:11Z",
+  "generatedAt": "2026-11-05T18:48:11Z"
 }

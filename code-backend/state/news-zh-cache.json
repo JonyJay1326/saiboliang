@@ -5,36 +5,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
-  "277870ffc8d71544c0465c137654062f6f2bf7e7d7a1ec8af9071c966d86edc3": {
-    "title": "在 OpenAI 扩展 Git",
-    "summary": "OpenAI 如何构建 Pando——一个兼容 Git 的后端，专为 Codex 所实现的开发规模而设计。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "5d33ed0c66ace544e65f6063efa96737fd184e0288033033361ae48877b21fc8": {
-    "title": "推出 Grid Protectors 计划",
-    "summary": "OpenAI 的 Grid Protectors 计划将与公用事业公司合作，帮助未来的计算园区支持电网可靠性并保护消费者电费。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "bca108e4c77bd86b238b884ff1c18e5c63018f84444ba049fc49aa2f4ac03dcf": {
-    "title": "以更高漏洞赏金奖励安全研究者",
-    "summary": "OpenAI 提高安全漏洞赏金奖励，并为独立安全研究者推出报告质量、忠诚度和优先活动奖金。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "0d297090385ad5a7245151aa36b61200b4bbf9fa9e2ae1ab47c6dc913703fe4d": {
-    "title": "筹备下一轮安全冲刺以强化 OpenAI",
-    "summary": "OpenAI 正与 Cathedral Systems 筹备下一轮内部安全冲刺，利用 AI 测试并加强其防御。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "f2ec68b6ee8d48832244704a24148f4e6658c9772da7f915fd94808560945508": {
-    "title": "安全风险评估包含仓库保护状态",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "853e96282fcb2cad76d4e5797568ac503e89b370d755e1c7c3f874447d391392": {
     "title": "全球城市借助 NVIDIA 物理与代理式 AI 构建并扩展 AI 服务",
     "summary": null,
@@ -142,5 +112,65 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-05T11:03:48Z"
+  },
+  "2df2e5114191078ffff8cea0f2d360556d5cbb394a418cbbfb4bc26cb6669001": {
+    "title": "为你的 Muse 赋予声音",
+    "summary": "我们在 Muse 应用中推出语音和表现力头像，为你提供与 Muse 互动的新自然方式。文章《为你的 Muse 赋予声音》首发于 Meta Newsroom。",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "14e90e72d3401ddf817f6448fcef8d95a77a43c8c720ccf3b66937d995ee0634": {
+    "title": "GPT‑6 Cyber：推进对齐网络安全智能体的前沿",
+    "summary": "推出 GPT‑6 Cyber，OpenAI 的网络安全模型，用于发现可利用漏洞并开发修复方案，训练使其保持在授权范围内。",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "27b87d65d3f99406683fa7dda81aab35cf60c186172d77624ee987317ff5f9f1": {
+    "title": "Gemini Omni 1.2 Flash：快速、高性价比，支持更长片段",
+    "summary": "文字“Gemini Introducing Gemini Omni 1.2 Flash”周围环绕着蜂巢、动物对话、鱿鱼和女子走在街上的图像",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "f09d7876c1e95fcaa2b60c323af19ad289d82ef6491e6c110393ed00f6fe0f95": {
+    "title": "Gemini Omni 1.2 Flash：快速、高性价比，支持更长片段",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "ee0727a487e657fdee3ac11274869abd991fb80abaa6d1554259655d8d47ee09": {
+    "title": "Secret scanning 升级检测器，新增 SpaceX 为合作伙伴",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
+    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将想法变为仿真",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "e944b7536cec799b63e475c1012dfb78a0dd07ed24b094bea9193f1f204a3f88": {
+    "title": "开放权重的魔法师：Chris Alexiuk 用开放模型让 AI 变简单",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "86e4d87385b407899816f001f27e717f9eebe1e823d2d2d6c313c43c526da40d": {
+    "title": "让每个字节发挥更多性能：全栈协同设计如何解决 AI 内存挑战",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "c38349f00863334ecd6e87f2e9436cf9d9d214b773d4151cd5bb1140b2016d60": {
+    "title": "《霍格沃茨之遗》在 GeForce NOW 上获得 NVIDIA DLSS 5 魔法升级",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
+  },
+  "850ffbfc56c1fbbd5e042b00bcf138f7251435d7f66c19cddac07683363de9cc": {
+    "title": "Le Chonk 提供大脑。Studio 让它发挥作用。",
+    "summary": "借助 Mistral Studio 和 Le Chonk 对你模型、数据和基础设施的完全控制，更快构建和部署企业智能体、工作流和应用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T18:48:11Z"
   }
 }
