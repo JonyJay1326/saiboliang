@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-11-04T18:40:18Z",
+  "dataUpdatedAt": "2026-11-05T11:03:48Z",
   "items": [
+    {
+      "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+      "sourceUrl": "https://www.qbitai.com/2026/11/507787.html",
+      "publishedAt": "2026-11-05T07:15:13Z",
+      "source": "量子位",
+      "summary": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+      "id": "8c59ee075106aa14820058583d4e2ea6b11988bcd16698df50067f554721299c",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/507787.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-05T11:03:48Z",
+      "featured": true
+    },
+    {
+      "title": "GPT能做动图了！10秒一张，实测“穿帮”有点多",
+      "sourceUrl": "https://zhidx.com/p/607614.html",
+      "publishedAt": "2026-11-05T04:02:43Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 陈骏达 编辑 | 云鹏 OpenAI的图像生成模型，能直出动图了！",
+      "id": "e6de6ee919a71696bc88545b74987f55d6fd9754cc1090309774e7a51b2bf88c",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607614.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-05T11:03:48Z",
+      "featured": null
+    },
     {
       "title": "英伟达团队下场！国产视频模型开源，硅谷公司上门谈授权",
       "sourceUrl": "https://zhidx.com/p/607534.html",
@@ -114,6 +152,25 @@
       "eventType": "model-review",
       "addedAt": "2026-11-04T18:40:18Z",
       "featured": true
+    },
+    {
+      "title": "苹果国行AI抢先一手实测：华米OV玩剩下的功能，苹果能做出什么不同？",
+      "sourceUrl": "https://zhidx.com/p/607107.html",
+      "publishedAt": "2026-11-04T00:32:42Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 程茜 编辑 | 云鹏 迟到了两年的国行版苹果AI真来了！ 虽然早有“阉割版”的预期，但智东西还是迫不及待连夜上手体验了一把。",
+      "id": "89e12747e69da501fbb97f892547524e7b7606cc234576637c213b5db05d6537",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607107.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-05T11:03:48Z",
+      "featured": null
     },
     {
       "title": "Copilot 使用 API 中的 BYOK 与企业自定义模型",
@@ -6481,6 +6538,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-04T18:40:18Z",
-  "generatedAt": "2026-11-04T18:40:18Z"
+  "version": "2026-11-05T11:03:48Z",
+  "generatedAt": "2026-11-05T11:03:48Z"
 }

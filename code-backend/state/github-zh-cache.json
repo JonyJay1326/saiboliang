@@ -144,11 +144,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
   },
-  "KeygraphHQ/shannon": {
-    "text": "Shannon 是面向 Web 应用与 API 的 AI 渗透测试工具。它分析源代码，识别攻击向量，并执行真实利用以在生产前证明漏洞。",
-    "source": "deepseek-flash",
-    "at": "2026-11-02T11:19:40Z"
-  },
   "superdesigndev/treg": {
     "text": "面向 agent 工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
     "source": "deepseek-flash",
@@ -194,14 +189,19 @@
     "source": "deepseek-flash",
     "at": "2026-11-04T18:40:18Z"
   },
-  "MemPalace/mempalace": {
-    "text": "基准测试表现最佳的开源 AI 记忆系统，且免费。",
+  "shiyu-coder/Kronos": {
+    "text": "Kronos：面向金融市场语言的基础模型",
     "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
+    "at": "2026-11-05T11:03:48Z"
   },
-  "QuantumNous/new-api": {
-    "text": "开源 AI 网关。自托管 LLM 网关，兼容 OpenAI、Claude 与 Gemini API，支持模型路由、访问控制、用量追踪与成本核算。",
+  "scenario-labs/skills": {
+    "text": "让任意 AI agent 生成可用于生产的图像、视频、音频和 3D：这些技能可挑选合适模型、在花费前估价，并通过 Scenario MCP 保持角色与品牌一致，另有专家团队驱动 Blender、Maya、ZBrush、Unreal 和 Unity。",
     "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
+    "at": "2026-11-05T11:03:48Z"
+  },
+  "THU-MAIC/OpenMAIC": {
+    "text": "Open Multi-Agent Interactive Classroom——一键获得沉浸式多智能体学习体验",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T11:03:48Z"
   }
 }

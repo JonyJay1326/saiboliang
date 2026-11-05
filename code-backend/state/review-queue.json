@@ -296,18 +296,6 @@
     "createdAt": "2026-10-16T15:23:39Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "golang/go",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Go programming language",
-      "sourceUrl": "https://github.com/golang/go"
-    },
-    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
-    "status": "pending",
-    "createdAt": "2026-10-20T15:40:23Z"
-  },
-  {
     "kind": "news-source",
     "objectId": "anthropic",
     "reason": "Anthropic news list missing or restructured",
@@ -388,18 +376,6 @@
     "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
     "status": "pending",
     "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ruvnet/RuView",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
-      "sourceUrl": "https://github.com/ruvnet/RuView"
-    },
-    "id": "0fadb702a3fe7d042012de26c1ca81c9ee6e15f68a8194797b735c27304da6e6",
-    "status": "pending",
-    "createdAt": "2026-10-29T17:27:20Z"
   },
   {
     "kind": "github-classification",
@@ -616,18 +592,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "FinanceFlash/unvibecode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
-      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
-    },
-    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
-    "status": "pending",
-    "createdAt": "2026-11-04T18:40:18Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "2dust/v2rayN",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -659,18 +623,6 @@
       "sourceUrl": "https://github.com/paperclipai/paperclip"
     },
     "id": "68045d0329774c6004fc13032b0e8972fe26c1e7df1f0e81ab0160dec6db224e",
-    "status": "pending",
-    "createdAt": "2026-11-04T18:40:18Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Kruk2/jasna",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Video restoration tool",
-      "sourceUrl": "https://github.com/Kruk2/jasna"
-    },
-    "id": "e9344bea10ceabbd60157f635ca186b34cc4db41444806b1c2a12c75117af53c",
     "status": "pending",
     "createdAt": "2026-11-04T18:40:18Z"
   },
@@ -709,5 +661,97 @@
     "id": "6b52ec3080139d83222c1c24043ca438acbbd68981619277416dd583e978c118",
     "status": "pending",
     "createdAt": "2026-11-04T18:40:18Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "garrytan/gstack",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "sourceUrl": "https://github.com/garrytan/gstack"
+    },
+    "id": "77ffc29e63f4e8b3b11e82169cf6af881eb2abe69d1e228979c81c2a777f8dff",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "liguobao/ds-harness-remote",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.)",
+      "sourceUrl": "https://github.com/liguobao/ds-harness-remote"
+    },
+    "id": "ec6348b65f15a6481ecd41ec82f4670632a0feb28d3f4c5ca67f3f75232e86f2",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/mxc",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Policy-driven, layered isolation and containment",
+      "sourceUrl": "https://github.com/microsoft/mxc"
+    },
+    "id": "3b35d9982c1457e90f0dac43bdd439115995356aeb3b1a33d1fa6a15af14e268",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "ernie",
+    "reason": "HTTP 404",
+    "evidence": {
+      "url": "https://ernie.baidu.com/blog/zh/posts/index.xml"
+    },
+    "id": "e1070d9f1f8bad6267b61f4b0375122b150bf3f2ac0719b98f7758d737894685",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "c2c7b014228817a3b85f8d8e883f85d69fdef8251ff6f740554c69071b689f0b",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "b47d23e5549777757fd8599cdf1d518bd2d4e44936e8e9419baa0ad2cac76e09",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "b6fd9d3bdee2833dca8f4d3c97e07915fcc19e0a1add5103c63708b0b4147a66",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "量子位"
+    },
+    "id": "2114faebebeb7a06430eae35426fa64ab240883e6ad281a703e9470c6c345dd4",
+    "status": "pending",
+    "createdAt": "2026-11-05T11:03:48Z"
   }
 ]

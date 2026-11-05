@@ -1,10 +1,4 @@
 {
-  "de0a5e46e19ea127afccca5bf7ad76b54d77c3c7f270e8f479f15342cce1abd1": {
-    "title": "用 Grok Bot 为每个团队配备数据科学家",
-    "summary": "Data Bot 是 Grok Bot 中的团队机器人，由数据科学团队训练，让每个团队都能像数据科学家一样查询数据仓库、运行分析并获取答案。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "fc87a45dcfbf03d417250555e1df3237ca0ef7928116e265a011dfff6b14fbc2": {
     "title": "Heimstaden 借助 AI 变革住宅房地产管理",
     "summary": "了解 Heimstaden 如何利用 OpenAI 的 ChatGPT Enterprise 和 Codex 变革物业管理、降低成本，并赋能欧洲各地员工。",
@@ -35,26 +29,8 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
-  "4094d4340f9e66f9e2fcbdf55d52c8459c6b02d6daa5c6c2ae592ebcd92aa22f": {
-    "title": "Qodo 借助 Codex 将上下文引入 AI 代码审查",
-    "summary": "Qodo 将公司知识和编码标准引入 Codex，帮助开发者在创建拉取请求前发现各代码仓库中的 P0 问题。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "945f879ef3a469b4aebe760cf27598de5ac153aec5be30239cc23bf038b35a21": {
-    "title": "OpenAI 任命 Dan Driscoll 为国家安全现代化高级顾问",
-    "summary": "OpenAI 任命 Dan Driscoll，就国家安全现代化、网络韧性和与美国盟友合作中的负责任 AI 提供建议。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "f2ec68b6ee8d48832244704a24148f4e6658c9772da7f915fd94808560945508": {
     "title": "安全风险评估包含仓库保护状态",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "058c405b4196bea2e45e0fd65b32283aadd0bc8796f826507e9085c9ba5f0c48": {
-    "title": "pull_request_target 将于 12 月 2 日默认阻止",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
@@ -119,18 +95,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-04T11:02:40Z"
   },
-  "3120cb53fbc5954ecff0513cc7de91c5144578c63df6d76ddfcda859582a9144": {
-    "title": "Copilot 使用 API 中的 BYOK 与企业自定义模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-04T11:02:40Z"
-  },
-  "130d10d3c1a4b493d9dfd1ed8522c75abdd4e0045e4b09bc29dc44469845d603": {
-    "title": "Dependabot 版本更新支持 Agent Package Manager",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-04T11:02:40Z"
-  },
   "1be4fdd8e6ca80f0ec0127711bf05d7cfcd7194eac7f7e3b9f6a7d04824358c9": {
     "title": "OpenAI 将收购 Pierre Computer Company, Inc.",
     "summary": "OpenAI 将收购 Pierre Computer Company，扩展 Codex 用于构建、理解和审查代码的工具。",
@@ -143,16 +107,40 @@
     "source": "deepseek-flash",
     "at": "2026-11-04T18:40:18Z"
   },
-  "30689b894f03e4c2efb3ae2f394374c53f4b84c1ba2fd81386c1c2d1fdbe14be": {
-    "title": "Together Compiler：面向 AI 推理的持续编译",
-    "summary": "Together Compiler 利用智能体和持久引擎在 24 小时内优化开放模型，随流量变化实现最高 3.7 倍吞吐量提升。",
-    "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
-  },
-  "3e89035fdd0e3c0bf7b755db5d4d55e8700120ca2da8d5b970f5922473d90f62": {
-    "title": "Polymorphic Inference：面向开放模型的自调优推理",
+  "25fa4dd18ec78a48a9233cc009a7e10d7c8c98f49986ed2e5b02c4eebf5890b1": {
+    "title": "为负责任的 AI 基础设施设定新标准",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
+    "at": "2026-11-05T11:03:48Z"
+  },
+  "fbaa86a829ad59fd10c58d013d5956116602b056ae7817da772b6c91267e6908": {
+    "title": "通往 root 的路径减少了一千条",
+    "summary": "OpenAI 构建了一条自主流水线，发现、验证并为 Linux 内核中 948 个本地提权漏洞生成补丁。",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T11:03:48Z"
+  },
+  "295354ff422b0d4db922748e7c3d1bbebb7a9ab588c6d205b09352b92e57d424": {
+    "title": "推出 Images 2.6",
+    "summary": "Images 2.6 在 ChatGPT、Codex 和 API 中带来更快的图像生成、GIF 创建、更精确的编辑和新的 API 控制。",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T11:03:48Z"
+  },
+  "981785a01550309d0739d8f0393613130409c9a98cd0180f1072e2be43156c86": {
+    "title": "DevRev 借助 GPT-6.1 Sol 实现自主自助服务",
+    "summary": "DevRev 使用 GPT-6.1 Sol 驱动 Computer 和 Operator，在企业服务中平衡推理、速度与成本。",
+    "source": "deepseek-flash",
+    "at": "2026-11-05T11:03:48Z"
+  },
+  "f1b2d7334e4861fbba5a98d937d9505ae9dd48a39b0e37ade256a1b775b81cf4": {
+    "title": "CodeQL 2.27.4 提升准确性与查询元数据",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T11:03:48Z"
+  },
+  "d53634b505a78ccb6c4a76061a8fca87561a57c19891134964398be519d8a922": {
+    "title": "GitHub Copilot 现已登陆 Xcode 编码助手",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-05T11:03:48Z"
   }
 }
