@@ -723,13 +723,24 @@
   },
   {
     "kind": "news-source",
-    "objectId": "qbit",
-    "reason": "network error: URLError",
+    "objectId": "alibaba-bailian",
+    "reason": "Alibaba catalog table missing or restructured",
     "evidence": {
-      "url": "https://www.qbitai.com/feed"
+      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models"
     },
-    "id": "ba9cea3be0fc4a7345229ca7e4afe726581544e9c513ba325accbb3efc204573",
+    "id": "e8f0df928dda3f5a9a8d9e1c2d365d1c958c9f149e3cd42e6da71fb3f7cf38a1",
     "status": "pending",
-    "createdAt": "2026-11-05T18:48:11Z"
+    "createdAt": "2026-11-06T11:00:21Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "c2c7b014228817a3b85f8d8e883f85d69fdef8251ff6f740554c69071b689f0b",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "b47d23e5549777757fd8599cdf1d518bd2d4e44936e8e9419baa0ad2cac76e09",
+    "status": "pending",
+    "createdAt": "2026-11-06T11:00:21Z"
   }
 ]

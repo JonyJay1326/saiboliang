@@ -104,11 +104,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
   },
-  "macro-inc/macro": {
-    "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、智能体、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T09:47:01Z"
-  },
   "trymirai/uzu": {
     "text": "面向 AI 模型的高性能推理引擎",
     "source": "deepseek-flash",
@@ -203,5 +198,10 @@
     "text": "Open Multi-Agent Interactive Classroom——一键获得沉浸式多智能体学习体验",
     "source": "deepseek-flash",
     "at": "2026-11-05T11:03:48Z"
+  },
+  "infiniflow/ragflow": {
+    "text": "RAGFlow 是一个面向智能体的数据库：由检索增强生成（RAG）引擎发展而来的上下文基础设施。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
   }
 }

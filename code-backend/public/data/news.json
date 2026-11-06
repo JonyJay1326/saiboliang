@@ -1,6 +1,82 @@
 {
-  "dataUpdatedAt": "2026-11-05T18:48:11Z",
+  "dataUpdatedAt": "2026-11-06T11:00:21Z",
   "items": [
+    {
+      "title": "99.4%登顶全球第一！这个中国AI师承世界冠军",
+      "sourceUrl": "https://www.qbitai.com/2026/11/508107.html",
+      "publishedAt": "2026-11-06T05:01:47Z",
+      "source": "量子位",
+      "summary": "一举刷新「AI安全世界杯」CyberGym世界纪录",
+      "id": "d6fb6d5f94414f1c2d781f61631bbfb3335ef910ddda5bd75818f56f3b238318",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/508107.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-06T11:00:21Z",
+      "featured": true
+    },
+    {
+      "title": "AI短剧门槛降降降！实测即梦短剧工作室：剧本分镜预演一条龙，伙伴计划长期护航",
+      "sourceUrl": "https://www.qbitai.com/2026/11/507972.html",
+      "publishedAt": "2026-11-06T03:20:05Z",
+      "source": "量子位",
+      "summary": "Seedance 2.5 单秒低至0.15元",
+      "id": "acef340f90e4e6c05f72b9b995bc5fa933c0a6b484149ade098214df0b5828af",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/507972.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-06T11:00:21Z",
+      "featured": true
+    },
+    {
+      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
+      "sourceUrl": "https://www.qbitai.com/2026/11/507967.html",
+      "publishedAt": "2026-11-06T02:00:11Z",
+      "source": "量子位",
+      "summary": "11月 5 日，腾讯宣布因 Hy4 调用激增，WorkBuddy 已进行十倍扩容",
+      "id": "e15769ca5c01e8abe4981cf30a8eb10da24ca57d8ed4766865ae4aa5b9633e95",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/507967.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-06T11:00:21Z",
+      "featured": true
+    },
+    {
+      "title": "AMD收购后首秀！李飞飞发布“Atlas极速版”，打开浏览器实时体验世界模型",
+      "sourceUrl": "https://zhidx.com/p/607939.html",
+      "publishedAt": "2026-11-06T01:45:21Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 王涵 编辑 | 云鹏 智东西11月6日报道，刚刚，“AI教母”李飞飞的世界模型团队World Labs发布 Frameboy ",
+      "id": "1a7df05904a73a3e57deb2c2507df2332b6b776fbe3cd2c2e30972fa61eee2d5",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/607939.html",
+      "category": "tool",
+      "eventType": "hands-on",
+      "addedAt": "2026-11-06T11:00:21Z",
+      "featured": true
+    },
     {
       "title": "开放权重的魔法师：Chris Alexiuk 用开放模型让 AI 变简单",
       "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
@@ -37,7 +113,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-05T18:48:11Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "280B总参数、14B激活！百度开源文心5.5 Flash Base，拿下同尺寸SOTA",
@@ -6633,6 +6709,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-05T18:48:11Z",
-  "generatedAt": "2026-11-05T18:48:11Z"
+  "version": "2026-11-06T11:00:21Z",
+  "generatedAt": "2026-11-06T11:00:21Z"
 }

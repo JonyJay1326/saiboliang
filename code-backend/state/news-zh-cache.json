@@ -1,37 +1,7 @@
 {
-  "fc87a45dcfbf03d417250555e1df3237ca0ef7928116e265a011dfff6b14fbc2": {
-    "title": "Heimstaden 借助 AI 变革住宅房地产管理",
-    "summary": "了解 Heimstaden 如何利用 OpenAI 的 ChatGPT Enterprise 和 Codex 变革物业管理、降低成本，并赋能欧洲各地员工。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "853e96282fcb2cad76d4e5797568ac503e89b370d755e1c7c3f874447d391392": {
-    "title": "全球城市借助 NVIDIA 物理与代理式 AI 构建并扩展 AI 服务",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "9bd4399ba924a984ce4314ca74d3c4fb01100f2d6a50c2d467bc5d8e6b642c65": {
     "title": "使用 GitHub REST API 查询资源的成本中心",
     "summary": "现在可以使用 GitHub REST API 查找用户、组织、仓库或企业团队所属的成本中心。此前必须列出所有成本中心……",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "1ebb6cad83f637e5e4ba2eac0106d300b02bab7a07a09d1d8806326599f485a4": {
-    "title": "CodeQL 2.27.3 新增 Python 3.15 特性和 JSON 数据扩展",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "1784e6027394947ffa72112177af5dbbf3def5c8f94cae8f135e0b403d75c908": {
-    "title": "Dependabot 现已支持 Python 3.15",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "7b6b652cf9eb8d917caf57ec0a8bbf3032d4760a59702ef170d7d47466d84cb4": {
-    "title": "GitHub Desktop 新增短期身份验证令牌",
-    "summary": "登录 GitHub Desktop 3.6.10 或更高版本时，符合条件的账户现在可以使用短期、自动刷新的身份验证令牌。短期访问令牌可缩短泄露令牌的……",
     "source": "deepseek-flash",
     "at": "2026-11-03T18:28:17Z"
   },
@@ -41,27 +11,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T18:28:17Z"
   },
-  "708c02545a51f43d2676f69e578a0fc2ef9dbf51f38a278ee7565e3b8ba4c90b": {
-    "title": "你应该使用哪个 MiniMax H3 模型？",
-    "summary": "三个 MiniMax H3 模型，三种价格。以下是 H3 Highspeed、H3 Lite 和 H3 的适用场景。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
   "25493a43cba550c7fe81484acae2a066a0e92a0ab7396a9764a18c9bb949ba12": {
     "title": "加速物理世界的工程工作",
     "summary": "了解 ChatGPT 和 Codex 如何帮助工程师加速 CAD、PCB 设计、仿真等物理世界工作流程。",
-    "source": "deepseek-flash",
-    "at": "2026-11-04T11:02:40Z"
-  },
-  "34e7d62615202d0de65fe802c6c6ca14703e67df603d58e71ec501e575fe9eda": {
-    "title": "Cisco 如何借助 OpenAI 以机器速度防御",
-    "summary": "Cisco 将网络智能与 OpenAI 模型结合，增强企业安全。了解其如何构建更具适应性的防御。",
-    "source": "deepseek-flash",
-    "at": "2026-11-04T11:02:40Z"
-  },
-  "019edb616369c3322f4c44a55e04677f77bd523e681eb1a6308bc4ebad0c1377": {
-    "title": "OpenAI 任命 Jill Hazelbaker 为首席企业事务官",
-    "summary": "Jill Hazelbaker 将加入 OpenAI 担任首席企业事务官，负责公司全球传播与企业定位。",
     "source": "deepseek-flash",
     "at": "2026-11-04T11:02:40Z"
   },
@@ -107,21 +59,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-05T11:03:48Z"
   },
-  "d53634b505a78ccb6c4a76061a8fca87561a57c19891134964398be519d8a922": {
-    "title": "GitHub Copilot 现已登陆 Xcode 编码助手",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
-  },
   "2df2e5114191078ffff8cea0f2d360556d5cbb394a418cbbfb4bc26cb6669001": {
     "title": "为你的 Muse 赋予声音",
     "summary": "我们在 Muse 应用中推出语音和表现力头像，为你提供与 Muse 互动的新自然方式。文章《为你的 Muse 赋予声音》首发于 Meta Newsroom。",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "14e90e72d3401ddf817f6448fcef8d95a77a43c8c720ccf3b66937d995ee0634": {
-    "title": "GPT‑6 Cyber：推进对齐网络安全智能体的前沿",
-    "summary": "推出 GPT‑6 Cyber，OpenAI 的网络安全模型，用于发现可利用漏洞并开发修复方案，训练使其保持在授权范围内。",
     "source": "deepseek-flash",
     "at": "2026-11-05T18:48:11Z"
   },
@@ -149,12 +89,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-05T18:48:11Z"
   },
-  "e944b7536cec799b63e475c1012dfb78a0dd07ed24b094bea9193f1f204a3f88": {
-    "title": "开放权重的魔法师：Chris Alexiuk 用开放模型让 AI 变简单",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
   "86e4d87385b407899816f001f27e717f9eebe1e823d2d2d6c313c43c526da40d": {
     "title": "让每个字节发挥更多性能：全栈协同设计如何解决 AI 内存挑战",
     "summary": null,
@@ -172,5 +106,83 @@
     "summary": "借助 Mistral Studio 和 Le Chonk 对你模型、数据和基础设施的完全控制，更快构建和部署企业智能体、工作流和应用。",
     "source": "deepseek-flash",
     "at": "2026-11-05T18:48:11Z"
+  },
+  "616c68177b707eae60eb2b7e618a86105e3926c540e149caa916945e5a2342dd": {
+    "title": "澳大利亚高校正在培养AI原生毕业生",
+    "summary": "澳大利亚高校扩大ChatGPT使用范围，将AI引入教学，为学生进入AI赋能职场做准备。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "bbd492caba72ca544b8bac3280d7afac87555fa4b30c0b12388bcfae24236fa4": {
+    "title": "Cult.fit借助Codex构建运营能力",
+    "summary": "Cult.fit正使用Codex帮助各职能团队构建工具、加快速度并改变工作方式。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "db9792e954d447010915e606e8fdb998d92778fb38af9f5ff78336a8db2d0092": {
+    "title": "Merge借助OpenAI技术构建产品与业务工具",
+    "summary": "Merge使用GPT-6 Astra、ChatGPT和Codex审查产品代码并支持营销，团队还用AI规划高管晚宴和准备销售更新。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "2d1d326185a62641bed05bf7f26ce7de70018d67127b0626b6b2080acbead4c8": {
+    "title": "Flipsnack通过转化优化提升产品注册量",
+    "summary": "Flipsnack将ChatGPT Ads广告活动聚焦于引导用户试用产品，在提升注册量的同时降低单次注册成本。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "a8e215d1c3fca63aee0ffd81acf9a149c8070d7929a87491384cb6b33805423d": {
+    "title": "Franklin Templeton利用OpenAI支持投资研究",
+    "summary": "Franklin Templeton从股票研究入手开发AI工作流，帮助投资组合经理比较研究观点并审视投资风险。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "525555dfe497cbaa420f0c38fa6fb0e1c72ee49788db23aba7f9e3d77146b4ec": {
+    "title": "使用指标API新增代码审查详情与已处理率",
+    "summary": "企业和组织仓库级Copilot使用指标报告现可显示Copilot代码审查反馈的处理情况，新增copilot_code_review对象。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "0778fb85d9153ba6e8af785f96fe14794d87e7be158be2998ba3e201270b0fa2": {
+    "title": "使用指标API标记遥测与版本缺口",
+    "summary": "Copilot使用指标API现可显示哪些用户缺少客户端遥测，或所用IDE及扩展版本低于使用指标最低要求。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "cc9dd90ef8beb10b05282525ab6aa3c4e8836818701529d3831f0896be2ac9e1": {
+    "title": "新拉取请求概览页进入公开预览",
+    "summary": "在较长的拉取请求中，查看阻碍项往往需要滚动越过大量评论和时间线事件才能到达合并框。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "b1feafc8620ed538b62a3022f9da84a3ead4c4482c1e636ed633b769ccf84d6b": {
+    "title": "Vera兼顾最高吞吐量与最快智能体",
+    "summary": "AI智能体不仅生成答案，还会搜索信息、查询数据库、编写和测试代码并采取行动，每一步都依赖CPU。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "3399c882f4124f4267a488679920791d454afd027df9ded077dbfc863e403f9c": {
+    "title": "别再一次性做智能体项目，应将其作为持续纪律运营",
+    "summary": "AI必须作为持续的业务纪律来选择、架构和管理，而非一系列孤立项目。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "fd007c3aeb0ce2e161e634c52a9d19f9db117ed29ddbba90d2f867d5d9e2a287": {
+    "title": "在Azure芯片上设计Azure芯片：Cobalt 200上的EDA工作负载",
+    "summary": "了解Microsoft如何借助Azure Cobalt 200虚拟机加速电子设计自动化工作负载，并查看早期性能结果。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "6ea64dab9955b6efd6a804219cee2b67a3e9a029c9c620c0785c915116a7591d": {
+    "title": "预测并检测故障：Azure如何增强关键任务工作负载可靠性",
+    "summary": "Azure故障预测与检测（AFPD）通过预测硬件故障、迁移符合条件的工作负载并在需要时通知客户来减少中断。",
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
+  },
+  "c30b322513faf4e64f8b5c698e9bf96c5f0cfe8de586c0353a419bcda52ea53e": {
+    "title": "在Cursor中构建实时应用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-06T11:00:21Z"
   }
 }
