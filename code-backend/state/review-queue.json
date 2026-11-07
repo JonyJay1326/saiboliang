@@ -144,17 +144,6 @@
     "createdAt": "2026-09-25T06:59:08Z"
   },
   {
-    "kind": "plans",
-    "objectId": "opencode-go-plan",
-    "reason": "plan tier pattern not found: Go",
-    "evidence": {
-      "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE"
-    },
-    "id": "e35ff889041cbfb65e542ae3e6120a6278285c0d9078664fb607b2932427ddec",
-    "status": "pending",
-    "createdAt": "2026-09-29T09:55:24Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "NationalSecurityAgency/ghidra",
     "reason": "AI applicability uncertain",
@@ -343,18 +332,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "JetBrains/thinkrail",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
-      "sourceUrl": "https://github.com/JetBrains/thinkrail"
-    },
-    "id": "b4ec657a365ba87fe32e0f22351ed2785daf2de9e5940764226ce69af48633c7",
-    "status": "pending",
-    "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/DeepTutor",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -496,18 +473,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "M-Abozaid/esp32-c3-adblock",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
-      "sourceUrl": "https://github.com/M-Abozaid/esp32-c3-adblock"
-    },
-    "id": "aecb6d87d3351c845f3bfc847252c99da66c87e32b15a58d737cc31eed2578c3",
-    "status": "pending",
-    "createdAt": "2026-11-01T17:09:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "morluto/rea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -517,18 +482,6 @@
     "id": "5d4f1cc349fa4b60489ebc2190d517c552dfa4dcb270a2f9de448138c7fe8654",
     "status": "pending",
     "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ghostty-org/ghostty",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.",
-      "sourceUrl": "https://github.com/ghostty-org/ghostty"
-    },
-    "id": "18432ef09efe7bf98f2be7f8059a1995e8d4f8401c53e1076e55323b084bcf03",
-    "status": "pending",
-    "createdAt": "2026-11-03T10:58:10Z"
   },
   {
     "kind": "github-classification",
@@ -688,18 +641,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
-    "status": "pending",
-    "createdAt": "2026-11-05T11:03:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "microsoft/mxc",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -742,5 +683,159 @@
     "id": "b47d23e5549777757fd8599cdf1d518bd2d4e44936e8e9419baa0ad2cac76e09",
     "status": "pending",
     "createdAt": "2026-11-06T11:00:21Z"
+  },
+  {
+    "kind": "plans",
+    "objectId": "opencode-go-plan",
+    "reason": "official evidence redirected",
+    "evidence": {
+      "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE"
+    },
+    "id": "0396cea87e3de940187b187b6f87108e98582dd40760177a037527e6da9ba1f1",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "prometheus/prometheus",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Prometheus monitoring system and time series database.",
+      "sourceUrl": "https://github.com/prometheus/prometheus"
+    },
+    "id": "d47507789a321616560ff981e8fb84ea9f4cc37ee064fc0f3ee0e43be9989e58",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "golang/go",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Go programming language",
+      "sourceUrl": "https://github.com/golang/go"
+    },
+    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "kubernetes/kubernetes",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Production-Grade Container Scheduling and Management",
+      "sourceUrl": "https://github.com/kubernetes/kubernetes"
+    },
+    "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "godotengine/godot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
+      "sourceUrl": "https://github.com/godotengine/godot"
+    },
+    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "karpathy/micrograd",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A tiny scalar-valued autograd engine and a neural net library on top of it with PyTorch-like API",
+      "sourceUrl": "https://github.com/karpathy/micrograd"
+    },
+    "id": "b018d1edf849287df53ce95b6636f1c6ee6bfce05de7b48bd529989a103e629c",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FinanceFlash/unvibecode",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
+      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
+    },
+    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "itsfatduck/optimizerDuck",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
+      "sourceUrl": "https://github.com/itsfatduck/optimizerDuck"
+    },
+    "id": "cc0aa06ca0896106c713c4dc758464c710067b940888a18b0b726d12d74b6b76",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "astral-sh/ruff",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "sourceUrl": "https://github.com/astral-sh/ruff"
+    },
+    "id": "b29f6c310ea2405edecc11e7e423b1462a245ce64b27e107d45cb8e7c34abe6e",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "janhq/jan",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer.",
+      "sourceUrl": "https://github.com/janhq/jan"
+    },
+    "id": "5ab281a9abdcb5ab1fa378bdeb18738625feb037765cae32569dbebfc273205e",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "symfony/symfony",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The Symfony PHP framework",
+      "sourceUrl": "https://github.com/symfony/symfony"
+    },
+    "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "fastapi/fastapi",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "sourceUrl": "https://github.com/fastapi/fastapi"
+    },
+    "id": "dfc65ae20f33304bd26304c6e7a28cc826d12fa36d96f0685186fe6584986a8d",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "f84b98b49b609e76bb014c669bbe5cbeeba47b900cc139115d259e8eaf8af465",
+    "reason": "invalid feed item: invalid news title",
+    "evidence": {
+      "source": "量子位"
+    },
+    "id": "1af03c271315a32f1f5eca226fe63d3f4703595f6652a95c67b1dc7e0933b986",
+    "status": "pending",
+    "createdAt": "2026-11-07T10:21:20Z"
   }
 ]

@@ -1,55 +1,13 @@
 {
-  "9bd4399ba924a984ce4314ca74d3c4fb01100f2d6a50c2d467bc5d8e6b642c65": {
-    "title": "使用 GitHub REST API 查询资源的成本中心",
-    "summary": "现在可以使用 GitHub REST API 查找用户、组织、仓库或企业团队所属的成本中心。此前必须列出所有成本中心……",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "55e43bcf2392574765dff7406b7f6da0287e451a9ee242c5d1f28b451b9ec90e": {
-    "title": "AI 正在改变半导体晶圆厂的工作方式，工程师因此行动更快",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
-  "25493a43cba550c7fe81484acae2a066a0e92a0ab7396a9764a18c9bb949ba12": {
-    "title": "加速物理世界的工程工作",
-    "summary": "了解 ChatGPT 和 Codex 如何帮助工程师加速 CAD、PCB 设计、仿真等物理世界工作流程。",
-    "source": "deepseek-flash",
-    "at": "2026-11-04T11:02:40Z"
-  },
   "1be4fdd8e6ca80f0ec0127711bf05d7cfcd7194eac7f7e3b9f6a7d04824358c9": {
     "title": "OpenAI 将收购 Pierre Computer Company, Inc.",
     "summary": "OpenAI 将收购 Pierre Computer Company，扩展 Codex 用于构建、理解和审查代码的工具。",
     "source": "deepseek-flash",
     "at": "2026-11-04T18:40:18Z"
   },
-  "a3433e936d2c04bfa7722c64f05b5efdfdc6024634f8a182254f80d5e66c1036": {
-    "title": "Daybreak Red 现已在 AWS GovCloud（美国东部）上线",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
-  },
   "25fa4dd18ec78a48a9233cc009a7e10d7c8c98f49986ed2e5b02c4eebf5890b1": {
     "title": "为负责任的 AI 基础设施设定新标准",
     "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
-  },
-  "fbaa86a829ad59fd10c58d013d5956116602b056ae7817da772b6c91267e6908": {
-    "title": "通往 root 的路径减少了一千条",
-    "summary": "OpenAI 构建了一条自主流水线，发现、验证并为 Linux 内核中 948 个本地提权漏洞生成补丁。",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
-  },
-  "295354ff422b0d4db922748e7c3d1bbebb7a9ab588c6d205b09352b92e57d424": {
-    "title": "推出 Images 2.6",
-    "summary": "Images 2.6 在 ChatGPT、Codex 和 API 中带来更快的图像生成、GIF 创建、更精确的编辑和新的 API 控制。",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
-  },
-  "981785a01550309d0739d8f0393613130409c9a98cd0180f1072e2be43156c86": {
-    "title": "DevRev 借助 GPT-6.1 Sol 实现自主自助服务",
-    "summary": "DevRev 使用 GPT-6.1 Sol 驱动 Computer 和 Operator，在企业服务中平衡推理、速度与成本。",
     "source": "deepseek-flash",
     "at": "2026-11-05T11:03:48Z"
   },
@@ -161,18 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-06T11:00:21Z"
   },
-  "3399c882f4124f4267a488679920791d454afd027df9ded077dbfc863e403f9c": {
-    "title": "别再一次性做智能体项目，应将其作为持续纪律运营",
-    "summary": "AI必须作为持续的业务纪律来选择、架构和管理，而非一系列孤立项目。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
-  "fd007c3aeb0ce2e161e634c52a9d19f9db117ed29ddbba90d2f867d5d9e2a287": {
-    "title": "在Azure芯片上设计Azure芯片：Cobalt 200上的EDA工作负载",
-    "summary": "了解Microsoft如何借助Azure Cobalt 200虚拟机加速电子设计自动化工作负载，并查看早期性能结果。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
   "6ea64dab9955b6efd6a804219cee2b67a3e9a029c9c620c0785c915116a7591d": {
     "title": "预测并检测故障：Azure如何增强关键任务工作负载可靠性",
     "summary": "Azure故障预测与检测（AFPD）通过预测硬件故障、迁移符合条件的工作负载并在需要时通知客户来减少中断。",
@@ -184,5 +130,65 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-06T11:00:21Z"
+  },
+  "7d15d35372241976dbc453580900337cf419ff344960f7fae94bef6d436f9296": {
+    "title": "为你量身设计 Muse App",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "a0a44ed09dc9a1089b4e099f4e0fbf8e71ea906b8e386a1df3e114e9f9678292": {
+    "title": "与 Hacktron 合作寻找 OpenAI 系统漏洞",
+    "summary": "OpenAI 正与 Hacktron 合作寻找漏洞、测试与第三方服务的连接，并借助前沿 AI 加强防御。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "5f721228af3682c2417b4131d4680ee3211f1024fcf682ecae1568fe5c5140e2": {
+    "title": "衡量 AI 智能体处理日常湿实验室科学的能力",
+    "summary": "OpenAI 推出 BioBasicsBench，一个包含 100 项任务的基准，用于衡量 AI 智能体解读原始实验数据和处理日常湿实验室科学的能力。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "cc9249299f5d778e839bcc697ce5d58f627235206b0cd7383770c822e176c440": {
+    "title": "Copilot 代码审查：API 管理与审查概览更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "a5fcc1255202f357d721641e14a438a487b178740b2df534f64e2f99a16d877e": {
+    "title": "Copilot 影响仪表板新增聊天与 VS Code 智能体使用数据",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "353c4d26111c8c919ddfe4871dbe069892efb6d3dc4f5f1bfa169e89c875a16d": {
+    "title": "GitHub Copilot 每周发布——11 月 2 日",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "2b1caf305a698efd8ff3b09df21c0581aa4c683cdc38d690f22510e74f7283bd": {
+    "title": "Slack 和 Teams 中的 @GitHub 正式可用及更多更新",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "47b292a5d1f7f3dd3e0fcef7a250899d3ab02c10d1f43b957999f334ea6a4e31": {
+    "title": "NVIDIA 开源工具如何帮助研究人员构建下一代 6G 网络",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "c9e260814e66b368a0bcd23054cc82fd41c465e84fc7c001aa9cb13f61373a44": {
+    "title": "Cursor 智能体语音聊天",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "4812c17f2de2ba2daed9faf8a72db4bbdbf8c0c17790d91fa7c12d7ff4481656": {
+    "title": "OpenRouter 推出全新 Auto 与 Auto Code 路由器",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
   }
 }

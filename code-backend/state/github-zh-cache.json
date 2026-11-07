@@ -49,18 +49,8 @@
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
   },
-  "LaurieWired/GhidraMCP": {
-    "text": "Ghidra 的 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-10-25T08:30:30Z"
-  },
   "multica-ai/andrej-karpathy-skills": {
     "text": "单个 CLAUDE.md 文件，用于改进 Claude Code 行为，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。",
-    "source": "deepseek-flash",
-    "at": "2026-10-25T14:57:55Z"
-  },
-  "TauricResearch/TradingAgents": {
-    "text": "TradingAgents：多智能体 LLM 金融交易框架",
     "source": "deepseek-flash",
     "at": "2026-10-25T14:57:55Z"
   },
@@ -121,11 +111,6 @@
   },
   "CopilotKit/OpenBot": {
     "text": "开源 AI 同事，各自拥有独立计算机：浏览器、文件与工具，每个动作执行前先决策、执行后记录。可接入任意 AG-UI agent。",
-    "source": "deepseek-flash",
-    "at": "2026-10-30T17:02:06Z"
-  },
-  "Nasiko-Labs/nasiko": {
-    "text": "AI Agents 的开放运行时",
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
@@ -203,5 +188,30 @@
     "text": "RAGFlow 是一个面向智能体的数据库：由检索增强生成（RAG）引擎发展而来的上下文基础设施。",
     "source": "deepseek-flash",
     "at": "2026-11-06T11:00:21Z"
+  },
+  "NVIDIA/auto-ontology": {
+    "text": "Auto Ontology 是一个 Python 框架，用于在数据之上构建基于图的语义推理层，支持确定性查询生成、更好的上下文检索，并为 LLM 与 agent 工作流提供更可解释的 AI。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "ConardLi/garden-skills": {
+    "text": "ConardLi 的开源 Skills 集合，包含网页设计、知识检索、图像生成等。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "can1357/oh-my-pi": {
+    "text": "⌥ 内置 IDE 的编码 agent，由 Stencil Labs 构建。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "metadist/synaplan": {
+    "text": "掌控流程：一个开源 AI 平台，统一管理你的知识、模型与渠道——web、WhatsApp、email、Outlook、Nextcloud 与 ownCloud。本地与云端模型并行，每条回答均标注成本。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
+  },
+  "JetBrains/thinkrail": {
+    "text": "ThinkRail 是一款 agentic IDE，使用越多越好用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T10:21:20Z"
   }
 }
