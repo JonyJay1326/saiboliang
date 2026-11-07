@@ -1,17 +1,17 @@
 {
-  "cc9249299f5d778e839bcc697ce5d58f627235206b0cd7383770c822e176c440": {
-    "summary": "可通过 REST 和 GraphQL API 管理 Copilot 代码审查设置，覆盖企业策略到单个仓库。",
+  "a64346d6b971f202146e6bbcb7957eb18f2733a7696ba46481fd3e749e526392": {
+    "summary": "腾讯发布Qwen3.8-27B-DSpine-b16，2B参数文本生成模型，可在Hugging Face下载运行。",
     "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
+    "at": "2026-11-07T16:52:36Z"
   },
-  "a5fcc1255202f357d721641e14a438a487b178740b2df534f64e2f99a16d877e": {
-    "summary": "Copilot 影响仪表板的智能体采用图表新增 Copilot Chat 与 VS Code 智能体窗口数据。",
+  "c9e260814e66b368a0bcd23054cc82fd41c465e84fc7c001aa9cb13f61373a44": {
+    "summary": "Cursor支持在桌面、网页和iOS上与智能体进行实时语音通话。",
     "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
+    "at": "2026-11-07T16:52:36Z"
   },
-  "4812c17f2de2ba2daed9faf8a72db4bbdbf8c0c17790d91fa7c12d7ff4481656": {
-    "summary": "OpenRouter 推出全新的 Auto 与 Auto Code 路由器。",
+  "c30b322513faf4e64f8b5c698e9bf96c5f0cfe8de586c0353a419bcda52ea53e": {
+    "summary": "Cursor可在其中直接构建部署网页应用，云端智能体负责托管、数据库、认证和部署。",
     "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
+    "at": "2026-11-07T16:52:36Z"
   }
 }

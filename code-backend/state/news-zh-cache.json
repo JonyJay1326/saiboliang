@@ -1,10 +1,4 @@
 {
-  "1be4fdd8e6ca80f0ec0127711bf05d7cfcd7194eac7f7e3b9f6a7d04824358c9": {
-    "title": "OpenAI 将收购 Pierre Computer Company, Inc.",
-    "summary": "OpenAI 将收购 Pierre Computer Company，扩展 Codex 用于构建、理解和审查代码的工具。",
-    "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
-  },
   "25fa4dd18ec78a48a9233cc009a7e10d7c8c98f49986ed2e5b02c4eebf5890b1": {
     "title": "为负责任的 AI 基础设施设定新标准",
     "summary": null,
@@ -119,12 +113,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-06T11:00:21Z"
   },
-  "6ea64dab9955b6efd6a804219cee2b67a3e9a029c9c620c0785c915116a7591d": {
-    "title": "预测并检测故障：Azure如何增强关键任务工作负载可靠性",
-    "summary": "Azure故障预测与检测（AFPD）通过预测硬件故障、迁移符合条件的工作负载并在需要时通知客户来减少中断。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
   "c30b322513faf4e64f8b5c698e9bf96c5f0cfe8de586c0353a419bcda52ea53e": {
     "title": "在Cursor中构建实时应用",
     "summary": null,
@@ -140,24 +128,6 @@
   "a0a44ed09dc9a1089b4e099f4e0fbf8e71ea906b8e386a1df3e114e9f9678292": {
     "title": "与 Hacktron 合作寻找 OpenAI 系统漏洞",
     "summary": "OpenAI 正与 Hacktron 合作寻找漏洞、测试与第三方服务的连接，并借助前沿 AI 加强防御。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "5f721228af3682c2417b4131d4680ee3211f1024fcf682ecae1568fe5c5140e2": {
-    "title": "衡量 AI 智能体处理日常湿实验室科学的能力",
-    "summary": "OpenAI 推出 BioBasicsBench，一个包含 100 项任务的基准，用于衡量 AI 智能体解读原始实验数据和处理日常湿实验室科学的能力。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "cc9249299f5d778e839bcc697ce5d58f627235206b0cd7383770c822e176c440": {
-    "title": "Copilot 代码审查：API 管理与审查概览更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "a5fcc1255202f357d721641e14a438a487b178740b2df534f64e2f99a16d877e": {
-    "title": "Copilot 影响仪表板新增聊天与 VS Code 智能体使用数据",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
   },
@@ -181,12 +151,6 @@
   },
   "c9e260814e66b368a0bcd23054cc82fd41c465e84fc7c001aa9cb13f61373a44": {
     "title": "Cursor 智能体语音聊天",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "4812c17f2de2ba2daed9faf8a72db4bbdbf8c0c17790d91fa7c12d7ff4481656": {
-    "title": "OpenRouter 推出全新 Auto 与 Auto Code 路由器",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"

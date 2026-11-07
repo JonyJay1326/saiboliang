@@ -401,18 +401,6 @@
     "createdAt": "2026-10-31T16:08:43Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "withmarbleapp/os-taxonomy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
-    },
-    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
-    "status": "pending",
-    "createdAt": "2026-10-31T16:08:43Z"
-  },
-  {
     "kind": "news-item",
     "objectId": "e79b238687258d4b6a054575e839f677d3371e6315c4816976da53601d2adb21",
     "reason": "invalid feed item: unexpected news host",
@@ -461,18 +449,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "tester-army/e2e",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Next generation e2e testing framework for web and mobile apps.",
-      "sourceUrl": "https://github.com/tester-army/e2e"
-    },
-    "id": "bc104944c3bcf2fcb7a9cea8f51a9e93bc3631581656a34d535810ae3d4efb8b",
-    "status": "pending",
-    "createdAt": "2026-11-01T17:09:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "morluto/rea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -506,18 +482,6 @@
     "id": "a7e29e0f37e5db40aea6d4a8d463d93add5ae6462b4da1049a241465dec5acbb",
     "status": "pending",
     "createdAt": "2026-11-03T10:58:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "HunYiSage/dsh-purge",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
-      "sourceUrl": "https://github.com/HunYiSage/dsh-purge"
-    },
-    "id": "b0c9799751c02ea1fdf43f4631dffb2c27802f4b5d3889ab28c84fbbbae1f024",
-    "status": "pending",
-    "createdAt": "2026-11-03T18:28:17Z"
   },
   {
     "kind": "github-classification",
@@ -636,18 +600,6 @@
       "sourceUrl": "https://github.com/liguobao/ds-harness-remote"
     },
     "id": "ec6348b65f15a6481ecd41ec82f4670632a0feb28d3f4c5ca67f3f75232e86f2",
-    "status": "pending",
-    "createdAt": "2026-11-05T11:03:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/mxc",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Policy-driven, layered isolation and containment",
-      "sourceUrl": "https://github.com/microsoft/mxc"
-    },
-    "id": "3b35d9982c1457e90f0dac43bdd439115995356aeb3b1a33d1fa6a15af14e268",
     "status": "pending",
     "createdAt": "2026-11-05T11:03:48Z"
   },
@@ -793,18 +745,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "janhq/jan",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer.",
-      "sourceUrl": "https://github.com/janhq/jan"
-    },
-    "id": "5ab281a9abdcb5ab1fa378bdeb18738625feb037765cae32569dbebfc273205e",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "symfony/symfony",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -837,5 +777,341 @@
     "id": "1af03c271315a32f1f5eca226fe63d3f4703595f6652a95c67b1dc7e0933b986",
     "status": "pending",
     "createdAt": "2026-11-07T10:21:20Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tldraw/tldraw",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build infinite canvas apps in React with the tldraw SDK. World's best, top-most agent recommended #1 five star SDK.",
+      "sourceUrl": "https://github.com/tldraw/tldraw"
+    },
+    "id": "bf8ec34537757ba0ed0b99391c972254e27d73871f3c25e692a739399df1771e",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "github/docs",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source repo for docs.github.com",
+      "sourceUrl": "https://github.com/github/docs"
+    },
+    "id": "8778b16d84d699ba8501b928920e357f7f478253fff329ae215a298c5085251e",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "pandas-dev/pandas",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
+      "sourceUrl": "https://github.com/pandas-dev/pandas"
+    },
+    "id": "531eca2dfdea5c79f8579a3f738d47a84ab79bf44d3e349d7faac26fe01685d2",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/TypeScript",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+      "sourceUrl": "https://github.com/microsoft/TypeScript"
+    },
+    "id": "5321ce6d148f76c616144f6e54027374b86f00f804cd2a5d5a83a2f698480925",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Tianyu199509/DeskBox",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
+      "sourceUrl": "https://github.com/Tianyu199509/DeskBox"
+    },
+    "id": "8401b834e8d8ae5bba31d0980e591e3be0e1e591ec8d71f460296342bb67ede7",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "k1tbyte/Wand-Enhancer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
+      "sourceUrl": "https://github.com/k1tbyte/Wand-Enhancer"
+    },
+    "id": "e0e111499b46265bf24a30216349e8a3ed5245b1f3e06b8dbf3a79b42f795bca",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "microsoft/playwright",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",
+      "sourceUrl": "https://github.com/microsoft/playwright"
+    },
+    "id": "2119c5b25ff95142a30faadfb1d020637f10af62190c243b236019db7dcd4850",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "docker/compose",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Define and run multi-container applications with Docker",
+      "sourceUrl": "https://github.com/docker/compose"
+    },
+    "id": "76a0dc1e1d796534131c55d84cfb340dd95cf71bdbf741540b72e0f99e81da7f",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gitleaks/gitleaks",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find secrets with Gitleaks 🔑",
+      "sourceUrl": "https://github.com/gitleaks/gitleaks"
+    },
+    "id": "9ce077a47a6d978fb237d14f48b62047b6b0bc91427b25f06c4190f24fb85371",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gin-gonic/gin",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for building REST APIs, web applications, and microservices.",
+      "sourceUrl": "https://github.com/gin-gonic/gin"
+    },
+    "id": "ea0b284c7b53fabe5931bbeeef48932df47bba2eb28a3aa29b8729d416c84521",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aquasecurity/trivy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+      "sourceUrl": "https://github.com/aquasecurity/trivy"
+    },
+    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "electron/electron",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+      "sourceUrl": "https://github.com/electron/electron"
+    },
+    "id": "39fc65863c1d7aeef5ffe9be5e70611e003e2eb7e714e1f3a3499b90fa193c86",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "mg-chao/snow-apps",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.",
+      "sourceUrl": "https://github.com/mg-chao/snow-apps"
+    },
+    "id": "f340a5eadd8082e0162982bd5e423cb8029ef26fae939cc8246cd3784586c460",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "shadps4-emu/shadPS4",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
+      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
+    },
+    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jrouwe/JoltPhysics",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A multi core friendly rigid body physics and collision detection library. Written in C++. Suitable for games and VR applications. Used by Horizon Forbidden West and Death Stranding 2.",
+      "sourceUrl": "https://github.com/jrouwe/JoltPhysics"
+    },
+    "id": "d1df2a039d23cc694cf8ebcb780b700e77d33ff7f7a3556f782b44b9191ba3e6",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Minglink/dsh-infinite-gen-5",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "DeepSeek v4.1 flash 最强逆向工具（无限五代） 求 Star 收藏 ⭐欢迎大家提交项目的改进",
+      "sourceUrl": "https://github.com/Minglink/dsh-infinite-gen-5"
+    },
+    "id": "e52811c85ec1cb5c935d34e5fddfd039f086fbf27dc9f9c695da0d17aace642c",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algorithm-visualizer/algorithm-visualizer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🎆Interactive Online Platform that Visualizes Algorithms from Code",
+      "sourceUrl": "https://github.com/algorithm-visualizer/algorithm-visualizer"
+    },
+    "id": "84638cd79787334b7b045729ce6ef25e2746d6648bcf4fabcccb76dce634e86e",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "icsharpcode/ILSpy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": ".NET Decompiler with support for PDB generation, ReadyToRun, Metadata (&more) - cross-platform!",
+      "sourceUrl": "https://github.com/icsharpcode/ILSpy"
+    },
+    "id": "232558e96a99d8857227107f0c08637f4420420cd00989b54b75e556835a77b3",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PCL-Community/PCL-CE",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PCL 社区版 由社区开发者维护与管理",
+      "sourceUrl": "https://github.com/PCL-Community/PCL-CE"
+    },
+    "id": "cbbac3041ea4b50a35d7dba2b6bff7237bfe72ce482550d9b72b9272e501c09a",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ShareX/ShareX",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
+      "sourceUrl": "https://github.com/ShareX/ShareX"
+    },
+    "id": "9cbee9e42167b945e2c4ee970e2fd66a622a75516d23380f1f4e0ffeef78b15b",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PowerShell/PowerShell",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PowerShell for every system!",
+      "sourceUrl": "https://github.com/PowerShell/PowerShell"
+    },
+    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "oven-sh/bun",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+      "sourceUrl": "https://github.com/oven-sh/bun"
+    },
+    "id": "20c58dd10cf02a9a7fb36479256c4fe8291d97720189d1ee9099771661d3af0d",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bevyengine/bevy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A refreshingly simple data-driven game engine built in Rust",
+      "sourceUrl": "https://github.com/bevyengine/bevy"
+    },
+    "id": "ebfbc47518e30db4ab721822994db75827d65d01ff29141c40138928b55eea7d",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HMCL-dev/HMCL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular",
+      "sourceUrl": "https://github.com/HMCL-dev/HMCL"
+    },
+    "id": "b2c349b20f895a33d56c53f485798b1e818664ee798742631e54a0199003dcf1",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "spring-projects/spring-boot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
+      "sourceUrl": "https://github.com/spring-projects/spring-boot"
+    },
+    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "skylot/jadx",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Dex to Java decompiler",
+      "sourceUrl": "https://github.com/skylot/jadx"
+    },
+    "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MoeKoeMusic/MoeKoeMusic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
+      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
+    },
+    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "docmirror/dev-sidecar",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "开发者边车，github打不开，github加速，git clone加速，git release下载加速，stackoverflow加速",
+      "sourceUrl": "https://github.com/docmirror/dev-sidecar"
+    },
+    "id": "65dc4911aee291d65c8cafaba72e974893140e771241d255b80d6e73af49307b",
+    "status": "pending",
+    "createdAt": "2026-11-07T16:52:36Z"
   }
 ]

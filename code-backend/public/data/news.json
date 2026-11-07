@@ -1,6 +1,25 @@
 {
-  "dataUpdatedAt": "2026-11-07T10:21:20Z",
+  "dataUpdatedAt": "2026-11-07T16:52:36Z",
   "items": [
+    {
+      "title": "腾讯发布 Qwen3.8-27B-DSpine-b16",
+      "sourceUrl": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+      "publishedAt": "2026-11-07T14:20:29Z",
+      "source": "腾讯（Hugging Face）",
+      "summary": "腾讯发布Qwen3.8-27B-DSpine-b16，2B参数文本生成模型，可在Hugging Face下载运行。",
+      "id": "a64346d6b971f202146e6bbcb7957eb18f2733a7696ba46481fd3e749e526392",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "腾讯（Hugging Face）",
+      "originalUrl": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+      "originalVerifiedAt": "2026-11-07T16:52:36Z",
+      "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-07T16:52:36Z",
+      "featured": true
+    },
     {
       "title": "Copilot 代码审查：API 管理与审查概览更新",
       "sourceUrl": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
@@ -211,6 +230,44 @@
       "featured": true
     },
     {
+      "title": "Cursor 智能体语音聊天",
+      "sourceUrl": "https://cursor.com/changelog/voice-chat",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "source": "Cursor",
+      "summary": "Cursor支持在桌面、网页和iOS上与智能体进行实时语音通话。",
+      "id": "c9e260814e66b368a0bcd23054cc82fd41c465e84fc7c001aa9cb13f61373a44",
+      "originalTitle": "Cursor Voice Chat with Agents",
+      "translatedAt": "2026-11-07T16:52:36Z",
+      "lang": "en",
+      "originalSource": "Cursor",
+      "originalUrl": "https://cursor.com/changelog/voice-chat",
+      "originalVerifiedAt": "2026-11-07T16:52:36Z",
+      "url": "https://cursor.com/changelog/voice-chat",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-07T16:52:36Z",
+      "featured": true
+    },
+    {
+      "title": "Vera兼顾最高吞吐量与最快智能体",
+      "sourceUrl": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+      "publishedAt": "2026-11-05T20:00:41Z",
+      "source": "NVIDIA",
+      "summary": "AI智能体不仅生成答案，还会搜索信息、查询数据库、编写和测试代码并采取行动，每一步都依赖CPU。",
+      "id": "b1feafc8620ed538b62a3022f9da84a3ead4c4482c1e636ed633b769ccf84d6b",
+      "originalTitle": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
+      "translatedAt": "2026-11-07T16:52:36Z",
+      "lang": "en",
+      "originalSource": "NVIDIA",
+      "originalUrl": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+      "originalVerifiedAt": "2026-11-07T16:52:36Z",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-07T16:52:36Z",
+      "featured": null
+    },
+    {
       "title": "开放权重的魔法师：Chris Alexiuk 用开放模型让 AI 变简单",
       "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
       "publishedAt": "2026-11-05T16:00:05Z",
@@ -323,6 +380,25 @@
       "eventType": "model-review",
       "addedAt": "2026-11-05T11:03:48Z",
       "featured": null
+    },
+    {
+      "title": "在Cursor中构建实时应用",
+      "sourceUrl": "https://cursor.com/changelog/build-live-apps",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "source": "Cursor",
+      "summary": "Cursor可在其中直接构建部署网页应用，云端智能体负责托管、数据库、认证和部署。",
+      "id": "c30b322513faf4e64f8b5c698e9bf96c5f0cfe8de586c0353a419bcda52ea53e",
+      "originalTitle": "Build Live Apps in Cursor",
+      "translatedAt": "2026-11-07T16:52:36Z",
+      "lang": "en",
+      "originalSource": "Cursor",
+      "originalUrl": "https://cursor.com/changelog/build-live-apps",
+      "originalVerifiedAt": "2026-11-07T16:52:36Z",
+      "url": "https://cursor.com/changelog/build-live-apps",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-07T16:52:36Z",
+      "featured": true
     },
     {
       "title": "GitHub Copilot 现已登陆 Xcode 编码助手",
@@ -6842,6 +6918,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-07T10:21:20Z",
-  "generatedAt": "2026-11-07T10:21:20Z"
+  "version": "2026-11-07T16:52:36Z",
+  "generatedAt": "2026-11-07T16:52:36Z"
 }

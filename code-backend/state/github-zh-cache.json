@@ -19,11 +19,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-29T16:54:35Z"
   },
-  "lexmount/moli": {
-    "text": "面向 AI 智能体的最佳无头浏览器。轻量、快速、高兼容性。使用 Rust 构建",
-    "source": "deepseek-flash",
-    "at": "2026-10-11T07:43:59Z"
-  },
   "vxcontrol/pentagi": {
     "text": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
     "source": "deepseek-flash",
@@ -48,11 +43,6 @@
     "text": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
     "source": "deepseek-flash",
     "at": "2026-10-19T17:31:30Z"
-  },
-  "multica-ai/andrej-karpathy-skills": {
-    "text": "单个 CLAUDE.md 文件，用于改进 Claude Code 行为，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。",
-    "source": "deepseek-flash",
-    "at": "2026-10-25T14:57:55Z"
   },
   "citrolabs/ego-lite": {
     "text": "面向 AI 智能体的最快浏览器自动化工具，可与 Codex 或 Claude Code 等 AI 智能体共享已登录的浏览器状态，且不干扰用户。零成本、零配置。",
@@ -94,11 +84,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
   },
-  "trymirai/uzu": {
-    "text": "面向 AI 模型的高性能推理引擎",
-    "source": "deepseek-flash",
-    "at": "2026-10-28T17:11:13Z"
-  },
   "Nutlope/hallmark": {
     "text": "面向 Claude Code、Cursor 和 Codex 的反 AI 套路设计技能",
     "source": "deepseek-flash",
@@ -123,11 +108,6 @@
     "text": "开源 Grok Bot 替代品，自带智能体与订阅：在自有电脑上通过 iPhone、Mac、Windows、Linux 或终端，以机器人方式与 Claude Code、Codex、Gemini CLI、Cursor、Copilot 等 40+ AI 智能体对话。智能体无关且免费。也是 Muse 和 Dots 的替代品。使用 Rust 构建。",
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
-  },
-  "superdesigndev/treg": {
-    "text": "面向 agent 工具的 OpenRouter。在此加入社区：https://discord.gg/6mQYYfFMAn",
-    "source": "deepseek-flash",
-    "at": "2026-11-02T11:19:40Z"
   },
   "beenuar/AiSOC": {
     "text": "开源 AI 安全运营中心：告警融合、LLM 智能体分诊、MITRE ATT&CK 调查，以及可回放的智能体决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
@@ -179,11 +159,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-05T11:03:48Z"
   },
-  "THU-MAIC/OpenMAIC": {
-    "text": "Open Multi-Agent Interactive Classroom——一键获得沉浸式多智能体学习体验",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
-  },
   "infiniflow/ragflow": {
     "text": "RAGFlow 是一个面向智能体的数据库：由检索增强生成（RAG）引擎发展而来的上下文基础设施。",
     "source": "deepseek-flash",
@@ -209,9 +184,34 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
   },
-  "JetBrains/thinkrail": {
-    "text": "ThinkRail 是一款 agentic IDE，使用越多越好用。",
+  "google/skills": {
+    "text": "面向 Google 产品与技术的 Agent Skills",
     "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
+    "at": "2026-11-07T16:52:36Z"
+  },
+  "Comfy-Org/ComfyUI": {
+    "text": "最强大且模块化的扩散模型 GUI、API 与后端，采用图/节点界面。全球最快的本地推理引擎。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T16:52:36Z"
+  },
+  "google-gemini/gemini-cli": {
+    "text": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T16:52:36Z"
+  },
+  "LaurieWired/GhidraMCP": {
+    "text": "Ghidra 的 MCP 服务器",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T16:52:36Z"
+  },
+  "microsoft/BitNet": {
+    "text": "1-bit LLM 的官方推理框架",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T16:52:36Z"
+  },
+  "chiphuyen/aie-book": {
+    "text": "[WIP] AI 工程师资源，也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
+    "source": "deepseek-flash",
+    "at": "2026-11-07T16:52:36Z"
   }
 }
