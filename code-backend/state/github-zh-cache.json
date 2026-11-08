@@ -109,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
   },
-  "beenuar/AiSOC": {
-    "text": "开源 AI 安全运营中心：告警融合、LLM 智能体分诊、MITRE ATT&CK 调查，以及可回放的智能体决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "Crosstalk-Solutions/project-nomad": {
     "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在自有硬件上，无需联网。",
     "source": "deepseek-flash",
@@ -204,14 +199,14 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T16:52:36Z"
   },
-  "microsoft/BitNet": {
-    "text": "1-bit LLM 的官方推理框架",
+  "Orkas-AI/Orkas": {
+    "text": "Orkas 是开源（MIT）、本地优先的桌面 AI 团队：Commander 将目标拆解为待办，协调 16 个内置专家 agent 及 Claude Code、Codex、OpenCode、OpenClaw、Hermes，支持项目、定时自动化与连接器。macOS 与 Windows 免费应用，可用内置模型或自有密钥。",
     "source": "deepseek-flash",
-    "at": "2026-11-07T16:52:36Z"
+    "at": "2026-11-08T17:06:00Z"
   },
-  "chiphuyen/aie-book": {
-    "text": "[WIP] AI 工程师资源，也包含《AI Engineering》（Chip Huyen，2025）一书的配套材料",
+  "Mesh-LLM/mesh-llm": {
+    "text": "面向大众的分布式 AI/LLM。可私下或公开共享算力，为你的 agent 与聊天提供支持。",
     "source": "deepseek-flash",
-    "at": "2026-11-07T16:52:36Z"
+    "at": "2026-11-08T17:06:00Z"
   }
 }

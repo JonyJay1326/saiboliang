@@ -5,54 +5,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-05T18:48:11Z"
   },
-  "27b87d65d3f99406683fa7dda81aab35cf60c186172d77624ee987317ff5f9f1": {
-    "title": "Gemini Omni 1.2 Flash：快速、高性价比，支持更长片段",
-    "summary": "文字“Gemini Introducing Gemini Omni 1.2 Flash”周围环绕着蜂巢、动物对话、鱿鱼和女子走在街上的图像",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "f09d7876c1e95fcaa2b60c323af19ad289d82ef6491e6c110393ed00f6fe0f95": {
-    "title": "Gemini Omni 1.2 Flash：快速、高性价比，支持更长片段",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "ee0727a487e657fdee3ac11274869abd991fb80abaa6d1554259655d8d47ee09": {
-    "title": "Secret scanning 升级检测器，新增 SpaceX 为合作伙伴",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
-    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将想法变为仿真",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "86e4d87385b407899816f001f27e717f9eebe1e823d2d2d6c313c43c526da40d": {
-    "title": "让每个字节发挥更多性能：全栈协同设计如何解决 AI 内存挑战",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "c38349f00863334ecd6e87f2e9436cf9d9d214b773d4151cd5bb1140b2016d60": {
-    "title": "《霍格沃茨之遗》在 GeForce NOW 上获得 NVIDIA DLSS 5 魔法升级",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "850ffbfc56c1fbbd5e042b00bcf138f7251435d7f66c19cddac07683363de9cc": {
-    "title": "Le Chonk 提供大脑。Studio 让它发挥作用。",
-    "summary": "借助 Mistral Studio 和 Le Chonk 对你模型、数据和基础设施的完全控制，更快构建和部署企业智能体、工作流和应用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "616c68177b707eae60eb2b7e618a86105e3926c540e149caa916945e5a2342dd": {
-    "title": "澳大利亚高校正在培养AI原生毕业生",
-    "summary": "澳大利亚高校扩大ChatGPT使用范围，将AI引入教学，为学生进入AI赋能职场做准备。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
   "bbd492caba72ca544b8bac3280d7afac87555fa4b30c0b12388bcfae24236fa4": {
     "title": "Cult.fit借助Codex构建运营能力",
     "summary": "Cult.fit正使用Codex帮助各职能团队构建工具、加快速度并改变工作方式。",
@@ -100,17 +52,5 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
-  },
-  "3399c882f4124f4267a488679920791d454afd027df9ded077dbfc863e403f9c": {
-    "title": "别再一次性对待智能体，应将其作为持续运行的学科",
-    "summary": "AI 必须作为持续的業務学科进行选择、架构设计和管理，而非一系列孤立项目。文章首发于 Microsoft Azure Blog。",
-    "source": "deepseek-flash",
-    "at": "2026-11-08T10:29:33Z"
-  },
-  "fd007c3aeb0ce2e161e634c52a9d19f9db117ed29ddbba90d2f867d5d9e2a287": {
-    "title": "在 Azure 芯片上设计 Azure 芯片：Cobalt 200 上的 EDA 工作负载",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-08T10:29:33Z"
   }
 }
