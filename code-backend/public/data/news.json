@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-11-07T16:52:36Z",
+  "dataUpdatedAt": "2026-11-08T10:29:33Z",
   "items": [
     {
       "title": "腾讯发布 Qwen3.8-27B-DSpine-b16",
@@ -265,6 +265,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-07T16:52:36Z",
+      "featured": null
+    },
+    {
+      "title": "别再一次性对待智能体，应将其作为持续运行的学科",
+      "sourceUrl": "https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/",
+      "publishedAt": "2026-11-05T17:00:00Z",
+      "source": "Microsoft Azure",
+      "summary": "AI 必须作为持续的業務学科进行选择、架构设计和管理，而非一系列孤立项目。文章首发于 Microsoft Azure Blog。",
+      "id": "3399c882f4124f4267a488679920791d454afd027df9ded077dbfc863e403f9c",
+      "originalTitle": "Stop treating agents as one-off projects and start running them as a continuous discipline",
+      "translatedAt": "2026-11-08T10:29:33Z",
+      "lang": "en",
+      "originalSource": "Microsoft Azure",
+      "originalUrl": "https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/",
+      "originalVerifiedAt": "2026-11-08T10:29:33Z",
+      "url": "https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-08T10:29:33Z",
       "featured": null
     },
     {
@@ -6918,6 +6937,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-07T16:52:36Z",
-  "generatedAt": "2026-11-07T16:52:36Z"
+  "version": "2026-11-08T10:29:33Z",
+  "generatedAt": "2026-11-08T10:29:33Z"
 }

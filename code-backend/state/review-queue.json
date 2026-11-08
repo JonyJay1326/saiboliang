@@ -401,17 +401,6 @@
     "createdAt": "2026-10-31T16:08:43Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "e79b238687258d4b6a054575e839f677d3371e6315c4816976da53601d2adb21",
-    "reason": "invalid feed item: unexpected news host",
-    "evidence": {
-      "source": "Microsoft Azure"
-    },
-    "id": "eeb528d24cbaa0288a42276613588b02a922d1fd3570660207fd05ee8c794681",
-    "status": "pending",
-    "createdAt": "2026-11-01T10:34:19Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "lfnovo/open-notebook",
     "reason": "AI applicability uncertain",
@@ -768,17 +757,6 @@
     "createdAt": "2026-11-07T10:21:20Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "f84b98b49b609e76bb014c669bbe5cbeeba47b900cc139115d259e8eaf8af465",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "量子位"
-    },
-    "id": "1af03c271315a32f1f5eca226fe63d3f4703595f6652a95c67b1dc7e0933b986",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "tldraw/tldraw",
     "reason": "AI applicability uncertain",
@@ -1113,5 +1091,168 @@
     "id": "65dc4911aee291d65c8cafaba72e974893140e771241d255b80d6e73af49307b",
     "status": "pending",
     "createdAt": "2026-11-07T16:52:36Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "global",
+    "reason": "HTTP 504",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending?since=weekly"
+    },
+    "id": "f01be8b953621e8a7d9b8e8213611cbf9d0c7cd529a1276724e18bb76c8bef50",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "typescript",
+    "reason": "HTTP 504",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/typescript?since=weekly"
+    },
+    "id": "13c87449e5a04c2e64ffbc91b33e895e571e4a6d3d8ff506045f91a619216f53",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "python",
+    "reason": "HTTP 504",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/python?since=weekly"
+    },
+    "id": "2af5ede9c5b602ecb515f278c10e1ac02d98adf5f249034c1fcff4ad8e6465c2",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "go",
+    "reason": "HTTP 504",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/go?since=weekly"
+    },
+    "id": "ea01804a5745d48daf8fd239bcceb93c0afc6763bbfac86a51eafb2d612ab93f",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "c++",
+    "reason": "HTTP 504",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/c%2B%2B?since=weekly"
+    },
+    "id": "b1cc1e8c2c2312f0d2cc0825b904e4be7cf8130142e083070246949af97d7ea5",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "jupyter-notebook",
+    "reason": "HTTP 504",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/jupyter-notebook?since=weekly"
+    },
+    "id": "abe0949903364f02612c41d835c595bc926f58ed4be3a2caecdca2c26efce158",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "javascript",
+    "reason": "network error: TimeoutError",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/javascript?since=weekly"
+    },
+    "id": "ec545362e7457c7f9043e810c04ea9296396774bbb3e912954aa567083e27151",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "c#",
+    "reason": "source budget exhausted",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/c%23?since=weekly"
+    },
+    "id": "998cb36099a59626d37bba5d38cd84ce9f39a6975036915b0a286e5140628bff",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "rust",
+    "reason": "source budget exhausted",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/rust?since=weekly"
+    },
+    "id": "0f3fda90a1817ca41771492387973a21c3c40fd8747573ab3a1cbb08f5e30010",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "java",
+    "reason": "source budget exhausted",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/java?since=weekly"
+    },
+    "id": "4c0450304edc282b058ac5f990cbe1771134e27d7673e6276daa0da9424f0de6",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "php",
+    "reason": "source budget exhausted",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/php?since=weekly"
+    },
+    "id": "09561dca6bb434c03ed246f352b453803d2ad3cd5223ee85f63ddc5a3de5f08d",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "vue",
+    "reason": "source budget exhausted",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/vue?since=weekly"
+    },
+    "id": "bbb29c5144ba0bb8e9cf9dd5bd0ab76759c406aa773c620e950648babbc58610",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "github-page",
+    "objectId": "elixir",
+    "reason": "source budget exhausted",
+    "evidence": {
+      "sourceUrl": "https://github.com/trending/elixir?since=weekly"
+    },
+    "id": "01d8aff6659f68848e3e48eab813bfd5c6d3159298988c7588a5d9a26e22b334",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "source",
+    "objectId": "github",
+    "reason": "all Trending pages failed",
+    "evidence": {},
+    "id": "82f4877ef6c135cc96129e3124c863fddaf318b84381f56d584bf1d78eb4ec53",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "8844055d4f3ec016ca85274412a85f5b11f94389afab5fb16b741e375f9a2a01",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "7cf70305375abf3f38eab7aa2f230706b13cc6854d6e02fb9de1c3b2e7ddcaff",
+    "status": "pending",
+    "createdAt": "2026-11-08T10:29:33Z"
   }
 ]
