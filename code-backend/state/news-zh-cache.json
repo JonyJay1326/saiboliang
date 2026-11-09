@@ -1,37 +1,7 @@
 {
-  "2df2e5114191078ffff8cea0f2d360556d5cbb394a418cbbfb4bc26cb6669001": {
-    "title": "为你的 Muse 赋予声音",
-    "summary": "我们在 Muse 应用中推出语音和表现力头像，为你提供与 Muse 互动的新自然方式。文章《为你的 Muse 赋予声音》首发于 Meta Newsroom。",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T18:48:11Z"
-  },
-  "bbd492caba72ca544b8bac3280d7afac87555fa4b30c0b12388bcfae24236fa4": {
-    "title": "Cult.fit借助Codex构建运营能力",
-    "summary": "Cult.fit正使用Codex帮助各职能团队构建工具、加快速度并改变工作方式。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
-  "525555dfe497cbaa420f0c38fa6fb0e1c72ee49788db23aba7f9e3d77146b4ec": {
-    "title": "使用指标API新增代码审查详情与已处理率",
-    "summary": "企业和组织仓库级Copilot使用指标报告现可显示Copilot代码审查反馈的处理情况，新增copilot_code_review对象。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
-  "0778fb85d9153ba6e8af785f96fe14794d87e7be158be2998ba3e201270b0fa2": {
-    "title": "使用指标API标记遥测与版本缺口",
-    "summary": "Copilot使用指标API现可显示哪些用户缺少客户端遥测，或所用IDE及扩展版本低于使用指标最低要求。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
   "7d15d35372241976dbc453580900337cf419ff344960f7fae94bef6d436f9296": {
     "title": "为你量身设计 Muse App",
     "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "a0a44ed09dc9a1089b4e099f4e0fbf8e71ea906b8e386a1df3e114e9f9678292": {
-    "title": "与 Hacktron 合作寻找 OpenAI 系统漏洞",
-    "summary": "OpenAI 正与 Hacktron 合作寻找漏洞、测试与第三方服务的连接，并借助前沿 AI 加强防御。",
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
   },
@@ -52,5 +22,35 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
+  },
+  "78a38ab1bb2e5e3a2eb9f6bcdf3a75b5c0e1f01e1d6615cc7fc0c1c6d00de0b3": {
+    "title": "NVIDIA在MSIT-NVIDIA AI创业合作论坛宣布对韩国初创企业的新投资计划",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-09T11:42:52Z"
+  },
+  "59b779471e81fefef54ab0bd5b514b375ed98ed8e01fad0b320572e889614378": {
+    "title": "韩国借助NVIDIA推动各行业物理AI发展",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-09T11:42:52Z"
+  },
+  "d7c73c4b9a79782fc5fe85e76ea181081136d52e0825f7da0b1d6e3266440afa": {
+    "title": "韩国AI生态借助NVIDIA实现进阶并保障代理式AI安全",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-09T11:42:52Z"
+  },
+  "51e504680490a66d88e49def9fc5fb90775b3edebc28951917dac8747c087a66": {
+    "title": "从芯片到技能，NVIDIA与韩国扩大主权AI合作",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-09T11:42:52Z"
+  },
+  "1d980cecae4ce0aab0632eb002951392c1ad635311edb1d16819b3b6292df902": {
+    "title": "NVIDIA Dynamo Recipes将韩国领先开放模型投入生产",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-09T11:42:52Z"
   }
 }
