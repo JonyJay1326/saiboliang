@@ -1,259 +1,31 @@
 {
   "tickets": {
-    "dataUpdatedAt": "2026-10-31T07:58:18Z",
+    "dataUpdatedAt": "2026-11-10T04:11:04Z",
     "tickets": [
       {
-        "id": "qoder-deepseek-flash-free-202610",
-        "title": "Qoder DeepSeek-Flash 限免",
-        "vendor": "阿里云 Qoder",
-        "category": "credits",
-        "score": 89,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-25T00:00:00+08:00",
-        "summary": "DeepSeek-Flash 限免，0× 不耗 Credits，至 10/25",
-        "content": "Qoder CN 个人版把 DeepSeek-V4.1-Flash-1017（模型选择器内名 DeepSeek-Flash）的计费系数从 0.1× 降至 0×，活动期内调用不扣 Credits。\n\n- 限时：**至 10 月 25 日 00:00（UTC+8）**\n- 模型：DeepSeek-V4.1-Flash-1017，1M 上下文\n- 计费：倍率 0×，调用不消耗 Credits\n- 范围：个人版新老用户，免费账号、0 Credits 账号可用；企业订阅不适用\n- 门槛：无需领取，选中模型即生效\n\n使用步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/activities)登录个人账号\n2. 在模型选择器选 **DeepSeek-Flash**，确认倍率显示 0×\n3. 正常对话或跑 Agent 任务，用量面板可核对未扣 Credits\n\n**注意**：到期后按届时公示系数计费；倍率随客户端版本与账号批次变化，以模型选择器显示为准。\n\n**核验说明（2026-10-22）**：额度与截止时间依据 Qoder 官方渠道公告及用户提供信息录入，未实测调用 `[未定]`；官方 docs 暂未挂活动页，以客户端内倍率显示为准。",
-        "link": "https://qoder.cn/activities",
-        "affiliate": false,
-        "publishedAt": "2026-10-20",
-        "updatedAt": "2026-10-22"
-      },
-      {
-        "id": "sensetime-raccoon-ds1017-free-202610",
-        "title": "小浣熊 DeepSeek-1017 限免",
-        "vendor": "商汤小浣熊",
-        "category": "credits",
-        "score": 86,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-31T23:59:59+08:00",
-        "summary": "DeepSeek-1017 限免，0× 不扣积分，至 10/31",
-        "content": "商汤小浣熊桌面端 v1.1.0 新增 DeepSeek-V4.1-Flash-1017，同步开放限时免费档：该模型调用不扣积分。\n\n- 限时：**至 10 月 31 日 23:59（UTC+8）**\n- 计费：倍率 **0×**，调用不消耗积分\n- 模型：DeepSeek-V4.1-Flash-1017\n- 门槛：桌面端升级至 v1.1.0\n- 范围：仅该型号；其他模型照常按倍率扣积分\n\n领取步骤：\n\n1. 打开 [小浣熊官网](https://xiaohuanxiong.com/)下载或升级桌面端至 v1.1.0\n2. 新建任务，在模型选择器选 DeepSeek-V4.1-Flash-1017\n3. 确认面板显示「限免中」，跑完在用量处核对未扣积分\n\n**注意**：0× 只覆盖该型号；到期后按届时倍率计费；个人版每日 300 积分的免费额度规则不受影响。\n\n**核验说明（2026-10-22）**：限免型号、倍率与截止时间依据用户提供的客户端信息录入，官网首页未单列该活动页，未实测到账 `[未定]`；以桌面端模型选择器与用量面板显示为准。",
-        "link": "https://xiaohuanxiong.com/",
-        "affiliate": false,
-        "publishedAt": "2026-10-21",
-        "updatedAt": "2026-10-22"
-      },
-      {
-        "id": "volcengine-ark-collab-reward-202610",
-        "title": "火山方舟协作奖励计划免费领",
-        "vendor": "火山方舟",
+        "id": "autoclaw-double11-50m-202611",
+        "title": "AutoClaw 双十一领 5000 万",
+        "vendor": "智谱",
         "category": "token",
-        "score": 75,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "授权数据采集，单模型日领最高 500 万 Token",
-        "content": "火山方舟（豆包）协作奖励计划，授权数据采集即可免费领 Token 包。\n\n- 冷启动包：首次授权模型接入点即赠免费额度\n- 每日奖励包：按前一日用量**次日等量返还**\n- 上限：**单模型每日最高 500 万 Tokens**\n- 有效期：发放后 **30 天**，到期清零\n\n领取步骤：\n\n1. 打开 [协作奖励计划](https://docs.volcengine.com/docs/ark/collaboration-reward-program?lang=zh)阅读规则\n2. 控制台开通模型并授权数据采集\n3. 「开通管理 → 协作奖励计划」查看奖励包\n\n**注意**：需授权调用数据（输入输出）用于火山引擎模型优化，敏感数据勿用；奖励包仅抵扣后付费推理；同一主体仅限一个账号参与；部分模型已退出，以活动页名单为准。\n\n**核验说明（2026-10-14）**：额度、任务与截止日期依据用户提供的活动信息录入，未实测到账 `[未定]`；细则以官方文档页实际展示为准。",
-        "link": "https://docs.volcengine.com/docs/ark/collaboration-reward-program?lang=zh",
-        "affiliate": false,
-        "publishedAt": "2026-10-12",
-        "updatedAt": "2026-10-12"
-      },
-      {
-        "id": "unisound-u2flash-free-202610",
-        "title": "云知声 U2-Flash API 限免调用",
-        "vendor": "云知声",
-        "category": "token",
-        "score": 72,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-31T23:59:59+08:00",
-        "summary": "U2-Flash 限免调用至 10/31，新老用户均可",
-        "content": "云知声 Token Hub 平台 U2-Flash 全新上线，活动期 2026.09.30-2026.10.31 限时免费无限量调用，新老用户均可。U2-Flash 主打 Agent/Coding 场景，300B 规模，512K 上下文，OpenAI/Anthropic 双协议兼容。\n\n- 额度：**限免期间调用全免**，输入/输出均 ¥0/百万 Token\n- 限制：RPM 100，TPM 1000 万，最大输出 128K\n\n领取步骤：\n\n1. 打开 [模型页](https://maas.unisound.com/model-hub/u2-flash)\n2. 注册/登录云知声 Token Hub，创建 API Key\n3. 按 OpenAI 兼容端点调用 u2-flash 模型\n\n**注意**：免费期至 10 月 31 日截止，到期恢复计费；自研新模型，能力待验证，以官方页面为准。\n\n**核验说明（2026-10-14）**：额度与截止日期依据用户提供的活动信息录入，未实测调用 `[未定]`；以官方页实际展示为准。",
-        "link": "https://maas.unisound.com/model-hub/u2-flash",
-        "affiliate": false,
-        "publishedAt": "2026-10-04",
-        "updatedAt": "2026-10-04"
-      },
-      {
-        "id": "huawei-codearts-daily-202609",
-        "title": "华为云码道每日领 1000 万",
-        "vendor": "华为云",
-        "category": "token",
-        "score": 71,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "每日领 1000 万 Token，签到再得 1000 积分",
-        "content": "华为云码道 CodeArts 官方福利，网页版免下载，登录自动到账。\n\n- 额度：**每日 1000 万 Tokens**，登录后自动领取\n- 时效：当日 24:00 清零，不累积至次日\n- 签到：头像-活动福利-每日领取，**再得 1000 积分**\n- 入口：IDE / 插件 / 桌面 / 网页 / 小程序\n- 计费：仅扣福利 Token，不与积分包互通\n\n四款福利模型：deepseek-v4.1-flash、glm-5.3-flash、deepseek-v4-flash-0731、deepseek-v4-pro-0813。\n\n领取步骤：\n\n1. 打开 [码道网页版](https://devcloud.cn-north-4.huaweicloud.com/chat)登录华为云账号\n2. 每日 1000 万 Token 自动到账\n3. 活动福利内每日签到领积分\n\n**注意**：限时福利，结束另行通知；福利 Token 用尽后四款模型不可再用；签到积分限积分计费用户，活动至 12 月 31 日；细则以[官方文档](https://support.huaweicloud.com/offers-codeartsagent/codeartsagent_offers_0001.html)为准。\n\n**核验说明（2026-10-14）**：权益与截止时间依据用户提供的活动信息录入；该条此前因官方站证据不足未入库，本次按用户拍板收录，未实测到账 `[未定]`，细则以官方文档为准。",
-        "link": "https://devcloud.cn-north-4.huaweicloud.com/chat",
-        "affiliate": false,
-        "publishedAt": "2026-09-30",
-        "updatedAt": "2026-09-30"
-      },
-      {
-        "id": "cline-free-models-202609",
-        "title": "Cline 免费模型池",
-        "vendor": "Cline",
-        "category": "api-quota",
-        "score": 80,
-        "tags": {
-          "duration": "longterm",
-          "region": "global"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "免 Key 免绑卡，MiMo-V2.6-Flash 等免费",
-        "content": "Cline 是开源 AI 编程工具，提供 VS Code 插件与独立客户端，内置免费模型池，免 API Key、免绑卡，装好即选即用。\n\n- 权益：**内置模型免费用**，无需订阅\n- 实测可用：MiMo-V2.6-Flash、Step 5 Preview\n- Muse Spark 1.3 Contributor、Solar Mini 4\n\n使用步骤：\n\n1. VS Code 扩展商店搜 Cline 安装，或用独立客户端\n2. 模型列表下拉选择 MiMo-V2.6-Flash 等免费模型\n3. 直接发起任务，无需配置任何 Key\n\n**注意**：以上名单为 2026-10 用户实测，免费池模型会轮换调整，以客户端内实际可用为准。本条免费池指安装的 Cline 客户端/插件内置模型，与 Cline API 提供的免费模型并不相同。\n\n**核验说明（2026-10-14）**：免费模型名单依据用户实测录入，官方未公示完整名单 `[未定]`；以客户端内实际可用为准。",
-        "link": "https://cline.bot/",
-        "affiliate": false,
-        "publishedAt": "2026-09-08",
-        "updatedAt": "2026-10-14"
-      },
-      {
-        "id": "fiimeopc-register-token-202610",
-        "title": "FiimeOPC 注册送 1 亿 Token",
-        "vendor": "FiimeOPC",
-        "category": "token",
-        "score": 77,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-12-08T23:59:59+08:00",
-        "summary": "注册激活送 1 亿 Token，每日任务最多再领 5000 万，按模型倍率扣减",
-        "content": "FiimeOPC 是面向「一人公司」创业者的社区平台，内置模型服务与 API 中转，活动期注册赠送 Token，调用按模型倍率扣减。\n\n- 注册礼：**1 亿 Token**，每账号一次，活动至 **12 月 8 日**\n- 每日任务：发帖、发项目、发 AI 创意，合计最多 **5000 万 Token/天**\n- Token 榜：每累计使用 **10 亿 Token**再送 **1 亿**，每周一次\n- 注册方式：邮箱 / QQ / GitHub，需完成邮箱激活\n\n领取步骤：\n\n1. 打开 [FiimeOPC 注册页（含推广）](https://opc.fiime.cn/register?invite=PLMGKTKA)\n2. 使用邮箱或 QQ / GitHub 注册，查收激活邮件完成激活\n3. 查看额度到账情况，在工作台创建 API Key，按平台说明调用\n\n**注意**：模型服务为社区自营中转；底层供应商不公开的说法尚待核实。调用按模型倍率扣减 Token，名义额度不等于实际模型用量，以模型页面倍率为准。平台规模较小，勿存重要数据，额度用完即止。\n\n**核验说明（2026-10-07）**：额度、任务和截止日期依据用户提供的活动信息录入；公开页面暂未取得完整活动细则，未实测注册或到账 `[未定]`。此处假设「12/08」为 2026 年 12 月 8 日北京时间当天结束，仅作活动领取截止时间，到账额度的使用有效期以平台实际展示为准。",
-        "link": "https://opc.fiime.cn/register?invite=PLMGKTKA",
-        "affiliate": true,
-        "publishedAt": "2026-10-07",
-        "updatedAt": "2026-10-07"
-      },
-      {
-        "id": "deepseek-harness-desktop-bonus-202610",
-        "title": "DeepSeek Harness 桌面版登录领 6 元赠金",
-        "vendor": "DeepSeek",
-        "category": "credits",
-        "score": 88,
-        "tags": {
-          "duration": "unknown",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "符合条件登录领 6 元，到账后 7 天有效；是否仍可领以客户端为准",
-        "content": "DeepSeek Harness 桌面端首发体验赠金，符合条件的账号可通过桌面端登录领取。\n\n- 额度：**6 元体验赠金**，无需先充值，限量发放、赠完即止\n- 有效期：**到账后 7 天**；这是个人赠金的使用期限，不是活动统一截止日\n- 资格：活动开始前已注册的 DeepSeek 用户；或活动开始后使用中国大陆手机号（+86，不含虚拟号段）注册的用户\n- 客户端：官网下载 Windows（64 位）或 macOS（Apple 芯片）版本 `[官方]`\n\n领取步骤：\n\n1. 打开 [DeepSeek Harness 官网](https://www.deepseek.com/harness/)下载并安装桌面端\n2. 使用符合条件的 DeepSeek 账号登录；活动前已登录过的用户需退出后重新登录\n3. 查看赠金到账提示和账号余额，按客户端显示的到期时间使用\n\n**核验说明（2026-10-07）**：赠金规则依据[团队公告原文](https://mp.weixin.qq.com/s/ZlHz-GhO2uAywjw0M5rdew)的[公开转载](https://www.aixq.cc/71544.html)交叉核对；原文访问受限，未实测领取。转载公告未给出统一活动截止日期；当前是否仍可领取 `[未定]`，以客户端实际展示为准。",
-        "link": "https://mp.weixin.qq.com/s/ZlHz-GhO2uAywjw0M5rdew",
-        "affiliate": false,
-        "publishedAt": "2026-10-07",
-        "updatedAt": "2026-10-07"
-      },
-      {
-        "id": "cloudflare-workersai-free-202609",
-        "title": "Cloudflare Workers AI 免费额度",
-        "vendor": "Cloudflare",
-        "category": "api-quota",
-        "score": 59,
-        "tags": {
-          "duration": "longterm",
-          "region": "global"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "注册即用免绑卡，每天 10,000 Neurons 免费额度",
-        "content": "Cloudflare Workers AI 是边缘推理服务，Free 档每天送算力预算，注册即用、免绑卡。\n\n- 额度：**每天 10,000 Neurons**，00:00 UTC 回满\n- 免费模型：以官方模型页实时列表为准\n- 另含：gpt-oss-120b、Whisper、bge 嵌入、flux 生图\n- 需付费绑卡的前沿模型：glm-5.2 / glm-5.3 / glm-5.3-flash / deepseek-v4-flash-0731 / deepseek-v4-pro-0813 / kimi-k2.6 / kimi-k2.7-code\n- 接口：OpenAI 兼容，常规限速 **300 次/分**，前沿模型 20 次/分\n\n领取步骤：\n\n1. 登录控制台 → Workers AI\n2. 复制 Account ID，创建 API Token\n3. base_url 换成账户端点\n4. 模型名从官方模型页复制\n\n**注意**：Neurons 是每日预算非无限量，扣完即停；超量需升级 Paid；旗舰模型需绑卡，见[定价页](https://developers.cloudflare.com/workers-ai/platform/pricing/)。",
-        "link": "https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fai%2Fworkers-ai",
-        "affiliate": false,
-        "publishedAt": "2026-09-17",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "sensetime-raccoon-credits-202609",
-        "title": "商汤小浣熊每日免费 300 积分（以客户端为准）",
-        "vendor": "商汤小浣熊",
-        "category": "credits",
-        "score": 75,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "每日登录领 300 积分，24:00 清零；以客户端实际显示为准",
-        "content": "商汤小浣熊（Raccoon Work）是商汤出品的 AI 办公助手，覆盖网页、桌面与移动三端，个人免费版长期每日送积分。\n\n- 额度：**每日登录 300 积分**，24:00 清零不累计 `[用户实测 2026-09]`\n- ⚠️ 官方站未见积分规则页；社区另有「签到 150 Credits、90 天可累计」口径，**与本条不一致** `[社区]`，以客户端内「积分」页显示为准\n- 新人礼：注册 + 桌面登录各 3000，一年有效 `[未证实]`\n- 模型：Kimi K3、GLM 5.3、GLM 5.3 Flash 等，以产品内实际可选项为准\n- 原「SenseNova 6.8 Flash Lite 限免至 9/28」**已过期**\n\n领取步骤：\n\n1. 打开 [官网](https://xiaohuanxiong.com/)注册登录，每日积分自动发放\n2. 下载桌面端并登录，查看是否额外发放新人礼包\n3. 对话里选模型直接用，积分自动抵扣\n\n**注意**：每日积分当天清零不累计；免费版限标准模型，积分数量、新人礼与有效期以客户端内实际显示为准。",
-        "link": "https://xiaohuanxiong.com/",
-        "affiliate": false,
-        "publishedAt": "2026-09-17",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "openrouter-union-alpha-202609",
-        "title": "Union Alpha 匿名模型限免",
-        "vendor": "OpenRouter",
-        "category": "api-quota",
         "score": 66,
         "tags": {
           "duration": "limited",
-          "region": "global"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-23T23:59:59+08:00",
-        "summary": "Union Alpha 免费期已结束，官方导流至 Pareto",
-        "content": "匿名厂商通过 OpenRouter「Stealth」隐身通道发布的 Union Alpha，**$0 免费期已结束**。\n\n- 状态：模型页标注「free stealth period has ended; use Pareto」\n- 模型 ID：`stealth/union-alpha`（免费期已过）\n- 替代：官方引导至 Pareto；Stealth 通道另列更新的 Ox Alpha\n- 原规格：262K 上下文、支持图像输入与工具调用、GPQA Diamond 90.9%\n\n**注意**：本条仅作历史记录，已于 2026-09-23 结束免费期；身份未知的厂商模型不建议发敏感代码。",
-        "link": "https://openrouter.ai/stealth/union-alpha",
-        "affiliate": false,
-        "publishedAt": "2026-09-17",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "amd-tokenfactory-free-202609",
-        "title": "AMD TokenFactory 免费 API",
-        "vendor": "AMD",
-        "category": "api-quota",
-        "score": 65,
-        "tags": {
-          "duration": "longterm",
           "region": "cn"
         },
         "expired": false,
-        "expiryDate": null,
-        "summary": "注册领 Key 免费调 8 款模型，OpenAI 兼容",
-        "content": "AMD Radeon Cloud 推出 TokenFactory（Beta），开发者注册即可领取 API Key，免费调用多款主流模型。\n\n- 免费模型（官方文档现列 8 款）：DeepSeek-V4-Flash、DeepSeek-V4-Flash-Vision-Exp、DeepSeek-V4.1-Flash、Qwen3.8-Flash-Next、Qwen3.8-27B、GLM-5.3-Flash、MiMo-V2.6-Flash、MiniCPM5-2B\n- 协议：**OpenAI 兼容**，另支持 Anthropic 格式\n- 接口：`developer.amd.com.cn/radeon/api/v1`\n- 费用：无需信用卡，Beta 期免费\n- 另注：MinerU2.5-Pro 单独计费，不在免费池内\n\n领取步骤：\n\n1. 打开 [TokenFactory 页](https://developer.amd.com.cn/radeon/tokenfactory)注册登录\n2. 在「Public Free Model APIs」点开模型卡片\n3. 复制弹窗内 API Key，全模型通用\n\n**注意**：Beta 期服务，模型清单与限额可能随时调整，以官网弹窗实时展示为准。",
-        "link": "https://developer.amd.com.cn/radeon/tokenfactory",
-        "affiliate": false,
-        "publishedAt": "2026-09-16",
-        "updatedAt": "2026-10-02"
+        "expiryDate": "2026-11-15T23:59:59+08:00",
+        "summary": "登录即得 5000 万 Token，15 日 23:59 清零",
+        "content": "智谱 AutoClaw（澳龙）双十一福利，活动期间登录国内版即可领 5000 万 Tokens。\n\n- 额度：**5000 万 Tokens**，登录即到账，每账号限一次\n- 时间：**11 月 9 日 0 点至 11 月 15 日 23:59**，逾期不发\n- 用途：仅限 AutoClaw 内使用，不是通用 API 额度\n- 可用：GLM-5.3、GLM-5.3-Flash、GLM-5-Turbo 等\n\n领取步骤：\n\n1. 打开 [AutoClaw 国内版](https://autoclaw.zhipuai.cn/) 登录\n2. 5000 万 Tokens 自动到账，无需另外领\n3. 在客户端新建任务即开始消耗\n\n**注意**：积分有效期同样到 11 月 15 日 23:59，逾期自动失效，别囤着；自接模型 API 另行计费；仅国内版账号可参与。",
+        "link": "https://autoclaw.zhipuai.cn/blog/news/M11W2/",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
       },
       {
-        "id": "bazaarlink-free-202609",
-        "title": "BazaarLink 免费模型 API",
-        "vendor": "BazaarLink",
-        "category": "api-quota",
-        "score": 55,
-        "tags": {
-          "duration": "longterm",
-          "region": "global"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "注册领 Key，2 款模型免费调，每日 50 次",
-        "content": "BazaarLink 是 OpenAI 兼容的模型 API 网关，注册即送免费 Key，含免费额度模型。\n\n- 模型：**Qwen3.7-Flash**、**DeepSeek-V4-Flash**\n- 限额：10 次/分钟，**50 次/日**（无充值账号）\n- 协议：OpenAI 兼容，api.bazaarlink.ai/v1\n- 费用：无需信用卡，超额按付费价继续\n\n领取步骤：\n\n1. 打开 [BazaarLink 免费页](https://bazaarlink.ai/free)注册\n2. 控制台 Keys 页创建 API Key\n3. 客户端换 base_url 即可调用\n\n**注意**：免费额度随平台配置动态调整，以官方免费页实时展示为准；充值账号日限额翻倍。",
-        "link": "https://bazaarlink.ai/free",
-        "affiliate": false,
-        "publishedAt": "2026-09-16",
-        "updatedAt": "2026-09-16"
-      },
-      {
-        "id": "modelscope-magicube-202609",
-        "title": "魔搭魔粒免费调旗舰模型",
-        "vendor": "魔搭 ModelScope",
-        "category": "api-quota",
+        "id": "meoo-daily-2000-202611",
+        "title": "秒悟每天登录领 2000 积分",
+        "vendor": "秒悟 Meoo",
+        "category": "credits",
         "score": 70,
         "tags": {
           "duration": "longterm",
@@ -261,303 +33,94 @@
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "每日登录领魔粒，白嫖 DeepSeek 等旗舰 API",
-        "content": "魔搭 ModelScope 是阿里云旗下模型社区，免费推理已升级魔粒体系，登录领魔粒调旗舰。\n\n- 额度：**每日登录 +200 粒**，绑阿里云 +50\n- 消耗：旗舰约 2 粒/次、主流 1 粒、轻量 0.5 粒\n- 每日固定 250 粒约够旗舰 125 次/日，失败返还魔粒\n- 接口：`api-inference.modelscope.cn/v1`，OpenAI 兼容，另支持 Anthropic\n- 条件：绑定阿里云账号并完成实名认证\n\n领取步骤：\n\n1. 通过 [注册页](https://modelscope.cn/register)注册魔搭\n2. 绑阿里云实名\n3. [账号设置](https://modelscope.cn/my/myaccesstoken)创建访问令牌\n4. base_url 换魔搭端点即可调用\n\n**注意**：短期粒 24 小时内有效；「一次性任务得 150 长期粒」「长期粒 90 天」`[未证实]`；模型清单以站内实际可调为准。魔粒数值与规则以站内「魔粒值」入口实时显示为准。",
-        "link": "https://modelscope.cn/register",
-        "affiliate": false,
-        "publishedAt": "2026-09-14",
-        "updatedAt": "2026-10-02"
+        "summary": "每日首次登录送 2000 积分，新人首月再送 5000",
+        "content": "秒悟（Meoo）用一句话生成可上线的 AI 应用，免费版靠每日登录攒积分。\n\n- 额度：每日首次登录 **2000 积分**，所有档位都有\n- 新人：免费版首月另送 **5000 积分**，付费档另有月度额度\n- 抵扣：DeepSeek V4.1 Flash 每千输入 2 分、输出 8 分\n- 可用：Qwen3.8、DeepSeek V4、GLM-5.3、Kimi K3\n\n领取步骤：\n\n1. 打开 [秒悟](https://meoo.com/) 用手机号登录\n2. 每天首次进控制台自动到账，不用手动点\n3. 在应用里调模型或生成图片视频时扣积分\n\n**注意**：免费版每月套餐额度是 0，只有每日赠送与新人礼；付费档默认开连续包月，到期前 1 天自动扣款，不需要记得在设置里关。",
+        "link": "https://meoo.com/",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
       },
       {
-        "id": "zcode-weekend-build-202609",
-        "title": "ZCode 周末构建送 3 亿 Token",
-        "vendor": "智谱",
-        "category": "token",
-        "score": 98,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-14T09:00:00+08:00",
-        "summary": "3 亿 Token 周末限时领，GLM-5.3-Flash 可用",
-        "content": "ZCode「周末构建」（Weekend Build）活动新一轮，站长本人已领取到账（用户实测 2026-09，以官方为准）。\n\n- 额度：**3 亿 Token**，仅限 ZCode 内使用\n- 适用：仅 GLM-5.3-Flash，原生 100 万上下文\n- 条件：登录用户可领，往期每账号限一次\n- 时间：9/11 23:00 生效，9/14 09:00 额度到期\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载并升级客户端\n2. 登录后点左下角活动卡片「领取」\n3. 在「模型设置」切「体验套餐」使用\n\n**注意**：生效到到期约 2.4 天，抓紧用完；到期未用自动失效，不可转让折现。",
-        "link": "https://zcode.z.ai/cn",
-        "affiliate": false,
-        "publishedAt": "2026-09-11",
-        "updatedAt": "2026-09-15"
-      },
-      {
-        "id": "youdao-lobster-checkin-202609",
-        "title": "有道龙虾每日签到领 100 积分",
-        "vendor": "网易有道",
+        "id": "antling-monthly-10cny-202611",
+        "title": "蚂蚁百灵每月 1 日送 10 元券",
+        "vendor": "蚂蚁百灵",
         "category": "credits",
-        "score": 74,
+        "score": 63,
         "tags": {
           "duration": "longterm",
           "region": "cn"
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "每日签到 100 积分（30 天有效），新人 300 积分礼包",
-        "content": "网易有道出品的桌面级 AI 助手「有道龙虾」（LobsterAI）积分福利。\n\n- 每日签到：**100 积分**，发放起 **30 天**内有效 `[官方]`\n- 新人礼包：**300 积分、14 天有效** `[社区]`\n- 邀请奖励：**300 积分、365 天有效** `[社区]`\n- 限制：每账号每日签到一次\n\n领取步骤：\n\n1. 打开 [官网](https://lobsterai.youdao.com/)下载 LobsterAI\n2. 安装后点击【登录】完成注册\n3. 每日签到领 100 积分\n4. 如有邀请码，在登录页输入后领取邀请积分\n\n**注意**：三类积分有效期各不相同——签到 30 天、新人 14 天、邀请 365 天，优先用最短的。官方页面未公开积分规则详情，**积分数量与有效期以客户端内实际显示为准**，邀请码是否仍有效以官方活动页为准。",
-        "link": "https://lobsterai.youdao.com/",
-        "affiliate": false,
-        "publishedAt": "2026-09-11",
-        "updatedAt": "2026-10-02"
+        "summary": "每月 1 日发 10 元抵扣券，新用户再送 20 元",
+        "content": "百灵把原来的每日免费额度改成按月发券，新老账户都有份。\n\n- 月度：每月 1 日发 **10 元 Token 抵扣券**，当月有效不结转\n- 新人：注册即得 **20 元券**，老账户升级也补一次，60 天有效\n- 范围：百灵全部模型，按实际计费金额抵扣\n- 门槛：需开通百灵新钱包并完成实名\n\n领取步骤：\n\n1. 打开[百灵开放平台](https://developer.ant-ling.com/)注册\n2. 开通新钱包、创建 API Key\n3. 每月 1 日后券自动入账，调用模型时自动抵扣\n\n**注意**：月中才完成升级的账户当月不补发月度券，从下月 1 日开始发；原每日 50 万 Token 免费额度已停止；券不可提现或转让。",
+        "link": "https://developer.ant-ling.com/zh-CN/docs/getting-started/changelog/billing-upgrade/",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
       },
       {
-        "id": "orcarouter-free-models-202609",
-        "title": "OrcaRouter 免费模型池",
-        "vendor": "OrcaRouter",
-        "category": "api-quota",
-        "score": 73,
+        "id": "scnet-maas-10m-202611",
+        "title": "超算互联网新用户领 1000 万",
+        "vendor": "超算互联网",
+        "category": "token",
+        "score": 62,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册即领 1000 万 Token，限新用户",
+        "content": "国家超算互联网的 MaaS 专区给新用户送 Token 量包，注册即到账。\n\n- 额度：**1000 万 Tokens**，仅新用户可参与\n- 模型：当前发放 **GLM-5.3-Flash**，1024K 上下文\n- 场景：代码生成、科研辅助、数据分析、长文档\n- 领取：在 MaaS 特惠专场点「免费领取」，实时到账\n\n领取步骤：\n\n1. 打开 [MaaS 特惠专场](https://www.scnet.cn/home/subject/maas/index.html)\n2. 注册账号并完成实名认证\n3. 领包后在控制台创建 API Key 调用\n\n**注意**：仅限新用户，老账号领不到；需完成实名认证；量包当前对应 GLM-5.3-Flash，实际可用范围以控制台为准。",
+        "link": "https://www.scnet.cn/home/subject/maas/index.html",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
+      },
+      {
+        "id": "aliyun-yungongkaiwu-300-202611",
+        "title": "云工开物学生 300 元代金券",
+        "vendor": "阿里云",
+        "category": "credits",
+        "score": 76,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2027-03-31T23:59:59+08:00",
+        "summary": "学生认证每 12 个月领 300 元，可抵云服务器与大模型服务",
+        "content": "阿里云高校用云支持计划「云工开物」，学生完成认证后领 300 元无门槛抵扣金，每 12 个月一张。\n\n- 额度：**300 元抵扣金**，每 12 个月一张，券 1 年内有效\n- 抵扣：百炼推理、训练、部署，Wan 等 3 款模型除外\n- 也能买：云服务器、AI Coding、数据库等公共云产品\n- 限制：需**中国高校学生认证**，同商品仅抵扣一次、不叠加优惠\n- 另有：可抵 Qoder CN 学生版 1 个月专业订阅\n\n领取步骤：\n\n1. 打开[学生权益页](https://university.aliyun.com/buycenter/)\n2. 完成学生身份认证后点「立即申请」领券\n3. 在权益专区选规格下单，支付页勾选代金券\n\n**注意**：本期活动到 2027 年 3 月 31 日，每日名额有限先到先得；券到期未用即作废，订单退款券不返还。教师另有 5 折权益（原价上限 40 万），需提交场景并通过审核。",
+        "link": "https://university.aliyun.com/buycenter/",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
+      },
+      {
+        "id": "freebuff-free-hours-202611",
+        "title": "Freebuff 每日免费 5 小时",
+        "vendor": "Freebuff",
+        "category": "credits",
+        "score": 57,
         "tags": {
           "duration": "longterm",
           "region": "global"
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "注册即有免费模型池，但需「成熟账号」门槛",
-        "content": "OrcaRouter 是统一模型网关，把 200+ 模型整合为一套 OpenAI 兼容接口，一个 Key 全局调用。\n\n- 免费模型：`deepseek/deepseek-v4-flash-free`、`deepseek/deepseek-v4-pro-free`\n- ⚠️ **门槛**：$0 模型仅向「成熟账号」开放——workspace owner 的 GitHub 账号需有提交历史，或有付费购买记录。**纯新号可能看不到也调不通免费模型**\n- 限速：Free 档 10 RPM · 50 次/日；Paid（$20+）20 RPM · 800 次/日\n- 另有 `orcarouter/free` 按难度自动路由\n- Base URL：`api.orcarouter.ai/v1`\n\n领取步骤：\n\n1. 打开 [OrcaRouter](https://www.orcarouter.ai/zh-CN/)注册账号\n2. 控制台「管理 - API 密钥」创建密钥\n3. Base URL 填 `api.orcarouter.ai/v1`\n4. 模型名填 `deepseek/deepseek-v4-flash-free`\n\n**注意**：Anthropic 接口填根地址 `https://api.orcarouter.ai`（不带 /v1）；免费层有频次与总量限制，模型与价格以官方页为准。",
-        "link": "https://www.orcarouter.ai/zh-CN",
-        "affiliate": false,
-        "publishedAt": "2026-09-11",
-        "updatedAt": "2026-10-02"
+        "summary": "免绑卡免 Key，限速区每天 5 小时编程额度",
+        "content": "Freebuff 是靠广告养活的免费编程 Agent，终端、桌面、网页共用一个账号，免绑卡也免 API Key。\n\n- 额度：全量地区每天 30 小时，其余地区限速模式 5 小时\n- 挂 VPN 或代理：每天 4 小时\n- 计量：1 次会话算 1 小时、期间不限消息，贵模型按倍率扣\n- 模型：GLM 5.3 Flash、DeepSeek V4.1 Flash 等\n- 代价：界面常驻 Sponsored 广告；标注训练的模型可外售\n\n领取步骤：\n\n1. 终端执行 npm install -g freebuff\n2. 首次运行按提示登录浏览器授权\n3. 进项目目录敲 freebuff 开工\n\n**注意**：中国大陆属限速区，只给 5 小时；额度每天 0 点本地时区重置、不累积；官方标 beta，模型与小时数随时变；付费档 $8/月起。",
+        "link": "https://freebuff.com",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
       },
       {
-        "id": "wx-miniapp-contest-2026",
-        "title": "微信小程序开发大赛 49 万奖金池",
-        "vendor": "微信",
-        "category": "token",
-        "score": 82,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-17T23:59:59+08:00",
-        "summary": "报名微信小程序开发大赛，49 万奖金池 + 微信招聘绿通",
-        "content": "2026 微信小程序开发大赛于 7 月中旬在 WAIC 官宣启动，以「与 AI 共生」为主题，面向全球开发者，个人即可报名。\n\n- 奖金池：**49 万元**，一等奖 10 万\n- 报名截止：**10 月 17 日**\n- 官方权益：微信招聘面试绿通\n- ⚠️ 原票证所写「10 亿 Coding Plan Token + DeepSeek-V4-Flash」**官方未见公告证实**`[未证实]`；该额度疑似来自「小程序成长计划」二期（10 亿 Token + 10 万张图、混元模型、6 个月有效），**并非大赛权益**\n\n报名步骤：\n\n1. 打开 [大赛官网](https://contest.weixin.qq.com/eventDetails?id=4598379302114656257)报名，等待官方审核\n2. 审核通过会收到确认邮件\n3. 按邮件指引参与后续流程\n\n**注意**：报名有截止时间；如需 Coding Plan 额度，请另行关注「小程序成长计划」官方公告，不要以本大赛页面为准。",
-        "link": "https://contest.weixin.qq.com/eventDetails?id=4598379302114656257",
-        "affiliate": false,
-        "publishedAt": "2026-09-09",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "xunfei-loomy-202609",
-        "title": "讯飞 Loomy 下载即送 5000 积分",
-        "vendor": "讯飞 Loomy",
+        "id": "perch-starter-20usd-202611",
+        "title": "Perch AI 每月送 $20 额度",
+        "vendor": "Perch AI",
         "category": "credits",
-        "score": 76,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "下载即享 5000 积分；客户端内积分与模型以实际显示为准",
-        "content": "讯飞 Loomy 是讯飞出品的 AI 办公搭子（桌面客户端）。\n\n- 额度：**下载即享 5000 积分** `[官方]`\n- ⚠️ 以下在官方页面未见依据 `[未证实]`：每日再送 5000 积分、新手任务 10000 积分、19.9 元 / 5000 积分包、具体模型清单、「本地运行数据不传云端」\n\n使用步骤：\n\n1. 打开 [Loomy 官网](https://loomy.xunfei.cn/download)下载客户端\n2. 注册登录，查看积分到账\n3. 在设置内按实际可选项切换模型\n\n**注意**：除首赠 5000 积分外，其余权益与消耗数值均**以客户端内实际显示为准**；官方页面未公开积分定价与模型名单，请勿按传闻数字估算价值。",
-        "link": "https://loomy.xunfei.cn/download",
-        "affiliate": false,
-        "publishedAt": "2026-09-09",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "tokenrouter-glm53free-202609",
-        "title": "TokenRouter 免费 GLM-5.3（已失效）",
-        "vendor": "TokenRouter",
-        "category": "api-quota",
-        "score": 76,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-16T23:59:59+08:00",
-        "summary": "限时免费通道 9/16 起无可用渠道，已下架",
-        "content": "TokenRouter 是第三方统一模型网关，曾把智谱旗舰 GLM-5.3 以 `z-ai/glm-5.3-free` 路由限时 $0 开放（8 RPM、1M 上下文）。\n\n- 状态：**已失效**，社区自 9/16 起反馈该路由无可用通道（`No available channel for model z-ai/glm-5.3-free`）\n- 判定：[社区实测] 2026-09-16 起不可用；[官方] 未发布截止公告\n- 票证保留：作为该网关的限时免费记录，`expired=true`\n\n**注意**：第三方聚合通道与官方免费档是两回事。智谱自有永久免费档见 GLM-4.7-Flash；OpenRouter 上的 Nemotron 等 $0 模型仍可用。",
-        "link": "https://www.tokenrouter.com/",
-        "affiliate": false,
-        "publishedAt": "2026-09-07",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zcode-weekend-202609",
-        "title": "ZCode 周末送 3 亿 Token",
-        "vendor": "智谱",
-        "category": "token",
-        "score": 98,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-06T23:00:00+08:00",
-        "summary": "3 亿 Token 限时领，GLM-5.3-Flash 周末有效",
-        "content": "ZCode 周末送额度活动，所有登录用户（含 Coding Plan 订阅）可免费领 3 亿 Token，体验 GLM-5 系列首个原生多模态模型 GLM-5.3-Flash。\n\n- 额度：**3 亿 Token**，仅限 ZCode 内使用\n- 适用：仅 GLM-5.3-Flash，原生支持 100 万上下文\n- 条件：升级至 3.11.2，每账号限领一次\n- 时间：额度 9/5 09:00 生效，9/6 23:00 到期\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载或升级至 3.11.2\n2. 登录后点客户端左下角活动卡片「领取」\n3. 在「模型设置」切「体验套餐」即可使用\n\n**注意**：额度仅限 GLM-5.3-Flash，不可转让折现；到期未用自动失效；数量有限先到先得，高峰期可能限流、付费用户优先。",
-        "link": "https://zcode.z.ai/cn",
-        "affiliate": false,
-        "publishedAt": "2026-09-04",
-        "updatedAt": "2026-09-06"
-      },
-      {
-        "id": "bai-free-chat-202609",
-        "title": "B.AI 免费用 GLM-5.3-Flash",
-        "vendor": "B.AI",
-        "category": "api-quota",
-        "score": 51,
-        "tags": {
-          "duration": "longterm",
-          "region": "global"
-        },
-        "expired": true,
-        "expiryDate": null,
-        "summary": "B.AI 6 款模型 0 Credits（部分限时），国内无法直接访问",
-        "content": "Web3 大模型聚合平台 BAI（b.ai），以下 6 款模型在网页端与 API 当前 0 Credits。\n\n- 免费名单（共 6 款）：**GLM-5.3-Flash**、**DeepSeek-V4-Flash**、**DeepSeek-V4-Flash-Vision-Exp**、**Hy3**（腾讯混元）、**MiMo-V2.5**（小米）、**Qwen3.8-Flash**\n- ⚠️ 免费性质：**GLM-5.3-Flash 与 MiMo-V2.5 为限时 0 Credits**，活动结束后恢复原价（GLM-5.3-Flash 参考价 0.075 / 0.25 Credits 每 Token）\n- 分时计费：DeepSeek-V4-Flash 与 Vision-Exp 闲时 / 忙时双价；自 2026-08-23 起周六周日全天按闲时价\n- 接口：**OpenAI 兼容 API**，端点 `api.b.ai/v1/chat/completions`\n- 其余模型需充值（支持链上与法币）\n\n使用步骤：\n\n1. 打开 [B.AI 聊天页](https://chat.b.ai/chat)注册登录\n2. 网页端选免费模型直接对话\n3. API：控制台建 Key 即可调用\n\n**注意**：免费名单与期限随时可能调整，以[官方定价文档](https://docs.b.ai/zh-Hans/llmservice/pricing-and-usage/)为准；域名走 CloudFront，**国内直连不可达**；Web3 / 加密货币背景，注意账号信息安全。",
-        "link": "https://chat.b.ai/chat",
-        "affiliate": false,
-        "publishedAt": "2026-09-02",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zhipu-codingplan-flash-zcode-202609",
-        "title": "智谱 Coding Plan 夜间畅用（延期）",
-        "vendor": "智谱",
-        "category": "api-quota",
-        "score": 84,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-07T23:59:59+08:00",
-        "summary": "夜间 ZCode/AutoClaw 调 GLM-5.3-Flash 零消耗，延期至 10/7",
-        "content": "智谱 GLM Coding Plan「GLM-5.3-Flash 夜间畅用」，原定 9/3-9/20，官方在双节活动期间延长至 **10/7**。\n\n- 时段：每晚 23:00 至次日 09:00（北京时间），进入时段自动生效，无需报名\n- ZCode / AutoClaw 内：GLM-5.3-Flash 额度消耗为 0\n- 其他套餐支持的 Agent：GLM-5.3-Flash 可用额度按套餐标准规则 ×2\n- 仅 GLM-5.3-Flash 生效，错峰时段选 GLM-5.3 本体仍按标准积分扣减\n- 时段含周末及公共假日\n\n搭配双节另一项：**9/25-10/7 取消工作日高峰限制**，全天按非高峰的 50% 积分倍率扣减（常规仅周一至周五 14:00-18:00 为高峰）。另有 GLM-5.3-FlashX 滚动开放试用，消耗按 Flash 的 2.5 倍。\n\n使用步骤：\n\n1. 持有 GLM Coding Plan 付费订阅\n2. ZCode / AutoClaw 登录并选 GLM-5.3-Flash\n3. 夜时段调用即享 0 消耗\n\n**注意**：需已有 Coding Plan 付费订阅，非零门槛；命中套餐 5 小时 / 周限额上限时需等刷新才吃得到权益。官方文档页仍标注 9/20，延期以官方双节公告与社区海报为准，见[夜间畅用活动页](https://docs.bigmodel.cn/cn/coding-plan/notice/event-glm-5.3-flash)。",
-        "link": "https://zcode.z.ai/cn",
-        "affiliate": false,
-        "publishedAt": "2026-09-03",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zhipu-qingyan-6666-202609",
-        "title": "智谱清言开学红包 6666 积分",
-        "vendor": "智谱清言",
-        "category": "credits",
-        "score": 75,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-03T23:59:59+08:00",
-        "summary": "开学红包 6666 积分，9.1-9.3 登录即领，7 天有效",
-        "content": "智谱清言秋季开学档官方活动，全平台用户登录即领开学红包。\n\n- 额度：**6666 积分**，登录即领、零门槛\n- 端口：App / 网页 / PC 客户端均可\n- 有效期：积分领取后 7 天内用完，过期清零\n- 适用：清言内 GLM 对话、Agent 任务等积分消耗场景\n\n领取步骤：\n\n1. 打开 [智谱清言](https://chatglm.cn/)并登录\n2. 活动期间登录即自动发放 6666 积分\n3. 在「我的 - 积分」查看余额\n\n**注意**：活动 2026-09-01 至 09-03，9 月 3 日晚入口关闭；积分领取后仅 7 天有效，建议尽早领、尽快用；细则以 App 内展示为准。",
-        "link": "https://chatglm.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-09-01",
-        "updatedAt": "2026-09-01"
-      },
-      {
-        "id": "wechat-cloudbase-aigrowth-202608",
-        "title": "微信 AI 小程序成长计划送 10 亿 Token",
-        "vendor": "腾讯云 CloudBase",
-        "category": "token",
-        "score": 58,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-12-31T23:59:59+08:00",
-        "summary": "报名送 10 亿 Token 与 10 万生图，仅限小程序内用",
-        "content": "微信 AI 小程序成长计划，面向小程序开发者送模型额度。\n\n- 额度：**二期加码共 10 亿 Token + 10 万张生图额度**（一期为 1 亿 Token + 1 万张图，二期对一期用户补发 9 亿）\n- 模型：混元 Hy3 + Hy Image 3.0\n- 有效期：6 个月\n- 附加：120 元代金券\n- 报名截止：12 月 31 日\n- 限制：仅限小程序内使用\n\n领取步骤：\n\n1. 打开 [活动文档](https://cloud.tencent.com/developer/article/2705075)报名\n2. 审核通过后额度自动发放到小程序后台\n\n**注意**：额度仅限小程序场景调用，不可用于服务端 API。",
-        "link": "https://cloud.tencent.com/developer/article/2705075",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "tencent-tokenhub-newuser-202608",
-        "title": "腾讯云 TokenHub 新人免费体验包",
-        "vendor": "腾讯云 TokenHub",
-        "category": "token",
-        "score": 70,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-12-31T23:59:59+08:00",
-        "summary": "语言与多模态理解模型各 100 万 Tokens，另含生图/生视频/3D",
-        "content": "腾讯云 TokenHub 新用户免费体验包，开通即自动发放，有效期 1 年。\n\n- 语言模型：**每个模型各 100 万 Tokens**\n- 多模态理解模型：**每个模型各 100 万 Tokens**\n- 图像生成：HY-Image-V3.0 **50 次**生成额度\n- 视频生成：混元生视频系列\n- 3D 生成：**10 个混元 3D 模型各 100 积分**\n\n领取步骤：\n\n1. 打开 [TokenHub 产品页](https://cloud.tencent.com/product/tokenhub)开通服务\n2. 额度自动到账，控制台「免费额度」页查看\n3. 按需调用各模型\n\n**注意**：额度按模型独立，不可跨模型挪用；有效期 1 年，过期作废。",
-        "link": "https://cloud.tencent.com/product/tokenhub",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "ctyun-xirang-maas-free-202608",
-        "title": "天翼云息壤每模型送 2500 万 Tokens",
-        "vendor": "天翼云息壤",
-        "category": "token",
-        "score": 82,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": null,
-        "summary": "息壤文本类模型每款 2500 万 Tokens，非主打模型 100 万",
-        "content": "中国电信天翼云息壤 MaaS 平台免费额度，零门槛领取。\n\n- 额度：**文本类模型每模型 2500 万 Tokens**；非主打模型统一 100 万，DeepSeek-V4-Pro / V4-Flash 各 50 万\n- 覆盖：GLM-5、DeepSeek 系列、Qwen3-Max / Qwen3-VL-Plus、豆包 Doubao-Seed 系列、星辰自研模型等\n- 限制：每账号每模型一份，额度耗尽后可切换其他模型继续领用\n\n领取步骤：\n\n1. 打开 [天翼云息壤](https://www.ctyun.cn/product/maas)注册并实名认证\n2. 进入息壤模型推理服务控制台\n3. 在模型广场选模型，零门槛领取免费额度\n\n**注意**：原始「2500 万 Tokens 免费领」公告是**限时两周的领取活动窗口**，并非额度有效期；各档模型额度与有效期以[官方价格文档](https://ctyun.cn/document/10541165/10963340)与控制台实际展示为准。",
-        "link": "https://www.ctyun.cn/product/maas",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zhipu-codingplan-trial-202608",
-        "title": "智谱 GLM Coding Plan 7 天体验卡",
-        "vendor": "智谱",
-        "category": "api-quota",
-        "score": 82,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-03T23:59:59+08:00",
-        "summary": "Coding Plan 7 天体验卡，限量 7 份领完即止",
-        "content": "智谱 BigModel 官方限时活动：GLM Coding Plan 7 天免费体验卡。\n\n- 额度：**7 天免费体验 GLM Coding Plan**（GLM-5.3 驱动）\n- 方式：活动页限时领取，**仅 7 份，领完即止**\n- 有效期：**领取通道开放至 2026-09-03 23:59**\n- 适用：编码场景，体验 Coding Plan 全部能力\n\n领取步骤：\n\n1. 打开 [体验卡活动页](https://bigmodel.cn/activity/trial-card/3PG8IOHPDQ)\n2. 登录 BigModel 账号领取 7 天体验卡\n3. 在编码工具中接入使用\n\n**注意**：体验卡仅 7 份，先到先得，**2026-09-03 已全部领完，活动结束**；与 GLM-4.7-Flash 官方免费档相互独立，细则以活动页为准。",
-        "link": "https://bigmodel.cn/activity/trial-card/3PG8IOHPDQ",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-09-03"
-      },
-      {
-        "id": "monkeycode-free-tier-202608",
-        "title": "MonkeyCode 免费档每日 3000 万 Token",
-        "vendor": "长亭 MonkeyCode",
-        "category": "token",
-        "score": 68,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "¥0 永久免费档每天 3000 万 Token（基础模型），仅限平台内使用",
-        "content": "长亭科技出品的在线 AI 编程开发平台，免费档长期可用。\n\n- 额度：**¥0 永久免费，基础模型每天 3000 万 Token**\n- 环境：云开发环境 1C / 4G，1 个任务并发，浏览器即用\n- 限制：**免费档不赠送积分**；专业模型与旗舰模型在免费档**无额度**（并非不可用）\n- 攒积分：每日签到 100 积分，邀请新用户 +5000 积分（通用机制，非免费档赠送）\n- 付费档：专业会员 ¥99/月（基础+专业模型各 3000 万/天，赠 1 万积分/月）；旗舰会员 ¥499/月（各 6000 万/天，赠 10 万积分/月）\n\n使用步骤：\n\n1. 打开 [MonkeyCode 官网](https://monkeycode-ai.com/)注册\n2. 控制台创建开发任务，每日额度自动到账、不累计\n3. 每日签到与邀请好友攒积分\n\n**注意**：额度仅限平台内使用，不可导出或用于 API；免费档限 1 个任务并发。",
-        "link": "https://monkeycode-ai.com/",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "agnes-free-api-202608",
-        "title": "Agnes AI 全模态免费 API",
-        "vendor": "Agnes AI",
-        "category": "api-quota",
         "score": 62,
         "tags": {
           "duration": "longterm",
@@ -565,411 +128,145 @@
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "文本 / 图像 / 视频全模态免费调用，免费档 RPM 20",
-        "content": "Agnes AI 官方提供的免费 API 访问，覆盖全模态模型。\n\n- 额度：**免费 API 访问**，文本 / 图像 / 视频模型可用\n- 限速：免费档文本模型实际 RPM 20（允许发起 30）\n- 定位：适合演示与个人测试，有基础 TPS 与公平使用配额\n\n使用步骤：\n\n1. 打开 [Agnes AI 平台](https://platform.agnes-ai.com)注册\n2. 生成 API Key\n3. 按[官方文档](https://agnes-ai.com/zh-Hans/docs/tokenplan)配置调用\n\n**注意**：官方未承诺永久免费，配额与限速可能调整；不同密钥类型限速池独立，多开 Key 不提升额度。",
-        "link": "https://platform.agnes-ai.com",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-08-31"
+        "summary": "免绑卡，每月 20,000 PT（约 $20），仅限产品内用",
+        "content": "Perch AI 是面向法律、财务、研究的可验证型工作台，网页、桌面、CLI 共用额度。\n\n- 额度：**每月 20,000 PT**，1 PT = $0.001，约合 **$20**\n- 模型：DeepSeek V4.1 Flash、GLM 5.3 Flash 轮换\n- 限制：免绑卡；**无公开 API**，额度只在三端内用\n- 数据：原文不授权，任务流程会做成衍生数据对外授权\n- 开关：**Starter 数据计划**，默认开、可关\n\n领取步骤：\n\n1. 打开 [chat.perchai.app](https://chat.perchai.app)，用 Google 或 GitHub 登录\n2. 首次登录选 **Starter**，不用邀请码、不排队\n\n**注意**：免费池轮换，Qwen 3.8 Max 只到 11 月 20 日；关掉开关只停未来采集，去标识化后的数据删不掉。",
+        "link": "https://chat.perchai.app",
+        "publishedAt": "2026-11-09",
+        "updatedAt": "2026-11-09",
+        "affiliate": false
       },
       {
-        "id": "qoder-anniversary-202608",
-        "title": "阿里云 Qoder 周年福利 800~2000 次调用",
-        "vendor": "阿里云 Qoder",
-        "category": "credits",
-        "score": 65,
+        "id": "tokenrouter-free-models-202611",
+        "title": "TokenRouter 免费模型池",
+        "vendor": "TokenRouter",
+        "category": "api-quota",
+        "score": 54,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "0 价路由 3 条，免费额度不公开",
+        "content": "TokenRouter（PaleBlueDot AI）是 OpenAI 兼容聚合网关，目录里挂着几条 0 价路由。\n\n- 免费：目录里共 **3 条 0 价路由**\n- 实测：stealth/* 两条匿名路由选了会报不存在或无权限\n- 额度：**未公开**每日次数与 Token 上限\n- 门槛：注册后到控制台建 Key，Key 全局通用\n\n明牌免费模型是 nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free，带 :free 后缀那条才是 0 价。\n\n领取步骤：\n\n1. 打开 [TokenRouter 官网](https://www.tokenrouter.com/)注册账号\n2. 控制台 Token 页创建 API Key\n3. base_url 填 api.tokenrouter.com/v1\n4. 模型名填上面那条 :free ID\n\n**注意**：额度不公开、免费位会轮换；两条 stealth 路由实测选不到，别当主力。",
+        "link": "https://www.tokenrouter.com/",
+        "publishedAt": "2026-11-08",
+        "updatedAt": "2026-11-08",
+        "affiliate": false
+      },
+      {
+        "id": "zcode-weekend-500m-202611",
+        "title": "ZCode 周末送 5 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 93,
         "tags": {
           "duration": "limited",
           "region": "cn"
         },
         "expired": true,
-        "expiryDate": "2026-09-03T23:59:59+08:00",
-        "summary": "个人限领 800~2000 次 Qwen3.8-Max 免费调用",
-        "content": "阿里云智能编程平台 Qoder（原灵码）一周年福利，官方首页活动。\n\n- 额度：**个人限领 800~2000 次 Qwen3.8-Max 免费调用**\n- 模型：阿里旗舰 Qwen3.8-Max\n- 限制：仅限个人用户，活动限时\n\n领取步骤：\n\n1. 打开 [Qoder 官网](https://www.aliyun.com/product/qoder)进入活动入口\n2. 登录阿里云账号领取调用次数\n3. 在 Qoder Desktop / JetBrains 插件内使用\n\n**注意**：分档细节官方未完全公示，以活动页展示为准；活动限时，抓紧领取。",
-        "link": "https://www.aliyun.com/product/qoder",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-08-31"
+        "expiryDate": "2026-11-09T09:00:00+08:00",
+        "summary": "弹窗领 5 亿，周五 23 点生效、周一 09:00 清零",
+        "content": "智谱 ZCode 的周末定量包（WEEKEND BUILD），客户端弹窗一键领，周五晚 23:00 生效、周一早 9:00 清零。\n\n- 额度：**5 亿 GLM-5.3-Flash Token**\n- 生效：**11-06 23:00**，领取后显示「待生效」\n- 失效：**11-09 09:00**，到点清零、不累积\n- 模型：限 **GLM-5.3-Flash**\n- 门槛：登录客户端点弹窗领取即可\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载并更新到最新版\n2. 登录后看左侧弹窗，点「领取」拿到 WEEKEND BUILD\n3. 模型设置 → Start Plan 确认 GLM-5.3-Flash 已启用\n\n**注意**：没弹窗先更新或重启客户端，部分账号到账有延迟；实际额度以客户端弹窗为准，周一 9 点后余额归零。",
+        "link": "https://zcode.z.ai/cn",
+        "publishedAt": "2026-11-06",
+        "updatedAt": "2026-11-07",
+        "affiliate": false
       },
       {
-        "id": "zhipu-glm47flash-free-202608",
-        "title": "智谱 GLM-4.7-Flash 永久免费",
-        "vendor": "智谱",
-        "category": "api-quota",
-        "score": 45,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "官方免费档：GLM-4.7-Flash 输入输出均免费，200K 上下文 / 128K 输出",
-        "content": "智谱 BigModel 官方免费档文本模型，官方价目表标注输入 / 输出均「免费」。\n\n- 额度：**GLM-4.7-Flash 输入 / 输出均免费**，200K 上下文，最大输出 128K\n- 支持：深度思考、Function Calling、MCP 工具调用、上下文缓存、结构化输出\n- 同期其他免费：GLM-4.5-Flash（128K / 96K）、GLM-4-Flash-250414、GLM-Z1-Flash；视觉侧 GLM-4.6V-Flash、GLM-4V-Flash\n- ⚠️ **GLM-4.7-FlashX 是收费档**（输入 0.5 / 输出 3 元每百万 Tokens），别与免费版混淆\n- 当前旗舰已迭代至 GLM-5.3 系列（付费），GLM-4.7 属上一代\n\n领取步骤：\n\n1. 打开 [BigModel 开放平台](https://open.bigmodel.cn/)注册\n2. 控制台创建 API Key，调用 `glm-4.7-flash`\n\n**可用性提醒**：官方明示该模型使用人数众多，高峰期可用性较差、请求可能频繁失败，对稳定性有要求的场景建议选付费模型；免费档另有速率 / 并发限制。\n\n**注意**：细则以[官方定价页](https://docs.bigmodel.cn/cn/guide/start/pricing)为准。",
-        "link": "https://open.bigmodel.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-08-31",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "openrouter-free-202608",
-        "title": "OpenRouter 免费模型池（21 款 $0）",
-        "vendor": "OpenRouter",
-        "category": "api-quota",
+        "id": "wps-lingxi-points-202611",
+        "title": "WPS 灵犀 800 智点/月 + 签到",
+        "vendor": "WPS 灵犀",
+        "category": "credits",
         "score": 72,
         "tags": {
           "duration": "longterm",
-          "region": "global"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "21 款 $0 模型免费调，含 1M 上下文的 Nemotron 3 Ultra、Inkling",
-        "content": "OpenRouter 聚合网关的免费模型池，一个 API Key 调用多家模型的 $0 档。**[实测] 2026-10-02：全站 464 款模型中 21 款输入 $0。**\n\n主力免费模型（按上下文排序）：\n\n| 模型 ID | 上下文 |\n| --- | --- |\n| `thinkingmachines/inkling:free` / `inkling-small:free` | 1M |\n| `nvidia/nemotron-3-ultra-550b-a55b:free` | 1M |\n| `nvidia/nemotron-3.5-lightning:free` | 1M |\n| `nvidia/nemotron-3-super-120b-a12b:free` | 262K |\n| `qwen/qwen3.8-27b:free` | 262K |\n| `inclusionai/ling-3.0-flash-sante:free` | 262K |\n| `google/gemma-4-31b-it:free` | 262K |\n| `poolside/laguna-s-2.1:free`（代码） | 262K |\n| `cohere/north-mini-code:free`（代码） | 256K |\n| `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | 256K |\n| `stealth/space-bunny-alpha`（匿名模型，编码强 + 原生多模态） | 1M |\n| `openrouter/free`（自动路由到免费池） | 200K |\n\n另有 `dots-studio/dots-3-note-preview:free`(512K)、`apodex/apodex-1.1-mini:free`(262K)、`google/gemma-4-26b-a4b-it:free`(262K)、`poolside/laguna-xs-2.1:free`(262K)、`nvidia/nemotron-3.5-content-safety:free`(128K)、`liquid/lfm-2.5-2.6b:free`(64K)。\n\n使用步骤：\n\n1. 打开 [免费模型页](https://openrouter.ai/models?max_price=0)按 Free 标注筛选\n2. 注册并创建 API Key\n3. 模型名直接填上表 ID，或填 `openrouter/free` 让网关自动选\n\n**注意**：\n\n- 免费池上下架频繁，且 `[实测]` 官方 Models API 可实时核对：`GET https://openrouter.ai/api/v1/models` 中 `pricing.prompt == 0` 即免费档\n- 免费档有速率限制，各模型不一，以模型页标注为准\n- 上表旧版的 `Ling 3.0 Flash Fin` 已更名为 `ling-3.0-flash-sante`\n",
-        "link": "https://openrouter.ai/models?max_price=0",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "opencode-zen-free-202608",
-        "title": "OpenCode Zen 免费模型",
-        "vendor": "OpenCode",
-        "category": "api-quota",
-        "score": 55,
-        "tags": {
-          "duration": "longterm",
-          "region": "global"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "10 款免费模型，输入输出均 0 美元；需先充值 $20 起",
-        "content": "OpenCode Zen 模型网关的免费模型，注册后可在编码工具里直接白嫖。\n\n- 额度：官方文档现列 **10 款免费模型**，输入 / 输出 / 缓存读取均 Free\n- 名单：Big Pickle、Space Bunny Free、MiMo-V2.6-Flash Free、MiMo-V2.5 Free、Ling 3.0 Flash Fin Free、Nemotron 3 Ultra Free、Nemotron 3.5 Lightning Free、LongCat 2.5 Preview Free、Muse Spark 1.3 Contributor Free、Jev 1.13 Free\n- 门槛：**需添加账单信息并充值 $20**（含约 $1.23 手续费）才能取 Key\n- 余额 $0 时免费模型仍可用，不产生费用\n- 自动充值：余额低于 $5 会自动充 $20，**可完全禁用**\n- 接入：OpenAI 兼容 API，编码工具里 `/connect` 粘贴 Key 即用\n\n使用步骤：\n\n1. 打开 [OpenCode Zen](https://opencode.ai/zen)登录、添加账单信息并充值\n2. 复制 API 密钥，在编码工具里 `/connect` 粘贴\n3. 只调标注 Free 的模型，不产生费用\n\n**隐私提醒**：这批免费模型多为「限时免费，官方称用于收集反馈改进模型」，随时可能下线；其中仅 Space Bunny Free 与 LongCat 2.5 Preview 官方明确**零留存、不用于训练**。敏感代码建议只走这两款或付费模型。\n\n**注意**：免费名单随官方调整，以[官方文档](https://opencode.ai/docs/zen/)实时列表为准。",
-        "link": "https://opencode.ai/zen",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "nvidia-nim-trial-202608",
-        "title": "NVIDIA NIM 百款模型免费试用",
-        "vendor": "NVIDIA",
-        "category": "api-quota",
-        "score": 52,
-        "tags": {
-          "duration": "longterm",
-          "region": "global"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "100+ 模型免费试用推理，按模型限速",
-        "content": "NVIDIA Build 官方推理试用，免费调用上百个 NIM 模型。\n\n- 额度：**免费推理（Free inference）**，试用按模型限速，具体限额未公开\n- 模型：100+，含 DeepSeek V4、Kimi K3、gpt-oss\n- 另有 Nemotron、FLUX.1 生图及语音、科学计算系列\n- 接入：OpenAI 兼容 API，注册生成 API Key 即可调用\n\n使用步骤：\n\n1. 打开 [NVIDIA Build](https://build.nvidia.com/models) 注册并验证账号\n2. 在 Settings → API Keys 生成密钥\n3. 选择模型按官方示例发起调用\n\n**注意**：试用限额随模型不同且未公开；历史上的「1000 credits」制度已取消，以官网为准；**国内直连较慢**（用户实测 2026-09）。",
-        "link": "https://build.nvidia.com/models",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-09-16"
-      },
-      {
-        "id": "siliconflow-free-models-202608",
-        "title": "硅基流动多款模型免费调用",
-        "vendor": "硅基流动",
-        "category": "api-quota",
-        "score": 58,
-        "tags": {
-          "duration": "longterm",
           "region": "cn"
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "多款模型免费调用：GLM-Z1-9B、Kolors 生图等",
-        "content": "硅基流动 SiliconCloud 大模型云服务平台，多款模型免费调用。\n\n- 对话：**GLM-Z1-9B-0414**（THUDM）输入输出免费\n- 生图：Kolors（可图）免费\n- 语音：星尘 ASR、Qwen3-ASR、SenseVoiceSmall 免费\n- 其他：bge 系列 Embedding / Reranker 免费档\n- 另含 PaddleOCR-VL 免费档\n- 计费：平台按量付费，免费档模型不扣费，注册即可调用\n\n使用步骤：\n\n1. 打开 [硅基流动官网](https://siliconflow.cn/)注册并登录\n2. 在控制台创建 API Key\n3. 调用时选择标注「免费」的模型即可\n\n**注意**：免费档以官方[定价页](https://siliconflow.cn/pricing)实时标注为准。",
-        "link": "https://siliconflow.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-08-30"
+        "summary": "首日做满约 2300 智点，之后每月 800 + 签到",
+        "content": "金山办公 WPS 灵犀的 AI 办公助手，免费体验版每月发智点，新手任务与签到还能叠加。\n\n- 额度：体验版 **每月 800 智点**，免费领取\n- 新手：任务中心全做完，**首日约 2300 智点**\n- 签到：前 6 天 **100 智点/天**，第 7 天起 **200/天**\n- 免费：快速模式**不消耗智点**，问答、表格、基础 PPT\n- 专家模式：消耗智点，可选 Pro/Max 或内置模型\n- 平台：Windows、macOS、Android、iOS，另可网页版\n\n领取步骤：\n\n1. 打开 [灵犀官网](https://www.lingxi.cn/)下载客户端，或直接用网页版\n2. 左下角智点余额 → 任务中心，签到并领任务奖励\n3. 「智点详情」可看余额、获得明细与到期时间\n\n**注意**：2300 = 月度 800＋客户端 800＋群聊 400＋专家 200＋首日签到 100，任务要手动点「去领取」，额度以任务中心为准；智点只用于专家模式，规则见[官方说明文档](https://www.lingxi.cn/docs)。",
+        "link": "https://www.lingxi.cn/download",
+        "publishedAt": "2026-11-06",
+        "updatedAt": "2026-11-06",
+        "affiliate": false
       },
       {
-        "id": "bailian-newuser-202608",
-        "title": "阿里云百炼新人每模型 100 万 Token",
-        "vendor": "阿里云百炼",
-        "category": "token",
-        "score": 65,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "每个模型独立赠送 100 万 Token，有效期 90 天",
-        "content": "阿里云百炼新用户福利，开通即自动发放（限中国内地服务部署范围的模型）。\n\n- 额度：**每个模型均有独立免费额度，通常为 100 万 Token**\n- 有效期：**开通后 90 天**，过期自动失效，不补发、不延期、不重置\n- 独立性：不同模型（含同一模型的带日期快照版本）额度互不互通；某模型用完不会自动切到其他模型，需自行改 `model` 参数\n- 共享：主账号与 RAM 子账号共享同一额度池\n- 例外：Paraformer、SenseVoice 语音识别系列为**每月 1 日 0 点自动发放**，有效期 1 个月，不走 90 天新人额度\n\n领取步骤：\n\n1. 打开 [百炼官网](https://www.aliyun.com/product/bailian)开通服务\n2. 额度自动到账\n3. 在控制台「免费额度」页查看各模型剩余量\n\n**注意**：官方未公布「全部模型叠加总额」这一数字，站内不做合计推算；细则以[官方文档](https://help.aliyun.com/zh/model-studio/new-free-quota)为准。",
-        "link": "https://www.aliyun.com/product/bailian",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "longcat-newbie-202608",
-        "title": "LongCat 新人礼 1000 万 Tokens",
-        "vendor": "LongCat",
-        "category": "token",
-        "score": 55,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "注册认证后赠 1000 万 Tokens，有效期 30 天",
-        "content": "美团 LongCat AI 开放平台新人福利。\n\n- 额度：新用户完成认证后赠送 1000 万 Tokens\n- 有效期：30 天，过期失效\n- 实名：官方 FAQ 明确「充值和使用服务均**无需强制实名认证**」，实名认证仅是充值 / 购买资源包 / 开票的前置条件\n- 计费：Token 资源包限时抢购（10:00 / 16:00 / 21:00 / 23:00 放货），购买后 30 天有效；按量付费余额长期有效；**Cache 命中免费，不计入消耗**\n\n使用步骤：\n\n1. 打开 [LongCat 开放平台](https://longcat.chat/platform/product)注册美团账号\n2. 在「账号信息及配置」完成个人实名认证\n3. 控制台创建 API Key 接入\n\n**注意**：邀请叠加额度、「首购返 5%」等说法未见官方规则页，站内不做承诺；规则以[官方 FAQ](https://longcat.chat/platform/docs/zh/FAQ.html)与更新日志为准。",
-        "link": "https://longcat.chat/platform/product",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "sensenova-free-202608",
-        "title": "商汤日日新 6 万积分/5 小时",
-        "vendor": "商汤日日新",
-        "category": "credits",
-        "score": 58,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "公测期免费 6 万积分/5 小时刷新，注册即用",
-        "content": "商汤日日新 SenseNova 大模型平台公测福利，公测期完全免费（用户实测 2026-08，以官方为准）。\n\n- 额度：**Free 档 60,000 积分 / 5 小时**，周期自动刷新\n- 模型：SenseNova 6.8 Flash Lite、U1 Fast\n- 特殊模型除外\n- 实测：另可调 DeepSeek-V4-Pro、Kimi K3 等\n- 含 GLM-5.2 共 7 个模型\n- 附加：原生多模态、Cowork-Skills 办公特化\n- 最多建 20 个 API Key\n\n使用步骤：\n\n1. 打开 [日日新官网](https://www.sensenova.cn/)注册并登录\n2. 进入控制台创建 API Key\n3. 调用即消耗免费积分，每 5 小时刷新\n\n**注意**：Free 档标注「限时放量」，实测短时调用限速较严、周用量约 60 万；付费档位（Lite / Pro）即将上线，以[官方公告](https://www.sensenova.cn/token-plan)为准。",
-        "link": "https://www.sensenova.cn/token-plan",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-09-15"
-      },
-      {
-        "id": "workbuddy-monthly-202608",
-        "title": "WorkBuddy 免费权益（签到暂停）",
+        "id": "workbuddy-hy4-free-202611",
+        "title": "WorkBuddy Hy4 限时免费",
         "vendor": "WorkBuddy",
         "category": "credits",
-        "score": 78,
+        "score": 67,
         "tags": {
-          "duration": "longterm",
+          "duration": "limited",
           "region": "cn"
         },
         "expired": false,
-        "expiryDate": null,
-        "summary": "签到暂不可用，限免 Hy3 / Step-5-Preview 仍可用",
-        "content": "腾讯旗下 WorkBuddy（AI Agent 办公工作台）免费权益。**积分签到入口已下线，暂时无法签到**（2026-10 实测），恢复时间官方未公布。\n\n- 签到：**暂不可用**，客户端「今日礼包」入口已消失\n- 限免模型：**Hy3、Step-5-Preview 可免费使用**\n- 额度：体验版每月发放 500 积分（限免），当月有效、不结转\n- 其他：代码补全 5,000 次/月、3 个自动任务、Auto 模型调度\n\n使用步骤：\n\n1. 打开 [WorkBuddy 官网](https://www.workbuddy.cn/)下载客户端并登录\n2. 选限免模型 Hy3 / Step-5-Preview 对话，不消耗积分\n3. 体验版积分按月自动发放，在「设置 - 用量」查看余额\n\n**注意**：签到入口已下线，原「每日签到领 100 积分」暂停；积分与限免名单以客户端内为准，规则详见[官方积分说明](https://www.workbuddy.cn/docs/workbuddy/Credits)。\n\n**核验说明（2026-10-14）**：签到下线与限免模型依据用户提供的客户端实测信息录入 `[用户实测]`；未逐项核对官方文档，以客户端内实际显示为准。",
-        "link": "https://www.workbuddy.cn/events/invite?inviteCode=b8f0u7pw09r",
-        "affiliate": true,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-14"
+        "expiryDate": "2026-11-15T23:59:59+08:00",
+        "summary": "Hy4 限免至 11 月 15 日，每日送免费额度",
+        "content": "腾讯混元 Hy4 于 11 月 4 日正式上线，WorkBuddy 国内版与国际版同步首发接入，客户端模型列表直接标「限时免费」。\n\n- 时间：11 月 4 日至 11 月 15 日 23:59（北京时间）\n- 定位：最新旗舰模型，Agent 与多模专长\n- 计费：消耗速度 **0.00x**，额度内不扣积分\n- 额度：**每日赠送免费额度**，订阅用户享更高配额\n- 触及额度：可继续消耗积分使用，页面提示重置时间\n- 同期：Hy3 限免一并延长至 11 月 15 日 23:59\n\n领取步骤：\n\n1. 打开 [WorkBuddy](https://www.workbuddy.cn/events/invite?inviteCode=9k2j6pspbtl10) 注册并下载客户端\n2. 登录后在模型选择器选带「限时免费」标记的 Hy4\n3. 正常对话或跑 Agent 任务，用量处核对倍率 0.00x\n\n**注意**：生图、生视频任务会切换多模态模型，按正常规则消耗积分；资源繁忙时会排队；额度与倍率以客户端模型选择器实显为准。",
+        "link": "https://www.workbuddy.cn/events/invite?inviteCode=9k2j6pspbtl10",
+        "publishedAt": "2026-11-04",
+        "updatedAt": "2026-11-04",
+        "affiliate": true
       },
       {
-        "id": "trae-work-checkin-202608",
-        "title": "Trae 签到领 100 积分",
-        "vendor": "Trae Work",
+        "id": "trae-bao-free-week-202611",
+        "title": "TRAE 宝限免一周不扣积分",
+        "vendor": "TRAE",
         "category": "credits",
-        "score": 90,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "免费用户每日签到 100 通用积分，会员每日 200；积分在持续下调",
-        "content": "TRAE 中国版积分福利，每日签到长期有效。\n\n- 免费用户：**每日签到 100 通用积分**\n- 付费会员：每日 200 通用积分（多领 100）\n- 有效期：31 个自然日，可在 TraeCode 与 TraeWork 通用\n- 月上限：按 31 天计，免费档 3100、会员 6200\n- 注册赠送：一次性 4000 = 通用 2000 + Work 专属 2000\n- 每月赠送：500 通用积分 / 月（所有用户自动获得，当月有效）\n- 邀请好友：邀请人与被邀人各得 500 Work 专属积分，阶梯奖励最高 3500\n\n⚠️ **签到积分在持续下调**：初期 200 → 2026-09 降为 150 → 目前 100。官方明确后续还有社区活动等积分渠道，单次活动奖励通常比日常签到更集中。\n\n签到步骤：\n\n1. 打开 [TRAE 官网](https://www.trae.cn/)注册并登录\n2. TraeWork 桌面端 / 网页端 / 移动端内签到\n3. 积分 31 天内有效，优先消耗最早到期的那笔\n\n**注意**：票证数字为客户端实测值（截图 / 日志），官方文档常滞后于客户端调整；\n以客户端内实际到账为准；细则见[官方套餐文档](https://docs.trae.cn/ide_plans-and-billing)与[官方社区](https://forum.trae.cn/)。",
-        "link": "https://www.trae.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "qianwen-office-daily-202608",
-        "title": "千问办公每日领 100 积分（以客户端为准）",
-        "vendor": "千问办公",
-        "category": "credits",
-        "score": 74,
-        "tags": {
-          "duration": "longterm",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": null,
-        "summary": "个人版每日登录领 100 积分，00:00 刷新；以客户端实际显示为准",
-        "content": "阿里云千问办公（QwenWork）个人免费版长期福利。\n\n- 额度：**每日登录奖励 100 积分**，每天 00:00 刷新\n- 新用户：首次进入个人版加送 2000 积分，有效期 3 个月\n- 用途：PPT / 网页 / 文档等任务按积分计费，一次约 500 积分\n- 免费版另有：并行任务 10 个、发布网页 5 个、1G 云盘\n\n领取步骤：\n\n1. 打开 [千问办公首页](https://qwenwork.cn/)注册并登录阿里云账号\n2. 首次进入「我的 AI 团队」领新人礼\n3. 每天登录即可领当日积分\n\n⚠️ **本条数字的核实状态**：每日 100 积分、新人 2000 积分 / 3 个月、单次任务约 500 积分三项，均来自早期用户实测，**未在官方帮助文档（help.aliyun.com/zh/qwenwork/qw-personal-benefits）逐条核实**，且本条 `updatedAt` 已停滞一个多月。\n\n**注意**：官方标注每日奖励为限时权益，数值可能调整；**积分数量与任务消耗请以客户端内实际显示为准**，细则见[官方帮助文档](https://help.aliyun.com/zh/qwenwork/qw-personal-benefits)。",
-        "link": "https://qwenwork.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-08-30",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zcode-weekend-202608",
-        "title": "ZCode 周末送额度活动",
-        "vendor": "智谱",
-        "category": "token",
-        "score": 98,
+        "score": 75,
         "tags": {
           "duration": "limited",
           "region": "cn"
         },
         "expired": true,
-        "expiryDate": "2026-08-31T09:00:00+08:00",
-        "summary": "3 亿 Token 免费体验 GLM-5.3-Flash",
-        "content": "ZCode 周末送额度活动，免费体验 GLM-5 首个原生多模态模型 GLM-5.3-Flash。\n\n- 额度：**3 亿 Token**，仅限 ZCode 内使用\n- 适用：仅 GLM-5.3-Flash，在「模型设置」切「体验套餐」\n- 条件：新老用户均可，每账号限领一次\n- 时间：周五 20:00 生效，周一 09:00 到期自动失效\n\n领取步骤：\n\n1. 前往 [ZCode 中文官网](https://zcode.z.ai/cn) 下载或升级 ZCode 至 3.10.0+\n2. 周五 15:00 起在客户端左下角活动卡片「领取」\n3. 额度 20:00 生效，切体验套餐即可用",
-        "link": "https://zcode.z.ai/cn",
-        "affiliate": false,
-        "publishedAt": "2026-08-28",
-        "updatedAt": "2026-09-04"
+        "expiryDate": "2026-11-08T23:59:59+08:00",
+        "summary": "TRAE 宝问答与派任务不扣积分，到 11 月 8 日",
+        "content": "TRAE 宝是 TRAE 桌面端的开发者个人助理，11 月 2 日官宣限时免费一周。\n\n- 时间：11 月 2 日起至 11 月 8 日 23:59（北京时间）\n- 范围：用 TRAE 宝问答、下达任务，全部不扣积分\n- 场景：写功能、修 bug、审 PR、整理文档等开发任务\n- 限制：暂不支持视频生成；无邀请码、无需报名\n\n领取步骤：\n\n1. 打开 [TRAE 下载中心](https://www.trae.cn/download)装最新版桌面端\n2. 登录后进 Agent 窗口，点左侧导航栏「TRAE 宝」\n3. 直接说需求；要处理项目可先打开项目文件夹\n\n**注意**：免费只覆盖 TRAE 宝内的问答与任务，不是 TRAE 全部功能免费；结束后恢复按用量扣积分，细则以[官方活动页](https://docs.trae.cn/ide_use-trae-bao-for-free-with-no-credits-required)为准。",
+        "link": "https://www.trae.cn/download",
+        "publishedAt": "2026-11-02",
+        "updatedAt": "2026-11-02",
+        "affiliate": false
       },
       {
-        "id": "autoclaw-zhongqiu-202609",
-        "title": "AutoClaw 中秋领 5 亿 Token",
-        "vendor": "智谱",
-        "category": "token",
-        "score": 86,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-22T23:59:59+08:00",
-        "summary": "9/21 领 2 亿、9/22 领 3 亿 Token，当日有效",
-        "content": "智谱 AutoClaw（澳龙）「Token 充能季·中秋限定」，官方飞书文档已公告，9/21 起分批开领。\n\n- 额度：**9/21 领 2 亿、9/22 领 3 亿 Token**\n- 模型：GLM-5.3-Flash，仅限客户端内消耗\n- 门槛：无，所有用户登录即领\n- 时效：奖励当日 24:00 失效，过期不补\n- 会员：9/23-9/27 付费会员每日再领 500-8,000 积分\n- 注意：同账号多档位按最高档发放，不叠加\n\n领取步骤：\n\n1. 打开 [AutoClaw 官网](https://autoclaw.zhipuai.cn/)下载桌面端登录\n2. 9/21、9/22 当天 0:00 后进「灵感与活动」领取\n3. 积分当日 24:00 前在客户端内用完\n\n**注意**：每日奖励仅当日有效，记得当天用完；付费会员档位细则以[官方活动文档](https://zhipu-ai.feishu.cn/docx/DVm0d6jByosHOKxKXTicpmuxnig)为准。",
-        "link": "https://autoclaw.zhipuai.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-09-18",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "qoder-qwen38flash-free-202609",
-        "title": "Qoder 免费用 Qwen3.8-Flash",
-        "vendor": "阿里云 Qoder",
+        "id": "unisound-uplan-free-202611",
+        "title": "云知声 U Plan 每周 2500 积分",
+        "vendor": "云知声",
         "category": "credits",
-        "score": 82,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": true,
-        "expiryDate": "2026-09-30T23:59:59+08:00",
-        "summary": "Flash 免费用到 9/30，每日再领 100 Credits",
-        "content": "Qoder 官方公告：Qwen3.8-Flash 客户端内限时免费用，另加每日可领的通用额度。\n\n- 限时：**Qwen3.8-Flash 全天免费**，至 9 月 30 日截止\n- 计费：该模型系数由 0.1× 降至 0.0×，不扣 Credits\n- 每日：**登录再领 100 通用 Credits**，漏领不补\n- 时效：每日登录奖励自领取起 30 天有效，可累积\n- 范围：国际版与 CN 版新老个人用户，含免费用户\n- 可用端：桌面端、IDE、JetBrains 插件、CLI\n\n使用步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/)下载桌面端登录\n2. 模型选择器选 Qwen3.8-Flash 即用，无需领资格\n3. 左下角用量面板 → 礼物图标领 100 Credits\n\n**注意**：Flash 免费 9 月 30 日结束，之后按届时系数计费；每日奖励未公布结束时间，可同享；细则以[官方公告](https://mp.weixin.qq.com/s/8hl-9hfkyLmnBuQOKGE5zQ)为准。",
-        "link": "https://qoder.cn/activities",
-        "affiliate": false,
-        "publishedAt": "2026-09-18",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zcode-flash-100m-daily-202609",
-        "title": "ZCode 补偿每日领 1 亿 Token",
-        "vendor": "智谱",
-        "category": "token",
-        "score": 90,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-07T23:59:59+08:00",
-        "summary": "每日 1 亿 Token 补偿至 10/7，付费用户另有 4+4 张重置卡",
-        "content": "ZCode 就代码上传争议公布补偿方案，9 月 28 日 10:30 起生效，连续 10 天发放 Token。\n\n- 额度：**每日 1 亿 Token，共 10 万份/天**，先到先得\n- 时间：9 月 28 日至 10 月 7 日，连发 10 天\n- 适用：GLM-5.3-Flash（以客户端活动卡为准），仅限客户端内使用\n- **付费 / 回归用户额外补偿**：4 张周额度重置卡 + 4 张 5 小时额度重置卡，有效期 1 个月（可跳过已用的额度窗口）\n\n领取步骤：\n\n1. 打开 [ZCode 官网](https://zcode.z.ai/cn)下载并升级客户端\n2. 登录后进「灵感与活动」领取当日 Token 与重置卡\n3. 模型选择器选 GLM-5.3-Flash 使用\n\n**注意**：活动源于 9/18 代码上传争议，官方已移除上传链路、删除云端数据并开源（Apache-2.0）；「不发起不上云」承诺与每日份额领取细则以官方公告为准。",
-        "link": "https://zcode.z.ai/cn",
-        "affiliate": false,
-        "publishedAt": "2026-09-28",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "zhipu-qingyan-shuangjie-202609",
-        "title": "清言双节每日领 2000 积分",
-        "vendor": "智谱清言",
-        "category": "credits",
-        "score": 78,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-07T23:59:59+08:00",
-        "summary": "双节每日登录积分 ×10，消耗 100% 返还，上限 15 万",
-        "content": "智谱清言「双节送好礼」官方活动，9 月 25 日至 10 月 7 日三重积分福利。\n\n- 每日登录：普通用户 **2000 积分/天**（VIP 4000 / SVIP 8000），**24 小时内有效**\n- 消耗返还：活动期间消耗积分节后 **100% 返还**，上限 15 万\n- 返还领取：**10 月 8 日至 31 日**登录自动到账，返还积分有效期 1 个月\n- 晒路书：提交 AI 路书送 **10,000 积分**，10 篇优质加赠 VIP 季卡\n- 关联：同期间智谱 Coding Plan 取消工作日高峰限制，夜间 GLM-5.3-Flash 零消耗延长至 10/7\n\n领取步骤：\n\n1. 打开 [活动页](https://agentmore.chatglm.cn/shareFile/6ab4ac5845a6d6277b20f54c)或登录清言\n2. 每日登录自动发放 ×10 积分，当天用完（24h 过期）\n3. 节后 10 月 31 日前登录，领取消耗返还\n\n**注意**：赠送积分 24 小时过期，当天记得用完；返还逾期未登录不再补发；VIP 季卡名单 10 月 12 日官方公布；细则以活动页为准。",
-        "link": "https://agentmore.chatglm.cn/shareFile/6ab4ac5845a6d6277b20f54c",
-        "affiliate": false,
-        "publishedAt": "2026-09-25",
-        "updatedAt": "2026-10-02"
-      },
-      {
-        "id": "qoder-daily-credits-202609",
-        "title": "Qoder 每日领 100 Credits",
-        "vendor": "阿里云 Qoder",
-        "category": "credits",
-        "score": 76,
+        "score": 65,
         "tags": {
           "duration": "longterm",
           "region": "cn"
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "每日登录领 100 通用 Credits，可累积",
-        "content": "Qoder「每日登录有礼」长期奖励，官方公告暂未给出结束时间。\n\n**国际版（Qoder）**\n\n- 额度：每日 100 通用 Credits\n- 时间：每日 10:00（UTC+8）开放新一轮，窗口持续到次日 10:00 前\n- 规则：每账号每轮限领一次，**需主动领取**，错过不可补领\n- 有效期：自领取起 30 天，未到期可跨轮累积\n- 计入 Add-on Credits，不改变订阅档位\n- 可用端：桌面端、IDE、JetBrains 插件、CLI、QoderWake、Cloud Agents、移动端、网页版\n\n**CN 版（QoderWork CN）**\n\n- 额度：每日签到领 1 个 100 Credits 资源包\n- 刷新：**每天 0 点（UTC+8）**刷新签到状态，当天未签不补签\n- 有效期：资源包自领取起 30 天\n\n领取步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/)下载桌面端登录\n2. 国际版：左下角用量面板 → 礼物图标；CN 版：客户端内签到入口\n3. 每天回来领一轮，漏领不补\n\n**注意**：国际版走 10:00 领奖制、CN 版走 0 点签到制，机制不同勿混；细则以[官方公告](https://docs.qoder.com/zh/events/100credits)与[CN 版条款](https://docs.qoder.cn/product-overview/daily-check-in-100-credits-reward-program-terms)为准。",
-        "link": "https://qoder.cn/activities",
-        "affiliate": false,
-        "publishedAt": "2026-09-18",
-        "updatedAt": "2026-10-02"
+        "summary": "每周 2500 积分，含 ASR 8 小时、TTS 4 万字",
+        "content": "云知声 U Plan 上线，Free 档 0 元订阅，按周发积分，并赠送语音与文档识别额度。\n\n- 积分：**每周 2500**，另加 5 小时动态窗口 500\n- 文本：U2-Flash（编程办公）、U2-Med（医疗）\n- 赠送：ASR 8 小时、TTS 4 万字\n- 赠送：OCR 与 OCR-Med 各 737.5 万 Token\n- 赠送：RadiMed 47.5 万 Token\n- 参考：官方估 90% 缓存命中时约 6068 万 Token/周\n\n领取步骤：\n\n1. 打开 [U Plan 套餐页](https://maas.unisound.com/token-plan)\n2. 注册登录 Token Hub\n3. 订阅 Free 档，拿专属 API Key 与 Base URL\n4. 在 Agent 工具里填模型与端点即可调用\n\n**注意**：积分每周刷新不结转；忙时双倍消耗目前免除；赠送额度不随周刷新，用完即止；额度按 90% 缓存命中估算，实际按抵扣系数结算。",
+        "link": "https://maas.unisound.com/token-plan",
+        "publishedAt": "2026-11-01",
+        "updatedAt": "2026-11-01",
+        "affiliate": false
       },
       {
-        "id": "minimax-code-checkin-202609",
-        "title": "MiniMax Code 签到双倍积分",
-        "vendor": "MiniMax",
+        "id": "apigoto-realname-plus-202611",
+        "title": "APIGOTO 实名送 1 个月 PLUS",
+        "vendor": "APIGOTO",
         "category": "credits",
-        "score": 74,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-10-07T23:59:59+08:00",
-        "summary": "每日签到领双倍免费积分，至 10/7",
-        "content": "MiniMax Code 官方限时活动，随新模型 M3.1-Flash-Preview 上线开启，9 月 28 日至 10 月 7 日签到积分翻倍。\n\n- 额度：**每日签到领双倍免费积分**\n- 范围：新老用户同享，无需订阅\n- 适用：全模型通用，含 M3.1-Flash-Preview、H3\n- 重置：活动期 Token Plan 另有额度重置，时点以站内信为准\n\n领取步骤：\n\n1. 打开 [MiniMax Code 官网](https://agent.minimax.cn/)下载桌面端并登录\n2. 客户端内完成每日签到，积分到账\n3. 选 M3.1-Flash-Preview 或 H3 系模型使用\n\n**注意**：双倍积分仅 9/28–10/7 有效，每天记得签到；报料称 9/28–9/30 每日 11:00、16:00 额外重置 Token Plan 额度，以客户端站内信为准。",
-        "link": "https://agent.minimax.cn/",
-        "affiliate": false,
-        "publishedAt": "2026-09-28",
-        "updatedAt": "2026-09-28"
-      },
-      {
-        "id": "qiniu-conatus-free-202610",
-        "title": "七牛云 Conatus 免费 1 亿/日",
-        "vendor": "七牛云",
-        "category": "token",
-        "score": 81,
-        "tags": {
-          "duration": "limited",
-          "region": "cn"
-        },
-        "expired": false,
-        "expiryDate": "2026-11-30T23:59:59+08:00",
-        "summary": "实名后每日 1 亿 Token，免费用到 11 月底",
-        "content": "七牛云 1024 程序员节上线 Conatus 融合模型，实名后每日送 1 亿 Token，不充值也能用。\n\n- 额度：**每日 1 亿 Token**，输入、输出、缓存输入都计入\n- 限时：**10 月 24 日 ～ 11 月 30 日 23:59**，到期即停\n- 规格：1M 上下文、128K 输出，支持工具调用与图像理解\n- 接口：OpenAI 与 Anthropic 双协议通吃\n\n领取步骤：\n\n1. 打开 [七牛云活动页](https://www.qiniu.com/ai/free-models/conatus-2026)，登录做实名\n2. 控制台模型页创建 API Key，同账号共用一个额度池\n\nBaseURL：https://api.qnaigc.com/v1，模型名 **qiniu/conatus-free**。\n\n**注意**：单笔充值 >100 元（含历史）可升每日 10 亿，多笔不累加；额度每日 00:00 清零、用完即拒，不扣余额也不切付费模型；底层模型匿名可能轮换、无 SLA，别押主链路。",
-        "link": "https://www.qiniu.com/ai/free-models/conatus-2026",
-        "affiliate": false,
-        "publishedAt": "2026-10-25",
-        "updatedAt": "2026-10-25"
-      },
-      {
-        "id": "xfyun-maas-sparkx26-10b-202610",
-        "title": "星辰 MaaS 领 10 亿 Token",
-        "vendor": "讯飞星辰 MaaS",
-        "category": "token",
-        "score": 72,
+        "score": 62,
         "tags": {
           "duration": "unknown",
           "region": "cn"
         },
-        "expired": false,
+        "expired": true,
         "expiryDate": null,
-        "summary": "限 Spark-X2.6，10 亿额度 31 天有效",
-        "content": "讯飞星辰 MaaS 在 1024 开发者节放出 Spark-X2.6 免费额度，零门槛领取，额度直接绑在 API Key 上。\n\n- 额度：**10 亿 Token**，仅限 Spark-X2.6 调用\n- 模型：293B-A30B MoE，**1M 上下文**，国产算力训练\n- 门槛：注册 + 实名认证，每账号限领一次\n- 时效：领取后 **31 天**内有效，用不完作废\n\n领取步骤：\n\n1. 打开 [星辰 MaaS 首页](https://maas.xfyun.cn/overview)，登录并完成实名\n2. 「常用功能」第一格点「Spark-X2.6 赋能开发者」\n3. 选一个或新建 API Key，确认领取绑定额度\n4. 按页面示例填接口地址与模型名 spark-x2.6 即可调用\n\n**注意**：领取页底部「额度用尽自动切换按量计费」勾选后额度耗尽会直接扣款，只想白嫖记得取消勾选；31 天从领取当天起算，一时用不上先别点；官方未公布活动截止日，以领取页实显为准。",
-        "link": "https://maas.xfyun.cn/overview",
-        "affiliate": false,
-        "publishedAt": "2026-10-25",
-        "updatedAt": "2026-10-25"
+        "summary": "活动已取消，实名不再送会员",
+        "content": "APIGOTO 是统一的 LLM API 网关，桌面端叫 RouterCode。原「实名认证送一个月 PLUS」活动已于 2026 年 11 月 1 日公告取消，完成实名不再赠送会员。\n\n- 活动期：至 2026 年 11 月 1 日，官方当天发公告叫停\n- 已领用户：不受影响，按原额度和有效期用到期满\n- 现行 PLUS：月付 **29.9 元**，总额度 5000 万 TCredits\n- 另调整：国产模型订阅计算比例统一上调至 **125%**\n- 限制：**不含 Claude**，所有订阅套餐均不支持\n\n当时领取步骤（已失效）：\n\n1. 注册账号并完成实名认证\n2. 实名通过后在订阅页领一个月 PLUS\n\n**注意**：活动已结束，不再有免费会员；平台未公示经营主体，备案信息存疑，付费前请自行评估风险。",
+        "link": "https://www.apigoto.com/",
+        "publishedAt": "2026-11-01",
+        "updatedAt": "2026-11-01",
+        "affiliate": false
       },
       {
         "id": "minimax-code-checkin-202610",
@@ -986,9 +283,332 @@
         "summary": "每日签到 400 积分，第 4、7 天各 1000",
         "content": "MiniMax Code 是 MiniMax 的桌面 Agent 客户端（macOS / Windows），官方每日签到长期送积分，免费用户也能签。\n\n- 签到：**每日 400 积分**，需在客户端内手动领取\n- 加码：连续第 4 天、第 7 天单日 **1000 积分**\n- 周累计：连签 7 天共 **4000 积分**\n- 时效：积分自到账起 **30 天有效**，可累积使用\n- 用途：编程、深度调研、数据库调用、PPT 与音视频\n\n签到步骤：\n\n1. 打开 [MiniMax Code 下载页](https://agent.minimaxi.com/download)装桌面端\n2. 登录后找到「每日签到」卡片，点一下领当日积分\n3. 第 4、7 天别断签，加码日漏掉就要重新轮\n\n**注意**：第 4、7 天的加码替代当天常规额度而非叠加，连签中断会错过加码日；额度与规则以客户端内显示为准。",
         "link": "https://agent.minimaxi.com/download",
-        "affiliate": false,
         "publishedAt": "2026-10-30",
-        "updatedAt": "2026-10-30"
+        "updatedAt": "2026-10-30",
+        "affiliate": false
+      },
+      {
+        "id": "coze-daily-login-202610",
+        "title": "扣子每日登录领 1500 积分",
+        "vendor": "扣子 Coze",
+        "category": "credits",
+        "score": 73,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日登录领 1500 活动积分，当日有效",
+        "content": "扣子（Coze）个人版的每日登录福利，官方活动积分规则长期有效，免费版同样能领。\n\n- 额度：**每日登录领 1500 活动积分**\n- 时效：**自发放起 1 天有效**，隔天即归零\n- 累积：每日积分独立计时，可累计使用\n- 新人：首次注册再送 **1500 积分**，30 天有效\n- 范围：个人版含免费版，企业版不参与\n\n领取步骤：\n\n1. 打开 [扣子](https://www.coze.cn/)登录账号，网页端或客户端均可\n2. 登录后实时或 T+1 发放，去「订阅管理 - 总积分」查余额\n3. 当天就用掉，留到第二天会归零\n\n**注意**：抵扣时优先消耗最快到期的积分，同类到期按每日登录 → 新人 → 订阅 → 增购的顺序；活动为不定期开放，官方保留调整权，以[活动规则](https://docs.coze.cn/guides_coze_points_activity_rules)为准。",
+        "link": "https://www.coze.cn/",
+        "publishedAt": "2026-10-30",
+        "updatedAt": "2026-10-30",
+        "affiliate": false
+      },
+      {
+        "id": "iflytek-astudio-checkin-202610",
+        "title": "讯飞 AStudio 每日领 100 积分",
+        "vendor": "讯飞 AStudio",
+        "category": "credits",
+        "score": 66,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "体验版每日 100 积分，新人再送 1000",
+        "content": "AStudio 是讯飞的本地 AI 生产力工作台，体验版当前限时免费，每日登录就送积分。\n\n- 额度：体验版**每日登录 100 积分**，标准版 200、高级版 400\n- 新人：下载登录再送 **1000 积分**，3 个月有效\n- 时效：每日登录积分自领取起 **31 天有效**\n- 范围：体验版限时免费，不付费也能每天领\n- 模型：可选最新旗舰模型，支持语音转写与付费数据库\n\n领取步骤：\n\n1. 打开 [AStudio 下载页](https://agent.xfyun.cn/studio-download)装客户端\n2. 用手机号或账号登录，新人 1000 积分自动到账\n3. 之后每天登录即领当日积分\n\n**注意**：体验版限时免费，官方未公布结束时间，改为收费后本条即失效；抵扣时优先扣到期更早的积分，同到期日按活动 → 套餐 → 增购顺序；以[官方价格页](https://agent.xfyun.cn/studio-guide/pricing)为准。",
+        "link": "https://agent.xfyun.cn/studio-download",
+        "publishedAt": "2026-10-30",
+        "updatedAt": "2026-10-30",
+        "affiliate": false
+      },
+      {
+        "id": "openkylin-token-checkin-202610",
+        "title": "openKylin 签到领免费 Token",
+        "vendor": "openKylin 开放麒麟",
+        "category": "token",
+        "score": 56,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "装系统领 Key 后每日签到，额度可累积",
+        "content": "openKylin 3.0 的 Token 中心向所有用户开放免费 Token，每日签到即发，额度可持续累积。\n\n- 额度：**每日签到领免费 Token**，自动入余额\n- 累积：未用完的额度留在账户，不清零\n- 模型：qwen3.8-max、deepseek-v4-pro 等旗舰\n- 接口：**OpenAI 兼容**，可接 Codex、Cline 等工具\n- 门槛：**必须先装 openKylin 3.0 系统**才能申请 Key\n\n领取步骤：\n\n1. 安装 openKylin 3.0，打开系统预装的 Token 中心客户端\n2. 进入「Token 申请和管理」提交申请，审批通过后领 Key\n3. 切到「打卡签到」页每日签到，额度自动到账\n\n**注意**：完整 Key 只在领取时显示一次，务必当场保存；请求地址为 llm-gateway.openkylin.top，签到额度以客户端签到页为准。",
+        "link": "https://www.openkylin.top/news/4131-cn.html",
+        "publishedAt": "2026-10-30",
+        "updatedAt": "2026-10-30",
+        "affiliate": false
+      },
+      {
+        "id": "cmcc-lingxi-daily-checkin-202610",
+        "title": "灵犀每日签到领 200 算力豆",
+        "vendor": "中国移动",
+        "category": "credits",
+        "score": 52,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日签到 200 算力豆≈200 万 Token，31 天有效",
+        "content": "中国移动灵犀「AI每日畅想计划」：客户端内签到领算力豆，算力豆是跨客户端的统一算力计量单位，按 Token 用量实时扣减。\n\n- 额度：**签到领 200 算力豆**，约 200 万 Token\n- 有效期：每笔自发放起 **31 天**，过期作废\n- 兑换：1 算力豆 ≈ 150–11000 Token，按模型区分\n- 范围：GLM、Kimi、DeepSeek、Qwen 等主流模型\n- 通用：灵犀、WorkBuddy、Qoder CN、千问共用账号\n- 门槛：需用中国移动手机号登录客户端\n\n领取步骤：\n\n1. 打开[灵犀 AI 助手](https://ai.soho.komect.com)，用移动手机号登录\n2. 客户端内点「算力豆免费领」活动卡片，进活动详情领 200 豆\n3. 到账后在个人中心「算力豆」查余额与消耗明细\n\n**注意**：用户实测（2026-10）签到到手 200 豆、31 天有效；[兑换比例](https://ai.soho.komect.com/ai/llm/order-center/public/pages/exchange-rules)不定期调整，以活动页实显为准。",
+        "link": "https://ai.soho.komect.com",
+        "publishedAt": "2026-10-29",
+        "updatedAt": "2026-10-29",
+        "affiliate": false
+      },
+      {
+        "id": "doubao-daily-quota-202610",
+        "title": "豆包电脑版签到领 200 额度",
+        "vendor": "字节跳动",
+        "category": "credits",
+        "score": 68,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "电脑版签到领 200 额度，任务每项 100",
+        "content": "豆包官方「天天领额度」活动，在电脑版签到、做任务换活动赠送额度，可用于生图、PPT、专家模式等高级功能。\n\n- 签到：**每日 200 额度**，周一翻倍，次日刷新\n- 累计：连续签到 30 天最高 8800 额度\n- 任务：办公任务每项 **+100 额度**，需手动领取\n- 有效期：每笔自发放起 **30 天**，到期自动失效\n- 消耗：活动额度 → 免费额度 → 付费额度，优先用赠送\n- 端：豆包电脑版、豆包工作电脑版双端进度打通\n\n领取步骤：\n\n1. 打开[活动页](https://www.doubao.com/pc/agent-explore)下载豆包电脑版并登录\n2. 左下角头像 →「免费领额度」，进活动页点「签到」\n3. 任务做完要再点「去领取」，额度才真正到账\n\n**注意**：网页版和手机 App 没有入口；基础聊天不扣额度；赠送额度不提高每日使用上限；活动随时可能调整或下架，数值以活动页展示为准。",
+        "link": "https://www.doubao.com/pc/agent-explore",
+        "publishedAt": "2026-10-28",
+        "updatedAt": "2026-10-28",
+        "affiliate": false
+      },
+      {
+        "id": "zcode-flash-300m-daily-202610",
+        "title": "ZCode 每日送 3 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 92,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "每天可领 3 亿 Token，只在 23 点后能用",
+        "content": "ZCode 把周末限时福利改成每日发放：每人每天 3 亿 GLM-5.3-Flash Token，天天可领，官方未公布截止日。\n\n- 额度：**3 亿 Token/天**，次日 09:00 清零、不累积\n- 领取：每天 19:00 起，客户端内点卡片领当日份额\n- 可用：当晚 23:00 ～ 次日 09:00，共 10 小时\n- 范围：仅客户端内，切 Global Building 选 Flash\n\n领取步骤：\n\n1. 更新 [ZCode 客户端](https://zcode.z.ai/cn)到最新版，低于 3.10 无入口\n2. 每天 19:00 后登录，点左下角活动卡片领取\n3. 模型设置切到 Global Building，选 GLM-5.3-Flash\n\n**注意**：领完要等 23:00 才生效，白天调用仍扣套餐额度；额度只在当夜有效、不结转；不能导出成 API Key；截止日未公布，以客户端实显为准。",
+        "link": "https://zcode.z.ai/cn",
+        "publishedAt": "2026-10-28",
+        "updatedAt": "2026-10-31",
+        "affiliate": false
+      },
+      {
+        "id": "huaweicloud-codearts-checkin-202610",
+        "title": "华为云码道每日签到领积分",
+        "vendor": "华为云",
+        "category": "credits",
+        "score": 70,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-12-31T23:59:59+08:00",
+        "summary": "体验版每日 100 分，新用户注册送 5000 积分",
+        "content": "华为云码道（CodeArts）每日签到自 10 月 27 日 20:00 起改为**按套餐档位**发放，**领取后 24 小时内有效**，过期清零。\n\n- 体验版：每日 **100 积分**\n- 标准版：每日 **150 积分**\n- 高级版/旗舰版：每日 **200 积分**\n- 活动期：至 **2026-12-31** 23:59:59\n- 门槛：需已切换到积分计费模式\n\n新用户注册礼：从未用过码道的新账号（含 IDE、插件）注册即领 **4000 积分**，走邀请链接再得 **1000**（邀请活动至 **11 月 15 日** 23:59），合计 **5000 积分**，到账起 1 个月有效。\n\n领取：头像 →「活动福利」→「每日领取」；IDE/插件为右上角「限时福利」。\n\n**注意**：计费说明页仍写 1000 分 / 30 天有效，与活动页不一致，以实际到账为准。",
+        "link": "https://devcloud.cn-north-4.huaweicloud.com/chat",
+        "publishedAt": "2026-10-26",
+        "updatedAt": "2026-11-05",
+        "affiliate": false
+      },
+      {
+        "id": "deepseek-harness-credit-202610",
+        "title": "DeepSeek Harness 赠 6 元",
+        "vendor": "DeepSeek",
+        "category": "credits",
+        "score": 68,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "登录桌面端送 6 元赠金，限量发放，7 天有效",
+        "content": "DeepSeek Harness 是 DeepSeek 官方开源的 Agent 桌面端，官方公告同步开放了 6 元体验赠金，无需充值即可上手最新模型。\n\n- 额度：**6 元体验赠金**，到账后 **7 天**内有效\n- 适用：活动前已注册的老用户，及活动后用 +86 手机号注册的新号\n- 范围：可直接调用 DeepSeek-V4.1-Flash 等官方模型\n- 限制：赠金限量发放、赠完即止，每账号限领一次\n\n领取步骤：\n\n1. 打开 [DeepSeek Harness 官网](https://www.deepseek.com/harness/) 下载桌面端\n2. 用 DeepSeek 账号登录，此前登录过的需先退出再重登\n3. 到「账户中心 → 余额明细」查看赠金是否到账\n\n**注意**：赠金不弹窗提醒，入口较深；7 天从到账起算，过期作废；新号需用 +86 手机号，不含虚拟号段；规则可能随业务调整，以页面实显为准。",
+        "link": "https://www.deepseek.com/harness/",
+        "publishedAt": "2026-10-26",
+        "updatedAt": "2026-11-07",
+        "affiliate": false
+      },
+      {
+        "id": "xfyun-maas-sparkx26-10b-202610",
+        "title": "星辰 MaaS 领 10 亿 Token",
+        "vendor": "讯飞星辰 MaaS",
+        "category": "token",
+        "score": 72,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "限 Spark-X2.6，10 亿额度 31 天有效",
+        "content": "讯飞星辰 MaaS 在 1024 开发者节放出 Spark-X2.6 免费额度，零门槛领取，额度直接绑在 API Key 上。\n\n- 额度：**10 亿 Token**，仅限 Spark-X2.6 调用\n- 模型：293B-A30B MoE，**1M 上下文**，国产算力训练\n- 门槛：注册 + 实名认证，每账号限领一次\n- 时效：领取后 **31 天**内有效，用不完作废\n\n领取步骤：\n\n1. 打开 [星辰 MaaS 首页](https://maas.xfyun.cn/overview)，登录并完成实名\n2. 「常用功能」第一格点「Spark-X2.6 赋能开发者」\n3. 选一个或新建 API Key，确认领取绑定额度\n4. 按页面示例填接口地址与模型名 spark-x2.6 即可调用\n\n**注意**：领取页底部「额度用尽自动切换按量计费」勾选后额度耗尽会直接扣款，只想白嫖记得取消勾选；31 天从领取当天起算，一时用不上先别点；官方未公布活动截止日，以领取页实显为准。",
+        "link": "https://maas.xfyun.cn/overview",
+        "publishedAt": "2026-10-25",
+        "updatedAt": "2026-10-25",
+        "affiliate": false
+      },
+      {
+        "id": "qiniu-conatus-free-202610",
+        "title": "七牛云 Conatus 免费 1 亿/日",
+        "vendor": "七牛云",
+        "category": "token",
+        "score": 81,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-11-30T23:59:59+08:00",
+        "summary": "实名后每日 1 亿 Token，免费用到 11 月底",
+        "content": "七牛云 1024 程序员节上线 Conatus 融合模型，实名后每日送 1 亿 Token，不充值也能用。\n\n- 额度：**每日 1 亿 Token**，输入、输出、缓存输入都计入\n- 限时：**10 月 24 日 ～ 11 月 30 日 23:59**，到期即停\n- 规格：1M 上下文、128K 输出，支持工具调用与图像理解\n- 接口：OpenAI 与 Anthropic 双协议通吃\n\n领取步骤：\n\n1. 打开 [七牛云活动页](https://www.qiniu.com/ai/free-models/conatus-2026)，登录做实名\n2. 控制台模型页创建 API Key，同账号共用一个额度池\n\nBaseURL：https://api.qnaigc.com/v1，模型名 **qiniu/conatus-free**。\n\n**注意**：单笔充值 >100 元（含历史）可升每日 10 亿，多笔不累加；额度每日 00:00 清零、用完即拒，不扣余额也不切付费模型；底层模型匿名可能轮换、无 SLA，别押主链路。",
+        "link": "https://www.qiniu.com/ai/free-models/conatus-2026",
+        "publishedAt": "2026-10-25",
+        "updatedAt": "2026-10-25",
+        "affiliate": false
+      },
+      {
+        "id": "autoclaw-weekly-100m-202610",
+        "title": "AutoClaw 登录领 1 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 69,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-11-01T23:59:59+08:00",
+        "summary": "10 月 26 日起登录领 1 亿 Token，限领一次",
+        "content": "AutoClaw 新一周福利：10 月 26 日（周一）00:00 至 11 月 1 日（周日）23:59，登录即领 1 亿 Token。\n\n- 额度：**1 亿 Token**（官方口径相当于 10,000 积分）\n- 门槛：活动期间登录即可，每账号限领一次\n- 时效：越早领取，可用时间越充足\n\n领取步骤：\n\n1. 打开 [AutoClaw 官网](https://autoclaw.zhipuai.cn/)下载桌面端并登录\n2. 26 日 00:00 后登录客户端，在活动入口领取\n3. 额度到账后直接派任务使用\n\n**注意**：奖励 11 月 1 日 23:59 统一失效，不结转；活动 26 日才开领，当前登录无效；领取入口位置以客户端实显为准，细则见[官方公告](https://autoclaw.zhipuai.cn/blog/news/M10W4/)。",
+        "link": "https://autoclaw.zhipuai.cn/blog/news/M10W4/",
+        "publishedAt": "2026-10-23",
+        "updatedAt": "2026-10-23",
+        "affiliate": false
+      },
+      {
+        "id": "zcode-1024-500m-202610",
+        "title": "ZCode 1024 送 5 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 99,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-25T00:00:00+08:00",
+        "summary": "客户端弹窗领 5 亿 Token，26 日 09:00 清零",
+        "content": "1024 程序员节官方心意：10 月 23 日 20:00 起，20 万份 5 亿 Token 福利包先到先得，不限 Coding Plan 用户，免费账号也能领，GLM-5.3 与 GLM-5.3-Flash 都能用。\n\n- 额度：**5 亿 Token**，每份一次性发放\n- 领取：23 日 20:00 起，20 万份先到先得\n- 可用：23 日 23:00 ～ 26 日 09:00，到期清零\n\n领取步骤：\n\n1. 到 [ZCode 官网](https://zcode.z.ai/cn) 下载或更新最新版客户端\n2. 登录账号，在端内活动弹窗点击领取\n3. 23:00 生效后在「模型设置」确认模型可用\n\n**注意**：仅限客户端弹窗领取，无网页入口；领取后需等 23:00 才生效，空窗期发起对话仍扣自有额度；额度用不完不结转，剩余名额以客户端实显为准。",
+        "link": "https://zcode.z.ai/cn",
+        "publishedAt": "2026-10-23",
+        "updatedAt": "2026-10-23",
+        "affiliate": false
+      },
+      {
+        "id": "sensetime-raccoon-ds1017-free-202610",
+        "title": "小浣熊 DeepSeek-1017 限免",
+        "vendor": "商汤小浣熊",
+        "category": "credits",
+        "score": 78,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-31T23:59:59+08:00",
+        "summary": "DeepSeek-1017 限免，0× 不扣积分",
+        "content": "商汤小浣熊桌面端 v1.1.0 新增 DeepSeek-V4.1-Flash-1017，同步开了限时免费档：倍率 0×，跑任务不扣积分。\n\n- 限时：**至 10 月 31 日**（11 月 1 日 0 点截止）\n- 计费：倍率 **0×**，调用不消耗积分\n- 模型：DeepSeek-V4.1-Flash-1017\n- 门槛：需升级桌面端到 v1.1.0\n- 其他：DeepSeek V4.1 Flash 仍为 0.25 倍\n\n领取步骤：\n\n1. 下载并升级[小浣熊桌面端](https://xiaohuanxiong.com/)至 v1.1.0\n2. 新建任务，在模型选择器选 DeepSeek-V4.1-Flash-1017\n3. 面板显示「限免中」，跑完在用量处核对未扣积分\n\n**注意**：0× 只覆盖该型号，换其他模型照常扣积分；到期按届时倍率计费，个人版每日积分规则不受影响。",
+        "link": "https://xiaohuanxiong.com/",
+        "publishedAt": "2026-10-21",
+        "updatedAt": "2026-10-21",
+        "affiliate": false
+      },
+      {
+        "id": "qoder-deepseek-flash-free-202610",
+        "title": "Qoder DeepSeek-Flash 限免",
+        "vendor": "阿里云 Qoder",
+        "category": "credits",
+        "score": 89,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-11-01T00:00:00+08:00",
+        "summary": "限免已结束，现按峰谷系数计费",
+        "content": "Qoder CN 个人版限时免费用 DeepSeek-Flash：模型选择器里选它，消耗倍率显示 0×，调用不扣 Credits。\n\n- 限时：**至 11 月 1 日 00:00（UTC+8）**\n- 模型：DeepSeek-V4.1-Flash-1017，深度求索正式版\n- 计费：倍率 0×，调用不消耗 Credits\n- 范围：Qoder CN 个人版新老用户，企业订阅不适用\n- 门槛：无需领取，0 Credits 账号也能直接跑\n\n使用步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/activities) 下载桌面端并登录\n2. 在模型选择器里选 **DeepSeek-Flash**，确认倍率显示 0×\n3. 正常对话或跑 Agent 任务，用量面板可核对未扣 Credits\n\n**注意**：限免已于 11 月 1 日 0 点结束，现按峰谷系数计费（用户实测 2026-11）；倍率随客户端版本与账号批次变化，以模型选择器实显为准。",
+        "link": "https://qoder.cn/activities",
+        "publishedAt": "2026-10-20",
+        "updatedAt": "2026-11-01",
+        "affiliate": false
+      },
+      {
+        "id": "trae-1024-giveaway-202610",
+        "title": "TRAE 1024 签到抽 100 万积分",
+        "vendor": "TRAE",
+        "category": "credits",
+        "score": 56,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-24T18:00:00+08:00",
+        "summary": "IDE 每日签到抽奖，最高 100 万积分",
+        "content": "TRAE 面向中国区用户的 1024 程序员节签到抽奖活动。\n\n- 玩法：10 月 19 日至 24 日，IDE 内**每日签到**得一次随机奖励\n- 奖励：**88 积分**（每日 0.5%）或 **888 积分**（0.04%）\n- 优惠券：**10 元**（92.5%）或 **20 元**（2.4%）连续包月券\n- 锦鲤：1 名 **100 万积分**，10 月 24 日 19:00 直播间开奖\n- 有效期：签到积分 1 个月，优惠券至 10 月 31 日，锦鲤大奖 1 年\n\n领取步骤：\n\n1. 打开 [活动规则页](https://docs.trae.cn/ide_million-credits-giveaway-on-oct-24)了解细则\n2. 登录 TRAE IDE，在活动弹窗或头像下拉活动区点「签到」\n3. 奖励弹窗即时发放，积分入 TRAE 官网积分明细\n\n**注意**：签到与锦鲤登记截止 10 月 24 日 18:00；优惠券限连续包月套餐购买或升级、不可叠加；需使用支持本活动的 TRAE 客户端，细则以[官方活动页](https://docs.trae.cn/ide_million-credits-giveaway-on-oct-24)为准。",
+        "link": "https://docs.trae.cn/ide_million-credits-giveaway-on-oct-24",
+        "publishedAt": "2026-10-19",
+        "updatedAt": "2026-10-19",
+        "affiliate": false
+      },
+      {
+        "id": "wuwen-oct-token-202610",
+        "title": "无问社区 签到领 3500 万",
+        "vendor": "无问社区",
+        "category": "token",
+        "score": 62,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "网安模型平台，每日签到领 3500 万 Token",
+        "content": "无问社区（wwlib.cn）是网安垂直大模型平台，十月 Token 活动总盘子 3000 亿，注册即可参与。\n\n- 每日签到：**3500 万 Token/天**，访问开发者控制台自动到账\n- 十月兑换码：**WUWEN_OCT_TOKEN_TICKET**，在礼品卡页兑换\n- 转发奖励：活动原文转发朋友圈集 30 赞，得 **1 亿 Token**\n- 模型：N1PROMAX、N1PROFLASH、N1、WUWEN、MINI、G1\n\n领取步骤：\n\n1. 打开 [领取链接](https://www.wwlib.cn/)注册账号\n2. 每日访问开发者控制台，签到 Token 自动到账\n3. 礼品卡页输入兑换码，叠加额度\n\n**注意**：官方未公示活动截止日，兑换码建议尽早兑换；额度有效期与模型计费以控制台实际显示为准。",
+        "link": "https://www.wwlib.cn/",
+        "publishedAt": "2026-10-16",
+        "updatedAt": "2026-10-16",
+        "affiliate": false
+      },
+      {
+        "id": "workbuddy-deepseek-comp-202610",
+        "title": "WorkBuddy 补偿领 500 积分",
+        "vendor": "腾讯 CodeBuddy",
+        "category": "credits",
+        "score": 57,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-22T23:59:59+08:00",
+        "summary": "DeepSeek 故障补偿：全量用户领 500 积分",
+        "content": "腾讯 CodeBuddy / WorkBuddy 国内版全量用户补偿福利，因 DeepSeek 10 月 15 日服务故障，官方发放两项补偿。\n\n- 补偿：**全量用户手动领 500 积分**，到账后有效期 1 个月\n- 返还：10.8–14 端内 DeepSeek 消耗积分全额返还，7 个工作日到账\n- 范围：不限于故障期间用过 DeepSeek 的用户\n- 截止：**10 月 22 日 24 点**前领取，过期不候\n\n领取步骤：\n\n1. 打开 [用量管理页](https://www.codebuddy.cn/profile/plans-usage)登录账号\n2. 在「套餐与用量」页面手动领取 500 积分\n3. 返还部分无需操作，个人在积分详情页查看到账\n\n**注意**：积分自到账起 1 个月有效，到期清零；返还以官方核算为准，企业用户在企业管理端查看。",
+        "link": "https://www.codebuddy.cn/profile/plans-usage",
+        "publishedAt": "2026-10-16",
+        "updatedAt": "2026-10-16",
+        "affiliate": false
       },
       {
         "id": "baidu-dumate-checkin-202610",
@@ -1005,28 +625,807 @@
         "summary": "免费版每日签到领 500 积分，全量功能开放",
         "content": "百度官方桌面 AI 办公智能体 DuMate，免费版 ¥0 即可用全量产品功能，积分限时赠送。\n\n- 额度：**每日签到领 500 积分**（限时活动）\n- 版本：免费版 **全量产品功能开放**，高峰时段响应可能受限\n- 场景：文件管理、数据分析、汇报生成、网页自动化等桌面任务\n- 安全：本地沙箱运行，数据不出设备，风险操作二次确认\n\n领取步骤：\n\n1. 打开 [DuMate 官网](https://www.dumate.cn/)下载桌面版（macOS / Windows）\n2. 百度账号或手机号注册登录\n3. 客户端内每日签到，积分自动到账\n\n**注意**：签到送积分属限时活动，赠送机制官方保留调整权、以客户端内实领为准；赠送积分到期清零；基础版不另含订阅积分，用量全靠每日签到。",
         "link": "https://www.dumate.cn/",
-        "affiliate": false,
         "publishedAt": "2026-10-15",
-        "updatedAt": "2026-10-15"
+        "updatedAt": "2026-10-15",
+        "affiliate": false
       },
       {
-        "id": "zcode-flash-300m-daily-202610",
-        "title": "ZCode 每日送 3 亿 Token",
+        "id": "qclaw-migration-202610",
+        "title": "QClaw 停服迁移送 1000 积分",
+        "vendor": "腾讯 QClaw",
+        "category": "credits",
+        "score": 58,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-12-24T00:00:00+08:00",
+        "summary": "QClaw 老用户迁移 WorkBuddy 得 1000 积分",
+        "content": "腾讯 QClaw（小龙虾）宣布 2026-12-24 停止运营，存量用户迁移数据可获 WorkBuddy 积分补贴。\n\n- 补贴：**1000 WorkBuddy 积分**，到账后有效期 1 个月\n- 条件：完成 WorkBuddy 授权并实际完成有效数据迁移\n- 范围：此前是否已用 WorkBuddy 均可领\n- 附加：迁移新用户首购单月会员再赠 500 到 5000 积分\n\n领取步骤：\n\n1. 打开[迁移页面](https://qclaw.qq.com/migration)登录 QClaw 账号\n2. 登录或注册 WorkBuddy 完成授权，确认迁移范围\n3. 在 QClaw 客户端运行一键迁移助手，补贴 24 小时内自动到账\n\n**注意**：仅限 QClaw 存量用户，新注册已关闭；仅支持个人版 WorkBuddy 账号；补贴积分 1 个月有效；首购赠送积分 7 个工作日内自动发放。",
+        "link": "https://qclaw.qq.com/migration",
+        "publishedAt": "2026-10-15",
+        "updatedAt": "2026-10-15",
+        "affiliate": false
+      },
+      {
+        "id": "zcode-invite-friend-202610",
+        "title": "ZCode 邀请好友领 1 亿 Token",
         "vendor": "智谱",
         "category": "token",
-        "score": 92,
+        "score": 68,
         "tags": {
           "duration": "unknown",
           "region": "cn"
         },
         "expired": false,
         "expiryDate": null,
-        "summary": "每天可领 3 亿 Token，只在 23 点后能用",
-        "content": "ZCode 把周末限时福利改成每日发放：每人每天 3 亿 GLM-5.3-Flash Token，天天可领，官方未公布截止日。\n\n- 额度：**3 亿 Token/天**，次日 09:00 清零、不累积\n- 领取：每天 19:00 起，客户端内点卡片领当日份额\n- 可用：当晚 23:00 ～ 次日 09:00，共 10 小时\n- 范围：仅客户端内，切 Global Building 选 Flash\n\n领取步骤：\n\n1. 更新 [ZCode 客户端](https://zcode.z.ai/cn)到最新版，低于 3.10 无入口\n2. 每天 19:00 后登录，点左下角活动卡片领取\n3. 模型设置切到 Global Building，选 GLM-5.3-Flash\n\n**注意**：领完要等 23:00 才生效，白天调用仍扣套餐额度；额度只在当夜有效、不结转；不能导出成 API Key；截止日未公布，以客户端实显为准。",
+        "summary": "受邀完成三步新手任务，领 1 亿 Flash Token",
+        "content": "ZCode 随 v3.15.1 上线「邀请好友·免费蹬蹬」活动，受邀用户完成新手任务即可领夜间蹬蹬卡。\n\n- 额度：**1 亿 Token**（GLM-5.3-Flash）\n- 任务：**绑定邀请码 → 登录客户端 → 发送消息**\n- 范围：**仅限 ZCode 客户端内使用**，非 API Key\n- 上线版本：**v3.15.1**（2026-10-12）\n\n领取步骤：\n\n1. 打开 [邀请链接](https://zcode.z.ai/cn)登录或注册账号\n2. 绑定邀请码，下载客户端登录\n3. 客户端内发一条消息，夜间蹬蹬卡自动到账\n\n**注意**：官方未公布活动截止日；需从邀请链接进入并绑定邀请码；额度到账与有效期以客户端「模型设置」实显为准；活动为「共得权益」，邀请人奖励另计、以客户端内活动页为准。",
         "link": "https://zcode.z.ai/cn",
-        "affiliate": false,
-        "publishedAt": "2026-10-28",
-        "updatedAt": "2026-10-31"
+        "publishedAt": "2026-10-13",
+        "updatedAt": "2026-10-23",
+        "affiliate": false
+      },
+      {
+        "id": "volcengine-ark-collab-reward-202610",
+        "title": "火山方舟 协作奖励计划免费领",
+        "vendor": "火山方舟",
+        "category": "token",
+        "score": 75,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "在列模型已大批退出，现存型号价值有限",
+        "content": "火山方舟（豆包）协作奖励计划，授权数据采集即可免费领 Token 包。\n\n- 冷启动包：首次授权模型接入点即赠免费额度\n- 每日奖励包：按前一日用量**次日等量返还**\n- 上限：**单模型每日最高 500 万 Tokens**\n- 有效期：发放后 **30 天**，到期清零\n\n领取步骤：\n\n1. 打开 [协作奖励计划](https://docs.volcengine.com/docs/ark/collaboration-reward-program?lang=zh)阅读规则\n2. 控制台开通模型并授权数据采集\n3. 「开通管理 → 协作奖励计划」查看奖励包\n\n**注意**：需授权调用数据（输入输出）用于火山引擎模型优化，敏感数据勿用；奖励包仅抵扣后付费推理；同一主体仅限一个账号参与；9/1 与 10/8 各有大批模型退出，当前在列名单以活动页为准（如 Doubao-Seed-Evolving）。",
+        "link": "https://docs.volcengine.com/docs/ark/collaboration-reward-program?lang=zh",
+        "publishedAt": "2026-10-12",
+        "updatedAt": "2026-11-01",
+        "affiliate": false
+      },
+      {
+        "id": "xfyun-spark-small-models-free-202610",
+        "title": "讯飞星火 Spark 小模型免费",
+        "vendor": "讯飞星火",
+        "category": "api-quota",
+        "score": 42,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "X2.5-1.7B 长期免费，4B 限时免费",
+        "content": "讯飞星火开放平台的 Spark-X2.5 小模型开放免费调用。\n\n- Spark-X2.5-1.7B：**长期免费**调用\n- Spark-X2.5-4B：**限时免费**（截止日未公布）\n- 规格：1.7B / 4B 端侧模型，**1M 上下文**\n- 星辰 MaaS 模型广场另有多款模型可「免费领取」\n\n领取步骤：\n\n1. 打开 [讯飞星火开放平台](https://xinghuo.xfyun.cn/sparkapi)注册并实名\n2. 控制台创建应用，获取 API Key\n3. 模型名选 Spark-X2.5-1.7B 或 Spark-X2.5-4B\n\n**注意**：仅这两个小参数模型免费，旗舰 Spark-X2.5 等仍按量计费；4B 为限时活动，随时可能结束，领取需先完成实名。",
+        "link": "https://xinghuo.xfyun.cn/sparkapi",
+        "publishedAt": "2026-10-12",
+        "updatedAt": "2026-10-12",
+        "affiliate": false
+      },
+      {
+        "id": "doubao-work-30day-sub-202610",
+        "title": "豆包工作 免费领 30 天订阅",
+        "vendor": "字节跳动",
+        "category": "credits",
+        "score": 78,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "限时免费领 30 天标准订阅，可用豆包 2.1 Pro",
+        "content": "豆包工作（豆包专业版）限时活动，免费领 30 天标准订阅。\n\n- 权益：**30 天标准套餐**（额度为免费版 5 倍以上）\n- 可用：**豆包 2.1 Pro**、工作任务（Agent）、定时任务、Office 套件\n- 门槛：需下载**豆包工作电脑版**（约 2GB）\n- 加赠：大学生完成认证，再领 3 个月\n\n领取步骤：\n\n1. 打开 [豆包工作](https://www.doubao.com/work)下载安装电脑版\n2. 用手机号 / 微信 / 抖音登录\n3. 按客户端活动提示领取，在「设置 → 订阅与额度管理」查看到期\n\n**注意**：属限时活动，官方未公布截止日，已领过可滚动续领；标准套餐连续包月价 ¥68，30 天后继续使用需付费；免费版基础问答不受影响。用户实测（2026-10）可正常领取。",
+        "link": "https://www.doubao.com/work",
+        "publishedAt": "2026-10-12",
+        "updatedAt": "2026-10-28",
+        "affiliate": false
+      },
+      {
+        "id": "tokenharbor-haiku55-free-202610",
+        "title": "Claude Haiku 5.5 限时免费",
+        "vendor": "Token Harbor",
+        "category": "api-quota",
+        "score": 66,
+        "tags": {
+          "duration": "limited",
+          "region": "global"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-15T21:00:00+08:00",
+        "summary": "Claude Haiku 5.5 限免，10-15 截止",
+        "content": "Token Harbor 的 Claude Haiku 5.5 限时免费，标价 0。\n\n- 截止：**2026-10-15 21:00（北京时间）**\n- 规格：**1M 上下文**，支持文字、图片、文件\n- 免费档：**模型名以 :free 结尾走免费额度**，永不扣余额\n- 限速：免费账号 **60 次/分、1800 次/时**\n\n同站另有 DeepSeek V4.1 Flash、MiMo V2.6 Flash 长期免费档。\n\n领取步骤：\n\n1. 打开 [注册页](https://tokenharbor.ai/signup)用邮箱注册，免信用卡\n2. 控制台创建 API Key（thk_live_ 开头）\n3. 模型名填 claude-haiku-5.5:free\n\nBase URL 填 https://tokenharbor.ai/v1。\n\n**注意**：漏填 :free 会走付费通道扣余额；免费额度按个人 7×24 小时滚动计；免费通道数据保留需自行设置，敏感内容慎传。",
+        "link": "https://tokenharbor.ai/models?category=free",
+        "publishedAt": "2026-10-09",
+        "updatedAt": "2026-10-09",
+        "affiliate": false
+      },
+      {
+        "id": "tokenrhythm-alpha-channel-202610",
+        "title": "基元律动 18 元额度",
+        "vendor": "基元律动",
+        "category": "token",
+        "score": 66,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "邀请注册送 18 元额度，模型谷价低于官方",
+        "content": "基元律动用专属邀请链接注册并实名认证，可领 18 元 Token 额度，站内模型价格低于官方。\n\n- 新客礼：**邀请注册 + 实名认证领 18 元 Token 额度**\n- 官方活动：**千问模型全部半价，deepseek 系列全天谷价**\n- 实测：**deepseek-flash 约 5 元可用 1 亿 token**\n- 规格：**1M 上下文**，缓存命中 ¥0.02/1M\n\n领取步骤：\n\n1. 打开 [邀请注册页](https://tokenrhythm.studio/)用手机号注册登录\n2. 完成实名认证领取 18 元额度\n3. 控制台创建 API Key，模型 ID 填 deepseek-flash\n\n附加：同站有匿名内测通道 [TR Alpha Channel](https://tokenrhythm.studio/models)，输入输出缓存全 ¥0、1M 上下文，模型 ID 填 tr-alpha-channel 可零成本试。\n\n**注意**：额度与价格以站内实际为准，官方活动可能调整；匿名内测上游勿传敏感数据、勿接生产。",
+        "link": "https://tokenrhythm.studio/",
+        "publishedAt": "2026-10-09",
+        "updatedAt": "2026-11-07",
+        "affiliate": false
+      },
+      {
+        "id": "kilo-code-autofree-202610",
+        "title": "Kilo Code 免费模型池",
+        "vendor": "Kilo Code",
+        "category": "api-quota",
+        "score": 62,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免绑卡，200 次请求/小时",
+        "content": "Kilo Code 是 MIT 开源 AI 编程助手，VS Code、JetBrains、CLI 多端可用，免绑卡免订阅，内置多条免费模型通道。\n\n- 权益：**Auto Free 路由档 $0**，不消耗 credits\n- 另有：OpenRouter Free Models Router 免费路由档\n- 限速：**200 次请求/小时**（按 IP 计）\n\n使用步骤：\n\n1. 扩展市场搜 Kilo Code 安装，或 curl 装 CLI\n2. 模型下拉选 Auto Free 等免费通道\n3. 直接发起任务，账单 0 元\n\n**注意**：各通道背后的模型与限速由服务端随时调整，上游厂商推广试用渠道部分不稳定，需切换尝试；免费档可能路由到记录对话数据的提供方，勿提交机密代码。",
+        "link": "https://kilo.ai/",
+        "publishedAt": "2026-10-09",
+        "updatedAt": "2026-10-09",
+        "affiliate": false
+      },
+      {
+        "id": "antling-ling31flash-free-202610",
+        "title": "蚂蚁百灵 Ling-3.1-flash 限免",
+        "vendor": "蚂蚁百灵",
+        "category": "token",
+        "score": 56,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-14T23:59:59+08:00",
+        "summary": "Ling-3.1-flash 限免至 10/14，需绑支付宝",
+        "content": "蚂蚁百灵上线 Ling-3.1-flash，官方定价页标注「新一代长流程版」，限时免费 2 周。\n\n- 额度：**限免期输入/输出/缓存读取全 ¥0**\n- 时效：免费至 10/14，体验期后转正式计费\n- 协议：OpenAI 兼容，端点 api.ant-ling.com/v1\n- 同步：OpenRouter、ZenMux 同款 $0\n- 门槛：需绑定支付宝账户开通服务\n\n领取步骤：\n\n1. 打开 [API 控制台](https://chat.ant-ling.com/open)注册登录\n2. 绑定支付宝，开通百灵模型服务\n3. 创建令牌，OpenAI 格式直调 Ling-3.1-flash\n\n**注意**：签署小程序云代扣协议的账户，免费额度耗尽或体验期结束后将自动转按量付费；限免起止与细则以[定价页](https://developer.ant-ling.com/zh-CN/docs/models/price/)为准。",
+        "link": "https://developer.ant-ling.com/zh-CN/docs/models/price/",
+        "publishedAt": "2026-10-08",
+        "updatedAt": "2026-10-08",
+        "affiliate": false
+      },
+      {
+        "id": "autoclaw-fangong-chongdianli-202610",
+        "title": "AutoClaw 返工登录领 1 亿 Token",
+        "vendor": "智谱",
+        "category": "token",
+        "score": 68,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-15T23:59:59+08:00",
+        "summary": "10.8 起登录领 1 亿 Token，两日各 5000 万",
+        "content": "智谱 AutoClaw（澳龙）「国庆返工充电礼」，10 月 8 日至 15 日登录分批领 Token 与积分。\n\n- 大额日：**10.8、10.12 各领 5000 万 Token + 5000 积分**\n- 周内 VIP：每日 1000 万 Token + 1000 积分\n- 普通用户：每日 300 万 Token + 300 积分\n- VIP：AutoClaw 付费订阅或智谱 Coding Plan 用户\n- 适用：GLM-5.3-Flash，Token 额度基于其单价换算\n- 时效：活动积分当天 24:00 前有效\n\n领取步骤：\n\n1. 打开 [AutoClaw 官网](https://autoclaw.zhipuai.cn/)下载桌面端登录\n2. 10.8 起进「灵感与活动」领当日 Token 与积分\n3. 10.12 再领一轮，周内每天登录领对应档位\n\n**注意**：大额集中在 10.8 与 10.12 两天，漏领不补；细则以[官方资讯](https://autoclaw.zhipuai.cn/blog/news/national-day-token-gift/)为准。",
+        "link": "https://autoclaw.zhipuai.cn/blog/news/national-day-token-gift/",
+        "publishedAt": "2026-10-08",
+        "updatedAt": "2026-10-08",
+        "affiliate": false
+      },
+      {
+        "id": "fiimeopc-register-202610",
+        "title": "FiimeOPC 社区任务领 Token",
+        "vendor": "FiimeOPC",
+        "category": "token",
+        "score": 64,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-12-08T21:00:00+08:00",
+        "summary": "社区任务每日合计最多5000万；Token榜累计10亿送1亿",
+        "content": "FiimeOPC（opc.fiime.cn）是面向「一人公司」创业者的社区平台，内置模型服务与 API 中转。注册本身不直接送 Token，额度来自社区任务与 Token 榜，按模型倍率计费。\n\n- 每日任务：发帖、发项目、发 AI 创意三个任务合计最多 5000 万/天\n- Token 榜：每累计使用 10 亿再送 1 亿，每周一次，最多领取 3 次\n- 注册方式：邮箱 / QQ / GitHub，需完成邮箱激活\n\n领取步骤：\n\n1. 打开 [注册页](https://opc.fiime.cn/register?invite=NE7JZHET)\n2. 邮箱或 QQ / GitHub 注册，查收激活邮件完成激活\n3. 完成社区任务或累计用量后按规则领取，工作台创建 API Key 调用\n\n**注意**：模型服务为社区自营中转，底层供应商不公开；调用按模型倍率扣减 Token，实际可用量低于名义额度；平台规模较小，勿存重要数据，额度用完即止。",
+        "link": "https://opc.fiime.cn/register?invite=NE7JZHET",
+        "publishedAt": "2026-10-05",
+        "updatedAt": "2026-10-22",
+        "affiliate": true
+      },
+      {
+        "id": "unisound-u2flash-free-202610",
+        "title": "云知声 U2-Flash API 限免调用",
+        "vendor": "云知声",
+        "category": "token",
+        "score": 72,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-31T23:59:59+08:00",
+        "summary": "U2-Flash 限免已结束，由 U Plan 接棒",
+        "content": "云知声 Token Hub 平台 U2-Flash 全新上线，活动期 2026.09.30-2026.10.31 限时免费无限量调用，新老用户均可。U2-Flash 主打 Agent/Coding 场景，300B 规模，512K 上下文，OpenAI/Anthropic 双协议兼容。\n\n- 额度：**限免期间调用全免**，输入/输出均 ¥0/百万 Token\n- 限制：RPM 100，TPM 1000 万，最大输出 128K\n\n领取步骤：\n\n1. 打开 [模型页](https://maas.unisound.com/model-hub/u2-flash)\n2. 注册/登录云知声 Token Hub，创建 API Key\n3. 按 OpenAI 兼容端点调用 u2-flash 模型\n\n**注意**：免费期已于 10 月 31 日结束，现由 [U Plan Free 档](https://maas.unisound.com/token-plan) 接棒（每周送积分）；自研新模型，能力待验证，以官方页面为准。",
+        "link": "https://maas.unisound.com/model-hub/u2-flash",
+        "publishedAt": "2026-10-04",
+        "updatedAt": "2026-11-01",
+        "affiliate": false
+      },
+      {
+        "id": "huawei-codearts-daily-202609",
+        "title": "华为云码道每日 1000 万 Token 已结束",
+        "vendor": "华为云",
+        "category": "token",
+        "score": 71,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-20T23:59:59+08:00",
+        "summary": "华为云码道每日 1000 万 Token 已结束",
+        "content": "华为云码道 CodeArts「码力续航计划」每日 1000 万免费 Token，已于 2026 年 10 月 20 日结束，官方规则文档同步下线。\n\n- 状态：每日 1000 万 Token 福利已收尾\n- 模型：原含 DeepSeek V4.1 Flash 等四款福利位\n- 凭证：华为云开发者学堂帖确认 10-20 结束\n- 迁移：每日签到 1000 积分仍有效，见独立条目\n\n**注意**：本条目为历史存档；现行福利请看「华为云码道每日签到 1000 积分」；细则以华为云官方页为准。",
+        "link": "https://devcloud.cn-north-4.huaweicloud.com/chat",
+        "publishedAt": "2026-09-30",
+        "updatedAt": "2026-10-26",
+        "affiliate": false
+      },
+      {
+        "id": "atria-tokenplan-202609",
+        "title": "Atria API 四款模型限免",
+        "vendor": "上海AI实验室",
+        "category": "api-quota",
+        "score": 72,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "书生-S2 等 4 款限免，OpenAI 协议直连",
+        "content": "上海AI实验室开源 744B 模型 Atria Dawn，配套 TokenPlan 对外公示四款模型限时免费，价格全 0。\n\n- 免费：**Agents-A1、Atria-Dawn、Sage-A1.5、书生-S2**\n- 收费：DeepSeek、GLM、Kimi 等 6 款按墨点计费\n- 协议：OpenAI / Anthropic 兼容，可接编码工具\n- 规格：Atria-Dawn、Sage-A1.5 为 512K，另两款 256K\n\n领取步骤：\n\n1. 打开 [TokenPlan 控制台](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0)注册\n2. 创建 API Key（10 个上限，共享额度限速）\n3. Base URL 用控制台展示的网关地址\n\n**注意**：限时免费无截止公示；Sage-A1.5 站内标 New 属新上架；Atria-Dawn 仅纯文本，其余三款支持图像。",
+        "link": "https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0",
+        "publishedAt": "2026-09-19",
+        "updatedAt": "2026-10-29",
+        "affiliate": false
+      },
+      {
+        "id": "qoder-daily-credits-202609",
+        "title": "Qoder 每日领 100 Credits",
+        "vendor": "阿里云 Qoder",
+        "category": "credits",
+        "score": 76,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日登录领 100 通用 Credits，可累积",
+        "content": "Qoder「每日登录有礼」长期奖励，官方公告暂无结束时间，每天可领一份通用额度。\n\n- 额度：**每日登录领 100 通用 Credits**\n- 时效：自领取起 30 天有效，未用完可累积\n- 领取：每天 10:00 开放新一轮，每账号一轮一次\n- 到账：计入 Add-on Credits，不改变订阅档位\n- 范围：国际版与 CN 版新老个人用户，含免费用户\n- 可用端：Qoder、IDE、JetBrains 插件、CLI 等\n\n领取步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/)下载桌面端登录\n2. 左下角用量面板 → 礼物图标领当日奖励\n3. 每天 10:00 后记得回来再领，漏领不补\n\n**注意**：未到期的额度可以累积，今天没用完也能留到后面用；细则以[官方公告](https://mp.weixin.qq.com/s/8hl-9hfkyLmnBuQOKGE5zQ)为准。",
+        "link": "https://qoder.cn/activities",
+        "publishedAt": "2026-09-18",
+        "updatedAt": "2026-10-20",
+        "affiliate": false
+      },
+      {
+        "id": "qoder-qoduck-free-202611",
+        "title": "Qoder 每日免费用 Qoduck",
+        "vendor": "阿里云 Qoder",
+        "category": "credits",
+        "score": 74,
+        "tags": {
+          "duration": "unknown",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "匿名模型每日免费，CN 版与国际版客户端都能用",
+        "content": "Qoder 的匿名模型 Qoduck 于 11 月 7 日上架，身份暂不公布，CN 版与国际版同步开放限时每日免费额度。\n\n- 额度：**每日一定次数免费**，付费用户次数更多\n- 计费：额度内系数 **0.0×**，思考拉满也免费\n- 额度外：继续用按 **0.5×** 扣 Credits，次日恢复\n- 入口：**CN／国际版客户端**都能选，IDE、插件、CLI 暂不支持\n- 人群：个人用户含会员卡用户；团队版、企业版看不到该模型\n\n使用步骤：\n\n1. 打开 [Qoder 中文站](https://qoder.cn/activities)下载 CN 版客户端登录\n2. 客户端更新到最新版，模型选择器里选 **Qoduck**\n3. 直接对话或跑 Agent 任务，免费额度内不扣 Credits\n\n**注意**：无需领取，选中即生效；国际版客户端同样能选到；活动结束时间未定，会提前公告；模型身份未知，公司代码、客户数据、未公开方案别往里放。",
+        "link": "https://qoder.cn/activities",
+        "publishedAt": "2026-11-07",
+        "updatedAt": "2026-11-07",
+        "affiliate": false
+      },
+      {
+        "id": "cloudflare-workersai-free-202609",
+        "title": "Cloudflare Workers AI 免费额度",
+        "vendor": "Cloudflare",
+        "category": "api-quota",
+        "score": 59,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册即用免绑卡，每天 10,000 Neurons 免费额度",
+        "content": "Cloudflare Workers AI 是边缘推理服务，Free 档每天送算力预算，注册即用、免绑卡。\n\n- 额度：**每天 10,000 Neurons**，00:00 UTC 回满\n- 模型：GLM-4.7-flash、Llama 4、Qwen3.8\n- 另含：gpt-oss-120b、Whisper、bge 嵌入、flux 生图\n- 绑卡项：GLM-5.3、DeepSeek-V4、Kimi K2.6 需付费方式\n- 接口：OpenAI 兼容，限速 300 次/分\n\n领取步骤：\n\n1. 登录控制台 → Workers AI\n2. 复制 Account ID，创建 API Token\n3. base_url 换成账户端点\n4. 模型填 @cf/zai-org/glm-4.7-flash\n\n**注意**：Neurons 是每日预算非无限量，扣完即停；超量需升级 Paid；旗舰模型需绑卡，见[定价页](https://developers.cloudflare.com/workers-ai/platform/pricing/)。",
+        "link": "https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fai%2Fworkers-ai",
+        "publishedAt": "2026-09-17",
+        "updatedAt": "2026-09-17",
+        "affiliate": false
+      },
+      {
+        "id": "sensetime-raccoon-credits-202609",
+        "title": "商汤小浣熊每日免费 300 积分",
+        "vendor": "商汤小浣熊",
+        "category": "credits",
+        "score": 75,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日登录领 300 积分，新人再得 6000 一年有效",
+        "content": "商汤小浣熊是商汤出品的 AI 办公助手，覆盖网页、桌面与移动三端，个人免费版长期每日送积分（用户实测 2026-09）。\n\n- 额度：**每日登录 300 积分**，24:00 清零不累计\n- 新人礼：注册+桌面登录各 3000，一年有效\n- 模型：Kimi K3、GLM 5.3、GLM 5.3 Flash\n- 另含：DeepSeek V4.1 Flash（0.25 倍）\n- 功能：数据分析、PPT、任务规划等办公场景\n\n领取步骤：\n\n1. 打开 [官网](https://xiaohuanxiong.com/)注册登录，每日积分自动发放\n2. 下载桌面端并登录，额外领 3000 积分\n3. 对话里选模型直接用，积分自动抵扣\n\n**注意**：免费版仅限标准模型，名单以产品内为准。",
+        "link": "https://xiaohuanxiong.com/",
+        "publishedAt": "2026-09-17",
+        "updatedAt": "2026-10-21",
+        "affiliate": false
+      },
+      {
+        "id": "amd-tokenfactory-free-202609",
+        "title": "AMD TokenFactory 免费 API",
+        "vendor": "AMD",
+        "category": "api-quota",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册领 Key，免费池现挂 11 款模型",
+        "content": "AMD TokenFactory（Beta）免费开放一批公有模型，注册发 Key、免绑卡、OpenAI / Anthropic 双协议。\n\n- 模型：官方负载接口现列 **11 款免费**\n- 主力：**DeepSeek-V4 / V4.1-Flash**、Qwen3.8-27B\n- 另含 **GLM-5.3-Flash**、Gemma-4-31B、MiMo-V2.6\n- 轻量：MiniCPM5-2B、MiniCPM-V-4.7\n- 接口：developer.amd.com.cn/radeon/api/v1\n- 门槛：无需绑卡，Beta 期免费\n\n领取步骤：\n\n1. 打开 [TokenFactory 页](https://developer.amd.com.cn/radeon/tokenfactory)注册登录\n2. 在「Public Free Model APIs」开模型卡片\n3. 复制弹窗内 API Key，全模型通用\n\n**注意**：免费池常年满载（热门款 90%+ 负载），要排队；清单与限额随时调整。",
+        "link": "https://developer.amd.com.cn/radeon/tokenfactory",
+        "publishedAt": "2026-09-16",
+        "updatedAt": "2026-09-16",
+        "affiliate": false
+      },
+      {
+        "id": "bazaarlink-free-202609",
+        "title": "BazaarLink 免费模型 API",
+        "vendor": "BazaarLink",
+        "category": "api-quota",
+        "score": 55,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册领 Key，2 款模型免费调，每日 50 次",
+        "content": "BazaarLink 是 OpenAI 兼容的模型 API 网关，注册即送免费 Key，含免费额度模型。\n\n- 模型：**Qwen3.7-Flash**、**DeepSeek-V4-Flash**\n- 限额：10 次/分钟，**50 次/日**（无充值账号）\n- 协议：OpenAI 兼容，api.bazaarlink.ai/v1\n- 费用：无需信用卡，超额按付费价继续\n\n领取步骤：\n\n1. 打开 [BazaarLink 免费页](https://bazaarlink.ai/free)注册\n2. 控制台 Keys 页创建 API Key\n3. 客户端换 base_url 即可调用\n\n**注意**：免费额度随平台配置动态调整，以官方免费页实时展示为准；充值账号日限额翻倍。",
+        "link": "https://bazaarlink.ai/free",
+        "publishedAt": "2026-09-16",
+        "updatedAt": "2026-09-16",
+        "affiliate": false
+      },
+      {
+        "id": "modelscope-magicube-202609",
+        "title": "魔搭魔粒免费调旗舰模型",
+        "vendor": "魔搭 ModelScope",
+        "category": "api-quota",
+        "score": 70,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日登录领魔粒，白嫖 DeepSeek 等旗舰 API",
+        "content": "魔搭 ModelScope 是阿里云旗下模型社区，免费推理已升级魔粒体系，登录领魔粒调旗舰。\n\n- 额度：**每日登录 +200 粒**，绑阿里云 +50\n- 消耗：旗舰约 2 粒/次、主流 1 粒、轻量 0.5 粒\n- 每日 250 粒约够旗舰 125 次/日，失败返还魔粒\n- 模型：DeepSeek-V4.1-Flash、GLM-5.3、Qwen 等\n- 接口：api-inference.modelscope.cn/v1\n- 协议：OpenAI 兼容，另支持 Anthropic\n- 条件：绑定阿里云账号并完成实名认证\n\n领取步骤：\n\n1. 通过 [邀请链接](https://modelscope.cn/register)注册魔搭\n2. 绑阿里云并实名，完善资料三项（验证邮箱、简介、主页）各 50 长期粒\n3. [账号设置](https://modelscope.cn/my/myaccesstoken)创建访问令牌\n4. base_url 换魔搭端点即可调用\n\n**注意**：短期粒 24 小时内有效，长期粒 90 天；规则以站内「魔粒值」入口为准。",
+        "link": "https://modelscope.cn/register",
+        "publishedAt": "2026-09-14",
+        "updatedAt": "2026-10-31",
+        "affiliate": false
+      },
+      {
+        "id": "youdao-lobster-checkin-202609",
+        "title": "有道龙虾每日签到领 100 积分",
+        "vendor": "网易有道",
+        "category": "credits",
+        "score": 74,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日签到领 100 积分（一个月有效），邀请码新人礼 300",
+        "content": "网易有道出品的桌面级 AI 助手「有道龙虾」（LobsterAI）积分福利。\n\n- 额度：**每日签到 100 积分**，发放起一个月内有效\n- 新人礼：邀请码 **udj0JZ** 得 300 积分，仅 14 天有效\n- 限制条件：每账号每日签到一次\n\n领取步骤：\n\n1. 打开 [官网](https://lobsterai.youdao.com/) 下载 LobsterAI\n2. 安装后点击【登录】\n3. 登录页输入邀请码 udj0JZ，得 300 积分新人礼（14 天有效）\n4. 每日签到再领 100 积分\n\n**注意**：两类积分有效期不同——签到积分一个月、邀请码积分仅 14 天，新人记得尽快用；邀请码有数量上限，失效时以官方活动为准。",
+        "link": "https://lobsterai.youdao.com/",
+        "publishedAt": "2026-09-11",
+        "updatedAt": "2026-09-11",
+        "affiliate": false
+      },
+      {
+        "id": "orcarouter-free-models-202609",
+        "title": "OrcaRouter 免费模型池",
+        "vendor": "OrcaRouter",
+        "category": "api-quota",
+        "score": 73,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免费 6 个 -free 模型，默认 50 次/日",
+        "content": "OrcaRouter 是零加价聚合网关，带 -free 后缀的模型按 $0 计费，权重同付费版。\n\n- 免费：目录现挂 **6 个 -free 模型**，名单会轮换\n- 模型：DeepSeek-V4.1、GLM-5.3-Flash、腾讯 HY3\n- 限速：默认 **10 RPM、50 次/日**\n- 付费满 $20：升到 **20 RPM、800 次/日**\n- 隐藏限制：低档还有单次 prompt 上限，超了回 400\n- 门槛：工作区要绑注册较久的 GitHub 账号\n\n领取步骤：\n\n1. 打开 [OrcaRouter](https://www.orcarouter.ai/zh-CN/)注册并建密钥\n2. Base URL 填 api.orcarouter.ai/v1\n3. 模型名用 -free 结尾的 ID\n\n**注意**：名单会轮换，别写死；-free 去掉后缀就按付费价扣钱；Anthropic 协议填根地址、不带 /v1；免费额度不自动回落付费模型。",
+        "link": "https://www.orcarouter.ai/zh-CN",
+        "publishedAt": "2026-09-11",
+        "updatedAt": "2026-09-11",
+        "affiliate": false
+      },
+      {
+        "id": "wx-miniapp-contest-2026",
+        "title": "小程序大赛送 10 亿 Token",
+        "vendor": "微信",
+        "category": "token",
+        "score": 82,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": "2026-10-17T23:59:59+08:00",
+        "summary": "Token 权益已停发，大赛报名与提报仍至 10 月 17 日",
+        "content": "2026 微信小程序开发大赛 7 月 17 日在 WAIC 官宣启动，主题「与 AI 共生」，面向全球开发者，个人即可报名。其原参赛权益中最实用的一项——报名审核通过后邮件领取 **Coding Plan Token 10 亿额度**——**已于 9 月停止发放**，本条据此下架。\n\n- 原权益：报名审核通过后邮件领 10 亿 Coding Plan Token\n- 现状：Token 已停止发放，现在报名不再赠送\n- 奖金：49 万元奖金池，一等奖 10 万\n\n大赛时间线：\n\n1. 启动报名 7 月 17 日，提报截止 10 月 17 日\n2. 线上初审 10 月 28 日，决赛 11 月\n\n**注意**：本条因 Token 停发下架，为 Token 而来请勿报名；只关注大赛本身可照常参赛，细则以[大赛官网](https://contest.weixin.qq.com/eventDetails?id=4598379302114656257)为准。",
+        "link": "https://contest.weixin.qq.com/eventDetails?id=4598379302114656257",
+        "publishedAt": "2026-09-09",
+        "updatedAt": "2026-10-13",
+        "affiliate": false
+      },
+      {
+        "id": "xunfei-loomy-202609",
+        "title": "讯飞 Loomy 每日送 5000 积分",
+        "vendor": "讯飞 Loomy",
+        "category": "credits",
+        "score": 76,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册送 5000，新手任务拿满 15000，每日再送 5000",
+        "content": "讯飞 Loomy 是讯飞出品的 AI 办公搭子（桌面客户端），本地运行、数据不传云端，接入星火、DeepSeek、千问等多家模型。\n\n- 额度：**注册送 5000 永久积分**，完成新手任务再得 10000\n- 每日：**每天登录再领 5000 积分**，当日有效不可积攒\n- 模型：Qwen 3.8 Max、DeepSeek V4 Flash\n- 另含 GLM 5.2 等，设置-模型里切换\n\n使用步骤：\n\n1. 打开 [Loomy 官网](https://loomy.xunfei.cn/download)下载客户端\n2. 注册登录领取积分，完成新手任务拿满 15000\n3. 设置-模型里按需切换模型开工\n\n**注意**：邀请 1 人双方得 5000 永久积分；官方积分包定价 19.9 元 / 5000 积分，每日 5000 约等于每天 19.9 元额度；以客户端内实际为准。",
+        "link": "https://loomy.xunfei.cn/download",
+        "publishedAt": "2026-09-09",
+        "updatedAt": "2026-09-18",
+        "affiliate": false
+      },
+      {
+        "id": "cline-free-models-202609",
+        "title": "Cline 免费模型池",
+        "vendor": "Cline",
+        "category": "api-quota",
+        "score": 68,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免 Key 免绑卡，免费池剩 5 款",
+        "content": "Cline 是开源 AI 编程工具，提供 VS Code 插件与独立客户端，内置免费模型池，免 Key、免绑卡，装好即选即用。\n\n- 权益：**内置模型免费用**，无需订阅\n- 现役仅剩 5 款，主力大模型已出池\n\n现役名单：Beam 1.0、Laguna S 2.1、Solar Mini 4、Nemotron 3.5 Super VL、Nemotron 3.5 Lightning；此前的 MiMo-V2.6-Flash、Step 5 Preview 已出池。\n\n使用步骤：\n\n1. VS Code 扩展商店搜 Cline 安装，或用独立客户端\n2. 模型列表下拉选择上述免费模型\n3. 直接发起任务，无需配置任何 Key\n\n**注意**：名单为 2026-10-25 用户实测，免费池缩减较快、模型随时轮换，以客户端内实际可用为准。本条指客户端/插件内置模型，与 Cline API 的免费模型不是一回事。",
+        "link": "https://cline.bot/",
+        "publishedAt": "2026-09-08",
+        "updatedAt": "2026-10-25",
+        "affiliate": false
+      },
+      {
+        "id": "wechat-cloudbase-aigrowth-202608",
+        "title": "微信 AI 小程序成长计划送 10 亿 Token",
+        "vendor": "腾讯云 CloudBase",
+        "category": "token",
+        "score": 58,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-12-31T23:59:59+08:00",
+        "summary": "报名送 10 亿 Token 与 10 万生图，仅限小程序内用",
+        "content": "腾讯云开发联合微信小程序的开发者扶持计划，报名全行业开放。\n\n- 额度：**10 亿大模型 Token + 10 万张 AI 生图**\n- 限制：**Token 仅限小程序 / 云函数内调用**\n- 模型：混元 Hy3 与 Hy Image 3.0 生图模型\n- 附赠：6 个月个人版云开发环境，已有环境可升级或领 120 元代金券\n- 有效期：资源包自申请成功起 6 个月\n\n领取步骤：\n\n1. 登录 [微信公众平台](https://mp.weixin.qq.com/)\n2. 进入「行业能力 → 小程序成长计划」报名\n3. 开通 CloudBase 环境后额度自动到账\n\n**注意**：报名通道至 2026 年 12 月 31 日关闭；AI 资源包仅限在小程序 / 云函数内调用；活动细则以[官方公告](https://cloud.tencent.com/developer/article/2705075)为准。",
+        "link": "https://cloud.tencent.com/developer/article/2705075",
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-16",
+        "affiliate": false
+      },
+      {
+        "id": "tencent-tokenhub-newuser-202608",
+        "title": "腾讯云 TokenHub 新人免费体验包",
+        "vendor": "腾讯云 TokenHub",
+        "category": "token",
+        "score": 70,
+        "tags": {
+          "duration": "limited",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": "2026-12-31T23:59:59+08:00",
+        "summary": "语言与多模态理解模型各 100 万 Tokens（1 年）",
+        "content": "腾讯云大模型服务平台 TokenHub 新用户免费体验包，官方文档明确口径。\n\n- 额度：**语言 / 多模态理解模型各 100 万 Tokens**，有效期 1 年\n- 附加：生视频 50 积分（YT-Video-HumanActor）\n- 另有混元 3D 系列 100 积分额度\n- 覆盖：Hy3、DeepSeek-V4、GLM-5、Kimi 等主流模型\n- 限制：每账号每模型限领一次，从领取时起算\n\n领取步骤：\n\n1. 登录 [TokenHub 控制台](https://cloud.tencent.com/product/tokenhub)完成实名\n2. 进入模型广场，点右上角「新用户福利免费体验」\n3. 勾选模型立即领取，支持首次调用自动领取\n\n**注意**：活动截至 2026-12-31，后续可能延续或调整；到期未用部分自动失效，以[官方文档](https://cloud.tencent.com/document/product/1823/130053)为准。",
+        "link": "https://cloud.tencent.com/product/tokenhub",
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-16",
+        "affiliate": false
+      },
+      {
+        "id": "qiniu-ai-inference-202608",
+        "title": "七牛云 AI 推理注册领 300 万 Token",
+        "vendor": "七牛云",
+        "category": "token",
+        "score": 35,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "注册领 300 万 Token，企业认证再领 1200 万",
+        "content": "七牛云 AI 大模型平台注册福利，一个 API Key 调用多家模型。\n\n- 额度：**新用户专享 300 万 Token**\n- 企业认证：再领 1200 万 Token\n- 覆盖 50+ 模型：DeepSeek-V4、Kimi K3\n- 另含 GLM-5.2、MiniMax 等\n\n使用步骤：\n\n1. 打开七牛云 AI 平台注册登录，领取 300 万 Token\n2. 到控制台创建 API Key\n3. 完成企业认证后可再领 1200 万 Token\n\n**注意**：免费额度与模型名单以官方页面为准。",
+        "link": "https://www.qiniu.com/",
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-08-31",
+        "affiliate": false
+      },
+      {
+        "id": "monkeycode-free-tier-202608",
+        "title": "MonkeyCode 免费档每日 10M Token",
+        "vendor": "长亭 MonkeyCode",
+        "category": "token",
+        "score": 68,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "¥0 永久免费档每天 10M Token，仅限平台内使用",
+        "content": "长亭科技出品的在线 AI 编程开发平台，免费档长期可用。\n\n- 额度：**¥0 永久免费，每天 10M Token**\n- 环境：云开发环境 1C / 4G、1 个任务并发，浏览器即用\n- 攒额度：每日签到 100 积分，邀请 1 位新用户 +5000 积分\n- 模型：内置 GLM、Kimi、MiniMax、Qwen、DeepSeek 等\n- 免费档：仅基础模型可用\n\n使用步骤：\n\n1. 打开 [MonkeyCode 官网](https://monkeycode-ai.com/)注册\n2. 控制台创建开发任务，每日额度自动到账\n3. 每日签到与邀请好友攒积分\n\n**注意**：额度仅限 MonkeyCode 平台内使用，不可导出或用于 API；免费档限基础模型范围与单任务并发；平台 GitHub 开源（AGPLv3），规则以官网为准。",
+        "link": "https://monkeycode-ai.com/",
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-09-04",
+        "affiliate": false
+      },
+      {
+        "id": "agnes-free-api-202608",
+        "title": "Agnes AI 全模态免费 API",
+        "vendor": "Agnes AI",
+        "category": "api-quota",
+        "score": 62,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "全模态免费调用，文本免费档实际 RPM 10",
+        "content": "Agnes AI 官方提供的免费 API 访问，覆盖全模态模型。\n\n- 额度：**免费 API 访问**，文本 / 图像 / 视频模型可用\n- 限速：免费档文本实际 RPM 10（允许发起 30）\n- 变动：官方 2026-09-23 公告，文本 RPM 统一下调 50%\n- 其他模态：图像 1K 实际 RPM 20、视频实际 RPM 1\n- 定位：适合演示与低频测试，文本限速后跑 agent 任务已不实际\n\n使用步骤：\n\n1. 打开 [Agnes AI 平台](https://platform.agnes-ai.com)注册\n2. 生成 API Key\n3. 按[官方文档](https://agnes-ai.com/zh-Hans/docs/tokenplan)配置调用\n\n**注意**：官方未承诺永久免费，配额与限速可能调整；不同密钥类型限速池独立，多开 Key 不提升额度。",
+        "link": "https://platform.agnes-ai.com",
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-08-31",
+        "affiliate": false
+      },
+      {
+        "id": "zhipu-glm47flash-free-202608",
+        "title": "智谱 GLM-4.7-Flash 永久免费",
+        "vendor": "智谱",
+        "category": "api-quota",
+        "score": 45,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": true,
+        "expiryDate": null,
+        "summary": "官方免费档：200K 上下文 / 128K 输出，高峰可用性差",
+        "content": "智谱 BigModel 官方免费档文本模型，官方定价页标注免费。\n\n- 额度：**输入 / 输出均免费**，官方长期档\n- 参数：200K 上下文，最大输出 128K\n- 支持：深度思考、MCP 工具调用、Agent 编码\n- 同系列：GLM-4.6V-Flash（视觉）同免费\n\n领取步骤：\n\n1. 打开 [BigModel 开放平台](https://open.bigmodel.cn/)注册\n2. 控制台创建 API Key，调用 `glm-4.7-flash`\n\n**注意**：免费档有速率 / 并发限制，高频建议升付费档；上一代 GLM-4.5-Flash 已下线，请求自动路由至本模型；细则以[官方定价页](https://open.bigmodel.cn/pricing)为准。\n\n**可用性提醒**：由于使用人数众多，该模型高峰期可用性较差，请求可能频繁失败，对稳定性有要求的场景建议选付费模型。",
+        "link": "https://open.bigmodel.cn/",
+        "publishedAt": "2026-08-31",
+        "updatedAt": "2026-10-31",
+        "affiliate": false
+      },
+      {
+        "id": "openrouter-free-202608",
+        "title": "OpenRouter 免费模型池",
+        "vendor": "OpenRouter",
+        "category": "api-quota",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免费模型池：多款 $0 模型，以模型页实时为准",
+        "content": "OpenRouter 聚合网关的免费模型池，一个 API Key 调用多家模型。\n\n- 额度：**标注 Free 的模型 $0 调用**\n- 池子：免费模型以「:free」后缀或 Free 标注为准，数量随官方上下架变动\n- 接入：OpenAI 兼容 API，注册生成 Key 即可\n- 注意：免费档通常有速率限制，具体以模型页为准\n\n使用步骤：\n\n1. 打开 [OpenRouter 模型页](https://openrouter.ai/models?max_price=0)筛选 Free 标注\n2. 注册并创建 API Key\n3. 调用 :free 后缀模型即可\n\n**注意**：免费模型上下架频繁，额度与限速以模型页实时标注为准。",
+        "link": "https://openrouter.ai/models?max_price=0",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-10-26",
+        "affiliate": false
+      },
+      {
+        "id": "opencode-zen-free-202608",
+        "title": "OpenCode 内置免费模型",
+        "vendor": "OpenCode",
+        "category": "api-quota",
+        "score": 76,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "内置免费模型，免登录、免绑卡、免 Key",
+        "content": "OpenCode 是开源 AI 编程代理（终端 / 桌面 / IDE 扩展），**内置免费模型**，装完即用，也可接其他提供商。\n\n- 额度：**免费模型 $0 调用**，输入输出均免费\n- 模型：DeepSeek V4.1 Flash 等，名单随官方增删\n- 门槛：**无需登录、无需绑卡、无需取 Key**\n- 接入：安装即内置免费模型；也可 /connect 接其他模型\n\n使用步骤：\n\n1. 打开 [OpenCode 官网](https://opencode.ai/zh)按引导安装\n2. 启动 opencode，选自带免费模型即可对话\n3. 需要更强模型时，再自选付费提供商接入\n\n**注意**：免费模型多为限时提供、可能限速，部分会用对话数据改进模型，勿提交机密数据；**Console（原 Zen）是可选网关**，接付费模型才需登录充值（默认余额低于 $5 自动扣 $20，可关）；名单以[官方文档](https://opencode.ai/docs/zh-cn)为准。",
+        "link": "https://opencode.ai/zh",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-10-15",
+        "affiliate": false
+      },
+      {
+        "id": "nvidia-nim-trial-202608",
+        "title": "NVIDIA NIM 百款模型免费试用",
+        "vendor": "NVIDIA",
+        "category": "api-quota",
+        "score": 52,
+        "tags": {
+          "duration": "longterm",
+          "region": "global"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "100+ 模型免费试用推理，按模型限速",
+        "content": "NVIDIA Build 官方推理试用，免费调用上百个 NIM 模型。\n\n- 额度：**免费推理（Free inference）**，试用按模型限速，具体限额未公开\n- 模型：100+，含 DeepSeek V4、Kimi K3、gpt-oss\n- 另有 Nemotron、FLUX.1 生图及语音、科学计算系列\n- 接入：OpenAI 兼容 API，注册生成 API Key 即可调用\n\n使用步骤：\n\n1. 打开 [NVIDIA Build](https://build.nvidia.com/models) 注册并验证账号\n2. 在 Settings → API Keys 生成密钥\n3. 选择模型按官方示例发起调用\n\n**注意**：试用限额随模型不同且未公开；历史上的「1000 credits」制度已取消，以官网为准；**国内直连较慢**（用户实测 2026-09）。",
+        "link": "https://build.nvidia.com/models",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-16",
+        "affiliate": false
+      },
+      {
+        "id": "siliconflow-free-models-202608",
+        "title": "硅基流动多款模型免费调用",
+        "vendor": "硅基流动",
+        "category": "api-quota",
+        "score": 58,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "免费调用 Kolors 生图、星尘 ASR、bge 向量等模型",
+        "content": "硅基流动 SiliconCloud 大模型云服务平台，多款模型免费调用。\n\n- 文本：**Hunyuan-MT-7B**（翻译）、**Xing4.0-29B** 输入输出免费\n- 生图：Kolors（可图）免费\n- 语音：星尘 ASR、SenseVoiceSmall 免费\n- 向量：bge 系列 Embedding / Reranker 免费档\n- OCR：PaddleOCR-VL 免费档\n- 计费：平台按量付费，免费档模型不扣费，注册即可调用\n\n使用步骤：\n\n1. 打开 [硅基流动官网](https://siliconflow.cn/)注册并登录\n2. 在控制台创建 API Key\n3. 调用时选择标注「免费」的模型即可\n\n**注意**：免费档以官方[定价页](https://siliconflow.cn/pricing)实时标注为准；官方会不定期增删免费模型，调用前请再确认一次标注。",
+        "link": "https://siliconflow.cn/",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-10-13",
+        "affiliate": false
+      },
+      {
+        "id": "bailian-newuser-202608",
+        "title": "阿里云百炼新人最高 7000 万",
+        "vendor": "阿里云百炼",
+        "category": "token",
+        "score": 65,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每模型送 100 万 Token，多模型叠加最高 7000 万",
+        "content": "阿里云百炼新用户福利，开通即自动发放（北京地域模型）。\n\n- 额度：**每个模型独立赠送 100 万 Token**，叠加最高超 1 亿（官方口径）\n- 覆盖：Qwen 全系、DeepSeek、GLM、Kimi 等上百个模型\n- 有效期：发放起 90 天，过期作废、不补发\n- 小灶：OAuth 认证另有每天 2000 次调用额度\n\n领取步骤：\n\n1. 打开 [百炼官网](https://www.aliyun.com/product/bailian)开通服务（无需实名）\n2. 额度 2 小时内自动到账\n3. 在控制台「免费额度」页查看各模型剩余量\n\n**注意**：额度按模型独立、不可跨模型挪用；细则以[官方文档](https://help.aliyun.com/zh/model-studio/new-free-quota)为准。",
+        "link": "https://www.aliyun.com/product/bailian",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-09-16",
+        "affiliate": false
+      },
+      {
+        "id": "longcat-newbie-202608",
+        "title": "LongCat 新老用户送 1000 万",
+        "vendor": "LongCat",
+        "category": "token",
+        "score": 55,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "新用户 1000 万，老用户 2×500 万，30 天有效",
+        "content": "美团 LongCat AI 开放平台福利，新用户实名赠送、老用户上线加赠。\n\n- 新用户：**完成实名认证即送 1000 万 Token**\n- 老用户：登录可领 2 份 500 万 Token 体验包，共 1000 万\n- 有效期：发放后 30 天内有效，到期自动失效\n- 叠加：邀请新用户实名，双方各再得 1000 万，最高 2000 万\n- 返现：受邀人拼团首购返实付 5%\n- 模型：LongCat-2.5，兼容 OpenAI/Anthropic\n\n使用步骤：\n\n1. 打开 [LongCat 开放平台](https://longcat.chat/platform/product)注册并登录\n2. 新用户完成实名认证，老用户在资源权益领 2 份体验包\n3. 到账后可在「费用中心」资源包钱包查看余额\n\n**注意**：老用户体验包需手动领取、发放后 30 天内有效；返现充入余额、不可提现；企业认证账号不可参与邀请活动；规则以[官方活动页](https://longcat.chat/platform/product)为准。",
+        "link": "https://longcat.chat/platform/product",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-11-03",
+        "affiliate": false
+      },
+      {
+        "id": "sensenova-free-202608",
+        "title": "商汤日日新 12 万积分/5 小时",
+        "vendor": "商汤日日新",
+        "category": "credits",
+        "score": 45,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "5 小时 12 万积分，注册已转邀请制",
+        "content": "商汤日日新 SenseNova 大模型平台公测期免费，**2026-11-04 起注册转为邀请制**，额度本身不变。\n\n- 注册：**暂停公开注册**，新用户需邀请码\n- 申请：注册页「申请通道」提交信息，评估后发放\n- 老用户：登录、调用与现有权益均不受影响\n- 额度：5 小时窗口 **12 万积分**，周上限 120 万\n- 模型：SenseNova 6.8 Flash Lite、U1 Fast 等\n- 限制：最多建 20 个 API Key，短时调用限速较严\n\n领取步骤：\n\n1. 打开 [日日新官网](https://www.sensenova.cn/)注册页\n2. 已有账号直接登录；新用户走申请通道等邀请码\n3. 进控制台建 API Key，额度按 5 小时窗口恢复\n\n**注意**：申请为人工评估、不保证通过；免费档标注「限时放量」；付费档 Lite / Pro 即将上线，以[官方公告](https://www.sensenova.cn/token-plan)为准。",
+        "link": "https://www.sensenova.cn/token-plan",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-10-28",
+        "affiliate": false
+      },
+      {
+        "id": "workbuddy-monthly-202608",
+        "title": "WorkBuddy 签到领 100 积分",
+        "vendor": "WorkBuddy",
+        "category": "credits",
+        "score": 93,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日签到领 100 积分，体验版每月再送 500",
+        "content": "腾讯旗下 WorkBuddy（AI Agent 办公工作台）免费权益。\n\n- 签到：**每日签到领 100 积分**，自领取日起 1 个月有效\n- 入口：客户端左下角头像 → 今日礼包\n- 限免：**不定期放出限免模型**，名单与时段以客户端为准\n- 额度：**体验版每月发放 500 积分**（限免），当月有效、不结转\n- 用途：执行文档 / 表格 / 网页等办公 Agent 任务\n- 其他：代码补全 5,000 次/月、3 个自动任务、Auto 模型调度\n\n使用步骤：\n\n1. 打开 [WorkBuddy 官网](https://www.workbuddy.cn/)下载客户端并登录\n2. 每日在客户端「今日礼包」签到领 100 积分\n3. 体验版积分按月自动发放，在「设置 - 用量」查看余额\n\n**注意**：签到入口以客户端实际为准；限免名单以客户端内为准；积分规则详见[官方积分说明](https://www.workbuddy.cn/docs/workbuddy/Credits)。",
+        "link": "https://www.workbuddy.cn/events/invite?inviteCode=9k2j6pspbtl10",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-11-01",
+        "affiliate": true
+      },
+      {
+        "id": "trae-work-checkin-202608",
+        "title": "TRAE 每日签到领 100 积分",
+        "vendor": "TRAE",
+        "category": "credits",
+        "score": 88,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "每日签到领 100 积分，月最高 3100，新人送 4000",
+        "content": "TRAE（TraeWork 与 TraeCode 已于 2026-10-09 合并）每日签到福利，长期有效。\n\n- 签到：免费用户**每日 100 积分**，会员**每日 200 积分**\n- 月累计：按 31 天计，免费最高 3100 积分\n- 新人：注册一次性送 **4000 积分**，有效期 31 天\n- 另有：每月登录送 500，邀请新用户双方各 500\n- 积分类型：**会员积分**（订阅/增购）与**奖励积分**（活动获取），全平台通用\n\n签到步骤：\n\n1. 打开 [TRAE 官网](https://www.trae.cn/)注册并登录\n2. 点击头像，在菜单中选择「签到」\n3. 每日签到即可领取积分\n\n**注意**：积分有效期为 31 个自然日，多类积分并存时优先消耗最快到期者；仅调用内置模型消耗积分，自定义模型不扣；细则以[官方计费文档](https://docs.trae.cn/ide_plans-and-billing)为准。",
+        "link": "https://www.trae.cn/",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-10-13",
+        "affiliate": false
+      },
+      {
+        "id": "qianwen-office-daily-202608",
+        "title": "千问办公每日领 100 积分",
+        "vendor": "千问办公",
+        "category": "credits",
+        "score": 74,
+        "tags": {
+          "duration": "longterm",
+          "region": "cn"
+        },
+        "expired": false,
+        "expiryDate": null,
+        "summary": "个人版每日登录领 100 积分，每天 00:00 刷新，长期可领",
+        "content": "阿里云千问办公（QwenWork）个人免费版长期福利。\n\n- 额度：**每日登录奖励 100 积分**，每天 00:00 刷新\n- 新用户：首次进入个人版「我的 AI 团队」加送 2000 积分，有效期 3 个月\n- 用途：PPT / 网页 / 文档等任务按积分计费，一次约 500 积分\n- 免费版另有：并行任务 10 个、发布网页 5 个、1G 云盘\n\n领取步骤：\n\n1. 打开 [千问办公首页](https://qwenwork.cn/)，注册并登录阿里云账号\n2. 首次进入「我的 AI 团队」领 2000 积分新人礼\n3. 每天登录即可领当日 100 积分\n\n**注意**：每日奖励官方标注限时权益，细则以[官方帮助文档](https://help.aliyun.com/zh/qwenwork/qw-personal-benefits)为准。",
+        "link": "https://qwenwork.cn/",
+        "publishedAt": "2026-08-30",
+        "updatedAt": "2026-08-30",
+        "affiliate": false
       }
     ]
   },
