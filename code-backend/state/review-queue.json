@@ -781,17 +781,6 @@
     "createdAt": "2026-11-07T16:52:36Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "8844055d4f3ec016ca85274412a85f5b11f94389afab5fb16b741e375f9a2a01",
-    "reason": "invalid feed item: unexpected news host",
-    "evidence": {
-      "source": "Microsoft Azure"
-    },
-    "id": "7cf70305375abf3f38eab7aa2f230706b13cc6854d6e02fb9de1c3b2e7ddcaff",
-    "status": "pending",
-    "createdAt": "2026-11-08T10:29:33Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "bradautomates/claude-video",
     "reason": "AI applicability uncertain",
@@ -1453,18 +1442,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "mg-chao/snow-apps",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Snow Shot (SnowShot): free, open-source screenshot, annotation, scrolling capture, OCR and screen recording for Windows and macOS. 免费开源截图工具，支持长截图、贴图、文字识别与录屏。 Also includes Snow Image Viewer.",
-      "sourceUrl": "https://github.com/mg-chao/snow-apps"
-    },
-    "id": "9e8dd2b062ee88ca0415c46e8dfc9dc40b44360ed9c12a31ef43c72a4b54e02d",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "dashdogy/MFG-Unlocker",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1557,5 +1534,64 @@
     "id": "b41629b8ba7bea85a0a01c67b63526f908320f817ef39a1a5248251655296954",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "envoyproxy/envoy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Cloud-native high-performance edge/middle/service proxy",
+      "sourceUrl": "https://github.com/envoyproxy/envoy"
+    },
+    "id": "141685ad550021668d37708e15f42dc7c6aca202c822b5dcf8e397429e73df73",
+    "status": "pending",
+    "createdAt": "2026-11-10T04:11:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "anthropics/courses",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Anthropic's educational courses",
+      "sourceUrl": "https://github.com/anthropics/courses"
+    },
+    "id": "24f461c5300ba76bd045ebfcf3fc9c47b5e07fb1e893a14fe0ba19741843bbdd",
+    "status": "pending",
+    "createdAt": "2026-11-10T04:11:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "frappe/crm",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Fully featured, open source CRM",
+      "sourceUrl": "https://github.com/frappe/crm"
+    },
+    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
+    "status": "pending",
+    "createdAt": "2026-11-10T04:11:55Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "mg-chao/snow-shot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Snow Shot is free, open-source screenshot software and a screen recording tool for Windows and macOS, with annotation, scrolling screenshots, offline OCR and image pinning. 免费开源截图软件，支持截图标注、滚动长截图、离线 OCR、贴图与录屏。",
+      "sourceUrl": "https://github.com/mg-chao/snow-shot"
+    },
+    "id": "dc709ea2a90844abbeb005b2bf0f2a8cff776b010f41aa360cd97cb6d6207bb6",
+    "status": "pending",
+    "createdAt": "2026-11-10T04:11:55Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "e79b238687258d4b6a054575e839f677d3371e6315c4816976da53601d2adb21",
+    "reason": "invalid feed item: unexpected news host",
+    "evidence": {
+      "source": "Microsoft Azure"
+    },
+    "id": "eeb528d24cbaa0288a42276613588b02a922d1fd3570660207fd05ee8c794681",
+    "status": "pending",
+    "createdAt": "2026-11-10T04:11:55Z"
   }
 ]

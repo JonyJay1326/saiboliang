@@ -1,28 +1,4 @@
 {
-  "7d15d35372241976dbc453580900337cf419ff344960f7fae94bef6d436f9296": {
-    "title": "为你量身设计 Muse App",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "353c4d26111c8c919ddfe4871dbe069892efb6d3dc4f5f1bfa169e89c875a16d": {
-    "title": "GitHub Copilot 每周发布——11 月 2 日",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "2b1caf305a698efd8ff3b09df21c0581aa4c683cdc38d690f22510e74f7283bd": {
-    "title": "Slack 和 Teams 中的 @GitHub 正式可用及更多更新",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "47b292a5d1f7f3dd3e0fcef7a250899d3ab02c10d1f43b957999f334ea6a4e31": {
-    "title": "NVIDIA 开源工具如何帮助研究人员构建下一代 6G 网络",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
   "78a38ab1bb2e5e3a2eb9f6bcdf3a75b5c0e1f01e1d6615cc7fc0c1c6d00de0b3": {
     "title": "NVIDIA在MSIT-NVIDIA AI创业合作论坛宣布对韩国初创企业的新投资计划",
     "summary": null,
@@ -47,10 +23,46 @@
     "source": "deepseek-flash",
     "at": "2026-11-09T11:42:52Z"
   },
-  "1d980cecae4ce0aab0632eb002951392c1ad635311edb1d16819b3b6292df902": {
-    "title": "NVIDIA Dynamo Recipes将韩国领先开放模型投入生产",
+  "caa9073cefb43725f1a58e80c726b61b1142cf3c90f98b3ffe382a94354b7081": {
+    "title": "ChatGPT Enterprise 现已在 AWS Marketplace 上架",
+    "summary": "ChatGPT Enterprise 现可通过 AWS Marketplace 获取，帮助组织借助现有的 AWS 采购与计费关系简化采购流程。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "952d2516af2e905436adea3bc1ec3df5f6a7559eef98c6b3c275da646bdd61ac": {
+    "title": "Control Room：追踪并停止研究基础设施中模型工作负载的中央系统",
+    "summary": "了解 OpenAI 的 Control Room 如何追踪研究基础设施中的模型工作负载，并在出现安全或安保问题时迅速将其停止。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "02e9abf47eaf3fa01f98fe0d8703230a8e6faa4dd4f2fb401bd0d8381c4ff554": {
+    "title": "CodeRabbit 扩展智能体软件开发，交付量提升 20 倍",
+    "summary": "CodeRabbit 使用 OpenAI 模型管理和信任 AI 生成的代码，并借助 Codex 在相同工程团队规模下将软件交付量提升 20 倍。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "2e34e84f0999c607fcd026638ba274edf1639ff07c6ab06d851f57d1a6442eba": {
+    "title": "Kuken Industries 几分钟内检索 70 年图纸",
+    "summary": "Kuken Industries 使用 OpenAI API 检索 70 年的冷却塔图纸。工程师找到维修所需图纸的时间从近一小时缩短至 4.5 分钟。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "a3eb4dc7ae89c15a4a4c98ecdf128bd8f61b3510f9e8dccb7853ada78f6cdf24": {
+    "title": "GitHub Copilot 中的 Claude Fable 5.2",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "2f743c2a4cd5a559f7e24c8daeac1505aaf79844a7ea01fd45375d272b62153d": {
+    "title": "Secret scanning 可检测 GitHub Actions 工作流日志中的密钥",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "61e7ac7c7e624eb36dec26da6568c691b9f012a47f279f9da05848b8abff68a8": {
+    "title": "熟能生巧：NVIDIA 与合作伙伴在 CoRL 展示机器人如何在仿真中演练精细作业",
+    "summary": "仿真长期用于训练机器人行走、滚动和跳跃，如今正帮助研究人员教机器人完成更精细的任务：对齐齿轮、连接线缆和组装小型部件。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
   }
 }

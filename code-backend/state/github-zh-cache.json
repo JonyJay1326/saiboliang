@@ -109,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
-  "Vincentwei1021/video-shotcraft": {
-    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T18:28:17Z"
-  },
   "max-sixty/worktrunk": {
     "text": "Worktrunk 是一个用于 Git worktree 管理的 CLI，专为并行 AI agent 工作流设计",
     "source": "deepseek-flash",
@@ -223,5 +218,15 @@
     "text": "开源 AI 安全运营中心：告警融合、LLM 代理分诊、MITRE ATT&CK 调查，以及可回放每个代理步骤的决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
     "source": "deepseek-flash",
     "at": "2026-11-09T11:42:52Z"
+  },
+  "Unity-Technologies/ml-agents": {
+    "text": "Unity 机器学习代理工具包（ML-Agents）是一个开源项目，让游戏和模拟可作为环境，使用深度强化学习和模仿学习训练智能代理。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
+  },
+  "orailnoor/cross-platform-llm-client": {
+    "text": "统一的跨平台 AI 客户端，支持在标准云 API 与设备端离线运行自定义及无审查语言模型之间无缝切换。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T04:11:55Z"
   }
 }

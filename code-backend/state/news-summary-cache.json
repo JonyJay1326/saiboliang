@@ -1,17 +1,7 @@
 {
-  "5d497975e4844ec4f8f0d5ca8226b55a53a61ce4d635a53ec08d25adb96e7a01": {
-    "summary": "腾讯混元Hy4发布，770B总参数、49B激活参数，首次支持原生视觉与电脑操作，WorkBuddy已接入。",
+  "a3eb4dc7ae89c15a4a4c98ecdf128bd8f61b3510f9e8dccb7853ada78f6cdf24": {
+    "summary": "Anthropic 最新 Fable 模型 Claude Fable 5.2 已在 GitHub Copilot 全面可用，适用于大型代码库的复杂多步编码任务。",
     "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "1d980cecae4ce0aab0632eb002951392c1ad635311edb1d16819b3b6292df902": {
-    "summary": "NVIDIA发布Dynamo优化部署方案，用于韩国领先开放模型的生产部署。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "d33fc46a673ed1056069fa0fc1175a63b057652701857f886c96b7eb93836522": {
-    "summary": "腾讯云通知Hy4 preview模型下线及切换升级，涉及TokenHub、ADP与CloudBase平台。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
+    "at": "2026-11-10T04:11:55Z"
   }
 }

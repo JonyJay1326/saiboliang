@@ -1,6 +1,82 @@
 {
-  "dataUpdatedAt": "2026-11-09T11:42:52Z",
+  "dataUpdatedAt": "2026-11-10T04:11:55Z",
   "items": [
+    {
+      "title": "ChatGPT Enterprise 现已在 AWS Marketplace 上架",
+      "sourceUrl": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "publishedAt": "2026-11-09T19:00:00Z",
+      "source": "OpenAI",
+      "summary": "ChatGPT Enterprise 现可通过 AWS Marketplace 获取，帮助组织借助现有的 AWS 采购与计费关系简化采购流程。",
+      "id": "caa9073cefb43725f1a58e80c726b61b1142cf3c90f98b3ffe382a94354b7081",
+      "originalTitle": "ChatGPT Enterprise now available in AWS Marketplace",
+      "translatedAt": "2026-11-10T04:11:55Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "originalVerifiedAt": "2026-11-10T04:11:55Z",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-10T04:11:55Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot 中的 Claude Fable 5.2",
+      "sourceUrl": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+      "publishedAt": "2026-11-09T16:46:43Z",
+      "source": "GitHub",
+      "summary": "Anthropic 最新 Fable 模型 Claude Fable 5.2 已在 GitHub Copilot 全面可用，适用于大型代码库的复杂多步编码任务。",
+      "id": "a3eb4dc7ae89c15a4a4c98ecdf128bd8f61b3510f9e8dccb7853ada78f6cdf24",
+      "originalTitle": "Claude Fable 5.2 in GitHub Copilot",
+      "translatedAt": "2026-11-10T04:11:55Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+      "originalVerifiedAt": "2026-11-10T04:11:55Z",
+      "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-10T04:11:55Z",
+      "featured": true
+    },
+    {
+      "title": "实测千问办公2.0：1个Team Agent和团队协作，2小时操盘一场热点营销",
+      "sourceUrl": "https://zhidx.com/p/608469.html",
+      "publishedAt": "2026-11-09T14:46:09Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 江宇 编辑 | 漠影 “我画地为牢啊，厉娜！” 最近，一档名为《后会友期》的综艺，几乎把整个互联网变成了大型“厉娜文学”创作现场。",
+      "id": "e2c0e4078268a9bfbf28f8ca1d29699755ece73e3f1012f8bd45d52966de4652",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/608469.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-10T04:11:55Z",
+      "featured": null
+    },
+    {
+      "title": "字节新图像模型来了！一张图连改100轮不崩，精准指哪改哪，API降价",
+      "sourceUrl": "https://zhidx.com/p/608373.html",
+      "publishedAt": "2026-11-09T11:06:14Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 黄菲 编辑 | 江宇 智东西11月9日报道，今天下午，字节跳动Seed团队正式发布新一代图像创作模型Seedream 5.5。",
+      "id": "cd661e99ec28fb0e30e7d9edf4e043b66487ce40295b84afd806dedad01efd5a",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/608373.html",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-11-10T04:11:55Z",
+      "featured": true
+    },
     {
       "title": "腾讯混元跻身最强开源模型！一手实测Hy4：搭配WorkBuddy，多模态Agent交付力拉满",
       "sourceUrl": "https://www.qbitai.com/2026/11/507843.html",
@@ -38,6 +114,25 @@
       "eventType": "major-update",
       "addedAt": "2026-11-09T11:42:52Z",
       "featured": true
+    },
+    {
+      "title": "CodeRabbit 扩展智能体软件开发，交付量提升 20 倍",
+      "sourceUrl": "https://openai.com/index/coderabbit-codex-daybreak",
+      "publishedAt": "2026-11-09T08:00:00Z",
+      "source": "OpenAI",
+      "summary": "CodeRabbit 使用 OpenAI 模型管理和信任 AI 生成的代码，并借助 Codex 在相同工程团队规模下将软件交付量提升 20 倍。",
+      "id": "02e9abf47eaf3fa01f98fe0d8703230a8e6faa4dd4f2fb401bd0d8381c4ff554",
+      "originalTitle": "CodeRabbit scales agentic software development and ships 20x more",
+      "translatedAt": "2026-11-10T04:11:55Z",
+      "lang": "en",
+      "originalSource": "OpenAI",
+      "originalUrl": "https://openai.com/index/coderabbit-codex-daybreak",
+      "originalVerifiedAt": "2026-11-10T04:11:55Z",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-10T04:11:55Z",
+      "featured": null
     },
     {
       "title": "AI接管一家8万Star开源公司，写代码、派任务、查Bug全包了",
@@ -7051,6 +7146,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-10T04:11:04Z",
-  "generatedAt": "2026-11-10T04:11:04Z"
+  "version": "2026-11-10T04:11:55Z",
+  "generatedAt": "2026-11-10T04:11:55Z"
 }
