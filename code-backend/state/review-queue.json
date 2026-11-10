@@ -320,18 +320,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Alishahryar1/free-claude-code",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
-      "sourceUrl": "https://github.com/Alishahryar1/free-claude-code"
-    },
-    "id": "63576735998079fdb8839b8819f6a81afb093c241c763bf84a3fad301c5bace3",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/DeepTutor",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -529,18 +517,6 @@
       "sourceUrl": "https://github.com/garrytan/gstack"
     },
     "id": "77ffc29e63f4e8b3b11e82169cf6af881eb2abe69d1e228979c81c2a777f8dff",
-    "status": "pending",
-    "createdAt": "2026-11-05T11:03:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "liguobao/ds-harness-remote",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.)",
-      "sourceUrl": "https://github.com/liguobao/ds-harness-remote"
-    },
-    "id": "ec6348b65f15a6481ecd41ec82f4670632a0feb28d3f4c5ca67f3f75232e86f2",
     "status": "pending",
     "createdAt": "2026-11-05T11:03:48Z"
   },
@@ -770,18 +746,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Minglink/dsh-infinite-gen-5",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "DeepSeek v4.1 flash 最强逆向工具（无限五代） 求 Star 收藏 ⭐欢迎大家提交项目的改进",
-      "sourceUrl": "https://github.com/Minglink/dsh-infinite-gen-5"
-    },
-    "id": "e52811c85ec1cb5c935d34e5fddfd039f086fbf27dc9f9c695da0d17aace642c",
-    "status": "pending",
-    "createdAt": "2026-11-07T16:52:36Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "bradautomates/claude-video",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -830,18 +794,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "denoland/deno",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A modern runtime for JavaScript and TypeScript.",
-      "sourceUrl": "https://github.com/denoland/deno"
-    },
-    "id": "61068d2a8f8df7ab581b7ca656681a540af564e1dbaeb96477ea90926be20604",
-    "status": "pending",
-    "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "elie222/rakazo",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -875,18 +827,6 @@
     "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
     "status": "pending",
     "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "CNCKitchen/ScanRuler",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/CNCKitchen/ScanRuler"
-    },
-    "id": "6681f6d5b268bc662a54c1762cc94d890f033caa9bfcfb1f133644c88636be95",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
   },
   {
     "kind": "github-classification",
@@ -998,18 +938,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "argoproj/argo-cd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Declarative Continuous Deployment for Kubernetes",
-      "sourceUrl": "https://github.com/argoproj/argo-cd"
-    },
-    "id": "332dc4a03da7b2ceb30c08c3fef42ac32a901a14a7568861a5faa5e629546107",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "google-gemini/gemini-api-cli",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1065,42 +993,6 @@
       "sourceUrl": "https://github.com/esphome/esphome"
     },
     "id": "4c7a3f38824ffed6c531e2b0303473b3fc8c0c6fb9dfec4ac7fc0b86eccbf243",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ocornut/imgui",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
-      "sourceUrl": "https://github.com/ocornut/imgui"
-    },
-    "id": "bf67c9b6dd402f4dd5e36be900acb4e13f6fd3b99300c8f679b76f1519cb91a6",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "opentoonz/opentoonz",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenToonz - An open-source full-featured 2D animation creation software",
-      "sourceUrl": "https://github.com/opentoonz/opentoonz"
-    },
-    "id": "07eceaa6e96b2847847f094fb4d91f3fdc106641940ad71a438730ef29ec030a",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ericrisco/rsc-harness",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Your agent invents things because it has no memory, and can't touch your database because it has no arms. rsc is the meta-harness that gives it both, plus the trade to know the job and the reflexes to not break your repo. For Claude Code, Codex and 15 more.",
-      "sourceUrl": "https://github.com/ericrisco/rsc-harness"
-    },
-    "id": "3fc7d6a565f722deba1033da5e6cbcf865059cfc812bc6bc680ce42bcbfdb66d",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -1514,65 +1406,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MoeKoeMusic/MoeKoeMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
-      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
-    },
-    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "92f372c57fe3837b55e10be48b81e8a3d17a259608353046fac25636400f7c6d",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "b41629b8ba7bea85a0a01c67b63526f908320f817ef39a1a5248251655296954",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "envoyproxy/envoy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Cloud-native high-performance edge/middle/service proxy",
-      "sourceUrl": "https://github.com/envoyproxy/envoy"
-    },
-    "id": "141685ad550021668d37708e15f42dc7c6aca202c822b5dcf8e397429e73df73",
-    "status": "pending",
-    "createdAt": "2026-11-10T04:11:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "anthropics/courses",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Anthropic's educational courses",
-      "sourceUrl": "https://github.com/anthropics/courses"
-    },
-    "id": "24f461c5300ba76bd045ebfcf3fc9c47b5e07fb1e893a14fe0ba19741843bbdd",
-    "status": "pending",
-    "createdAt": "2026-11-10T04:11:55Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "frappe/crm",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Fully featured, open source CRM",
-      "sourceUrl": "https://github.com/frappe/crm"
-    },
-    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
-    "status": "pending",
-    "createdAt": "2026-11-10T04:11:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "mg-chao/snow-shot",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1584,14 +1417,110 @@
     "createdAt": "2026-11-10T04:11:55Z"
   },
   {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "grafana/grafana",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
+      "sourceUrl": "https://github.com/grafana/grafana"
+    },
+    "id": "f06e1bcb447ea2447332c0877fa547b4d095fe6a1458ae1c34cadc11a9148a0b",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "JiaFeiMiao-K-Cat/DiscImageStudio",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio"
+    },
+    "id": "650975cffed21fbbc2cf5ca7a9da94f7feac3790235817e993e7deefd4cfa816",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "huiyadanli/RevokeMsgPatcher",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A hex editor for WeChat/QQ/TIM - PC版微信/QQ/TIM防撤回补丁（我已经看到了，撤回也没用了）",
+      "sourceUrl": "https://github.com/huiyadanli/RevokeMsgPatcher"
+    },
+    "id": "63f1f83825166e913a5155c31421734f65a93557e03c188fbaa01801817a550e",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "sourcegit-scm/sourcegit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Windows/macOS/Linux GUI client for GIT users",
+      "sourceUrl": "https://github.com/sourcegit-scm/sourcegit"
+    },
+    "id": "556d6dc49bdfa37e08bbb2774e1805e77347b91b95ad14b0c7de58700e8b0a62",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yuliskov/SmartTube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Browse media content with your own rules on Android TV",
+      "sourceUrl": "https://github.com/yuliskov/SmartTube"
+    },
+    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "withmarbleapp/os-taxonomy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
+    },
+    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ruvnet/RuView",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "sourceUrl": "https://github.com/ruvnet/RuView"
+    },
+    "id": "0fadb702a3fe7d042012de26c1ca81c9ee6e15f68a8194797b735c27304da6e6",
+    "status": "pending",
+    "createdAt": "2026-11-10T11:19:31Z"
+  },
+  {
     "kind": "news-item",
-    "objectId": "e79b238687258d4b6a054575e839f677d3371e6315c4816976da53601d2adb21",
+    "objectId": "8844055d4f3ec016ca85274412a85f5b11f94389afab5fb16b741e375f9a2a01",
     "reason": "invalid feed item: unexpected news host",
     "evidence": {
       "source": "Microsoft Azure"
     },
-    "id": "eeb528d24cbaa0288a42276613588b02a922d1fd3570660207fd05ee8c794681",
+    "id": "7cf70305375abf3f38eab7aa2f230706b13cc6854d6e02fb9de1c3b2e7ddcaff",
     "status": "pending",
-    "createdAt": "2026-11-10T04:11:55Z"
+    "createdAt": "2026-11-10T11:19:31Z"
   }
 ]

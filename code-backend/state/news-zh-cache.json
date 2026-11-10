@@ -23,33 +23,15 @@
     "source": "deepseek-flash",
     "at": "2026-11-09T11:42:52Z"
   },
-  "caa9073cefb43725f1a58e80c726b61b1142cf3c90f98b3ffe382a94354b7081": {
-    "title": "ChatGPT Enterprise 现已在 AWS Marketplace 上架",
-    "summary": "ChatGPT Enterprise 现可通过 AWS Marketplace 获取，帮助组织借助现有的 AWS 采购与计费关系简化采购流程。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
   "952d2516af2e905436adea3bc1ec3df5f6a7559eef98c6b3c275da646bdd61ac": {
     "title": "Control Room：追踪并停止研究基础设施中模型工作负载的中央系统",
     "summary": "了解 OpenAI 的 Control Room 如何追踪研究基础设施中的模型工作负载，并在出现安全或安保问题时迅速将其停止。",
     "source": "deepseek-flash",
     "at": "2026-11-10T04:11:55Z"
   },
-  "02e9abf47eaf3fa01f98fe0d8703230a8e6faa4dd4f2fb401bd0d8381c4ff554": {
-    "title": "CodeRabbit 扩展智能体软件开发，交付量提升 20 倍",
-    "summary": "CodeRabbit 使用 OpenAI 模型管理和信任 AI 生成的代码，并借助 Codex 在相同工程团队规模下将软件交付量提升 20 倍。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
   "2e34e84f0999c607fcd026638ba274edf1639ff07c6ab06d851f57d1a6442eba": {
     "title": "Kuken Industries 几分钟内检索 70 年图纸",
     "summary": "Kuken Industries 使用 OpenAI API 检索 70 年的冷却塔图纸。工程师找到维修所需图纸的时间从近一小时缩短至 4.5 分钟。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
-  "a3eb4dc7ae89c15a4a4c98ecdf128bd8f61b3510f9e8dccb7853ada78f6cdf24": {
-    "title": "GitHub Copilot 中的 Claude Fable 5.2",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-10T04:11:55Z"
   },
@@ -64,5 +46,11 @@
     "summary": "仿真长期用于训练机器人行走、滚动和跳跃，如今正帮助研究人员教机器人完成更精细的任务：对齐齿轮、连接线缆和组装小型部件。",
     "source": "deepseek-flash",
     "at": "2026-11-10T04:11:55Z"
+  },
+  "69d4d9d74efa01629a6c751d8fa58a99d17f0aecb815f679bbfeeb3edf259e44": {
+    "title": "弥合教育领域的 AI 指导缺口",
+    "summary": "来自 OpenAI 欧洲、中东和非洲教育合作及 ThinkYoung 新研究的经验：支持教师、AI 素养与自主学习。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
   }
 }

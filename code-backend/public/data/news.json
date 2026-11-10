@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-11-10T04:11:55Z",
+  "dataUpdatedAt": "2026-11-10T11:19:31Z",
   "items": [
+    {
+      "title": "从“一脑多机”到“一脑多手”，蚂蚁灵波开源LingBot-Touch触觉基础模型",
+      "sourceUrl": "https://www.qbitai.com/2026/11/508996.html",
+      "publishedAt": "2026-11-10T07:57:45Z",
+      "source": "量子位",
+      "summary": "11月10日，蚂蚁灵波科技开源触觉基础模型LingBot-Touch",
+      "id": "973a673ed0c1066f634fe779fe4e5916e3f818f8b1c00eb2053df08752614a7a",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/508996.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-10T11:19:31Z",
+      "featured": true
+    },
+    {
+      "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
+      "sourceUrl": "https://www.qbitai.com/2026/11/508998.html",
+      "publishedAt": "2026-11-10T07:56:29Z",
+      "source": "量子位",
+      "summary": "让每一次任务，都成为下一次进步的起点",
+      "id": "9254344b53f3bd92e175181671238f2cc3810e37665f03fcaa69da4e98123ca7",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/508998.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-10T11:19:31Z",
+      "featured": true
+    },
     {
       "title": "ChatGPT Enterprise 现已在 AWS Marketplace 上架",
       "sourceUrl": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
@@ -18,7 +56,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-10T04:11:55Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "GitHub Copilot 中的 Claude Fable 5.2",
@@ -7146,6 +7184,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-10T04:11:55Z",
-  "generatedAt": "2026-11-10T04:11:55Z"
+  "version": "2026-11-10T11:19:31Z",
+  "generatedAt": "2026-11-10T11:19:31Z"
 }

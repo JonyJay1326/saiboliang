@@ -94,18 +94,8 @@
     "source": "deepseek-flash",
     "at": "2026-11-01T17:09:14Z"
   },
-  "Crosstalk-Solutions/project-nomad": {
-    "text": "Project NOMAD 是离线优先的知识与教育服务器。维基百科、数千本书籍、课程、地图及可选本地 AI，全部运行在自有硬件上，无需联网。",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
   "vercel-labs/agent-desktop": {
     "text": "面向 AI 智能体的计算机使用 CLI",
-    "source": "deepseek-flash",
-    "at": "2026-11-03T10:58:10Z"
-  },
-  "N4darae/shrt": {
-    "text": "面向 AI 编码智能体的契约驱动 gRPC 回归测试工具，基线经人工批准。快照 API 的有效调用链，让智能体直接查询而非追踪。当前支持 gRPC，后续支持 OpenAPI",
     "source": "deepseek-flash",
     "at": "2026-11-03T10:58:10Z"
   },
@@ -123,11 +113,6 @@
     "text": "面向 AI 智能体的浏览器自动化 CLI",
     "source": "deepseek-flash",
     "at": "2026-11-04T18:40:18Z"
-  },
-  "shiyu-coder/Kronos": {
-    "text": "Kronos：面向金融市场语言的基础模型",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
   },
   "scenario-labs/skills": {
     "text": "让任意 AI agent 生成可用于生产的图像、视频、音频和 3D：这些技能可挑选合适模型、在花费前估价，并通过 Scenario MCP 保持角色与品牌一致，另有专家团队驱动 Blender、Maya、ZBrush、Unreal 和 Unity。",
@@ -174,11 +159,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T16:52:36Z"
   },
-  "LaurieWired/GhidraMCP": {
-    "text": "Ghidra 的 MCP 服务器",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T16:52:36Z"
-  },
   "QwenLM/qwen-code": {
     "text": "一个运行在终端中的开源 AI 编码代理。",
     "source": "deepseek-flash",
@@ -194,16 +174,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-09T11:42:52Z"
   },
-  "MoFeng2223/BrimDeck": {
-    "text": "Windows 11 上的灵动岛，支持 AI 编码工具配额、用量追踪、音乐控制等。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "lemonade-sdk/lemonade": {
-    "text": "Lemonade 通过在本机 GPU 和 NPU 上提供优化后的 LLM，帮助用户发现并运行本地 AI 应用。加入 Discord：https://discord.gg/5xXzkMu8Zk",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
   "agentscope-ai/agentscope-java": {
     "text": "构建分布式、生产级、长期运行的代理。",
     "source": "deepseek-flash",
@@ -214,19 +184,39 @@
     "source": "deepseek-flash",
     "at": "2026-11-09T11:42:52Z"
   },
-  "beenuar/AiSOC": {
-    "text": "开源 AI 安全运营中心：告警融合、LLM 代理分诊、MITRE ATT&CK 调查，以及可回放每个代理步骤的决策账本。可自托管，无需 API 密钥即可运行，MIT 许可。附带面向 Claude、Cursor 和 Continue 的 MCP 服务器。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "Unity-Technologies/ml-agents": {
-    "text": "Unity 机器学习代理工具包（ML-Agents）是一个开源项目，让游戏和模拟可作为环境，使用深度强化学习和模仿学习训练智能代理。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
   "orailnoor/cross-platform-llm-client": {
     "text": "统一的跨平台 AI 客户端，支持在标准云 API 与设备端离线运行自定义及无审查语言模型之间无缝切换。",
     "source": "deepseek-flash",
     "at": "2026-11-10T04:11:55Z"
+  },
+  "Anil-matcha/Open-Generative-AI": {
+    "text": "无审查的开源 AI 视频平台替代方案，免费 AI 图像与视频生成工作室，支持 600+ 模型（Flux、Midjourney、Kling、Sora、Veo），无内容过滤，可自托管，MIT 许可。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
+  },
+  "ParadevAI/Paradev": {
+    "text": "开源 Codex App 与 Conductor 替代方案，可用自有订阅并行编排大量编码 agent。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
+  },
+  "umlx5h/LLPlayer": {
+    "text": "面向语言学习的媒体播放器，支持双语字幕、AI 生成字幕与实时翻译等功能。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
+  },
+  "conductor-oss/conductor": {
+    "text": "事件驱动的 agentic 工作流引擎，为应用与 AI Agent 提供持久且高弹性的执行引擎。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
+  },
+  "NVIDIA/OpenShell": {
+    "text": "OpenShell 是面向自主 AI agent 的安全私有运行时。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
+  },
+  "macro-inc/macro": {
+    "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、agent、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
+    "source": "deepseek-flash",
+    "at": "2026-11-10T11:19:31Z"
   }
 }
