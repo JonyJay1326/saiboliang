@@ -1501,5 +1501,53 @@
     "id": "c00c86ac99be93ed871ecea29109ab78f24e2a7b97707df0a13e904ef92ec335",
     "status": "pending",
     "createdAt": "2026-11-11T11:06:08Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "electron/electron",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+      "sourceUrl": "https://github.com/electron/electron"
+    },
+    "id": "39fc65863c1d7aeef5ffe9be5e70611e003e2eb7e714e1f3a3499b90fa193c86",
+    "status": "pending",
+    "createdAt": "2026-11-11T18:44:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PCL-Community/PCL-CE",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PCL 社区版 由社区开发者维护与管理",
+      "sourceUrl": "https://github.com/PCL-Community/PCL-CE"
+    },
+    "id": "cbbac3041ea4b50a35d7dba2b6bff7237bfe72ce482550d9b72b9272e501c09a",
+    "status": "pending",
+    "createdAt": "2026-11-11T18:44:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "HMCL-dev/HMCL",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular",
+      "sourceUrl": "https://github.com/HMCL-dev/HMCL"
+    },
+    "id": "b2c349b20f895a33d56c53f485798b1e818664ee798742631e54a0199003dcf1",
+    "status": "pending",
+    "createdAt": "2026-11-11T18:44:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MoeKoeMusic/MoeKoeMusic",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
+      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
+    },
+    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
+    "status": "pending",
+    "createdAt": "2026-11-11T18:44:17Z"
   }
 ]

@@ -219,11 +219,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
-  "Vincentwei1021/video-shotcraft": {
-    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影感产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "trymirai/uzu": {
     "text": "高性能 AI 模型推理引擎",
     "source": "deepseek-flash",

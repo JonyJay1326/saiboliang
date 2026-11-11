@@ -53,12 +53,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
   },
-  "ac94b61a25ade5edbf713f0897cc9ad6ba8f24621b9aed0d512136947920d1f0": {
-    "title": "ChatGPT Plus 面向退伍军人和现役军人",
-    "summary": "超过 20,000 名退伍军人和过渡期服役人员已领取免费一年的 ChatGPT Plus，了解他们如何用它为平民职业生涯做准备。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "0f0020abcf733229d29f4d40e095eae692bb4a4c21852ac4cbeb6daf98f1617e": {
     "title": "帮助护理人员日常生活中使用 AI",
     "summary": "OpenAI Academy 在美国五座城市为护理人员提供免费的 ChatGPT 实操工作坊，帮助他们掌握日常生活中的实用 AI 技能。",
@@ -113,12 +107,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
-  "6d8eb3bcd497222db1584f1aa2993835a109f04276471f75e3d9dbc836822f75": {
-    "title": "Gemini 4 Carbon 现已可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "f321c904268bcef29356d2d155bbcafcddbf602b9c293f4ee1395ec1aeca5a94": {
     "title": "推出 AlphaProof Code：深度验证复杂软件的重大突破",
     "summary": "AlphaProof Code 智能体用 Lean 编写了 300 万行证明，以验证 Signal 的核心加密。",
@@ -128,18 +116,6 @@
   "8827aad4505e69ef98eb5a35323bf36ab3ed2a3bb0a72d80b78337fc2eae5ce7": {
     "title": "Gemini Robotics 2.5 加速现实世界通用灵巧性",
     "summary": "我们能力最强的视觉-语言-动作模型提升了机器人的灵巧性、可靠性和安全性",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "b5d37a4739ec4800cfc00c371692962fee859fedd8785afd478faa342171e0fb": {
-    "title": "GitHub App 支持企业 Copilot 席位管理",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "78c954e9f04a3e5c86434952142c8890784387a08eaa32f0adb7b401416518a4": {
-    "title": "GitHub Copilot 中的 Gemini 4 Carbon",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -172,5 +148,41 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
+  },
+  "55ff14dc4213127df72a8039620109cd467ed21c91f1958dfd8ce815a783074c": {
+    "title": "JioStar首席架构师谈5亿用户规模的AI发现",
+    "summary": "JioStar的Vijay Seshadri讲解5亿用户规模的AI发现，分享评估、护栏与AI投产经验。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T18:44:17Z"
+  },
+  "c06fca3b9549fb95708df0f2353796ec58f056e0b405f51a42ea39400a3b35d2": {
+    "title": "Gemini Decisions API：快速、校准的多模态决策",
+    "summary": "Gemini Decisions API由先进模型Gemini Decision驱动，实现快速、校准的多模态决策。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T18:44:17Z"
+  },
+  "eac4d84ef949975e755c40f9dc94fc330d73ac359791c3bd2e46759bce21bb5a": {
+    "title": "试用Tabletop：可定制协作空间，助团队共同规划、娱乐与协作",
+    "summary": "Tabletop是Google Labs新实验，用于团队协作。可构建互动行程、投票和对阵图。加入候补名单。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T18:44:17Z"
+  },
+  "833534b672b8daa32acea1a5287042b791e6b060346eb3c7ba1affd8abb3fd3c": {
+    "title": "AlphaGenome 2：解读细胞如何读取DNA以更好理解疾病",
+    "summary": "预测DNA序列及其变异如何影响特定人类细胞类型与疾病。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T18:44:17Z"
+  },
+  "dabe5024097687c5a343965dd0fba8feaa0ef9e685fe80d20284d4c37eea4c71": {
+    "title": "个人账户现已支持议题类型与字段",
+    "summary": "个人账户拥有的仓库现已全面支持议题类型与议题字段，为个人开发者与开源维护者带来同等规划能力以标准化……此文首发于The GitHub Blog。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T18:44:17Z"
+  },
+  "bae3c4c810f890ae2b283695a0f697b81f58053ad86605d633b48f9a51ddab29": {
+    "title": "OpenRouter推出Extractions API",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T18:44:17Z"
   }
 }

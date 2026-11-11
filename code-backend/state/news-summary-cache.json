@@ -1,17 +1,7 @@
 {
-  "b5d37a4739ec4800cfc00c371692962fee859fedd8785afd478faa342171e0fb": {
-    "summary": "企业级 GitHub App 可调用 Copilot 席位管理 API，控制用户和团队席位分配。",
+  "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8": {
+    "summary": "NVIDIA在KubeCon捐赠OpenShell，并扩展AI基础设施，推动云原生社区安全运行AI代理。",
     "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "78c954e9f04a3e5c86434952142c8890784387a08eaa32f0adb7b401416518a4": {
-    "summary": "谷歌最新模型 Gemini 4 Carbon 已在 GitHub Copilot 中正式可用，面向复杂编码与推理任务。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "6d8eb3bcd497222db1584f1aa2993835a109f04276471f75e3d9dbc836822f75": {
-    "summary": "Gemini 4 Carbon 现面向开发者、企业、科学家和消费者开放。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
+    "at": "2026-11-11T18:44:17Z"
   }
 }
