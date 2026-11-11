@@ -1,7 +1,17 @@
 {
-  "a3eb4dc7ae89c15a4a4c98ecdf128bd8f61b3510f9e8dccb7853ada78f6cdf24": {
-    "summary": "Anthropic 最新 Fable 模型 Claude Fable 5.2 已在 GitHub Copilot 全面可用，适用于大型代码库的复杂多步编码任务。",
+  "b5d37a4739ec4800cfc00c371692962fee859fedd8785afd478faa342171e0fb": {
+    "summary": "企业级 GitHub App 可调用 Copilot 席位管理 API，控制用户和团队席位分配。",
     "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "78c954e9f04a3e5c86434952142c8890784387a08eaa32f0adb7b401416518a4": {
+    "summary": "谷歌最新模型 Gemini 4 Carbon 已在 GitHub Copilot 中正式可用，面向复杂编码与推理任务。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "6d8eb3bcd497222db1584f1aa2993835a109f04276471f75e3d9dbc836822f75": {
+    "summary": "Gemini 4 Carbon 现面向开发者、企业、科学家和消费者开放。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
   }
 }

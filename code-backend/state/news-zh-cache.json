@@ -52,5 +52,125 @@
     "summary": "来自 OpenAI 欧洲、中东和非洲教育合作及 ThinkYoung 新研究的经验：支持教师、AI 素养与自主学习。",
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
+  },
+  "ac94b61a25ade5edbf713f0897cc9ad6ba8f24621b9aed0d512136947920d1f0": {
+    "title": "ChatGPT Plus 面向退伍军人和现役军人",
+    "summary": "超过 20,000 名退伍军人和过渡期服役人员已领取免费一年的 ChatGPT Plus，了解他们如何用它为平民职业生涯做准备。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "0f0020abcf733229d29f4d40e095eae692bb4a4c21852ac4cbeb6daf98f1617e": {
+    "title": "帮助护理人员日常生活中使用 AI",
+    "summary": "OpenAI Academy 在美国五座城市为护理人员提供免费的 ChatGPT 实操工作坊，帮助他们掌握日常生活中的实用 AI 技能。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "991ad48e8559b2fefa9ff7bc2bbc96fe5e673f91d6bb1c78428d1dddc9dc303e": {
+    "title": "推出 ChatGPT 中的 Businesses",
+    "summary": "在 ChatGPT 中管理企业信息、了解企业展示情况，并将兴趣转化为行动。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "9092d5eb66f29547408d30e047abeac0f87e4c54c42653bfc957c7ad549984e3": {
+    "title": "Singapore Airlines 借助 OpenAI 技术提升旅行与工作体验",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "f3fc54cd1d78c100d666a9c2ab2fb50b602d94d149788dbd0586059b0a0e8b98": {
+    "title": "前沿工作：AI 对自由职业工作的影响",
+    "summary": "OpenAI 与 Upwork 的新研究发现自由职业需求变化、新技能组合，以及 AI 相关项目预算更高、工时更多。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "37e4452e64c861cffe83ba46c2eaac34a7fe63e9ccc79076dee9b50af52cb47b": {
+    "title": "Cogent 与 OpenAI 为企业打造网络防御工厂",
+    "summary": "Cogent 将 OpenAI 模型与企业上下文结合，帮助通过智能体自动修复漏洞。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "8e8e851f9ac38a1986e4da167bff89ff0f811e14b6cf3f75bb84b07e91b8552c": {
+    "title": "体验 Esther Mahlangu 博士的艺术与遗产",
+    "summary": "Witwatersrand 大学 Wits 艺术学院策展、公共与视觉文化系高级讲师 Nontobeko Ntombela 博士的肖像",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "c0101f36ad82bf9132fd32eb4132fbbfec210ace67fe38311f58e2f752d97fd8": {
+    "title": "Gemini Intelligence：新功能，覆盖更多设备",
+    "summary": "一名男子对着手机说话。屏幕上显示文字“Gemini Intelligence”",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "59a8a5dd3afc5312ddaeaf7c08230ec82a4fb1f4a4a2910346841c785cd547c9": {
+    "title": "我们正将 Adobe 的创意与生产力工具更贴近你的日常 Google 应用。",
+    "summary": "Google 与 Adobe 正在整合创意与生产力工具。在 Drive 中编辑 PDF，在 Gemini 中使用 Adobe AI。了解此次合作的新内容。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "ef83b8dc18b1604dec2efe929f1d14bae3a22991fc66232d94721b8f676ae478": {
+    "title": "Google Cloud 推出面向医疗的 Gemini。",
+    "summary": "Google Cloud 推出面向医疗的 Gemini，统一临床数据并自动化工作流，减少行政倦怠。了解其运作方式。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "6d8eb3bcd497222db1584f1aa2993835a109f04276471f75e3d9dbc836822f75": {
+    "title": "Gemini 4 Carbon 现已可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "f321c904268bcef29356d2d155bbcafcddbf602b9c293f4ee1395ec1aeca5a94": {
+    "title": "推出 AlphaProof Code：深度验证复杂软件的重大突破",
+    "summary": "AlphaProof Code 智能体用 Lean 编写了 300 万行证明，以验证 Signal 的核心加密。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "8827aad4505e69ef98eb5a35323bf36ab3ed2a3bb0a72d80b78337fc2eae5ce7": {
+    "title": "Gemini Robotics 2.5 加速现实世界通用灵巧性",
+    "summary": "我们能力最强的视觉-语言-动作模型提升了机器人的灵巧性、可靠性和安全性",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "b5d37a4739ec4800cfc00c371692962fee859fedd8785afd478faa342171e0fb": {
+    "title": "GitHub App 支持企业 Copilot 席位管理",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "78c954e9f04a3e5c86434952142c8890784387a08eaa32f0adb7b401416518a4": {
+    "title": "GitHub Copilot 中的 Gemini 4 Carbon",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "ce169ea5d1f169f19da4cc3e82d989b7f6e8e978ade9374e7718ac5a3b4f4da7": {
+    "title": "C++ language server 现可自动配置 MSBuild 构建",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "deb53e82683f18fc7be775b67e7adc268fd239486eb081913c539c4eec68f026": {
+    "title": "Dependabot 警报将在不活跃仓库上暂停",
+    "summary": "自 2026 年 12 月 8 日起，GitHub 将对过去一年无活动的大部分仓库关闭 Dependabot 警报，现有警报会被归档而非删除。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "da2b1a82ef42d28ed442eb92ed72d4f46604aca647796522080f9d5466e44321": {
+    "title": "信息更丰富的 GitHub 仪表板",
+    "summary": "自新版仪表板成为默认体验以来，开发者反馈其占用空间过多而展示内容过少，包括过大的内边距、换行标题和较低的默认值。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "0a9ebdb63db3687d34639c74f820071b0b2cf24b19890ef2c99358b8005ff2a0": {
+    "title": "AI 如何帮助回收商将混合废物转化为可再利用材料",
+    "summary": "视觉 AI 与机器人从旧衣物、瓶子和混合可回收物的传送带上分拣出值得回收的材料，使数千吨材料免于进入垃圾填埋场。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8": {
+    "title": "NVIDIA 通过 OpenShell 捐赠和新 AI 基础设施扩展开源承诺",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
   }
 }

@@ -64,11 +64,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-27T16:42:38Z"
   },
-  "nightly-labs/openbot": {
-    "text": "本地优先的桌面工作区，用于持久化 AI 队友。运行 Codex、Claude 和 Grok，提供专属工作区、任务队列、文件共享、浏览器控制与智能体间协作。",
-    "source": "deepseek-flash",
-    "at": "2026-10-27T16:42:38Z"
-  },
   "multica-ai/multica": {
     "text": "让人类与 AI 智能体作为一个团队协作——开源且可自托管。",
     "source": "deepseek-flash",
@@ -159,16 +154,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T16:52:36Z"
   },
-  "QwenLM/qwen-code": {
-    "text": "一个运行在终端中的开源 AI 编码代理。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "gastownhall/beads": {
-    "text": "Beads——为你的编码代理提供记忆升级。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
   "agentgateway/agentgateway": {
     "text": "面向 AI 代理与 MCP 服务器的下一代代理网关。",
     "source": "deepseek-flash",
@@ -199,24 +184,49 @@
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
   },
-  "umlx5h/LLPlayer": {
-    "text": "面向语言学习的媒体播放器，支持双语字幕、AI 生成字幕与实时翻译等功能。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T11:19:31Z"
-  },
-  "conductor-oss/conductor": {
-    "text": "事件驱动的 agentic 工作流引擎，为应用与 AI Agent 提供持久且高弹性的执行引擎。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T11:19:31Z"
-  },
-  "NVIDIA/OpenShell": {
-    "text": "OpenShell 是面向自主 AI agent 的安全私有运行时。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T11:19:31Z"
-  },
   "macro-inc/macro": {
     "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、agent、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
+  },
+  "getpaseo/paseo": {
+    "text": "从桌面和移动端编排多个编码代理",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "MoFeng2223/BrimDeck": {
+    "text": "为 Windows 11 提供灵动岛功能，含 AI 编码工具配额、用量追踪、音乐控制等。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "dotnet/skills": {
+    "text": "为 AI 编码代理提供 .NET 与 C# 相关技能的仓库",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "QwenLM/Qwen3-VL": {
+    "text": "Qwen3-VL 是阿里云 Qwen 团队开发的多模态大语言模型系列。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "Unity-Technologies/ml-agents": {
+    "text": "Unity 机器学习代理工具包（ML-Agents）是一个开源项目，让游戏和模拟环境可用于通过深度强化学习和模仿学习训练智能代理。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "facebookresearch/sam2": {
+    "text": "该仓库提供运行 Meta Segment Anything Model 2（SAM 2）推理的代码、预训练模型检查点下载链接及使用示例笔记本。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "Vincentwei1021/video-shotcraft": {
+    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影感产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
+  },
+  "trymirai/uzu": {
+    "text": "高性能 AI 模型推理引擎",
+    "source": "deepseek-flash",
+    "at": "2026-11-11T11:06:08Z"
   }
 }
