@@ -1,43 +1,7 @@
 {
-  "78a38ab1bb2e5e3a2eb9f6bcdf3a75b5c0e1f01e1d6615cc7fc0c1c6d00de0b3": {
-    "title": "NVIDIA在MSIT-NVIDIA AI创业合作论坛宣布对韩国初创企业的新投资计划",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "59b779471e81fefef54ab0bd5b514b375ed98ed8e01fad0b320572e889614378": {
-    "title": "韩国借助NVIDIA推动各行业物理AI发展",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "d7c73c4b9a79782fc5fe85e76ea181081136d52e0825f7da0b1d6e3266440afa": {
-    "title": "韩国AI生态借助NVIDIA实现进阶并保障代理式AI安全",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "51e504680490a66d88e49def9fc5fb90775b3edebc28951917dac8747c087a66": {
-    "title": "从芯片到技能，NVIDIA与韩国扩大主权AI合作",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
   "952d2516af2e905436adea3bc1ec3df5f6a7559eef98c6b3c275da646bdd61ac": {
     "title": "Control Room：追踪并停止研究基础设施中模型工作负载的中央系统",
     "summary": "了解 OpenAI 的 Control Room 如何追踪研究基础设施中的模型工作负载，并在出现安全或安保问题时迅速将其停止。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
-  "2e34e84f0999c607fcd026638ba274edf1639ff07c6ab06d851f57d1a6442eba": {
-    "title": "Kuken Industries 几分钟内检索 70 年图纸",
-    "summary": "Kuken Industries 使用 OpenAI API 检索 70 年的冷却塔图纸。工程师找到维修所需图纸的时间从近一小时缩短至 4.5 分钟。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
-  "2f743c2a4cd5a559f7e24c8daeac1505aaf79844a7ea01fd45375d272b62153d": {
-    "title": "Secret scanning 可检测 GitHub Actions 工作流日志中的密钥",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-10T04:11:55Z"
   },
@@ -56,12 +20,6 @@
   "0f0020abcf733229d29f4d40e095eae692bb4a4c21852ac4cbeb6daf98f1617e": {
     "title": "帮助护理人员日常生活中使用 AI",
     "summary": "OpenAI Academy 在美国五座城市为护理人员提供免费的 ChatGPT 实操工作坊，帮助他们掌握日常生活中的实用 AI 技能。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "991ad48e8559b2fefa9ff7bc2bbc96fe5e673f91d6bb1c78428d1dddc9dc303e": {
-    "title": "推出 ChatGPT 中的 Businesses",
-    "summary": "在 ChatGPT 中管理企业信息、了解企业展示情况，并将兴趣转化为行动。",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -89,21 +47,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
-  "c0101f36ad82bf9132fd32eb4132fbbfec210ace67fe38311f58e2f752d97fd8": {
-    "title": "Gemini Intelligence：新功能，覆盖更多设备",
-    "summary": "一名男子对着手机说话。屏幕上显示文字“Gemini Intelligence”",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "59a8a5dd3afc5312ddaeaf7c08230ec82a4fb1f4a4a2910346841c785cd547c9": {
     "title": "我们正将 Adobe 的创意与生产力工具更贴近你的日常 Google 应用。",
     "summary": "Google 与 Adobe 正在整合创意与生产力工具。在 Drive 中编辑 PDF，在 Gemini 中使用 Adobe AI。了解此次合作的新内容。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "ef83b8dc18b1604dec2efe929f1d14bae3a22991fc66232d94721b8f676ae478": {
-    "title": "Google Cloud 推出面向医疗的 Gemini。",
-    "summary": "Google Cloud 推出面向医疗的 Gemini，统一临床数据并自动化工作流，减少行政倦怠。了解其运作方式。",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -143,21 +89,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
-  "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8": {
-    "title": "NVIDIA 通过 OpenShell 捐赠和新 AI 基础设施扩展开源承诺",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "55ff14dc4213127df72a8039620109cd467ed21c91f1958dfd8ce815a783074c": {
     "title": "JioStar首席架构师谈5亿用户规模的AI发现",
     "summary": "JioStar的Vijay Seshadri讲解5亿用户规模的AI发现，分享评估、护栏与AI投产经验。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
-  },
-  "c06fca3b9549fb95708df0f2353796ec58f056e0b405f51a42ea39400a3b35d2": {
-    "title": "Gemini Decisions API：快速、校准的多模态决策",
-    "summary": "Gemini Decisions API由先进模型Gemini Decision驱动，实现快速、校准的多模态决策。",
     "source": "deepseek-flash",
     "at": "2026-11-11T18:44:17Z"
   },
@@ -184,5 +118,29 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-11T18:44:17Z"
+  },
+  "4922ca6fb0dd92994c349853518621d0422aac137e6c9a194fc01e08fc5408aa": {
+    "title": "Holiday Extras 重新思考用 Codex 能构建什么",
+    "summary": "借助 Codex，Holiday Extras 将客户专业知识转化为更好的应用、更高的预订转化率和新的增长可能。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "d7c1da8cb7dc41da688b7a9908111a63cf9fb297a134e952ad2db42224ad8dc2": {
+    "title": "支持 AI 与儿童安全研究",
+    "summary": "OpenAI 承诺投入 200 万美元用于 AI 与儿童安全研究，支持衡量青少年风险与机遇的共享工具。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "65b96c238445cdedc96b3e82ec1a6dd0c150d0317effbb199d997528a4ce6af2": {
+    "title": "Gilbert + Tobin 用 AI 重新思考法律业务",
+    "summary": "与 Gilbert + Tobin 合伙人兼首席执行官 Sam Nickless 的对话。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "2487ed6928577dcf5bc6fd414efc869755df554cc495c9c60ea4f18c01db4cb0": {
+    "title": "我们如何为 OpenRouter 构建自校正本地化系统",
+    "summary": "OpenRouter 现已支持 8 种语言。以下是其背后的翻译流程、成本以及读者报告如何转化为修复。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
   }
 }

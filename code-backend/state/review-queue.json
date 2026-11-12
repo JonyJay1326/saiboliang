@@ -157,30 +157,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "pingdotgg/t3code",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/pingdotgg/t3code"
-    },
-    "id": "1df2d6358fb4f561941cab2b0003326d036144e81955f271f3e2ba8f2aede0fd",
-    "status": "pending",
-    "createdAt": "2026-10-03T15:09:23Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "boykopovar/AnyPS5",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-      "sourceUrl": "https://github.com/boykopovar/AnyPS5"
-    },
-    "id": "809a5c0f0e3a01b109ea0d40baeca459b6e530761313d91e5974277d40cb7c86",
-    "status": "pending",
-    "createdAt": "2026-10-04T09:53:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "anthropics/knowledge-work-plugins",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -366,18 +342,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Graphify-Labs/graphify",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "sourceUrl": "https://github.com/Graphify-Labs/graphify"
-    },
-    "id": "b6341360ba50bc2a79182e28ebf31422aaae77b5eaf6e996237964416caff00b",
-    "status": "pending",
-    "createdAt": "2026-10-31T16:08:43Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "github/spec-kit",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -498,18 +462,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "storytold/artcraft",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
-      "sourceUrl": "https://github.com/storytold/artcraft"
-    },
-    "id": "6b52ec3080139d83222c1c24043ca438acbbd68981619277416dd583e978c118",
-    "status": "pending",
-    "createdAt": "2026-11-04T18:40:18Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "garrytan/gstack",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -614,18 +566,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "karpathy/micrograd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A tiny scalar-valued autograd engine and a neural net library on top of it with PyTorch-like API",
-      "sourceUrl": "https://github.com/karpathy/micrograd"
-    },
-    "id": "b018d1edf849287df53ce95b6636f1c6ee6bfce05de7b48bd529989a103e629c",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "FinanceFlash/unvibecode",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -683,30 +623,6 @@
     "id": "dfc65ae20f33304bd26304c6e7a28cc826d12fa36d96f0685186fe6584986a8d",
     "status": "pending",
     "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "tldraw/tldraw",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Build infinite canvas apps in React with the tldraw SDK. World's best, top-most agent recommended #1 five star SDK.",
-      "sourceUrl": "https://github.com/tldraw/tldraw"
-    },
-    "id": "bf8ec34537757ba0ed0b99391c972254e27d73871f3c25e692a739399df1771e",
-    "status": "pending",
-    "createdAt": "2026-11-07T16:52:36Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/TypeScript",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
-      "sourceUrl": "https://github.com/microsoft/TypeScript"
-    },
-    "id": "5321ce6d148f76c616144f6e54027374b86f00f804cd2a5d5a83a2f698480925",
-    "status": "pending",
-    "createdAt": "2026-11-07T16:52:36Z"
   },
   {
     "kind": "github-classification",
@@ -818,78 +734,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "python-poetry/poetry",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Python packaging and dependency management made easy",
-      "sourceUrl": "https://github.com/python-poetry/poetry"
-    },
-    "id": "b1872300b99197889e17a5de7b3f2e406475ed05526c2e756cf894805fb4613b",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "aquasecurity/trivy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-      "sourceUrl": "https://github.com/aquasecurity/trivy"
-    },
-    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nektos/act",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run your GitHub Actions locally 🚀",
-      "sourceUrl": "https://github.com/nektos/act"
-    },
-    "id": "d9d9770b2065be4681c7b47791bebc36482163b0b7c3bd67ef7a930c1e706428",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "openchoreo/openchoreo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenChoreo is an internal developer platform for Kubernetes",
-      "sourceUrl": "https://github.com/openchoreo/openchoreo"
-    },
-    "id": "21a6a384349821dd89c506351b1dce1867c3fc35513e191ba23465001e0ccb7b",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "cli/cli",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "GitHub’s official command line tool",
-      "sourceUrl": "https://github.com/cli/cli"
-    },
-    "id": "bfaa344f796e8d99ab4a269cd53abfaff5511c9b709d1f84ee2ae2b7c6bf1762",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "google-gemini/gemini-api-cli",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An (experimental) CLI for the Gemini API",
-      "sourceUrl": "https://github.com/google-gemini/gemini-api-cli"
-    },
-    "id": "27891c0cee84dbe973a5c1b39c80e50df4c9ed4b1c29173bfcaa48db9f2cee92",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "google-deepmind/mujoco",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -897,18 +741,6 @@
       "sourceUrl": "https://github.com/google-deepmind/mujoco"
     },
     "id": "c17e6bc208b0d399879a2e657f373dde4b9137ffc40fb82ffc12705f4b4db3bf",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "microsoft/onnxruntime",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ONNX Runtime: cross-platform, high performance ML inferencing and training accelerator",
-      "sourceUrl": "https://github.com/microsoft/onnxruntime"
-    },
-    "id": "a38aecf98cd28d20f9ff484a3a3a461d0b0b42bf33558f003ed43cd86cb5e640",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -974,42 +806,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "openrewrite/rewrite",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Automated mass refactoring of source code.",
-      "sourceUrl": "https://github.com/openrewrite/rewrite"
-    },
-    "id": "c76cfe38d3e1f4314ddf54b17100af1e1e97d3810ef972f8cbd41f5761ab2eef",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dbeaver/dbeaver",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free universal database tool and SQL client",
-      "sourceUrl": "https://github.com/dbeaver/dbeaver"
-    },
-    "id": "04340b3a6730acaf5072444cfd1e9cb7863b76e222b1f9079c05662c2a089b57",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "skylot/jadx",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Dex to Java decompiler",
-      "sourceUrl": "https://github.com/skylot/jadx"
-    },
-    "id": "f0f45773c7308f124a402ea4e4949812322f006cca1ab8dbbf82906abfc0954a",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "spring-projects/spring-boot",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1029,18 +825,6 @@
       "sourceUrl": "https://github.com/Anuken/Mindustry"
     },
     "id": "fd025bae92dafa0b041be269ba710e3e53771e71023ef75641dbebf79763b446",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "trinodb/trino",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Official repository of Trino, the distributed SQL query engine for big data, formerly known as PrestoSQL ( https://trino.io )",
-      "sourceUrl": "https://github.com/trinodb/trino"
-    },
-    "id": "7d21e46046b873e3e38bd1aca1d90fc477857c36b42912f63169e5145f079875",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -1070,30 +854,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "monicahq/monica",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
-      "sourceUrl": "https://github.com/monicahq/monica"
-    },
-    "id": "51379bf0c6aff3bff2ebdf9c5b572b19540e4ccbac6ce95f35a08e110d5c1052",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "filamentphp/filament",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An open-source framework for building polished, maintainable business software with Laravel.",
-      "sourceUrl": "https://github.com/filamentphp/filament"
-    },
-    "id": "dc678e9d7ac1d18f6665558acdc5a2fcde585efa75dc0070045ecfc460b5575a",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "algerkong/AlgerMusicPlayer",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1101,54 +861,6 @@
       "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
     },
     "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FreeTubeApp/FreeTube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An Open Source YouTube app for privacy",
-      "sourceUrl": "https://github.com/FreeTubeApp/FreeTube"
-    },
-    "id": "a948dda44957e02a942fc23e65feb2a6b856c4aa3dff1b56db2a878016a735b7",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "qier222/YesPlayMusic",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "高颜值的第三方网易云播放器，支持 Windows / macOS / Linux",
-      "sourceUrl": "https://github.com/qier222/YesPlayMusic"
-    },
-    "id": "57e31b87359b81a877edfda63e1632be4cc3b380cbe0c1e71288691ee084489f",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "geekgeekrun/geekgeekrun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "牛人快跑 - GeekGeekRun，求职找工作自动化工具，基于 Puppeteer、Electron。界面友好，简单易用！开源，免费！快速海投、自动开聊、已读不回提醒、职位信息抓取、不合适职位标记、僵尸职位清理；让你即刻变身成为一台冇得感情的求职机器🤖，找工作不内耗。宝宝不用动，妈妈全自动~祝你收获好Offer！",
-      "sourceUrl": "https://github.com/geekgeekrun/geekgeekrun"
-    },
-    "id": "6bfba03a6b314a70bffe6c7e51b074970cfa40e2bca50e652f6b4445b2575700",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "pandas-dev/pandas",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
-      "sourceUrl": "https://github.com/pandas-dev/pandas"
-    },
-    "id": "531eca2dfdea5c79f8579a3f738d47a84ab79bf44d3e349d7faac26fe01685d2",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -1178,18 +890,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "XTLS/Xray-core",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
-      "sourceUrl": "https://github.com/XTLS/Xray-core"
-    },
-    "id": "85e86ff6c092e61895dfabb839f2d473c618b15a46d2882c79df7fa267641855",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "dashdogy/MFG-Unlocker",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1197,30 +897,6 @@
       "sourceUrl": "https://github.com/dashdogy/MFG-Unlocker"
     },
     "id": "c0d2b3bfa8df89cb5e155bee2230e0771abc6a989c1d92ea9c5c17edb76905a8",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "shadps4-emu/shadPS4",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
-      "sourceUrl": "https://github.com/shadps4-emu/shadPS4"
-    },
-    "id": "027bcce1d7038f09f850a31f5409184239803c681ab128350796dd9cb674ceea",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "oven-sh/bun",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
-      "sourceUrl": "https://github.com/oven-sh/bun"
-    },
-    "id": "20c58dd10cf02a9a7fb36479256c4fe8291d97720189d1ee9099771661d3af0d",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -1257,30 +933,6 @@
       "sourceUrl": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio"
     },
     "id": "650975cffed21fbbc2cf5ca7a9da94f7feac3790235817e993e7deefd4cfa816",
-    "status": "pending",
-    "createdAt": "2026-11-10T11:19:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "huiyadanli/RevokeMsgPatcher",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A hex editor for WeChat/QQ/TIM - PC版微信/QQ/TIM防撤回补丁（我已经看到了，撤回也没用了）",
-      "sourceUrl": "https://github.com/huiyadanli/RevokeMsgPatcher"
-    },
-    "id": "63f1f83825166e913a5155c31421734f65a93557e03c188fbaa01801817a550e",
-    "status": "pending",
-    "createdAt": "2026-11-10T11:19:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "sourcegit-scm/sourcegit",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Windows/macOS/Linux GUI client for GIT users",
-      "sourceUrl": "https://github.com/sourcegit-scm/sourcegit"
-    },
-    "id": "556d6dc49bdfa37e08bbb2774e1805e77347b91b95ad14b0c7de58700e8b0a62",
     "status": "pending",
     "createdAt": "2026-11-10T11:19:31Z"
   },
@@ -1333,18 +985,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "liguobao/ds-harness-remote",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.)",
-      "sourceUrl": "https://github.com/liguobao/ds-harness-remote"
-    },
-    "id": "ec6348b65f15a6481ecd41ec82f4670632a0feb28d3f4c5ca67f3f75232e86f2",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "trufflesecurity/trufflehog",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1352,42 +992,6 @@
       "sourceUrl": "https://github.com/trufflesecurity/trufflehog"
     },
     "id": "545a78d5b55ee4e88256df13f290f2765dd6aae9d92ec4529cadbfd377357b84",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "podman-container-tools/podman",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Podman: A tool for managing OCI containers and pods.",
-      "sourceUrl": "https://github.com/podman-container-tools/podman"
-    },
-    "id": "7cc351408a3da3648855c4d17aac26f7a6c7cd77dcf7099d510b1aaa803d9c55",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "VictoriaMetrics/VictoriaMetrics",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "VictoriaMetrics: fast, cost-effective monitoring solution and time series database",
-      "sourceUrl": "https://github.com/VictoriaMetrics/VictoriaMetrics"
-    },
-    "id": "53b8a53d1881f9323dc064437acc617e69b920ec1ba03e606398641b2ca47e5a",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "dariulone/cyberpunk-vr-port",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/dariulone/cyberpunk-vr-port"
-    },
-    "id": "1eb689b0fe3eee469598c1166ac624b6c583be8692b46bfff8d7ac1cd8279693",
     "status": "pending",
     "createdAt": "2026-11-11T11:06:08Z"
   },
@@ -1405,18 +1009,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "flameshot-org/flameshot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Powerful yet simple to use screenshot software 🖥️ 📸",
-      "sourceUrl": "https://github.com/flameshot-org/flameshot"
-    },
-    "id": "6c1d88d52387f70321c5c25efde165bb753812ff3407c99c7cc1b6025bf5b057",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "ClickHouse/ClickHouse",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1429,125 +1021,157 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "facebookresearch/dinov3",
+    "objectId": "vuejs/core",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Reference PyTorch implementation and models for DINOv3",
-      "sourceUrl": "https://github.com/facebookresearch/dinov3"
+      "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+      "sourceUrl": "https://github.com/vuejs/core"
     },
-    "id": "67655af4504ab42e985f2dcf948dcab1c6882e2948e88b1947c736556b35ece5",
+    "id": "d67f6eabcebf67e459e231b1950f6e23c06fee3a9cc3707334b3ea8c380eccf1",
     "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "BeyondDimension/SteamTools",
+    "objectId": "grafana/grafana",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
-      "sourceUrl": "https://github.com/BeyondDimension/SteamTools"
+      "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
+      "sourceUrl": "https://github.com/grafana/grafana"
     },
-    "id": "845dbfba092c7ea257dd5ae83ab7fcef50e405dee1861284bc86101fc97917de",
+    "id": "f06e1bcb447ea2447332c0877fa547b4d095fe6a1458ae1c34cadc11a9148a0b",
     "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "Smart-Paocai/VioletToolBox",
+    "objectId": "GoogleChrome/modern-web-guidance-src",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "一款面向安卓开发的多功能玩机工具箱",
-      "sourceUrl": "https://github.com/Smart-Paocai/VioletToolBox"
+      "description": null,
+      "sourceUrl": "https://github.com/GoogleChrome/modern-web-guidance-src"
     },
-    "id": "b8d18a655ce90f4eb92ed8073202721287990e55eb389a1f1ecc85793b15ef8e",
+    "id": "4266370301beb4fea9ae80eab57ca6bced467e1c187e6e9f3cc6e751e2da9338",
     "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "zaproxy/zaproxy",
+    "objectId": "pingdotgg/t3code",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "The ZAP by Checkmarx Core project",
-      "sourceUrl": "https://github.com/zaproxy/zaproxy"
+      "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "sourceUrl": "https://github.com/pingdotgg/t3code"
     },
-    "id": "ebcfcd34d5fed412e9f8237e84281d24bba9e910ee0dca3ca58dd3603252ce29",
+    "id": "a6d7c00b7543d6a19eba5fbfe86437d94e4f63cf14767c5216ec664f70774c1a",
     "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "frappe/crm",
+    "objectId": "home-assistant/core",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Fully featured, open source CRM",
-      "sourceUrl": "https://github.com/frappe/crm"
+      "description": "🏡 Open source home automation that puts local control and privacy first.",
+      "sourceUrl": "https://github.com/home-assistant/core"
     },
-    "id": "104005a3a2fbafa2416b80ebe85c1bf2fb7b7574b3f2024d69745167a6ccd095",
+    "id": "0a205a7f63833eae9300b6051067b3991f8fed3ced47a6797255a60786b62c78",
     "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "news-future",
-    "objectId": "65b96c238445cdedc96b3e82ec1a6dd0c150d0317effbb199d997528a4ce6af2",
-    "reason": "publication is in the future",
-    "evidence": {
-      "title": "Gilbert + Tobin rethinks the business of law with AI",
-      "sourceUrl": "https://openai.com/index/gilbert-tobin-sam-nickless",
-      "publishedAt": "2026-11-12T00:00:00Z",
-      "source": "OpenAI",
-      "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin."
-    },
-    "id": "c00c86ac99be93ed871ecea29109ab78f24e2a7b97707df0a13e904ef92ec335",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "electron/electron",
+    "objectId": "docker/compose",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
-      "sourceUrl": "https://github.com/electron/electron"
+      "description": "Define and run multi-container applications with Docker",
+      "sourceUrl": "https://github.com/docker/compose"
     },
-    "id": "39fc65863c1d7aeef5ffe9be5e70611e003e2eb7e714e1f3a3499b90fa193c86",
+    "id": "76a0dc1e1d796534131c55d84cfb340dd95cf71bdbf741540b72e0f99e81da7f",
     "status": "pending",
-    "createdAt": "2026-11-11T18:44:17Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "PCL-Community/PCL-CE",
+    "objectId": "henrygd/beszel",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "PCL 社区版 由社区开发者维护与管理",
-      "sourceUrl": "https://github.com/PCL-Community/PCL-CE"
+      "description": "Lightweight server monitoring with historical data, docker stats, and alerts.",
+      "sourceUrl": "https://github.com/henrygd/beszel"
     },
-    "id": "cbbac3041ea4b50a35d7dba2b6bff7237bfe72ce482550d9b72b9272e501c09a",
+    "id": "957c95a5690c0431bd34334e1f1a682f8098c15f75fde00a25f6342869f9a07a",
     "status": "pending",
-    "createdAt": "2026-11-11T18:44:17Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "HMCL-dev/HMCL",
+    "objectId": "opentoonz/opentoonz",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular",
-      "sourceUrl": "https://github.com/HMCL-dev/HMCL"
+      "description": "OpenToonz - An open-source full-featured 2D animation creation software",
+      "sourceUrl": "https://github.com/opentoonz/opentoonz"
     },
-    "id": "b2c349b20f895a33d56c53f485798b1e818664ee798742631e54a0199003dcf1",
+    "id": "07eceaa6e96b2847847f094fb4d91f3fdc106641940ad71a438730ef29ec030a",
     "status": "pending",
-    "createdAt": "2026-11-11T18:44:17Z"
+    "createdAt": "2026-11-12T11:24:53Z"
   },
   {
     "kind": "github-classification",
-    "objectId": "MoeKoeMusic/MoeKoeMusic",
+    "objectId": "TheAlgorithms/Java",
     "reason": "AI applicability uncertain",
     "evidence": {
-      "description": "一款开源简洁高颜值的酷狗第三方客户端 An open-source, concise, and aesthetically pleasing third-party client for KuGou that supports Windows / macOS / Linux / Web",
-      "sourceUrl": "https://github.com/MoeKoeMusic/MoeKoeMusic"
+      "description": "All Algorithms implemented in Java",
+      "sourceUrl": "https://github.com/TheAlgorithms/Java"
     },
-    "id": "b2c117634cd9d8c010e55b91e5744b0b8e08b19ab4a3bc0bf656613d6be28fad",
+    "id": "b1c4379ae2af77a1984dcc09dcb9fd81f8426f2570aab6feb2a90975df1ca6c4",
     "status": "pending",
-    "createdAt": "2026-11-11T18:44:17Z"
+    "createdAt": "2026-11-12T11:24:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "666ghj/MiroFish",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+      "sourceUrl": "https://github.com/666ghj/MiroFish"
+    },
+    "id": "b3cf26c914ae8ba1593368a593b059cd0a36f7bc1943ad6187ef5fcc9a138155",
+    "status": "pending",
+    "createdAt": "2026-11-12T11:24:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "superplanehq/superplane",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source factory for one-shot engineering",
+      "sourceUrl": "https://github.com/superplanehq/superplane"
+    },
+    "id": "010345c845daa27bbf7db95a9dc28c88dcb64272c155dd4793ddad33f3a302b2",
+    "status": "pending",
+    "createdAt": "2026-11-12T11:24:53Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Leviidev/Husk",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Run Android on iOS. Natively or Emulated.",
+      "sourceUrl": "https://github.com/Leviidev/Husk"
+    },
+    "id": "56ab912bb41cf7d836cab935833a436948e588f10756155076f89c0d78c2fe14",
+    "status": "pending",
+    "createdAt": "2026-11-12T11:24:53Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "89bc9739a4c383bdba87b1517974c62b1f1a64a06074ab659caaadc03183c258",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "af2a275d2c8f192036138e30fc1fdd6f027400cb3a84744d667b7e1a28eb8547",
+    "status": "pending",
+    "createdAt": "2026-11-12T11:24:53Z"
   }
 ]

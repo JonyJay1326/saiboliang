@@ -99,11 +99,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-04T11:02:40Z"
   },
-  "guillaumemeyer/watermarks-remover": {
-    "text": "隐私优先的应用，可从你拥有的内容中去除 AI 水印。",
-    "source": "deepseek-flash",
-    "at": "2026-11-04T18:40:18Z"
-  },
   "vercel-labs/agent-browser": {
     "text": "面向 AI 智能体的浏览器自动化 CLI",
     "source": "deepseek-flash",
@@ -154,21 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T16:52:36Z"
   },
-  "agentgateway/agentgateway": {
-    "text": "面向 AI 代理与 MCP 服务器的下一代代理网关。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "agentscope-ai/agentscope-java": {
-    "text": "构建分布式、生产级、长期运行的代理。",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
-  "suno-ai/bark": {
-    "text": "🔊 文本提示驱动的生成式音频模型",
-    "source": "deepseek-flash",
-    "at": "2026-11-09T11:42:52Z"
-  },
   "orailnoor/cross-platform-llm-client": {
     "text": "统一的跨平台 AI 客户端，支持在标准云 API 与设备端离线运行自定义及无审查语言模型之间无缝切换。",
     "source": "deepseek-flash",
@@ -199,29 +179,44 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
-  "dotnet/skills": {
-    "text": "为 AI 编码代理提供 .NET 与 C# 相关技能的仓库",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "QwenLM/Qwen3-VL": {
-    "text": "Qwen3-VL 是阿里云 Qwen 团队开发的多模态大语言模型系列。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "Unity-Technologies/ml-agents": {
-    "text": "Unity 机器学习代理工具包（ML-Agents）是一个开源项目，让游戏和模拟环境可用于通过深度强化学习和模仿学习训练智能代理。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "facebookresearch/sam2": {
-    "text": "该仓库提供运行 Meta Segment Anything Model 2（SAM 2）推理的代码、预训练模型检查点下载链接及使用示例笔记本。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "trymirai/uzu": {
     "text": "高性能 AI 模型推理引擎",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
+  },
+  "homeassistant-ai/ha-mcp": {
+    "text": "使用 Claude、ChatGPT 等 AI 助手配置和自动化 Home Assistant。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "dsx-ai-factory/nvke": {
+    "text": "NVIDIA Kubernetes Engine (NVKE)，裸金属上 GPU Kubernetes 的管理平面。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "opensandbox-group/OpenSandbox": {
+    "text": "面向 AI 代理的安全、快速、可扩展沙箱运行时。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "tensorflow/tensorflow": {
+    "text": "面向所有人的开源机器学习框架。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "windmill-labs/windmill": {
+    "text": "面向工作流、应用和 AI 代理的代码优先平台，基于最快的自托管编排器（已与 Airflow、Prefect 和 Temporal 进行基准对比）。业务团队用 AI 构建，工程师控制发布内容。Lovable、Retool 和 n8n 的开源替代品。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "NVIDIA/OpenShell": {
+    "text": "OpenShell 是面向自主 AI 代理的安全、私密运行时。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
+  },
+  "CopilotKit/OpenBot": {
+    "text": "开源 AI 同事，每个都拥有自己的计算机：浏览器、文件和工具，每个操作在执行前决定、执行后记录。可接入任意 AG-UI 代理。",
+    "source": "deepseek-flash",
+    "at": "2026-11-12T11:24:53Z"
   }
 }

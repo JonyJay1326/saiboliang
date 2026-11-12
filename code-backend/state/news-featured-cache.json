@@ -533,15 +533,15 @@
     "at": "2026-11-11T11:06:08Z"
   },
   "2026-11-12": {
-    "signature": "ad4b0ebfad7f8ee52b36402ae9f05a46791e1ecf0d5f44ebfdf9d07d58cc6ac9",
+    "signature": "64ed9fbe4cabe71f002b05e8e863b7f2f5ce83fa8d90ed8797b06de56de5a9f8",
     "picks": [
+      "56502553774b0fd54e70eba8e9375720fc38537d5d95b9f97cb16df06f751bf4",
       "787f736839ecf934d0e967cebc347c178bf850427d9e41ea28a4b466d5a7a71d",
       "c06fca3b9549fb95708df0f2353796ec58f056e0b405f51a42ea39400a3b35d2",
-      "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8",
       "991ad48e8559b2fefa9ff7bc2bbc96fe5e673f91d6bb1c78428d1dddc9dc303e",
-      "ef83b8dc18b1604dec2efe929f1d14bae3a22991fc66232d94721b8f676ae478",
+      "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8",
       "c0101f36ad82bf9132fd32eb4132fbbfec210ace67fe38311f58e2f752d97fd8"
     ],
-    "at": "2026-11-11T18:44:17Z"
+    "at": "2026-11-12T11:24:53Z"
   }
 }

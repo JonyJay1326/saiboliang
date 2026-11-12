@@ -1,5 +1,5 @@
 {
-  "dataUpdatedAt": "2026-11-11T18:44:17Z",
+  "dataUpdatedAt": "2026-11-12T11:24:53Z",
   "items": [
     {
       "title": "Gemini Decisions API：快速、校准的多模态决策",
@@ -21,6 +21,25 @@
       "featured": true
     },
     {
+      "title": "上海造、香港连，中国AI加速走向全球",
+      "sourceUrl": "https://www.qbitai.com/2026/11/509214.html",
+      "publishedAt": "2026-11-11T12:22:34Z",
+      "source": "量子位",
+      "summary": "WAIC把中国AI的年度日历排满了",
+      "id": "1e2a5af6cf3c5285b080756e67708a2e6e9c78cdd3b00f5dd1e87858435053fc",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/509214.html",
+      "category": "industry",
+      "eventType": "deep-analysis",
+      "addedAt": "2026-11-12T11:24:53Z",
+      "featured": null
+    },
+    {
       "title": "10秒直出4K图，能画CAD、拆机械，MiniMax这个开源图像模型有点东西",
       "sourceUrl": "https://zhidx.com/p/609469.html",
       "publishedAt": "2026-11-11T11:51:25Z",
@@ -37,6 +56,25 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-11-11T18:44:17Z",
+      "featured": true
+    },
+    {
+      "title": "实测千问4预览版：一键让厉娜原谅许飞",
+      "sourceUrl": "https://zhidx.com/p/609402.html",
+      "publishedAt": "2026-11-11T11:11:42Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 三北 编辑 | 心缘 智东西11月11日报道，今天，阿里宣布其新一代大模型 Qwen4-Max预览版 发布",
+      "id": "56502553774b0fd54e70eba8e9375720fc38537d5d95b9f97cb16df06f751bf4",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/609402.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-12T11:24:53Z",
       "featured": true
     },
     {
@@ -246,7 +284,7 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-11T18:44:17Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "推出 ChatGPT 中的 Businesses",
@@ -7469,6 +7507,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-11T18:44:17Z",
-  "generatedAt": "2026-11-11T18:44:17Z"
+  "version": "2026-11-12T11:24:53Z",
+  "generatedAt": "2026-11-12T11:24:53Z"
 }
