@@ -342,30 +342,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "github/spec-kit",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "💫 Toolkit to help you get started with SDD or any other process!",
-      "sourceUrl": "https://github.com/github/spec-kit"
-    },
-    "id": "c987a8038c90dff85547f015c17fd7541e5298b89c5d041e3caeb4ee39467b49",
-    "status": "pending",
-    "createdAt": "2026-11-01T17:09:14Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "DeanChensj/jiangshan-map",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 164 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
-      "sourceUrl": "https://github.com/DeanChensj/jiangshan-map"
-    },
-    "id": "beaccbbe4013073a444c0b1893b696d6bd59fd27be94a882346ff4c745c54ed7",
-    "status": "pending",
-    "createdAt": "2026-11-01T17:09:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "morluto/rea",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -461,18 +437,6 @@
     "createdAt": "2026-11-04T18:40:18Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "garrytan/gstack",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
-      "sourceUrl": "https://github.com/garrytan/gstack"
-    },
-    "id": "77ffc29e63f4e8b3b11e82169cf6af881eb2abe69d1e228979c81c2a777f8dff",
-    "status": "pending",
-    "createdAt": "2026-11-05T11:03:48Z"
-  },
-  {
     "kind": "news-source",
     "objectId": "ernie",
     "reason": "HTTP 404",
@@ -530,30 +494,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "golang/go",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Go programming language",
-      "sourceUrl": "https://github.com/golang/go"
-    },
-    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "kubernetes/kubernetes",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Production-Grade Container Scheduling and Management",
-      "sourceUrl": "https://github.com/kubernetes/kubernetes"
-    },
-    "id": "dc1656ee4348085bf0f48510546a6d2402d8d47c9098bf550b739632b86a564a",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "godotengine/godot",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -561,18 +501,6 @@
       "sourceUrl": "https://github.com/godotengine/godot"
     },
     "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "FinanceFlash/unvibecode",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
-      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
-    },
-    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
     "status": "pending",
     "createdAt": "2026-11-07T10:21:20Z"
   },
@@ -650,42 +578,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "moby/moby",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems",
-      "sourceUrl": "https://github.com/moby/moby"
-    },
-    "id": "afc269536dc9e009288d85e592ad6094a23d0eaae2adb36a5a77cef0c5cde937",
-    "status": "pending",
-    "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "etcd-io/etcd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
-      "sourceUrl": "https://github.com/etcd-io/etcd"
-    },
-    "id": "e498c40b1f5e965da88d8efac39ca755a5477e4421ccc212012717af8bb0a253",
-    "status": "pending",
-    "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nushell/nushell",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A new type of shell",
-      "sourceUrl": "https://github.com/nushell/nushell"
-    },
-    "id": "fe3549311a63756476e459a0afecf8e17ad1f0ef096ea5b9acf9e508db97e43c",
-    "status": "pending",
-    "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "elie222/rakazo",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -710,18 +602,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "react/react",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The library for web and native user interfaces.",
-      "sourceUrl": "https://github.com/react/react"
-    },
-    "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
-    "status": "pending",
-    "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "meta/astryx",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -741,18 +621,6 @@
       "sourceUrl": "https://github.com/google-deepmind/mujoco"
     },
     "id": "c17e6bc208b0d399879a2e657f373dde4b9137ffc40fb82ffc12705f4b4db3bf",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "amnezia-vpn/amnezia-client",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Amnezia VPN Client (Desktop+Mobile)",
-      "sourceUrl": "https://github.com/amnezia-vpn/amnezia-client"
-    },
-    "id": "7786d2c047f521399064ad106d282917f574c629f83f362ec7829035f19e05a7",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -789,78 +657,6 @@
       "sourceUrl": "https://github.com/longbridge/gpui-kit"
     },
     "id": "6fd761aca05276d26bc1339ff83f23abb318920f936b5da65c3e21e5600979d9",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "halo-dev/halo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
-      "sourceUrl": "https://github.com/halo-dev/halo"
-    },
-    "id": "9e05d4c615e1c58406f8c976af5c3dda78fb291c640c6d839f72c33f23f42c50",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Anuken/Mindustry",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The automation tower defense RTS",
-      "sourceUrl": "https://github.com/Anuken/Mindustry"
-    },
-    "id": "fd025bae92dafa0b041be269ba710e3e53771e71023ef75641dbebf79763b446",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "elastic/elasticsearch",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free and Open Source, Distributed, RESTful Search Engine",
-      "sourceUrl": "https://github.com/elastic/elasticsearch"
-    },
-    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "TeamNewPipe/NewPipe",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A libre lightweight streaming front-end for Android.",
-      "sourceUrl": "https://github.com/TeamNewPipe/NewPipe"
-    },
-    "id": "37d5e8a05b29b04e1b27729d09744026754c798279637fd29c097b8522bb4a31",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "algerkong/AlgerMusicPlayer",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
-      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
-    },
-    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -914,18 +710,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "56e30ca743aba16a4e50e28148f4f2b1412b1b00757585a17e766547f364b8e2",
-    "status": "pending",
-    "createdAt": "2026-11-10T11:19:31Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "JiaFeiMiao-K-Cat/DiscImageStudio",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -933,18 +717,6 @@
       "sourceUrl": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio"
     },
     "id": "650975cffed21fbbc2cf5ca7a9da94f7feac3790235817e993e7deefd4cfa816",
-    "status": "pending",
-    "createdAt": "2026-11-10T11:19:31Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "yuliskov/SmartTube",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Browse media content with your own rules on Android TV",
-      "sourceUrl": "https://github.com/yuliskov/SmartTube"
-    },
-    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
     "status": "pending",
     "createdAt": "2026-11-10T11:19:31Z"
   },
@@ -997,66 +769,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "facebookresearch/faiss",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A library for efficient similarity search and clustering of dense vectors.",
-      "sourceUrl": "https://github.com/facebookresearch/faiss"
-    },
-    "id": "8690e580cb282b924766fca5daec8f4707320ed1e11f06eda98e2cf8a0475f3a",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ClickHouse/ClickHouse",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "ClickHouse® is a real-time analytics database management system",
-      "sourceUrl": "https://github.com/ClickHouse/ClickHouse"
-    },
-    "id": "f96c7aec21888dd7261732e4c1e9dc81ce1854f946e3ebfc17b79d1c67876921",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "vuejs/core",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
-      "sourceUrl": "https://github.com/vuejs/core"
-    },
-    "id": "d67f6eabcebf67e459e231b1950f6e23c06fee3a9cc3707334b3ea8c380eccf1",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "grafana/grafana",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
-      "sourceUrl": "https://github.com/grafana/grafana"
-    },
-    "id": "f06e1bcb447ea2447332c0877fa547b4d095fe6a1458ae1c34cadc11a9148a0b",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "GoogleChrome/modern-web-guidance-src",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/GoogleChrome/modern-web-guidance-src"
-    },
-    "id": "4266370301beb4fea9ae80eab57ca6bced467e1c187e6e9f3cc6e751e2da9338",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "pingdotgg/t3code",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1069,30 +781,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "home-assistant/core",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🏡 Open source home automation that puts local control and privacy first.",
-      "sourceUrl": "https://github.com/home-assistant/core"
-    },
-    "id": "0a205a7f63833eae9300b6051067b3991f8fed3ced47a6797255a60786b62c78",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "docker/compose",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Define and run multi-container applications with Docker",
-      "sourceUrl": "https://github.com/docker/compose"
-    },
-    "id": "76a0dc1e1d796534131c55d84cfb340dd95cf71bdbf741540b72e0f99e81da7f",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "henrygd/beszel",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1100,18 +788,6 @@
       "sourceUrl": "https://github.com/henrygd/beszel"
     },
     "id": "957c95a5690c0431bd34334e1f1a682f8098c15f75fde00a25f6342869f9a07a",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "opentoonz/opentoonz",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenToonz - An open-source full-featured 2D animation creation software",
-      "sourceUrl": "https://github.com/opentoonz/opentoonz"
-    },
-    "id": "07eceaa6e96b2847847f094fb4d91f3fdc106641940ad71a438730ef29ec030a",
     "status": "pending",
     "createdAt": "2026-11-12T11:24:53Z"
   },
@@ -1164,14 +840,110 @@
     "createdAt": "2026-11-12T11:24:53Z"
   },
   {
+    "kind": "github-classification",
+    "objectId": "openai/codex-security",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "sourceUrl": "https://github.com/openai/codex-security"
+    },
+    "id": "f47826b55849b13c13acc1ffa9f4975c11f5f50ff22e069efc2af7bbaf929367",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "immich-app/immich",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "High performance self-hosted photo and video management solution.",
+      "sourceUrl": "https://github.com/immich-app/immich"
+    },
+    "id": "99c01ab1ab9c8c5a497e708b59b82a36ce7c5dbe8c48f34cb2362d72b4eb5be6",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "every-app/open-seo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open source alternative to Semrush and Ahrefs",
+      "sourceUrl": "https://github.com/every-app/open-seo"
+    },
+    "id": "05cc0e824177ff632ff22ba0bc7fc8034e56ab7dfae5e53563d2d00f8a474f7d",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) and small context windows (a 100K context is enough) .上下文压缩插件，月级长会话， 兼顾小窗口(100k上下文足矣) . billion-context is all you need",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "39e0f0eb98f151edeff83da9b4aaafa132c32639fe7ea6bd822872d1676e08ae",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "backnotprop/plannotator",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "sourceUrl": "https://github.com/backnotprop/plannotator"
+    },
+    "id": "f0617d744f362bc77dad6d1157e74060257578e001eb6e73ed8e1744a1391474",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "bradautomates/claude-video",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "sourceUrl": "https://github.com/bradautomates/claude-video"
+    },
+    "id": "a808e4c77350789286cbd7ed6eb28e6a0e779df63b6788eb52060a3f2d94cfb6",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "agent-substrate/substrate",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Agent Substrate: the core system",
+      "sourceUrl": "https://github.com/agent-substrate/substrate"
+    },
+    "id": "3d1e8126636a1b3b3ed066e60654b7ed283f0f4d19ce1d32143c956d83a2ad8b",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "withmarbleapp/os-taxonomy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
+    },
+    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
+    "status": "pending",
+    "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
     "kind": "news-item",
-    "objectId": "89bc9739a4c383bdba87b1517974c62b1f1a64a06074ab659caaadc03183c258",
+    "objectId": "66726741cdba5fe50dab12abbaad6ab08c9dd373d53c196e79da34b2ab69c08d",
     "reason": "invalid AIBase article: AIBase article identity/title mismatch",
     "evidence": {
       "source": "AIBase"
     },
-    "id": "af2a275d2c8f192036138e30fc1fdd6f027400cb3a84744d667b7e1a28eb8547",
+    "id": "e3a225bb64150c2ccda9f4cea8e0e8a40b3aa91c32b6d7abcf91c865d7cbd099",
     "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
+    "createdAt": "2026-11-13T11:08:04Z"
   }
 ]

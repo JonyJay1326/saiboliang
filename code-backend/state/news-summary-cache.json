@@ -1,7 +1,12 @@
 {
-  "9ccf20ad200fc0ba5e4f513104de1bd9f2c8e9f81a885a40ccb6f9f8bb0d84c8": {
-    "summary": "NVIDIA在KubeCon捐赠OpenShell，并扩展AI基础设施，推动云原生社区安全运行AI代理。",
+  "ff91852e23b0f7d0cb02fb3a1cc0367dc3d459194a119e09bb3ad0d91215928d": {
+    "summary": "开源编码代理OpenCode发布v2.3.0，项目托管于GitHub。",
     "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "c7a410ad3b8628097c7278673e6a34ddff7e2c0f2dee6f72d49256797258779d": {
+    "summary": "谷歌推出Gemini 4 Hydrogen，面向代理工作流与日常任务，快速且成本高效。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
   }
 }

@@ -14,11 +14,6 @@
     "source": "deepseek-flash",
     "at": "2026-09-25T15:50:41Z"
   },
-  "vxcontrol/pentagi": {
-    "text": "全自主 AI 智能体系统，可执行复杂的渗透测试任务",
-    "source": "deepseek-flash",
-    "at": "2026-10-13T18:21:53Z"
-  },
   "vercel-labs/skills": {
     "text": "开放的智能体技能工具 - npx skills",
     "source": "deepseek-flash",
@@ -104,16 +99,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-04T18:40:18Z"
   },
-  "scenario-labs/skills": {
-    "text": "让任意 AI agent 生成可用于生产的图像、视频、音频和 3D：这些技能可挑选合适模型、在花费前估价，并通过 Scenario MCP 保持角色与品牌一致，另有专家团队驱动 Blender、Maya、ZBrush、Unreal 和 Unity。",
-    "source": "deepseek-flash",
-    "at": "2026-11-05T11:03:48Z"
-  },
-  "infiniflow/ragflow": {
-    "text": "RAGFlow 是一个面向智能体的数据库：由检索增强生成（RAG）引擎发展而来的上下文基础设施。",
-    "source": "deepseek-flash",
-    "at": "2026-11-06T11:00:21Z"
-  },
   "NVIDIA/auto-ontology": {
     "text": "Auto Ontology 是一个 Python 框架，用于在数据之上构建基于图的语义推理层，支持确定性查询生成、更好的上下文检索，并为 LLM 与 agent 工作流提供更可解释的 AI。",
     "source": "deepseek-flash",
@@ -144,11 +129,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T16:52:36Z"
   },
-  "google-gemini/gemini-cli": {
-    "text": "开源 AI 智能体，将 Gemini 的能力直接带入终端。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T16:52:36Z"
-  },
   "orailnoor/cross-platform-llm-client": {
     "text": "统一的跨平台 AI 客户端，支持在标准云 API 与设备端离线运行自定义及无审查语言模型之间无缝切换。",
     "source": "deepseek-flash",
@@ -159,11 +139,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
   },
-  "ParadevAI/Paradev": {
-    "text": "开源 Codex App 与 Conductor 替代方案，可用自有订阅并行编排大量编码 agent。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T11:19:31Z"
-  },
   "macro-inc/macro": {
     "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、agent、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
     "source": "deepseek-flash",
@@ -171,16 +146,6 @@
   },
   "getpaseo/paseo": {
     "text": "从桌面和移动端编排多个编码代理",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "MoFeng2223/BrimDeck": {
-    "text": "为 Windows 11 提供灵动岛功能，含 AI 编码工具配额、用量追踪、音乐控制等。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "trymirai/uzu": {
-    "text": "高性能 AI 模型推理引擎",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -204,11 +169,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
   },
-  "windmill-labs/windmill": {
-    "text": "面向工作流、应用和 AI 代理的代码优先平台，基于最快的自托管编排器（已与 Airflow、Prefect 和 Temporal 进行基准对比）。业务团队用 AI 构建，工程师控制发布内容。Lovable、Retool 和 n8n 的开源替代品。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
   "NVIDIA/OpenShell": {
     "text": "OpenShell 是面向自主 AI 代理的安全、私密运行时。",
     "source": "deepseek-flash",
@@ -218,5 +178,20 @@
     "text": "开源 AI 同事，每个都拥有自己的计算机：浏览器、文件和工具，每个操作在执行前决定、执行后记录。可接入任意 AG-UI 代理。",
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
+  },
+  "nightly-labs/openbot": {
+    "text": "本地优先的桌面工作区，用于持久化 AI 队友。运行 Codex、Claude 和 Grok，提供专属工作区、任务队列、文件共享、浏览器控制及智能体间协作。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "GoogleChrome/modern-web-guidance-src": {
+    "text": "让编码智能体及时掌握最新 Web 最佳实践",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "jamiepine/voicebox": {
+    "text": "开源 AI 语音工作室。克隆、听写、创作。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
   }
 }

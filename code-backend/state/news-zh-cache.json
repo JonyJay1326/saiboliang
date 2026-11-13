@@ -1,43 +1,7 @@
 {
-  "952d2516af2e905436adea3bc1ec3df5f6a7559eef98c6b3c275da646bdd61ac": {
-    "title": "Control Room：追踪并停止研究基础设施中模型工作负载的中央系统",
-    "summary": "了解 OpenAI 的 Control Room 如何追踪研究基础设施中的模型工作负载，并在出现安全或安保问题时迅速将其停止。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
-  "61e7ac7c7e624eb36dec26da6568c691b9f012a47f279f9da05848b8abff68a8": {
-    "title": "熟能生巧：NVIDIA 与合作伙伴在 CoRL 展示机器人如何在仿真中演练精细作业",
-    "summary": "仿真长期用于训练机器人行走、滚动和跳跃，如今正帮助研究人员教机器人完成更精细的任务：对齐齿轮、连接线缆和组装小型部件。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
-  },
-  "69d4d9d74efa01629a6c751d8fa58a99d17f0aecb815f679bbfeeb3edf259e44": {
-    "title": "弥合教育领域的 AI 指导缺口",
-    "summary": "来自 OpenAI 欧洲、中东和非洲教育合作及 ThinkYoung 新研究的经验：支持教师、AI 素养与自主学习。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T11:19:31Z"
-  },
   "0f0020abcf733229d29f4d40e095eae692bb4a4c21852ac4cbeb6daf98f1617e": {
     "title": "帮助护理人员日常生活中使用 AI",
     "summary": "OpenAI Academy 在美国五座城市为护理人员提供免费的 ChatGPT 实操工作坊，帮助他们掌握日常生活中的实用 AI 技能。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "9092d5eb66f29547408d30e047abeac0f87e4c54c42653bfc957c7ad549984e3": {
-    "title": "Singapore Airlines 借助 OpenAI 技术提升旅行与工作体验",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "f3fc54cd1d78c100d666a9c2ab2fb50b602d94d149788dbd0586059b0a0e8b98": {
-    "title": "前沿工作：AI 对自由职业工作的影响",
-    "summary": "OpenAI 与 Upwork 的新研究发现自由职业需求变化、新技能组合，以及 AI 相关项目预算更高、工时更多。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "37e4452e64c861cffe83ba46c2eaac34a7fe63e9ccc79076dee9b50af52cb47b": {
-    "title": "Cogent 与 OpenAI 为企业打造网络防御工厂",
-    "summary": "Cogent 将 OpenAI 模型与企业上下文结合，帮助通过智能体自动修复漏洞。",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -59,12 +23,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
-  "8827aad4505e69ef98eb5a35323bf36ab3ed2a3bb0a72d80b78337fc2eae5ce7": {
-    "title": "Gemini Robotics 2.5 加速现实世界通用灵巧性",
-    "summary": "我们能力最强的视觉-语言-动作模型提升了机器人的灵巧性、可靠性和安全性",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "ce169ea5d1f169f19da4cc3e82d989b7f6e8e978ade9374e7718ac5a3b4f4da7": {
     "title": "C++ language server 现可自动配置 MSBuild 构建",
     "summary": null,
@@ -74,12 +32,6 @@
   "deb53e82683f18fc7be775b67e7adc268fd239486eb081913c539c4eec68f026": {
     "title": "Dependabot 警报将在不活跃仓库上暂停",
     "summary": "自 2026 年 12 月 8 日起，GitHub 将对过去一年无活动的大部分仓库关闭 Dependabot 警报，现有警报会被归档而非删除。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "da2b1a82ef42d28ed442eb92ed72d4f46604aca647796522080f9d5466e44321": {
-    "title": "信息更丰富的 GitHub 仪表板",
-    "summary": "自新版仪表板成为默认体验以来，开发者反馈其占用空间过多而展示内容过少，包括过大的内边距、换行标题和较低的默认值。",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -113,12 +65,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-11T18:44:17Z"
   },
-  "bae3c4c810f890ae2b283695a0f697b81f58053ad86605d633b48f9a51ddab29": {
-    "title": "OpenRouter推出Extractions API",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
-  },
   "4922ca6fb0dd92994c349853518621d0422aac137e6c9a194fc01e08fc5408aa": {
     "title": "Holiday Extras 重新思考用 Codex 能构建什么",
     "summary": "借助 Codex，Holiday Extras 将客户专业知识转化为更好的应用、更高的预订转化率和新的增长可能。",
@@ -142,5 +88,65 @@
     "summary": "OpenRouter 现已支持 8 种语言。以下是其背后的翻译流程、成本以及读者报告如何转化为修复。",
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
+  },
+  "6897443716994d3c82feba45ed56245480118adc4844e1e64f163f65ba94199f": {
+    "title": "Meta新协议将清洁制造引入数据中心供应链",
+    "summary": "我们正将清洁制造引入数据中心，并与供应链中的低碳生产商签订长期采购协议，以树立行业标准。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "67672a694e389b29af5588bf1be29a978063408e3c6a0262fcadf6da500500d7": {
+    "title": "Amplitude如何借助OpenAI在1至2天内交付产品改进",
+    "summary": "Amplitude的主动式产品代理Wave主要基于OpenAI模型构建，可识别应构建的内容，帮助团队借助编码代理交付变更，并衡量影响。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "b9840fd67063a36a400d5e1d91fe182c1b415df6997c889b681a58ba22957843": {
+    "title": "Gondola借助Codex让团队产出更多，收入翻倍",
+    "summary": "Gondola帮助创意人士获得认可并受雇，Codex使其首席工程师产出提升50%，ChatGPT则简化了日常工作。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "f19cddd04797ae7d9ed5d0a1d62c167e87f3414d038a70f2ab5d51a8aa7353f1": {
+    "title": "Google搜索借助Gemini 4 Hydrogen迎来重大升级",
+    "summary": "卡片轮播图显示“Gemini 4 Hydrogen”“现已登陆Google搜索”以及Google搜索界面示例",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "c7a410ad3b8628097c7278673e6a34ddff7e2c0f2dee6f72d49256797258779d": {
+    "title": "推出Gemini 4 Hydrogen",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "35ac62249c0a485d5c8478f36e800cdb2b1b4826bada0b8a6ea1aa88a19d0516": {
+    "title": "ARM32 Linux与Windows退役相关操作",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "a95ceb4f7bc23b6c427661db1a740c3303e46a94330549d96c89be1aee9121af": {
+    "title": "机密扫描可检测Cloudflare服务令牌",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "9d93b67611de91b81b7a1399bd5476c9204e56bad61b2cef2aaa4f442337fa24": {
+    "title": "公开监控警报现已支持直接链接",
+    "summary": "您现在可通过每条警报的直接链接访问单个公开监控警报。在企业的公开监控视图中，点击警报编号即可打开该警报。您……",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "ed8dc20742e8870df2b87cc14d4dc84c2f863277785b47ea33675b0f592a26bc": {
+    "title": "云端新曙光：《战锤40,000：战争黎明IV》即将登陆GeForce NOW",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
+  },
+  "fdf1081819b010772d8b0fe587533ac651d5710d576c731c78a7c9070c9cb08b": {
+    "title": "从AI雄心到业务影响",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T11:08:04Z"
   }
 }
