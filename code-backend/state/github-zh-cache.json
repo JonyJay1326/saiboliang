@@ -193,5 +193,10 @@
     "text": "开源 AI 语音工作室。克隆、听写、创作。",
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
+  },
+  "windmill-labs/windmill": {
+    "text": "面向工作流、应用和 AI 智能体的代码优先平台，运行于最快的可自托管编排器（已与 Airflow、Prefect 和 Temporal 进行基准对比）。业务团队借助 AI 构建，工程师掌控发布。Lovable、Retool 和 n8n 的开源替代方案。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T18:33:46Z"
   }
 }

@@ -1,37 +1,7 @@
 {
-  "0f0020abcf733229d29f4d40e095eae692bb4a4c21852ac4cbeb6daf98f1617e": {
-    "title": "帮助护理人员日常生活中使用 AI",
-    "summary": "OpenAI Academy 在美国五座城市为护理人员提供免费的 ChatGPT 实操工作坊，帮助他们掌握日常生活中的实用 AI 技能。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "8e8e851f9ac38a1986e4da167bff89ff0f811e14b6cf3f75bb84b07e91b8552c": {
     "title": "体验 Esther Mahlangu 博士的艺术与遗产",
     "summary": "Witwatersrand 大学 Wits 艺术学院策展、公共与视觉文化系高级讲师 Nontobeko Ntombela 博士的肖像",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "59a8a5dd3afc5312ddaeaf7c08230ec82a4fb1f4a4a2910346841c785cd547c9": {
-    "title": "我们正将 Adobe 的创意与生产力工具更贴近你的日常 Google 应用。",
-    "summary": "Google 与 Adobe 正在整合创意与生产力工具。在 Drive 中编辑 PDF，在 Gemini 中使用 Adobe AI。了解此次合作的新内容。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "f321c904268bcef29356d2d155bbcafcddbf602b9c293f4ee1395ec1aeca5a94": {
-    "title": "推出 AlphaProof Code：深度验证复杂软件的重大突破",
-    "summary": "AlphaProof Code 智能体用 Lean 编写了 300 万行证明，以验证 Signal 的核心加密。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "ce169ea5d1f169f19da4cc3e82d989b7f6e8e978ade9374e7718ac5a3b4f4da7": {
-    "title": "C++ language server 现可自动配置 MSBuild 构建",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "deb53e82683f18fc7be775b67e7adc268fd239486eb081913c539c4eec68f026": {
-    "title": "Dependabot 警报将在不活跃仓库上暂停",
-    "summary": "自 2026 年 12 月 8 日起，GitHub 将对过去一年无活动的大部分仓库关闭 Dependabot 警报，现有警报会被归档而非删除。",
     "source": "deepseek-flash",
     "at": "2026-11-11T11:06:08Z"
   },
@@ -113,12 +83,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
   },
-  "c7a410ad3b8628097c7278673e6a34ddff7e2c0f2dee6f72d49256797258779d": {
-    "title": "推出Gemini 4 Hydrogen",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
-  },
   "35ac62249c0a485d5c8478f36e800cdb2b1b4826bada0b8a6ea1aa88a19d0516": {
     "title": "ARM32 Linux与Windows退役相关操作",
     "summary": null,
@@ -148,5 +112,23 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
+  },
+  "7d4d71d056da02862d0b2ec1b87dadd7019731481c576401840bf8ff718ee663": {
+    "title": "推出 ChatGPT Wallet",
+    "summary": "推出 ChatGPT Wallet，让 ChatGPT Work、Codex 和 dots 中的智能体在用户批准并沿用现有卡片保护机制下安全完成购买。",
+    "source": "deepseek-flash",
+    "at": "2026-11-13T18:33:46Z"
+  },
+  "30f5ce152acc8d522a2e6dda0c5ef8f4a9071766fc4b03f6666bcd9d9491db27": {
+    "title": "使用 REST API 管理仓库的 AI Scan",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T18:33:46Z"
+  },
+  "a0730e6c360a165831b46ef45b50e486f9a32c6d16334cf5d3eb9537bfee4743": {
+    "title": "AI 如何帮助护理团队让患者更早获得正确诊疗",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-13T18:33:46Z"
   }
 }

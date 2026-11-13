@@ -877,18 +877,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "ranxianglei/billion-context",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) and small context windows (a 100K context is enough) .上下文压缩插件，月级长会话， 兼顾小窗口(100k上下文足矣) . billion-context is all you need",
-      "sourceUrl": "https://github.com/ranxianglei/billion-context"
-    },
-    "id": "39e0f0eb98f151edeff83da9b4aaafa132c32639fe7ea6bd822872d1676e08ae",
-    "status": "pending",
-    "createdAt": "2026-11-13T11:08:04Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "backnotprop/plannotator",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -945,5 +933,232 @@
     "id": "e3a225bb64150c2ccda9f4cea8e0e8a40b3aa91c32b6d7abcf91c865d7cbd099",
     "status": "pending",
     "createdAt": "2026-11-13T11:08:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "google/elephant-goldfish-model",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open-source plugin for designing and reviewing software with agents",
+      "sourceUrl": "https://github.com/google/elephant-goldfish-model"
+    },
+    "id": "fafe0419e28e730c2054a87286c28929c4ed3b64fe50c9c742b50b9b096ffa41",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ranxianglei/billion-context",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) and small context windows (a 100K context is enough), billion-context is all you need .",
+      "sourceUrl": "https://github.com/ranxianglei/billion-context"
+    },
+    "id": "5e20041fc7558752259fae75e580c962cc21aa6dc624629fd8a066f171491bed",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Jakeschincariol/instagram-agent-skill",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
+      "sourceUrl": "https://github.com/Jakeschincariol/instagram-agent-skill"
+    },
+    "id": "fbf173dacca9353fb2d80bab4e21261096ea28218f29e2c3dd849b0f246e2348",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "etcd-io/etcd",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "sourceUrl": "https://github.com/etcd-io/etcd"
+    },
+    "id": "e498c40b1f5e965da88d8efac39ca755a5477e4421ccc212012717af8bb0a253",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aquasecurity/trivy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+      "sourceUrl": "https://github.com/aquasecurity/trivy"
+    },
+    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "XTLS/Xray-core",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
+      "sourceUrl": "https://github.com/XTLS/Xray-core"
+    },
+    "id": "85e86ff6c092e61895dfabb839f2d473c618b15a46d2882c79df7fa267641855",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "opentoonz/opentoonz",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "OpenToonz - An open-source full-featured 2D animation creation software",
+      "sourceUrl": "https://github.com/opentoonz/opentoonz"
+    },
+    "id": "07eceaa6e96b2847847f094fb4d91f3fdc106641940ad71a438730ef29ec030a",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SunshineStream/Sunshine",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Self-hosted game stream host for Moonlight.",
+      "sourceUrl": "https://github.com/SunshineStream/Sunshine"
+    },
+    "id": "b701a3db71139b30ede13db770239d4fd6abcf0dac4f0dc4b391faf313a30fc7",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "facebookresearch/faiss",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A library for efficient similarity search and clustering of dense vectors.",
+      "sourceUrl": "https://github.com/facebookresearch/faiss"
+    },
+    "id": "8690e580cb282b924766fca5daec8f4707320ed1e11f06eda98e2cf8a0475f3a",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "amnezia-vpn/amnezia-client",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Amnezia VPN Client (Desktop+Mobile)",
+      "sourceUrl": "https://github.com/amnezia-vpn/amnezia-client"
+    },
+    "id": "7786d2c047f521399064ad106d282917f574c629f83f362ec7829035f19e05a7",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "FinanceFlash/unvibecode",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
+      "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
+    },
+    "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Yu9191/wloc",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "修改 Apple 网络定位（gs-loc）返回坐标 · 支持 Surge / Quantumult X / Loon / Stash · 快捷指令一键设置/恢复定位",
+      "sourceUrl": "https://github.com/Yu9191/wloc"
+    },
+    "id": "4e346d04cc914dea2eb33445ef3ea3763874e1c4bc2be2dffb8e718231059d64",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elastic/elasticsearch",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free and Open Source, Distributed, RESTful Search Engine",
+      "sourceUrl": "https://github.com/elastic/elasticsearch"
+    },
+    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "TeamNewPipe/NewPipe",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A libre lightweight streaming front-end for Android.",
+      "sourceUrl": "https://github.com/TeamNewPipe/NewPipe"
+    },
+    "id": "37d5e8a05b29b04e1b27729d09744026754c798279637fd29c097b8522bb4a31",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yuliskov/SmartTube",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Browse media content with your own rules on Android TV",
+      "sourceUrl": "https://github.com/yuliskov/SmartTube"
+    },
+    "id": "3bbebdbaf7693980127919f15088316a37d4c9bf04377ab2ae35dc249a7f8a4d",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "halo-dev/halo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
+      "sourceUrl": "https://github.com/halo-dev/halo"
+    },
+    "id": "9e05d4c615e1c58406f8c976af5c3dda78fb291c640c6d839f72c33f23f42c50",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "spring-projects/spring-boot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
+      "sourceUrl": "https://github.com/spring-projects/spring-boot"
+    },
+    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "algerkong/AlgerMusicPlayer",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+      "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
+    },
+    "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
+    "evidence": {
+      "url": "https://www.zhipuai.cn/zh/news"
+    },
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
+    "status": "pending",
+    "createdAt": "2026-11-13T18:33:46Z"
   }
 ]

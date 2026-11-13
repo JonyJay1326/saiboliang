@@ -1,12 +1,7 @@
 {
-  "ff91852e23b0f7d0cb02fb3a1cc0367dc3d459194a119e09bb3ad0d91215928d": {
-    "summary": "开源编码代理OpenCode发布v2.3.0，项目托管于GitHub。",
+  "30f5ce152acc8d522a2e6dda0c5ef8f4a9071766fc4b03f6666bcd9d9491db27": {
+    "summary": "可通过REST API在组织和仓库级别开启或关闭GitHub代码扫描的AI Scan，现为公开预览。",
     "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
-  },
-  "c7a410ad3b8628097c7278673e6a34ddff7e2c0f2dee6f72d49256797258779d": {
-    "summary": "谷歌推出Gemini 4 Hydrogen，面向代理工作流与日常任务，快速且成本高效。",
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
+    "at": "2026-11-13T18:33:46Z"
   }
 }
