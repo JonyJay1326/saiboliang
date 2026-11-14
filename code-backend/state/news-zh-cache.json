@@ -1,16 +1,4 @@
 {
-  "eac4d84ef949975e755c40f9dc94fc330d73ac359791c3bd2e46759bce21bb5a": {
-    "title": "试用Tabletop：可定制协作空间，助团队共同规划、娱乐与协作",
-    "summary": "Tabletop是Google Labs新实验，用于团队协作。可构建互动行程、投票和对阵图。加入候补名单。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
-  },
-  "833534b672b8daa32acea1a5287042b791e6b060346eb3c7ba1affd8abb3fd3c": {
-    "title": "AlphaGenome 2：解读细胞如何读取DNA以更好理解疾病",
-    "summary": "预测DNA序列及其变异如何影响特定人类细胞类型与疾病。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
-  },
   "dabe5024097687c5a343965dd0fba8feaa0ef9e685fe80d20284d4c37eea4c71": {
     "title": "个人账户现已支持议题类型与字段",
     "summary": "个人账户拥有的仓库现已全面支持议题类型与议题字段，为个人开发者与开源维护者带来同等规划能力以标准化……此文首发于The GitHub Blog。",
@@ -107,20 +95,8 @@
     "source": "deepseek-flash",
     "at": "2026-11-14T10:35:16Z"
   },
-  "995c4a805a2dae47d62a70d033dcadced158e37cb8ea84206b403a6c7da7806f": {
-    "title": "GitHub Copilot 部分模型将于 12 月停用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
-  },
   "a82a582d254d179cb311f0cd53e003b34b3b1b6d51d25639a4a8bfc6376b6332": {
     "title": "GitHub Copilot 应用支持 GitHub Enterprise Server",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
-  },
-  "dde13a6350f0c89d7a8f6d59fc4611b3d0cea438adbdcaeb006c8ea1426a5de6": {
-    "title": "GitHub Copilot 中的 Gemini 4 Hydrogen",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-14T10:35:16Z"

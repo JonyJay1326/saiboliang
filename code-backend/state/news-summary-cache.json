@@ -1,12 +1,7 @@
 {
-  "995c4a805a2dae47d62a70d033dcadced158e37cb8ea84206b403a6c7da7806f": {
-    "summary": "GitHub Copilot 将于2026年12月14日在所有体验中停用部分模型。",
+  "a82a582d254d179cb311f0cd53e003b34b3b1b6d51d25639a4a8bfc6376b6332": {
+    "summary": "GitHub Copilot 应用现可接入 GitHub Enterprise Server 上的工作内容。",
     "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
-  },
-  "dde13a6350f0c89d7a8f6d59fc4611b3d0cea438adbdcaeb006c8ea1426a5de6": {
-    "summary": "Google 最新 Flash 模型 Gemini 4 Hydrogen 已在 GitHub Copilot 全面可用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
+    "at": "2026-11-14T17:11:03Z"
   }
 }

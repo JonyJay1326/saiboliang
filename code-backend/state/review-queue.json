@@ -1,17 +1,5 @@
 [
   {
-    "kind": "github-classification",
-    "objectId": "cursor/plugins",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Cursor plugin specification and official plugins",
-      "sourceUrl": "https://github.com/cursor/plugins"
-    },
-    "id": "8c0abb014382d3fa049c094e4fd89a8aacc4ccc2e5149be8ee9a20040df0c231",
-    "status": "pending",
-    "createdAt": "2026-09-17T11:02:17Z"
-  },
-  {
     "kind": "plans",
     "objectId": "copilot-coding-plan",
     "reason": "official terms changed; retaining prior record",
@@ -214,18 +202,6 @@
     "createdAt": "2026-10-11T07:43:59Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "HKUDS/CLI-Anything",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "sourceUrl": "https://github.com/HKUDS/CLI-Anything"
-    },
-    "id": "e0a128b52fde854252bb47dfa6d1bef454c3e7d5c313ccbbb71d8bf5258ecd04",
-    "status": "pending",
-    "createdAt": "2026-10-12T20:19:06Z"
-  },
-  {
     "kind": "plans",
     "objectId": "supergrok-plan",
     "reason": "plan scope anchors not found: Get to know Grok and its capabilities for free within generous limits,Go further with significantly higher usage",
@@ -284,18 +260,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "anthropics/sandbox-runtime",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container.",
-      "sourceUrl": "https://github.com/anthropics/sandbox-runtime"
-    },
-    "id": "af8f4d823ef6465385537bcdc0596711764278ec44e623348e770a90646fe986",
-    "status": "pending",
-    "createdAt": "2026-10-26T17:25:14Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "HKUDS/DeepTutor",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -303,18 +267,6 @@
       "sourceUrl": "https://github.com/HKUDS/DeepTutor"
     },
     "id": "cd79cdde47336d8c843d0e1508a006201d876eddfac4a5a108c2105d7ff75fed",
-    "status": "pending",
-    "createdAt": "2026-10-28T17:11:13Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "xiaolai/the-craft-of-selfteaching",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "One has no future if one couldn't teach themself.",
-      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
-    },
-    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
     "status": "pending",
     "createdAt": "2026-10-28T17:11:13Z"
   },
@@ -375,18 +327,6 @@
     "id": "a7e29e0f37e5db40aea6d4a8d463d93add5ae6462b4da1049a241465dec5acbb",
     "status": "pending",
     "createdAt": "2026-11-03T10:58:10Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "chthollyphile/folia-major",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "专注于绚丽的歌词动画效果的本地音乐/navidrome/第三方多平台在线音乐播放器 A multi-platform music player for local files, Navidrome, and online streaming services, featuring stunning animated lyrics.",
-      "sourceUrl": "https://github.com/chthollyphile/folia-major"
-    },
-    "id": "5423e85d6cfe615a9144eb6d3ee83f59800d179643c207c7c86273d34f8a0417",
-    "status": "pending",
-    "createdAt": "2026-11-03T18:28:17Z"
   },
   {
     "kind": "github-classification",
@@ -662,18 +602,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "mg-chao/snow-shot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Snow Shot is free, open-source screenshot software and a screen recording tool for Windows and macOS, with annotation, scrolling screenshots, offline OCR and image pinning. 免费开源截图软件，支持截图标注、滚动长截图、离线 OCR、贴图与录屏。",
-      "sourceUrl": "https://github.com/mg-chao/snow-shot"
-    },
-    "id": "dc709ea2a90844abbeb005b2bf0f2a8cff776b010f41aa360cd97cb6d6207bb6",
-    "status": "pending",
-    "createdAt": "2026-11-10T04:11:55Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "JiaFeiMiao-K-Cat/DiscImageStudio",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -793,18 +721,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Leviidev/Husk",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Run Android on iOS. Natively or Emulated.",
-      "sourceUrl": "https://github.com/Leviidev/Husk"
-    },
-    "id": "56ab912bb41cf7d836cab935833a436948e588f10756155076f89c0d78c2fe14",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "openai/codex-security",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -876,18 +792,6 @@
     "createdAt": "2026-11-13T11:08:04Z"
   },
   {
-    "kind": "github-classification",
-    "objectId": "withmarbleapp/os-taxonomy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": null,
-      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
-    },
-    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
-    "status": "pending",
-    "createdAt": "2026-11-13T11:08:04Z"
-  },
-  {
     "kind": "news-item",
     "objectId": "66726741cdba5fe50dab12abbaad6ab08c9dd373d53c196e79da34b2ab69c08d",
     "reason": "invalid AIBase article: AIBase article identity/title mismatch",
@@ -919,18 +823,6 @@
       "sourceUrl": "https://github.com/ranxianglei/billion-context"
     },
     "id": "5e20041fc7558752259fae75e580c962cc21aa6dc624629fd8a066f171491bed",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Jakeschincariol/instagram-agent-skill",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
-      "sourceUrl": "https://github.com/Jakeschincariol/instagram-agent-skill"
-    },
-    "id": "fbf173dacca9353fb2d80bab4e21261096ea28218f29e2c3dd849b0f246e2348",
     "status": "pending",
     "createdAt": "2026-11-13T18:33:46Z"
   },
@@ -993,5 +885,173 @@
     "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
     "status": "pending",
     "createdAt": "2026-11-13T18:33:46Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "vuejs/core",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+      "sourceUrl": "https://github.com/vuejs/core"
+    },
+    "id": "d67f6eabcebf67e459e231b1950f6e23c06fee3a9cc3707334b3ea8c380eccf1",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tradermonty/claude-trading-skills",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills"
+    },
+    "id": "bc083e2b249f3cc4e076dc6bbde5c1a3dd0b97950800528f4ed3cd919fe93d22",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aquasecurity/trivy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+      "sourceUrl": "https://github.com/aquasecurity/trivy"
+    },
+    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "tailscale/tailcat",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "sourceUrl": "https://github.com/tailscale/tailcat"
+    },
+    "id": "e7d412f54cc23340ebf88b6a7e127b7945a69d19a4225cc8fe7b071e3bf3dcec",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "gitleaks/gitleaks",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find secrets with Gitleaks 🔑",
+      "sourceUrl": "https://github.com/gitleaks/gitleaks"
+    },
+    "id": "9ce077a47a6d978fb237d14f48b62047b6b0bc91427b25f06c4190f24fb85371",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "guohuiyuan/go-music-dl",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
+      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
+    },
+    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ggml-org/whisper.cpp",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "sourceUrl": "https://github.com/ggml-org/whisper.cpp"
+    },
+    "id": "c30be1d1c46e73ea8a39d73f02387778a19eaca25e3dbe81eaff141e5d5719ee",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "BeyondDimension/SteamTools",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
+      "sourceUrl": "https://github.com/BeyondDimension/SteamTools"
+    },
+    "id": "845dbfba092c7ea257dd5ae83ab7fcef50e405dee1861284bc86101fc97917de",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "block/buzz",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A hive mind communication platform",
+      "sourceUrl": "https://github.com/block/buzz"
+    },
+    "id": "8f6e52f88eb92353ea9384168e1f30d6d2053e0d7bb92ec724e0a96b4c3e8d7a",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted Android devices. Improve your privacy, the security and battery life of your device.",
+      "sourceUrl": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation"
+    },
+    "id": "5ee937791df773c07feecfd773e6e0320caceebd80f562900ede7bb03e7da14e",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "elastic/elasticsearch",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Free and Open Source, Distributed, RESTful Search Engine",
+      "sourceUrl": "https://github.com/elastic/elasticsearch"
+    },
+    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "TeamNewPipe/NewPipe",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A libre lightweight streaming front-end for Android.",
+      "sourceUrl": "https://github.com/TeamNewPipe/NewPipe"
+    },
+    "id": "37d5e8a05b29b04e1b27729d09744026754c798279637fd29c097b8522bb4a31",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "halo-dev/halo",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
+      "sourceUrl": "https://github.com/halo-dev/halo"
+    },
+    "id": "9e05d4c615e1c58406f8c976af5c3dda78fb291c640c6d839f72c33f23f42c50",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "astral-sh/uv",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An extremely fast Python package and project manager, written in Rust.",
+      "sourceUrl": "https://github.com/astral-sh/uv"
+    },
+    "id": "d6649955b303fb3ef86df990f4cf59ef30670bb366c43a5022a09c49dc967fb9",
+    "status": "pending",
+    "createdAt": "2026-11-14T17:11:03Z"
   }
 ]

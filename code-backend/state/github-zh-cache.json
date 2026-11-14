@@ -24,11 +24,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-17T14:14:10Z"
   },
-  "ruvnet/ruflo": {
-    "text": "🌊 原始智能体框架。部署智能多玩家集群，协调自主工作流，构建对话式 AI 系统。具备自适应记忆、自学习智能、联邦、向量 RAG 集成，原生支持 Claude Code / Codex / Hermes 等",
-    "source": "deepseek-flash",
-    "at": "2026-10-18T14:38:23Z"
-  },
   "akitaonrails/ai-memory": {
     "text": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
     "source": "deepseek-flash",
@@ -109,20 +104,10 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
   },
-  "can1357/oh-my-pi": {
-    "text": "⌥ 内置 IDE 的编码 agent，由 Stencil Labs 构建。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
   "metadist/synaplan": {
     "text": "掌控流程：一个开源 AI 平台，统一管理你的知识、模型与渠道——web、WhatsApp、email、Outlook、Nextcloud 与 ownCloud。本地与云端模型并行，每条回答均标注成本。",
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
-  },
-  "google/skills": {
-    "text": "面向 Google 产品与技术的 Agent Skills",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T16:52:36Z"
   },
   "Comfy-Org/ComfyUI": {
     "text": "最强大且模块化的扩散模型 GUI、API 与后端，采用图/节点界面。全球最快的本地推理引擎。",
@@ -144,11 +129,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
   },
-  "getpaseo/paseo": {
-    "text": "从桌面和移动端编排多个编码代理",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
   "homeassistant-ai/ha-mcp": {
     "text": "使用 Claude、ChatGPT 等 AI 助手配置和自动化 Home Assistant。",
     "source": "deepseek-flash",
@@ -169,20 +149,10 @@
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
   },
-  "NVIDIA/OpenShell": {
-    "text": "OpenShell 是面向自主 AI 代理的安全、私密运行时。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
   "CopilotKit/OpenBot": {
     "text": "开源 AI 同事，每个都拥有自己的计算机：浏览器、文件和工具，每个操作在执行前决定、执行后记录。可接入任意 AG-UI 代理。",
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
-  },
-  "nightly-labs/openbot": {
-    "text": "本地优先的桌面工作区，用于持久化 AI 队友。运行 Codex、Claude 和 Grok，提供专属工作区、任务队列、文件共享、浏览器控制及智能体间协作。",
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
   },
   "GoogleChrome/modern-web-guidance-src": {
     "text": "让编码智能体及时掌握最新 Web 最佳实践",
@@ -203,5 +173,35 @@
     "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
     "source": "deepseek-flash",
     "at": "2026-11-14T10:35:16Z"
+  },
+  "QwenLM/qwen-code": {
+    "text": "一个运行在终端中的开源 AI 编码代理。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T17:11:03Z"
+  },
+  "Likely7/Veyra-NRVideo": {
+    "text": "借助 DLSS 5 让 PS5 GTA6 达到 120FPS。一款 Windows 视频播放与采集增强工具，支持视频、图像和采集卡源的实时预览，结合 AI 超分辨率、DLSS5 图像增强与帧生成，带来新一代视觉体验。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T17:11:03Z"
+  },
+  "runkids/skillshare": {
+    "text": "📚 一条命令将技能、代理、MCP、插件同步到所有 AI CLI 工具，简化团队共享。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T17:11:03Z"
+  },
+  "MoFeng2223/BrimDeck": {
+    "text": "为 Windows 11 打造的灵动岛，支持 AI 编码工具配额、用量追踪、音乐控制等。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T17:11:03Z"
+  },
+  "infiniflow/ragflow": {
+    "text": "RAGFlow 是一个代理原生数据库：一个检索增强生成（RAG）引擎，已发展为上下文基础设施。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T17:11:03Z"
+  },
+  "google-gemini/gemini-cli": {
+    "text": "一个开源 AI 代理，将 Gemini 的能力直接带入你的终端。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T17:11:03Z"
   }
 }
