@@ -1,7 +1,12 @@
 {
-  "30f5ce152acc8d522a2e6dda0c5ef8f4a9071766fc4b03f6666bcd9d9491db27": {
-    "summary": "可通过REST API在组织和仓库级别开启或关闭GitHub代码扫描的AI Scan，现为公开预览。",
+  "995c4a805a2dae47d62a70d033dcadced158e37cb8ea84206b403a6c7da7806f": {
+    "summary": "GitHub Copilot 将于2026年12月14日在所有体验中停用部分模型。",
     "source": "deepseek-flash",
-    "at": "2026-11-13T18:33:46Z"
+    "at": "2026-11-14T10:35:16Z"
+  },
+  "dde13a6350f0c89d7a8f6d59fc4611b3d0cea438adbdcaeb006c8ea1426a5de6": {
+    "summary": "Google 最新 Flash 模型 Gemini 4 Hydrogen 已在 GitHub Copilot 全面可用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T10:35:16Z"
   }
 }

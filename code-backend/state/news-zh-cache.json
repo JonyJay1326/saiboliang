@@ -1,22 +1,4 @@
 {
-  "8e8e851f9ac38a1986e4da167bff89ff0f811e14b6cf3f75bb84b07e91b8552c": {
-    "title": "体验 Esther Mahlangu 博士的艺术与遗产",
-    "summary": "Witwatersrand 大学 Wits 艺术学院策展、公共与视觉文化系高级讲师 Nontobeko Ntombela 博士的肖像",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "0a9ebdb63db3687d34639c74f820071b0b2cf24b19890ef2c99358b8005ff2a0": {
-    "title": "AI 如何帮助回收商将混合废物转化为可再利用材料",
-    "summary": "视觉 AI 与机器人从旧衣物、瓶子和混合可回收物的传送带上分拣出值得回收的材料，使数千吨材料免于进入垃圾填埋场。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T11:06:08Z"
-  },
-  "55ff14dc4213127df72a8039620109cd467ed21c91f1958dfd8ce815a783074c": {
-    "title": "JioStar首席架构师谈5亿用户规模的AI发现",
-    "summary": "JioStar的Vijay Seshadri讲解5亿用户规模的AI发现，分享评估、护栏与AI投产经验。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
-  },
   "eac4d84ef949975e755c40f9dc94fc330d73ac359791c3bd2e46759bce21bb5a": {
     "title": "试用Tabletop：可定制协作空间，助团队共同规划、娱乐与协作",
     "summary": "Tabletop是Google Labs新实验，用于团队协作。可构建互动行程、投票和对阵图。加入候补名单。",
@@ -113,22 +95,34 @@
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
   },
-  "7d4d71d056da02862d0b2ec1b87dadd7019731481c576401840bf8ff718ee663": {
-    "title": "推出 ChatGPT Wallet",
-    "summary": "推出 ChatGPT Wallet，让 ChatGPT Work、Codex 和 dots 中的智能体在用户批准并沿用现有卡片保护机制下安全完成购买。",
-    "source": "deepseek-flash",
-    "at": "2026-11-13T18:33:46Z"
-  },
-  "30f5ce152acc8d522a2e6dda0c5ef8f4a9071766fc4b03f6666bcd9d9491db27": {
-    "title": "使用 REST API 管理仓库的 AI Scan",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-13T18:33:46Z"
-  },
   "a0730e6c360a165831b46ef45b50e486f9a32c6d16334cf5d3eb9537bfee4743": {
     "title": "AI 如何帮助护理团队让患者更早获得正确诊疗",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-13T18:33:46Z"
+  },
+  "a99dfdd20d85acbbb850aa77912a8df97b492b8fb6a1e7bebe1dab199cebab4f": {
+    "title": "Shield 借助 OpenAI 帮技术人员交接旧门户工作",
+    "summary": "Shield 使用 OpenAI 帮助 IT 技术人员在旧门户中交接工作。其 Forge 智能体负责操作这些系统，让技术人员专注于需要其判断的问题。",
+    "source": "deepseek-flash",
+    "at": "2026-11-14T10:35:16Z"
+  },
+  "995c4a805a2dae47d62a70d033dcadced158e37cb8ea84206b403a6c7da7806f": {
+    "title": "GitHub Copilot 部分模型将于 12 月停用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-14T10:35:16Z"
+  },
+  "a82a582d254d179cb311f0cd53e003b34b3b1b6d51d25639a4a8bfc6376b6332": {
+    "title": "GitHub Copilot 应用支持 GitHub Enterprise Server",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-14T10:35:16Z"
+  },
+  "dde13a6350f0c89d7a8f6d59fc4611b3d0cea438adbdcaeb006c8ea1426a5de6": {
+    "title": "GitHub Copilot 中的 Gemini 4 Hydrogen",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-14T10:35:16Z"
   }
 }

@@ -530,18 +530,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "symfony/symfony",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Symfony PHP framework",
-      "sourceUrl": "https://github.com/symfony/symfony"
-    },
-    "id": "ae05209f1df07b1dd690b3764a667cdb49686b6113ad5adfb28b2f7df0d1ac09",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "fastapi/fastapi",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -585,18 +573,6 @@
       "sourceUrl": "https://github.com/elie222/rakazo"
     },
     "id": "0511056688446943b4551352d53bfc97b70089062bfe40c7f79fc3b9a6d1a8fa",
-    "status": "pending",
-    "createdAt": "2026-11-08T17:06:00Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "rorygallagher2024/glasshouse",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "For rooted LG webOS TVs: a live dashboard, privacy control, debloating, an ad & telemetry blocker, replacement home screen, and custom screensavers. Runs on the TV itself. Includes an optional Home Assistant MQTT bridge for smart home control.",
-      "sourceUrl": "https://github.com/rorygallagher2024/glasshouse"
-    },
-    "id": "06e6fa91a6b24abf23ee228b950e9682202f540f294439faa0e15d0f9bbf0ca9",
     "status": "pending",
     "createdAt": "2026-11-08T17:06:00Z"
   },
@@ -669,18 +645,6 @@
       "sourceUrl": "https://github.com/sherlock-project/sherlock"
     },
     "id": "4f789a0b14ad128e07c00505d03e8a7af86d6f5adc0457e864d800d7c223876b",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "gitleaks/gitleaks",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find secrets with Gitleaks 🔑",
-      "sourceUrl": "https://github.com/gitleaks/gitleaks"
-    },
-    "id": "9ce077a47a6d978fb237d14f48b62047b6b0bc91427b25f06c4190f24fb85371",
     "status": "pending",
     "createdAt": "2026-11-09T11:42:52Z"
   },
@@ -972,54 +936,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "etcd-io/etcd",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
-      "sourceUrl": "https://github.com/etcd-io/etcd"
-    },
-    "id": "e498c40b1f5e965da88d8efac39ca755a5477e4421ccc212012717af8bb0a253",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "aquasecurity/trivy",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-      "sourceUrl": "https://github.com/aquasecurity/trivy"
-    },
-    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "XTLS/Xray-core",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
-      "sourceUrl": "https://github.com/XTLS/Xray-core"
-    },
-    "id": "85e86ff6c092e61895dfabb839f2d473c618b15a46d2882c79df7fa267641855",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "opentoonz/opentoonz",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "OpenToonz - An open-source full-featured 2D animation creation software",
-      "sourceUrl": "https://github.com/opentoonz/opentoonz"
-    },
-    "id": "07eceaa6e96b2847847f094fb4d91f3fdc106641940ad71a438730ef29ec030a",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "SunshineStream/Sunshine",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1044,18 +960,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "amnezia-vpn/amnezia-client",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Amnezia VPN Client (Desktop+Mobile)",
-      "sourceUrl": "https://github.com/amnezia-vpn/amnezia-client"
-    },
-    "id": "7786d2c047f521399064ad106d282917f574c629f83f362ec7829035f19e05a7",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "FinanceFlash/unvibecode",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1063,42 +967,6 @@
       "sourceUrl": "https://github.com/FinanceFlash/unvibecode"
     },
     "id": "2b415650c97130c426f3df287934e3bf498c6713d7e53d8a51b251d0ae22cbe2",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Yu9191/wloc",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "修改 Apple 网络定位（gs-loc）返回坐标 · 支持 Surge / Quantumult X / Loon / Stash · 快捷指令一键设置/恢复定位",
-      "sourceUrl": "https://github.com/Yu9191/wloc"
-    },
-    "id": "4e346d04cc914dea2eb33445ef3ea3763874e1c4bc2be2dffb8e718231059d64",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "elastic/elasticsearch",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free and Open Source, Distributed, RESTful Search Engine",
-      "sourceUrl": "https://github.com/elastic/elasticsearch"
-    },
-    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "TeamNewPipe/NewPipe",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A libre lightweight streaming front-end for Android.",
-      "sourceUrl": "https://github.com/TeamNewPipe/NewPipe"
-    },
-    "id": "37d5e8a05b29b04e1b27729d09744026754c798279637fd29c097b8522bb4a31",
     "status": "pending",
     "createdAt": "2026-11-13T18:33:46Z"
   },
@@ -1116,30 +984,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "halo-dev/halo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
-      "sourceUrl": "https://github.com/halo-dev/halo"
-    },
-    "id": "9e05d4c615e1c58406f8c976af5c3dda78fb291c640c6d839f72c33f23f42c50",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "algerkong/AlgerMusicPlayer",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1147,17 +991,6 @@
       "sourceUrl": "https://github.com/algerkong/AlgerMusicPlayer"
     },
     "id": "f5202f9ba509b3e6b3f1a194a46741a380281c486d0f43bae6116f65d267e016",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
-    "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
-    },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
     "createdAt": "2026-11-13T18:33:46Z"
   }

@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-11-13T18:33:46Z",
+  "dataUpdatedAt": "2026-11-14T10:35:16Z",
   "items": [
+    {
+      "title": "GitHub Copilot 部分模型将于 12 月停用",
+      "sourceUrl": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+      "publishedAt": "2026-11-13T20:40:05Z",
+      "source": "GitHub",
+      "summary": "GitHub Copilot 将于2026年12月14日在所有体验中停用部分模型。",
+      "id": "995c4a805a2dae47d62a70d033dcadced158e37cb8ea84206b403a6c7da7806f",
+      "originalTitle": "Upcoming deprecation of selected GitHub Copilot models in December",
+      "translatedAt": "2026-11-14T10:35:16Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+      "originalVerifiedAt": "2026-11-14T10:35:16Z",
+      "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+      "category": "industry",
+      "eventType": "service-retirement",
+      "addedAt": "2026-11-14T10:35:16Z",
+      "featured": true
+    },
+    {
+      "title": "GitHub Copilot 中的 Gemini 4 Hydrogen",
+      "sourceUrl": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+      "publishedAt": "2026-11-13T18:23:48Z",
+      "source": "GitHub",
+      "summary": "Google 最新 Flash 模型 Gemini 4 Hydrogen 已在 GitHub Copilot 全面可用。",
+      "id": "dde13a6350f0c89d7a8f6d59fc4611b3d0cea438adbdcaeb006c8ea1426a5de6",
+      "originalTitle": "Gemini 4 Hydrogen in GitHub Copilot",
+      "translatedAt": "2026-11-14T10:35:16Z",
+      "lang": "en",
+      "originalSource": "GitHub",
+      "originalUrl": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+      "originalVerifiedAt": "2026-11-14T10:35:16Z",
+      "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-14T10:35:16Z",
+      "featured": true
+    },
     {
       "title": "推出 ChatGPT Wallet",
       "sourceUrl": "https://openai.com/index/introducing-chatgpt-wallet",
@@ -113,7 +151,7 @@
       "category": "model",
       "eventType": "model-review",
       "addedAt": "2026-11-13T18:33:46Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！",
@@ -7792,6 +7830,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-13T18:33:46Z",
-  "generatedAt": "2026-11-13T18:33:46Z"
+  "version": "2026-11-14T10:35:16Z",
+  "generatedAt": "2026-11-14T10:35:16Z"
 }
