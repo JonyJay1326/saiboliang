@@ -294,18 +294,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "morluto/rea",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "sourceUrl": "https://github.com/morluto/rea"
-    },
-    "id": "5d4f1cc349fa4b60489ebc2190d517c552dfa4dcb270a2f9de448138c7fe8654",
-    "status": "pending",
-    "createdAt": "2026-11-02T11:19:40Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "hyprwm/Hyprland",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -361,18 +349,6 @@
       "sourceUrl": "https://github.com/tailscale/tailscale"
     },
     "id": "add85ae44027d407285d42e981250e733bbe7f936e432cf5dfd13e77b0c8a35c",
-    "status": "pending",
-    "createdAt": "2026-11-04T18:40:18Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "michael-denyer/pstack-claude",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Antigravity, Claude Code, Codex, Copilot, Gemini, Muse, OpenCode, Pi, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-      "sourceUrl": "https://github.com/michael-denyer/pstack-claude"
-    },
-    "id": "0039627ab2e6b41ef5f7c28528a9cd457cf93d608d552e80b4bfe5a95cd85363",
     "status": "pending",
     "createdAt": "2026-11-04T18:40:18Z"
   },
@@ -733,18 +709,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "immich-app/immich",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "High performance self-hosted photo and video management solution.",
-      "sourceUrl": "https://github.com/immich-app/immich"
-    },
-    "id": "99c01ab1ab9c8c5a497e708b59b82a36ce7c5dbe8c48f34cb2362d72b4eb5be6",
-    "status": "pending",
-    "createdAt": "2026-11-13T11:08:04Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "every-app/open-seo",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -888,18 +852,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "vuejs/core",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
-      "sourceUrl": "https://github.com/vuejs/core"
-    },
-    "id": "d67f6eabcebf67e459e231b1950f6e23c06fee3a9cc3707334b3ea8c380eccf1",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "tradermonty/claude-trading-skills",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -948,30 +900,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "guohuiyuan/go-music-dl",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10+ 个主流平台，支持多源并发搜索与无损音质解析。music-dl交流群：755087923",
-      "sourceUrl": "https://github.com/guohuiyuan/go-music-dl"
-    },
-    "id": "8223c781d67a5aa5851793cf7c6d6f05dd7e5607e7fbaff1961832a574154377",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "ggml-org/whisper.cpp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Port of OpenAI's Whisper model in C/C++",
-      "sourceUrl": "https://github.com/ggml-org/whisper.cpp"
-    },
-    "id": "c30be1d1c46e73ea8a39d73f02387778a19eaca25e3dbe81eaff141e5d5719ee",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "block/buzz",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -979,18 +907,6 @@
       "sourceUrl": "https://github.com/block/buzz"
     },
     "id": "8f6e52f88eb92353ea9384168e1f30d6d2053e0d7bb92ec724e0a96b4c3e8d7a",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "Universal-Debloater-Alliance/universal-android-debloater-next-generation",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted Android devices. Improve your privacy, the security and battery life of your device.",
-      "sourceUrl": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation"
-    },
-    "id": "5ee937791df773c07feecfd773e6e0320caceebd80f562900ede7bb03e7da14e",
     "status": "pending",
     "createdAt": "2026-11-14T17:11:03Z"
   },
@@ -1029,5 +945,113 @@
     "id": "d6649955b303fb3ef86df990f4cf59ef30670bb366c43a5022a09c49dc967fb9",
     "status": "pending",
     "createdAt": "2026-11-14T17:11:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "we-promise/sure",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The personal finance app for everyone (by everyone)",
+      "sourceUrl": "https://github.com/we-promise/sure"
+    },
+    "id": "99cded74c99173b79bcd6ab61c6fa3dde4512409e68010d575170c55d7838c94",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "a2ui-project/a2ui",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open-source generative UI framework: agents stream layout data, and apps render it with native components in React, Angular, Lit, Flutter, SwiftUI and Jetpack Compose.",
+      "sourceUrl": "https://github.com/a2ui-project/a2ui"
+    },
+    "id": "4bdf6edda70a6858ddec533b7fcb929538136e8ed1a3e7961b7e1ee584fac3a7",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "liguobao/ds-harness-remote",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.)",
+      "sourceUrl": "https://github.com/liguobao/ds-harness-remote"
+    },
+    "id": "ec6348b65f15a6481ecd41ec82f4670632a0feb28d3f4c5ca67f3f75232e86f2",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "maillab/cloud-mail",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An all-in-one email service platform powered by Cloudflare | 基于 Cloudflare 的一站式邮箱服务平台 | Cloudflare Email 邮箱 Mail",
+      "sourceUrl": "https://github.com/maillab/cloud-mail"
+    },
+    "id": "83a96c355db9f157a407d42571890aeee4301802cfe413ba7a17b82d53186ad8",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ModernRelay/omnigraph",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Object-storage native graph database with branching and typed ontology",
+      "sourceUrl": "https://github.com/ModernRelay/omnigraph"
+    },
+    "id": "b0cfccf2d6ba8967ea1b10e818b4dd152c87ae13d3b1278830c4dff7611e07a9",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "anthropics/sandbox-runtime",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container.",
+      "sourceUrl": "https://github.com/anthropics/sandbox-runtime"
+    },
+    "id": "af8f4d823ef6465385537bcdc0596711764278ec44e623348e770a90646fe986",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "xiaolai/the-craft-of-selfteaching",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "One has no future if one couldn't teach themself.",
+      "sourceUrl": "https://github.com/xiaolai/the-craft-of-selfteaching"
+    },
+    "id": "1147748bdc193faf068f85db0a9f5cb2d54feee12de8f830505c64b20fbcafc6",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rorygallagher2024/glasshouse",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "For rooted LG webOS TVs: a live dashboard, privacy control, debloating, an ad & telemetry blocker, replacement home screen, and custom screensavers. Runs on the TV itself. Includes an optional Home Assistant MQTT bridge for smart home control.",
+      "sourceUrl": "https://github.com/rorygallagher2024/glasshouse"
+    },
+    "id": "06e6fa91a6b24abf23ee228b950e9682202f540f294439faa0e15d0f9bbf0ca9",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "withmarbleapp/os-taxonomy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": null,
+      "sourceUrl": "https://github.com/withmarbleapp/os-taxonomy"
+    },
+    "id": "8f309868c0b2081243ec5df8d17d1d12285370bb00b938c64314d1b7cb277d14",
+    "status": "pending",
+    "createdAt": "2026-11-15T17:47:02Z"
   }
 ]

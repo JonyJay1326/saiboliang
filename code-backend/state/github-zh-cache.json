@@ -104,16 +104,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
   },
-  "metadist/synaplan": {
-    "text": "掌控流程：一个开源 AI 平台，统一管理你的知识、模型与渠道——web、WhatsApp、email、Outlook、Nextcloud 与 ownCloud。本地与云端模型并行，每条回答均标注成本。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
-  "Comfy-Org/ComfyUI": {
-    "text": "最强大且模块化的扩散模型 GUI、API 与后端，采用图/节点界面。全球最快的本地推理引擎。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T16:52:36Z"
-  },
   "orailnoor/cross-platform-llm-client": {
     "text": "统一的跨平台 AI 客户端，支持在标准云 API 与设备端离线运行自定义及无审查语言模型之间无缝切换。",
     "source": "deepseek-flash",
@@ -159,11 +149,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
   },
-  "jamiepine/voicebox": {
-    "text": "开源 AI 语音工作室。克隆、听写、创作。",
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
-  },
   "dotnet/skills": {
     "text": "用于辅助 AI 编码代理处理 .NET 和 C# 的技能仓库",
     "source": "deepseek-flash",
@@ -189,11 +174,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-14T17:11:03Z"
   },
-  "infiniflow/ragflow": {
-    "text": "RAGFlow 是一个代理原生数据库：一个检索增强生成（RAG）引擎，已发展为上下文基础设施。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T17:11:03Z"
-  },
   "google-gemini/gemini-cli": {
     "text": "一个开源 AI 代理，将 Gemini 的能力直接带入你的终端。",
     "source": "deepseek-flash",
@@ -203,5 +183,30 @@
     "text": "从零开始，用 PyTorch 逐步实现类似 ChatGPT 的大语言模型",
     "source": "deepseek-flash",
     "at": "2026-11-15T11:05:10Z"
+  },
+  "mvanhorn/last30days-skill": {
+    "text": "AI 智能体技能，跨 Reddit、X、YouTube、HN、Polymarket 与网络研究任意话题，并生成有依据的摘要",
+    "source": "deepseek-flash",
+    "at": "2026-11-15T17:47:02Z"
+  },
+  "google/skills": {
+    "text": "面向 Google 产品与技术的 Agent Skills",
+    "source": "deepseek-flash",
+    "at": "2026-11-15T17:47:02Z"
+  },
+  "google-labs-code/stitch-skills": {
+    "text": "配合 Stitch MCP 服务器使用的 Agent Skills 库，每个技能遵循 Agent Skills 开放标准，兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码智能体",
+    "source": "deepseek-flash",
+    "at": "2026-11-15T17:47:02Z"
+  },
+  "ggml-org/ggml": {
+    "text": "面向机器学习的张量库",
+    "source": "deepseek-flash",
+    "at": "2026-11-15T17:47:02Z"
+  },
+  "JetBrains/thinkrail": {
+    "text": "ThinkRail 是一款智能体 IDE，使用越多越智能",
+    "source": "deepseek-flash",
+    "at": "2026-11-15T17:47:02Z"
   }
 }
