@@ -972,18 +972,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "BeyondDimension/SteamTools",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
-      "sourceUrl": "https://github.com/BeyondDimension/SteamTools"
-    },
-    "id": "845dbfba092c7ea257dd5ae83ab7fcef50e405dee1861284bc86101fc97917de",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "block/buzz",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -1027,18 +1015,6 @@
       "sourceUrl": "https://github.com/TeamNewPipe/NewPipe"
     },
     "id": "37d5e8a05b29b04e1b27729d09744026754c798279637fd29c097b8522bb4a31",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "halo-dev/halo",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
-      "sourceUrl": "https://github.com/halo-dev/halo"
-    },
-    "id": "9e05d4c615e1c58406f8c976af5c3dda78fb291c640c6d839f72c33f23f42c50",
     "status": "pending",
     "createdAt": "2026-11-14T17:11:03Z"
   },

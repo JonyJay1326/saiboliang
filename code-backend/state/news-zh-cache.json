@@ -1,34 +1,4 @@
 {
-  "dabe5024097687c5a343965dd0fba8feaa0ef9e685fe80d20284d4c37eea4c71": {
-    "title": "个人账户现已支持议题类型与字段",
-    "summary": "个人账户拥有的仓库现已全面支持议题类型与议题字段，为个人开发者与开源维护者带来同等规划能力以标准化……此文首发于The GitHub Blog。",
-    "source": "deepseek-flash",
-    "at": "2026-11-11T18:44:17Z"
-  },
-  "4922ca6fb0dd92994c349853518621d0422aac137e6c9a194fc01e08fc5408aa": {
-    "title": "Holiday Extras 重新思考用 Codex 能构建什么",
-    "summary": "借助 Codex，Holiday Extras 将客户专业知识转化为更好的应用、更高的预订转化率和新的增长可能。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
-  "d7c1da8cb7dc41da688b7a9908111a63cf9fb297a134e952ad2db42224ad8dc2": {
-    "title": "支持 AI 与儿童安全研究",
-    "summary": "OpenAI 承诺投入 200 万美元用于 AI 与儿童安全研究，支持衡量青少年风险与机遇的共享工具。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
-  "65b96c238445cdedc96b3e82ec1a6dd0c150d0317effbb199d997528a4ce6af2": {
-    "title": "Gilbert + Tobin 用 AI 重新思考法律业务",
-    "summary": "与 Gilbert + Tobin 合伙人兼首席执行官 Sam Nickless 的对话。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
-  "2487ed6928577dcf5bc6fd414efc869755df554cc495c9c60ea4f18c01db4cb0": {
-    "title": "我们如何为 OpenRouter 构建自校正本地化系统",
-    "summary": "OpenRouter 现已支持 8 种语言。以下是其背后的翻译流程、成本以及读者报告如何转化为修复。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
   "6897443716994d3c82feba45ed56245480118adc4844e1e64f163f65ba94199f": {
     "title": "Meta新协议将清洁制造引入数据中心供应链",
     "summary": "我们正将清洁制造引入数据中心，并与供应链中的低碳生产商签订长期采购协议，以树立行业标准。",
@@ -92,12 +62,6 @@
   "a99dfdd20d85acbbb850aa77912a8df97b492b8fb6a1e7bebe1dab199cebab4f": {
     "title": "Shield 借助 OpenAI 帮技术人员交接旧门户工作",
     "summary": "Shield 使用 OpenAI 帮助 IT 技术人员在旧门户中交接工作。其 Forge 智能体负责操作这些系统，让技术人员专注于需要其判断的问题。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
-  },
-  "a82a582d254d179cb311f0cd53e003b34b3b1b6d51d25639a4a8bfc6376b6332": {
-    "title": "GitHub Copilot 应用支持 GitHub Enterprise Server",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-14T10:35:16Z"
   }

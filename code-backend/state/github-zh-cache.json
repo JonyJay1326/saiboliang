@@ -184,11 +184,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-14T17:11:03Z"
   },
-  "runkids/skillshare": {
-    "text": "📚 一条命令将技能、代理、MCP、插件同步到所有 AI CLI 工具，简化团队共享。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T17:11:03Z"
-  },
   "MoFeng2223/BrimDeck": {
     "text": "为 Windows 11 打造的灵动岛，支持 AI 编码工具配额、用量追踪、音乐控制等。",
     "source": "deepseek-flash",
@@ -203,5 +198,10 @@
     "text": "一个开源 AI 代理，将 Gemini 的能力直接带入你的终端。",
     "source": "deepseek-flash",
     "at": "2026-11-14T17:11:03Z"
+  },
+  "rasbt/LLMs-from-scratch": {
+    "text": "从零开始，用 PyTorch 逐步实现类似 ChatGPT 的大语言模型",
+    "source": "deepseek-flash",
+    "at": "2026-11-15T11:05:10Z"
   }
 }
