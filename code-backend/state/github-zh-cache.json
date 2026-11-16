@@ -169,11 +169,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-14T17:11:03Z"
   },
-  "MoFeng2223/BrimDeck": {
-    "text": "为 Windows 11 打造的灵动岛，支持 AI 编码工具配额、用量追踪、音乐控制等。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T17:11:03Z"
-  },
   "google-gemini/gemini-cli": {
     "text": "一个开源 AI 代理，将 Gemini 的能力直接带入你的终端。",
     "source": "deepseek-flash",
@@ -208,5 +203,10 @@
     "text": "ThinkRail 是一款智能体 IDE，使用越多越智能",
     "source": "deepseek-flash",
     "at": "2026-11-15T17:47:02Z"
+  },
+  "metadist/synaplan": {
+    "text": "掌控流程：一个开源 AI 平台，整合知识、模型与渠道——网页、WhatsApp、邮件、Outlook、Nextcloud 和 ownCloud。本地与云端模型并行，每条回答均显示成本。",
+    "source": "deepseek-flash",
+    "at": "2026-11-16T11:34:02Z"
   }
 }

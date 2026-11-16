@@ -1,32 +1,32 @@
 {
-  "67672a694e389b29af5588bf1be29a978063408e3c6a0262fcadf6da500500d7": {
-    "title": "Amplitude如何借助OpenAI在1至2天内交付产品改进",
-    "summary": "Amplitude的主动式产品代理Wave主要基于OpenAI模型构建，可识别应构建的内容，帮助团队借助编码代理交付变更，并衡量影响。",
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
-  },
-  "f19cddd04797ae7d9ed5d0a1d62c167e87f3414d038a70f2ab5d51a8aa7353f1": {
-    "title": "Google搜索借助Gemini 4 Hydrogen迎来重大升级",
-    "summary": "卡片轮播图显示“Gemini 4 Hydrogen”“现已登陆Google搜索”以及Google搜索界面示例",
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
-  },
-  "35ac62249c0a485d5c8478f36e800cdb2b1b4826bada0b8a6ea1aa88a19d0516": {
-    "title": "ARM32 Linux与Windows退役相关操作",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-13T11:08:04Z"
-  },
   "a0730e6c360a165831b46ef45b50e486f9a32c6d16334cf5d3eb9537bfee4743": {
     "title": "AI 如何帮助护理团队让患者更早获得正确诊疗",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-13T18:33:46Z"
   },
-  "a99dfdd20d85acbbb850aa77912a8df97b492b8fb6a1e7bebe1dab199cebab4f": {
-    "title": "Shield 借助 OpenAI 帮技术人员交接旧门户工作",
-    "summary": "Shield 使用 OpenAI 帮助 IT 技术人员在旧门户中交接工作。其 Forge 智能体负责操作这些系统，让技术人员专注于需要其判断的问题。",
+  "ff7833693fa2a06713dc923ab6354b82d0a99faf362cef1531beb712e1bb1855": {
+    "title": "LVMH媒体部门宣布与OpenAI达成战略合作",
+    "summary": "LVMH媒体部门与OpenAI宣布合作，借助AI支持新闻业，并通过ChatGPT让其出版物更易获取。",
     "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
+    "at": "2026-11-16T11:34:02Z"
+  },
+  "2e8f421d2ee2a3dfd36bfcc5be1c93ba1a42b98e60398a99d5e21362ce523fd9": {
+    "title": "迈向在格点上定义标准模型的一步",
+    "summary": "探索标准模型的一种候选非微扰格点定义，以及GPT-6 Astra如何帮助将该想法转化为详细证明。",
+    "source": "deepseek-flash",
+    "at": "2026-11-16T11:34:02Z"
+  },
+  "33b95c2112c46efd095543028e60f6116680e85e464182b74c65e43667746d78": {
+    "title": "我们的科学新博客",
+    "summary": "OpenAI科学博客分享新发现、实用方法，以及研究人员利用AI推进科学发现的第一手叙述。",
+    "source": "deepseek-flash",
+    "at": "2026-11-16T11:34:02Z"
+  },
+  "7890886c01383a50e6388e69c6de172e10502425509334b9f410eebaa684833c": {
+    "title": "AI Day Seoul汇聚韩国行业领袖、初创企业与开发者社区",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-16T11:34:02Z"
   }
 }

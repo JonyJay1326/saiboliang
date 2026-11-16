@@ -756,17 +756,6 @@
     "createdAt": "2026-11-13T11:08:04Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "66726741cdba5fe50dab12abbaad6ab08c9dd373d53c196e79da34b2ab69c08d",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
-    "evidence": {
-      "source": "AIBase"
-    },
-    "id": "e3a225bb64150c2ccda9f4cea8e0e8a40b3aa91c32b6d7abcf91c865d7cbd099",
-    "status": "pending",
-    "createdAt": "2026-11-13T11:08:04Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "google/elephant-goldfish-model",
     "reason": "AI applicability uncertain",
@@ -907,18 +896,6 @@
       "sourceUrl": "https://github.com/block/buzz"
     },
     "id": "8f6e52f88eb92353ea9384168e1f30d6d2053e0d7bb92ec724e0a96b4c3e8d7a",
-    "status": "pending",
-    "createdAt": "2026-11-14T17:11:03Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "elastic/elasticsearch",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free and Open Source, Distributed, RESTful Search Engine",
-      "sourceUrl": "https://github.com/elastic/elasticsearch"
-    },
-    "id": "8e40842a26edf6e558794b2506e4a35a8fd353e5b072ef847c91fddd523431f2",
     "status": "pending",
     "createdAt": "2026-11-14T17:11:03Z"
   },

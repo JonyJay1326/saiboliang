@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-11-15T17:47:02Z",
+  "dataUpdatedAt": "2026-11-16T11:34:02Z",
   "items": [
+    {
+      "title": "抢先实测腾讯Hy4 flash，一口气做出黄仁勋MV，比DeepSeek更便宜",
+      "sourceUrl": "https://zhidx.com/p/610493.html",
+      "publishedAt": "2026-11-16T08:53:33Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 江宇 编辑 | 心缘 来来来，先看一段MV。 穿着黑色皮衣的黄仁勋，变成了像素小人，在蔡依林的《日不落》中登台亮相。",
+      "id": "d2cac4ab92fe26c50d878ae4067b69987e987d54fb0b3822285365c73e2eacdf",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/610493.html",
+      "category": "model",
+      "eventType": "model-review",
+      "addedAt": "2026-11-16T11:34:02Z",
+      "featured": null
+    },
+    {
+      "title": "24000亿参数！阿里Qwen4-Max旗舰模型登场，任务便宜58%",
+      "sourceUrl": "https://zhidx.com/p/610623.html",
+      "publishedAt": "2026-11-16T04:26:41Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 李水青 编辑 | 心缘 智东西11月16日报道，今日，阿里正式发布 Qwen4系列的首款模型——Qwen4-Max 。",
+      "id": "c3a1d13eba4022d8dddb34ef83048767692b8223756754a5509e308f9fc0f520",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/610623.html",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-16T11:34:02Z",
+      "featured": true
+    },
+    {
+      "title": "腾讯云 TokenHub 上线 Hy4 flash 模型",
+      "sourceUrl": "https://cloud.tencent.com/document/product/1823/130675?date=2026-11-16&model=hy4-flash",
+      "publishedAt": "2026-11-15T16:00:00Z",
+      "source": "腾讯云 TokenHub",
+      "summary": "新增支持 Hy4 flash 模型。",
+      "id": "9c43b9a0b66c211c199d65e4338bebc36962907327cf944408f9f12d21a58303",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "腾讯云 TokenHub",
+      "originalUrl": "https://cloud.tencent.com/document/product/1823/130675?date=2026-11-16&model=hy4-flash",
+      "originalVerifiedAt": "2026-11-16T11:34:02Z",
+      "url": "https://cloud.tencent.com/document/product/1823/130675?date=2026-11-16&model=hy4-flash",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-16T11:34:02Z",
+      "featured": true
+    },
     {
       "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
       "sourceUrl": "https://www.qbitai.com/2026/11/510232.html",
@@ -7925,6 +7982,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-15T17:47:02Z",
-  "generatedAt": "2026-11-15T17:47:02Z"
+  "version": "2026-11-16T11:34:02Z",
+  "generatedAt": "2026-11-16T11:34:02Z"
 }
