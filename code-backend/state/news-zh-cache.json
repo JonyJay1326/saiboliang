@@ -29,12 +29,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "53d809d7420a3923e8bad7c3bd224d7d2c9da9cb37fe0d761411713f6da0b90e": {
-    "title": "Sumitomo Life领导者如何帮助团队采用ChatGPT Enterprise",
-    "summary": "Sumitomo Life使用ChatGPT Enterprise研究保险公司、准备提案并编写投资分析代码。高管的早期使用推动了采用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "67952d9a918d2536a7bf3b37b6c05ec5dc7c7c22fdf68db178458bb74b4d4f2d": {
     "title": "深入Codex沙盒",
     "summary": "了解Codex如何在你的机器上运行命令，同时在macOS、Linux和Windows上执行你控制的文件系统和网络限制。",
@@ -44,12 +38,6 @@
   "99be0c0a7e074380d1a5d6cdb0953a68d68217eb3d8f50443a74e9d288a8cea0": {
     "title": "管理前沿AI风险：从训练到部署",
     "summary": "OpenAI解释其如何通过模型对齐、沙盒、阻断式防护措施和监控，从训练到部署管理前沿AI风险。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "a1de396d3910fa2e0f79d5fc1596f0a162b45e4ee5be0f06557fa126a8cc5915": {
-    "title": "Le Groupe Figaro与OpenAI合作将Le Figaro新闻引入ChatGPT",
-    "summary": "Le Groupe Figaro与OpenAI合作，通过摘要和节选将Le Figaro的新闻引入ChatGPT，并附上原文链接。",
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
@@ -131,12 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "00a064e6720eae62fd0b261292c3991b7afabb6edb219f3ad08f3297d75edd6d": {
-    "title": "Gemini 应用现已支持低内存 Android 设备",
-    "summary": "Google Gemini 应用现已支持低内存 Android 设备，可在手机上使用 Gemini Live 和自定义图像创建，立即下载。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "b451aff394adbb427d3a202a80e74c0e34010e923f753539bb1f7c379790136d": {
     "title": "让 Gemini 为你工作",
     "summary": "用户界面显示提示“我能为你完成什么？”以及包含占位文本“描述一项任务”的输入框。",
@@ -145,12 +127,6 @@
   },
   "dfc32ad6652396f06f7a93754dcf29cd4bd7a9e5681781a2743267824b56ee87": {
     "title": "Ask Maps 新功能助力假日出行与准备",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "95da0fde7d56c751139e0cc7dfc6322f755c734e8b60661e4e9abc5c82ecbba0": {
-    "title": "推出 Gemini 4 Neon",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
@@ -167,32 +143,8 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "8e2ce054ff040c2dce2322d745baf5b918636212a180753c51cd09ba8d310f77": {
-    "title": "将 Supabase、Box、Calendly 等连接到 Copilot",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "362ee7bc4f1920475e98c490549b28915aac62115a628231eedd7bc94bd171a2": {
-    "title": "GitHub Copilot 中的 Gemini 4 Neon",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "6a03f71e3304b4d5c7ae3caa2f42e3da6c870a4dcd5f187b8e725a5da50b9167": {
     "title": "GitHub Team 自动运行安全风险评估",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "6e93a4cc09914f56e3195dbcc44b7565cd5d4d1c6f98f76cb5cabab131cb87b4": {
-    "title": "为团队定制 GitHub Copilot",
-    "summary": "现在可以共享团队依赖的 GitHub Copilot 插件，无需每位成员重复相同设置。团队自定义功能已面向组织团队正式可用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "57e7781a892d4960f0ccc24d153c11fdc00b6da6ddc3d907f20185cd106c606d": {
-    "title": "OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 现已可用",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"

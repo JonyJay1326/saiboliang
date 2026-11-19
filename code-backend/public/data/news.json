@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-11-19T01:14:48Z",
+  "dataUpdatedAt": "2026-11-19T01:29:40Z",
   "items": [
+    {
+      "title": "谷歌发布 Gemini 4 Neon，速度飙升 3 倍还支持百万上下文",
+      "sourceUrl": "https://www.aibase.com/zh/news/32396",
+      "source": "AIBase",
+      "summary": "人工智能在复杂推理与多步骤任务自动化领域迎来新的竞争焦点。谷歌于11月18日正式推出全新 AI 模型 Gemini4Neon",
+      "publishedAt": "2026-11-19T01:13:42Z",
+      "id": "3727a1148c69fd0a85e816cc9afa69c102fe2b4e6a4fab8b2792c8f078cacd7f",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.aibase.com/zh/news/32396",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-19T01:29:40Z",
+      "featured": true
+    },
+    {
+      "title": "OpenAI 首款 AI 硬件传年底启动出货：立讯精密等中国供应链厂商深度参与",
+      "sourceUrl": "https://www.aibase.com/zh/news/32393",
+      "source": "AIBase",
+      "summary": "人工智能从软件模型向消费级终端硬件的延伸正在加速推进。据供应链消息显示，OpenAI 的首款 AI 端侧硬件产品有望在今年年底正式启动出货",
+      "publishedAt": "2026-11-19T01:03:30Z",
+      "id": "6048bc9194c3637d05f3a4f5d0559d2d1a88ec2c4fbc5e7d2990559a2e49a384",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.aibase.com/zh/news/32393",
+      "category": "industry",
+      "eventType": "deep-analysis",
+      "addedAt": "2026-11-19T01:29:40Z",
+      "featured": null
+    },
+    {
+      "title": "谷歌搜索AI模式全球上线“临时线程”功能，提供无痕隐私搜索体验",
+      "sourceUrl": "https://www.aibase.com/zh/news/32391",
+      "source": "AIBase",
+      "summary": "11月18日，谷歌宣布在全球桌面端及移动端浏览器的搜索AI模式中正式推出“临时线程”（Temporary Threads）功能",
+      "publishedAt": "2026-11-19T00:57:38Z",
+      "id": "b6370399a2748c7527185cb3326b4046709ac9053f1cadbbbcdbcfa4d6a33d09",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.aibase.com/zh/news/32391",
+      "category": "tool",
+      "eventType": "hands-on",
+      "addedAt": "2026-11-19T01:29:40Z",
+      "featured": null
+    },
     {
       "title": "将 Supabase、Box、Calendly 等连接到 Copilot",
       "sourceUrl": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
@@ -189,7 +246,7 @@
       "category": "model",
       "eventType": "model-review",
       "addedAt": "2026-11-19T01:14:48Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "Jev再被狙击！微软新决策模型来了，速度快2倍，准确率登顶",
@@ -8248,6 +8305,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-19T01:14:48Z",
-  "generatedAt": "2026-11-19T01:14:48Z"
+  "version": "2026-11-19T01:29:40Z",
+  "generatedAt": "2026-11-19T01:29:40Z"
 }

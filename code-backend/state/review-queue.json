@@ -11,17 +11,6 @@
     "createdAt": "2026-09-22T08:37:23Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "aibase",
-    "reason": "candidate count dropped below 60%: aibase",
-    "evidence": {
-      "url": "https://www.aibase.com/zh/news"
-    },
-    "id": "df57fa2a5ee715c071d28072a636b0623f9bb7b1f99a2ab83d54286c5a7480fb",
-    "status": "pending",
-    "createdAt": "2026-09-23T03:02:47Z"
-  },
-  {
     "kind": "news-item",
     "objectId": "a70f3d0a05043d18817e86bfc6bb4b3a0508e7d3ad7deb24deaea2b8695ec416",
     "reason": "invalid feed item: invalid news title",
@@ -214,17 +203,6 @@
     "createdAt": "2026-10-14T15:50:52Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "anthropic",
-    "reason": "Anthropic news list missing or restructured",
-    "evidence": {
-      "url": "https://www.anthropic.com/news"
-    },
-    "id": "edae939974b798837011f4b3647e38b877386c462bdd97120fafc789fe0c05ed",
-    "status": "pending",
-    "createdAt": "2026-10-21T08:39:45Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "HKUDS/DeepTutor",
     "reason": "AI applicability uncertain",
@@ -270,28 +248,6 @@
     "id": "d12a3068d7a66958c8818ae7f2aa1784887b1869a8b6b3fe0925a81c6fa50886",
     "status": "pending",
     "createdAt": "2026-11-04T18:40:18Z"
-  },
-  {
-    "kind": "news-source",
-    "objectId": "ernie",
-    "reason": "HTTP 404",
-    "evidence": {
-      "url": "https://ernie.baidu.com/blog/zh/posts/index.xml"
-    },
-    "id": "e1070d9f1f8bad6267b61f4b0375122b150bf3f2ac0719b98f7758d737894685",
-    "status": "pending",
-    "createdAt": "2026-11-05T11:03:48Z"
-  },
-  {
-    "kind": "news-source",
-    "objectId": "alibaba-bailian",
-    "reason": "Alibaba catalog table missing or restructured",
-    "evidence": {
-      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models"
-    },
-    "id": "e8f0df928dda3f5a9a8d9e1c2d365d1c958c9f149e3cd42e6da71fb3f7cf38a1",
-    "status": "pending",
-    "createdAt": "2026-11-06T11:00:21Z"
   },
   {
     "kind": "plans",
@@ -877,5 +833,16 @@
     "id": "22ed3741ccfa62030b53d24ccfb05bb039ed4289e2c77293b514862068078bed",
     "status": "pending",
     "createdAt": "2026-11-19T01:14:48Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "ernie",
+    "reason": "candidate count dropped below 60%: ernie",
+    "evidence": {
+      "url": "https://ernie.baidu.com/blog/zh"
+    },
+    "id": "3aa1685a6e3bf094f4cef52c91284240dbeab9b0c6bd2a7f2872e87413d77bfd",
+    "status": "pending",
+    "createdAt": "2026-11-19T01:29:40Z"
   }
 ]

@@ -1,15 +1,15 @@
 {
   "source": "github-trending",
-  "dataUpdatedAt": "2026-11-19T01:14:48Z",
+  "dataUpdatedAt": "2026-11-19T01:29:40Z",
   "week": {
     "period": "weekly",
     "sourceUrl": "https://github.com/trending?since=weekly",
-    "fetchedAt": "2026-11-19T01:14:48Z",
+    "fetchedAt": "2026-11-19T01:29:40Z",
     "items": [
       {
         "repo": "GoogleChrome/modern-web-guidance-src",
         "sourceRank": 1,
-        "stars": 8843,
+        "stars": 8847,
         "periodStars": 7257,
         "language": "TypeScript",
         "description": "让编码智能体及时掌握最新 Web 最佳实践",
@@ -18,7 +18,7 @@
       {
         "repo": "dream-num/univer",
         "sourceRank": 8,
-        "stars": 29888,
+        "stars": 29889,
         "periodStars": 6840,
         "language": "TypeScript",
         "description": "使用 Univer Office SDK 构建你自己的 AI 办公套件。将编辑、计算、协作与文件处理能力集成到产品中，面向人与 AI 智能体。基于可扩展的开源核心。",
@@ -27,7 +27,7 @@
       {
         "repo": "alibaba/open-code-review",
         "sourceRank": 1,
-        "stars": 54174,
+        "stars": 54177,
         "periodStars": 4383,
         "language": "Go",
         "description": "阿里大规模实战检验的代码审查工具：确定性流水线 + LLM Agent 混合架构，行级精确评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI / Anthropic。",
@@ -36,7 +36,7 @@
       {
         "repo": "anthropics/skills",
         "sourceRank": 2,
-        "stars": 197216,
+        "stars": 197222,
         "periodStars": 4381,
         "language": "Python",
         "description": "Agent Skills 的公开仓库",
@@ -45,7 +45,7 @@
       {
         "repo": "addyosmani/agent-skills",
         "sourceRank": 3,
-        "stars": 118952,
+        "stars": 118955,
         "periodStars": 3331,
         "language": "JavaScript",
         "description": "面向 AI 编程 Agent 的生产级工程技能集。",
@@ -54,7 +54,7 @@
       {
         "repo": "ChromeDevTools/chrome-devtools-mcp",
         "sourceRank": 5,
-        "stars": 58213,
+        "stars": 58214,
         "periodStars": 3143,
         "language": "TypeScript",
         "description": "面向编码智能体的 Chrome DevTools",
@@ -63,7 +63,7 @@
       {
         "repo": "vercel-labs/agent-browser",
         "sourceRank": 1,
-        "stars": 52652,
+        "stars": 52655,
         "periodStars": 2987,
         "language": "Rust",
         "description": "面向 AI 智能体的浏览器自动化 CLI",
@@ -72,7 +72,7 @@
       {
         "repo": "mvanhorn/last30days-skill",
         "sourceRank": 4,
-        "stars": 70022,
+        "stars": 70038,
         "periodStars": 2423,
         "language": "Python",
         "description": "AI 智能体技能，跨 Reddit、X、YouTube、HN、Polymarket 与网络研究任意话题，并生成有依据的摘要",
@@ -81,7 +81,7 @@
       {
         "repo": "Likely7/Veyra-NRVideo",
         "sourceRank": 3,
-        "stars": 3582,
+        "stars": 3590,
         "periodStars": 2329,
         "language": "C++",
         "description": "借助 DLSS 5 让 PS5 GTA6 达到 120FPS。一款 Windows 视频播放与采集增强工具，支持视频、图像和采集卡源的实时预览，结合 AI 超分辨率、DLSS5 图像增强与帧生成，带来新一代视觉体验。",
@@ -108,7 +108,7 @@
       {
         "repo": "google-labs-code/stitch-skills",
         "sourceRank": 4,
-        "stars": 10407,
+        "stars": 10410,
         "periodStars": 1567,
         "language": "TypeScript",
         "description": "配合 Stitch MCP 服务器使用的 Agent Skills 库，每个技能遵循 Agent Skills 开放标准，兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码智能体",
@@ -117,7 +117,7 @@
       {
         "repo": "NVIDIA/SkillSpector",
         "sourceRank": 11,
-        "stars": 26827,
+        "stars": 26828,
         "periodStars": 1447,
         "language": "Python",
         "description": "AI 智能体技能安全扫描器。在安装 Claude Code、Codex 和 MCP 技能前，检测漏洞、恶意模式、安全风险、提示注入、数据外泄与供应链风险。",
@@ -135,7 +135,7 @@
       {
         "repo": "Anil-matcha/Open-Generative-AI",
         "sourceRank": 1,
-        "stars": 35305,
+        "stars": 35306,
         "periodStars": 1251,
         "language": "JavaScript",
         "description": "无审查的开源 AI 视频平台替代方案，免费 AI 图像与视频生成工作室，支持 600+ 模型（Flux、Midjourney、Kling、Sora、Veo），无内容过滤，可自托管，MIT 许可。",
@@ -180,7 +180,7 @@
       {
         "repo": "microsoft/BitNet",
         "sourceRank": 12,
-        "stars": 42035,
+        "stars": 42037,
         "periodStars": 420,
         "language": "C++",
         "description": "1-bit LLM 官方推理框架",
@@ -225,7 +225,7 @@
       {
         "repo": "MoFeng2223/BrimDeck",
         "sourceRank": 9,
-        "stars": 820,
+        "stars": 821,
         "periodStars": 251,
         "language": "C#",
         "description": "Windows 11 灵动岛，支持 AI 编码工具配额、用量追踪、音乐控制等。",
@@ -281,12 +281,12 @@
   "month": {
     "period": "monthly",
     "sourceUrl": "https://github.com/trending?since=monthly",
-    "fetchedAt": "2026-11-19T01:14:48Z",
+    "fetchedAt": "2026-11-19T01:29:40Z",
     "items": [
       {
         "repo": "cloudflare/security-audit-skill",
         "sourceRank": 1,
-        "stars": 75383,
+        "stars": 75387,
         "periodStars": 44600,
         "language": "JavaScript",
         "description": "面向编码代理的技能，用于多阶段安全审计，产出可独立验证、机器可读的结果",
@@ -295,7 +295,7 @@
       {
         "repo": "pbakaus/impeccable",
         "sourceRank": 1,
-        "stars": 112913,
+        "stars": 112918,
         "periodStars": 30662,
         "language": "Rust",
         "description": "让 AI 工具在设计中表现更佳的设计语言。",
@@ -304,7 +304,7 @@
       {
         "repo": "Nutlope/hallmark",
         "sourceRank": 1,
-        "stars": 57541,
+        "stars": 57546,
         "periodStars": 27295,
         "language": "CSS",
         "description": "面向 Claude Code、Cursor 和 Codex 的反 AI 套路设计技能",
@@ -313,7 +313,7 @@
       {
         "repo": "vercel-labs/agent-desktop",
         "sourceRank": 8,
-        "stars": 25305,
+        "stars": 25311,
         "periodStars": 23599,
         "language": "Rust",
         "description": "面向 AI 智能体的计算机使用 CLI",
@@ -322,7 +322,7 @@
       {
         "repo": "heygen-com/hyperframes",
         "sourceRank": 5,
-        "stars": 86535,
+        "stars": 86541,
         "periodStars": 20375,
         "language": "TypeScript",
         "description": "编写 HTML。渲染视频。为代理而构建。",
@@ -331,7 +331,7 @@
       {
         "repo": "tashfeenahmed/freellmapi",
         "sourceRank": 12,
-        "stars": 54698,
+        "stars": 54701,
         "periodStars": 17947,
         "language": "TypeScript",
         "description": "每月 74 亿 token 的免费通道：聚合 34 家免费 LLM 供应商、635 个免费模型端点，统一到单个 /v1 接口，支持智能路由与自动故障转移，仅供个人试验。",
@@ -340,7 +340,7 @@
       {
         "repo": "anthropics/skills",
         "sourceRank": 1,
-        "stars": 197217,
+        "stars": 197222,
         "periodStars": 15769,
         "language": "Python",
         "description": "Agent Skills 的公开仓库",
@@ -376,7 +376,7 @@
       {
         "repo": "AgriciDaniel/claude-seo",
         "sourceRank": 4,
-        "stars": 30676,
+        "stars": 30678,
         "periodStars": 11532,
         "language": "Python",
         "description": "Claude Code 通用 SEO 技能。26 个子技能与 19 个子代理，覆盖技术 SEO、E-E-A-T、schema、GEO/AEO、代理就绪（Lighthouse Agentic Browsing、WebMCP、llms.txt）、外链、本地 SEO、电商、国际 SEO、Google API 及 PDF/Excel 报告。9 个可选扩展用于实时 SEO 数据。",
@@ -385,7 +385,7 @@
       {
         "repo": "jub0t/Concat",
         "sourceRank": 13,
-        "stars": 18670,
+        "stars": 18672,
         "periodStars": 9916,
         "language": "Rust",
         "description": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
@@ -394,7 +394,7 @@
       {
         "repo": "Vincentwei1021/video-shotcraft",
         "sourceRank": 6,
-        "stars": 21324,
+        "stars": 21328,
         "periodStars": 8934,
         "language": "TypeScript",
         "description": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
@@ -403,7 +403,7 @@
       {
         "repo": "vercel-labs/agent-browser",
         "sourceRank": 2,
-        "stars": 52652,
+        "stars": 52655,
         "periodStars": 8540,
         "language": "Rust",
         "description": "面向 AI 智能体的浏览器自动化 CLI",
@@ -421,7 +421,7 @@
       {
         "repo": "NVIDIA/SkillSpector",
         "sourceRank": 8,
-        "stars": 26827,
+        "stars": 26828,
         "periodStars": 6381,
         "language": "Python",
         "description": "AI 智能体技能安全扫描器。在安装 Claude Code、Codex 和 MCP 技能前，检测漏洞、恶意模式、安全风险、提示注入、数据外泄与供应链风险。",
@@ -439,7 +439,7 @@
       {
         "repo": "citrolabs/ego-lite",
         "sourceRank": 5,
-        "stars": 23570,
+        "stars": 23571,
         "periodStars": 6029,
         "language": "JavaScript",
         "description": "面向 AI 智能体的最快浏览器自动化工具，可与 Codex 或 Claude Code 等 AI 智能体共享已登录的浏览器状态，且不干扰用户。零成本、零配置。",
@@ -448,7 +448,7 @@
       {
         "repo": "akitaonrails/ai-memory",
         "sourceRank": 9,
-        "stars": 16121,
+        "stars": 16124,
         "periodStars": 5904,
         "language": "Rust",
         "description": "为 agent 编码 CLI 提供长期记忆，并便于在不同 agent 厂商之间交接",
@@ -457,7 +457,7 @@
       {
         "repo": "mvanhorn/last30days-skill",
         "sourceRank": 15,
-        "stars": 70023,
+        "stars": 70038,
         "periodStars": 5361,
         "language": "Python",
         "description": "AI 智能体技能，跨 Reddit、X、YouTube、HN、Polymarket 与网络研究任意话题，并生成有依据的摘要",
@@ -484,7 +484,7 @@
       {
         "repo": "gitroomhq/postiz-app",
         "sourceRank": 13,
-        "stars": 41916,
+        "stars": 41918,
         "periodStars": 4677,
         "language": "TypeScript",
         "description": "终极智能体社交媒体排程工具",
@@ -493,7 +493,7 @@
       {
         "repo": "Anil-matcha/Open-Generative-AI",
         "sourceRank": 13,
-        "stars": 35305,
+        "stars": 35306,
         "periodStars": 4659,
         "language": "JavaScript",
         "description": "无审查的开源 AI 视频平台替代方案，免费 AI 图像与视频生成工作室，支持 600+ 模型（Flux、Midjourney、Kling、Sora、Veo），无内容过滤，可自托管，MIT 许可。",
@@ -502,7 +502,7 @@
       {
         "repo": "vercel-labs/skills",
         "sourceRank": 10,
-        "stars": 39976,
+        "stars": 39977,
         "periodStars": 4623,
         "language": "TypeScript",
         "description": "开放的智能体技能工具 - npx skills",
@@ -511,7 +511,7 @@
       {
         "repo": "multica-ai/multica",
         "sourceRank": 18,
-        "stars": 56616,
+        "stars": 56617,
         "periodStars": 3709,
         "language": "Go",
         "description": "让人类与 AI 智能体作为一个团队协作——开源且可自托管。",
@@ -529,7 +529,7 @@
       {
         "repo": "Likely7/Veyra-NRVideo",
         "sourceRank": 5,
-        "stars": 3582,
+        "stars": 3591,
         "periodStars": 2687,
         "language": "C++",
         "description": "借助 DLSS 5 让 PS5 GTA6 达到 120FPS。一款 Windows 视频播放与采集增强工具，支持视频、图像和采集卡源的实时预览，结合 AI 超分辨率、DLSS5 图像增强与帧生成，带来新一代视觉体验。",
@@ -538,7 +538,7 @@
       {
         "repo": "ConardLi/garden-skills",
         "sourceRank": 10,
-        "stars": 15448,
+        "stars": 15451,
         "periodStars": 2533,
         "language": "JavaScript",
         "description": "ConardLi 的开源 Skills 集合，包含网页设计、知识检索、图像生成等。",
@@ -555,6 +555,6 @@
       }
     ]
   },
-  "version": "2026-11-19T01:14:48Z",
-  "generatedAt": "2026-11-19T01:14:48Z"
+  "version": "2026-11-19T01:29:40Z",
+  "generatedAt": "2026-11-19T01:29:40Z"
 }
