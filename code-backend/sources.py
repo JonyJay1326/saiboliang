@@ -1688,7 +1688,7 @@ def seed_article_url(loc,final):
     return 'https://seed.bytedance.com/zh/blog/'+slug
 
 
-def collect_seed(client,raw,source,now,window_seconds=72*3600):
+def collect_seed(client,raw,source,now,review,window_seconds=72*3600):
     """ByteDance Seed sitemap for discovery; article page supplies h1 title and 发布日期."""
     now_dt=datetime.fromisoformat(now)
     rows=[]; deadline=time.monotonic()+120
@@ -1911,7 +1911,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             elif adapter=='xai-sitemap':
                 rows=collect_xai(client,raw,source,now,window_seconds)
             elif adapter=='seed-blog':
-                rows=collect_seed(client,raw,source,now,window_seconds)
+                rows=collect_seed(client,raw,source,now,review,window_seconds)
             elif adapter=='minimax-blog':
                 rows=collect_minimax(client,raw,source)
             elif adapter=='huggingface-models':

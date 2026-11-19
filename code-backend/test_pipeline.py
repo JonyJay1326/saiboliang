@@ -511,7 +511,7 @@ class PipelineTests(unittest.TestCase):
                  '</urlset>')
         article='<html><h1>Seed 新模型正式发布</h1><div><p class="font-medium">发布</p><p class="font-normal">2026-09-16</p></div></html>'
         source=dict(id='seed',name='字节 Seed',url='https://seed.bytedance.com/sitemap.xml',official=True,lang='zh')
-        rows=collect_seed(FakeClient(documents={'https://seed.bytedance.com/blog/new-post':article}),sitemap,source,NOW)
+        rows=collect_seed(FakeClient(documents={'https://seed.bytedance.com/blog/new-post':article}),sitemap,source,NOW,lambda *x:None)
         self.assertEqual(len(rows),1)
         self.assertEqual(rows[0]['title'],'Seed 新模型正式发布')
         self.assertEqual(rows[0]['publishedAt'],'2026-09-15T16:00:00Z')
@@ -525,12 +525,29 @@ class PipelineTests(unittest.TestCase):
         loc='https://seed.bytedance.com/blog/new-post'
         # CI 出口地区跳 /en/blog/：同一篇的其它地区变体照收，身份固定为中文页
         for landing in ('https://seed.bytedance.com/zh/blog/new-post','https://seed.bytedance.com/en/blog/new-post'):
-            rows=collect_seed(FakeClient(documents={loc:article},redirects={loc:landing}),sitemap,source,NOW)
+            rows=collect_seed(FakeClient(documents={loc:article},redirects={loc:landing}),sitemap,source,NOW,lambda *x:None)
             self.assertEqual([r['sourceUrl'] for r in rows],['https://seed.bytedance.com/zh/blog/new-post'])
         # 跳到别的文章仍是结构异常，拒收该条目
         with self.assertRaises(ValueError):
             collect_seed(FakeClient(documents={loc:article},
-                                    redirects={loc:'https://seed.bytedance.com/en/blog/other-post'}),sitemap,source,NOW)
+                                    redirects={loc:'https://seed.bytedance.com/en/blog/other-post'}),sitemap,source,NOW,lambda *x:None)
+
+    def test_seed_structure_change_records_review_not_crash(self):
+        # 2026-11-17/18 线上事故：collect_seed 缺 review 参数，Seed 文章页结构变化
+        # 触发 NameError 直接炸掉整个 news 模块。结构异常现在必须走 review 队列。
+        sitemap=('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 '<url><loc>https://seed.bytedance.com/blog/new-post</loc><lastmod>2026-09-17T03:00:00.000Z</lastmod></url>'
+                 '</urlset>')
+        source=dict(id='seed',name='字节 Seed',url='https://seed.bytedance.com/sitemap.xml',official=True,lang='zh')
+        # h1 与日期标记都不在：结构变化
+        article='<html><section><p>页面改版了</p></section></html>'
+        reviews=[]
+        rows=collect_seed(FakeClient(documents={'https://seed.bytedance.com/blog/new-post':article}),
+                          sitemap,source,NOW,lambda *x:reviews.append(x))
+        self.assertEqual(rows,[])
+        self.assertEqual(len(reviews),1)
+        self.assertEqual(reviews[0][0],'news-item')
+        self.assertIn('structure changed',reviews[0][2])
 
     def test_minimax_blog_adapter_reads_article_date(self):
         listing=('<html><a href="/blog/minimax-h3">MiniMax H3</a>'
