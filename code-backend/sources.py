@@ -31,6 +31,14 @@ class Node:
         return ' '.join(c.text() if isinstance(c,Node) else c for c in self.children)
 
 
+def iter_nodes(node):
+    """Document-order depth-first walk of a subtree (Tree keeps no parent pointers)."""
+    for child in node.children:
+        if isinstance(child,Node):
+            yield child
+            yield from iter_nodes(child)
+
+
 class Tree(HTMLParser):
     def __init__(self, html):
         super().__init__(convert_charrefs=True)
@@ -1232,27 +1240,42 @@ def collect_aibase_backfill(client,rows,source,now_dt,window_seconds):
 
 
 def parse_anthropic_news(raw,source):
-    """Anthropic /news: server-rendered list, one <time> + title node per card."""
-    tree=Tree(decode(raw)).root
-    rows=[]; seen=set()
-    for link in tree.find(lambda n:n.tag=='a' and (n.attrs.get('href') or '').startswith('/news/')):
-        href=link.attrs['href']
+    """Anthropic /news: the RSC flight payload embeds Sanity article objects.
+
+    2026-11-19 [实测]: the server-rendered cards moved <time> out of the <a>, so
+    title+date no longer share one anchor and the old markup walk broke. The flight
+    payload is the stable seam: each `{"_id":"article-...` decode is one article with
+    `slug.current` / `title` / `publishedOn` / `summary`; `articleType:"news"` keeps
+    research cards out, and reference stubs (no `_type`/fields) are skipped by the
+    same field checks.
+    """
+    flight=flight_payloads(raw)
+    require(flight,'Anthropic news payload missing')
+    rows=[]; seen=set(); decoder=json.JSONDecoder()
+    for match in re.finditer(r'\{\s*"_id"\s*:\s*"article-',flight):
+        try:
+            item,_=decoder.raw_decode(flight,match.start())
+        except json.JSONDecodeError:
+            continue
+        if not (isinstance(item,dict) and item.get('_type')=='article' and item.get('articleType')=='news'):
+            continue
+        slug=item.get('slug') if isinstance(item.get('slug'),dict) else None
+        title=item.get('title'); published=item.get('publishedOn')
+        if not (isinstance(slug,dict) and isinstance(slug.get('current'),str)
+                and isinstance(title,str) and isinstance(published,str)):
+            continue
+        day_match=re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})',published)
+        if not day_match:
+            raise DataError('Anthropic news date format changed: '+published)
+        href='https://www.anthropic.com/news/'+slug['current']
         if href in seen:
             continue
-        times=link.find(lambda n:n.tag=='time')
-        heads=link.find(lambda n:'title' in (n.attrs.get('class') or '') or n.tag in ('h2','h3','h4'))
-        if not times or not heads:
-            continue
-        title=' '.join(heads[0].text().split())
-        date=' '.join(times[0].text().split())
-        require(title,'Anthropic news title empty')
-        try:
-            dt=datetime.strptime(date,'%b %d, %Y')
-        except ValueError as exc:
-            raise DataError('Anthropic news date format changed') from exc
         seen.add(href)
-        rows.append(dict(title=title,sourceUrl=urljoin('https://www.anthropic.com',href),
-                         publishedAt=day_start_utc(dt.year,dt.month,dt.day),source=source['name'],summary=None))
+        summary=item.get('summary')
+        year,month,day_num=(int(part) for part in day_match.groups())
+        rows.append(dict(title=' '.join(title.split()),sourceUrl=href,source=source['name'],
+                         summary=' '.join(summary.split()) if isinstance(summary,str) else None,
+                         publishedAt=day_start_utc(year,month,day_num)))
     require(rows,'Anthropic news list missing or restructured')
     return rows
 
@@ -1364,34 +1387,55 @@ BAILIAN_MODEL_RE=re.compile(r'qwen|qwq|qvq',re.I)
 
 
 def parse_bailian(raw,source):
-    """Alibaba Model Studio catalog: Qwen-family additions only; no per-row URLs.
+    """Alibaba Model Studio release notes: Qwen-family additions only; no per-row URLs.
 
-    The model cell may list an alias plus its dated snapshot; the first token is
-    the stable identity, and every token must look like a model ID.
+    2026-11-19 [实测]: the 4-column `<table>` is gone; the page now ships the release
+    timeline as HTML inside the `window.__ICE_PAGE_PROPS__` data island
+    (`docDetailData.storeData.data.content`), grouped by date blocks (`rkb-update`)
+    with one `<h4>` model section each. Third-party entries on the same timeline stay
+    out via the Qwen filter, and the first token of a compound name is the identity.
     """
-    tree=Tree(decode(raw)).root
+    page=decode(raw)
+    marker=re.search(r'window\.__ICE_PAGE_PROPS__\s*=\s*',page)
+    require(marker,'Alibaba ICE page props missing')
+    props,_=json.JSONDecoder().raw_decode(page,marker.end())
+    data=((props.get('docDetailData') or {}).get('storeData') or {}).get('data') or {}
+    content=data.get('content')
+    require(isinstance(content,str) and content,'Alibaba catalog content missing')
+    root=Tree(content).root
     result=[]; seen=set()
-    for row in tree.find(lambda n:n.tag=='tr'):
-        cells=row.find(lambda n:n.tag in ('td','th'))
-        if len(cells)!=4:
-            continue
-        _,date,models,description=[' '.join(c.text().replace('\ufeff',' ').split()) for c in cells]
+    for block in root.find(lambda n:n.tag=='div' and 'rkb-update' in (n.attrs.get('class') or '')):
+        block_id=block.attrs.get('id') or ''
+        id_date=re.search(r'(\d{4}-\d{2}-\d{2})$',block_id)
+        heads=block.find(lambda n:n.tag=='h3')
+        date=(id_date.group(1) if id_date
+              else ' '.join(heads[0].text().split()) if heads else '')
         if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
             continue
-        tokens=models.split()
-        if not tokens or not all(re.fullmatch(r'[A-Za-z0-9][\w./-]*',token) for token in tokens):
-            continue
-        model=tokens[0]
-        if not BAILIAN_MODEL_RE.match(model):
-            continue
-        url=row_url(source['url'],date=date,model=model)
-        if url in seen:
-            continue
-        seen.add(url)
-        year,month,day=(int(part) for part in date.split('-'))
-        result.append(dict(title='阿里发布 '+model,sourceUrl=url,publishedAt=day_start_utc(year,month,day),
-                           source=source['name'],summary=clip(description,80) or None))
-    require(result,'Alibaba catalog table missing or restructured')
+        current=None; descriptions={}
+        for node in iter_nodes(block):
+            if node.tag=='h4':
+                current=' '.join(node.text().split())
+                if current:
+                    descriptions.setdefault(current,[])
+            elif node.tag=='p' and current:
+                text=' '.join(node.text().split())
+                if text:
+                    descriptions[current].append(text)
+        for model,parts in descriptions.items():
+            tokens=model.split()
+            if not tokens or not all(re.fullmatch(r'[A-Za-z0-9][\w./-]*',token) for token in tokens):
+                continue
+            if not BAILIAN_MODEL_RE.match(tokens[0]):
+                continue
+            url=row_url(source['url'],date=date,model=tokens[0])
+            if url in seen:
+                continue
+            seen.add(url)
+            year,month,day=(int(part) for part in date.split('-'))
+            result.append(dict(title='阿里发布 '+tokens[0],sourceUrl=url,publishedAt=day_start_utc(year,month,day),
+                               source=source['name'],summary=clip(' '.join(parts),80) or None))
+    require(result,'Alibaba catalog list missing or restructured')
     return result
 
 
@@ -1496,6 +1540,42 @@ def parse_kimi_blog(raw,source):
         result.append(dict(title='月之暗面发布 '+title,sourceUrl=url,publishedAt=day_start_utc(year,month,day),
                            source=source['name'],summary=None))
     require(result,'Kimi research blog missing or restructured')
+    return result
+
+
+def parse_ernie_blog(raw,source):
+    """ERNIE blog home: `<a class="...article-link">` cards with h2/h3 + `<time datetime>`.
+
+    2026-11-19 [实测]: the old RSS (`/blog/zh/posts/index.xml`) is gone (HTTP 404); the
+    bilingual blog home now server-renders cards under `/release/` and `/research/posts/`
+    with the publish date in the `datetime` attribute. Titles are already descriptive, so
+    no vendor template is prefixed. A card without title/date is skipped, an empty result
+    fails the source loudly.
+    """
+    tree=Tree(decode(raw)).root
+    result=[]; seen=set()
+    for card in tree.find(lambda n:n.tag=='a' and 'article-link' in (n.attrs.get('class') or '')):
+        href=card.attrs.get('href') or ''
+        if not (href.startswith('/release/') or href.startswith('/research/posts/')):
+            continue
+        titles=card.find(lambda n:n.tag in ('h2','h3','h4'))
+        dates=card.find(lambda n:n.tag=='time')
+        if not titles or not dates:
+            continue
+        title=' '.join(titles[0].text().split())
+        date=(dates[0].attrs.get('datetime') or '').strip()
+        if not title or not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
+            continue
+        url=urljoin('https://ernie.baidu.com',href)
+        if url in seen:
+            continue
+        seen.add(url)
+        descriptions=card.find(lambda n:n.tag=='p' and 'description' in (n.attrs.get('class') or ''))
+        summary=' '.join(descriptions[0].text().split()) if descriptions else None
+        year,month,day=(int(part) for part in date.split('-'))
+        result.append(dict(title=title,sourceUrl=url,publishedAt=day_start_utc(year,month,day),
+                           source=source['name'],summary=summary))
+    require(result,'ERNIE blog list missing or restructured')
     return result
 
 
@@ -1877,7 +1957,7 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
             require(normalize_url(final)==normalize_url(source['url']),
                     'news source redirected unexpectedly: '+source['id']+' -> '+normalize_url(final))
             adapter=source.get('adapter','rss')
-            require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog','cursor-changelog','openrouter-announcements','opencode-releases','commandcode-changelog'),'unknown news adapter')
+            require(adapter in ('rss','aibase','deepseek-news','anthropic-news','xai-sitemap','seed-blog','minimax-blog','ernie-blog','huggingface-models','zhipu-news','tencent-announce','alibaba-bailian','tencent-tokenhub','baidu-qianfan','kimi-blog','cursor-changelog','openrouter-announcements','opencode-releases','commandcode-changelog'),'unknown news adapter')
             official=source.get('official') is True
             if adapter=='aibase':
                 rows=collect_aibase(client,raw,source,review)
@@ -1914,6 +1994,8 @@ def collect_news(client,sources,originals,old,now,guard,review,translate=None,su
                 rows=collect_seed(client,raw,source,now,review,window_seconds)
             elif adapter=='minimax-blog':
                 rows=collect_minimax(client,raw,source)
+            elif adapter=='ernie-blog':
+                rows=parse_ernie_blog(raw,source)
             elif adapter=='huggingface-models':
                 rows=parse_huggingface_models(raw,source)
             else:

@@ -65,8 +65,8 @@
     {
       "id": "ernie",
       "name": "百度文心",
-      "url": "https://ernie.baidu.com/blog/zh/posts/index.xml",
-      "adapter": "rss",
+      "url": "https://ernie.baidu.com/blog/zh",
+      "adapter": "ernie-blog",
       "official": true,
       "lang": "zh",
       "articleHosts": [

@@ -11,7 +11,7 @@ from unittest.mock import patch
 from common import DataError, decompress, digest, load_key, normalize_url, read_json, write_json
 from contract import TICKET_CANDIDATE, empty_batch, validate
 from pipeline import REVIEW_OWNER, Run, assemble, audit_ticket_expiry, load_ticket_sources, load_tickets, lock, main, promote, read_batch, save_candidate
-from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, collect_ticket_candidates, fill_news_summaries, link_has_promo, select_featured, summarize_news, ticket_candidate, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, thin_summary, reclassify_news_items, version_release, version_is_minor_bump, demote_trivial_version_featured
+from sources import Tree, abstract, aibase_article, article_excerpt, beijing_day, collect_aa, collect_aibase, collect_aibase_backfill, collect_evidence_records, collect_github, is_ai, meta_description, model_data, model_name, news_event, parse_deepseek_news, parse_feed, parse_plan, parse_trending, collect_news, collect_ticket_candidates, fill_news_summaries, link_has_promo, select_featured, summarize_news, ticket_candidate, translate_github, translate_news, parse_anthropic_news, collect_xai, collect_seed, collect_minimax, parse_huggingface_models, parse_zhipu_news, parse_tencent_announcements, parse_bailian, parse_tokenhub_dynamics, parse_qianfan, parse_kimi_blog, parse_cursor_changelog, parse_ernie_blog, parse_openrouter_announcements, parse_opencode_releases, parse_commandcode_changelog, clip, news_featured_exclusions, reverify_news_items, verify_original, search_official_candidates, publisher_for, host_blocks_crawling, thin_summary, reclassify_news_items, version_release, version_is_minor_bump, demote_trivial_version_featured
 
 NOW='2026-09-17T11:00:00Z'
 LATER='2026-09-17T12:00:00Z'
@@ -473,23 +473,60 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError): parse_deepseek_news('<html>no items</html>', source)
 
     def test_anthropic_news_list_adapter(self):
-        html=('<section><ul>'
-              '<li><a href="/news/accenture-embedded-evaluation" class="listItem"><div class="meta">'
-              '<time class="date body-3">Sep 18, 2026</time><span class="subject body-3">Announcements</span></div>'
-              '<span class="title body-3"> Partnering with Accenture on embedded evaluation</span></a></li>'
-              '<li><a href="/news/life-sciences-verification-program" class="listItem"><div class="meta">'
-              '<time class="date body-3">Sep 17, 2026</time></div>'
-              '<span class="title body-3">Introducing the Life Sciences Verification Program</span></a></li>'
-              '<li><a href="/news/accenture-embedded-evaluation"><time>Sep 18, 2026</time>'
-              '<h4 class="card title">重复项</h4></a></li>'
-              '</ul></section>')
+        # 2026-11-19 [实测]: /news 卡片的 <time> 移出了 <a>，标题+日期不再同锚；
+        # 改从 RSC flight payload 解 Sanity 文章对象（articleType=news，引用桩跳过）。
+        def push(chunk):
+            return '<script>self.__next_f.push([1,%s])</script>'%json.dumps(chunk)
+        def article(_id,slug,title,published,article_type='news',summary='Summary text.'):
+            return dict(_id=_id,_type='article',articleType=article_type,
+                        slug=dict(_type='slug',current=slug),title=title,
+                        publishedOn=published,summary=summary)
+        flight=('{"_id":"article-ref","_ref":"article-1"}'
+                +json.dumps(article('article-1','accenture-embedded-evaluation',
+                                     'Partnering with Accenture on embedded evaluation','2026-09-18'))
+                +json.dumps(article('article-2','life-sciences-verification-program',
+                                     'Introducing the Life Sciences Verification Program','2026-09-17',
+                                     article_type='news',summary=None))
+                +json.dumps(article('article-3','some-research-card','Research card','2026-09-16',
+                                     article_type='research'))
+                +json.dumps(article('article-1','accenture-embedded-evaluation',
+                                     'Partnering with Accenture on embedded evaluation','2026-09-18')))
+        html=push(flight[:60])+push(flight[60:])
         source=dict(id='anthropic',name='Anthropic',url='https://www.anthropic.com/news',official=True,lang='en')
         rows=parse_anthropic_news(html.encode(),source)
         self.assertEqual(len(rows),2)
         self.assertEqual(rows[0]['sourceUrl'],'https://www.anthropic.com/news/accenture-embedded-evaluation')
         self.assertEqual(rows[0]['title'],'Partnering with Accenture on embedded evaluation')
         self.assertEqual(rows[0]['publishedAt'],'2026-09-17T16:00:00Z')
+        self.assertEqual(rows[0]['summary'],'Summary text.')
+        self.assertIsNone(rows[1]['summary'])
         with self.assertRaises(ValueError): parse_anthropic_news(b'<html>empty</html>',source)
+
+    def test_ernie_blog_cards_adapter(self):
+        # 2026-11-19 [实测]: 旧 RSS /blog/zh/posts/index.xml 已 404，改解析博客首页
+        # article-link 卡片（h3 标题 + time datetime），无标题/日期的卡片跳过。
+        html=('<a class="news-card article-link" href="/release/ernie-5-5-flash-preview/">'
+              '<div class="news-copy"><h3> ERNIE 5.5 Flash Preview</h3>'
+              '<div class="news-meta"><span>Product updates</span>'
+              '<time datetime="2026-11-11">November 11, 2026</time></div></div></a>'
+              '<a class="news-card article-link" href="/research/posts/ernie-evolve/">'
+              '<div class="news-copy"><h3>ERNIE Evolve</h3>'
+              '<div class="news-meta"><span>Research</span>'
+              '<time datetime="2026-11-09">November 9, 2026</time></div></div></a>'
+              '<a class="news-card article-link" href="/release/ernie-5-5-flash-preview/">'
+              '<div class="news-copy"><h3>重复卡片</h3>'
+              '<time datetime="2026-11-11">dup</time></div></a>'
+              '<a class="news-card article-link" href="/release/undated/">'
+              '<div class="news-copy"><h3>无日期卡片</h3></div></a>'
+              '<a class="article-link" href="https://x.com/Baidu_ERNIE">外链卡片</a>')
+        source=dict(id='ernie',name='百度文心',url='https://ernie.baidu.com/blog/zh',official=True,lang='zh')
+        rows=parse_ernie_blog(html.encode(),source)
+        self.assertEqual(len(rows),2)
+        self.assertEqual(rows[0]['sourceUrl'],'https://ernie.baidu.com/release/ernie-5-5-flash-preview/')
+        self.assertEqual(rows[0]['title'],'ERNIE 5.5 Flash Preview')
+        self.assertEqual(rows[0]['publishedAt'],'2026-11-10T16:00:00Z')
+        self.assertEqual(rows[1]['sourceUrl'],'https://ernie.baidu.com/research/posts/ernie-evolve/')
+        with self.assertRaises(ValueError): parse_ernie_blog(b'<html>empty</html>',source)
 
     def test_xai_sitemap_adapter_filters_and_reads_article(self):
         sitemap=('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
@@ -615,16 +652,22 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError): parse_tencent_announcements(b'<table></table>',source)
 
     def test_alibaba_catalog_adapter_filters_to_qwen_and_clips_summary(self):
-        def row(kind,date,model,desc):
-            return '<tr><td><p>'+kind+'</p></td><td><p>'+date+'</p></td><td><p><code>'+model+'</code></p></td><td><p>'+desc+'</p></td></tr>'
+        # 2026-11-19 [实测]: 4 列表格已改版为 ICE 数据岛内的 rkb-update 日期块
+        # （h4 模型 + p 描述，第三方模型与千问同时间线，靠过滤器剔除）。
+        def update(date,sections):
+            body=''.join('<h4>%s</h4><div class="rkb-update-tags"><span>文本生成</span></div><p>%s</p>'%(model,desc)
+                         for model,desc in sections)
+            return ('<div class="rkb-update" id="region-0-%s">'
+                    '<div class="rkb-update-meta"><div class="rkb-update-label rkb-update-heading">'
+                    '<h3>%s</h3></div></div><div class="rkb-update-body">%s</div></div>')%(date,date,body)
         long=('Qwen-MT-Uni 一次调用即可完成文本、文档、图片、音频的翻译；服务端自动识别输入模态并进行版面还原、语音克隆等处理，'
               '输出翻译后的文本或文件下载链接。支持同步与异步两种调用方式。')
-        html=('<table>'+row('类型','时间','模型ID','功能说明')
-              +row('多模态翻译','2026-09-16','qwen-mt-uni',long)
-              +row('文本生成','2026-07-21','qwen3.7-flash qwen3.7-flash-2026-07-15','别名与快照同行。')
-              +row('文本生成','2026-08-31','ZHIPU/GLM-5.3-Flash','第三方托管模型')
-              +row('视频生成','2026-08-27','kling/kling-v3','第三方托管模型')
-              +'</table>')
+        content=(update('2026-09-16',[('qwen-mt-uni',long)])
+                 +update('2026-07-21',[('qwen3.7-flash qwen3.7-flash-2026-07-15','别名与快照同行。')])
+                 +update('2026-08-31',[('ZHIPU/GLM-5.3-Flash','第三方托管模型')])
+                 +update('2026-08-27',[('kling/kling-v3','第三方托管模型')]))
+        props=json.dumps(dict(docDetailData=dict(storeData=dict(data=dict(content=content)))))
+        html='<script>window.__ICE_PAGE_PROPS__='+props+';</script>'
         source=dict(id='alibaba-bailian',name='阿里云百炼',url='https://help.aliyun.com/zh/model-studio/newly-released-models',adapter='alibaba-bailian',official=True,lang='zh')
         rows=parse_bailian(html.encode(),source)
         self.assertEqual(len(rows),2)
@@ -639,7 +682,7 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(data['items']),1)
         self.assertEqual(data['items'][0]['eventType'],'major-update')
         batch,_=assemble(None,{'news':data},NOW); validate(batch)
-        with self.assertRaises(ValueError): parse_bailian(b'<table></table>',source)
+        with self.assertRaises(ValueError): parse_bailian(b'<html>no props</html>',source)
 
     def test_tokenhub_dynamics_adapter_filters_tencent_models(self):
         def row(desc,date):
