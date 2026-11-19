@@ -274,18 +274,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "astral-sh/ruff",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An extremely fast Python linter and code formatter, written in Rust.",
-      "sourceUrl": "https://github.com/astral-sh/ruff"
-    },
-    "id": "b29f6c310ea2405edecc11e7e423b1462a245ce64b27e107d45cb8e7c34abe6e",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "fastapi/fastapi",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -381,18 +369,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "trufflesecurity/trufflehog",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Find, verify, and analyze leaked credentials",
-      "sourceUrl": "https://github.com/trufflesecurity/trufflehog"
-    },
-    "id": "545a78d5b55ee4e88256df13f290f2765dd6aae9d92ec4529cadbfd377357b84",
-    "status": "pending",
-    "createdAt": "2026-11-11T11:06:08Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "pingdotgg/t3code",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -400,18 +376,6 @@
       "sourceUrl": "https://github.com/pingdotgg/t3code"
     },
     "id": "a6d7c00b7543d6a19eba5fbfe86437d94e4f63cf14767c5216ec664f70774c1a",
-    "status": "pending",
-    "createdAt": "2026-11-12T11:24:53Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "TheAlgorithms/Java",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "All Algorithms implemented in Java",
-      "sourceUrl": "https://github.com/TheAlgorithms/Java"
-    },
-    "id": "b1c4379ae2af77a1984dcc09dcb9fd81f8426f2570aab6feb2a90975df1ca6c4",
     "status": "pending",
     "createdAt": "2026-11-12T11:24:53Z"
   },
@@ -460,18 +424,6 @@
       "sourceUrl": "https://github.com/ranxianglei/billion-context"
     },
     "id": "5e20041fc7558752259fae75e580c962cc21aa6dc624629fd8a066f171491bed",
-    "status": "pending",
-    "createdAt": "2026-11-13T18:33:46Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SunshineStream/Sunshine",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Self-hosted game stream host for Moonlight.",
-      "sourceUrl": "https://github.com/SunshineStream/Sunshine"
-    },
-    "id": "b701a3db71139b30ede13db770239d4fd6abcf0dac4f0dc4b391faf313a30fc7",
     "status": "pending",
     "createdAt": "2026-11-13T18:33:46Z"
   },
@@ -585,18 +537,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "openai/whisper",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
-      "sourceUrl": "https://github.com/openai/whisper"
-    },
-    "id": "843cd285b179b364c8a5ff658f3828e35c3f1245df0773f8348bdea14213e728",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "getarcaneapp/arcane",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -640,42 +580,6 @@
       "sourceUrl": "https://github.com/Billionmail/BillionMail"
     },
     "id": "9181146f88eb4122b1d5c1ff2cdcfbb29b25c0e3d2ca3cd3355c71d3aa8baf7b",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "golang/go",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The Go programming language",
-      "sourceUrl": "https://github.com/golang/go"
-    },
-    "id": "67e5c4d0e8453bf0980db3f852486ffea667a9e1fc4428b35839f909eb70219c",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "amnezia-vpn/amnezia-client",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Amnezia VPN Client (Desktop+Mobile)",
-      "sourceUrl": "https://github.com/amnezia-vpn/amnezia-client"
-    },
-    "id": "7786d2c047f521399064ad106d282917f574c629f83f362ec7829035f19e05a7",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "wazuh/wazuh",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Wazuh - The Open Source Security Platform. Unified XDR and SIEM protection for endpoints and cloud workloads.",
-      "sourceUrl": "https://github.com/wazuh/wazuh"
-    },
-    "id": "d617f0cd21aeb9ae6d33b4652a3d975b61b237e873eede083174a501dc13ebb8",
     "status": "pending",
     "createdAt": "2026-11-19T01:14:48Z"
   },
@@ -729,30 +633,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "react/react",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "The library for web and native user interfaces.",
-      "sourceUrl": "https://github.com/react/react"
-    },
-    "id": "edffacad47504f0a01efd2d4ecb4622a4d194e9688d5a688c9cb5d964a1c9191",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PowerShell/PowerShell",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PowerShell for every system!",
-      "sourceUrl": "https://github.com/PowerShell/PowerShell"
-    },
-    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "2dust/v2rayN",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -760,18 +640,6 @@
       "sourceUrl": "https://github.com/2dust/v2rayN"
     },
     "id": "abc30e2541590dc20bb11d7fafadfee310a86b4da3f07ba0f0e78af78b65842a",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "zellij-org/zellij",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "A terminal workspace with batteries included",
-      "sourceUrl": "https://github.com/zellij-org/zellij"
-    },
-    "id": "ef6c74360639694c6d01ee13ab5b1f846ed6235626b499bf02b5ba4e4452707e",
     "status": "pending",
     "createdAt": "2026-11-19T01:14:48Z"
   },
@@ -801,18 +669,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "spring-projects/spring-boot",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
-      "sourceUrl": "https://github.com/spring-projects/spring-boot"
-    },
-    "id": "81fdde6efbce3c4d8d4a2a1b0c7d08896ce87b4fe6f515a742695ac920a24852",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "LibreSpark/LibreTV",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -824,25 +680,123 @@
     "createdAt": "2026-11-19T01:14:48Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "5aba59bd568bc3316812e4f311ded435cac8fb41cae6095478927c069794232a",
-    "reason": "Seed article structure changed",
+    "kind": "github-classification",
+    "objectId": "pookjw/HermesEnabler",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "source": "字节 Seed"
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "sourceUrl": "https://github.com/pookjw/HermesEnabler"
     },
-    "id": "22ed3741ccfa62030b53d24ccfb05bb039ed4289e2c77293b514862068078bed",
+    "id": "7c8eba7fa87d368b897ae9976b0096069b06a4bfed465d9332315bb2563da505",
     "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
+    "createdAt": "2026-11-19T11:48:39Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "qbit",
-    "reason": "network error: URLError",
+    "kind": "github-classification",
+    "objectId": "tobi/qmd",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "url": "https://www.qbitai.com/feed"
+      "description": "mini cli search engine for your docs, knowledge bases, meeting notes, whatever. Tracking current sota approaches while being all local",
+      "sourceUrl": "https://github.com/tobi/qmd"
     },
-    "id": "ba9cea3be0fc4a7345229ca7e4afe726581544e9c513ba325accbb3efc204573",
+    "id": "f1480bf401758ee0c81b8346eba5eae3557ee012ec27f2060200cfaf7002bf48",
     "status": "pending",
-    "createdAt": "2026-11-19T01:34:01Z"
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "aquasecurity/trivy",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+      "sourceUrl": "https://github.com/aquasecurity/trivy"
+    },
+    "id": "231407f5cce3e5ca553637d249e476d08eb90effed916b24e599666add7c5dde",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ggml-org/whisper.cpp",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "sourceUrl": "https://github.com/ggml-org/whisper.cpp"
+    },
+    "id": "c30be1d1c46e73ea8a39d73f02387778a19eaca25e3dbe81eaff141e5d5719ee",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "qbittorrent/qBittorrent",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "qBittorrent BitTorrent client",
+      "sourceUrl": "https://github.com/qbittorrent/qBittorrent"
+    },
+    "id": "c99cc9a760ee99bca3a477e2d1fde53b192f2602abd7c641fe10b7dbd03801ff",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ClickHouse/ClickHouse",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "ClickHouse® is a real-time analytics database management system",
+      "sourceUrl": "https://github.com/ClickHouse/ClickHouse"
+    },
+    "id": "f96c7aec21888dd7261732e4c1e9dc81ce1854f946e3ebfc17b79d1c67876921",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "rustfs/rustfs",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
+      "sourceUrl": "https://github.com/rustfs/rustfs"
+    },
+    "id": "59c0fb8c693b4d55a7dcc85bcf42ae662c1e245aa3766e1f714994e6c9537aac",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ViceVerse-cz/Serein",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Tiny, Performant & 100% Native client for Discord made in Rust",
+      "sourceUrl": "https://github.com/ViceVerse-cz/Serein"
+    },
+    "id": "6e07ee0651c34b74c9439c0e99ee9650bff98fcda64c83aca111e2c72de70d47",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MewX/light-novel-library_Wenku8_Android",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "[CASUALLY MAINTAINED] 轻小说文库 (Wenku8.com) 安卓版第三方公益App，始于2014年的初版Material Design风格、非盈利、Play Store上安装包最小的轻小说阅读器 (light novel reader)。目前网站的API由于被大量滥用，已更新成我自己架的 Cloudflare Worker API 中继节点，不然的话网站关闭API就全军覆没了。",
+      "sourceUrl": "https://github.com/MewX/light-novel-library_Wenku8_Android"
+    },
+    "id": "8530ec6fce4d6b7b410e02dd3614b1cde402de6575cbfecf41c56c19a9b6dd4a",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Jakeschincariol/instagram-agent-skill",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
+      "sourceUrl": "https://github.com/Jakeschincariol/instagram-agent-skill"
+    },
+    "id": "fbf173dacca9353fb2d80bab4e21261096ea28218f29e2c3dd849b0f246e2348",
+    "status": "pending",
+    "createdAt": "2026-11-19T11:48:39Z"
   }
 ]

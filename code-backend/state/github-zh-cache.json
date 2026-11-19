@@ -99,18 +99,8 @@
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
   },
-  "homeassistant-ai/ha-mcp": {
-    "text": "使用 Claude、ChatGPT 等 AI 助手配置和自动化 Home Assistant。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
   "opensandbox-group/OpenSandbox": {
     "text": "面向 AI 代理的安全、快速、可扩展沙箱运行时。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
-  "tensorflow/tensorflow": {
-    "text": "面向所有人的开源机器学习框架。",
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
   },
@@ -209,14 +199,24 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "NVIDIA-NeMo/Switchyard": {
-    "text": "Switchyard 让 LLM 应用在模型与提供商间路由流量，同时保持 OpenAI 与 Anthropic 原生 API 兼容，支持灵活选型、基准测试与成本性能优化。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "TauricResearch/TradingAgents": {
     "text": "TradingAgents：多智能体 LLM 金融交易框架",
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
+  },
+  "Tencent/LoopForge": {
+    "text": "自托管编码代理交付工作流。用脚本和人工审批门编排 CodeBuddy、Codex 与 Claude Code。含面向编码助手的本地工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T11:48:39Z"
+  },
+  "openvinotoolkit/openvino": {
+    "text": "OpenVINO™ 是用于优化和部署 AI 推理的开源工具包",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T11:48:39Z"
+  },
+  "PostHog/posthog": {
+    "text": "PostHog 是构建自主运行产品的领先平台。开发者工具涵盖 AI 可观测性、分析、会话回放、功能开关、实验、错误追踪、日志等，捕获代理诊断问题、发现机会和交付修复所需的全部上下文。可通过 Slack、网页、桌面或 MCP 统一操控。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T11:48:39Z"
   }
 }

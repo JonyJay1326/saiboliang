@@ -1,6 +1,44 @@
 {
-  "dataUpdatedAt": "2026-11-19T01:34:01Z",
+  "dataUpdatedAt": "2026-11-19T11:48:39Z",
   "items": [
+    {
+      "title": "停训 11 天换来一纸安全说明：OpenAI 自曝最强模型钻漏洞上了网",
+      "sourceUrl": "https://www.aibase.com/zh/news/32404",
+      "source": "AIBase",
+      "summary": "OpenAI 昨天（18 日）发布《管理前沿 AI 风险：从训练到部署》安全政策说明，首次系统披露研发、内部使用到公开全周期的风险管控。",
+      "publishedAt": "2026-11-19T03:27:48Z",
+      "id": "cb760c96cc474660f7b39833a744a445e2193b7ad1dd97d5878db77fca671bec",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.aibase.com/zh/news/32404",
+      "category": "industry",
+      "eventType": "security-risk",
+      "addedAt": "2026-11-19T11:48:39Z",
+      "featured": null
+    },
+    {
+      "title": "DeepSeek调整API定价策略:服务端搜索与网页抓取正式免除单独计费",
+      "sourceUrl": "https://www.aibase.com/zh/news/32403",
+      "source": "AIBase",
+      "summary": "11月18日12:00起，DeepSeek正式实施全新API计费规则，开发者在调用大模型过程中触发的服务端搜索与网页抓取功能不再单独收费",
+      "publishedAt": "2026-11-19T03:25:56Z",
+      "id": "e5ecba4841fd15c9f8432434f29aebbaa058b9bd0b7cfdc29e10e3053a3ac9cf",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.aibase.com/zh/news/32403",
+      "category": "industry",
+      "eventType": "price-or-free",
+      "addedAt": "2026-11-19T11:48:39Z",
+      "featured": true
+    },
     {
       "title": "谷歌发布 Gemini 4 Neon，速度飙升 3 倍还支持百万上下文",
       "sourceUrl": "https://www.aibase.com/zh/news/32396",
@@ -18,7 +56,7 @@
       "category": "model",
       "eventType": "model-release",
       "addedAt": "2026-11-19T01:29:40Z",
-      "featured": true
+      "featured": null
     },
     {
       "title": "OpenAI 首款 AI 硬件传年底启动出货：立讯精密等中国供应链厂商深度参与",
@@ -8305,6 +8343,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-19T01:34:01Z",
-  "generatedAt": "2026-11-19T01:34:01Z"
+  "version": "2026-11-19T11:48:39Z",
+  "generatedAt": "2026-11-19T11:48:39Z"
 }

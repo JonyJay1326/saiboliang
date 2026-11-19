@@ -1,10 +1,4 @@
 {
-  "ff7833693fa2a06713dc923ab6354b82d0a99faf362cef1531beb712e1bb1855": {
-    "title": "LVMH媒体部门宣布与OpenAI达成战略合作",
-    "summary": "LVMH媒体部门与OpenAI宣布合作，借助AI支持新闻业，并通过ChatGPT让其出版物更易获取。",
-    "source": "deepseek-flash",
-    "at": "2026-11-16T11:34:02Z"
-  },
   "b0dfaac3cf70b7a94e4fefe5c1d2b3617dca0b385cf1ac857ab345d05a280c24": {
     "title": "Meta欢迎Loblaw成为Muse首个加拿大零售合作伙伴",
     "summary": null,
@@ -92,30 +86,6 @@
   "d91fd06de7b8771ee8ad78bbe6c6a0f8795962915436321f9652c6b42b553b9c": {
     "title": "前沿科学：科学家如何使用 ChatGPT",
     "summary": "探索 1,800 多名科学家如何在研究中使用 ChatGPT，了解日常流程、生产力反馈与发现期望。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "b82b64ef90f76e66fb0003e74649f67052cf66f11ce4f6f63d50fd3308925680": {
-    "title": "Revolut 如何在不降低标准的情况下提升雄心",
-    "summary": "了解 Revolut 如何借助 OpenAI 模型和 Codex 将编码时间缩短 30–60%，扩展金融犯罪调查，并在不牺牲安全的情况下创新。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "9fe6d2ae73e55f52b8078f1806f466588569fb6faa3605540c1891f86e100648": {
-    "title": "我们的第一阶段嵌入式评估",
-    "summary": "OpenAI 与 Apollo Research、METR、Transluce 和 Goodfire 启动嵌入式评估，独立评估模型对齐、防护措施和监控系统。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "21e886491b30cfff0403f0b9b226dc169269e7194d3a973fb9f92f6fcc6f75b9": {
-    "title": "ChatGPT for Healthcare 推动护理发展的更多方式",
-    "summary": "推出计算机使用代理、改进的临床回答和新的医疗插件，可跨医疗软件完成实际工作。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "21b4758ab52123ac78ffa3dbca8705003ed9e3a44cc34d1840f5a51cf6e091d0": {
-    "title": "为医疗团队推进计算机使用代理",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
@@ -286,5 +256,11 @@
     "summary": "今天我们宣布 Microsoft IQ，这一企业上下文管理平台帮助组织构建自己的 IQ。",
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
+  },
+  "495f4e1021898d41baa5adce14254962c21316de5431249f84052c21dfa202f3": {
+    "title": "S3 审计日志流式传输与 OpenID Connect 扩展至 GHE.com",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T11:48:39Z"
   }
 }
