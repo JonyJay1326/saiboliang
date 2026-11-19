@@ -1,32 +1,338 @@
 {
-  "a0730e6c360a165831b46ef45b50e486f9a32c6d16334cf5d3eb9537bfee4743": {
-    "title": "AI 如何帮助护理团队让患者更早获得正确诊疗",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-13T18:33:46Z"
-  },
   "ff7833693fa2a06713dc923ab6354b82d0a99faf362cef1531beb712e1bb1855": {
     "title": "LVMH媒体部门宣布与OpenAI达成战略合作",
     "summary": "LVMH媒体部门与OpenAI宣布合作，借助AI支持新闻业，并通过ChatGPT让其出版物更易获取。",
     "source": "deepseek-flash",
     "at": "2026-11-16T11:34:02Z"
   },
-  "2e8f421d2ee2a3dfd36bfcc5be1c93ba1a42b98e60398a99d5e21362ce523fd9": {
-    "title": "迈向在格点上定义标准模型的一步",
-    "summary": "探索标准模型的一种候选非微扰格点定义，以及GPT-6 Astra如何帮助将该想法转化为详细证明。",
-    "source": "deepseek-flash",
-    "at": "2026-11-16T11:34:02Z"
-  },
-  "33b95c2112c46efd095543028e60f6116680e85e464182b74c65e43667746d78": {
-    "title": "我们的科学新博客",
-    "summary": "OpenAI科学博客分享新发现、实用方法，以及研究人员利用AI推进科学发现的第一手叙述。",
-    "source": "deepseek-flash",
-    "at": "2026-11-16T11:34:02Z"
-  },
-  "7890886c01383a50e6388e69c6de172e10502425509334b9f410eebaa684833c": {
-    "title": "AI Day Seoul汇聚韩国行业领袖、初创企业与开发者社区",
+  "b0dfaac3cf70b7a94e4fefe5c1d2b3617dca0b385cf1ac857ab345d05a280c24": {
+    "title": "Meta欢迎Loblaw成为Muse首个加拿大零售合作伙伴",
     "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-11-16T11:34:02Z"
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "61001433cd15e382e460f6117e4a6a160640bf4342e40deb5d2647f238f7d9a1": {
+    "title": "Muse现已在澳大利亚上线：全球首个面向所有人打造的个人AI智能体",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "184d931227f2504de1a33bebb5615518a5072d45e1bfb93a37850e8332740e3a": {
+    "title": "无声的共识",
+    "summary": "OpenAI战略未来负责人Dean Ball探讨更强大的AI可能如何重塑社会，以及人们如何保持对其机构的控制。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "58da586369f33999eb920dc2411502d48d9dc9ca37a4ab1a788d83ffd176938a": {
+    "title": "研究加速：崎岖的前沿",
+    "summary": "OpenAI衡量编程智能体如何加速AI研究、其表现仍在哪些方面不均衡，以及这对递归自我改进意味着什么。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "53d809d7420a3923e8bad7c3bd224d7d2c9da9cb37fe0d761411713f6da0b90e": {
+    "title": "Sumitomo Life领导者如何帮助团队采用ChatGPT Enterprise",
+    "summary": "Sumitomo Life使用ChatGPT Enterprise研究保险公司、准备提案并编写投资分析代码。高管的早期使用推动了采用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "67952d9a918d2536a7bf3b37b6c05ec5dc7c7c22fdf68db178458bb74b4d4f2d": {
+    "title": "深入Codex沙盒",
+    "summary": "了解Codex如何在你的机器上运行命令，同时在macOS、Linux和Windows上执行你控制的文件系统和网络限制。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "99be0c0a7e074380d1a5d6cdb0953a68d68217eb3d8f50443a74e9d288a8cea0": {
+    "title": "管理前沿AI风险：从训练到部署",
+    "summary": "OpenAI解释其如何通过模型对齐、沙盒、阻断式防护措施和监控，从训练到部署管理前沿AI风险。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "a1de396d3910fa2e0f79d5fc1596f0a162b45e4ee5be0f06557fa126a8cc5915": {
+    "title": "Le Groupe Figaro与OpenAI合作将Le Figaro新闻引入ChatGPT",
+    "summary": "Le Groupe Figaro与OpenAI合作，通过摘要和节选将Le Figaro的新闻引入ChatGPT，并附上原文链接。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "68ddb817fe4001c0fc7b71404e8ed33269a5f57651ec2110d7ae5f13ebb157e7": {
+    "title": "用OpenAI模型推进芯片设计",
+    "summary": "OpenAI模型优化了用于Jalapeño芯片的电路并改进了RISC‑V核心设计，展示了GPT‑6 Astra在AI辅助芯片设计方面的进展。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "8f6af8c44a4a1bfb5de31585ff7d049da9f0b0c7303ae5eb79fd652e216c50e9": {
+    "title": "推出GPT-6.2 Astra和Sol",
+    "summary": "推出GPT‑6.2 Astra和Sol，在ChatGPT Work、Codex和API中提供更好的专业输出、编程、计算机使用能力，并以更低成本实现更高效率。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "0e7f690aa4ff229bd2e8f2756081d691fec5b134a3dc763b1e89b65c9c3becc6": {
+    "title": "用AI加强北约及盟国网络防御",
+    "summary": "OpenAI如何与北约及盟国网络机构合作，帮助可信防御者发现漏洞、测试修复并保护关键系统。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "3047d7657748ea760feb4367a861eff886526fc9a8d7d29ee939532b2c42b6aa": {
+    "title": "推出ChatGPT for Sales",
+    "summary": "探索ChatGPT中新的Sales插件以及30多个新增和扩展的合作伙伴插件，用于研究潜在客户、准备推介、更新CRM并推进交易。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "b43ef08ac3ed4f7af6f4fa4f8f60d0d2c49772fc6e540a21a0c9e441265578ef": {
+    "title": "Astra for Law在法律智能领域领先",
+    "summary": "Astra for Law在涵盖24个法律领域的发布评估中排名第一。所有ChatGPT Enterprise客户现在均可申请访问。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "3b3be741a87f5e2153e626602817efd9dcc9c3fb90f3d3d29d39838acce03d65": {
+    "title": "推出OpenAI for Chile",
+    "summary": "OpenAI与智利政府合作，支持负责任地采用AI、建设公共部门技能，并帮助本地初创企业开发AI应用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "2d7a5d6b20fff3cd431e56c6c45800450e6e12e3351b563ba22db14d6cc86266": {
+    "title": "扩大科学家获取AI的渠道",
+    "summary": "我们正在扩展ChatGPT for Academic Researchers计划，为全球20万名研究人员免费提供前沿模型访问权限。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "dd659f011024f04f24b0b918544913431aa1336cb6fdeb78ce4549a3a5fdd29c": {
+    "title": "以新工具和支持加强打击网络儿童性虐待",
+    "summary": "新工具、实用指南和合作伙伴关系将有助于预防、检测和应对网络儿童性剥削与性虐待。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "d91fd06de7b8771ee8ad78bbe6c6a0f8795962915436321f9652c6b42b553b9c": {
+    "title": "前沿科学：科学家如何使用 ChatGPT",
+    "summary": "探索 1,800 多名科学家如何在研究中使用 ChatGPT，了解日常流程、生产力反馈与发现期望。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "b82b64ef90f76e66fb0003e74649f67052cf66f11ce4f6f63d50fd3308925680": {
+    "title": "Revolut 如何在不降低标准的情况下提升雄心",
+    "summary": "了解 Revolut 如何借助 OpenAI 模型和 Codex 将编码时间缩短 30–60%，扩展金融犯罪调查，并在不牺牲安全的情况下创新。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "9fe6d2ae73e55f52b8078f1806f466588569fb6faa3605540c1891f86e100648": {
+    "title": "我们的第一阶段嵌入式评估",
+    "summary": "OpenAI 与 Apollo Research、METR、Transluce 和 Goodfire 启动嵌入式评估，独立评估模型对齐、防护措施和监控系统。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "21e886491b30cfff0403f0b9b226dc169269e7194d3a973fb9f92f6fcc6f75b9": {
+    "title": "ChatGPT for Healthcare 推动护理发展的更多方式",
+    "summary": "推出计算机使用代理、改进的临床回答和新的医疗插件，可跨医疗软件完成实际工作。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "21b4758ab52123ac78ffa3dbca8705003ed9e3a44cc34d1840f5a51cf6e091d0": {
+    "title": "为医疗团队推进计算机使用代理",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "00a064e6720eae62fd0b261292c3991b7afabb6edb219f3ad08f3297d75edd6d": {
+    "title": "Gemini 应用现已支持低内存 Android 设备",
+    "summary": "Google Gemini 应用现已支持低内存 Android 设备，可在手机上使用 Gemini Live 和自定义图像创建，立即下载。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "b451aff394adbb427d3a202a80e74c0e34010e923f753539bb1f7c379790136d": {
+    "title": "让 Gemini 为你工作",
+    "summary": "用户界面显示提示“我能为你完成什么？”以及包含占位文本“描述一项任务”的输入框。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "dfc32ad6652396f06f7a93754dcf29cd4bd7a9e5681781a2743267824b56ee87": {
+    "title": "Ask Maps 新功能助力假日出行与准备",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "95da0fde7d56c751139e0cc7dfc6322f755c734e8b60661e4e9abc5c82ecbba0": {
+    "title": "推出 Gemini 4 Neon",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "cac57b5217ba2caa29c847df5f685476e5b042501a45158c9c1b997004f38006": {
+    "title": "Genie 4 现已可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "fc48b1e83d4da6022b7d7ddf7c090755602aad4f91d247945ea98b7e8d9d57b5": {
+    "title": "使用 GitHub CLI 等待拉取请求事件",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "8e2ce054ff040c2dce2322d745baf5b918636212a180753c51cd09ba8d310f77": {
+    "title": "将 Supabase、Box、Calendly 等连接到 Copilot",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "362ee7bc4f1920475e98c490549b28915aac62115a628231eedd7bc94bd171a2": {
+    "title": "GitHub Copilot 中的 Gemini 4 Neon",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "6a03f71e3304b4d5c7ae3caa2f42e3da6c870a4dcd5f187b8e725a5da50b9167": {
+    "title": "GitHub Team 自动运行安全风险评估",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "6e93a4cc09914f56e3195dbcc44b7565cd5d4d1c6f98f76cb5cabab131cb87b4": {
+    "title": "为团队定制 GitHub Copilot",
+    "summary": "现在可以共享团队依赖的 GitHub Copilot 插件，无需每位成员重复相同设置。团队自定义功能已面向组织团队正式可用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "57e7781a892d4960f0ccc24d153c11fdc00b6da6ddc3d907f20185cd106c606d": {
+    "title": "OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 现已可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "75073ab854943bd97c37b91515e3f3e8f4b2055d9f766ef287cb48683220af60": {
+    "title": "GitHub Copilot Fusion 更新：更多可用性、基准测试和模型",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "c381f1f20c433e7d39838b0633094f9f361b65bdafaddad604154fa86a9efd60": {
+    "title": "GitHub Copilot 应用、Microsoft Ignite 发布",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "6beb5088ff95eeeac7d65f04b41e3f84fac1be473fab81b43ad5b7b1dfcca348": {
+    "title": "Copilot 代码审查：自适应力度、密钥检测等",
+    "summary": "GitHub Copilot 代码审查现在能更早发现更多问题，且更省力。自适应功能按每个拉取请求匹配审查深度，常规变更快速通过。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "467e19c06d56952c4a19827b7ad8f6df60041457e8f4581c7c16aa3c506f331b": {
+    "title": "GitHub Copilot 中的 MAI Code 2 和 MAI Code 2 Flash",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "453bf04922152159bc4747bcd403c23c4dbcced24189d6bbf8849480fd547c4a": {
+    "title": "JetBrains 中的 GitHub Copilot、Ignite 发布",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "4cc1e304d76813ff3924e3fd4b341855da61e22a8b91760f2ca2da57915d8d6d": {
+    "title": "通过 Microsoft Agent 365 监控 GitHub Copilot 活动",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "a9ef6dbadc6b0013c70d2fb087034f16b4ba50286d8548f32b959c332c58a242": {
+    "title": "NVIDIA RTX Spark 紧凑型台式机现已上市",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "49e988fe944963bc5d3565b3616c13002c9532d7965800a4b85497cc35326940": {
+    "title": "Ian Buck 在 SC26 开启 NVIDIA 一周，科学进入智能体时代",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "0f13e34240505e908ad0305d87f46c992d0056f33cc83de1763ba7112a8916ec": {
+    "title": "NVIDIA DGX Spark 开发者套件将桌面变为超级计算实验室",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "4c9c656647cd3a23c71c8cf69a6d540fe411f034de40f0d986324363aca10ea8": {
+    "title": "全球最先进 AI 基础设施供应链如何创造未来",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "fc3a56c14a550ef5b6bcf5f1060dcdd135483ef6677857836c31c0f6b128cef3": {
+    "title": "Lambda 借助 NVIDIA Photonics 提升 AI 工厂韧性与效率",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "c046784cf46697f9446f6d5a1c8a43febba4ebd1f38213a9ad93a09d384100be": {
+    "title": "NVIDIA 扩展 Slurm，将量子计算引入超级计算",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "b696bf684c37a1c04a6f8dc05e27ff13df04493bdd424050e2e3d660c773d23d": {
+    "title": "NVIDIA 横扫 MLPerf 训练和端点测试，Vera Rubin 首秀领先",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "970d377277e32883700dc2214d345528605d5a3dd73a73751949cd26e4a0103a": {
+    "title": "NVIDIA CUDA-X 库为智能体提供加速科学发现的工具",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "1d9f84a1774659ade8b8e71de14442481af9a25d3e5add6725a94dc85852c372": {
+    "title": "CUDA 二十周年：该平台如何改变科学计算",
+    "summary": "本周在 SC26 上，NVIDIA 纪念 CUDA 二十周年，致敬帮助 GPU 计算成为现代科学与 AI 基础的研究人员、开发者和工程师。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "9332b18c5744f2a0ae4c6613a20c45dca22d1b5bb99aa596b01a7aa9491e3566": {
+    "title": "NVIDIA 发布 Rubin HPC：面向科学、工程与分析智能体加速的新 GPU",
+    "summary": "今日在 SC26 上发布，NVIDIA Rubin HPC 是 NVIDIA Vera Rubin 平台的新 GPU，旨在加速科学与工程仿真及数据分析工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "170626d554c3e48485732d12075f5f1906f36c9a2a4540fd4d960b0f70434280": {
+    "title": "Ignite 2026：构建前沿生态",
+    "summary": "微软董事长兼 CEO Satya Nadella 今早在旧金山 Ignite 发表开幕主题演讲。以下为其讲话的编辑版本。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "897e27c9acfefedcaae59b900b0410a7f68e1fb43f0ab7c8280becc485873d71": {
+    "title": "Microsoft 与 Oracle 将智能体 AI 引入企业工作流",
+    "summary": "我们的新集成让 AI 智能体能够跨 Oracle 关键业务数据进行推理。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "3bbf433ec4eecff638e51c28755410ceb1fae164bedd72e9cbcd1a30e16fcd2e": {
+    "title": "推出 Azure Catalyst 智能体现代化及新 AI 基础设施创新",
+    "summary": "在 Microsoft Ignite 2026 上，我们将展示模型、芯片与云基础设施融合为单一协同设计系统后的可能性。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "09e16fd83a224ad85eda9e22c4d09fab6ec36706aaa38c95d8a5c83e2df0e9f8": {
+    "title": "Microsoft Ignite 2026：专为 AI 打造的 Azure 平台新进展",
+    "summary": "在 Microsoft Ignite 上，我们分享该平台各层的新进展。计算、存储和网络的新能力让您可大规模运行 AI。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "77e62298fd221a2bec912322bef84d08aaac8841f1d7c7177d7a1f6d004a888f": {
+    "title": "Azure Cobalt 200 VM 现已可用，经真实工作负载验证，为智能体时代打造",
+    "summary": "Azure Cobalt 200 VM 为云原生应用、数据库、开发工具和智能体 AI 工作负载带来更高性能与效率。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "776c537f1fb9964d499c3e10bb98fce57769af6bc87675b39cf821df7c68eeb0": {
+    "title": "Microsoft Foundry 引入持续改进功能",
+    "summary": "了解 Microsoft Foundry 的持续改进如何帮助组织随时间评估、优化和改进智能体，同时让团队保持掌控。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "0e87b7a4ca335ef8ac153706caf6c20ccc1055779d0a7fd8ac2a9820719f26bb": {
+    "title": "推出全新 Microsoft IQ：让组织智能在每个智能体中发挥作用",
+    "summary": "今天我们宣布 Microsoft IQ，这一企业上下文管理平台帮助组织构建自己的 IQ。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
   }
 }

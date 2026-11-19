@@ -74,11 +74,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-30T17:02:06Z"
   },
-  "herdrdev/herdr": {
-    "text": "编码智能体所运行的运行时",
-    "source": "deepseek-flash",
-    "at": "2026-11-01T17:09:14Z"
-  },
   "vercel-labs/agent-desktop": {
     "text": "面向 AI 智能体的计算机使用 CLI",
     "source": "deepseek-flash",
@@ -94,38 +89,18 @@
     "source": "deepseek-flash",
     "at": "2026-11-04T18:40:18Z"
   },
-  "NVIDIA/auto-ontology": {
-    "text": "Auto Ontology 是一个 Python 框架，用于在数据之上构建基于图的语义推理层，支持确定性查询生成、更好的上下文检索，并为 LLM 与 agent 工作流提供更可解释的 AI。",
-    "source": "deepseek-flash",
-    "at": "2026-11-07T10:21:20Z"
-  },
   "ConardLi/garden-skills": {
     "text": "ConardLi 的开源 Skills 集合，包含网页设计、知识检索、图像生成等。",
     "source": "deepseek-flash",
     "at": "2026-11-07T10:21:20Z"
-  },
-  "orailnoor/cross-platform-llm-client": {
-    "text": "统一的跨平台 AI 客户端，支持在标准云 API 与设备端离线运行自定义及无审查语言模型之间无缝切换。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T04:11:55Z"
   },
   "Anil-matcha/Open-Generative-AI": {
     "text": "无审查的开源 AI 视频平台替代方案，免费 AI 图像与视频生成工作室，支持 600+ 模型（Flux、Midjourney、Kling、Sora、Veo），无内容过滤，可自托管，MIT 许可。",
     "source": "deepseek-flash",
     "at": "2026-11-10T11:19:31Z"
   },
-  "macro-inc/macro": {
-    "text": "Macro 是团队统一工作空间：邮件、聊天、文档、任务、agent、通话与 CRM，通过 @ 关联并共享 AI 记忆。",
-    "source": "deepseek-flash",
-    "at": "2026-11-10T11:19:31Z"
-  },
   "homeassistant-ai/ha-mcp": {
     "text": "使用 Claude、ChatGPT 等 AI 助手配置和自动化 Home Assistant。",
-    "source": "deepseek-flash",
-    "at": "2026-11-12T11:24:53Z"
-  },
-  "dsx-ai-factory/nvke": {
-    "text": "NVIDIA Kubernetes Engine (NVKE)，裸金属上 GPU Kubernetes 的管理平面。",
     "source": "deepseek-flash",
     "at": "2026-11-12T11:24:53Z"
   },
@@ -169,11 +144,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-14T17:11:03Z"
   },
-  "google-gemini/gemini-cli": {
-    "text": "一个开源 AI 代理，将 Gemini 的能力直接带入你的终端。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T17:11:03Z"
-  },
   "rasbt/LLMs-from-scratch": {
     "text": "从零开始，用 PyTorch 逐步实现类似 ChatGPT 的大语言模型",
     "source": "deepseek-flash",
@@ -181,11 +151,6 @@
   },
   "mvanhorn/last30days-skill": {
     "text": "AI 智能体技能，跨 Reddit、X、YouTube、HN、Polymarket 与网络研究任意话题，并生成有依据的摘要",
-    "source": "deepseek-flash",
-    "at": "2026-11-15T17:47:02Z"
-  },
-  "google/skills": {
-    "text": "面向 Google 产品与技术的 Agent Skills",
     "source": "deepseek-flash",
     "at": "2026-11-15T17:47:02Z"
   },
@@ -208,5 +173,50 @@
     "text": "掌控流程：一个开源 AI 平台，整合知识、模型与渠道——网页、WhatsApp、邮件、Outlook、Nextcloud 和 ownCloud。本地与云端模型并行，每条回答均显示成本。",
     "source": "deepseek-flash",
     "at": "2026-11-16T11:34:02Z"
+  },
+  "dream-num/univer": {
+    "text": "使用 Univer Office SDK 构建你自己的 AI 办公套件。将编辑、计算、协作与文件处理能力集成到产品中，面向人与 AI 智能体。基于可扩展的开源核心。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "ChromeDevTools/chrome-devtools-mcp": {
+    "text": "面向编码智能体的 Chrome DevTools",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "microsoft/BitNet": {
+    "text": "1-bit LLM 官方推理框架",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "MoFeng2223/BrimDeck": {
+    "text": "Windows 11 灵动岛，支持 AI 编码工具配额、用量追踪、音乐控制等。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "runkids/skillshare": {
+    "text": "📚 一条命令将技能、智能体、MCP、插件同步到所有 AI CLI 工具，简化团队共享。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "kagent-dev/kagent": {
+    "text": "云原生智能体 AI | Discord：https://bit.ly/kagentdiscord",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "microsoft/PyRIT": {
+    "text": "微软开源 AI 红队测试工具包。通过自动扫描、自适应多轮攻击和 Web UI 测试生成式 AI 系统。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "NVIDIA-NeMo/Switchyard": {
+    "text": "Switchyard 让 LLM 应用在模型与提供商间路由流量，同时保持 OpenAI 与 Anthropic 原生 API 兼容，支持灵活选型、基准测试与成本性能优化。",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
+  },
+  "TauricResearch/TradingAgents": {
+    "text": "TradingAgents：多智能体 LLM 金融交易框架",
+    "source": "deepseek-flash",
+    "at": "2026-11-19T01:14:48Z"
   }
 }
