@@ -836,13 +836,13 @@
   },
   {
     "kind": "news-source",
-    "objectId": "ernie",
-    "reason": "candidate count dropped below 60%: ernie",
+    "objectId": "qbit",
+    "reason": "network error: URLError",
     "evidence": {
-      "url": "https://ernie.baidu.com/blog/zh"
+      "url": "https://www.qbitai.com/feed"
     },
-    "id": "3aa1685a6e3bf094f4cef52c91284240dbeab9b0c6bd2a7f2872e87413d77bfd",
+    "id": "ba9cea3be0fc4a7345229ca7e4afe726581544e9c513ba325accbb3efc204573",
     "status": "pending",
-    "createdAt": "2026-11-19T01:29:40Z"
+    "createdAt": "2026-11-19T01:34:01Z"
   }
 ]
