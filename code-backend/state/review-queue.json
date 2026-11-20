@@ -777,18 +777,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MewX/light-novel-library_Wenku8_Android",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "[CASUALLY MAINTAINED] 轻小说文库 (Wenku8.com) 安卓版第三方公益App，始于2014年的初版Material Design风格、非盈利、Play Store上安装包最小的轻小说阅读器 (light novel reader)。目前网站的API由于被大量滥用，已更新成我自己架的 Cloudflare Worker API 中继节点，不然的话网站关闭API就全军覆没了。",
-      "sourceUrl": "https://github.com/MewX/light-novel-library_Wenku8_Android"
-    },
-    "id": "8530ec6fce4d6b7b410e02dd3614b1cde402de6575cbfecf41c56c19a9b6dd4a",
-    "status": "pending",
-    "createdAt": "2026-11-19T11:48:39Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Jakeschincariol/instagram-agent-skill",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -798,5 +786,17 @@
     "id": "fbf173dacca9353fb2d80bab4e21261096ea28218f29e2c3dd849b0f246e2348",
     "status": "pending",
     "createdAt": "2026-11-19T11:48:39Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MewX/light-novel-library_Wenku8_Android",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "轻小说文库 (Wenku8.com) 安卓版第三方公益App，始于2014年的初版Material Design风格、非盈利、Play Store上安装包最小的轻小说阅读器 (light novel reader)。目前网站的API由于被大量滥用，已更新成我自己架的 Cloudflare Worker API 中继节点，不然的话网站关闭API就全军覆没了。",
+      "sourceUrl": "https://github.com/MewX/light-novel-library_Wenku8_Android"
+    },
+    "id": "d50e0097a926e2daec758eb65d5e2222883a0931d228869d96b045b9778e40d8",
+    "status": "pending",
+    "createdAt": "2026-11-20T11:48:48Z"
   }
 ]

@@ -47,57 +47,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "0e7f690aa4ff229bd2e8f2756081d691fec5b134a3dc763b1e89b65c9c3becc6": {
-    "title": "用AI加强北约及盟国网络防御",
-    "summary": "OpenAI如何与北约及盟国网络机构合作，帮助可信防御者发现漏洞、测试修复并保护关键系统。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "3047d7657748ea760feb4367a861eff886526fc9a8d7d29ee939532b2c42b6aa": {
-    "title": "推出ChatGPT for Sales",
-    "summary": "探索ChatGPT中新的Sales插件以及30多个新增和扩展的合作伙伴插件，用于研究潜在客户、准备推介、更新CRM并推进交易。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "b43ef08ac3ed4f7af6f4fa4f8f60d0d2c49772fc6e540a21a0c9e441265578ef": {
-    "title": "Astra for Law在法律智能领域领先",
-    "summary": "Astra for Law在涵盖24个法律领域的发布评估中排名第一。所有ChatGPT Enterprise客户现在均可申请访问。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "3b3be741a87f5e2153e626602817efd9dcc9c3fb90f3d3d29d39838acce03d65": {
-    "title": "推出OpenAI for Chile",
-    "summary": "OpenAI与智利政府合作，支持负责任地采用AI、建设公共部门技能，并帮助本地初创企业开发AI应用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "2d7a5d6b20fff3cd431e56c6c45800450e6e12e3351b563ba22db14d6cc86266": {
-    "title": "扩大科学家获取AI的渠道",
-    "summary": "我们正在扩展ChatGPT for Academic Researchers计划，为全球20万名研究人员免费提供前沿模型访问权限。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "dd659f011024f04f24b0b918544913431aa1336cb6fdeb78ce4549a3a5fdd29c": {
-    "title": "以新工具和支持加强打击网络儿童性虐待",
-    "summary": "新工具、实用指南和合作伙伴关系将有助于预防、检测和应对网络儿童性剥削与性虐待。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "d91fd06de7b8771ee8ad78bbe6c6a0f8795962915436321f9652c6b42b553b9c": {
-    "title": "前沿科学：科学家如何使用 ChatGPT",
-    "summary": "探索 1,800 多名科学家如何在研究中使用 ChatGPT，了解日常流程、生产力反馈与发现期望。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "b451aff394adbb427d3a202a80e74c0e34010e923f753539bb1f7c379790136d": {
     "title": "让 Gemini 为你工作",
     "summary": "用户界面显示提示“我能为你完成什么？”以及包含占位文本“描述一项任务”的输入框。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "dfc32ad6652396f06f7a93754dcf29cd4bd7a9e5681781a2743267824b56ee87": {
-    "title": "Ask Maps 新功能助力假日出行与准备",
-    "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
@@ -167,54 +119,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "0f13e34240505e908ad0305d87f46c992d0056f33cc83de1763ba7112a8916ec": {
-    "title": "NVIDIA DGX Spark 开发者套件将桌面变为超级计算实验室",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "4c9c656647cd3a23c71c8cf69a6d540fe411f034de40f0d986324363aca10ea8": {
-    "title": "全球最先进 AI 基础设施供应链如何创造未来",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "fc3a56c14a550ef5b6bcf5f1060dcdd135483ef6677857836c31c0f6b128cef3": {
-    "title": "Lambda 借助 NVIDIA Photonics 提升 AI 工厂韧性与效率",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "c046784cf46697f9446f6d5a1c8a43febba4ebd1f38213a9ad93a09d384100be": {
-    "title": "NVIDIA 扩展 Slurm，将量子计算引入超级计算",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "b696bf684c37a1c04a6f8dc05e27ff13df04493bdd424050e2e3d660c773d23d": {
-    "title": "NVIDIA 横扫 MLPerf 训练和端点测试，Vera Rubin 首秀领先",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "970d377277e32883700dc2214d345528605d5a3dd73a73751949cd26e4a0103a": {
-    "title": "NVIDIA CUDA-X 库为智能体提供加速科学发现的工具",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "1d9f84a1774659ade8b8e71de14442481af9a25d3e5add6725a94dc85852c372": {
-    "title": "CUDA 二十周年：该平台如何改变科学计算",
-    "summary": "本周在 SC26 上，NVIDIA 纪念 CUDA 二十周年，致敬帮助 GPU 计算成为现代科学与 AI 基础的研究人员、开发者和工程师。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "9332b18c5744f2a0ae4c6613a20c45dca22d1b5bb99aa596b01a7aa9491e3566": {
-    "title": "NVIDIA 发布 Rubin HPC：面向科学、工程与分析智能体加速的新 GPU",
-    "summary": "今日在 SC26 上发布，NVIDIA Rubin HPC 是 NVIDIA Vera Rubin 平台的新 GPU，旨在加速科学与工程仿真及数据分析工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "170626d554c3e48485732d12075f5f1906f36c9a2a4540fd4d960b0f70434280": {
     "title": "Ignite 2026：构建前沿生态",
     "summary": "微软董事长兼 CEO Satya Nadella 今早在旧金山 Ignite 发表开幕主题演讲。以下为其讲话的编辑版本。",
@@ -262,5 +166,95 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-19T11:48:39Z"
+  },
+  "9342dbf934e428aa00c16520441f258a949ccd62bcb28471deb475c04ce3c227": {
+    "title": "OpenAI 的 Performance Factory 如何让 ChatGPT 保持快速",
+    "summary": "了解 OpenAI 如何构建 Performance Factory，这套由 Codex 驱动的工作流系统可发现并修复性能问题，帮助 ChatGPT 保持快速。",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "a890a236270cc5e31862345b7933987a42b139de2dead494b477fbf1189784a9": {
+    "title": "部署 Daybreak Red",
+    "summary": "探索 Daybreak Red 监督式安全调查的参考架构，包括安全控制、设置与监控。",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "17b7a2b39f098895a2208f48f1507c3092e017b4481f6732b70b65df4c04b2b0": {
+    "title": "观看 PR 扫描实际演示",
+    "summary": "观看 PR 扫描演示，了解演示者如何在拉取请求工作流中查看扫描结果。",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "82fe289fe466dcc1d4f71a60b5a7fb88a90a6df5cf719a456eac5a721e5f3552": {
+    "title": "探索 Codex Security Plugin",
+    "summary": "观看 Codex Security Plugin 演示，了解从入门到查看录制结果展示的完整工作流。",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "da30645137037f0052cd70ab3b09df0b31abc0303db9422eaa375a651d60b969": {
+    "title": "Daybreak Blue 入门",
+    "summary": "观看 Daybreak Blue 入门演示，深入了解设置体验及如何开始使用。",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "1b3aafed7dd5d45c68229b6f07d27c707ce09e4c063b40f89c7d138fa17a007b": {
+    "title": "Gemini API 推出工具检索功能",
+    "summary": "Gemini 在太空背景上闪耀",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "d47c74f9a7ce43a8bb22baede17c66c2b938b6068e54a1ac73c10b685033f5b9": {
+    "title": "Walter Isaacson 谈 AI 时代的好奇心与创造力",
+    "summary": "Walter Isaacson 做客 Google，探讨历史上最伟大的创新者如何启发 AI 时代的创造力与人类判断力。观看本期节目。",
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "64445025bf22449a8728f4741aa375079c4cf715ec27662da7201099643970a6": {
+    "title": "公开预览版拉取请求概览页改进",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "2ae461abd4953a2758229deccc255cf61be9b52f0f23e8efce1f861a8b466f45": {
+    "title": "Azure DevOps 企业实时迁移正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "d406dafb3267acf3e15e7a68d263fec4624c0bdeac7d6dd8f63292aa9b438cd5": {
+    "title": "Red Hat Enterprise Linux 运行器镜像正式可用",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "36bc207225e9e41f8c82581f6e01576f6e32dbb6b45ffe2dc91236e139ab5fda": {
+    "title": "NVIDIA 与 Microsoft 将加速计算从 Azure 扩展至 Windows PC",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
+    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将创意转化为仿真",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "81bcb470e238c85caf4cf0fd944bf121dda18ad9b1b1955ff931d76e4db2a2d5": {
+    "title": "节日流媒体与优惠：GeForce NOW 迎来黑色星期五促销",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "808db1b734d5068f5ca3001b0ca9adc8706a87209ee0c3206f94649ac96c6079": {
+    "title": "Tencent Hy4 已在 Together AI 上线",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
+  },
+  "986211426f5e80f6e8c1306066849137298e4b7c00a556bde3d400ad0115f324": {
+    "title": "推出 Together Storage Accelerator：为 GPU 集群提供快速、免费的数据缓存",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-20T11:48:48Z"
   }
 }
