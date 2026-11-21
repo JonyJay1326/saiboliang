@@ -1,6 +1,63 @@
 {
-  "dataUpdatedAt": "2026-11-20T11:48:48Z",
+  "dataUpdatedAt": "2026-11-21T11:15:17Z",
   "items": [
+    {
+      "title": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent",
+      "sourceUrl": "https://www.qbitai.com/2026/11/511570.html",
+      "publishedAt": "2026-11-21T06:32:31Z",
+      "source": "量子位",
+      "summary": "专为本地部署而生",
+      "id": "95b30ca62b42d4ff5c103a1485275f42fc5e5664a26aba7080d86400abeb9b9b",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://www.qbitai.com/2026/11/511570.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-21T11:15:17Z",
+      "featured": true
+    },
+    {
+      "title": "27B！穆拉蒂开源“循环脑”模型：笔记本跑Agent起飞！",
+      "sourceUrl": "https://zhidx.com/p/613053.html",
+      "publishedAt": "2026-11-21T01:56:30Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 李水青 编辑 | 心缘 智东西11月21日消息，今日，由前OpenAI CTO 米拉·穆拉蒂（Mira Murati） 联合创办的AI独角兽T",
+      "id": "2befc7874293019d15b93517143bc47e2204a68cb15fda97181e4dd6c5487f3b",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/613053.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-21T11:15:17Z",
+      "featured": true
+    },
+    {
+      "title": "腾讯姚顺雨团队深夜回应一切：算力不足、模型刷榜、雷霆大思考",
+      "sourceUrl": "https://zhidx.com/p/612973.html",
+      "publishedAt": "2026-11-21T00:30:07Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 毕伟豪 编辑｜李水青 智东西11月21日报道，今天凌晨， 腾讯混元团队 在社交媒体平台Reddit举行了一场AMA活动",
+      "id": "aa6706813bcc92f20ea93fccc6100732ebc615b3de3754d9d50714e063fd8f39",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/612973.html",
+      "category": "industry",
+      "eventType": "deep-analysis",
+      "addedAt": "2026-11-21T11:15:17Z",
+      "featured": true
+    },
     {
       "title": "10万+Star开源团队又出手！一个插件让DeepSeek Harness学会做视频",
       "sourceUrl": "https://zhidx.com/p/612799.html",
@@ -37,6 +94,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-20T11:48:48Z",
+      "featured": true
+    },
+    {
+      "title": "前DeepSeek研究员，开源本地版Muse，实现token自由",
+      "sourceUrl": "https://zhidx.com/p/612775.html",
+      "publishedAt": "2026-11-20T09:42:40Z",
+      "source": "智东西",
+      "summary": "智东西 作者 | 黄菲 编辑 | 江宇 智东西11月20日报道，昨夜，前DeepSeek研究员",
+      "id": "11fe301a3b8c3320401c459d3c5fe33abc2ea16ddc9a8faecd876e5698952427",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/612775.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-21T11:15:17Z",
       "featured": true
     },
     {
@@ -116,6 +192,25 @@
       "featured": null
     },
     {
+      "title": "苹果急了！Apple Intelligence将迎Agent升级，最快明年推出",
+      "sourceUrl": "https://zhidx.com/p/612703.html",
+      "publishedAt": "2026-11-20T05:21:02Z",
+      "source": "智东西",
+      "summary": "智东西 编译 | 黄菲 编辑 | 江宇 智东西11月20日消息，今日，据彭博社报道，苹果正自研Agent，并于11月17日至19日陆续发布3个相关招聘岗位",
+      "id": "78aaf7a0bb0314074f90fe9965ad1e21cbd271f226d38b4b1381697ba852e61f",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": null,
+      "originalUrl": null,
+      "originalVerifiedAt": null,
+      "url": "https://zhidx.com/p/612703.html",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-21T11:15:17Z",
+      "featured": true
+    },
+    {
       "title": "亏千亿也要敲钟：Anthropic 创纪录 IPO 背后的算力账单",
       "sourceUrl": "https://www.aibase.com/zh/news/32431",
       "source": "AIBase",
@@ -135,6 +230,25 @@
       "featured": true
     },
     {
+      "title": "Qwen3 TTS 现已在 Together AI 上线",
+      "sourceUrl": "https://www.together.ai/blog/qwen3-tts",
+      "publishedAt": "2026-11-20T00:00:00Z",
+      "source": "Together AI",
+      "summary": "Qwen3 TTS 现已在 Together AI 上线，可在产品中保持同一音色，用自然语言指令调整语气，并支持 10 种语言，首段音频延迟低至 97ms。",
+      "id": "decd1ad45e2989f753456991f729088c0fed29047c39468c14c9d0b223fbb112",
+      "originalTitle": "Qwen3 TTS is now available on Together AI",
+      "translatedAt": "2026-11-21T11:15:17Z",
+      "lang": "en",
+      "originalSource": "Together AI",
+      "originalUrl": "https://www.together.ai/blog/qwen3-tts",
+      "originalVerifiedAt": "2026-11-21T11:15:17Z",
+      "url": "https://www.together.ai/blog/qwen3-tts",
+      "category": "model",
+      "eventType": "model-release",
+      "addedAt": "2026-11-21T11:15:17Z",
+      "featured": true
+    },
+    {
       "title": "Gemini API 推出工具检索功能",
       "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
       "publishedAt": "2026-11-19T18:00:00Z",
@@ -151,6 +265,25 @@
       "category": "tool",
       "eventType": "major-update",
       "addedAt": "2026-11-20T11:48:48Z",
+      "featured": true
+    },
+    {
+      "title": "阿里发布 qwen3.7-flash",
+      "sourceUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-11-20&model=qwen3.7-flash",
+      "publishedAt": "2026-11-19T16:00:00Z",
+      "source": "阿里云百炼",
+      "summary": "qwen3.7-flash 在美国（弗吉尼亚）地域上线美国部署模式，支持文本生成、深度思考、视觉理解、Function Calling、结构化输出",
+      "id": "0734c9934f48863e70521242f16c5dd42c2be9b398ee3339894beb91f5dbfad2",
+      "originalTitle": null,
+      "translatedAt": null,
+      "lang": "zh",
+      "originalSource": "阿里云百炼",
+      "originalUrl": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-11-20&model=qwen3.7-flash",
+      "originalVerifiedAt": "2026-11-21T11:15:17Z",
+      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models?date=2026-11-20&model=qwen3.7-flash",
+      "category": "tool",
+      "eventType": "major-update",
+      "addedAt": "2026-11-21T11:15:17Z",
       "featured": true
     },
     {
@@ -8552,6 +8685,6 @@
       "featured": true
     }
   ],
-  "version": "2026-11-20T11:48:48Z",
-  "generatedAt": "2026-11-20T11:48:48Z"
+  "version": "2026-11-21T11:15:17Z",
+  "generatedAt": "2026-11-21T11:15:17Z"
 }

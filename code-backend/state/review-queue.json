@@ -798,5 +798,55 @@
     "id": "d50e0097a926e2daec758eb65d5e2222883a0931d228869d96b045b9778e40d8",
     "status": "pending",
     "createdAt": "2026-11-20T11:48:48Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Devolutions/UniGetUI",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
+      "sourceUrl": "https://github.com/Devolutions/UniGetUI"
+    },
+    "id": "522f84650360b38294ddff9498567f21c2e2ab877e087328b6367d3ff3d40095",
+    "status": "pending",
+    "createdAt": "2026-11-21T11:15:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PowerShell/PowerShell",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PowerShell for every system!",
+      "sourceUrl": "https://github.com/PowerShell/PowerShell"
+    },
+    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
+    "status": "pending",
+    "createdAt": "2026-11-21T11:15:17Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hefengxian/my-ielts",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "雅思词汇真经、雅思语法、听力 179、阅读 538 同义替换等。Everything during preparing for my IELTS exam.",
+      "sourceUrl": "https://github.com/hefengxian/my-ielts"
+    },
+    "id": "2147472fa9378bcbb313ec3b4c6705564c14cce5c641dbbffa6315fc59216572",
+    "status": "pending",
+    "createdAt": "2026-11-21T11:15:17Z"
+  },
+  {
+    "kind": "news-summary",
+    "objectId": "280704092aa0b15a98e209af6e4dd0a83f2fb2c71d02b57fd005948ae0cb2cea",
+    "reason": "summary failed: summary produced no usable Chinese text",
+    "evidence": {
+      "ids": [
+        "95dedf578de78f3ec264f66e37a7c309d1f2cf3d8987fe8b4de9182187d1ff7b",
+        "a8b8c31de898145e14c82e5a132c6ade438a779372caca6da84483874bea0325"
+      ]
+    },
+    "id": "d9fea2f80c518c3c546369be04e3589302e248104baf4180caa6cd0a5db289fe",
+    "status": "pending",
+    "createdAt": "2026-11-21T11:15:17Z"
   }
 ]

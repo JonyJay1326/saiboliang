@@ -5,54 +5,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "61001433cd15e382e460f6117e4a6a160640bf4342e40deb5d2647f238f7d9a1": {
-    "title": "Muse现已在澳大利亚上线：全球首个面向所有人打造的个人AI智能体",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "184d931227f2504de1a33bebb5615518a5072d45e1bfb93a37850e8332740e3a": {
-    "title": "无声的共识",
-    "summary": "OpenAI战略未来负责人Dean Ball探讨更强大的AI可能如何重塑社会，以及人们如何保持对其机构的控制。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "58da586369f33999eb920dc2411502d48d9dc9ca37a4ab1a788d83ffd176938a": {
-    "title": "研究加速：崎岖的前沿",
-    "summary": "OpenAI衡量编程智能体如何加速AI研究、其表现仍在哪些方面不均衡，以及这对递归自我改进意味着什么。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "67952d9a918d2536a7bf3b37b6c05ec5dc7c7c22fdf68db178458bb74b4d4f2d": {
-    "title": "深入Codex沙盒",
-    "summary": "了解Codex如何在你的机器上运行命令，同时在macOS、Linux和Windows上执行你控制的文件系统和网络限制。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "99be0c0a7e074380d1a5d6cdb0953a68d68217eb3d8f50443a74e9d288a8cea0": {
-    "title": "管理前沿AI风险：从训练到部署",
-    "summary": "OpenAI解释其如何通过模型对齐、沙盒、阻断式防护措施和监控，从训练到部署管理前沿AI风险。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "68ddb817fe4001c0fc7b71404e8ed33269a5f57651ec2110d7ae5f13ebb157e7": {
-    "title": "用OpenAI模型推进芯片设计",
-    "summary": "OpenAI模型优化了用于Jalapeño芯片的电路并改进了RISC‑V核心设计，展示了GPT‑6 Astra在AI辅助芯片设计方面的进展。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "8f6af8c44a4a1bfb5de31585ff7d049da9f0b0c7303ae5eb79fd652e216c50e9": {
-    "title": "推出GPT-6.2 Astra和Sol",
-    "summary": "推出GPT‑6.2 Astra和Sol，在ChatGPT Work、Codex和API中提供更好的专业输出、编程、计算机使用能力，并以更低成本实现更高效率。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "b451aff394adbb427d3a202a80e74c0e34010e923f753539bb1f7c379790136d": {
-    "title": "让 Gemini 为你工作",
-    "summary": "用户界面显示提示“我能为你完成什么？”以及包含占位文本“描述一项任务”的输入框。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "cac57b5217ba2caa29c847df5f685476e5b042501a45158c9c1b997004f38006": {
     "title": "Genie 4 现已可用",
     "summary": null,
@@ -65,99 +17,9 @@
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
-  "6a03f71e3304b4d5c7ae3caa2f42e3da6c870a4dcd5f187b8e725a5da50b9167": {
-    "title": "GitHub Team 自动运行安全风险评估",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "75073ab854943bd97c37b91515e3f3e8f4b2055d9f766ef287cb48683220af60": {
-    "title": "GitHub Copilot Fusion 更新：更多可用性、基准测试和模型",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "c381f1f20c433e7d39838b0633094f9f361b65bdafaddad604154fa86a9efd60": {
-    "title": "GitHub Copilot 应用、Microsoft Ignite 发布",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "6beb5088ff95eeeac7d65f04b41e3f84fac1be473fab81b43ad5b7b1dfcca348": {
-    "title": "Copilot 代码审查：自适应力度、密钥检测等",
-    "summary": "GitHub Copilot 代码审查现在能更早发现更多问题，且更省力。自适应功能按每个拉取请求匹配审查深度，常规变更快速通过。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "467e19c06d56952c4a19827b7ad8f6df60041457e8f4581c7c16aa3c506f331b": {
-    "title": "GitHub Copilot 中的 MAI Code 2 和 MAI Code 2 Flash",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "453bf04922152159bc4747bcd403c23c4dbcced24189d6bbf8849480fd547c4a": {
-    "title": "JetBrains 中的 GitHub Copilot、Ignite 发布",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "4cc1e304d76813ff3924e3fd4b341855da61e22a8b91760f2ca2da57915d8d6d": {
-    "title": "通过 Microsoft Agent 365 监控 GitHub Copilot 活动",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
   "a9ef6dbadc6b0013c70d2fb087034f16b4ba50286d8548f32b959c332c58a242": {
     "title": "NVIDIA RTX Spark 紧凑型台式机现已上市",
     "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "49e988fe944963bc5d3565b3616c13002c9532d7965800a4b85497cc35326940": {
-    "title": "Ian Buck 在 SC26 开启 NVIDIA 一周，科学进入智能体时代",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "170626d554c3e48485732d12075f5f1906f36c9a2a4540fd4d960b0f70434280": {
-    "title": "Ignite 2026：构建前沿生态",
-    "summary": "微软董事长兼 CEO Satya Nadella 今早在旧金山 Ignite 发表开幕主题演讲。以下为其讲话的编辑版本。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "897e27c9acfefedcaae59b900b0410a7f68e1fb43f0ab7c8280becc485873d71": {
-    "title": "Microsoft 与 Oracle 将智能体 AI 引入企业工作流",
-    "summary": "我们的新集成让 AI 智能体能够跨 Oracle 关键业务数据进行推理。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "3bbf433ec4eecff638e51c28755410ceb1fae164bedd72e9cbcd1a30e16fcd2e": {
-    "title": "推出 Azure Catalyst 智能体现代化及新 AI 基础设施创新",
-    "summary": "在 Microsoft Ignite 2026 上，我们将展示模型、芯片与云基础设施融合为单一协同设计系统后的可能性。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "09e16fd83a224ad85eda9e22c4d09fab6ec36706aaa38c95d8a5c83e2df0e9f8": {
-    "title": "Microsoft Ignite 2026：专为 AI 打造的 Azure 平台新进展",
-    "summary": "在 Microsoft Ignite 上，我们分享该平台各层的新进展。计算、存储和网络的新能力让您可大规模运行 AI。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "77e62298fd221a2bec912322bef84d08aaac8841f1d7c7177d7a1f6d004a888f": {
-    "title": "Azure Cobalt 200 VM 现已可用，经真实工作负载验证，为智能体时代打造",
-    "summary": "Azure Cobalt 200 VM 为云原生应用、数据库、开发工具和智能体 AI 工作负载带来更高性能与效率。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "776c537f1fb9964d499c3e10bb98fce57769af6bc87675b39cf821df7c68eeb0": {
-    "title": "Microsoft Foundry 引入持续改进功能",
-    "summary": "了解 Microsoft Foundry 的持续改进如何帮助组织随时间评估、优化和改进智能体，同时让团队保持掌控。",
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "0e87b7a4ca335ef8ac153706caf6c20ccc1055779d0a7fd8ac2a9820719f26bb": {
-    "title": "推出全新 Microsoft IQ：让组织智能在每个智能体中发挥作用",
-    "summary": "今天我们宣布 Microsoft IQ，这一企业上下文管理平台帮助组织构建自己的 IQ。",
     "source": "deepseek-flash",
     "at": "2026-11-19T01:14:48Z"
   },
@@ -194,12 +56,6 @@
   "da30645137037f0052cd70ab3b09df0b31abc0303db9422eaa375a651d60b969": {
     "title": "Daybreak Blue 入门",
     "summary": "观看 Daybreak Blue 入门演示，深入了解设置体验及如何开始使用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "1b3aafed7dd5d45c68229b6f07d27c707ce09e4c063b40f89c7d138fa17a007b": {
-    "title": "Gemini API 推出工具检索功能",
-    "summary": "Gemini 在太空背景上闪耀",
     "source": "deepseek-flash",
     "at": "2026-11-20T11:48:48Z"
   },
@@ -256,5 +112,59 @@
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-20T11:48:48Z"
+  },
+  "ec9dbe5837a6c091c1764ba2715392d6404fa82e7b391cca5dd9dece3d52a9c5": {
+    "title": "携手推进科学：Open Source AI For Science Summit 亮点回顾",
+    "summary": "我们汇聚了来自高校、医院和产业界的研究人员，举办 Open Source AI for Science Summit，围绕利用开源 AI 加速科学发现展开。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "7ad44f990f0c53ef2e2a537716dcd0f4d19ea5c4fbcd3c1cf3877b1b8eae8965": {
+    "title": "对抗对抗性蒸馏",
+    "summary": "OpenAI 的对抗性蒸馏分层方法结合模型训练、防护措施、检测与执法，防范能力提取。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "8145fefb47ff1ca9fa5560e62b69bf54a222274ffe6f44de71f6b3dfaaa8f955": {
+    "title": "Hebbia 借助 GPT-6 Astra 提升金融研究",
+    "summary": "Hebbia 测试 GPT-6 Astra 用于金融研究，预发布评估发现来源覆盖、引用相关性和呈现质量均有提升。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "c1a2af93db54bfcf7c217cb74db83cfc0f90565b5c1b91d5871ab9ee0c953910": {
+    "title": "AI 能帮助科学家识别有前景的药物候选物吗？",
+    "summary": "MedChemBench 评估 AI 模型在早期药物发现中解读分子结构、基于实验证据推理和选择化合物的能力。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "33cca8df65eb7f9e014aa2670881a600834d336f30b18ceb6c5d472f1553e7d4": {
+    "title": "安全公告权限现已正式可用",
+    "summary": "组织所有者现可通过自定义仓库角色，让成员处理仓库安全公告，包括私密漏洞报告，无需授予仓库管理员权限。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "53f1b5f5135ebb39ffc67caaf0ae0a53a62cf4a01d73b7104e3659b8bc6fad4a": {
+    "title": "GitHub Enterprise Server 3.23 候选发布版",
+    "summary": "GitHub Enterprise Server（GHES）3.23 现已可用，并在平台上引入多项新能力，以下是该版本的部分亮点。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "2e6fd43d58c04dd96351a5f1330e4b5f5f3df19da5ad6e9f1245b0f886c45324": {
+    "title": "将常用仓库固定到仪表板",
+    "summary": "通过新的“常用仓库”区域选择哪些仓库显示在仪表板上；若未启用新版仪表板体验，热门仓库保持不变。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "42f9031dc6343b9b8d1aaaac6c0e402a5d971f97b5b7ce78e050cc02a8f50417": {
+    "title": "GitHub Desktop 现支持同一主机多账号",
+    "summary": "GitHub Desktop 现允许在同一主机上登录多个账号，包括 GitHub.com、GitHub Enterprise Server 和 GHE.com。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
+  },
+  "decd1ad45e2989f753456991f729088c0fed29047c39468c14c9d0b223fbb112": {
+    "title": "Qwen3 TTS 现已在 Together AI 上线",
+    "summary": "Qwen3 TTS 现已在 Together AI 上线，可在产品中保持同一音色，用自然语言指令调整语气，并支持 10 种语言，首段音频延迟低至 97ms。",
+    "source": "deepseek-flash",
+    "at": "2026-11-21T11:15:17Z"
   }
 }
