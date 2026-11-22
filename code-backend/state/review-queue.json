@@ -322,18 +322,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "builtbybel/FluentCleaner",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "FluentCleaner is the transparent, community-powered CCleaner alternative for Windows.",
-      "sourceUrl": "https://github.com/builtbybel/FluentCleaner"
-    },
-    "id": "a5adf46b0a5117dcc9da428a19d05c5cdc15eb8accd412460c94354f0e164ce6",
-    "status": "pending",
-    "createdAt": "2026-11-09T11:42:52Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "sherlock-project/sherlock",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -789,18 +777,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "MewX/light-novel-library_Wenku8_Android",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "轻小说文库 (Wenku8.com) 安卓版第三方公益App，始于2014年的初版Material Design风格、非盈利、Play Store上安装包最小的轻小说阅读器 (light novel reader)。目前网站的API由于被大量滥用，已更新成我自己架的 Cloudflare Worker API 中继节点，不然的话网站关闭API就全军覆没了。",
-      "sourceUrl": "https://github.com/MewX/light-novel-library_Wenku8_Android"
-    },
-    "id": "d50e0097a926e2daec758eb65d5e2222883a0931d228869d96b045b9778e40d8",
-    "status": "pending",
-    "createdAt": "2026-11-20T11:48:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Devolutions/UniGetUI",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -808,18 +784,6 @@
       "sourceUrl": "https://github.com/Devolutions/UniGetUI"
     },
     "id": "522f84650360b38294ddff9498567f21c2e2ab877e087328b6367d3ff3d40095",
-    "status": "pending",
-    "createdAt": "2026-11-21T11:15:17Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "PowerShell/PowerShell",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "PowerShell for every system!",
-      "sourceUrl": "https://github.com/PowerShell/PowerShell"
-    },
-    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
     "status": "pending",
     "createdAt": "2026-11-21T11:15:17Z"
   },
@@ -836,17 +800,14 @@
     "createdAt": "2026-11-21T11:15:17Z"
   },
   {
-    "kind": "news-summary",
-    "objectId": "280704092aa0b15a98e209af6e4dd0a83f2fb2c71d02b57fd005948ae0cb2cea",
-    "reason": "summary failed: summary produced no usable Chinese text",
+    "kind": "news-source",
+    "objectId": "zhipu-news",
+    "reason": "network error: URLError",
     "evidence": {
-      "ids": [
-        "95dedf578de78f3ec264f66e37a7c309d1f2cf3d8987fe8b4de9182187d1ff7b",
-        "a8b8c31de898145e14c82e5a132c6ade438a779372caca6da84483874bea0325"
-      ]
+      "url": "https://www.zhipuai.cn/zh/news"
     },
-    "id": "d9fea2f80c518c3c546369be04e3589302e248104baf4180caa6cd0a5db289fe",
+    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
-    "createdAt": "2026-11-21T11:15:17Z"
+    "createdAt": "2026-11-22T11:34:50Z"
   }
 ]

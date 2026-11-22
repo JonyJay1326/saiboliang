@@ -1,64 +1,4 @@
 {
-  "b0dfaac3cf70b7a94e4fefe5c1d2b3617dca0b385cf1ac857ab345d05a280c24": {
-    "title": "Meta欢迎Loblaw成为Muse首个加拿大零售合作伙伴",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "cac57b5217ba2caa29c847df5f685476e5b042501a45158c9c1b997004f38006": {
-    "title": "Genie 4 现已可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "fc48b1e83d4da6022b7d7ddf7c090755602aad4f91d247945ea98b7e8d9d57b5": {
-    "title": "使用 GitHub CLI 等待拉取请求事件",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "a9ef6dbadc6b0013c70d2fb087034f16b4ba50286d8548f32b959c332c58a242": {
-    "title": "NVIDIA RTX Spark 紧凑型台式机现已上市",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T01:14:48Z"
-  },
-  "495f4e1021898d41baa5adce14254962c21316de5431249f84052c21dfa202f3": {
-    "title": "S3 审计日志流式传输与 OpenID Connect 扩展至 GHE.com",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-19T11:48:39Z"
-  },
-  "9342dbf934e428aa00c16520441f258a949ccd62bcb28471deb475c04ce3c227": {
-    "title": "OpenAI 的 Performance Factory 如何让 ChatGPT 保持快速",
-    "summary": "了解 OpenAI 如何构建 Performance Factory，这套由 Codex 驱动的工作流系统可发现并修复性能问题，帮助 ChatGPT 保持快速。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "a890a236270cc5e31862345b7933987a42b139de2dead494b477fbf1189784a9": {
-    "title": "部署 Daybreak Red",
-    "summary": "探索 Daybreak Red 监督式安全调查的参考架构，包括安全控制、设置与监控。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "17b7a2b39f098895a2208f48f1507c3092e017b4481f6732b70b65df4c04b2b0": {
-    "title": "观看 PR 扫描实际演示",
-    "summary": "观看 PR 扫描演示，了解演示者如何在拉取请求工作流中查看扫描结果。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "82fe289fe466dcc1d4f71a60b5a7fb88a90a6df5cf719a456eac5a721e5f3552": {
-    "title": "探索 Codex Security Plugin",
-    "summary": "观看 Codex Security Plugin 演示，了解从入门到查看录制结果展示的完整工作流。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "da30645137037f0052cd70ab3b09df0b31abc0303db9422eaa375a651d60b969": {
-    "title": "Daybreak Blue 入门",
-    "summary": "观看 Daybreak Blue 入门演示，深入了解设置体验及如何开始使用。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
   "d47c74f9a7ce43a8bb22baede17c66c2b938b6068e54a1ac73c10b685033f5b9": {
     "title": "Walter Isaacson 谈 AI 时代的好奇心与创造力",
     "summary": "Walter Isaacson 做客 Google，探讨历史上最伟大的创新者如何启发 AI 时代的创造力与人类判断力。观看本期节目。",
@@ -97,18 +37,6 @@
   },
   "81bcb470e238c85caf4cf0fd944bf121dda18ad9b1b1955ff931d76e4db2a2d5": {
     "title": "节日流媒体与优惠：GeForce NOW 迎来黑色星期五促销",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "808db1b734d5068f5ca3001b0ca9adc8706a87209ee0c3206f94649ac96c6079": {
-    "title": "Tencent Hy4 已在 Together AI 上线",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "986211426f5e80f6e8c1306066849137298e4b7c00a556bde3d400ad0115f324": {
-    "title": "推出 Together Storage Accelerator：为 GPU 集群提供快速、免费的数据缓存",
     "summary": null,
     "source": "deepseek-flash",
     "at": "2026-11-20T11:48:48Z"
@@ -161,10 +89,22 @@
     "source": "deepseek-flash",
     "at": "2026-11-21T11:15:17Z"
   },
-  "decd1ad45e2989f753456991f729088c0fed29047c39468c14c9d0b223fbb112": {
-    "title": "Qwen3 TTS 现已在 Together AI 上线",
-    "summary": "Qwen3 TTS 现已在 Together AI 上线，可在产品中保持同一音色，用自然语言指令调整语气，并支持 10 种语言，首段音频延迟低至 97ms。",
+  "31dbae397b46d6b33d38b91121c10bd6ade5e600bf0b4a5f8b05408f94dd74f2": {
+    "title": "安全事件：2026年6月和7月请求中的提示词泄露",
+    "summary": "我们正在通知客户一起安全事件，涉及2026年6月和7月提交给Together AI无服务器推理服务的一部分提示词。",
     "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
+    "at": "2026-11-22T11:34:50Z"
+  },
+  "bbdb3bcfb5cf398714e470d5267db9a6fc21389bf91c63796a5806a8d8eddd28": {
+    "title": "Qwen4 Max已在Together AI上线",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-22T11:34:50Z"
+  },
+  "b9d1c9e9c4cc8c6bd95a9938a8e997f40281fbecbb7054cda3a782090cd65cee": {
+    "title": "OpenRouter在推理提供商上的数据处理事件",
+    "summary": "安全研究人员发现部分推理提供商未遵守其数据政策。这些发现未显示OpenRouter遭到任何入侵。以下是我们已采取的措施及后续计划。",
+    "source": "deepseek-flash",
+    "at": "2026-11-22T11:34:50Z"
   }
 }
