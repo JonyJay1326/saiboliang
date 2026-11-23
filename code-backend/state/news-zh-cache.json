@@ -1,67 +1,7 @@
 {
-  "d47c74f9a7ce43a8bb22baede17c66c2b938b6068e54a1ac73c10b685033f5b9": {
-    "title": "Walter Isaacson 谈 AI 时代的好奇心与创造力",
-    "summary": "Walter Isaacson 做客 Google，探讨历史上最伟大的创新者如何启发 AI 时代的创造力与人类判断力。观看本期节目。",
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "64445025bf22449a8728f4741aa375079c4cf715ec27662da7201099643970a6": {
-    "title": "公开预览版拉取请求概览页改进",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "2ae461abd4953a2758229deccc255cf61be9b52f0f23e8efce1f861a8b466f45": {
-    "title": "Azure DevOps 企业实时迁移正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "d406dafb3267acf3e15e7a68d263fec4624c0bdeac7d6dd8f63292aa9b438cd5": {
-    "title": "Red Hat Enterprise Linux 运行器镜像正式可用",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "36bc207225e9e41f8c82581f6e01576f6e32dbb6b45ffe2dc91236e139ab5fda": {
-    "title": "NVIDIA 与 Microsoft 将加速计算从 Azure 扩展至 Windows PC",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "5beef147a7815df463331e9ff574e0580ad763415a5c3aeb5afd9fcac7b3d8d2": {
-    "title": "走进 Omniverse：开发者如何借助前沿 AI 智能体将创意转化为仿真",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
-  "81bcb470e238c85caf4cf0fd944bf121dda18ad9b1b1955ff931d76e4db2a2d5": {
-    "title": "节日流媒体与优惠：GeForce NOW 迎来黑色星期五促销",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-20T11:48:48Z"
-  },
   "ec9dbe5837a6c091c1764ba2715392d6404fa82e7b391cca5dd9dece3d52a9c5": {
     "title": "携手推进科学：Open Source AI For Science Summit 亮点回顾",
     "summary": "我们汇聚了来自高校、医院和产业界的研究人员，举办 Open Source AI for Science Summit，围绕利用开源 AI 加速科学发现展开。",
-    "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
-  },
-  "7ad44f990f0c53ef2e2a537716dcd0f4d19ea5c4fbcd3c1cf3877b1b8eae8965": {
-    "title": "对抗对抗性蒸馏",
-    "summary": "OpenAI 的对抗性蒸馏分层方法结合模型训练、防护措施、检测与执法，防范能力提取。",
-    "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
-  },
-  "8145fefb47ff1ca9fa5560e62b69bf54a222274ffe6f44de71f6b3dfaaa8f955": {
-    "title": "Hebbia 借助 GPT-6 Astra 提升金融研究",
-    "summary": "Hebbia 测试 GPT-6 Astra 用于金融研究，预发布评估发现来源覆盖、引用相关性和呈现质量均有提升。",
-    "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
-  },
-  "c1a2af93db54bfcf7c217cb74db83cfc0f90565b5c1b91d5871ab9ee0c953910": {
-    "title": "AI 能帮助科学家识别有前景的药物候选物吗？",
-    "summary": "MedChemBench 评估 AI 模型在早期药物发现中解读分子结构、基于实验证据推理和选择化合物的能力。",
     "source": "deepseek-flash",
     "at": "2026-11-21T11:15:17Z"
   },
@@ -83,28 +23,16 @@
     "source": "deepseek-flash",
     "at": "2026-11-21T11:15:17Z"
   },
-  "42f9031dc6343b9b8d1aaaac6c0e402a5d971f97b5b7ce78e050cc02a8f50417": {
-    "title": "GitHub Desktop 现支持同一主机多账号",
-    "summary": "GitHub Desktop 现允许在同一主机上登录多个账号，包括 GitHub.com、GitHub Enterprise Server 和 GHE.com。",
-    "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
-  },
   "31dbae397b46d6b33d38b91121c10bd6ade5e600bf0b4a5f8b05408f94dd74f2": {
     "title": "安全事件：2026年6月和7月请求中的提示词泄露",
     "summary": "我们正在通知客户一起安全事件，涉及2026年6月和7月提交给Together AI无服务器推理服务的一部分提示词。",
     "source": "deepseek-flash",
     "at": "2026-11-22T11:34:50Z"
   },
-  "bbdb3bcfb5cf398714e470d5267db9a6fc21389bf91c63796a5806a8d8eddd28": {
-    "title": "Qwen4 Max已在Together AI上线",
-    "summary": null,
+  "1a10f1676d46fc01a909d8eab6d17033b89331ee5fd1f1e04952fc2f6f54665c": {
+    "title": "Perplexity 与智能",
+    "summary": "Perplexity 如何衡量 AI 模型的进展，以及为何它有助于开发者建立评估新兴能力的共同方法。",
     "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
-  },
-  "b9d1c9e9c4cc8c6bd95a9938a8e997f40281fbecbb7054cda3a782090cd65cee": {
-    "title": "OpenRouter在推理提供商上的数据处理事件",
-    "summary": "安全研究人员发现部分推理提供商未遵守其数据政策。这些发现未显示OpenRouter遭到任何入侵。以下是我们已采取的措施及后续计划。",
-    "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
+    "at": "2026-11-23T12:59:28Z"
   }
 }

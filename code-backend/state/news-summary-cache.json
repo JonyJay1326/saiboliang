@@ -1,27 +1,7 @@
 {
-  "75a426b72a8d443b5ca16f057318a7cbce6a49d626dc7f6ee670fd3b6a552ea9": {
-    "summary": "腾讯元宝与KCL基于50个真实群聊、80299条消息构建2395道题，评测Agent记忆",
+  "c6d8726b1a33d16b04d81a05d6633a94113f96bc358242b43b005d7eb579a7d7": {
+    "summary": "开源编码代理 OpenCode 发布 v2.4.0，项目托管于 GitHub 的 anomalyco/opencode。",
     "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
-  },
-  "0aa151cffc73bd79971584681691facd74b6d4dcf3b87d23ba0f24769f246472": {
-    "summary": "MachinePulse AI开源Karpo Decision 31B，专为Agent提供低延迟决策，单卡可运行",
-    "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
-  },
-  "bbdb3bcfb5cf398714e470d5267db9a6fc21389bf91c63796a5806a8d8eddd28": {
-    "summary": "阿里旗舰模型Qwen4 Max上线Together AI，11月22日前享七折优惠",
-    "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
-  },
-  "95dedf578de78f3ec264f66e37a7c309d1f2cf3d8987fe8b4de9182187d1ff7b": {
-    "summary": "OpenAI与Google Cloud合作，前沿模型和Codex工作流将进入Gemini Model Garden",
-    "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
-  },
-  "a8b8c31de898145e14c82e5a132c6ade438a779372caca6da84483874bea0325": {
-    "summary": "Third Moment Research用GPT-6 Astra等构建可连续运行数天并持续改进的agent",
-    "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
+    "at": "2026-11-23T12:59:28Z"
   }
 }

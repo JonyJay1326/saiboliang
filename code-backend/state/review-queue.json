@@ -561,30 +561,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "Billionmail/BillionMail",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr",
-      "sourceUrl": "https://github.com/Billionmail/BillionMail"
-    },
-    "id": "9181146f88eb4122b1d5c1ff2cdcfbb29b25c0e3d2ca3cd3355c71d3aa8baf7b",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "sonicnext-dev/MarathonRecomp",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "An unofficial PC port of the Xbox 360 version of Sonic the Hedgehog (2006) created through the process of static recompilation",
-      "sourceUrl": "https://github.com/sonicnext-dev/MarathonRecomp"
-    },
-    "id": "95c31ee0bfd8c94cf1d4222aacdfd4bce787a2066edd9b4fdf2082233dac2709",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "openai/openai-cookbook",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -809,5 +785,29 @@
     "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
     "status": "pending",
     "createdAt": "2026-11-22T11:34:50Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "ardia-browser/ardia",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A free Chromium browser for the Mac: Arc's sidebar, Dia's polish. Chat on Discord: discord.gg/TdhuXrbcA6",
+      "sourceUrl": "https://github.com/ardia-browser/ardia"
+    },
+    "id": "619e3c1f31e4d60f3c6d3f35afc3c6a2bafb5851288df9f090abf86721fea9af",
+    "status": "pending",
+    "createdAt": "2026-11-23T12:59:28Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "builtbybel/FluentCleaner",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "FluentCleaner is the transparent, community-powered CCleaner alternative for Windows.",
+      "sourceUrl": "https://github.com/builtbybel/FluentCleaner"
+    },
+    "id": "a5adf46b0a5117dcc9da428a19d05c5cdc15eb8accd412460c94354f0e164ce6",
+    "status": "pending",
+    "createdAt": "2026-11-23T12:59:28Z"
   }
 ]
