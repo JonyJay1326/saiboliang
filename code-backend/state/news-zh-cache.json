@@ -1,38 +1,116 @@
 {
-  "ec9dbe5837a6c091c1764ba2715392d6404fa82e7b391cca5dd9dece3d52a9c5": {
-    "title": "携手推进科学：Open Source AI For Science Summit 亮点回顾",
-    "summary": "我们汇聚了来自高校、医院和产业界的研究人员，举办 Open Source AI for Science Summit，围绕利用开源 AI 加速科学发现展开。",
+  "6e178932fb57eaebfbea0d370eeba1de01a35b180e028de6d24ab285b04b1f75": {
+    "title": "研究人员利用Meta开放权重AI模型变革医学",
+    "summary": "我们召集研究人员参加开源AI科学峰会，分享他们如何利用AI加速科学发现。",
     "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
+    "at": "2026-11-25T13:04:57Z"
   },
-  "33cca8df65eb7f9e014aa2670881a600834d336f30b18ceb6c5d472f1553e7d4": {
-    "title": "安全公告权限现已正式可用",
-    "summary": "组织所有者现可通过自定义仓库角色，让成员处理仓库安全公告，包括私密漏洞报告，无需授予仓库管理员权限。",
+  "ac2f786b30f6d45772c42167559dc1dfd027b2c713b30efaaeedeee5585de3fa": {
+    "title": "GPT-6模型展现内在蛋白质设计能力",
+    "summary": "GPT-6模型利用推理和代码设计蛋白质结构与序列。实验室测试发现五个靶标存在结合证据。",
     "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
+    "at": "2026-11-25T13:04:57Z"
   },
-  "53f1b5f5135ebb39ffc67caaf0ae0a53a62cf4a01d73b7104e3659b8bc6fad4a": {
-    "title": "GitHub Enterprise Server 3.23 候选发布版",
-    "summary": "GitHub Enterprise Server（GHES）3.23 现已可用，并在平台上引入多项新能力，以下是该版本的部分亮点。",
+  "7758c04a629331bf96383fb7f46e256dce8c50dc19007956b18ca6b429d0aeb8": {
+    "title": "用Astra搜寻遥远行星",
+    "summary": "两位业余天文学家利用Codex和Astra，在NASA开普勒和TESS太空望远镜的公开数据中寻找潜在系外行星。",
     "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
+    "at": "2026-11-25T13:04:57Z"
   },
-  "2e6fd43d58c04dd96351a5f1330e4b5f5f3df19da5ad6e9f1245b0f886c45324": {
-    "title": "将常用仓库固定到仪表板",
-    "summary": "通过新的“常用仓库”区域选择哪些仓库显示在仪表板上；若未启用新版仪表板体验，热门仓库保持不变。",
+  "7e14b56be674430859075a7f0bce62ec43b4bbfbd056d91f846c666ac01fbfaf": {
+    "title": "Intentful如何用dots腾出更多增长时间",
+    "summary": "Marina Petrova的dot Aria帮助研究网站并撰写提案，同时主动标记消息并解决问题。",
     "source": "deepseek-flash",
-    "at": "2026-11-21T11:15:17Z"
+    "at": "2026-11-25T13:04:57Z"
   },
-  "31dbae397b46d6b33d38b91121c10bd6ade5e600bf0b4a5f8b05408f94dd74f2": {
-    "title": "安全事件：2026年6月和7月请求中的提示词泄露",
-    "summary": "我们正在通知客户一起安全事件，涉及2026年6月和7月提交给Together AI无服务器推理服务的一部分提示词。",
+  "89a905d5eae9fa3ef5a8af6c1b3d6471a3626169568a0058a355675d3a41557f": {
+    "title": "iFood如何在15000个代码库中扩展编码智能体",
+    "summary": null,
     "source": "deepseek-flash",
-    "at": "2026-11-22T11:34:50Z"
+    "at": "2026-11-25T13:04:57Z"
   },
-  "1a10f1676d46fc01a909d8eab6d17033b89331ee5fd1f1e04952fc2f6f54665c": {
-    "title": "Perplexity 与智能",
-    "summary": "Perplexity 如何衡量 AI 模型的进展，以及为何它有助于开发者建立评估新兴能力的共同方法。",
+  "a3c9028eefd69cfd15ff27f48e02556532b9ed7a8c483b2a5ba430ca611a8783": {
+    "title": "Clay借助Codex和ChatGPT助力销售团队取胜",
+    "summary": "ChatGPT和Codex集成帮助Clay用户研究交易并将数据转化为市场策略，由GPT-6模型负责推理。",
     "source": "deepseek-flash",
-    "at": "2026-11-23T12:59:28Z"
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "b0689cf87ab570a441c88635b910134907af4a34b0ffafe4d1af03d0273e75fa": {
+    "title": "OpenAI与Cisco推出Shirudo",
+    "summary": "OpenAI与Cisco推出Shirudo，一个面向Linux的开源运行时，帮助团队在部署补丁期间保护运行中的系统。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "10878202550bbbf922d1872ab8ac87272ec1fb51ba1f61195752ed3c5f3ba59c": {
+    "title": "面向企业内部法务的互联智能",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "1259b534687dd8b3171199ff6c1e4d274ef5d072ac6513620703d8171072ee72": {
+    "title": "Richpanel助企业在30天内自动化50%的支持工作",
+    "summary": "Richpanel利用GPT-6 Astra和GPT-6.1 Sol为AI支持智能体配备工具和流程，并用GPT-6 Luna处理对话。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "0d108e7b71c406494d2fb930f258c1839878f4b82c46262d0d8683c711c16a4c": {
+    "title": "Gemini如何改变Golden State组织与球迷的体验",
+    "summary": "Google Gemini与Golden State合作，为Warriors、Valkyries和Chase Center提供球迷体验和业务运营支持。查看新闻。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "d6fdac3c20f42b84f4304f1951d3cdbdd4c92ee694e8dda3d2554a16c48874d6": {
+    "title": "更贴合你个人需求的Google搜索",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "3ffa5c39e01e3431aafb68b86f47a423cad3918397f531b6569292d3719a69a5": {
+    "title": "用智能体与形式化验证寻找更快的量子算法",
+    "summary": "利用智能体团队和形式化验证改进用于聚变和化学的量子算法。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "7450adb57091544b5a4eaf1c8cac49653734b1c5b6c053bcc61b39df8b03475d": {
+    "title": "GitHub.com上更可预测的通知",
+    "summary": "自2026年12月1日起，我们将在为期一周内迁移GitHub.com上的通知，使订阅更可预测、修正意外行为并支持不断增长的活动规模。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "2c2222474a62f387fcaddbd273868d62c353a12cafd04be7794d0a0ff41b3f52": {
+    "title": "Issue状态与仓库看板进入公开预览",
+    "summary": "开启或关闭并不总能说明Issue的进展。现在可以使用更具体的状态，为团队和智能体提供关于进行中工作的共享背景。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "684e0f3bd16295e8f8ec5556692a495150585cae150e5b24e261f926ab0f0b14": {
+    "title": "密钥扫描减少Slack误报",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "48d620a145eb3f8455ce76f92e167b8d9aa4fd85931d4b54f4a6fbe55b297bea": {
+    "title": "代码覆盖率上传现可标记无效报告格式",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "cf6dc475e181797bde592e35a48bdde7ada9a8a3288163151ac5d2f8ed519d83": {
+    "title": "使用报告将从12月1日起包含用户ID列",
+    "summary": "自2026年12月1日起，包含用户名列的使用报告将在其旁新增 user_id 列。username 之后的每一列都将后移一位。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "54f2316ecc01fa7ace1e397f690ba0d8d04013386e9434efe67ced43f5318e8c": {
+    "title": "节日欢趣：这个假期用NVIDIA技术畅玩、构建与创作",
+    "summary": "这个假期，工坊里忙碌的不只是精灵。灯光闪烁、礼物包装就绪，正是给他人或自己一个火花、把爱好提升到新高度的完美时机。对一些人来说，这意味着投入一款新游戏。[…]",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
+  },
+  "d8384d24ae1826e88191a20f19d5954fc147f8ee47ac5d4aa88485b60228a045": {
+    "title": "推出可抢占计算：同等算力，半价",
+    "summary": "Together GPU Clusters 现支持可抢占计算：同等 GPU 容量，统一按按需价格的 50% 计费，并提供五分钟的排空窗口。",
+    "source": "deepseek-flash",
+    "at": "2026-11-25T13:04:57Z"
   }
 }

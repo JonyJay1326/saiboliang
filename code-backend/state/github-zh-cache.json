@@ -34,11 +34,6 @@
     "source": "deepseek-flash",
     "at": "2026-10-25T14:57:55Z"
   },
-  "jub0t/Concat": {
-    "text": "真正免费、开源、本地优先的跨平台 CapCut 替代品，可通过 JSON-RPC API 与 MCP 编写脚本。",
-    "source": "deepseek-flash",
-    "at": "2026-10-26T09:03:08Z"
-  },
   "AgriciDaniel/claude-seo": {
     "text": "Claude Code 通用 SEO 技能。26 个子技能与 19 个子代理，覆盖技术 SEO、E-E-A-T、schema、GEO/AEO、代理就绪（Lighthouse Agentic Browsing、WebMCP、llms.txt）、外链、本地 SEO、电商、国际 SEO、Google API 及 PDF/Excel 报告。9 个可选扩展用于实时 SEO 数据。",
     "source": "deepseek-flash",
@@ -134,11 +129,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-14T17:11:03Z"
   },
-  "rasbt/LLMs-from-scratch": {
-    "text": "从零开始，用 PyTorch 逐步实现类似 ChatGPT 的大语言模型",
-    "source": "deepseek-flash",
-    "at": "2026-11-15T11:05:10Z"
-  },
   "mvanhorn/last30days-skill": {
     "text": "AI 智能体技能，跨 Reddit、X、YouTube、HN、Polymarket 与网络研究任意话题，并生成有依据的摘要",
     "source": "deepseek-flash",
@@ -146,11 +136,6 @@
   },
   "google-labs-code/stitch-skills": {
     "text": "配合 Stitch MCP 服务器使用的 Agent Skills 库，每个技能遵循 Agent Skills 开放标准，兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码智能体",
-    "source": "deepseek-flash",
-    "at": "2026-11-15T17:47:02Z"
-  },
-  "ggml-org/ggml": {
-    "text": "面向机器学习的张量库",
     "source": "deepseek-flash",
     "at": "2026-11-15T17:47:02Z"
   },

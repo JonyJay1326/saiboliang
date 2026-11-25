@@ -585,18 +585,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "DeanChensj/jiangshan-map",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
-      "sourceUrl": "https://github.com/DeanChensj/jiangshan-map"
-    },
-    "id": "c9aa58613330378e5a7d66f89db99204012eb9acb65c54370442f2575f77f3fd",
-    "status": "pending",
-    "createdAt": "2026-11-19T01:14:48Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "2dust/v2rayN",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -776,17 +764,6 @@
     "createdAt": "2026-11-21T11:15:17Z"
   },
   {
-    "kind": "news-source",
-    "objectId": "zhipu-news",
-    "reason": "network error: URLError",
-    "evidence": {
-      "url": "https://www.zhipuai.cn/zh/news"
-    },
-    "id": "8ab8784bda59ef76991bd46cf94c3d78fa64fd3c2200c9769a568102554f9d78",
-    "status": "pending",
-    "createdAt": "2026-11-22T11:34:50Z"
-  },
-  {
     "kind": "github-classification",
     "objectId": "ardia-browser/ardia",
     "reason": "AI applicability uncertain",
@@ -809,5 +786,184 @@
     "id": "a5adf46b0a5117dcc9da428a19d05c5cdc15eb8accd412460c94354f0e164ce6",
     "status": "pending",
     "createdAt": "2026-11-23T12:59:28Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "misakano7545/workbuddy2api-panel",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "把腾讯WorkBuddy账号变成 OpenAI 兼容 API 的多账号网关，同时自动完成任务中心全部任务，附 Web 管理面板（账号池可视化 / 积分任务 / 配置热更新）。基于 Sliverkiss/workbuddy2api 的增强分支",
+      "sourceUrl": "https://github.com/misakano7545/workbuddy2api-panel"
+    },
+    "id": "bbb218ba2048cf32e86023610abe51451b3751e754e3a4634099057934c5fd2a",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "BruceDevices/firmware",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Predatory ESP32 Firmware",
+      "sourceUrl": "https://github.com/BruceDevices/firmware"
+    },
+    "id": "c2ea7403c469fede4255b5444f103a4086cd79b92393b9892b6f980bac46e61c",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "zazencodes/zazencodes-season-3",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "YouTube video source code for Season 3",
+      "sourceUrl": "https://github.com/zazencodes/zazencodes-season-3"
+    },
+    "id": "682afe8b3664751709b13f2f4d0529e57e6b255931d8f36c5d93926a93a31719",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "DeanChensj/jiangshan-map",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 200+ territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "sourceUrl": "https://github.com/DeanChensj/jiangshan-map"
+    },
+    "id": "aabf43e9f3ecf6add223b77533d2c0d62ecbb7f65da2672a1f478493f0f5d722",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "dulaiduwang003/Pavise-Game",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Open-source Windows game resource manager. Suppresses background processes, gives games exclusive CPU cores, steers device interrupts off game cores, applies per-game GPU driver, memory and power policies, and restores every change after play. No injection, no telemetry. GPL-3.0.",
+      "sourceUrl": "https://github.com/dulaiduwang003/Pavise-Game"
+    },
+    "id": "5df67730b230bf55030ab5c709eca9f5c349744307cc86c4b1bcf23b24206853",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "SubtitleEdit/subtitleedit",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "the subtitle editor :)",
+      "sourceUrl": "https://github.com/SubtitleEdit/subtitleedit"
+    },
+    "id": "878d8d5606ba4103740e3a799e1a7e1f8b49a2751d8f56a39d6176b2a5fab0a3",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "huiyadanli/RevokeMsgPatcher",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "A hex editor for WeChat/QQ/TIM - PC版微信/QQ/TIM防撤回补丁（我已经看到了，撤回也没用了）",
+      "sourceUrl": "https://github.com/huiyadanli/RevokeMsgPatcher"
+    },
+    "id": "63f1f83825166e913a5155c31421734f65a93557e03c188fbaa01801817a550e",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "PowerShell/PowerShell",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "PowerShell for every system!",
+      "sourceUrl": "https://github.com/PowerShell/PowerShell"
+    },
+    "id": "99d7787b55b07f96a264524f789582687c0068f8702fc75bb9807d1bdd4a58e8",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MewX/light-novel-library_Wenku8_Android",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "轻小说文库 (Wenku8.com) 安卓版第三方公益App，始于2014年的初版Material Design风格、非盈利、Play Store上安装包最小的轻小说阅读器 (light novel reader)。目前网站的API由于被大量滥用，已更新成我自己架的 Cloudflare Worker API 中继节点，不然的话网站关闭API就全军覆没了。",
+      "sourceUrl": "https://github.com/MewX/light-novel-library_Wenku8_Android"
+    },
+    "id": "d50e0097a926e2daec758eb65d5e2222883a0931d228869d96b045b9778e40d8",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "nextcloud/server",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "☁️ Nextcloud server, a safe home for all your data",
+      "sourceUrl": "https://github.com/nextcloud/server"
+    },
+    "id": "9d97d35e2bff60b8c5e21ebded9ad79bb58816c8658001e30d8e9908a2f24fdd",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "docmirror/dev-sidecar",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "开发者边车，github打不开，github加速，git clone加速，git release下载加速，stackoverflow加速",
+      "sourceUrl": "https://github.com/docmirror/dev-sidecar"
+    },
+    "id": "65dc4911aee291d65c8cafaba72e974893140e771241d255b80d6e73af49307b",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "Ebony-Vinyl/dsh-our-free-model",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+      "sourceUrl": "https://github.com/Ebony-Vinyl/dsh-our-free-model"
+    },
+    "id": "f8227200f9d529745f9e167a7c1382b886a6475cc85fcb9e1f684213ee608b73",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yetone/magpie",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "sourceUrl": "https://github.com/yetone/magpie"
+    },
+    "id": "32afd3c2b8649164b6346324be4c978fba4c833810eaedee72b419297801c0f7",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "jub0t/Concat",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "The open-source CapCut alternative.",
+      "sourceUrl": "https://github.com/jub0t/Concat"
+    },
+    "id": "071f2418adacd29d66c82ebfd18d8e0c6ef1bb5714c4c2b918c75e92507980a1",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
+  },
+  {
+    "kind": "news-item",
+    "objectId": "bb01cb7b60514a1e0c6cf3b39585b1f5e64e110a0c67781e2e3278d000177592",
+    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "evidence": {
+      "source": "AIBase"
+    },
+    "id": "268616b5c74d366f8abf3636cfc8526e97d2822239c061c4fb14d5858c161103",
+    "status": "pending",
+    "createdAt": "2026-11-25T13:04:57Z"
   }
 ]
