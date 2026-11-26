@@ -813,18 +813,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "zazencodes/zazencodes-season-3",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "YouTube video source code for Season 3",
-      "sourceUrl": "https://github.com/zazencodes/zazencodes-season-3"
-    },
-    "id": "682afe8b3664751709b13f2f4d0529e57e6b255931d8f36c5d93926a93a31719",
-    "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "DeanChensj/jiangshan-map",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -844,18 +832,6 @@
       "sourceUrl": "https://github.com/dulaiduwang003/Pavise-Game"
     },
     "id": "5df67730b230bf55030ab5c709eca9f5c349744307cc86c4b1bcf23b24206853",
-    "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "SubtitleEdit/subtitleedit",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "the subtitle editor :)",
-      "sourceUrl": "https://github.com/SubtitleEdit/subtitleedit"
-    },
-    "id": "878d8d5606ba4103740e3a799e1a7e1f8b49a2751d8f56a39d6176b2a5fab0a3",
     "status": "pending",
     "createdAt": "2026-11-25T13:04:57Z"
   },
@@ -909,18 +885,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "docmirror/dev-sidecar",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "开发者边车，github打不开，github加速，git clone加速，git release下载加速，stackoverflow加速",
-      "sourceUrl": "https://github.com/docmirror/dev-sidecar"
-    },
-    "id": "65dc4911aee291d65c8cafaba72e974893140e771241d255b80d6e73af49307b",
-    "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "Ebony-Vinyl/dsh-our-free-model",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -928,18 +892,6 @@
       "sourceUrl": "https://github.com/Ebony-Vinyl/dsh-our-free-model"
     },
     "id": "f8227200f9d529745f9e167a7c1382b886a6475cc85fcb9e1f684213ee608b73",
-    "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "yetone/magpie",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
-      "sourceUrl": "https://github.com/yetone/magpie"
-    },
-    "id": "32afd3c2b8649164b6346324be4c978fba4c833810eaedee72b419297801c0f7",
     "status": "pending",
     "createdAt": "2026-11-25T13:04:57Z"
   },
@@ -956,14 +908,74 @@
     "createdAt": "2026-11-25T13:04:57Z"
   },
   {
-    "kind": "news-item",
-    "objectId": "bb01cb7b60514a1e0c6cf3b39585b1f5e64e110a0c67781e2e3278d000177592",
-    "reason": "invalid AIBase article: AIBase article identity/title mismatch",
+    "kind": "github-classification",
+    "objectId": "n8n-io/nod",
+    "reason": "AI applicability uncertain",
     "evidence": {
-      "source": "AIBase"
+      "description": "Open source personal agent with its own computer. It chases invoices, preps your calls and cancels trials on real websites, and asks before it acts. Runs on your machine with the model you choose. By n8n.",
+      "sourceUrl": "https://github.com/n8n-io/nod"
     },
-    "id": "268616b5c74d366f8abf3636cfc8526e97d2822239c061c4fb14d5858c161103",
+    "id": "152c133eca1daad1ce3ec299bc281687173ac60c65db67678721a3db1dcc87ad",
     "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
+    "createdAt": "2026-11-26T12:45:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "hypery11/flipper-tesla-fsd",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Tesla Mod — Flipper Zero & ESP32. Nag killer, FSD region unlock, track mode, BMS dashboard, blind spot alert, high beam strobe, CAN capture, steering mode + more. Works via OBD-II or X179 connector.",
+      "sourceUrl": "https://github.com/hypery11/flipper-tesla-fsd"
+    },
+    "id": "b2fd25475847d65e05f86b233b51fa69521371f54e57228f98cba64271a1d733",
+    "status": "pending",
+    "createdAt": "2026-11-26T12:45:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "google-research/google-research",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Google Research",
+      "sourceUrl": "https://github.com/google-research/google-research"
+    },
+    "id": "fbd5a74e4f66aefc5a1a039a0f0d4df35d7d2728f92861ac294777fc2ea1aae1",
+    "status": "pending",
+    "createdAt": "2026-11-26T12:45:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "MorpheApp/morphe-patches",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Morphe Patches",
+      "sourceUrl": "https://github.com/MorpheApp/morphe-patches"
+    },
+    "id": "ddd086ba343c9713c80f807372268c2845b4e23a8504b999950fda65eef20d74",
+    "status": "pending",
+    "createdAt": "2026-11-26T12:45:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "yetone/magpie",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Pool every plan you pay for — Claude, ChatGPT, Copilot, GLM Coding Plan, Kimi Code and more — and use them in any agent: Claude Code, Codex, Claude Desktop… When one runs out, the next takes over.",
+      "sourceUrl": "https://github.com/yetone/magpie"
+    },
+    "id": "6e020ff1f6191ab51e4cab34c2e25775a4de3a31d98e997d2690a5cbb2878f23",
+    "status": "pending",
+    "createdAt": "2026-11-26T12:45:04Z"
+  },
+  {
+    "kind": "news-source",
+    "objectId": "ernie",
+    "reason": "ERNIE blog list missing or restructured",
+    "evidence": {
+      "url": "https://ernie.baidu.com/blog/zh"
+    },
+    "id": "f6904cf32ba7f7cf3b332e20fe91ce023c4f0820d526234a7149c6ac23123acc",
+    "status": "pending",
+    "createdAt": "2026-11-26T12:45:04Z"
   }
 ]

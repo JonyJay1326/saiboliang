@@ -5,12 +5,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-25T13:04:57Z"
   },
-  "ac2f786b30f6d45772c42167559dc1dfd027b2c713b30efaaeedeee5585de3fa": {
-    "title": "GPT-6模型展现内在蛋白质设计能力",
-    "summary": "GPT-6模型利用推理和代码设计蛋白质结构与序列。实验室测试发现五个靶标存在结合证据。",
-    "source": "deepseek-flash",
-    "at": "2026-11-25T13:04:57Z"
-  },
   "7758c04a629331bf96383fb7f46e256dce8c50dc19007956b18ca6b429d0aeb8": {
     "title": "用Astra搜寻遥远行星",
     "summary": "两位业余天文学家利用Codex和Astra，在NASA开普勒和TESS太空望远镜的公开数据中寻找潜在系外行星。",
@@ -38,18 +32,6 @@
   "b0689cf87ab570a441c88635b910134907af4a34b0ffafe4d1af03d0273e75fa": {
     "title": "OpenAI与Cisco推出Shirudo",
     "summary": "OpenAI与Cisco推出Shirudo，一个面向Linux的开源运行时，帮助团队在部署补丁期间保护运行中的系统。",
-    "source": "deepseek-flash",
-    "at": "2026-11-25T13:04:57Z"
-  },
-  "10878202550bbbf922d1872ab8ac87272ec1fb51ba1f61195752ed3c5f3ba59c": {
-    "title": "面向企业内部法务的互联智能",
-    "summary": null,
-    "source": "deepseek-flash",
-    "at": "2026-11-25T13:04:57Z"
-  },
-  "1259b534687dd8b3171199ff6c1e4d274ef5d072ac6513620703d8171072ee72": {
-    "title": "Richpanel助企业在30天内自动化50%的支持工作",
-    "summary": "Richpanel利用GPT-6 Astra和GPT-6.1 Sol为AI支持智能体配备工具和流程，并用GPT-6 Luna处理对话。",
     "source": "deepseek-flash",
     "at": "2026-11-25T13:04:57Z"
   },
@@ -95,22 +77,34 @@
     "source": "deepseek-flash",
     "at": "2026-11-25T13:04:57Z"
   },
-  "cf6dc475e181797bde592e35a48bdde7ada9a8a3288163151ac5d2f8ed519d83": {
-    "title": "使用报告将从12月1日起包含用户ID列",
-    "summary": "自2026年12月1日起，包含用户名列的使用报告将在其旁新增 user_id 列。username 之后的每一列都将后移一位。",
-    "source": "deepseek-flash",
-    "at": "2026-11-25T13:04:57Z"
-  },
   "54f2316ecc01fa7ace1e397f690ba0d8d04013386e9434efe67ced43f5318e8c": {
     "title": "节日欢趣：这个假期用NVIDIA技术畅玩、构建与创作",
     "summary": "这个假期，工坊里忙碌的不只是精灵。灯光闪烁、礼物包装就绪，正是给他人或自己一个火花、把爱好提升到新高度的完美时机。对一些人来说，这意味着投入一款新游戏。[…]",
     "source": "deepseek-flash",
     "at": "2026-11-25T13:04:57Z"
   },
-  "d8384d24ae1826e88191a20f19d5954fc147f8ee47ac5d4aa88485b60228a045": {
-    "title": "推出可抢占计算：同等算力，半价",
-    "summary": "Together GPU Clusters 现支持可抢占计算：同等 GPU 容量，统一按按需价格的 50% 计费，并提供五分钟的排空窗口。",
+  "10ef75306f1db512480f0ddb83729e99e3809c2db3b0800b6d0a173f710eb4b6": {
+    "title": "从谱图到结构：用 Mass Spec Skills for Google Antigravity 识别分子",
+    "summary": "Mass Spec Skills 让使用 Google Antigravity 的科学家能够解读串联质谱。",
     "source": "deepseek-flash",
-    "at": "2026-11-25T13:04:57Z"
+    "at": "2026-11-26T12:45:04Z"
+  },
+  "69c0601d70f93f1e53f8616ba484ac3a4c105d6fa324e7e4e37ccd8f11b97f14": {
+    "title": "Copilot 代码审查计费将默认归属组织",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-26T12:45:04Z"
+  },
+  "c2d2cc7b7edaf939d15aebac43385b10878e5bc23b87b9a3871ebbfedf46c43a": {
+    "title": "将 Kimi-K3.1-Pro 蒸馏到 Qwen3.8-27B：教模型一门新语言",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-26T12:45:04Z"
+  },
+  "823791a70272584d061fb6d6f727eac11097b51ca0a41b7158c335cc57aa1f41": {
+    "title": "推出 Hurdle：在你的 API、技能与文档上运行 agent 评测",
+    "summary": null,
+    "source": "deepseek-flash",
+    "at": "2026-11-26T12:45:04Z"
   }
 }

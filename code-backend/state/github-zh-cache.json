@@ -109,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
   },
-  "dotnet/skills": {
-    "text": "用于辅助 AI 编码代理处理 .NET 和 C# 的技能仓库",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
-  },
   "Vincentwei1021/video-shotcraft": {
     "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
     "source": "deepseek-flash",
@@ -208,5 +203,10 @@
     "text": "一种向编码代理描述视觉标识的格式规范。DESIGN.md 让代理对设计系统形成持久、结构化的理解。",
     "source": "deepseek-flash",
     "at": "2026-11-21T11:15:17Z"
+  },
+  "rasbt/LLMs-from-scratch": {
+    "text": "从零开始，用 PyTorch 逐步实现类似 ChatGPT 的大语言模型",
+    "source": "deepseek-flash",
+    "at": "2026-11-26T12:45:04Z"
   }
 }

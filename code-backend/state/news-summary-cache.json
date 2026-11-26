@@ -1,7 +1,17 @@
 {
-  "c6d8726b1a33d16b04d81a05d6633a94113f96bc358242b43b005d7eb579a7d7": {
-    "summary": "开源编码代理 OpenCode 发布 v2.4.0，项目托管于 GitHub 的 anomalyco/opencode。",
+  "c2d2cc7b7edaf939d15aebac43385b10878e5bc23b87b9a3871ebbfedf46c43a": {
+    "summary": "用Together Post-Training将Kimi-K3.1-Pro的老挝语翻译蒸馏进Qwen3.8-27B，达教师93%分数且泰语未损",
     "source": "deepseek-flash",
-    "at": "2026-11-23T12:59:28Z"
+    "at": "2026-11-26T12:45:04Z"
+  },
+  "69c0601d70f93f1e53f8616ba484ac3a4c105d6fa324e7e4e37ccd8f11b97f14": {
+    "summary": "未选择Copilot代码审查计费方式的，自2026年12月30日起相关审查费用将计入组织账单",
+    "source": "deepseek-flash",
+    "at": "2026-11-26T12:45:04Z"
+  },
+  "75b3004fa675c6199062d84899e4feb8ea2c8baf3ba3f5231508f1a774c9cc6d": {
+    "summary": "秘塔AI推出「全民开机」，输入故事即可直出15分钟AI短片，无需写提示词和分镜",
+    "source": "deepseek-flash",
+    "at": "2026-11-26T12:45:04Z"
   }
 }
