@@ -23,39 +23,6 @@
   },
   {
     "kind": "news-item",
-    "objectId": "259bfaa461ceb6c5bbafab2cb4e5ca5ba879980eac4d66c851bcc4d7f63c2dbe",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "36250ab03afa13458e32603da6905f6dc3909c3f937d1e3e593356ad922a1465",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "4ed856e7925d24dd773b0c45c87138950fe382a137d940b84b889afe0f853a7d",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "37335b876ffdab832088a77c21b5a37fa5c6f9b7df96d2158c03891daff26a1e",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "b5f456afce24eb12fd731444abea92ed92dd15d7104b5adf63df31feba57d3ba",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "4bb2fd99a344482f9ba13abd62eae16c22a959b38250f30b47e5c5bafc451721",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
     "objectId": "9b12cf7ba8f1e2ecfdedb3c7707edf1f26050ac02393dc39d7732fea39e9b071",
     "reason": "invalid feed item: invalid news title",
     "evidence": {
@@ -73,17 +40,6 @@
       "source": "Together AI"
     },
     "id": "5fef0286c7e15d9a4e73b915092f05fddb6b6a4aafb0bef6072afdaead73d3a2",
-    "status": "pending",
-    "createdAt": "2026-09-25T06:59:08Z"
-  },
-  {
-    "kind": "news-item",
-    "objectId": "0b8d9dce8cff70c8cd2208820c8fdce8bad16c2bb8c78daf5e72c7c0debf74d4",
-    "reason": "invalid feed item: invalid news title",
-    "evidence": {
-      "source": "Together AI"
-    },
-    "id": "df3593125b635dee3c509c1d890b584fe0ad4bbd8613fc70d228c62cc96c44ed",
     "status": "pending",
     "createdAt": "2026-09-25T06:59:08Z"
   },
@@ -257,18 +213,6 @@
       "sourceUrl": "https://opencode.ai/zh/go?ref=ZN5F79V4GE"
     },
     "id": "0396cea87e3de940187b187b6f87108e98582dd40760177a037527e6da9ba1f1",
-    "status": "pending",
-    "createdAt": "2026-11-07T10:21:20Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "itsfatduck/optimizerDuck",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
-      "sourceUrl": "https://github.com/itsfatduck/optimizerDuck"
-    },
-    "id": "cc0aa06ca0896106c713c4dc758464c710067b940888a18b0b726d12d74b6b76",
     "status": "pending",
     "createdAt": "2026-11-07T10:21:20Z"
   },
@@ -789,18 +733,6 @@
   },
   {
     "kind": "github-classification",
-    "objectId": "misakano7545/workbuddy2api-panel",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "把腾讯WorkBuddy账号变成 OpenAI 兼容 API 的多账号网关，同时自动完成任务中心全部任务，附 Web 管理面板（账号池可视化 / 积分任务 / 配置热更新）。基于 Sliverkiss/workbuddy2api 的增强分支",
-      "sourceUrl": "https://github.com/misakano7545/workbuddy2api-panel"
-    },
-    "id": "bbb218ba2048cf32e86023610abe51451b3751e754e3a4634099057934c5fd2a",
-    "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
-  },
-  {
-    "kind": "github-classification",
     "objectId": "BruceDevices/firmware",
     "reason": "AI applicability uncertain",
     "evidence": {
@@ -868,18 +800,6 @@
       "sourceUrl": "https://github.com/MewX/light-novel-library_Wenku8_Android"
     },
     "id": "d50e0097a926e2daec758eb65d5e2222883a0931d228869d96b045b9778e40d8",
-    "status": "pending",
-    "createdAt": "2026-11-25T13:04:57Z"
-  },
-  {
-    "kind": "github-classification",
-    "objectId": "nextcloud/server",
-    "reason": "AI applicability uncertain",
-    "evidence": {
-      "description": "☁️ Nextcloud server, a safe home for all your data",
-      "sourceUrl": "https://github.com/nextcloud/server"
-    },
-    "id": "9d97d35e2bff60b8c5e21ebded9ad79bb58816c8658001e30d8e9908a2f24fdd",
     "status": "pending",
     "createdAt": "2026-11-25T13:04:57Z"
   },
@@ -977,5 +897,53 @@
     "id": "f6904cf32ba7f7cf3b332e20fe91ce023c4f0820d526234a7149c6ac23123acc",
     "status": "pending",
     "createdAt": "2026-11-26T12:45:04Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "obsidianmd/obsidian-skills",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Teach your agent to use Obsidian and open formats including Markdown, Bases, JSON Canvas.",
+      "sourceUrl": "https://github.com/obsidianmd/obsidian-skills"
+    },
+    "id": "675dd871ec805de5d1e204912d2a6425f0d371fa7eaccecd78cb35418e5dfbe8",
+    "status": "pending",
+    "createdAt": "2026-11-28T11:55:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "docmirror/dev-sidecar",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "开发者边车，github打不开，github加速，git clone加速，git release下载加速，stackoverflow加速",
+      "sourceUrl": "https://github.com/docmirror/dev-sidecar"
+    },
+    "id": "65dc4911aee291d65c8cafaba72e974893140e771241d255b80d6e73af49307b",
+    "status": "pending",
+    "createdAt": "2026-11-28T11:55:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "godotengine/godot",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "Godot Engine – Multi-platform 2D and 3D game engine",
+      "sourceUrl": "https://github.com/godotengine/godot"
+    },
+    "id": "ad925791fc2a2953a4205a927ebee5f3cb5abfcf229cacc6356b265ec57d922b",
+    "status": "pending",
+    "createdAt": "2026-11-28T11:55:03Z"
+  },
+  {
+    "kind": "github-classification",
+    "objectId": "astral-sh/ruff",
+    "reason": "AI applicability uncertain",
+    "evidence": {
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "sourceUrl": "https://github.com/astral-sh/ruff"
+    },
+    "id": "b29f6c310ea2405edecc11e7e423b1462a245ce64b27e107d45cb8e7c34abe6e",
+    "status": "pending",
+    "createdAt": "2026-11-28T11:55:03Z"
   }
 ]

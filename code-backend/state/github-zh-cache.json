@@ -109,11 +109,6 @@
     "source": "deepseek-flash",
     "at": "2026-11-13T11:08:04Z"
   },
-  "Vincentwei1021/video-shotcraft": {
-    "text": "面向 Claude Code 与 Codex 的 AI 视频技能：用 Remotion 制作可编辑的电影级产品宣传片，含 124 张镜头配方卡、150 个动效预览、节拍同步、声音设计、Motion Workbench 及剪映导出。",
-    "source": "deepseek-flash",
-    "at": "2026-11-14T10:35:16Z"
-  },
   "QwenLM/qwen-code": {
     "text": "一个运行在终端中的开源 AI 编码代理。",
     "source": "deepseek-flash",
@@ -208,5 +203,15 @@
     "text": "从零开始，用 PyTorch 逐步实现类似 ChatGPT 的大语言模型",
     "source": "deepseek-flash",
     "at": "2026-11-26T12:45:04Z"
+  },
+  "ggml-org/ggml": {
+    "text": "面向机器学习的张量库",
+    "source": "deepseek-flash",
+    "at": "2026-11-28T11:55:03Z"
+  },
+  "infiniflow/ragflow": {
+    "text": "RAGFlow 是面向智能体的数据库：由检索增强生成（RAG）引擎发展为上下文基础设施。",
+    "source": "deepseek-flash",
+    "at": "2026-11-28T11:55:03Z"
   }
 }
